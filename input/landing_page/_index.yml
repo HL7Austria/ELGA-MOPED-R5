@@ -1,0 +1,6 @@
+- name: ELGA-MOPED-R5
+- version: 0.1.0
+- description:  Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)
+- last_published: %%date%%
+- branch: %%branch%%
+- type: draft
