@@ -80,8 +80,14 @@ dependencies:
 pages:
   index.md:
     title: Home
-  use_cases.md:
-    title: Anwendungsfälle
+  use_case_description.md:
+    title: Anwendungsfallbeschreibung
+  actors.md:
+    title: Akteure
+  workflowmanagement.md:
+    title: Workflowmanagement
+  poc.md:
+    title: Proof of Concept
   ka-org_mapping.md:
     title: Ka-Org Mapping
   lkf_mapping.md:
@@ -92,9 +98,12 @@ pages:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  Anwendungsfälle: use_cases.html
-  Mapping LKF: lkf_mapping.html
-  Mapping Ka-Org: ka-org_mapping.html
+  Anwendungsfallbeschreibung: use_case_description.html
+  Akteure: actors.html
+  Workflowmanagement: workflowmanagement.html
+  Proof of Concept: poc.html
+  LKF Mapping: lkf_mapping.html
+  Ka-Org Mapping: ka-org_mapping.html
 
 
   
