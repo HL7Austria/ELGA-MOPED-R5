@@ -9,7 +9,7 @@ sequenceDiagram
     
     rect rgb(191, 223, 255)
     Note over M,KH: Aufnahme
-    Note over KH: Öfnen des Fenster im KIS
+    Note over KH: Öffnen des Fensters im KIS
     KH->>M: GET HL7ATCorePatient
     KH->>M: PUT HL7ATCorePatient
     Note over KH: ZPI Abfrage
