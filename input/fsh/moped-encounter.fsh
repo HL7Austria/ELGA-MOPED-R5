@@ -10,7 +10,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * actualPeriod ^short = "Aufnahme- und Entlassungsdatum"
 
 * admission.dischargeDisposition ^short = "Entlassungsart"
-* admission.dischargeDisposition from $Entlassungsart (required)
+* admission.dischargeDisposition from Entlassungsart (required)
 
 
 * class ^slicing.rules = #open
@@ -19,9 +19,9 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * class ^slicing.ordered = false
 * class contains Behandlungsart 0..1 and Aufnahmeart 0..1
 * class[Behandlungsart] ^short = "Behandlungsart"
-* class[Behandlungsart] from $BehandlungsArt (required)
+* class[Behandlungsart] from Behandlungsart (required)
 * class[Aufnahmeart] ^short = "Aufnahmeart"
-* class[Aufnahmeart] from $AufnahmeArt (required)
+* class[Aufnahmeart] from Aufnahmeart (required)
 
 * reason ^slicing.rules = #open
 * reason ^slicing.discriminator.type = #value
@@ -33,7 +33,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * reason[Ursache].value from UrsacheValueSet (required)
 * reason[Ursache] ^short = "Ursache für Behandlung"
 
-* diagnosis.use from $LKFdiagnoseTyp (required)
+* diagnosis.use from https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ (required)
 * diagnosis.use ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
 
 * admission.extension contains Zugangsart named Zugangsart 0..1

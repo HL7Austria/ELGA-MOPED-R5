@@ -4,5 +4,5 @@ Id: moped-ext-erworben
 Title: "Diagnose - im stationären Aufenthalt erworben"
 Description: "MOPED Extension, um anzugeben, ob die Diagnose während des stationären Aufenthalts erworben wurde."
 Context: MOPEDEncounter
-* value[x] only boolean
+* valueBoolean 0..1
 * . ^definition =  "Gibt an ob die Diagnose während des stationären Aufenthalts erworben wurde"

@@ -1,6 +1,5 @@
-Alias: $Ursache =  http://tbd.at/MOPED-encounter-ursache
 ValueSet: UrsacheValueSet
-Id: ursache-valueset
+Id: moped-ursache-valueset
 Title: "Ursache für Behandlung"
 Description: "ValueSet für die Ursache der Behandlung laut Ka-Org"
 * $Ursache#00 "Überweisung"

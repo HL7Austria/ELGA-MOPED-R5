@@ -7,9 +7,9 @@ Description: "MOPED Profil der Encounter Ressource für die Verlegung innerhalb 
 
 * actualPeriod ^short = "Zugangs- und Abgangsdatum"
 
-* extension contains physischeAnwesenheit named physischeAnwesenheit 0..1
+* extension contains PhysischeAnwesenheit named PhysischeAnwesenheit 0..1
 
 * admission.dischargeDisposition ^short = "Abgangsart"
-* admission.dischargeDisposition from $Abgangsart (required)
+* admission.dischargeDisposition from Abgangsart (required)
 
 * partOf only Reference (MOPEDEncounter)

@@ -6,6 +6,6 @@ Description:  "MOPED Extension für den Workflowstatus. Dieser beschreibt den Zu
 Context: MOPEDAccount
 * value[x] 1..1
 * value[x] only code
-* value[x] from $workflowstatus (required)
+* value[x] from WorkflowStatus (required)
 * value[x] ^binding.description = "Code für den MOPED Workflowstatus"
 
