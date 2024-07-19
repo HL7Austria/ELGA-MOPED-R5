@@ -37,6 +37,5 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * diagnosis.use ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
 
 * admission.extension contains Zugangsart named Zugangsart 0..1
-* diagnosis.extension contains Erworben named Erworben 0..1
 * admission.extension contains Transportart named Transportart 0..1
 * extension contains Unfalldatum named Unfalldatum 0..1

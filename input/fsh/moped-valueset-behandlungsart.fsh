@@ -1,4 +1,3 @@
-Alias: $Behandlungsart =  http://tbd.at/MOPED-encounter-behandlungsart
 
 ValueSet: Behandlungsart
 Id: moped-behandlungsart-valueset

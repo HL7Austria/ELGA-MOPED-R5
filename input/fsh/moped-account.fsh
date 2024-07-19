@@ -15,6 +15,8 @@ Description: "MOPED Profil der Account Ressource für die administrative Fallfü
 * identifier[Aufnahmezahl].type.coding.code = #VN (exactly)
 * identifier[Aufnahmezahl].assigner only Reference(HL7ATCoreOrganization)
 
+* diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
+
 * extension contains Fallnummer named Fallnummer 0..1
 
 * extension contains WorkflowStatus named WorkflowStatus 1..1
