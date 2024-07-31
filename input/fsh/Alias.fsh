@@ -14,3 +14,6 @@ Alias: $LKFAbrechnungsGruppe = http://tbd.at/MOPED-LKFAbrechnungsGruppe
 Alias: $LKFAbrechnungsKnoten = http://tbd.at/MOPED-LKFAbrechnungsKnoten
 Alias: $AbrechnungsRelevanz = http://tbd.at/MOPED-LKFAbrechnungsRelevanz
 Alias: $Fondsrelevanz = http://tbd.at/MOPED-Fondsrelevanz
+Alias: $MealCostExcemption = http://tbd.at/MOPED-Verpflegskosten-Beitragsbefreiung
+Alias: $VAEStatus = http://tbd.at/MOPED-VAEStatus
+Alias: $EndOfEligibility = http://tbd.at/MOPED-EndOfEligibility

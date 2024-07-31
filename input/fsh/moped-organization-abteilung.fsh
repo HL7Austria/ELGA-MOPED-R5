@@ -14,6 +14,7 @@ Description: "MOPED Profil für Abteilungen innerhalb einer Krankenanstalt."
 * identifier[Funktionscode] ^short = "Funktionscode der Abteilung laut LKF"
 * identifier[Funktionssubcode] ^short = "Funktionssubcode der Abteilung laut LKF"
 
+* extension contains Kostenstelle named Kostenstelle 0..1
 
 
 

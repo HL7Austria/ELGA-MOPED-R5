@@ -1,6 +1,6 @@
 Profile: MOPEDEncounter
 Parent: Encounter
-Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme"
+Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung"
 
 
 * subject only Reference(HL7ATCorePatient)
