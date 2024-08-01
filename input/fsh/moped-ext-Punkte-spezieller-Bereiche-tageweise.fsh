@@ -1,5 +1,5 @@
 
-Extension: Punkte_spezieller_Bereiche_tageweise
+Extension: PunkteSpeziellerBereicheTageweise
 Id: Punkte-spezieller-Bereiche-tageweise
 Title: "Punkte spezieller Bereiche (tageweise)"
 Description: "In dieses Datenfeld ist – soweit zutreffend – die Summe der tageweise ermittelten Punkte für einen stationären Krankenhausaufenthalt in speziellen Leistungsbereichen (z.B. in den Bereichen der Kinder- und Jugendpsychiatrie, der Akut-Nachbehandlung von neuro- logischen Patient:innen, der medizinischen Geriatrie, der Akutgeriatrie/Remobilisation sowie der palliativmedizinischen Einrichtungen) einzutragen."

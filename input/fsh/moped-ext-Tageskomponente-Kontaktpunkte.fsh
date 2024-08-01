@@ -1,5 +1,5 @@
 
-Extension: Tageskomponente_Kontaktpunkte
+Extension: TageskomponenteKontaktpunkte
 Id: Tageskomponente-Kontaktpunkte
 Title: "Tageskomponente/Kontaktpunkte"
 Description: "In dieses Datenfeld ist – soweit zutreffend – die Tageskomponente bzw. sind die Kontakt- punkte einzutragen."

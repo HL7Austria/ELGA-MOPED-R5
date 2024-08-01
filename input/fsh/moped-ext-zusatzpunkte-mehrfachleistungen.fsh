@@ -1,5 +1,5 @@
 
-Extension: Zusatzpunkte_Mehrfachleistungen
+Extension: ZusatzpunkteMehrfachleistungen
 Id: moped-ext-Zusatzpunkte-Mehrfachleistungen
 Title: "Zusatzpunkte Mehrfachleistungen"
 Description: "In dieses Datenfeld ist – soweit zutreffend – die Summe der Zusatzpunkte für zusätzliche Leistungen außerhalb des Punktepauschales der zur Abrechnung gelangenden Gruppe einzutragen."

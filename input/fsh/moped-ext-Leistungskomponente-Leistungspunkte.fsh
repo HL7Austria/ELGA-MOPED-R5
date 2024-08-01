@@ -1,5 +1,5 @@
 
-Extension: Leistungskomponente_Leistungspunkte
+Extension: LeistungskomponenteLeistungspunkte
 Id: Leistungskomponente-Leistungspunkte
 Title: "Leistungskomponente/Leistungspunkte"
 Description: "In dieses Datenfeld ist – soweit zutreffend – die Leistungskomponente bzw. sind die Leistungspunkte einzutragen."

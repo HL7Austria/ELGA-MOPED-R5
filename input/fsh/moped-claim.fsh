@@ -22,15 +22,15 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 
 * extension contains Comment named Comment 0..
 * extension contains DiagnosisRelatedNode named DiagnosisRelatedNode 0..1
-* extension contains Punkte_Belagsdauerausreisser_unten_Leistungskomponente named Punkte_Belagsdauerausreisser_unten_Leistungskomponente 0..1
-* extension contains Punkte_Belagsdauerausreisser_unten_Tageskomponente named Punkte_Belagsdauerausreisser_unten_Tageskomponente 0..1
-* extension contains Zusatzpunkte_Belagsdauerausreisser_nach_oben named Zusatzpunkte_Belagsdauerausreisser_nach_oben 0..1
-* extension contains Zusatzpunkte_Intensiv named Zusatzpunkte_Intensiv 0..1
-* extension contains Zusatzpunkte_Mehrfachleistungen named Zusatzpunkte_Mehrfachleistungen 0..1
+* extension contains PunkteBelagsdauerausreisserUntenLeistungskomponente named PunkteBelagsdauerausreisserUntenLeistungskomponente 0..1
+* extension contains PunkteBelagsdauerausreisserUntenTageskomponente named PunkteBelagsdauerausreisserUntenTageskomponente 0..1
+* extension contains ZusatzpunkteBelagsdauerausreisserNachOben named ZusatzpunkteBelagsdauerausreisserNachOben 0..1
+* extension contains ZusatzpunkteIntensiv named ZusatzpunkteIntensiv 0..1
+* extension contains ZusatzpunkteMehrfachleistungen named ZusatzpunkteMehrfachleistungen 0..1
 
-* extension contains Punkte_spezieller_Bereiche_tageweise named Punkte_spezieller_Bereiche_tageweise 0..1
-* extension contains Leistungskomponente_Leistungspunkte named Leistungskomponente_Leistungspunkte 0..1
-* extension contains Tageskomponente_Kontaktpunkte named Tageskomponente_Kontaktpunkte 0..1
+* extension contains PunkteSpeziellerBereicheTageweise named PunkteSpeziellerBereicheTageweise 0..1
+* extension contains LeistungskomponenteLeistungspunkte named LeistungskomponenteLeistungspunkte 0..1
+* extension contains TageskomponenteKontaktpunkte named TageskomponenteKontaktpunkte 0..1
 * extension contains TotalPoints named TotalPoints 0..1
 * extension contains ErrorWarning named ErrorWarning 0..
 * extension contains Fondsrelevanz named Fondsrelevanz 0..1
