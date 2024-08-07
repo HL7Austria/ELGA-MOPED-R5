@@ -1,22 +1,916 @@
 Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I11-I12, K01*) des LKF Systems zu FHIR. Die Dokumentation der LKF Meldungen ist unter <a href="https://www.sozialministerium.at/dam/jcr:9685da35-603a-4263-8025-6be5628c99b6/ANHANG1%20-%20AUFBAU%20UND%20INHALT%20DER%20DATENMELDUNGEN%202024.pdf">diesem Link</a> verfügbar.
 
 ### X01 -> FHIR
-TBD
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>X01</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>KOSTCODE</td>
+        <td>Leistungszuständiger Kostenträger – Code</td>
+        <td>TBD</td>
+        <td>TBD</td>
+        <td>TBD</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Abrechnender Kostenträger – Code</td>
+        <td>TBD</td>
+        <td>TBD</td>
+        <td>TBD</td>
+    </tr>
+    <tr>
+        <td>AUFDAT</td>
+        <td>Aufnahme-/Kontaktdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFZEIT</td>
+        <td>Aufnahme-/Kontaktuhrzeit</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ENTDAT</td>
+        <td>Entlassungsdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.end</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ENTZEIT</td>
+        <td>Entlassungsuhrzeit</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.end</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFART1</td>
+        <td>Aufnahme-/Zugangsart 1</td>
+        <td>MOPEDEncounter</td>
+        <td>.admission.extension</td>
+        <td>Zugangsart</td>
+    </tr>
+    <tr>
+        <td>AUFART2</td>
+        <td>Aufnahme-/Zugangsart 2</td>
+        <td>MOPEDEncounter</td>
+        <td>.class</td>
+        <td>Aufnahmeart</td>
+    </tr>
+    <tr>
+        <td>ENTART</td>
+        <td>Entlassungs-/Abgangsart</td>
+        <td>MOPEDEncounter</td>
+        <td>.admission.dischargeDisposition</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>GESCHL</td>
+        <td>Geschlecht</td>
+        <td>HL7ATCorePatient</td>
+        <td>.gender</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>GEBDAT</td>
+        <td>Geburtsdatum</td>
+        <td>HL7ATCorePatient</td>
+        <td>.birthDate</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ALTERSGRUPPE</td>
+        <td>Altersgruppe bei Entlassung/Kontakt</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>AUFNR_ID</td>
+        <td>Datensatz-ID</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>STAATSB</td>
+        <td>Staatsbürgerschaft</td>
+        <td>HL7ATCorePatient</td>
+        <td>.extension</td>
+        <td>citizenship</td>
+    </tr>
+    <tr>
+        <td>WSTAAT</td>
+        <td>Wohnsitz – Staat</td>
+        <td>HL7ATCorePatient</td>
+        <td>address.country</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>WPLZ</td>
+        <td>Wohnsitz – Postleitzahl</td>
+        <td>HL7ATCorePatient</td>
+        <td>.address.postalCode</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>WGC</td>
+        <td>Wohnsitz – Gemeindecode</td>
+        <td>HL7ATCorePatient</td>
+        <td>.address.extension</td>
+        <td>municipality</td>
+    </tr>
+    <tr>
+        <td>AUFID</td>
+        <td>Zugewiesen von – Krankenanstaltennummer</td>
+        <td>MOPEDEncounter</td>
+        <td>.admission.origin</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ENTID</td>
+        <td>Zugewiesen an – Krankenanstaltennummer</td>
+        <td>MOPEDEncounter</td>
+        <td>.admission.destination</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>BHART</td>
+        <td>Behandlungsart</td>
+        <td>TBD</td>
+        <td>TBD</td>
+        <td>TBD</td>
+    </tr>
+    <tr>
+        <td>TRANSART</td>
+        <td>Transportart</td>
+        <td>MOPEDEncounter</td>
+        <td>.extension</td>
+        <td>Transportart</td>
+    </tr>
+    <tr>
+        <td>FONDSREL</td>
+        <td>Fondsrelevanz</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>Fondsrelevanz</td>
+    </tr>
+    <tr>
+        <td>PFLAG</td>
+        <td>Plausibilitätskennzeichen</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>Plausibilitaetskennzeichen</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Abrechnungsquartal der Sozialversicherung</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>SVAbrechnungsquartal</td>
+    </tr>
+</table>
+</div>
 ### X02 -> FHIR
-TBD
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>X02</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFDAT</td>
+        <td>Aufnahme-/Kontaktdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ALTERSGRUPPE</td>
+        <td>Altersgruppe bei Zugang/Kontakt</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>AUFNR_ID</td>
+        <td>Datensatz-ID</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>ABTPOS</td>
+        <td>Hauptkostenstelle/Fachgebiet – Positionsnummer</td>
+        <td>*</td>
+        <td>*</td>
+        <td>*</td>
+    </tr>
+    <tr>
+        <td>ABTFC</td>
+        <td>Hauptkostenstelle – Funktionscode/Fachgebiet</td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>.identifier:Funktionscode</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTZDAT</td>
+        <td>Hauptkostenstelle/Fachgebiet – Zugangsdatum/Kontaktdatum</td>
+        <td>TransferEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTZZEIT</td>
+        <td>Hauptkostenstelle/Fachgebiet – Zugangsuhrzeit/Kontaktuhrzeit</td>
+        <td>TransferEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ANWESEND</td>
+        <td>Physische Anwesenheit</td>
+        <td>TransferEncounter</td>
+        <td>.extension</td>
+        <td>physischeAnwesenheit</td>
+    </tr>
+    <tr>
+        <td>ABTADAT</td>
+        <td>Hauptkostenstelle – Abgangsdatum</td>
+        <td>TransferEncounter</td>
+        <td>.period.end</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTAZEIT</td>
+        <td>Hauptkostenstelle – Abgangsuhrzeit</td>
+        <td>TransferEncounter</td>
+        <td>.period.end</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTAART</td>
+        <td>Hauptkostenstelle – Abgangsart</td>
+        <td>TransferEncounter</td>
+        <td>.admission.dischargeDisposition</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTFC_FACH</td>
+        <td>Hauptkostenstelle – Fachlicher Funktionscode</td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>.identifier:Funktionscode</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTFC_PFLEGE</td>
+        <td>Hauptkostenstelle – Pflegerischer Funktionscode</td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>TBD</td>
+        <td>TBD</td>
+    </tr>
+    <tr>
+        <td>NEUGEBORENES</td>
+        <td>Neugeborenes</td>
+        <td>*</td>
+        <td>*</td>
+        <td>*</td>
+    </tr>
+</table>
+</div>
 ### X03 -> FHIR
-TBD
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>X03</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFDAT</td>
+        <td>Aufnahme-/Kontaktdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR_ID</td>
+        <td>Datensatz-ID</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>DIAGCODE</td>
+        <td>Diagnose – Code</td>
+        <td>Condition</td>
+        <td>.code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>DIAGTYP</td>
+        <td>Diagnose – Typ</td>
+        <td>MOPEDEncounter</td>
+        <td>.diagnosis.use</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>DIAGART</td>
+        <td>Diagnose – Art</td>
+        <td>Condition</td>
+        <td>.verificationStatus</td>
+        <td>DiagnoseArt</td>
+    </tr>
+    <tr>
+        <td>DIAGERW</td>
+        <td>Diagnose – im stationären Aufenthalt erworben</td>
+        <td>MOPEDAccount</td>
+        <td>.diagnosis.onAdmission</td>
+        <td></td>
+    </tr>
+</table>
+</div>
 ### X04 -> FHIR
-TBD
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>X04</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFDAT</td>
+        <td>Aufnahme-/Kontaktdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR_ID</td>
+        <td>Datensatz-ID</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>MELCODE</td>
+        <td>Medizinische Leistung – Code</td>
+        <td>Procedure</td>
+        <td>.code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>MELCODESL</td>
+        <td>Medizinische Leistung – Seitenlokalisation</td>
+        <td>Procedure</td>
+        <td>.bodysite</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>MELCODEREL</td>
+        <td>Medizinische Leistung – Abrechnungsrelevanz</td>
+        <td>Claim</td>
+        <td>.procedure.extension</td>
+        <td>.billingRelevance</td>
+    </tr>
+    <tr>
+        <td>MELANZ</td>
+        <td>Medizinische Leistung – Anzahl</td>
+        <td>*</td>
+        <td>*</td>
+        <td>*</td>
+    </tr>
+    <tr>
+        <td>MELDAT</td>
+        <td>Medizinische Leistung – Datum der Erbringung</td>
+        <td>Procedure</td>
+        <td>.occurrenceDateTime</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>MELZEIT</td>
+        <td>Medizinische Leistung – Uhrzeit der Erbringung</td>
+        <td>Procedure</td>
+        <td>.occurrenceDateTime</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>MELABTFC</td>
+        <td>Funktionscode/Fachgebiet leistungserbringend</td>
+        <td>Procedure</td>
+        <td>.performer.actor</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>MELKANR</td>
+        <td>Krankenanstaltennummer leistungserbringend</td>
+        <td>Procedure</td>
+        <td>.performer.actor.partOf.identifier:GDA-OID</td>
+        <td></td>
+    </tr>
+</table>
+</div>
 ### X05 -> FHIR
-TBD
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>X05</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFDAT</td>
+        <td>Aufnahme-/Kontaktdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR_ID</td>
+        <td>Datensatz-ID</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>LDFGRP</td>
+        <td>Abrechnung – Gruppe</td>
+        <td>Claim</td>
+        <td>.diagnosisRelatedGroup</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>LDFKNT</td>
+        <td>Abrechnung – Knoten</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>diagnosisRelatedNode</td>
+    </tr>
+    <tr>
+        <td>BDZU</td>
+        <td>Zusatzpunkte Belagsdauerausreißer nach oben</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>ZusatzpunkteBelagsdauerausreisserNachOben</td>
+    </tr>
+    <tr>
+        <td>INTZU</td>
+        <td>Zusatzpunkte Intensiv</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>ZusatzpunkteIntensiv</td>
+    </tr>
+    <tr>
+        <td>MELZU</td>
+        <td>Zusatzpunkte Mehrfachleistungen</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>ZusatzpunkteMehrfachleistungen</td>
+    </tr>
+    <tr>
+        <td>SCSPEZ</td>
+        <td>Punkte spezieller Bereiche (tageweise)</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>PunkteSpeziellerBereicheTageweise</td>
+    </tr>
+    <tr>
+        <td>SCGES</td>
+        <td>Punkte total</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>TotalPoints</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Leistungskomponente/Leistungspunkte</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>LeistungskomponenteLeistungspunkte</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Tageskomponente/Kontaktpunkte</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>TageskomponenteKontaktpunkte</td>
+    </tr>
+    <tr>
+        <td>SCULK</td>
+        <td>Punkte Belagsdauerausreißer nach unten – Leistungskomponente</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>PunkteBelagsdauerausreisseruntenLeistungskomponente</td>
+    </tr>
+    <tr>
+        <td>SCUTK</td>
+        <td>Punkte Belagsdauerausreißer nach unten – Tageskomponente</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>PunkteBelagsdauerausreisseruntenTageskomponente</td>
+    </tr>
+</table>
+</div>
 ### X06 -> FHIR
-TBD
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>X06</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+    </tr>
+    <tr>
+        <td>Akzeptierte Errors/Warnings</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFDAT</td>
+        <td>Aufnahme-/Kontaktdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR_ID</td>
+        <td>Datensatz-ID</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>EWWERT</td>
+        <td>Error/Warning – Wert</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>error.value</td>
+    </tr>
+    <tr>
+        <td>EWCODE</td>
+        <td>Error/Warning – Code</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>error.code</td>
+    </tr>
+    <tr>
+        <td>EWKOMMENTAR</td>
+        <td>Error/Warning – Kommentar</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>error.comment</td>
+    </tr>
+</table>
+</div>
 ### X07 -> FHIR
-TBD
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>X07</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+    </tr>
+    <tr>
+        <td>Kommentare</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFDAT</td>
+        <td>Aufnahme-/Kontaktdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR_ID</td>
+        <td>Datensatz-ID</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>KOMMENTAR1</td>
+        <td>Kommentar 1</td>
+        <td>ClaimResponse</td>
+        <td>.extension</td>
+        <td>comments</td>
+    </tr>
+    <tr>
+        <td>KOMMENTAR2</td>
+        <td>Kommentar 2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>KOMMENTAR3</td>
+        <td>Kommentar 3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>KOMMENTAR4</td>
+        <td>Kommentar 4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>KOMMENTAR5</td>
+        <td>Kommentar 5</td>
+        <td>ClaimResponse</td>
+        <td>.extension</td>
+        <td>comments</td>
+    </tr>
+    <tr>
+        <td>KOMMENTAR6</td>
+        <td>Kommentar 6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</div>
 ### I11 -> FHIR
-TBD
+* kein Ressourcen Mapping -> Questionnaire
 ### I12 -> FHIR
-TBD
+* kein Ressourcen Mapping -> Questionnaire
+
 ### K01* -> FHIR
 *die K01 Meldung des LKF Systems unterscheidet sich von der gleichnamigen Meldung des Ka-Org Systems
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>K01*</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+    </tr>
+    <tr>
+        <td>Kostenstellenplan</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>FC</td>
+        <td>Funktionscode</td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>.identifier:Funktionscode+.identifier:Funktionssubcode</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>KOSTNR</td>
+        <td>m             </td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>.extension</td>
+        <td>Kostenstelle.nummer</td>
+    </tr>
+    <tr>
+        <td>KOSTBEZ</td>
+        <td>Interne Kostenstellenbezeichnung</td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>.extension</td>
+        <td>Kostenstelle.nummer.description</td>
+    </tr>
+    <tr>
+        <td>SPEZORG</td>
+        <td>Spezielle Organisationsform</td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>.extension</td>
+        <td>Kostenstelle.Organisationsform</td>
+    </tr>
+    <tr>
+        <td>JAHR</td>
+        <td>Jahr</td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>.extension</td>
+        <td>Kostenstelle.period</td>
+    </tr>
+</table>
+</div>
