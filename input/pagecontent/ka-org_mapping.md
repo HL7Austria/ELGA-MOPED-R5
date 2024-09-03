@@ -2500,20 +2500,6 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td></td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td>MOPEDEncounter</td>
-        <td>.admission.extension</td>
-        <td>Zugangsart</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-    </tr>
-    <tr>
         <td>KOMM</td>
         <td>Kommentarsatz</td>
         <td>/</td>

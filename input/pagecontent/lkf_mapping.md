@@ -886,7 +886,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     </tr>
     <tr>
         <td>KOSTNR</td>
-        <td>m             </td>
+        <td>Interne Kostenstellennummer</td>
         <td>MopedAbteilungsOrganization</td>
         <td>.extension</td>
         <td>Kostenstelle.nummer</td>
