@@ -1,5 +1,6 @@
 Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I11-I12, K01*) des LKF Systems zu FHIR. Die Dokumentation der LKF Meldungen ist unter <a href="https://www.sozialministerium.at/dam/jcr:9685da35-603a-4263-8025-6be5628c99b6/ANHANG1%20-%20AUFBAU%20UND%20INHALT%20DER%20DATENMELDUNGEN%202024.pdf">diesem Link</a> verfügbar.
 
+
 ### X01 -> FHIR
 <div class="table-responsive">
 <table>
@@ -9,13 +10,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td></td>
@@ -23,12 +18,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -37,26 +34,30 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>KOSTCODE</td>
         <td>Leistungszuständiger Kostenträger – Code</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td></td>
         <td>Abrechnender Kostenträger – Code</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MOPEDEncounter</td>
         <td>.period.start</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -65,12 +66,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDEncounter</td>
         <td>.period.start</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>ENTDAT</td>
         <td>Entlassungsdatum</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -79,6 +82,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFART1</td>
@@ -86,6 +90,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDEncounter</td>
         <td>.admission.extension</td>
         <td>Zugangsart</td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFART2</td>
@@ -93,12 +98,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDEncounter</td>
         <td>.class</td>
         <td>Aufnahmeart</td>
+        <td></td>
     </tr>
     <tr>
         <td>ENTART</td>
         <td>Entlassungs-/Abgangsart</td>
         <td>MOPEDEncounter</td>
         <td>.admission.dischargeDisposition</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -107,6 +114,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>GEBDAT</td>
@@ -114,13 +122,15 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>ALTERSGRUPPE</td>
         <td>Altersgruppe bei Entlassung/Kontakt</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
+        <td>MOPEDEncounter</td>
+        <td>.extension</td>
+        <td>AgeGroupAdmission</td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFNR_ID</td>
@@ -128,6 +138,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>STAATSB</td>
@@ -135,12 +146,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>.extension</td>
         <td>citizenship</td>
+        <td></td>
     </tr>
     <tr>
         <td>WSTAAT</td>
         <td>Wohnsitz – Staat</td>
         <td>HL7ATCorePatient</td>
         <td>address.country</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -149,19 +162,22 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>.address.postalCode</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>WGC</td>
         <td>Wohnsitz – Gemeindecode</td>
         <td>HL7ATCorePatient</td>
-        <td>.address.extension</td>
-        <td>municipality</td>
+        <td>TBD</td>
+        <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFID</td>
         <td>Zugewiesen von – Krankenanstaltennummer</td>
         <td>MOPEDEncounter</td>
         <td>.admission.origin</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -170,13 +186,15 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDEncounter</td>
         <td>.admission.destination</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>BHART</td>
         <td>Behandlungsart</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.class</td>
+        <td>Behandlungsart</td>
+        <td></td>
     </tr>
     <tr>
         <td>TRANSART</td>
@@ -184,6 +202,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDEncounter</td>
         <td>.extension</td>
         <td>Transportart</td>
+        <td></td>
     </tr>
     <tr>
         <td>FONDSREL</td>
@@ -191,6 +210,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim</td>
         <td>.extension</td>
         <td>Fondsrelevanz</td>
+        <td></td>
     </tr>
     <tr>
         <td>PFLAG</td>
@@ -198,6 +218,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim</td>
         <td>.extension</td>
         <td>Plausibilitaetskennzeichen</td>
+        <td></td>
     </tr>
     <tr>
         <td></td>
@@ -205,6 +226,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim</td>
         <td>.extension</td>
         <td>SVAbrechnungsquartal</td>
+        <td></td>
     </tr>
 </table>
 </div>
@@ -217,13 +239,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td></td>
@@ -231,12 +247,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -245,6 +263,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
@@ -252,13 +271,15 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDEncounter</td>
         <td>.period.start</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>ALTERSGRUPPE</td>
         <td>Altersgruppe bei Zugang/Kontakt</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
+        <td>MOPEDEncounter</td>
+        <td>.extension</td>
+        <td>AgeGroupDischarge</td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFNR_ID</td>
@@ -266,19 +287,22 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>ABTPOS</td>
         <td>Hauptkostenstelle/Fachgebiet – Positionsnummer</td>
-        <td>*</td>
-        <td>*</td>
-        <td>*</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht => count(TransferEncounter)-1 </td>
     </tr>
     <tr>
         <td>ABTFC</td>
         <td>Hauptkostenstelle – Funktionscode/Fachgebiet</td>
         <td>MopedAbteilungsOrganization</td>
         <td>.identifier:Funktionscode</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -287,12 +311,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>TransferEncounter</td>
         <td>.period.start</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>ABTZZEIT</td>
         <td>Hauptkostenstelle/Fachgebiet – Zugangsuhrzeit/Kontaktuhrzeit</td>
         <td>TransferEncounter</td>
         <td>.period.start</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -301,12 +327,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>TransferEncounter</td>
         <td>.extension</td>
         <td>physischeAnwesenheit</td>
+        <td></td>
     </tr>
     <tr>
         <td>ABTADAT</td>
         <td>Hauptkostenstelle – Abgangsdatum</td>
         <td>TransferEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -315,12 +343,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>TransferEncounter</td>
         <td>.period.end</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>ABTAART</td>
         <td>Hauptkostenstelle – Abgangsart</td>
         <td>TransferEncounter</td>
         <td>.admission.dischargeDisposition</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -329,6 +359,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAbteilungsOrganization</td>
         <td>.identifier:Funktionscode</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>ABTFC_PFLEGE</td>
@@ -336,13 +367,15 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAbteilungsOrganization</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>NEUGEBORENES</td>
         <td>Neugeborenes</td>
-        <td>*</td>
-        <td>*</td>
-        <td>*</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>newborn</td>
+        <td></td>
     </tr>
 </table>
 </div>
@@ -355,13 +388,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td></td>
@@ -369,12 +396,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -383,12 +412,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MOPEDEncounter</td>
         <td>.period.start</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -397,12 +428,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DIAGCODE</td>
         <td>Diagnose – Code</td>
         <td>Condition</td>
         <td>.code</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -411,6 +444,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDEncounter</td>
         <td>.diagnosis.use</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>DIAGART</td>
@@ -418,12 +452,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Condition</td>
         <td>.verificationStatus</td>
         <td>DiagnoseArt</td>
+        <td></td>
     </tr>
     <tr>
         <td>DIAGERW</td>
         <td>Diagnose – im stationären Aufenthalt erworben</td>
         <td>MOPEDAccount</td>
         <td>.diagnosis.onAdmission</td>
+        <td></td>
         <td></td>
     </tr>
 </table>
@@ -437,13 +473,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td></td>
@@ -451,12 +481,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -465,12 +497,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MOPEDEncounter</td>
         <td>.period.start</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -479,12 +513,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>MELCODE</td>
         <td>Medizinische Leistung – Code</td>
         <td>Procedure</td>
         <td>.code</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -493,6 +529,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>.bodysite</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>MELCODEREL</td>
@@ -500,19 +537,22 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim</td>
         <td>.procedure.extension</td>
         <td>.billingRelevance</td>
+        <td></td>
     </tr>
     <tr>
         <td>MELANZ</td>
         <td>Medizinische Leistung – Anzahl</td>
-        <td>*</td>
-        <td>*</td>
-        <td>*</td>
+        <td>TBD</td>
+        <td>TBD</td>
+        <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>MELDAT</td>
         <td>Medizinische Leistung – Datum der Erbringung</td>
         <td>Procedure</td>
         <td>.occurrenceDateTime</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -521,6 +561,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>.occurrenceDateTime</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>MELABTFC</td>
@@ -528,12 +569,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>.performer.actor</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>MELKANR</td>
         <td>Krankenanstaltennummer leistungserbringend</td>
         <td>Procedure</td>
         <td>.performer.actor.partOf.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
 </table>
@@ -547,13 +590,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td></td>
@@ -561,12 +598,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -575,12 +614,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MOPEDEncounter</td>
         <td>.period.start</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -589,83 +630,95 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>LDFGRP</td>
         <td>Abrechnung – Gruppe</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.diagnosisRelatedGroup</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
         <td>LDFKNT</td>
         <td>Abrechnung – Knoten</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>diagnosisRelatedNode</td>
+        <td></td>
     </tr>
     <tr>
         <td>BDZU</td>
         <td>Zusatzpunkte Belagsdauerausreißer nach oben</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteBelagsdauerausreisserNachOben</td>
+        <td></td>
     </tr>
     <tr>
         <td>INTZU</td>
         <td>Zusatzpunkte Intensiv</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteIntensiv</td>
+        <td></td>
     </tr>
     <tr>
         <td>MELZU</td>
         <td>Zusatzpunkte Mehrfachleistungen</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteMehrfachleistungen</td>
+        <td></td>
     </tr>
     <tr>
         <td>SCSPEZ</td>
         <td>Punkte spezieller Bereiche (tageweise)</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>PunkteSpeziellerBereicheTageweise</td>
+        <td></td>
     </tr>
     <tr>
         <td>SCGES</td>
         <td>Punkte total</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>TotalPoints</td>
+        <td></td>
     </tr>
     <tr>
         <td></td>
         <td>Leistungskomponente/Leistungspunkte</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>LeistungskomponenteLeistungspunkte</td>
+        <td></td>
     </tr>
     <tr>
         <td></td>
         <td>Tageskomponente/Kontaktpunkte</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>TageskomponenteKontaktpunkte</td>
+        <td></td>
     </tr>
     <tr>
         <td>SCULK</td>
         <td>Punkte Belagsdauerausreißer nach unten – Leistungskomponente</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>PunkteBelagsdauerausreisseruntenLeistungskomponente</td>
+        <td></td>
     </tr>
     <tr>
         <td>SCUTK</td>
         <td>Punkte Belagsdauerausreißer nach unten – Tageskomponente</td>
-        <td>Claim</td>
+        <td>Claim & ClaimResponse</td>
         <td>.extension</td>
         <td>PunkteBelagsdauerausreisseruntenTageskomponente</td>
+        <td></td>
     </tr>
 </table>
 </div>
@@ -678,9 +731,11 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td>Akzeptierte Errors/Warnings</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -692,12 +747,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -706,12 +763,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MOPEDEncounter</td>
         <td>.period.start</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -720,6 +779,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>EWWERT</td>
@@ -727,6 +787,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim</td>
         <td>.extension</td>
         <td>error.value</td>
+        <td></td>
     </tr>
     <tr>
         <td>EWCODE</td>
@@ -734,6 +795,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim</td>
         <td>.extension</td>
         <td>error.code</td>
+        <td></td>
     </tr>
     <tr>
         <td>EWKOMMENTAR</td>
@@ -741,6 +803,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim</td>
         <td>.extension</td>
         <td>error.comment</td>
+        <td></td>
     </tr>
 </table>
 </div>
@@ -753,9 +816,11 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td>Kommentare</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -767,12 +832,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -781,12 +848,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MOPEDEncounter</td>
         <td>.period.start</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -795,17 +864,20 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KOMMENTAR1</td>
         <td>Kommentar 1</td>
         <td>ClaimResponse</td>
         <td>.extension</td>
-        <td>comments</td>
+        <td>note</td>
+        <td></td>
     </tr>
     <tr>
         <td>KOMMENTAR2</td>
         <td>Kommentar 2</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -816,10 +888,12 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>KOMMENTAR4</td>
         <td>Kommentar 4</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -829,7 +903,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Kommentar 5</td>
         <td>ClaimResponse</td>
         <td>.extension</td>
-        <td>comments</td>
+        <td>note</td>
+        <td></td>
     </tr>
     <tr>
         <td>KOMMENTAR6</td>
@@ -837,27 +912,24 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td></td>
     </tr>
 </table>
 </div>
 ### I11 -> FHIR
-* kein Ressourcen Mapping -> Questionnaire
-### I12 -> FHIR
-* kein Ressourcen Mapping -> Questionnaire
-
-### K01* -> FHIR
-*die K01 Meldung des LKF Systems unterscheidet sich von der gleichnamigen Meldung des Ka-Org Systems
 <div class="table-responsive">
 <table>
     <tr>
-        <td>K01*</td>
+        <td>I11 </td>
         <td></td>
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
-        <td>Kostenstellenplan</td>
+        <td>SAPS3</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -869,12 +941,648 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFDAT</td>
+        <td>Aufnahme-/Kontaktdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTPOS</td>
+        <td>Bettenführende Hauptkostenstelle – Positionsnummer</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht => count(TransferEncounter)-1 </td>
+    </tr>
+    <tr>
+        <td>ERHDAT</td>
+        <td>Erhebungsdatum</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ADM_INF</td>
+        <td>Akute Infektion bei Aufnahme</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_OTHER</td>
+        <td>Aufnahmegrund: Anderer, nicht klassifiziert</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_BASIC</td>
+        <td>Aufnahmegrund: Basispflege und Observanz</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_DIGEST</td>
+        <td>Aufnahmegrund: Gastrointestinal</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_HAEMA</td>
+        <td>Aufnahmegrund: Hämatologisch</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_CARDIO</td>
+        <td>Aufnahmegrund: Kardiovaskulär</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_HEPATIC</td>
+        <td>Aufnahmegrund: Leber</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_METAB</td>
+        <td>Aufnahmegrund: Metabolisch</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_NEURO</td>
+        <td>Aufnahmegrund: Neurologisch</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_RENAL</td>
+        <td>Aufnahmegrund: Renal</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_RESP</td>
+        <td>Aufnahmegrund: Respiratorisch</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>R_S_TRAUMA</td>
+        <td>Aufnahmegrund: Schweres Trauma</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ADM_ART</td>
+        <td>Aufnahmetyp</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>WBC</td>
+        <td>Blutbild: Leukozyten (Minimum)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>PH</td>
+        <td>Blutbild: pH-Wert</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>PLATELETS</td>
+        <td>Blutbild: Thrombozyten (Minimum)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ANATOMIC</td>
+        <td>Chirurgie – Eingriff</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SURGICAL</td>
+        <td>Chirurgischer Status</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>GCS_MR</td>
+        <td>Glasgow Coma Scale: motorische Reaktion</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>GCS_VR</td>
+        <td>Glasgow Coma Scale: verbale Reaktion</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>GCS_ER</td>
+        <td>Glasgow Coma Scale: visuelle Reaktion</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>HR</td>
+        <td>Herzfrequenz (Maximum)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>COKH</td>
+        <td>Koexistierende Erkrankungen</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TEMP</td>
+        <td>Körpertemperatur (Maximum)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>MECH_VENT</td>
+        <td>Mechanische Beatmung</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ART_PO2</td>
+        <td>Sauerstoff-Partialdruck arteriell (PaO2)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>FIO2</td>
+        <td>Sauerstoffkonzentration inspiratorisch (FiO2)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>BILIRUBINE</td>
+        <td>Serum: Bilirubin (Maximum)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>CREA</td>
+        <td>Serum: Kreatinin (Maximum)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SAP</td>
+        <td>Systolischer Blutdruck (Minimum)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>THERA</td>
+        <td>Therapeutische Maßnahmen (vor IBS)</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>IH_LOC</td>
+        <td>Zutransferierung</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</div>
+### I12 -> FHIR
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>I12</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+        <td>Anmerkung</td>
+    </tr>
+    <tr>
+        <td>TISS-A</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+    </tr>
+    <tr>
+        <td>KANR</td>
+        <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFNR</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFDAT</td>
+        <td>Aufnahme-/Kontaktdatum</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTPOS</td>
+        <td>Bettenführende Hauptkostenstelle – Positionsnummer</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht => count(TransferEncounter)-1 </td>
+    </tr>
+    <tr>
+        <td>ERHDAT</td>
+        <td>Erhebungsdatum</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_STAND_MON</td>
+        <td>Standard-Monitoring</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_LAB</td>
+        <td>Labor</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_MED</td>
+        <td>Medikamente</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_DRESS</td>
+        <td>Verbandswechsel</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_DRAIN</td>
+        <td>Drainagenpflege</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_VENT_MOD</td>
+        <td>Atmungsmodus</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_AIRWAY</td>
+        <td>Atemwegszugang</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_TUBUS</td>
+        <td>Tubus-/Stomapflege</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_LUNG</td>
+        <td>Atemtherapie</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_VASODR</td>
+        <td>Medikamente vasoaktiv</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_L_FLUID</td>
+        <td>Flüssigkeitsersatz massiv</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_ART</td>
+        <td>Katheter arteriell</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_HDM</td>
+        <td>Monitoring hämodynamisch</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_CVL</td>
+        <td>Katheter zentralvenös</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_CPR</td>
+        <td>Reanimation kardiopulmonal</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_RENAL</td>
+        <td>Nierenersatztherapie</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_URINARY</td>
+        <td>Harnbilanzierung</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_ACT_DIU</td>
+        <td>Diurese aktiv</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_ICP</td>
+        <td>Hirndruckmessung</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_MET_SUPP</td>
+        <td>Behandlung metabolischer Entgleisungen</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_NUT_ENT</td>
+        <td>Ernährung enteral</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_NUT_PARENT</td>
+        <td>Ernährung parenteral</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_INT</td>
+        <td>Interventionen</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_DIAG_EX_ICU</td>
+        <td>Diagnostik und Therapie außerhalb der IBS</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_AGITATION</td>
+        <td>Agitation und Delirium</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_CARDASS</td>
+        <td>Assist kardial</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_PULMASS</td>
+        <td>Assist pulmonal</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_HYPOTHERMIA</td>
+        <td>Hypothermie therapeutisch</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_LIVER_SUPP</td>
+        <td>Lebersupport extrakorporal</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TA_ANTIEPI</td>
+        <td>Kontinuierliche intravenöse antikonvulsive Therapie</td>
+        <td>Intensivdokumentation als FHIR Questionnaire</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</div>
+### K01* -> FHIR
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>K01*</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+        <td>Anmerkung</td>
+    </tr>
+    <tr>
+        <td>Kostenstellenplan</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Satzartenkennzeichen</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -883,13 +1591,15 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAbteilungsOrganization</td>
         <td>.identifier:Funktionscode+.identifier:Funktionssubcode</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>KOSTNR</td>
-        <td>Interne Kostenstellennummer</td>
+        <td>m             </td>
         <td>MopedAbteilungsOrganization</td>
         <td>.extension</td>
         <td>Kostenstelle.nummer</td>
+        <td></td>
     </tr>
     <tr>
         <td>KOSTBEZ</td>
@@ -897,6 +1607,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAbteilungsOrganization</td>
         <td>.extension</td>
         <td>Kostenstelle.nummer.description</td>
+        <td></td>
     </tr>
     <tr>
         <td>SPEZORG</td>
@@ -904,6 +1615,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAbteilungsOrganization</td>
         <td>.extension</td>
         <td>Kostenstelle.Organisationsform</td>
+        <td></td>
     </tr>
     <tr>
         <td>JAHR</td>
@@ -911,6 +1623,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAbteilungsOrganization</td>
         <td>.extension</td>
         <td>Kostenstelle.period</td>
+        <td></td>
     </tr>
 </table>
 </div>

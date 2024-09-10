@@ -13,7 +13,9 @@
 </style>
 
 Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die Dokumentation der Ka-Org Meldungen ist unter <a href="https://www.sozialversicherung.at/cdscontent/load?contentid=10008.787666&version=1714375049">diesem Link</a> verfügbar.
-### Identifikationsteil
+
+
+### Identifikationsteil -> FHIR
 <div class="table-responsive">
 <table>
     <tr>
@@ -22,15 +24,10 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td>K01, K02, K03, K04, K05, K06, K12, K27</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
         <td></td>
         <td></td>
         <td></td>
@@ -43,12 +40,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -57,6 +56,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -64,33 +64,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -99,12 +104,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -113,12 +120,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -127,12 +136,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -141,12 +152,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
         <td>Coverage</td>
         <td>.class:Versichertenkategorie</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -155,12 +168,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AZUNA</td>
         <td>Zuname de Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -169,12 +184,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AGESCHL</td>
         <td>Geschlecht des Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -183,6 +200,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FECO</td>
@@ -190,6 +208,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -197,12 +216,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -211,6 +232,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -218,10 +240,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
 </table>
-
 </div>
+### Identifikationsteil für den Landesgesundheitsfonds -> FHIR
 <div class="table-responsive">
 <table>
     <tr>
@@ -230,15 +253,10 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td>K09, K10, K13, K14, K20, K21, K22</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
         <td></td>
         <td></td>
         <td></td>
@@ -251,12 +269,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -265,6 +285,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -272,33 +293,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -307,12 +333,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>GEVDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -321,12 +349,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>GEBDATA</td>
         <td>Geburtsdatum des Mitversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -335,6 +365,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -342,12 +373,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -356,6 +389,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -363,10 +397,10 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
 </table>
 </div>
-
 ### K01 -> FHIR
 <div class="table-responsive">
 <table>
@@ -376,16 +410,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
-        <td>K01 - Aufnahmeanzeige, Ereignisanzeige</td>
+        <td>K01 - Aufnahmeanzeige, Ereignisanzeige; K02 - Storno Aufnahmeanzeige, Storno Ereignisanzeige	</td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>K02 - Storno Aufnahmeanzeige, Storno Ereignisanzeige</td>
         <td></td>
         <td></td>
         <td></td>
@@ -397,12 +426,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -411,6 +442,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -418,33 +450,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -453,12 +490,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -467,12 +506,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -481,12 +522,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -495,12 +538,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
         <td>Coverage</td>
         <td>.class:Versichertenkategorie</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -509,12 +554,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AZUNA</td>
         <td>Zuname de Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -523,12 +570,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AGESCHL</td>
         <td>Geschlecht des Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -537,6 +586,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FECO</td>
@@ -544,6 +594,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -551,12 +602,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -565,6 +618,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -572,12 +626,22 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+    </tr>
+    <tr>
+        <td>EREIG</td>
+        <td>Ereignisart</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>EREIG=AUFART -> MOPEDEncounter.admission.extension:Zugangsart</td>
     </tr>
     <tr>
         <td>FKRA</td>
         <td>Funktionscode der Abteilung lt. LKF</td>
         <td>MopedAbteilungsOrganization</td>
         <td>.identifier:Funktionscode</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -586,6 +650,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MopedAbteilungsOrganization</td>
         <td>.identifier:Funktionssubcode</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>KLAS</td>
@@ -593,6 +658,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>CoverageEligibilityRequest</td>
         <td>.extension</td>
         <td>PremiumClass</td>
+        <td></td>
     </tr>
     <tr>
         <td>STAAT</td>
@@ -600,6 +666,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.extension</td>
         <td>citizenship</td>
+        <td></td>
     </tr>
     <tr>
         <td>PASTR</td>
@@ -607,19 +674,22 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.address.line</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>PALKZ</td>
         <td>Wohnadresse des Patienten, Länderkennzeichen</td>
         <td>HL7ATCorePatient</td>
+        <td>address.country</td>
         <td>TBD</td>
-        <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>PAPLZL</td>
         <td>Wohnadresse des Patienten, Postleitzahl</td>
         <td>HL7ATCorePatient</td>
         <td>.address.postalCode</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -628,6 +698,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.address.city</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>VERDAU</td>
@@ -635,67 +706,77 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>VerdachtArbeitsSchülerUnfall</td>
+        <td></td>
     </tr>
     <tr>
         <td>DIAG1</td>
         <td>Diganose 1, ICD10 BMSGPK Schlüssel</td>
-        <td>Condition.code</td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>DIAG1U1</td>
         <td>Diagnose 1, Untergliederung 1</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>DIAG1U2</td>
         <td>Diagnose 1, Untergliederung 2</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>DIAG2</td>
         <td>Diganose 2, ICD10 BMSGPK Schlüssel</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>DIAG2U1</td>
         <td>Diagnose 2,  Untergliederung 1</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>DIAG2U2</td>
         <td>Diagnose 2, Untergliederung 2</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>DIAG3</td>
         <td>Diganose 3, ICD10 BMSGPK Schlüssel</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>DIAG3U1</td>
         <td>Diagnose 3, Untergliederung 1</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>DIAG3U2</td>
         <td>Diagnose 3, Untergliederung 2</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
@@ -705,19 +786,22 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>VerdachtFremdverschulden</td>
+        <td></td>
     </tr>
     <tr>
         <td>DIAG</td>
         <td>Diagnose im Klartext,kann bei Codierung entfallen</td>
-        <td>Condition.code</td>
-        <td></td>
-        <td></td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>ab 2025 Codierung verpflichten</td>
     </tr>
     <tr>
         <td>URS</td>
         <td>Ursache der Behandlung</td>
         <td>MOPEDEncounter</td>
         <td>.reason</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -726,12 +810,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>USVPNR</td>
         <td>Überweisende Stelle, Vertragspartnernummer</td>
         <td>MOPEDEncounter</td>
         <td>.admission.origin</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -740,19 +826,22 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCoreOrganization</td>
         <td>.name</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>USLKZ</td>
         <td>Länderkennzeichen der überweisenden Stelle</td>
         <td>HL7ATCoreOrganization</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.contact.address.country</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>USPLZL</td>
         <td>Überweisende Stelle, Postleitzahl</td>
         <td>HL7ATCoreOrganization</td>
         <td>.contact.address.postalCode</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -761,6 +850,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCoreOrganization</td>
         <td>.contact.address.city</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>ERDAT</td>
@@ -768,6 +858,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDEncounter</td>
         <td>.extension</td>
         <td>Unfalldatum</td>
+        <td></td>
     </tr>
     <tr>
         <td>VTAG</td>
@@ -775,6 +866,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>CoverageEligibilityRequest</td>
         <td>.extension</td>
         <td>ExtensionDays</td>
+        <td></td>
     </tr>
     <tr>
         <td>VDAS</td>
@@ -782,10 +874,10 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>CoverageEligibilityRequest</td>
         <td>.extension</td>
         <td>VDASID</td>
+        <td></td>
     </tr>
 </table>
 </div>
-
 ### K03 -> FHIR
 <div class="table-responsive">
 <table>
@@ -795,16 +887,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
-        <td>K03 - Versichertenanspruchserklärung</td>
+        <td>K03 - Versichertenanspruchserklärung; K04 - Storno Versichertenanspruchserklärung	</td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>K04 - Storno Versichertenanspruchserklärung</td>
         <td></td>
         <td></td>
         <td></td>
@@ -816,12 +903,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -830,6 +919,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -837,33 +927,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -872,12 +967,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -886,12 +983,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -900,12 +999,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -914,12 +1015,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
         <td>Coverage</td>
         <td>.class:Versichertenkategorie</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -928,12 +1031,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AZUNA</td>
         <td>Zuname de Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -942,12 +1047,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AGESCHL</td>
         <td>Geschlecht des Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -956,6 +1063,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FECO</td>
@@ -963,6 +1071,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -970,12 +1079,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -984,6 +1095,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -991,6 +1103,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>EREIG</td>
@@ -998,6 +1111,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>EREIG=AUFART -> MOPEDEncounter.admission.extension:Zugangsart</td>
     </tr>
     <tr>
         <td>KLAS</td>
@@ -1005,12 +1119,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>CoverageEligibilityRequest</td>
         <td>.extension</td>
         <td>PremiumClass</td>
+        <td></td>
     </tr>
     <tr>
         <td>DAT-VON</td>
         <td>VAE Beginndatum</td>
         <td>CoverageEligibilityResponse</td>
         <td>.insurance.benefitPeriod.start</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1019,6 +1135,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>CoverageEligibilityResponse</td>
         <td>.insurance.benefitPeriod.end</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>ENDE</td>
@@ -1026,6 +1143,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>CoverageEligibilityResponse</td>
         <td>.extension</td>
         <td>EndOfEligibility</td>
+        <td></td>
     </tr>
     <tr>
         <td>VAEST</td>
@@ -1033,6 +1151,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>CoverageEligibilityResponse</td>
         <td>.extension</td>
         <td>VAEStatus</td>
+        <td></td>
     </tr>
     <tr>
         <td>VKBEFR</td>
@@ -1040,6 +1159,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>CoverageEligibilityResponse</td>
         <td>.extension</td>
         <td>MealCostExcemption</td>
+        <td></td>
     </tr>
     <tr>
         <td>VTAGE</td>
@@ -1047,6 +1167,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>CoverageEligibilityResponse</td>
         <td>.extension</td>
         <td>NumberOfPreviouslyDaysPaid</td>
+        <td></td>
     </tr>
 </table>
 </div>
@@ -1059,16 +1180,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
-        <td>K05 - Entlassungsanzeige</td>
+        <td>K05 - Entlassungsanzeige; K06 - Storno Entlassungsanzeige	</td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>K06 - Storno Entlassungsanzeige</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1080,12 +1196,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1094,6 +1212,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -1101,33 +1220,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1136,12 +1260,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1150,12 +1276,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1164,12 +1292,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1178,12 +1308,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
         <td>Coverage</td>
         <td>.class:Versichertenkategorie</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1192,12 +1324,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AZUNA</td>
         <td>Zuname de Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1206,12 +1340,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AGESCHL</td>
         <td>Geschlecht des Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1220,6 +1356,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FECO</td>
@@ -1227,6 +1364,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -1234,12 +1372,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1248,6 +1388,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -1255,46 +1396,53 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>HDIAG</td>
         <td>Hauptdiagnose ICD 10 BMSGPK Schlüssel</td>
-        <td>Condition.code</td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>HDIAGU1</td>
         <td>Hauptdiagnose Untergliederung 1</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>HDIAGU2</td>
         <td>Hauptdiagnose Untergliederung 2</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>ZDIAG1</td>
         <td>Zusatzdiagnose 1, ICD 10 BMSGPK Schlüssel</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>ZDIAGU1</td>
         <td>Zusatzdiagnose 1, Untergliederung 1</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>ZDIAGU2</td>
         <td>Zusatzdiagnose 1, Untergliederung 2</td>
-        <td></td>
+        <td>Condition</td>
+        <td>.code</td>
         <td></td>
         <td></td>
     </tr>
@@ -1304,19 +1452,22 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>VerdachtFremdverschulden</td>
+        <td></td>
     </tr>
     <tr>
         <td>DAIG</td>
         <td>Hauptdiagnose im Klartext, entfällt bei Codierung</td>
-        <td>Condition.code</td>
-        <td></td>
-        <td></td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>ab 2025 Codierung verpflichten</td>
     </tr>
     <tr>
         <td>URS</td>
         <td>Ursache der Behandlung</td>
         <td>MOPEDEncounter</td>
         <td>.reason</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1325,6 +1476,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>ENTGM</td>
@@ -1332,6 +1484,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>ENTGW</td>
@@ -1339,6 +1492,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>ENTT</td>
@@ -1346,6 +1500,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>ENTBART</td>
@@ -1353,12 +1508,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>ENTS</td>
         <td>Entlassungsschlüssel</td>
         <td>MOPEDEncounter</td>
         <td>.admission.dischargeDisposition</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1367,6 +1524,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>TBD</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>VKLA</td>
@@ -1374,6 +1532,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>TBD</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>AI</td>
@@ -1381,6 +1540,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig (über Encounter Status abgebildet)</td>
     </tr>
     <tr>
         <td>KABEFR</td>
@@ -1388,6 +1548,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>TageOhneKostenbeitrag</td>
+        <td></td>
     </tr>
 </table>
 </div>
@@ -1400,16 +1561,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
-        <td>K09 - Kostenmeldung stationär RG/AV/KO</td>
+        <td>K09 - Kostenmeldung stationär RG/AV/KO; K10 - Storno Kostenmeldung stationär RG/AV/KO</td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>K10 - Storno Kostenmeldung stationär RG/AV/KO</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1421,12 +1577,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1435,6 +1593,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -1442,33 +1601,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1477,6 +1641,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDEncounter</td>
         <td>.admission.extension</td>
         <td>Zugangsart</td>
+        <td></td>
     </tr>
     <tr>
         <td>ENTLART</td>
@@ -1484,6 +1649,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>ENTLART = ENTS -> MOPEDEncounter.admission.dischargeDisposition</td>
     </tr>
     <tr>
         <td>KOMM</td>
@@ -1491,12 +1657,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1505,12 +1673,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1519,12 +1689,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
         <td>Coverage</td>
         <td>.class:Versichertenkategorie</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1533,6 +1705,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FECO</td>
@@ -1540,6 +1713,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -1547,12 +1721,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1561,6 +1737,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -1568,6 +1745,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>STAATB</td>
@@ -1575,12 +1753,22 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.extension</td>
         <td>citizenship</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>STAATW</td>
+        <td>Hauptwohnsitz Staat</td>
+        <td>HL7ATCorePatient</td>
+        <td>address.country</td>
+        <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>PLZLW</td>
         <td>Hauptwohnsitz Postleitzahl</td>
         <td>HL7ATCorePatient</td>
         <td>.address.postalCode</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1589,33 +1777,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>VERURL</td>
         <td>Urlaubstage im Verrechnungszeitraum</td>
-        <td></td>
-        <td></td>
+        <td>Claim</td>
+        <td>TBD</td>
+        <td>TBD</td>
         <td></td>
     </tr>
     <tr>
         <td>SOND</td>
         <td>Sonderleistungsnummer</td>
         <td>ClaimResponse</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.extension</td>
+        <td>Sonderleistungsnummer</td>
+        <td></td>
     </tr>
     <tr>
         <td>SOANZ</td>
         <td>Anzahl Sonderleistung</td>
         <td>ClaimResponse</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.extension</td>
+        <td>AnzahlSonderleistungen</td>
+        <td></td>
     </tr>
     <tr>
         <td>KVAB</td>
         <td>Ablehnungsgrund für Leistungserbringung stationär</td>
         <td>ClaimResponse</td>
         <td>.adjudication.reason</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1624,19 +1817,22 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>KOANF</td>
         <td>Kostenmeldung für (A/R/K)</td>
         <td>ClaimResponse</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.extension</td>
+        <td>KostenmeldungARK</td>
+        <td></td>
     </tr>
     <tr>
         <td>LDFGRP</td>
         <td>LDF-Gruppe Teil1</td>
         <td>Claim</td>
         <td>.diagnosisRelatedGroup</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1645,13 +1841,15 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Claim</td>
         <td>.extension</td>
         <td>diagnosisRelatedNode</td>
+        <td></td>
     </tr>
     <tr>
         <td>LDFPP</td>
         <td>Punkte LDF-Pauschale</td>
         <td>ClaimResponse</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.extension</td>
+        <td>PunkteLDFPauschale</td>
+        <td></td>
     </tr>
     <tr>
         <td>VDU</td>
@@ -1659,6 +1857,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Claim</td>
         <td>.extension</td>
         <td>PunkteBelagsdauerausreisseruntenLeistungskomponente</td>
+        <td></td>
     </tr>
     <tr>
         <td>VDO</td>
@@ -1666,6 +1865,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Claim</td>
         <td>.extension</td>
         <td>ZusatzpunkteBelagsdauerausreisserNachOben</td>
+        <td></td>
     </tr>
     <tr>
         <td>ZUINT</td>
@@ -1673,6 +1873,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Claim</td>
         <td>.extension</td>
         <td>ZusatzpunkteIntensiv</td>
+        <td></td>
     </tr>
     <tr>
         <td>ZUMEHR</td>
@@ -1680,6 +1881,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Claim</td>
         <td>.extension</td>
         <td>ZusatzpunkteMehrfachleistungen</td>
+        <td></td>
     </tr>
     <tr>
         <td>PSPEZ</td>
@@ -1687,6 +1889,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Claim</td>
         <td>.extension</td>
         <td>PunkteSpeziellerBereicheTageweise</td>
+        <td></td>
     </tr>
     <tr>
         <td>PTOT</td>
@@ -1694,20 +1897,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Claim</td>
         <td>.extension</td>
         <td>TotalPoints</td>
+        <td></td>
     </tr>
     <tr>
         <td>LDFFAK</td>
         <td>LDF-Punktewert Netto</td>
         <td>ClaimResponse</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.extension</td>
+        <td>LDFPunktewertNetto</td>
+        <td></td>
     </tr>
     <tr>
         <td>LDFBET</td>
         <td>LDF-Betrag Netto</td>
         <td>ClaimResponse</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.extension</td>
+        <td>LDFBetragNetto</td>
+        <td></td>
     </tr>
     <tr>
         <td>VERSATZ</td>
@@ -1715,6 +1921,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>VERPA</td>
@@ -1722,6 +1929,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>BEIH</td>
@@ -1729,6 +1937,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>FORDAV</td>
@@ -1736,6 +1945,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>FORDRG</td>
@@ -1743,6 +1953,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>RUE</td>
@@ -1750,6 +1961,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht notwendig (Notifications)</td>
     </tr>
     <tr>
         <td>RENR</td>
@@ -1757,6 +1969,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
 </table>
 </div>
@@ -1769,15 +1982,10 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td>K20 - Kostenmeldungsanforderung</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
         <td></td>
         <td></td>
         <td></td>
@@ -1790,12 +1998,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1804,6 +2014,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -1811,33 +2022,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1846,12 +2062,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>GEVDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1860,12 +2078,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>GEBDATA</td>
         <td>Geburtsdatum des Mitversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1874,6 +2094,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -1881,12 +2102,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1895,6 +2118,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -1902,6 +2126,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>AUFKZ</td>
@@ -1909,13 +2134,15 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig: kann abgeleitet werden aus AUFART(KaOrg)/Zugangsart oder AUFART2(LKF)/Aufnahmeart</td>
     </tr>
     <tr>
         <td>KOANF</td>
         <td>Kostenmeldung für</td>
         <td>ClaimResponse</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.extension</td>
+        <td>KostenmeldungARK</td>
+        <td></td>
     </tr>
 </table>
 </div>
@@ -1928,15 +2155,10 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td>K12 - Kommentar</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
         <td></td>
         <td></td>
         <td></td>
@@ -1949,12 +2171,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -1963,6 +2187,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -1970,33 +2195,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2005,12 +2235,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2019,12 +2251,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2033,12 +2267,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2047,12 +2283,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
         <td>Coverage</td>
         <td>.class:Versichertenkategorie</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2061,12 +2299,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AZUNA</td>
         <td>Zuname de Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2075,12 +2315,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AGESCHL</td>
         <td>Geschlecht des Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2089,6 +2331,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FECO</td>
@@ -2096,6 +2339,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -2103,12 +2347,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2117,6 +2363,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -2124,6 +2371,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>ZEILNR</td>
@@ -2131,6 +2379,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>TEXT1</td>
@@ -2138,26 +2387,299 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>.extension</td>
         <td>comments</td>
+        <td></td>
     </tr>
     <tr>
         <td>TEXT2</td>
         <td>Kommentartext</td>
-        <td></td>
-        <td></td>
+        <td>ClaimResponse</td>
+        <td>.extension</td>
+        <td>comments</td>
         <td></td>
     </tr>
     <tr>
         <td>TEXT3</td>
         <td>Kommentartext</td>
-        <td></td>
-        <td></td>
+        <td>ClaimResponse</td>
+        <td>.extension</td>
+        <td>comments</td>
         <td></td>
     </tr>
     <tr>
         <td>TEXT4</td>
         <td>Kommentartext</td>
+        <td>ClaimResponse</td>
+        <td>.extension</td>
+        <td>comments</td>
+        <td></td>
+    </tr>
+</table>
+</div>
+### K13 -> FHIR
+<div class="table-responsive">
+<table>
+    <tr>
+        <td>E.11</td>
+        <td></td>
+        <td>Resource</td>
+        <td>FHIRPath</td>
+        <td>Extension</td>
+        <td>Anmerkung</td>
+    </tr>
+    <tr>
+        <td>K13 - Leistungsdaten ambulant; K14 - Storno Leistungsdaten ambulant	</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>SART</td>
+        <td>Satzart</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+    </tr>
+    <tr>
+        <td>VPNR</td>
+        <td>Vertragspartnernummer der Krankenanstalt</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:VPNR</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFZL</td>
+        <td>Aufnahmezahl</td>
+        <td>MOPEDAccount</td>
+        <td>.identifier</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>FANU</td>
+        <td>Fallnummer</td>
+        <td>MOPEDAccount</td>
+        <td>.extension</td>
+        <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
+    </tr>
+    <tr>
+        <td>KOST</td>
+        <td>Kostenträger (leistungszuständig)</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>VSTR</td>
+        <td>zuständiger Versicherungsträger</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>AUFN</td>
+        <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
+    </tr>
+    <tr>
+        <td>ENTL</td>
+        <td>Entlassungsdatum JJJJMMTT</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.end</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>KOMM</td>
+        <td>Kommentarsatz</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
+    </tr>
+    <tr>
+        <td>GEVDAT</td>
+        <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
+        <td>HL7ATCorePatient</td>
+        <td>.birthDate</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>DSID</td>
+        <td>Datensatz-ID</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+    </tr>
+    <tr>
+        <td>GEBDATA</td>
+        <td>Geburtsdatum des Mitversicherten JJJJMMTT</td>
+        <td>HL7ATCorePatient</td>
+        <td>.birthDate</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>FECO</td>
+        <td>Fehlercode</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
+    </tr>
+    <tr>
+        <td>DSIDR</td>
+        <td>Datensatz-ID Referenz</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+    </tr>
+    <tr>
+        <td>BKANR</td>
+        <td>Krankenanstaltennummer des Bundesministeriums</td>
+        <td>HL7ATCoreOrganization</td>
+        <td>.identifier:GDA-OID</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>DVERS-ID</td>
+        <td>Datensatzversion ID-Teil, Versionsnummer vom ID-Teil</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+    </tr>
+    <tr>
+        <td>DVERS-SA</td>
+        <td>Datensatzversion Satzart-Teil, Versionsnummer vom Satzart-Teil</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+    </tr>
+    <tr>
+        <td>FKRA</td>
+        <td>Abteilung - Funktionscode der Ambulanz</td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>.identifier:Funktionscode</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>FKRASU</td>
+        <td>Abteilung - Subcode</td>
+        <td>MopedAbteilungsOrganization</td>
+        <td>.identifier:Funktionssubcode</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>BDAT</td>
+        <td>Behandlungsdatum JJJJMMTT</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>KOANF</td>
+        <td>Kostenmeldung</td>
+        <td>ClaimResponse</td>
+        <td>.extension</td>
+        <td>KostenmeldungARK</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>LDFGRP</td>
+        <td>LDF-Gruppe 1</td>
+        <td>Claim</td>
+        <td>.diagnosisRelatedGroup</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>LDFKNR</td>
+        <td>LDF-Gruppe 2</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>diagnosisRelatedNode</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> PTOT</td>
+        <td>Punkte Total</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>TotalPoints</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>LDFFAK</td>
+        <td>LDF-Punktewert netto</td>
+        <td>ClaimResponse</td>
+        <td>.extension</td>
+        <td>LDFPunktewertNetto</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>LDFBET</td>
+        <td>LDF-Betrag Netto</td>
+        <td>ClaimResponse</td>
+        <td>.extension</td>
+        <td>LDFBetragNetto</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>BEIH</td>
+        <td>Beihilfenäquivalent</td>
+        <td>ClaimResponse</td>
+        <td>TBD</td>
+        <td>TBD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>FORDAV</td>
+        <td>Forderungsbetrag für Ausländerverrechnung</td>
+        <td>ClaimResponse</td>
+        <td>TBD</td>
+        <td>TBD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>FORDRG</td>
+        <td>Forderungsbetrag für den Regress</td>
+        <td>ClaimResponse</td>
+        <td>TBD</td>
+        <td>TBD</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTFC_LP</td>
+        <td>Leistungspunkte</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>LeistungskomponenteLeistungspunkte</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>ABTFC_KP</td>
+        <td>Kontaktpunkte</td>
+        <td>Claim</td>
+        <td>.extension</td>
+        <td>TageskomponenteKontaktpunkte</td>
         <td></td>
     </tr>
 </table>
@@ -2171,16 +2693,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
-        <td>K21 - Rückmeldung Ausländerverrechnung/Regresse</td>
+        <td>K21 - Rückmeldung Ausländerverrechnung/Regresse; K22 - Storno Rückmeldung Ausländerverrechnung/Regresse</td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>K22 - Storno Rückmeldung Ausländerverrechnung/Regresse</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2192,12 +2709,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2206,6 +2725,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -2213,33 +2733,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2248,12 +2773,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>GEVDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2262,12 +2789,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>GEBDATA</td>
         <td>Geburtsdatum des Mitversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2276,6 +2805,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -2283,12 +2813,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2297,6 +2829,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -2304,20 +2837,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>KOANF</td>
         <td>Kostenmeldung</td>
         <td>ClaimResponse</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.extension</td>
+        <td>KostenmeldungARK</td>
+        <td></td>
     </tr>
     <tr>
         <td>LDFBET</td>
         <td>LDF-Betrag Netto</td>
         <td>ClaimResponse</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.extension</td>
+        <td>LDFBetragNetto</td>
+        <td></td>
     </tr>
     <tr>
         <td>VERSATZ</td>
@@ -2325,6 +2861,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>VERPA</td>
@@ -2332,6 +2869,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>ZKZ</td>
@@ -2339,6 +2877,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>BETRAV</td>
@@ -2346,6 +2885,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>BETRRG</td>
@@ -2353,6 +2893,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>RENR</td>
@@ -2360,6 +2901,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>ART</td>
@@ -2367,6 +2909,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>PROZ</td>
@@ -2374,6 +2917,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>SCHEIN</td>
@@ -2381,6 +2925,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>LAND</td>
@@ -2388,6 +2933,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>GRUND</td>
@@ -2395,6 +2941,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>FREMDRE</td>
@@ -2402,6 +2949,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>ELBNR</td>
@@ -2409,6 +2957,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>ClaimResponse</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
         <td>ASVT</td>
@@ -2416,6 +2965,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>TBD Organization</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
 </table>
 </div>
@@ -2428,15 +2978,10 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>Anmerkung</td>
     </tr>
     <tr>
         <td>K27 - EKVK-Datenmeldung (nur an ÖGK)</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
         <td></td>
         <td></td>
         <td></td>
@@ -2449,12 +2994,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VPNR</td>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:VPNR</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2463,6 +3010,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.identifier</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FANU</td>
@@ -2470,33 +3018,38 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>MOPEDAccount</td>
         <td>.extension</td>
         <td>.Fallnummer</td>
+        <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
     </tr>
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>payer</td>
+        <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>Claim</td>
+        <td>.insurer:Organization.identifier</td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>TBD</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>MOPEDEncounter</td>
+        <td>.period.start</td>
+        <td></td>
+        <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
     </tr>
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
         <td>MOPEDEncounter</td>
         <td>.period.end</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2505,12 +3058,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>für den Identifikationsteil nicht notwendig: Entscheidung der MOPED Stakeholder</td>
     </tr>
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2519,12 +3074,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2533,12 +3090,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2547,12 +3106,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
         <td>Coverage</td>
         <td>.class:Versichertenkategorie</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2561,12 +3122,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AZUNA</td>
         <td>Zuname de Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2575,12 +3138,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>AGESCHL</td>
         <td>Geschlecht des Mitversicherten</td>
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2589,6 +3154,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>FECO</td>
@@ -2596,6 +3162,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig  (Validierung gegen die Profile - Formalabweisung)</td>
     </tr>
     <tr>
         <td>DSIDR</td>
@@ -2603,12 +3170,14 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>HL7ATCoreOrganization</td>
         <td>.identifier:GDA-OID</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -2617,6 +3186,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>DVERS-SA</td>
@@ -2624,96 +3194,110 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
+        <td>EVSNR</td>
         <td>EWR-Versicherungsnummer des Patienten</td>
-        <td></td>
         <td>Patient</td>
         <td>TBD</td>
         <td>TBD</td>
+        <td></td>
     </tr>
     <tr>
+        <td>EZUNA</td>
         <td>Zuname</td>
-        <td></td>
         <td>HL7ATCorePatient</td>
         <td>.name.family</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
+        <td>EVONA</td>
         <td>Vorname</td>
-        <td></td>
         <td>HL7ATCorePatient</td>
         <td>.name.given</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
+        <td>EGESL</td>
         <td>Geschlecht</td>
-        <td></td>
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
+        <td>EGEBD</td>
         <td>Geburtsdatum JJJJMMTT</td>
-        <td></td>
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
+        <td>ESTAAT</td>
         <td>Staatenschlüssel</td>
-        <td></td>
         <td>TBD Organization</td>
         <td>.contact.address.country</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
+        <td>EIC</td>
         <td>Instituionscode des zuständen Trägers</td>
-        <td></td>
         <td>TBD Organization</td>
         <td>.identifier:institutionCode</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
+        <td>EAKRO</td>
         <td>Akronym des zuständigen Trägers</td>
-        <td></td>
         <td>TBD Organization</td>
         <td>.alias</td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
+        <td>EKANR</td>
         <td>Kartennummer</td>
-        <td></td>
-        <td>Claim ? (to be discussed)</td>
-        <td></td>
+        <td>Claim ?</td>
+        <td>TBD</td>
+        <td>TBD</td>
         <td></td>
     </tr>
     <tr>
+        <td>EAEND</td>
         <td>Endedatum des Anspruches JJJJMMTT</td>
-        <td></td>
-        <td>Claim ? (to be discussed)</td>
-        <td></td>
+        <td>Claim ?</td>
+        <td>TBD</td>
+        <td>TBD</td>
         <td></td>
     </tr>
     <tr>
+        <td>EFORM</td>
         <td>Art der Anspruchsbescheinigung</td>
-        <td></td>
-        <td>Claim ? (to be discussed)</td>
-        <td></td>
+        <td>Claim ?</td>
+        <td>TBD</td>
+        <td>TBD</td>
         <td></td>
     </tr>
     <tr>
+        <td>EABEG</td>
         <td>Beginndatum des Anspruches JJJJMMTT</td>
-        <td></td>
-        <td>Claim ? (to be discussed)</td>
-        <td></td>
+        <td>Claim ?</td>
+        <td>TBD</td>
+        <td>TBD</td>
         <td></td>
     </tr>
     <tr>
-        <td>Bei EFORM &quot; ANFO mit der Wohnort-Stadt des Patienten</td>
-        <td></td>
-        <td>Claim ? (to be discussed)</td>
-        <td></td>
+        <td>ESTADT</td>
+        <td>Bei EFORM " ANFO mit der Wohnort-Stadt des Patienten</td>
+        <td>Claim ?</td>
+        <td>TBD</td>
+        <td>TBD</td>
         <td></td>
     </tr>
 </table>
