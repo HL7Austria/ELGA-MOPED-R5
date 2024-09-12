@@ -60,7 +60,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-10"
 * item[0].item[=].text = "Aufnahmegrund: Basispflege und Observanz"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Basispflege und Observanz/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -73,7 +73,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-11"
 * item[0].item[=].text = "Aufnahmegrund: Gastrointestinal"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Gastrointestinal/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -87,7 +87,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-12"
 * item[0].item[=].text = "Aufnahmegrund: Hämatologisch"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Hämatologisch/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -100,7 +100,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-13"
 * item[0].item[=].text = "Aufnahmegrund: Kardiovaskulär"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Kardiovaskulär/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -131,7 +131,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-14"
 * item[0].item[=].text = "Aufnahmegrund: Leber"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Leber/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -142,7 +142,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-15"
 * item[0].item[=].text = "Aufnahmegrund: Metabolisch"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Metabolisch/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -157,7 +157,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-16"
 * item[0].item[=].text = "Aufnahmegrund: Neurologisch"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Neurologisch/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -174,7 +174,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-17"
 * item[0].item[=].text = "Aufnahmegrund: Renal"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Renal/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -189,7 +189,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-18"
 * item[0].item[=].text = "Aufnahmegrund: Respiratorisch"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Respiratorisch/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -206,7 +206,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-20"
 * item[0].item[=].text = "Aufnahmetyp"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Geplant: Patient:innen, deren Aufnahme zumindest 12 Stunden im Voraus geplant wurde"
 * item[0].item[=].answerOption[1].valueCoding.code = #2
@@ -235,7 +235,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-24"
 * item[0].item[=].text = "Chirurgie – Eingriff"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Keine Chirurgie – Eingriff/nicht erhoben"
 * item[0].item[=].answerOption[1].valueCoding.code = #1
@@ -326,7 +326,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-25"
 * item[0].item[=].text = "Chirurgischer Status"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Elektive Chirurgie: Patient:innen, welche einem chirurgischen Eingriff unterzogen wurden (vor der Aufnahme auf die Intensivstation) welcher länger als 24 Stunden voraus geplant wurde"
 * item[0].item[=].answerOption[1].valueCoding.code = #2
@@ -337,7 +337,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-26"
 * item[0].item[=].text = "Glasgow Coma Scale: motorische Reaktion"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Keine Antwort"
 * item[0].item[=].answerOption[1].valueCoding.code = #2
@@ -354,7 +354,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-27"
 * item[0].item[=].text = "Glasgow Coma Scale: verbale Reaktion"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Keine Antwort"
 * item[0].item[=].answerOption[1].valueCoding.code = #2
@@ -369,7 +369,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-28"
 * item[0].item[=].text = "Glasgow Coma Scale: visuelle Reaktion"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Keine Antwort"
 * item[0].item[=].answerOption[1].valueCoding.code = #2
@@ -527,7 +527,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-39"
 * item[0].item[=].text = "Zutransferierung"
-* item[0].item[=].type = #coding
+* item[0].item[=].type = #choice
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Bettenstation: Der:die Patient:in wurde von einer Normalstation entweder derselben oder einer anderen Krankenanstalt zurtransferiert."
 * item[0].item[=].answerOption[1].valueCoding.code = #2
