@@ -36,7 +36,7 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * extension contains ForderungsbetragAuslaenderverrechnungRegress named ForderungsbetragAuslaenderverrechnungRegress 0..1
 * extension contains RechnungsnummerKHLGF named RechnungsnummerKHLGF 0..1
 
-* extension contains Comment named Comment 0..
+* extension contains Note named Note 0..
 * extension contains LeistungskomponenteLeistungspunkte named LeistungskomponenteLeistungspunkte 0..1
 * extension contains TageskomponenteKontaktpunkte named TageskomponenteKontaktpunkte 0..1
 
