@@ -20,7 +20,8 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
 * encounter[TransferEncounter] only Reference(MOPEDTransferEncounter)
 
-* extension contains Comment named Comment 0..
+* extension contains Note named Note 0..
+* diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
 * extension contains DiagnosisRelatedNode named DiagnosisRelatedNode 0..1
 * extension contains PunkteBelagsdauerausreisserUntenLeistungskomponente named PunkteBelagsdauerausreisserUntenLeistungskomponente 0..1
 * extension contains PunkteBelagsdauerausreisserUntenTageskomponente named PunkteBelagsdauerausreisserUntenTageskomponente 0..1
