@@ -12,6 +12,8 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 
 * related.claim only Reference(MOPEDClaim)
 
+* insurance.coverage only Reference(MOPEDCoverage)
+
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
 * encounter contains MopedEncounter 0..1 and TransferEncounter 0..
