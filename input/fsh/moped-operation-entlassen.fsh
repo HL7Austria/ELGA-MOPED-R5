@@ -1,17 +1,25 @@
-Instance: MOPEDPatientBeurlauben
+Instance: MOPEDPatientEntlassen
 InstanceOf: OperationDefinition
-Title: "MOPED Patient $beurlauben"
+Title: "MOPED Patient $entlassen (POC)"
 Description: """
-Die Patient $beurlauben Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wurde und während eines laufenden Falles beurlaubt wird. Die Operation $verlegen wird aufgerufen mit dem Funktionscode XXX als Parameter, der Abgangsart YYY und ohne physische Anwesenheit. TBD: finde heraus, welcher Funktionscode und welche Abgangsart konkret für Urlaub stehen.
+Die Patient $entlassen Operation wird aufgerufen, wenn ein(e) Patient*in aus dem Krankenhaus entlassen wurde.
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
+
 """
 Usage: #definition 
 
-* id = "MOPED.Patient.Beurlauben"
-* base = "http://hl7.org/fhir/OperationDefinition/Patient-beurlauben"
-* name = "MOPED_Patient_Beurlauben"
+* id = "MOPED.Patient.Entlassen"
+* base = "http://hl7.org/fhir/OperationDefinition/Patient-entlassen"
+* name = "MOPED_Patient_Entlassen"
 * status = #draft
+* comment = """
+1. Der Encounter erhält ein End-Datum, status wird auch discharged gesetzt
+2. Es werden zahlreiche Felder, die hier als Parameter vorliegen, in die jeweiligen Extensions gepackt.
+3. Ein Draft-Claim wird erstellt
+4. Alles war wir für die SV-Entlassungsanzeige brauchen wird erstellt
+5. Änderungen am Account?
+"""
 * kind = #operation 
 * affectsState = true
 * resource = #Patient

@@ -1,16 +1,10 @@
 Instance: MOPEDPatientVerlegen
 InstanceOf: OperationDefinition
-Title: "MOPED Patient $verlegen"
+Title: "MOPED Patient $verlegen (POC)"
 Description: """
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 
 Die Patient $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. 
-1. Neuer Transfer Encounter: Der MOPEDEncounter mit der jeweiligen Aufnahmezahl wird gesucht, und ein neuer MOPEDTransferEncounter der mit partOf den MOPEDEncounter referenziert wird erstellt. Beim neu erstellten MOPEDTransferEncounter wird der *zeitpunkt* als *MOPEDTransferEncounter.actualPeriod.start* eingefügt und als *MOPEDTransferEncounter.serviceProvider* die Abteilung MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* referenziert. 
-2. Alter Transfer Encounter: Der alte MOPEDTransferEncounter der partOf des MOPEDEncounters mit der jeweiligen Aufnahmezahl war und noch den Status *in-progress* hat, wird gesucht. Der Status wird auf *completed* gesetzt und die MOPEDTransferEncounter.actualPeriod.end mit dem *zeitpunkt* der Verlegung versehen. Ebenso wird beim alten Encounter die *abgangsart* von diesem Funktionscode dokumentiert. 
-3. Fallnummer: Die Fallnummer im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht.
-
-
-
 """
 Usage: #definition 
 
@@ -18,6 +12,13 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-verlegen"
 * name = "MOPED_Patient_Verlegen"
 * status = #draft
+* comment = """
+1. Neuer Transfer Encounter: Der MOPEDEncounter mit der jeweiligen Aufnahmezahl wird gesucht, und ein neuer MOPEDTransferEncounter der mit partOf den MOPEDEncounter referenziert wird erstellt. Beim neu erstellten MOPEDTransferEncounter wird der *zeitpunkt* als *MOPEDTransferEncounter.actualPeriod.start* eingefügt und als *MOPEDTransferEncounter.serviceProvider* die Abteilung MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* referenziert. 
+2. Alter Transfer Encounter: Der alte MOPEDTransferEncounter der partOf des MOPEDEncounters mit der jeweiligen Aufnahmezahl war und noch den Status *in-progress* hat, wird gesucht. Der Status wird auf *completed* gesetzt und die MOPEDTransferEncounter.actualPeriod.end mit dem *zeitpunkt* der Verlegung versehen. Ebenso wird beim alten Encounter die *abgangsart* von diesem Funktionscode dokumentiert. 
+3. Fallnummer: Die Fallnummer im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht.
+4. Validierung: Es kann immer nur einen MOPEDTransferEncounter für den jeweiligen Fall geben der partOf eines MOPEDEncounters mit der *aufnahmezahl* ist und den Status *in-progress* hat. 
+
+"""
 * kind = #operation 
 * affectsState = true
 * resource = #Patient
