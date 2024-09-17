@@ -4,14 +4,6 @@ Title: "MOPED Patient $aufnehmen (POC)"
 Description: """
 Die Patient $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wird.
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
-"""
-Usage: #definition 
-
-* id = "MOPED.Patient.Aufnehmen"
-* base = "http://hl7.org/fhir/OperationDefinition/Patient-aufnehmen"
-* name = "MOPED_Patient_Aufnehmen"
-* status = #draft
-* comment = """
 
 1. Encounter erstellen: MOPEDEncounter erstellen, wie im Operation-Parameter *fall* mitgegeben
 2. Account erstellen: MOPEDAccount anlegen:
@@ -28,9 +20,14 @@ Die Werte-Ausprägung des *modus* Parameters haben eine Auswirkung auf das Verha
 * *zwischenspeichern*: Die Patientenaufnahme ist noch nicht vollständig und wird lediglich zwischengespeichert. Hier findet keine Validierung der Encounter Ressource statt. Eine Account-Ressource wird erstellt, die den *WorkflowStatus* 'Aufnahme in Arbeit' hat und im Encounter referenziert.
 * *freigeben*: Die Patientenaufnahme ist vollständig und es ist zu erwarten, dass alle nötigen Felder befüllt sind. Schlägt die Validierung des Encounter fehl, kann die Operation nicht erfolgreich durchgeführt werden. Ist die Validierung erfolgreich, wird eine im Encounter referenzierte Account-Ressource erstellt bzw. upgedatet, die den *WorkflowStatus* 'Aufnahme freigegeben' hat. 
 
-TBD: Input eig. Bundle mit Patient, Encounter, ggf. ServiceProvider oder GDA-OID, und ggf. Coverage oder CoverageID
-
 """
+Usage: #definition 
+
+* id = "MOPED.Patient.Aufnehmen"
+* base = "http://hl7.org/fhir/OperationDefinition/Patient-aufnehmen"
+* name = "MOPED_Patient_Aufnehmen"
+* status = #draft
+* comment = "TBD: Input eig. Bundle mit Patient, Encounter, ggf. ServiceProvider oder GDA-OID, und ggf. Coverage oder CoverageID"
 * kind = #operation 
 * affectsState = true
 * resource = #Patient

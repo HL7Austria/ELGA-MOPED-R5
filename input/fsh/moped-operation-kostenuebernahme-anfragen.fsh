@@ -3,15 +3,6 @@ InstanceOf: OperationDefinition
 Title: "MOPED Kostenuebernahme $anfragen (POC)"
 Description: """
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Kostenübernahme $anfragen Operation wird aufgerufen, um die Kostenübernahme-Anfrage an die SV anzustoßen.
-
-"""
-Usage: #definition 
-
-* id = "MOPED.CoverageEligibilityRequest.Anfragen"
-* base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-anfragen"
-* name = "MOPED_CoverageEligibilityRequest_Anfragen"
-* status = #draft
-* comment = """
 1. Vorbereitung des CoverageEligibilityRequest: Ein CoverageEligibilityRequest mit dem *status* 'active' und *purpose* 'validation' und dem *created* aktuellem Zeitpunkt wird vorbereitet.
 2. Suchen des Accounts: Suchen des MOPEDAccounts, der vom MOPEDEncounter mit dem *aufnahmezahl* Parameter als *identifier* im *MOPEDEncounter.account* Feld referenziert wird. 
 2. Referenzieren des Patienten: Eine Referenz auf den Patienten der als *subject* im MOPEDAccount geführt ist, wird im *CoverageEligibilityRequest.patient* Element referenziert
@@ -21,6 +12,12 @@ Usage: #definition
 6. POSTen des neu erstellten CoverageEligibilityRequest
 7. Referenzierung des CoverageEligibilityRequest im MOPEDAccount im Element *coverageEligibilityRequest*. (TBD: erstellung einer Extension im Account)
 """
+Usage: #definition 
+
+* id = "MOPED.CoverageEligibilityRequest.Anfragen"
+* base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-anfragen"
+* name = "MOPED_CoverageEligibilityRequest_Anfragen"
+* status = #draft
 * kind = #operation 
 * affectsState = true
 * resource = #Account

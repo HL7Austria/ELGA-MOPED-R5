@@ -6,6 +6,11 @@ Die Patient $entlassen Operation wird aufgerufen, wenn ein(e) Patient*in aus dem
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 
+1. Der Encounter erhält ein End-Datum, status wird auch discharged gesetzt
+2. Es werden zahlreiche Felder, die hier als Parameter vorliegen, in die jeweiligen Extensions gepackt.
+3. Ein Draft-Claim wird erstellt
+4. Alles war wir für die SV-Entlassungsanzeige brauchen wird erstellt
+5. Änderungen am Account?
 """
 Usage: #definition 
 
@@ -13,13 +18,6 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-entlassen"
 * name = "MOPED_Patient_Entlassen"
 * status = #draft
-* comment = """
-1. Der Encounter erhält ein End-Datum, status wird auch discharged gesetzt
-2. Es werden zahlreiche Felder, die hier als Parameter vorliegen, in die jeweiligen Extensions gepackt.
-3. Ein Draft-Claim wird erstellt
-4. Alles war wir für die SV-Entlassungsanzeige brauchen wird erstellt
-5. Änderungen am Account?
-"""
 * kind = #operation 
 * affectsState = true
 * resource = #Patient
