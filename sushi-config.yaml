@@ -98,7 +98,7 @@ pages:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  Anwendungsfallbeschreibung: use_case_description.html
+  Sollprozess (Entwurf): use_case_description.html
   Akteure: actors.html
   Workflowmanagement: workflowmanagement.html
   Proof of Concept: poc.html
