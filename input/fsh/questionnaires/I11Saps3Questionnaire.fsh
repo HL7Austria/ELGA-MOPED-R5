@@ -8,6 +8,7 @@ Usage: #example
 * meta.lastUpdated = "2024-07-12T00:00:00+00:00"
 * url = "http://example.org/fhir/Questionnaire/saps3-questionnaire"
 * version = "1.0"
+* id = "SAPS3Questionnaire"
 * name = "SAPS3Questionnaire"
 * title = "SAPS3 Questionnaire"
 * status = #active
@@ -17,10 +18,6 @@ Usage: #example
 * item[0].linkId = "saps3-set"
 * item[0].text = "SAPS3 Data Set"
 * item[0].type = #group
-
-* item[0].item[+].linkId = "saps3-01"
-* item[0].item[=].text = "Satzartenkennzeichen"
-* item[0].item[=].type = #string
 
 * item[0].item[+].linkId = "saps3-02"
 * item[0].item[=].text = "Krankenanstaltennummer/Leistungserbringer-ID"
