@@ -6,7 +6,7 @@ Usage: #example
 * status = #active
 * purpose = #validation
 * created = "2024-09-17"
-* insurer = Reference("Organization/Test1OrganizationInsurance1")
+* insurer = Reference(Organization/Test1OrganizationInsurance1)
 
 * insurance.coverage = Reference(Coverage/Test1SVCCoverage)
 
