@@ -8,17 +8,17 @@
     <div class="tab-content">
         <div id="VorläufigeMeldung" class="tab-pane fade in active">
         <h1>Vorläufige Meldung</h1>
-            <img src="Sollprozess/Sollprozesse_einzeln/Vorläufige Meldung.png" width ="50%">
+            <img src="Sollprozess/SollProzesse_einzeln/Vorläufige Meldung.png" width ="50%">
             <img src="Sollprozess/eEPKs/Vorläufige Meldung.png" width ="70%">
         </div>
         <div id="VorläufigeFreigabe" class="tab-pane fade">
         <h1>Vorläufige Freigabe</h1>
-            <img src="Sollprozess/Sollprozesse_einzeln/Vorläufige Freigabe.png" width ="50%">
+            <img src="Sollprozess/SollProzesse_einzeln/Vorläufige Freigabe.png" width ="50%">
             <img src="Sollprozess/eEPKs/Vorläufige Freigabe.png" width ="75%">
         </div>
         <div id="Quartalsmeldung" class="tab-pane fade">
         <h1>Quartalsmeldung</h1>
-            <img src="Sollprozess/Sollprozesse_einzeln/Quartalsmeldung.png" width ="40%">
+            <img src="Sollprozess/SollProzesse_einzeln/Quartalsmeldung.png" width ="40%">
             <img src="Sollprozess/eEPKs/Bundesmeldung unterjährig.png" width ="50%">
         </div>
     </div>

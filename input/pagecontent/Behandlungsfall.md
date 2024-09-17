@@ -16,18 +16,18 @@
         </div>
         <div id="Kostenübernahme" class="tab-pane fade">
             <h1>Kostenübernahme</h1>
-            <img src="Sollprozess/Sollprozesse_einzeln/Kostenübernahme.png" width ="50%">
+            <img src="Sollprozess/SollProzesse_einzeln/Kostenübernahme.png" width ="50%">
             <img src="Sollprozess/eEPKs/Kostenübernahme.png" width ="40%">
         </div>
         <div id="Patientenversorgung" class="tab-pane fade">
             <h1>Patientenversorgung</h1>
-            <img src="Sollprozess/Sollprozesse_einzeln/Patientenversorgung.png" width ="50%">
+            <img src="Sollprozess/SollProzesse_einzeln/Patientenversorgung.png" width ="50%">
             <img src="Sollprozess/eEPKs/Patientenversorgung.png" width ="50%">
             <p>Während des Krankenhausaufenthalts werden alle medizinischen Maßnahmen und Beobachtungen kontinuierlich dokumentiert. Dies umfasst die Aktualisierung von Leistungen, Diagnosen und eventuell auch Medikamentenverabreichungen in den entsprechenden FHIR-Ressourcen.</p>
         </div>
         <div id="Entlassung" class="tab-pane fade">
             <h1>Entlassung</h1>
-            <img src="Sollprozess/Sollprozesse_einzeln/Entlassung.png" width ="50%">
+            <img src="Sollprozess/SollProzesse_einzeln/Entlassung.png" width ="50%">
             <img src="Sollprozess/eEPKs/Entlassung.png" width ="60%">
         </div>
     </div>

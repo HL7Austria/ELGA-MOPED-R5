@@ -1,5 +1,5 @@
 <h1>Leistungsabrechnung & Datenmeldung</h1>
-<img src="Sollprozess/Sollprozesse_einzeln/Leistungsabrechnung & Datenmeldung.png" width ="100%">
+<img src="Sollprozess/SollProzesse_einzeln/Leistungsabrechnung & Datenmeldung.png" width ="100%">
 
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
     <ul class="nav nav-tabs">
