@@ -11,7 +11,7 @@ Bei den ersten beiden Punkten wird von den Krankenversicherungsträgern das Fris
 Durch die Angabe eines Fristendes wird signalisiert, dass bei einem über das Fristende hinaus dau- ernden Aufenthalt eine Verlängerungsanzeige vorzulegen ist."
 
 * value[x] 0..1
-* value[x] only date
+* value[x] only boolean
 * . ^definition =  "\"Fristende\""
 * . ^short =  "\"Fristende\""
 

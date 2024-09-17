@@ -10,3 +10,5 @@ Description: "MOPED Profil der CoverageEligibilityResponse Ressource für die Ko
 * extension contains VAEStatus named VAEStatus 0..1
 * extension contains MealCostExcemption named MealCostExcemption 0..1
 * extension contains NumberOfPreviouslyPaidDays named NumberOfPreviouslyPaidDays 0..1
+
+* insurance.coverage only Reference(SVCCoverage)

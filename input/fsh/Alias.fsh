@@ -19,3 +19,4 @@ Alias: $VAEStatus = http://tbd.at/MOPED-VAEStatus
 Alias: $EndOfEligibility = http://tbd.at/MOPED-EndOfEligibility
 Alias: $Sonderleistungsnummern = http://tbd.at/MOPED-Sonderleistungsnummern
 Alias: $KostenmeldungARK = http://tbd.at/MOPED-KostenmeldungARK
+Alias: $EconomicUnitUse = http://tbd.at/EconomicUnitUse

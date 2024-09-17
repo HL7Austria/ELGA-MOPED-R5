@@ -12,7 +12,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 
 * related.claim only Reference(MOPEDClaim)
 
-* insurance.coverage only Reference(MOPEDCoverage)
+* insurance.coverage only Reference(SVCCoverage)
 
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false

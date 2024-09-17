@@ -3,7 +3,7 @@ Alias: $ecard-anspruchsarten-vs = https://www.chipkarte.at/de/vdas-on-fhir/site/
 Alias: $ecard-versichertenarten-vs = https://www.chipkarte.at/de/vdas-on-fhir/site/ValueSet-ecard-versichertenarten-vs.html
 Alias: $ecard-versichertenkategorien-vs = https://www.chipkarte.at/de/vdas-on-fhir/site/ValueSet-ecard-versichertenkategorien-vs.html
 
-Profile: MOPEDCoverage
+Profile: SVCCoverage
 Parent: Coverage
 Description: "MOPED Profil der Coverage Ressource für Versicherungen. Basierend auf dem Profil \"ecardAnspruch\": https://www.chipkarte.at/de/vdas-on-fhir/site/StructureDefinition-ecard-anspruch-profile.html "
 
