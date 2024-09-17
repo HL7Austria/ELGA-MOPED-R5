@@ -53,7 +53,7 @@ Usage: #example
 
 * item[0].item[+].linkId = "saps3-09"
 * item[0].item[=].text = "Aufnahmegrund: Anderer, nicht klassifiziert"
-* item[0].item[=].type = #integer
+* item[0].item[=].type = #boolean
 
 * item[0].item[+].linkId = "saps3-10"
 * item[0].item[=].text = "Aufnahmegrund: Basispflege und Observanz"

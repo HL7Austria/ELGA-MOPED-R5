@@ -33,7 +33,7 @@ Usage: #example
 * item.item[=].answer.valueBoolean = false
 * item.item[+].linkId = "saps3-09"
 * item.item[=].text = "Aufnahmegrund: Anderer, nicht klassifiziert"
-* item.item[=].answer.valueInteger = 0
+* item.item[=].answer.valueInteger = false
 * item.item[+].linkId = "saps3-10"
 * item.item[=].text = "Aufnahmegrund: Basispflege und Observanz"
 * item.item[=].answer.valueCoding = #2 "Medizinische Überwachung"
