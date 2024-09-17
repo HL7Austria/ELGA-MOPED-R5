@@ -3,8 +3,8 @@ InstanceOf: SVCCoverage
 Usage: #example
 * id = "Test1SVCCoverage"
 * meta.profile = "http://example.org/StructureDefinition/SVCCoverage"
-* subscriber = Reference("Patient/Test1Patient")
-* beneficiary = Reference("Patient/Test1Patient")
+* subscriber = Reference(Patient/Test1Patient)
+* beneficiary = Reference(Patient/Test1Patient)
 
 * kind = #insurance
 * status = #active
