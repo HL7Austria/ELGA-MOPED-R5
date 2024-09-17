@@ -10,7 +10,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Kostenübernahme 
 4. Referenzieren des Providers: Als *provider* Element wird die Organization referenziert, die als *owner* im MOPEDAccount referenziert ist. 
 5. Einfügen des Versicherers: Als *insurer* Element wird die Organization referenziert, deren *identifier* dem Operation-Parameter *versicherer* entspricht.
 6. POSTen des neu erstellten CoverageEligibilityRequest
-7. Referenzierung des CoverageEligibilityRequest im MOPEDAccount im Element *coverageEligibilityRequest*. (TBD: erstellung einer Extension im Account)
+7. Referenzierung des CoverageEligibilityRequest im MOPEDAccount im Element *coverageEligibilityRequest*. 
 """
 Usage: #definition 
 
@@ -18,6 +18,7 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-anfragen"
 * name = "MOPED_CoverageEligibilityRequest_Anfragen"
 * status = #draft
+* comment = "TBD: erstellung einer Extension im Account für die Referenz auf den CoverageEligibilityRequest"
 * kind = #operation 
 * affectsState = true
 * resource = #Account

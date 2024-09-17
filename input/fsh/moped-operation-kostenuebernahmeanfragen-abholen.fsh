@@ -4,14 +4,14 @@ Title: "Kostenübernahme-Anfragen $abholen (POC)"
 Description: """
 Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die Kostenübernahme-Anfragen $abholen Operation wird aufgerufen, um alle noch offenen Kostenübernahme-Anfragen, die bisher seitens SV noch nicht bearbeitet wurden, abgeholt werden können.
 1. Suche nach relevanten Requests: Alle CoverageEligibilityRequests, 
-  a. die im Feld *CoverageEligibilityRequest.insurer* die Organization mit *Organization.identifier* = Operation-Parameter *versicherer* referenziert haben UND
-  b. die noch keine gezugehörigen CoverageEligibilityResponse haben (CoverageEligibilityRequest CEReq where not exists CoverageEligibilityResponse with *CoverageEligibilityResponse.request* = CEReq). Der Status der Resposne ist dabei irrelevant.
+  * die im Feld *CoverageEligibilityRequest.insurer* die Organization mit *Organization.identifier* = Operation-Parameter *versicherer* referenziert haben UND
+  * die noch keine gezugehörigen CoverageEligibilityResponse haben (CoverageEligibilityRequest CEReq where not exists CoverageEligibilityResponse with *CoverageEligibilityResponse.request* = CEReq). Der Status der Resposne ist dabei irrelevant.
 2. Zusammenstellen des Return-Bundles:
    Mit der gleichen Logik wie der *_include* Suchparameter um die relevanten Ressourcen (Patient, Coverage) direkt mitbekommen zu können.
 3. Erstellung eine Draft CoverageEligibilityResponse für jeden der ausgelieferten Requests:
-   a. mit Feld *CoverageEligibilityResponse.status* = *draft*
-   b. mit Feld *CoverageEligibilityResponse.request* = Referenz auf jeweiligen Request
-   c. mit Feld *CoverageEligibilityResponse.outcome* = *queued*
+   * mit Feld *CoverageEligibilityResponse.status* = *draft*
+   * mit Feld *CoverageEligibilityResponse.request* = Referenz auf jeweiligen Request
+   * mit Feld *CoverageEligibilityResponse.outcome* = *queued*
 """
 Usage: #definition 
 
@@ -42,4 +42,5 @@ Somit brauchen wir noch Möglichkeiten im Workflow, wie die erstellte Draft-Resp
   * max = "1"
   * documentation = "Der *return* Parameter gibt Auskunft über den Erfolg der Operation."
   * type = #Resource
+  * targetProfile[+] = Canonical(Bundle)
   * targetProfile[+] = Canonical(OperationOutcome)
