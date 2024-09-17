@@ -8,6 +8,8 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * request only Reference(MOPEDClaim)
 * requestor only Reference(HL7ATCoreOrganization)
 
+* insurance.coverage only Reference(SVCCoverage)
+
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
 * encounter contains MopedEncounter 0..1 and TransferEncounter 0..

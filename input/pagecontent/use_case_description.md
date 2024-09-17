@@ -1,30 +1,27 @@
-Die folgende Beschreibung und die zugehörigen Sequenzdiagramme illustrieren den neuen Sollprozess in FHIR. Ziel ist es, die Kommunikation und Datenübermittlung im österreichischen Gesundheitswesen zu standardisieren und zu harmonisieren. Dies umfasst die verschiedenen Phasen der Patientenversorgung, Abrechnung und Dokumentation, angefangen von der Aufnahme über die Kostenübernahme und Patientenversorgung bis hin zur Entlassung und Leistungsabrechnung.
+Die folgende Beschreibung und die zugehörigen Diagramme illustrieren den neuen Sollprozess in FHIR. Ziel ist es, die Kommunikation und Datenübermittlung im österreichischen Gesundheitswesen zu standardisieren und zu harmonisieren. Dies umfasst die verschiedenen Phasen der Aufnahme, Patientenversorgung, Entlassung, Abrechnung und Dokumentation.
 
-Die einzelnen Abschnitte beschreiben detailliert die Schritte und Interaktionen zwischen den beteiligten Akteuren. Die Diagramme verdeutlichen, wie die FHIR-Ressourcen zur effizienten und konsistenten Datenkommunikation eingesetzt werden können. 
+Die einzelnen Abschnitte beschreiben detailliert die Schritte und Interaktionen zwischen den beteiligten Akteuren. Die Diagramme verdeutlichen, wie der neue Prozess zur effizienten und konsistenten Datenkommunikation eingesetzt werden kann. 
+
+<div xmlns="http://www.w3.org/1999/xhtml" class="container">
+<h2>Sollprozess - Überblick:</h2>
+<img src="Sollprozess/Gesamtprozess_Ueberblick.png" width ="65%" />
+</div>
     
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
     <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#Aufnahme"> <strong>Aufnahme</strong></a></li>
-        <li><a data-toggle="tab" href="#Kostenübernahme"> <strong>Kostenübernahme</strong></a></li>
-        <li><a data-toggle="tab" href="#Versorgung"> <strong>Patientenversorgung</strong></a></li>
-        <li><a data-toggle="tab" href="#Entlassung"> <strong>Entlassung</strong></a></li>
-        <li><a data-toggle="tab" href="#Abrechnung"> <strong>Leistungsabrechung & Datenmeldung</strong></a></li>
+        <li class="active"><a data-toggle="tab" href="#Behandlungsfall"> <strong>Behandlungsfall</strong></a></li>
+        <li><a data-toggle="tab" href="#LeistungsabrechnungDatenmeldung"> <strong>Leistungsabrechnung & Datenmeldung</strong></a></li>
+        <li><a data-toggle="tab" href="#Kostenmeldung"> <strong>Kostenmeldung</strong></a></li>
     </ul>
     <div class="tab-content">
-        <div id="Aufnahme" class="tab-pane fade in active">
-        {% include aufnahme.md %}
+        <div id="Behandlungsfall" class="tab-pane fade in active">
+        {% include Behandlungsfall.md %}
         </div>
-        <div id="Kostenübernahme" class="tab-pane fade">
-        {% include kostenuebernahme.md %}
+        <div id="LeistungsabrechnungDatenmeldung" class="tab-pane fade">
+        {% include LeistungsabrechnungDatenmeldung.md %}
         </div>
-        <div id="Versorgung" class="tab-pane fade">
-            {% include versorgung.md %}
-        </div>
-        <div id="Entlassung" class="tab-pane fade">
-           {% include entlassung.md %}
-        </div>
-        <div id="Abrechnung" class="tab-pane fade">
-           {% include datenmeldung.md %}
+        <div id="Kostenmeldung" class="tab-pane fade">
+            {% include Kostenmeldung.md %}
         </div>
     </div>
 </div>
