@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "80c73dc6-cd43-4b88-a3f5-6d87343b9c97",
+		"name": "MOPED TEST 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21943930"
+	},
+	"item": [
+		{
+			"name": "GET Metadata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server-base}}/metadata",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"metadata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT KH Organization",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Organization\",\n  \"id\" : \"Test1OrganizationHerzJesuKrankenhaus\",\n  \"meta\" : {\n    \"profile\" : [\"http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization\"]\n  },\n  \"text\" : {\n    \"status\" : \"generated\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Organization Test1OrganizationHerzJesuKrankenhaus</b></p><a name=\\\"Test1OrganizationHerzJesuKrankenhaus\\\"> </a><a name=\\\"hcTest1OrganizationHerzJesuKrankenhaus\\\"> </a><a name=\\\"Test1OrganizationHerzJesuKrankenhaus-en-US\\\"> </a><p><b>identifier</b>: <a href=\\\"http://terminology.hl7.org/5.5.0/NamingSystem-uri.html\\\" title=\\\"As defined by RFC 3986 (http://www.ietf.org/rfc/rfc3986.txt)(with many schemes defined in many RFCs). For OIDs and UUIDs, use the URN form (urn:oid:(note: lowercase) and urn:uuid:). See http://www.ietf.org/rfc/rfc3001.txt and http://www.ietf.org/rfc/rfc4122.txt \\r\\n\\r\\nThis oid is used as an identifier II.root to indicate the the extension is an absolute URI (technically, an IRI). Typically, this is used for OIDs and GUIDs. Note that when this OID is used with OIDs and GUIDs, the II.extension should start with urn:oid or urn:uuid: \\r\\n\\r\\nNote that this OID is created to aid with interconversion between CDA and FHIR - FHIR uses urn:ietf:rfc:3986 as equivalent to this OID. URIs as identifiers appear more commonly in FHIR.\\r\\n\\r\\nThis OID may also be used in CD.codeSystem.\\\">Uniform Resource Identifier (URI)</a>/urn:oid:1.3.6.1.4.1.36124.5.914, <code>TBD</code>/K914, <code>urn:oid:1.2.40.0.10.1.4.3.2</code>/832138</p><p><b>name</b>: Herz Jesu-Krankenhaus</p><h3>Contacts</h3><table class=\\\"grid\\\"><tr><td style=\\\"display: none\\\">-</td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td style=\\\"display: none\\\">*</td><td>ph: Contact details not provided</td><td>Baumgasse 20a, 1030 Wien Wien Wien 1030 AUT </td></tr></table></div>\"\n  },\n  \"identifier\" : [{\n    \"system\" : \"urn:ietf:rfc:3986\",\n    \"value\" : \"urn:oid:1.3.6.1.4.1.36124.5.914\"\n  },\n  {\n    \"system\" : \"TBD\",\n    \"value\" : \"K914\"\n  },\n  {\n    \"system\" : \"urn:oid:1.2.40.0.10.1.4.3.2\",\n    \"value\" : \"832138\"\n  }],\n  \"name\" : \"Herz Jesu-Krankenhaus\",\n  \"contact\" : [{\n    \"telecom\" : [{\n      \"system\" : \"phone\",\n      \"value\" : \"Contact details not provided\"\n    }],\n    \"address\" : {\n      \"line\" : [\"Baumgasse 20a, 1030 Wien\"],\n      \"_line\" : [{\n        \"extension\" : [{\n          \"url\" : \"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName\",\n          \"valueString\" : \"Baumgasse\"\n        },\n        {\n          \"url\" : \"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber\",\n          \"valueString\" : \"20a\"\n        }]\n      }],\n      \"city\" : \"Wien\",\n      \"state\" : \"Wien\",\n      \"postalCode\" : \"1030\",\n      \"country\" : \"AUT\"\n    }\n  }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Organization/Test1OrganizationHerzJesuKrankenhaus",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Organization",
+						"Test1OrganizationHerzJesuKrankenhaus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Versicherungs Organization",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Organization\",\n  \"id\" : \"Test1OrganizationInsurance1\",\n  \"meta\" : {\n    \"profile\" : [\"http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization\"]\n  },\n  \"text\" : {\n    \"status\" : \"generated\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Organization Test1OrganizationInsurance1</b></p><a name=\\\"Test1OrganizationInsurance1\\\"> </a><a name=\\\"hcTest1OrganizationInsurance1\\\"> </a><a name=\\\"Test1OrganizationInsurance1-en-US\\\"> </a><p><b>name</b>: Österreichische Gesundheitskasse Wien</p><p><b>alias</b>: 14</p><h3>Contacts</h3><table class=\\\"grid\\\"><tr><td style=\\\"display: none\\\">-</td><td><b>Address</b></td></tr><tr><td style=\\\"display: none\\\">*</td><td>Wienerbergstraße 15-19, 1100 Wien Wien Wien 1100 AUT </td></tr></table></div>\"\n  },\n  \"name\" : \"Österreichische Gesundheitskasse Wien\",\n  \"alias\" : [\"14\"],\n  \"contact\" : [{\n    \"address\" : {\n      \"line\" : [\"Wienerbergstraße 15-19, 1100 Wien\"],\n      \"_line\" : [{\n        \"extension\" : [{\n          \"url\" : \"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName\",\n          \"valueString\" : \"Wienerbergstraße\"\n        },\n        {\n          \"url\" : \"http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber\",\n          \"valueString\" : \"15-19\"\n        }]\n      }],\n      \"city\" : \"Wien\",\n      \"state\" : \"Wien\",\n      \"postalCode\" : \"1100\",\n      \"country\" : \"AUT\"\n    }\n  }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Organization/Test1OrganizationInsurance1",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Organization",
+						"Test1OrganizationInsurance1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Überweisende Organization",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Organization\",\n  \"id\" : \"Test1OrganizationUeberweisendeOrganisation\",\n  \"meta\" : {\n    \"profile\" : [\"http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization\"]\n  },\n  \"text\" : {\n    \"status\" : \"generated\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Organization Test1OrganizationUeberweisendeOrganisation</b></p><a name=\\\"Test1OrganizationUeberweisendeOrganisation\\\"> </a><a name=\\\"hcTest1OrganizationUeberweisendeOrganisation\\\"> </a><a name=\\\"Test1OrganizationUeberweisendeOrganisation-en-US\\\"> </a><p><b>name</b>: HJK Interne Ambulanz</p><h3>Contacts</h3><table class=\\\"grid\\\"><tr><td style=\\\"display: none\\\">-</td><td><b>Address</b></td></tr><tr><td style=\\\"display: none\\\">*</td><td>Wien Wien 1030 AUT </td></tr></table></div>\"\n  },\n  \"name\" : \"HJK Interne Ambulanz\",\n  \"contact\" : [{\n    \"address\" : {\n      \"city\" : \"Wien\",\n      \"state\" : \"Wien\",\n      \"postalCode\" : \"1030\",\n      \"country\" : \"AUT\"\n    }\n  }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Organization/Test1OrganizationUeberweisendeOrganisation",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Organization",
+						"Test1OrganizationUeberweisendeOrganisation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT AbteilungsOrganization",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Organization\",\n  \"id\" : \"Test1OrganizationAbteilung1\",\n  \"meta\" : {\n    \"profile\" : [\"http://example.org/StructureDefinition/MOPEDOrganizationAbteilung\"]\n  },\n  \"text\" : {\n    \"status\" : \"extensions\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Organization Test1OrganizationAbteilung1</b></p><a name=\\\"Test1OrganizationAbteilung1\\\"> </a><a name=\\\"hcTest1OrganizationAbteilung1\\\"> </a><a name=\\\"Test1OrganizationAbteilung1-en-US\\\"> </a><blockquote><p><b>Kostenstelle</b></p><ul><li>InterneKostenstellennummer: 11160</li><li>InterneKostenstellenbezeichnung: Schlaflabor (Interne)</li><li>SpezielleOrganisationsform: A</li><li>KostenstellenJahr: 2024</li></ul></blockquote><p><b>identifier</b>: Funktionscode/131180, Funktionssubcode/00</p><p><b>partOf</b>: <a href=\\\"Organization-Test1OrganizationHerzJesuKrankenhaus.html\\\">Organization Herz Jesu-Krankenhaus</a></p></div>\"\n  },\n  \"extension\" : [{\n    \"extension\" : [{\n      \"url\" : \"InterneKostenstellennummer\",\n      \"valueUnsignedInt\" : 11160\n    },\n    {\n      \"url\" : \"InterneKostenstellenbezeichnung\",\n      \"valueString\" : \"Schlaflabor (Interne)\"\n    },\n    {\n      \"url\" : \"SpezielleOrganisationsform\",\n      \"valueCode\" : \"A\"\n    },\n    {\n      \"url\" : \"KostenstellenJahr\",\n      \"valueDate\" : \"2024\"\n    }],\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-Kostenstelle\"\n  }],\n  \"identifier\" : [{\n    \"type\" : {\n      \"coding\" : [{\n        \"code\" : \"Funktionscode\"\n      }]\n    },\n    \"value\" : \"131180\"\n  },\n  {\n    \"type\" : {\n      \"coding\" : [{\n        \"code\" : \"Funktionssubcode\"\n      }]\n    },\n    \"value\" : \"00\"\n  }],\n  \"partOf\" : {\n    \"reference\" : \"Organization/Test1OrganizationHerzJesuKrankenhaus\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Organization/Test1OrganizationAbteilung1",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Organization",
+						"Test1OrganizationAbteilung1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Patient",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Patient\",\n  \"id\" : \"Test1Patient\",\n  \"meta\" : {\n    \"profile\" : [\"http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-patient\"]\n  },\n  \"text\" : {\n    \"status\" : \"generated\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Patient Test1Patient</b></p><a name=\\\"Test1Patient\\\"> </a><a name=\\\"hcTest1Patient\\\"> </a><a name=\\\"Test1Patient-en-US\\\"> </a><p style=\\\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\\\">Patientenkommun Moderne (official) Female, DoB: 1969-04-21 ( Social Security Number: 9994210469)</p><hr/><table class=\\\"grid\\\"><tr><td style=\\\"background-color: #f3f5da\\\" title=\\\"Ways to contact the Patient\\\">Contact Detail</td><td colspan=\\\"3\\\">Baumgasse 20a Wien 1030 AT (home)</td></tr><tr><td style=\\\"background-color: #f3f5da\\\" title=\\\"The patient's legal status as citizen of a country.\\\"><a href=\\\"http://hl7.org/fhir/extensions/5.1.0/StructureDefinition-patient-citizenship.html\\\">Patient Citizenship</a></td><td colspan=\\\"3\\\"><span title=\\\"Codes:{https://termgit.elga.gv.at/ValueSet/elga-laendercodes AT}\\\">Austria</span></td></tr></table></div>\"\n  },\n  \"extension\" : [{\n    \"url\" : \"http://hl7.org/fhir/StructureDefinition/patient-citizenship\",\n    \"valueCodeableConcept\" : {\n      \"coding\" : [{\n        \"system\" : \"https://termgit.elga.gv.at/ValueSet/elga-laendercodes\",\n        \"code\" : \"AT\",\n        \"display\" : \"Austria\"\n      }]\n    }\n  }],\n  \"identifier\" : [{\n    \"type\" : {\n      \"coding\" : [{\n        \"system\" : \"http://terminology.hl7.org/CodeSystem/v2-0203\",\n        \"code\" : \"SS\",\n        \"display\" : \"Social Security Number\"\n      }]\n    },\n    \"system\" : \"urn:oid:1.2.40.0.10.1.4.3.1\",\n    \"value\" : \"9994210469\",\n    \"assigner\" : {\n      \"display\" : \"Dachverband der österreichischen Sozialversicherungsträger\"\n    }\n  }],\n  \"name\" : [{\n    \"use\" : \"official\",\n    \"family\" : \"Moderne\",\n    \"given\" : [\"Patientenkommun\"]\n  }],\n  \"gender\" : \"female\",\n  \"birthDate\" : \"1969-04-21\",\n  \"address\" : [{\n    \"use\" : \"home\",\n    \"line\" : [\"Baumgasse 20a\"],\n    \"city\" : \"Wien\",\n    \"postalCode\" : \"1030\",\n    \"country\" : \"AT\"\n  }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Patient/Test1Patient",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Patient",
+						"Test1Patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Account\",\n  \"id\" : \"Test1Account\",\n  \"meta\" : {\n    \"profile\" : [\"http://example.org/StructureDefinition/MOPEDAccount\"]\n  },\n  \"text\" : {\n    \"status\" : \"extensions\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Account Test1Account</b></p><a name=\\\"Test1Account\\\"> </a><a name=\\\"hcTest1Account\\\"> </a><a name=\\\"Test1Account-en-US\\\"> </a><p><b>Workflow Status</b>: TBD</p><p><b>Verdacht auf Arbeits- oder Schuelerunfall</b>: 0</p><p><b>Verdacht auf Fremdverschulden</b>: false</p><p><b>org/StructureDefinition/moped-ext-VDASID</b>: TEST12345678</p><p><b>status</b>: Active</p><p><b>subject</b>: <a href=\\\"Patient-Test1Patient.html\\\">Patientenkommun Moderne (official) Female, DoB: 1969-04-21 ( Social Security Number: 9994210469)</a></p><p><b>owner</b>: <a href=\\\"Organization-Test1OrganizationHerzJesuKrankenhaus.html\\\">Organization Herz Jesu-Krankenhaus</a></p></div>\"\n  },\n  \"extension\" : [{\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-workflow-status\",\n    \"valueCode\" : \"TBD\"\n  },\n  {\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-VerdachtArbeitsSchuelerunfall\",\n    \"valueCode\" : \"0\"\n  },\n  {\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-VerdachtFremdverschulden\",\n    \"valueBoolean\" : false\n  },\n  {\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-VDASID\",\n    \"valueString\" : \"TEST12345678\"\n  }],\n  \"status\" : \"active\",\n  \"subject\" : [{\n    \"reference\" : \"Patient/Test1Patient\"\n  }],\n  \"owner\" : {\n    \"reference\" : \"Organization/Test1OrganizationHerzJesuKrankenhaus\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Account/Test1Account",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Account",
+						"Test1Account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Condition",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Condition\",\n  \"id\" : \"Test1Condition1\",\n  \"text\" : {\n    \"status\" : \"generated\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Condition Test1Condition1</b></p><a name=\\\"Test1Condition1\\\"> </a><a name=\\\"hcTest1Condition1\\\"> </a><a name=\\\"Test1Condition1-en-US\\\"> </a><p><b>clinicalStatus</b>: <span title=\\\"Codes:\\\">active</span></p><p><b>code</b>: <span title=\\\"Codes:{http://hl7.org/fhir/sid/icd-10 G47.3}\\\">Sleep Apnea</span></p><p><b>subject</b>: <a href=\\\"Patient-Test1Patient.html\\\">Patientenkommun Moderne (official) Female, DoB: 1969-04-21 ( Social Security Number: 9994210469)</a></p></div>\"\n  },\n  \"clinicalStatus\" : {\n    \"coding\" : [{\n      \"code\" : \"active\"\n    }]\n  },\n  \"code\" : {\n    \"coding\" : [{\n      \"system\" : \"http://hl7.org/fhir/sid/icd-10\",\n      \"code\" : \"G47.3\",\n      \"display\" : \"Sleep Apnea\"\n    }]\n  },\n  \"subject\" : {\n    \"reference\" : \"Patient/Test1Patient\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Condition/Test1Condition1",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Condition",
+						"Test1Condition1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT MopedEncounter",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Encounter\",\n  \"id\" : \"Test1MOPEDEncounter1\",\n  \"meta\" : {\n    \"profile\" : [\"http://example.org/StructureDefinition/MOPEDEncounter\"]\n  },\n  \"text\" : {\n    \"status\" : \"generated\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Encounter Test1MOPEDEncounter1</b></p><a name=\\\"Test1MOPEDEncounter1\\\"> </a><a name=\\\"hcTest1MOPEDEncounter1\\\"> </a><a name=\\\"Test1MOPEDEncounter1-en-US\\\"> </a><p><b>identifier</b>: VN/1024000028</p><p><b>status</b>: In Progress</p><p><b>class</b>: <span title=\\\"Codes:{http://tbd.at/MOPED-encounter-behandlungsart S}\\\">S</span>, <span title=\\\"Codes:{http://tbd.at/moped-ext-diagnose-art P}\\\">P</span></p><p><b>subject</b>: <a href=\\\"Patient-Test1Patient.html\\\">Patientenkommun Moderne (official) Female, DoB: 1969-04-21 ( Social Security Number: 9994210469)</a></p><p><b>serviceProvider</b>: <a href=\\\"Organization-Test1OrganizationHerzJesuKrankenhaus.html\\\">Organization Herz Jesu-Krankenhaus</a></p><p><b>actualPeriod</b>: 2024-02-22 19:33:00+0200 --&gt; (ongoing)</p><blockquote><p><b>reason</b></p><p><b>use</b>: <span title=\\\"Codes:{http://hl7.org/fhir/ValueSet/encounter-reason-use RV}\\\">RV</span></p><h3>Values</h3><table class=\\\"grid\\\"><tr><td style=\\\"display: none\\\">-</td><td><b>Concept</b></td></tr><tr><td style=\\\"display: none\\\">*</td><td><span title=\\\"Codes:\\\">00</span></td></tr></table></blockquote><blockquote><p><b>diagnosis</b></p><h3>Conditions</h3><table class=\\\"grid\\\"><tr><td style=\\\"display: none\\\">-</td><td><b>Reference</b></td></tr><tr><td style=\\\"display: none\\\">*</td><td><a href=\\\"Condition-Test1Condition1.html\\\">Condition Sleep Apnea</a></td></tr></table><p><b>use</b>: <span title=\\\"Codes:{https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ H}\\\">H</span></p></blockquote><p><b>account</b>: <a href=\\\"Account-Test1Account.html\\\">Account: extension = TBD,0,false,TEST12345678; status = active</a></p><h3>Admissions</h3><table class=\\\"grid\\\"><tr><td style=\\\"display: none\\\">-</td><td><b>Extension</b></td><td><b>Origin</b></td></tr><tr><td style=\\\"display: none\\\">*</td><td/><td><a href=\\\"Organization-Test1OrganizationUeberweisendeOrganisation.html\\\">Organization HJK Interne Ambulanz</a></td></tr></table></div>\"\n  },\n  \"identifier\" : [{\n    \"type\" : {\n      \"coding\" : [{\n        \"system\" : \"https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier\",\n        \"code\" : \"VN\"\n      }]\n    },\n    \"value\" : \"1024000028\",\n    \"assigner\" : {\n      \"reference\" : \"Organization/Test1OrganizationHerzJesuKrankenhaus\"\n    }\n  }],\n  \"status\" : \"in-progress\",\n  \"class\" : [{\n    \"coding\" : [{\n      \"system\" : \"http://tbd.at/MOPED-encounter-behandlungsart\",\n      \"code\" : \"S\"\n    }]\n  },\n  {\n    \"coding\" : [{\n      \"system\" : \"http://tbd.at/moped-ext-diagnose-art\",\n      \"code\" : \"P\"\n    }]\n  }],\n  \"subject\" : {\n    \"reference\" : \"Patient/Test1Patient\"\n  },\n  \"serviceProvider\" : {\n    \"reference\" : \"Organization/Test1OrganizationHerzJesuKrankenhaus\"\n  },\n  \"actualPeriod\" : {\n    \"start\" : \"2024-02-22T19:33:00+02:00\"\n  },\n  \"reason\" : [{\n    \"use\" : [{\n      \"coding\" : [{\n        \"system\" : \"http://hl7.org/fhir/ValueSet/encounter-reason-use\",\n        \"code\" : \"RV\"\n      }]\n    }],\n    \"value\" : [{\n      \"concept\" : {\n        \"coding\" : [{\n          \"code\" : \"00\"\n        }]\n      }\n    }]\n  }],\n  \"diagnosis\" : [{\n    \"condition\" : [{\n      \"reference\" : {\n        \"reference\" : \"Condition/Test1Condition1\"\n      }\n    }],\n    \"use\" : [{\n      \"coding\" : [{\n        \"system\" : \"https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ\",\n        \"code\" : \"H\"\n      }]\n    }]\n  }],\n  \"account\" : [{\n    \"reference\" : \"Account/Test1Account\"\n  }],\n  \"admission\" : {\n    \"extension\" : [{\n      \"url\" : \"http://example.org/StructureDefinition/moped-ext-zugangsart\",\n      \"valueCode\" : \"A\"\n    }],\n    \"origin\" : {\n      \"reference\" : \"Organization/Test1OrganizationUeberweisendeOrganisation\"\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Encounter/Test1MOPEDEncounter1",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Encounter",
+						"Test1MOPEDEncounter1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT TransferEncounter",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Encounter\",\n  \"id\" : \"Test1TransferEncounter1\",\n  \"meta\" : {\n    \"profile\" : [\"http://example.org/StructureDefinition/MOPEDTransferEncounter\"]\n  },\n  \"text\" : {\n    \"status\" : \"generated\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Encounter Test1TransferEncounter1</b></p><a name=\\\"Test1TransferEncounter1\\\"> </a><a name=\\\"hcTest1TransferEncounter1\\\"> </a><a name=\\\"Test1TransferEncounter1-en-US\\\"> </a><p><b>status</b>: In Progress</p><p><b>subject</b>: <a href=\\\"Patient-Test1Patient.html\\\">Patientenkommun Moderne (official) Female, DoB: 1969-04-21 ( Social Security Number: 9994210469)</a></p><p><b>partOf</b>: <a href=\\\"Encounter-Test1MOPEDEncounter1.html\\\">Encounter: identifier = VN; status = in-progress; class = S,P; actualPeriod = 2024-02-22 19:33:00+0200 --&gt; (ongoing)</a></p><p><b>serviceProvider</b>: <a href=\\\"Organization-Test1OrganizationAbteilung1.html\\\">Organization: extension = ; identifier = Funktionscode,Funktionssubcode</a></p><p><b>actualPeriod</b>: 2024-02-22 19:33:00+0200 --&gt; (ongoing)</p></div>\"\n  },\n  \"status\" : \"in-progress\",\n  \"subject\" : {\n    \"reference\" : \"Patient/Test1Patient\"\n  },\n  \"partOf\" : {\n    \"reference\" : \"Encounter/Test1MOPEDEncounter1\"\n  },\n  \"serviceProvider\" : {\n    \"reference\" : \"Organization/Test1OrganizationAbteilung1\"\n  },\n  \"actualPeriod\" : {\n    \"start\" : \"2024-02-22T19:33:00+02:00\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Encounter/Test1TransferEncounter1",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Encounter",
+						"Test1TransferEncounter1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Coverage",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"Coverage\",\n  \"id\" : \"Test1SVCCoverage\",\n  \"meta\" : {\n    \"profile\" : [\"http://example.org/StructureDefinition/SVCCoverage\"]\n  },\n  \"text\" : {\n    \"status\" : \"generated\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Coverage Test1SVCCoverage</b></p><a name=\\\"Test1SVCCoverage\\\"> </a><a name=\\\"hcTest1SVCCoverage\\\"> </a><a name=\\\"Test1SVCCoverage-en-US\\\"> </a><p><b>status</b>: Active</p><p><b>kind</b>: Insurance</p><p><b>subscriber</b>: <a href=\\\"&quot;Patient/Test1Patient&quot;\\\">&quot;Patient/Test1Patient&quot;</a></p><p><b>beneficiary</b>: <a href=\\\"&quot;Patient/Test1Patient&quot;\\\">&quot;Patient/Test1Patient&quot;</a></p><h3>Classes</h3><table class=\\\"grid\\\"><tr><td style=\\\"display: none\\\">-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td style=\\\"display: none\\\">*</td><td><span title=\\\"Codes:{http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs 01}\\\">01</span></td><td>01</td></tr></table></div>\"\n  },\n  \"status\" : \"active\",\n  \"kind\" : \"insurance\",\n  \"subscriber\" : {\n    \"reference\" : \"Patient/Test1Patient\"\n  },\n  \"beneficiary\" : {\n    \"reference\" : \"Patient/Test1Patient\"\n  },\n  \"class\" : [{\n    \"type\" : {\n      \"coding\" : [{\n        \"system\" : \"http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs\",\n        \"code\" : \"01\"\n      }]\n    },\n    \"value\" : {\n      \"value\" : \"01\"\n    }\n  }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/Coverage/Test1SVCCoverage",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"Coverage",
+						"Test1SVCCoverage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT CoverageEligibilityRequest",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"CoverageEligibilityRequest\",\n  \"id\" : \"Test1MOPEDCoverageEligibilityRequest1\",\n  \"meta\" : {\n    \"profile\" : [\"http://example.org/StructureDefinition/MOPEDCoverageEligibilityRequest\"]\n  },\n  \"text\" : {\n    \"status\" : \"extensions\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: CoverageEligibilityRequest Test1MOPEDCoverageEligibilityRequest1</b></p><a name=\\\"Test1MOPEDCoverageEligibilityRequest1\\\"> </a><a name=\\\"hcTest1MOPEDCoverageEligibilityRequest1\\\"> </a><a name=\\\"Test1MOPEDCoverageEligibilityRequest1-en-US\\\"> </a><p><b>Verlaengerungstage</b>: 0</p><p><b>PremiumClass</b>: A</p><p><b>status</b>: Active</p><p><b>purpose</b>: Coverage Validation</p><p><b>patient</b>: <a href=\\\"Patient-Test1Patient.html\\\">Patientenkommun Moderne (official) Female, DoB: 1969-04-21 ( Social Security Number: 9994210469)</a></p><p><b>created</b>: 2024-09-17</p><p><b>provider</b>: <a href=\\\"Organization-Test1OrganizationHerzJesuKrankenhaus.html\\\">Organization Herz Jesu-Krankenhaus</a></p><p><b>insurer</b>: <a href=\\\"&quot;Organization/Test1OrganizationInsurance1&quot;\\\">&quot;Organization/Test1OrganizationInsurance1&quot;</a></p><h3>Insurances</h3><table class=\\\"grid\\\"><tr><td style=\\\"display: none\\\">-</td><td><b>Coverage</b></td></tr><tr><td style=\\\"display: none\\\">*</td><td><a href=\\\"Coverage-Test1SVCCoverage.html\\\">Coverage: status = active; kind = insurance</a></td></tr></table></div>\"\n  },\n  \"extension\" : [{\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-extensionDays\",\n    \"valueUnsignedInt\" : 0\n  },\n  {\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-PremiumClass\",\n    \"valueCode\" : \"A\"\n  }],\n  \"status\" : \"active\",\n  \"purpose\" : [\"validation\"],\n  \"patient\" : {\n    \"reference\" : \"Patient/Test1Patient\"\n  },\n  \"created\" : \"2024-09-17\",\n  \"provider\" : {\n    \"reference\" : \"Organization/Test1OrganizationHerzJesuKrankenhaus\"\n  },\n  \"insurer\" : {\n    \"reference\" : \"Organization/Test1OrganizationInsurance1\"\n  },\n  \"insurance\" : [{\n    \"coverage\" : {\n      \"reference\" : \"Coverage/Test1SVCCoverage\"\n    }\n  }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/CoverageEligibilityRequest/Test1MOPEDCoverageEligibilityRequest1",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"CoverageEligibilityRequest",
+						"Test1MOPEDCoverageEligibilityRequest1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT CoverageEligibilityResponse",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"resourceType\" : \"CoverageEligibilityResponse\",\n  \"id\" : \"Test1MOPEDCoverageEligibilityResponse1\",\n  \"meta\" : {\n    \"profile\" : [\"http://example.org/StructureDefinition/MOPEDCoverageEligibilityResponse\"]\n  },\n  \"text\" : {\n    \"status\" : \"extensions\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: CoverageEligibilityResponse Test1MOPEDCoverageEligibilityResponse1</b></p><a name=\\\"Test1MOPEDCoverageEligibilityResponse1\\\"> </a><a name=\\\"hcTest1MOPEDCoverageEligibilityResponse1\\\"> </a><a name=\\\"Test1MOPEDCoverageEligibilityResponse1-en-US\\\"> </a><p><b>EndOfEligibility</b>: true</p><p><b>VAEStatus</b>: 00</p><p><b>MealCostExcemption</b>: N</p><p><b>Vortageanzahl auf Kostenbeitrag</b>: 2</p><p><b>status</b>: Active</p><p><b>purpose</b>: Coverage Validation</p><p><b>patient</b>: <a href=\\\"Patient-Test1Patient.html\\\">Patientenkommun Moderne (official) Female, DoB: 1969-04-21 ( Social Security Number: 9994210469)</a></p><p><b>created</b>: 2024-09-17</p><p><b>request</b>: <a href=\\\"CoverageEligibilityRequest-Test1MOPEDCoverageEligibilityRequest1.html\\\">CoverageEligibilityRequest: extension = 0,A; status = active; purpose = validation; created = 2024-09-17</a></p><p><b>outcome</b>: Processing Complete</p><p><b>insurer</b>: <a href=\\\"Organization-Test1OrganizationInsurance1.html\\\">Organization Österreichische Gesundheitskasse Wien</a></p><h3>Insurances</h3><table class=\\\"grid\\\"><tr><td style=\\\"display: none\\\">-</td><td><b>Coverage</b></td><td><b>BenefitPeriod</b></td></tr><tr><td style=\\\"display: none\\\">*</td><td><a href=\\\"Coverage-Test1SVCCoverage.html\\\">Coverage: status = active; kind = insurance</a></td><td>2024-02-22 --&gt; 2024-08-21</td></tr></table></div>\"\n  },\n  \"extension\" : [{\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-EndOfEligibility\",\n    \"valueBoolean\" : true\n  },\n  {\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-vaestatus\",\n    \"valueCode\" : \"00\"\n  },\n  {\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-MealCostExcemption\",\n    \"valueCode\" : \"N\"\n  },\n  {\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-NumberOfPreviouslyPaidDays\",\n    \"valueUnsignedInt\" : 2\n  }],\n  \"status\" : \"active\",\n  \"purpose\" : [\"validation\"],\n  \"patient\" : {\n    \"reference\" : \"Patient/Test1Patient\"\n  },\n  \"created\" : \"2024-09-17\",\n  \"request\" : {\n    \"reference\" : \"CoverageEligibilityRequest/Test1MOPEDCoverageEligibilityRequest1\"\n  },\n  \"outcome\" : \"complete\",\n  \"insurer\" : {\n    \"reference\" : \"Organization/Test1OrganizationInsurance1\"\n  },\n  \"insurance\" : [{\n    \"coverage\" : {\n      \"reference\" : \"Coverage/Test1SVCCoverage\"\n    },\n    \"benefitPeriod\" : {\n      \"start\" : \"2024-02-22\",\n      \"end\" : \"2024-08-21\"\n    }\n  }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server-base}}/CoverageEligibilityResponse/Test1MOPEDCoverageEligibilityResponse1",
+					"host": [
+						"{{server-base}}"
+					],
+					"path": [
+						"CoverageEligibilityResponse",
+						"Test1MOPEDCoverageEligibilityResponse1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server-base",
+			"value": "https://moped-dev.pineit.at/pineit/pitaccess-waf/fhir/fhir/",
+			"type": "string"
+		}
+	]
+}
