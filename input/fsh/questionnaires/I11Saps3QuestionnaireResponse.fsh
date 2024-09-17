@@ -1,6 +1,7 @@
-Instance: 5497548
+Instance: Test2SAPS3QuestionnaireResponse1
 InstanceOf: QuestionnaireResponse
 Usage: #example
+* id = "Test2SAPS3QuestionnaireResponse1"
 * questionnaire = "Questionnaire/SAPS3Questionnaire"
 * status = #completed
 * subject = Reference(Patient/Test1Patient) 
