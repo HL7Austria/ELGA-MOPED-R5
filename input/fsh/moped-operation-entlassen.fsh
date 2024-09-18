@@ -8,11 +8,9 @@ Die Patient $entlassen Operation wird aufgerufen, wenn ein(e) Patient*in aus dem
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 
-1. Der Encounter erhält ein End-Datum, status wird auch discharged gesetzt
-2. Es werden zahlreiche Felder, die hier als Parameter vorliegen, in die jeweiligen Extensions gepackt.
-3. Ein Draft-Claim wird erstellt
-4. Alles war wir für die SV-Entlassungsanzeige brauchen wird erstellt
-5. Änderungen am Account - zumindest der Status
+1. Der Encounter erhält ein End-Datum (*MOPEDEncounter.actualPeriod.end*); der *MOPEDEncounter.status* wird auf *discharged* gesetzt
+3. Ein MOPEDClaim mit dem Status *draft* wird erstellt und in *MOPEDAccount.claim* referenziert.
+5. Änderungen am Account: der *MOPEDAccount.WorkflowStatus* wird auf *Entlassungs Aviso* gesetzt.
 """
 Usage: #definition 
 
@@ -20,6 +18,7 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-entlassen"
 * name = "MOPED_Patient_Entlassen"
 * status = #draft
+* comment = "TBD: die Extension für Claim-Account ref ist derzeit in Claim, sollte aber zu Account wandern. In dieser Operation werden noch keine Leitungen erfasst, hier muss eine Möglichkeit gegeben werden, dies nachzuholen - ggf. in einer separaten Operation. Was ist, wenn ein Patient stirbt? Wird hier eine Verlegung mit spezieller Abgangsart vorab angestoßen oder findet sich diese Ergeignis erst in der Entlassung wieder?"
 * kind = #operation 
 * affectsState = true
 * resource = #Patient

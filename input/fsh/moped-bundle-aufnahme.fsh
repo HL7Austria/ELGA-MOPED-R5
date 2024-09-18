@@ -21,3 +21,6 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme"""
 * entry contains
   Patient 1..1
 * entry[Patient].resource only HL7ATCorePatient
+* entry contains
+  Hauptversicherter 0..1
+* entry[Hauptversicherter].resource only HL7ATCorePatient

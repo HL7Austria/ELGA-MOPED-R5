@@ -13,7 +13,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
    * *MOPEDAccount.subject* mit der gleichen Referenz befüllen wie *MOPEDEncounter.subjec*
    * *MOPEDAccount.owner* mit der gleichen Organization befüllen wie *MOPEDEncounter.serviceProvider*
    * *MOPEDAccount.VDASID* lt. Operation Parameter befüllen (TBD: brauchen wir die VDAS ID oder können wir sie mit Absprache SVC als Identifier in die Coverage geben?)
-   * *MOPEDAccount.coverage.coverage* mit der Referenz lt. Parameter befüllen 
+   * *MOPEDAccount.coverage.coverage* mit der Referenz lt. Parameter befüllen und ggf. Hauptversicherter (Patient) anlegen, falls noch nicht am Server.
 3. Account im Encounter referenzieren: Den neuen MOPEDAccount im *MOPEDEncounter.account* referenzieren
 
 Die Werte-Ausprägung des *modus* Parameters haben eine Auswirkung auf das Verhalten der Operation:
