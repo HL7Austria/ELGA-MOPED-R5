@@ -17,7 +17,7 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme"""
 * entry[Encounter].resource only MOPEDEncounter
 * entry contains
   Coverage 1..1
-* entry[Coverage].resource only MOPEDCoverage
+* entry[Coverage].resource only SVCCoverage
 * entry contains
   Patient 1..1
 * entry[Patient].resource only HL7ATCorePatient
