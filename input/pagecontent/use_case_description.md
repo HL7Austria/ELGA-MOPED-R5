@@ -3,8 +3,7 @@ Die folgende Beschreibung und die zugehörigen Diagramme illustrieren den neuen 
 Die einzelnen Abschnitte beschreiben detailliert die Schritte und Interaktionen zwischen den beteiligten Akteuren. Die Diagramme verdeutlichen, wie der neue Prozess zur effizienten und konsistenten Datenkommunikation eingesetzt werden kann. 
 
 <div xmlns="http://www.w3.org/1999/xhtml" class="container">
-<h2>Sollprozess - Überblick:</h2>
-<img src="Sollprozess/Gesamtprozess_Ueberblick.png" width ="65%" />
+<h2>Sollprozess (Entwurf):</h2>
 </div>
     
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
