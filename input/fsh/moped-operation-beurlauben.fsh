@@ -12,12 +12,13 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-beurlauben"
 * name = "MOPED_Patient_Beurlauben"
 * status = #draft
+* comment = "TBD: Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (Encounter, Patient oder Server-Base)"
 * kind = #operation 
 * affectsState = true
 * resource = #Patient
 * system = false
-* type = false
-* instance = true
+* type = true
+* instance = false
 * code = #beurlauben
 * parameter[+]
   * name = #aufnahmezahl

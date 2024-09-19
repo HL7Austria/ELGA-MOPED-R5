@@ -1,8 +1,8 @@
 Instance: KostenuebernahmeAnfrageCheckStatus
 InstanceOf: OperationDefinition
-Title: "Kostenübernahme-Anfrage $check (POC)"
+Title: "Kostenübernahme-Anfrage $checkStatus (POC)"
 Description: """
-Die Kostenübernahme-Anfrage $check Operation wird aufgerufen, um zu überprüfen, in welchem Status sich die Bearbeitung seitens SV derzeit befindet. Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
+Die Kostenübernahme-Anfrage $checkStatus Operation wird aufgerufen, um zu überprüfen, in welchem Status sich die Bearbeitung seitens SV derzeit befindet. Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 
 1. Suchen des Accounts: Suchen des MOPEDAccounts, der vom MOPEDEncounter mit dem *aufnahmezahl* Parameter als *identifier* im *MOPEDEncounter.account* Feld referenziert wird. 
 2. Suchen des Requests: Es geht um jenen Request, der in *MOPEDAccount.coverageEligibilityRequest* Feld referenziert wurde
@@ -18,13 +18,14 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-checkStatus"
 * name = "MOPED_CoverageEligibilityRequest_Check_Status"
 * status = #draft
+* comment = "Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (CoverageEligibilityRequest, oder Server-Base)"
 * kind = #operation
 * affectsState = true
 * resource = #CoverageEligibilityRequest
 * system = false
 * type = true
 * instance = false
-* code = #abfragen
+* code = #checkStatus
 * parameter[+]
   * name = #aufnahmezahl
   * use = #in 

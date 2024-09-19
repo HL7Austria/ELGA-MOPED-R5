@@ -27,7 +27,7 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-aufnehmen"
 * name = "MOPED_Patient_Aufnehmen"
 * status = #draft
-* comment = "TBD: Input ggf. ServiceProvider Organization bzw. GDA-OID, und ggf. CoverageID/VDAS ID falls im Prozess schon zuvor die Coverage angelegt wurde; mit welchem Wert/identifier kann die Coverage wiedergefunden werden?"
+* comment = "TBD: Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (Encounter, Patient oder Server-Base); Input ggf. ServiceProvider Organization bzw. GDA-OID, und ggf. CoverageID/VDAS ID falls im Prozess schon zuvor die Coverage angelegt wurde; mit welchem Wert/identifier kann die Coverage wiedergefunden werden?"
 * kind = #operation 
 * affectsState = true
 * resource = #Patient

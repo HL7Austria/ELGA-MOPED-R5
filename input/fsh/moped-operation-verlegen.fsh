@@ -17,13 +17,14 @@ Usage: #definition
 * id = "MOPED.Patient.Verlegen"
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-verlegen"
 * name = "MOPED_Patient_Verlegen"
+* comment = "Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (Encounter, Patient oder Server-Base)"
 * status = #draft
 * kind = #operation 
 * affectsState = true
 * resource = #Patient
 * system = false
-* type = false
-* instance = true
+* type = true
+* instance = false
 * code = #verlegen
 * parameter[+]
   * name = #aufnahmezahl

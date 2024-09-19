@@ -15,11 +15,11 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die Kostenübe
 """
 Usage: #definition 
 
-* id = "MOPED.CoverageEligibilityRequest.Abfragen"
-* base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-abfragen"
-* name = "MOPED_CoverageEligibilityRequest_Abfragen"
+* id = "MOPED.CoverageEligibilityRequest.Abholen"
+* base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-abholen"
+* name = "MOPED_CoverageEligibilityRequest_Abholen"
 * status = #draft
-* comment = "TBD: Es ist auch der Wunsch der Krankenanstalten tracken zu können, ob die SV den Request (1) abgefragt hat (status draft, outcome queued), (2) derzeit bearbeitet oder (status draft; outcome *queued*) (3) abgeschlossen hat (outcome *complete* OR *error* OR *partial* und der *status* auf *active*).
+* comment = "TBD: Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (CoverageEligibilityRequest oder Server-Base) Es ist auch der Wunsch der Krankenanstalten tracken zu können, ob die SV den Request (1) abgefragt hat (status draft, outcome queued), (2) derzeit bearbeitet oder (status draft; outcome *queued*) (3) abgeschlossen hat (outcome *complete* OR *error* OR *partial* und der *status* auf *active*).
 Somit brauchen wir noch Möglichkeiten im Workflow, wie die erstellte Draft-Response weiter bearbeitet werden kann."
 * kind = #operation 
 * affectsState = true
@@ -27,13 +27,13 @@ Somit brauchen wir noch Möglichkeiten im Workflow, wie die erstellte Draft-Resp
 * system = false
 * type = true
 * instance = false
-* code = #abfragen
+* code = #abholen
 * parameter[+]
   * name = #versicherer
   * use = #in 
   * min = 1
   * max = "1"
-  * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer der die $abfragen Operation aufruft."
+  * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer der die $abholen Operation aufruft."
   * type = #string
 * parameter[+]
   * name = #return
