@@ -4,6 +4,7 @@ Instance: KAStatistikK03Questionnaire
 InstanceOf: Questionnaire
 Title: "Satzart K03 – KA-Statistik (Ressourcen und Inanspruchnahme)"
 * id = "ka-statistik-k03"
+* name = "K03 Questionnaire"
 * status = #active
 * title = "K03 Questionnaire for KA-Statistik"
 * description = "This questionnaire is used to collect KA-Statistik data for K03 message reporting."
@@ -18,8 +19,7 @@ Title: "Satzart K03 – KA-Statistik (Ressourcen und Inanspruchnahme)"
 // Jahr
 * item[1].linkId = "jahr"
 * item[1].text = "Jahr"
-* item[1].type = #string
-* item[1].maxLength = 4
+* item[1].type = #date
 
 // Krankenanstaltennummer
 * item[2].linkId = "krankenanstaltennummer"

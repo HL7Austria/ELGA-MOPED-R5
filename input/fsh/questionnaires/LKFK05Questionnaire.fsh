@@ -4,6 +4,7 @@ Instance: KAStatistikK05Questionnaire
 InstanceOf: Questionnaire
 Title: "Satzart K05 – KA-Statistik (Personal des ärztlichen Dienstes)"
 * id = "ka-statistik-k05"
+* name = "K05 Questionnaire"
 * status = #active
 * title = "K05 Questionnaire for KA-Statistik"
 * description = "This questionnaire is used to collect KA-Statistik data for K05 message reporting."
@@ -18,8 +19,7 @@ Title: "Satzart K05 – KA-Statistik (Personal des ärztlichen Dienstes)"
 // Jahr
 * item[1].linkId = "jahr"
 * item[1].text = "Jahr"
-* item[1].type = #string
-* item[1].maxLength = 4
+* item[1].type = #date
 
 // Krankenanstaltennummer
 * item[2].linkId = "krankenanstaltennummer"
