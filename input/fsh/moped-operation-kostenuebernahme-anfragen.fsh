@@ -3,7 +3,7 @@ InstanceOf: OperationDefinition
 Title: "MOPED Kostenuebernahme $anfragen (POC)"
 Description: """
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Kostenübernahme $anfragen Operation wird aufgerufen, um die Kostenübernahme-Anfrage an die SV anzustoßen.
-1. Vorbereitung des CoverageEligibilityRequest: Ein CoverageEligibilityRequest mit dem *status* 'active' und *purpose* 'validation' und dem *created* aktuellem Zeitpunkt wird vorbereitet.
+1. Vorbereitung des CoverageEligibilityRequest: Ein CoverageEligibilityRequest mit dem *status* 'active' und *purpose* 'validation' und dem *created* aktuellem Zeitpunkt wird vorbereitet. Die Extension *ExtensionDays* wird mit dem Operation-Parameter *verlaengerungstage* befüllt, die Extension *PremiumClass* mit dem Operation-Parameter *sonderklasse*.
 2. Suchen des Accounts: Suchen des MOPEDAccounts, der vom MOPEDEncounter mit dem *aufnahmezahl* Parameter als *identifier* im *MOPEDEncounter.account* Feld referenziert wird. 
 2. Referenzieren des Patienten: Eine Referenz auf den Patienten der als *subject* im MOPEDAccount geführt ist, wird im *CoverageEligibilityRequest.patient* Element referenziert
 3. Referenzieren der Coverage: Die gleiche Referenz wie im *MOPEDAccount.coverage.coverage* wird auch im CoverageEligibilityRequest referenziert. Check erfolgt, ob diese Coverage den gleichen Patienten als *beneficiary* hat wie das *subject* des CoverageEligibilityRequest.
@@ -18,7 +18,7 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-anfragen"
 * name = "MOPED_CoverageEligibilityRequest_Anfragen"
 * status = #draft
-* comment = "TBD: erstellung einer Extension im Account für die Referenz auf den CoverageEligibilityRequest"
+* comment = "TBD: erstellung einer Extension im Account für die Referenz auf den CoverageEligibilityRequest; Erstellung des Sonderklasse ValueSets, verlinkung im Operation-Parameter sowie im Profil des CoverageEligibilityRequests beim Element *PremiumClass*"
 * kind = #operation 
 * affectsState = true
 * resource = #Account
@@ -40,6 +40,23 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer an dem der CoverageEligibilityRequest gerichtet ist."
   * type = #Identifier
+* parameter[+]
+  * name = #verlaengerungstage
+  * use = #in 
+  * min = 0
+  * max = "1"
+  * documentation = "Der *verlaengerungstage* beschreibt, um wie viele Verlängerungstage angefragt wird."
+  * type = #unsignedInt
+* parameter[+]
+  * name = #sonderklasse
+  * use = #in 
+  * min = 0
+  * max = "1"
+  * documentation = "Der *sonderklasse* codiert, ob der Aufenthalt in der Allgemeine Gebührenklasse oder Sonderklasse stattfindet, da es bei speziellen Versicherungsträgern dafür Optionen gibt."
+  * type = #code
+  * binding[+]
+    * strength = #required
+    * valueSet = "moped-sonderklasse-valueset"
 * parameter[+]
   * name = #return
   * use = #out
