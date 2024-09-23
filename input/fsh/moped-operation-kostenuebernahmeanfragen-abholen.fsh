@@ -34,7 +34,7 @@ Somit brauchen wir noch Möglichkeiten im Workflow, wie die erstellte Draft-Resp
   * min = 1
   * max = "1"
   * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer der die $abholen Operation aufruft."
-  * type = #string
+  * type = #identifier
 * parameter[+]
   * name = #return
   * use = #out

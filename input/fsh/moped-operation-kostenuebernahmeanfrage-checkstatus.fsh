@@ -32,7 +32,7 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall dessen Kostenübernahme-Status überprüft werden soll."
-  * type = #string
+  * type = #identifier
 * parameter[+]
   * name = #return
   * use = #out
