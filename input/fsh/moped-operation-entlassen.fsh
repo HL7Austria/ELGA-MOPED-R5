@@ -21,7 +21,7 @@ Usage: #definition
 * comment = "TBD: Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (Encounter, Patient oder Server-Base); die Extension für Claim-Account ref ist derzeit in Claim, sollte aber zu Account wandern. In dieser Operation werden noch keine Leitungen erfasst, hier muss eine Möglichkeit gegeben werden, dies nachzuholen - ggf. in einer separaten Operation. Was ist, wenn ein Patient stirbt? Wird hier eine Verlegung mit spezieller Abgangsart vorab angestoßen oder findet sich diese Ergeignis erst in der Entlassung wieder?"
 * kind = #operation 
 * affectsState = true
-* resource = #Patient
+* resource = #Encounter
 * system = false
 * type = true
 * instance = false
@@ -32,7 +32,7 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
-  * type = #string
+  * type = #identifier
 * parameter[+]
   * name = #zeitpunkt
   * use = #in 

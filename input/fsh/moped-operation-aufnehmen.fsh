@@ -30,10 +30,10 @@ Usage: #definition
 * comment = "TBD: Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (Encounter, Patient oder Server-Base); Input ggf. ServiceProvider Organization bzw. GDA-OID, und ggf. CoverageID/VDAS ID falls im Prozess schon zuvor die Coverage angelegt wurde; mit welchem Wert/identifier kann die Coverage wiedergefunden werden?"
 * kind = #operation 
 * affectsState = true
-* resource = #Patient
+* resource = #Encounter
 * system = false
-* type = false
-* instance = true
+* type = true
+* instance = false
 * code = #aufnehmen
 * parameter[+]
   * name = #falldaten
