@@ -19,7 +19,7 @@ Usage: #definition
 * name = "MOPED_CoverageEligibilityRequest_Check_Status"
 * status = #draft
 * kind = #operation
-* affectsState = true
+* affectsState = false
 * resource = #CoverageEligibilityRequest
 * system = false
 * type = true
