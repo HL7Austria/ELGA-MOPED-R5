@@ -21,7 +21,7 @@ Usage: #definition
 * status = #draft
 * kind = #operation 
 * affectsState = true
-* resource = #Patient
+* resource = #Encounter
 * system = false
 * type = true
 * instance = false
@@ -32,7 +32,7 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
-  * type = #string
+  * type = #identifier
 * parameter[+]
   * name = #zeitpunkt
   * use = #in 

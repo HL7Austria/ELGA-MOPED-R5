@@ -39,7 +39,7 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer an dem der CoverageEligibilityRequest gerichtet ist."
-  * type = #string
+  * type = #identifier
 * parameter[+]
   * name = #return
   * use = #out
