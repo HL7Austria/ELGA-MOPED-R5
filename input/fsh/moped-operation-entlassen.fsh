@@ -12,7 +12,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 2. Das Element *MOPEDEncounter.admission.dischargeDisposition* wird mit dem Operation-Parameter *entlassungsart* befüllt.
 3. Der alte MOPEDTransferEncounter der *partOf* des MOPEDEncounters mit der jeweiligen Aufnahmezahl war und noch den Status *in-progress* hat, wird gesucht. Der Status wird auf *completed* gesetzt und die *MOPEDTransferEncounter.actualPeriod.end* mit dem *zeitpunkt* der Entlassung versehen. 
 4. Ein MOPEDClaim mit dem Status *draft* wird erstellt und in *MOPEDAccount.claim* referenziert.
-5. Änderungen am Account: der *MOPEDAccount.WorkflowStatus* wird auf *Entlassungs Aviso* gesetzt.
+5. Änderungen am Account: der *MOPEDAccount.WorkflowStatus* wird auf *Entlassungs Aviso* gesetzt, oder, falls der *modus*-Parameter auf *freigeben* gesetzt war und die Validierung erfolgreich war, wird *MOPEDAccount.WorkflowStatus* auf *Entlassung vollständig* gesetzt. Ebenso im *MOPEDAccount* im Element *TageOhneKostenbeitrag* wird der gleichnamige Opeartion-Parameter abgespeichert. Dieser ist verpflichtend zu befüllen, wenn der *modus*-Parameter auf *freigeben* gestellt ist.
 """
 Usage: #definition 
 
@@ -52,6 +52,23 @@ Usage: #definition
   * binding[+]
     * strength = #required
     * valueSet = "moped-entlassungsart-valueset"
+    * parameter[+]
+* parameter[+]
+  * name = #tageOhneKostenbeitrag
+  * use = #in 
+  * min = 0
+  * max = "1"
+  * documentation = "Der *tageOhneKostenbeitrag* Parameter definiert zu für wie viele Tage kein Kostenbeitrag eingehoben wurde."
+  * type = #unsignedInt
+* name = #modus
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation = "Mit Hilfe des *modus* Parameters wird angegeben, ob es sich bei der Patienten-Entlassung um vollständige Daten handelt (*freigeben*) und somit eine Validierung erfolgen soll, oder ob lediglich unvollständige Daten zwischengespeichert werden (*aviso*)."
+  * type = #code
+  * binding[+]
+    * strength = #required
+    * valueSet = "hl7.at.test.aviso.oder.freigeben"
 * parameter[+]
   * name = #return
   * use = #out
