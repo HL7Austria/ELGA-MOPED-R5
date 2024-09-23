@@ -18,7 +18,6 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-checkStatus"
 * name = "MOPED_CoverageEligibilityRequest_Check_Status"
 * status = #draft
-* comment = "Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (CoverageEligibilityRequest, oder Server-Base)"
 * kind = #operation
 * affectsState = true
 * resource = #CoverageEligibilityRequest

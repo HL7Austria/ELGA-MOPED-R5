@@ -19,7 +19,7 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-abholen"
 * name = "MOPED_CoverageEligibilityRequest_Abholen"
 * status = #draft
-* comment = "TBD: Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (CoverageEligibilityRequest oder Server-Base) Es ist auch der Wunsch der Krankenanstalten tracken zu können, ob die SV den Request (1) abgefragt hat (status draft, outcome queued), (2) derzeit bearbeitet oder (status draft; outcome *queued*) (3) abgeschlossen hat (outcome *complete* OR *error* OR *partial* und der *status* auf *active*).
+* comment = "TBD: Es ist auch der Wunsch der Krankenanstalten tracken zu können, ob die SV den Request (1) abgefragt hat (status draft, outcome queued), (2) derzeit bearbeitet oder (status draft; outcome *queued*) (3) abgeschlossen hat (outcome *complete* OR *error* OR *partial* und der *status* auf *active*).
 Somit brauchen wir noch Möglichkeiten im Workflow, wie die erstellte Draft-Response weiter bearbeitet werden kann."
 * kind = #operation 
 * affectsState = true

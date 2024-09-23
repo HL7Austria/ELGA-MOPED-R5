@@ -18,7 +18,7 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-anfragen"
 * name = "MOPED_CoverageEligibilityRequest_Anfragen"
 * status = #draft
-* comment = "TBD: Klären, auf welchem Endpunkt die Operation aufgerufen werden soll (Encounter, Account oder Server-Base)erstellung einer Extension im Account für die Referenz auf den CoverageEligibilityRequest"
+* comment = "TBD: erstellung einer Extension im Account für die Referenz auf den CoverageEligibilityRequest"
 * kind = #operation 
 * affectsState = true
 * resource = #Account
