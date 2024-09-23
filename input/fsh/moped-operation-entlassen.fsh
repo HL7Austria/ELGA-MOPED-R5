@@ -52,7 +52,6 @@ Usage: #definition
   * binding[+]
     * strength = #required
     * valueSet = "moped-entlassungsart-valueset"
-    * parameter[+]
 * parameter[+]
   * name = #tageOhneKostenbeitrag
   * use = #in 
@@ -60,7 +59,8 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *tageOhneKostenbeitrag* Parameter definiert zu für wie viele Tage kein Kostenbeitrag eingehoben wurde."
   * type = #unsignedInt
-* name = #modus
+* parameter[+]
+  * name = #modus
   * use = #in
   * min = 1
   * max = "1"
