@@ -32,14 +32,14 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
-  * type = #identifier
+  * type = #Identifier
 * parameter[+]
   * name = #versicherer
   * use = #in 
   * min = 1
   * max = "1"
   * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer an dem der CoverageEligibilityRequest gerichtet ist."
-  * type = #identifier
+  * type = #Identifier
 * parameter[+]
   * name = #return
   * use = #out

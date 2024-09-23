@@ -25,7 +25,7 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
-  * type = #identifier
+  * type = #Identifier
 * parameter[+]
   * name = #zeitpunkt
   * use = #in 
