@@ -63,6 +63,11 @@ Usage: #example
 * partOf = Reference(Encounter/Test1MOPEDEncounter1)
 * serviceProvider = Reference(Organization/Test1OrganizationAbteilung1)
 
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-Altersgruppe"
+* extension[=].valueUnsignedInt = 50
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-Neugeborenes"
+* extension[=].valueBoolean = false
+
 * actualPeriod.start = "2024-02-22T19:33:00+02:00" //für ersten TransferEncounter gleich mit MOPEDEncounter start
 
 
