@@ -18,7 +18,7 @@
         </div>
         <div id="JährlicheBundesmeldung" class="tab-pane fade">
             <h1>Jährliche Bundesmeldung</h1>
-            <img src="Sollprozess/SollProzesse_einzeln/Jährliche Bundesmeldung.png" width ="50%">
+            <img src="Sollprozess/SollProzesse_einzeln/Jahresmeldung.png" width ="50%">
             <img src="Sollprozess/eEPKs/Jährliche Bundesmeldung.png" width ="50%">
         </div>
     </div>

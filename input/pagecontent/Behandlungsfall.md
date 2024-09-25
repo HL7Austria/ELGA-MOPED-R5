@@ -16,8 +16,8 @@
         </div>
         <div id="Kostenübernahme" class="tab-pane fade">
             <h1>Kostenübernahme</h1>
-            <img src="Sollprozess/SollProzesse_einzeln/Kostenübernahme.png" width ="50%">
-            <img src="Sollprozess/eEPKs/Kostenübernahme.png" width ="40%">
+            <img src="Sollprozess/SollProzesse_einzeln/Versichertenanspruchserklärung.png" width ="50%">
+            <img src="Sollprozess/eEPKs/Versichertenanspruchserklärung.png" width ="40%">
         </div>
         <div id="Patientenversorgung" class="tab-pane fade">
             <h1>Patientenversorgung</h1>
