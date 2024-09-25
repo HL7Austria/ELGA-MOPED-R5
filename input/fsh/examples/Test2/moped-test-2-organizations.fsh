@@ -1,7 +1,7 @@
 Instance: Test2OrganizationKrankenhausRied
 InstanceOf: HL7ATCoreOrganization
 Title: "Krankenhaus der Barmherzigen Schwestern vom Hl. Vinzenz von Paul Ried"
-Description: "Organization resource for Krankenhaus der Barmherzigen Schwestern vom Hl. Vinzenz von Paul Ried"
+Description: "Organization Ressource für das Krankenhaus der Barmherzigen Schwestern vom Hl. Vinzenz von Paul Ried"
 Usage: #example
 * id = "Test2OrganizationKrankenhausRied"
 * meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"

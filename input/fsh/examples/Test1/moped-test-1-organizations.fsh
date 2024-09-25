@@ -1,6 +1,6 @@
 Instance: Test1OrganizationHerzJesuKrankenhaus
 InstanceOf: HL7ATCoreOrganization
-Description: "Organization resource for Herz Jesu-Krankenhaus"
+Description: "Organization Ressource für das Herz Jesu-Krankenhaus"
 Usage: #example
 * meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"
 * id = "Test1OrganizationHerzJesuKrankenhaus"
