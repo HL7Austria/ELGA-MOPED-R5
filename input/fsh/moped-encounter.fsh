@@ -14,8 +14,6 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 
 * account only Reference(MOPEDAccount)
 
-* extension contains AnzahlVerlegungen named AnzahlVerlegungen 0..1
-
 * subject only Reference(HL7ATCorePatient)
 * admission.origin only Reference(Organization)
 * admission.destination only Reference(Organization)
