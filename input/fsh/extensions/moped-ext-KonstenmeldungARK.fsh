@@ -5,5 +5,5 @@ Description:  "MOPED Extension für die Kostenmeldung. Konstenmeldung für A = A
 Context: MOPEDClaimResponse
 
 * value[x] 0..1
-* value[x] only code
+* value[x] only Coding
 * value[x] from KostenmeldungARK (required)

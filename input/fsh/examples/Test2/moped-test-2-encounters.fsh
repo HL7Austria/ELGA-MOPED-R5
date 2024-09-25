@@ -37,7 +37,7 @@ Usage: #example
 * reason[=].value = #00
 //Zugangsart
 * admission.extension[+].url = "http://example.org/StructureDefinition/moped-ext-zugangsart"
-* admission.extension[=].valueCode = #A
+* admission.extension[=].valueCoding = $Zugangsart#A
 //Entlassungsart
 * admission.dischargeDisposition.coding.system = $Entlassungsart
 * admission.dischargeDisposition.coding.code = #E

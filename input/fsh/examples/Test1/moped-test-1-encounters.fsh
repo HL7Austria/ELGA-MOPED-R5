@@ -40,7 +40,7 @@ Usage: #example
 
 //Zugangsart
 * admission.extension[+].url = "http://example.org/StructureDefinition/moped-ext-zugangsart"
-* admission.extension[=].valueCode = #A
+* admission.extension[=].valueCoding = $Zugangsart#A
 
 //Diagnosen
 * diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ"

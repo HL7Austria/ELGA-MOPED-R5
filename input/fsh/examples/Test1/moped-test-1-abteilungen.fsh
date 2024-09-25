@@ -13,6 +13,7 @@ InstanceOf: MOPEDOrganizationAbteilung
 * extension[=].extension[+].url = "InterneKostenstellenbezeichnung"
 * extension[=].extension[=].valueString = "Schlaflabor (Interne)"
 * extension[=].extension[+].url = "SpezielleOrganisationsform"
-* extension[=].extension[=].valueCode = #A
+* extension[=].extension[=].valueCoding.system = $SpezielleOrganisationsform
+* extension[=].extension[=].valueCoding.code = #A
 * extension[=].extension[+].url = "KostenstellenJahr"
 * extension[=].extension[=].valueDate = "2024"

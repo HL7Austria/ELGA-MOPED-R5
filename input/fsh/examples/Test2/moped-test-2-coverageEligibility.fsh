@@ -15,7 +15,7 @@ Usage: #example
 
 //PremiumClass
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-PremiumClass"
-* extension[=].valueCode = #A
+* extension[=].valueCoding = $Sonderklasse#A
 
 
 Instance: Test2MOPEDCoverageEligibilityResponse1
@@ -44,11 +44,11 @@ Usage: #example
 
 //VAEStatus
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-vaestatus"
-* extension[=].valueCode = #00
+* extension[=].valueCoding = $VAEStatus#00
 
 //MealcostExcemption
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-MealCostExcemption"
-* extension[=].valueCode = #N
+* extension[=].valueCoding = $MealCostExcemption#N
 
 //NumberOfPreviouslyPaidDays
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-NumberOfPreviouslyPaidDays"
