@@ -2,11 +2,11 @@ Instance: MOPEDPatientBeurlauben
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $beurlauben"
 Description: """
-Die Patient $beurlauben Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wurde und während eines laufenden Falles beurlaubt wird. Die Operation $verlegen wird aufgerufen mit dem Funktionscode XXX als Parameter, der Abgangsart YYY und ohne physische Anwesenheit. TBD: finde heraus, welcher Funktionscode und welche Abgangsart konkret für Urlaub stehen.
+Die Patient $beurlauben Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wurde und während eines laufenden Falles beurlaubt wird. Die Operation $verlegen wird aufgerufen mit dem Funktionscode '10000000' als Parameter, der Abgangsart '1' und ohne physische Anwesenheit. 
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 """
-Usage: #definition 
+Usage: #definition
 
 * id = "MOPED.Patient.Beurlauben"
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-beurlauben"
