@@ -20,7 +20,7 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-entlassen"
 * name = "MOPED_Patient_Entlassen"
 * status = #draft
-* comment = "TBD: Schritt 3: eine Abgangsart vom TransferEncounter muss hinzugefügt werden, welchen fixen wert enthält diese bei Enlassung? Die Extension für Claim-Account ref ist derzeit in Claim, sollte aber zu Account wandern. In dieser Operation werden noch keine Leitungen erfasst, hier muss eine Möglichkeit gegeben werden, dies nachzuholen - ggf. in einer separaten Operation. Was ist, wenn ein Patient stirbt? Wird hier eine Verlegung mit spezieller Abgangsart vorab angestoßen oder findet sich diese Ergeignis erst in der Entlassung wieder?"
+* comment = "TBD: Schritt 3: eine Abgangsart vom TransferEncounter muss hinzugefügt werden, welchen fixen wert enthält diese bei Enlassung? In dieser Operation werden noch keine Leitungen erfasst, hier muss eine Möglichkeit gegeben werden, dies nachzuholen - ggf. in einer separaten Operation. Was ist, wenn ein Patient stirbt? Wird hier eine Verlegung mit spezieller Abgangsart vorab angestoßen oder findet sich diese Ergeignis erst in der Entlassung wieder?"
 * kind = #operation 
 * affectsState = true
 * resource = #Encounter
