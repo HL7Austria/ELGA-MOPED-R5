@@ -39,4 +39,3 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * extension contains Fondsrelevanz named Fondsrelevanz 0..1
 * extension contains Plausibilitaetskennzeichen named Plausibilitaetskennzeichen 0..1
 * extension contains SVAbrechnungsquartal named SVAbrechnungsquartal 0..1
-* extension contains AccountRef named AccountRef 0..1

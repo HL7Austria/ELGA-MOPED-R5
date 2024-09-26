@@ -14,3 +14,4 @@ Description: "MOPED Profil der Account Ressource für die administrative Fallfü
 * extension contains VerdachtFremdverschulden named VerdachtFremdverschulden 0..1
 * extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1
 * extension contains CoverageEligibilityRequestRef named CoverageEligibilityRequestRef 0..1
+* extension contains ClaimRef named ClaimRef 0..1
