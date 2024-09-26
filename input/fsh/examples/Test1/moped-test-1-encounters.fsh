@@ -45,7 +45,7 @@ Usage: #example
 //Diagnosen
 * diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ"
 * diagnosis[=].use.coding.code = #H
-* diagnosis.condition.reference = Reference(Condition/Test1Condition1)
+* diagnosis.condition = Reference(Condition/Test1Condition1)
 
 //Zugewiesen von
 * admission.origin = Reference(Organization/Test1OrganizationUeberweisendeOrganisation)

@@ -44,10 +44,10 @@ Usage: #example
 //Diagnosen
 * diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ"
 * diagnosis[=].use.coding.code = #H
-* diagnosis[=].condition.reference = Reference(Condition/Test2Condition1)
+* diagnosis[=].condition = Reference(Condition/Test2Condition1)
 * diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ"
 * diagnosis[=].use.coding.code = #Z
-* diagnosis[=].condition.reference = Reference(Condition/Test2Condition2)
+* diagnosis[=].condition = Reference(Condition/Test2Condition2)
 //Zugewiesen von
 * admission.origin = Reference(Organization/Test2OrganizationUeberweisendeOrganisation)
 
