@@ -1,6 +1,6 @@
 Instance: MOPEDPatientVerlegen
 InstanceOf: OperationDefinition
-Title: "MOPED Patient $verlegen (POC)"
+Title: "MOPED Patient $verlegen"
 Description: """
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 

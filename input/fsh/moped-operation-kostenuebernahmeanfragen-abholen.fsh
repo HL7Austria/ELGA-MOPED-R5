@@ -1,6 +1,6 @@
 Instance: VersichertenanspruchserklärungAnfragenAbholen
 InstanceOf: OperationDefinition
-Title: "Versichertenanspruchserklärung-Anfragen $abholen (POC)"
+Title: "Versichertenanspruchserklärung-Anfragen $abholen"
 Description: """
 Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die Versichertenanspruchserklärung-Anfragen $abholen Operation wird aufgerufen, um alle noch offenen Versichertenanspruchserklärung-Anfragen, die bisher seitens SV noch nicht bearbeitet wurden, abgeholt werden können.
 1. Suche nach relevanten Requests: Alle CoverageEligibilityRequests, 

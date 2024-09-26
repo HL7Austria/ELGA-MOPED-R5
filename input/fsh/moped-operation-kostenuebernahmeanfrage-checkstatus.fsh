@@ -1,6 +1,6 @@
 Instance: VersichertenanspruchserklärungAnfrageCheckStatus
 InstanceOf: OperationDefinition
-Title: "Versichertenanspruchserklärung-Anfrage $checkStatus (POC)"
+Title: "Versichertenanspruchserklärung-Anfrage $checkStatus"
 Description: """
 Die Versichertenanspruchserklärung-Anfrage $checkStatus Operation wird aufgerufen, um zu überprüfen, in welchem Status sich die Bearbeitung seitens SV derzeit befindet. Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 
