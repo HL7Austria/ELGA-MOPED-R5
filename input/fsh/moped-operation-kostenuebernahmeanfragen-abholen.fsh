@@ -1,8 +1,8 @@
-Instance: KostenuebernahmeAnfragenAbholen
+Instance: VersichertenanspruchserklärungAnfragenAbholen
 InstanceOf: OperationDefinition
-Title: "Kostenübernahme-Anfragen $abholen (POC)"
+Title: "Versichertenanspruchserklärung-Anfragen $abholen (POC)"
 Description: """
-Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die Kostenübernahme-Anfragen $abholen Operation wird aufgerufen, um alle noch offenen Kostenübernahme-Anfragen, die bisher seitens SV noch nicht bearbeitet wurden, abgeholt werden können.
+Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die Versichertenanspruchserklärung-Anfragen $abholen Operation wird aufgerufen, um alle noch offenen Versichertenanspruchserklärung-Anfragen, die bisher seitens SV noch nicht bearbeitet wurden, abgeholt werden können.
 1. Suche nach relevanten Requests: Alle CoverageEligibilityRequests, 
   * die im Feld *CoverageEligibilityRequest.insurer* die Organization mit *Organization.identifier* = Operation-Parameter *versicherer* referenziert haben UND
   * die noch keine gezugehörigen CoverageEligibilityResponse haben (CoverageEligibilityRequest CEReq where not exists CoverageEligibilityResponse with *CoverageEligibilityResponse.request* = CEReq). Der Status der Resposne ist dabei irrelevant.
