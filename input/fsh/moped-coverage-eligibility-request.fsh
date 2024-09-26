@@ -1,7 +1,7 @@
 
 Profile: MOPEDCoverageEligibilityRequest
 Parent: CoverageEligibilityRequest
-Description: "MOPED Profil der CoverageEligibilityRequest Ressource für die Kostenübernahmeanfrage."
+Description: "MOPED Profil der CoverageEligibilityRequest Ressource für die Versichertenanspruchserklärung-Anfrage."
 
 
 * patient only Reference(HL7ATCorePatient)
