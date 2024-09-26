@@ -6,13 +6,16 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 
 Die Patient $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. 
 
-1. Neuer Transfer Encounter: Der MOPEDEncounter mit der jeweiligen Aufnahmezahl wird gesucht, und ein neuer MOPEDTransferEncounter der mit partOf den MOPEDEncounter referenziert wird erstellt. Beim neu erstellten MOPEDTransferEncounter wird der *zeitpunkt* als *MOPEDTransferEncounter.actualPeriod.start* eingefügt und als *MOPEDTransferEncounter.serviceProvider* die Abteilung MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* referenziert. 
+1. Neuer Transfer Encounter: Der MOPEDEncounter mit der jeweiligen Aufnahmezahl wird gesucht, und ein neuer MOPEDTransferEncounter der mit partOf den MOPEDEncounter referenziert wird erstellt. Beim neu erstellten MOPEDTransferEncounter wird der *zeitpunkt* als *MOPEDTransferEncounter.actualPeriod.start* eingefügt und als *MOPEDTransferEncounter.serviceProvider* die Abteilung MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* referenziert. Die Extension *MOPEDTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet (siehe Note 2).
 2. Alter Transfer Encounter: Der alte MOPEDTransferEncounter der partOf des MOPEDEncounters mit der jeweiligen Aufnahmezahl war und noch den Status *in-progress* hat, wird gesucht. Der Status wird auf *completed* gesetzt und die MOPEDTransferEncounter.actualPeriod.end mit dem *zeitpunkt* der Verlegung versehen. Ebenso wird beim alten Encounter die *abgangsart* von diesem Funktionscode dokumentiert. 
 3. AnzahlBeurlaubungen: Dieser Counter gibt die Wiederaufnahmen nach Urlaub an. Wenn es sich beim alten MOPEDTransferEncounter der gerade auf *completed* gesetzt wurde um eine Beurlaubung gehandelt hat (i.e. Funktionscode XXX-TBD), dann wird der Counter Account.extension.AnzahlBeurlaubungen um 1 erhöht. 
 4. AnzahlVerlegungen: Die Extension Account.extension.AnzahlVerlegungen im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht.
 5. Validierung: Es kann immer nur einen MOPEDTransferEncounter für den jeweiligen Fall geben der partOf eines MOPEDEncounters mit der *aufnahmezahl* ist und den Status *in-progress* hat. 
 
-Note: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
+Note 1: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
+Note 2: LKF 4.2.16 Neugeborenes
+* Ja (Alter zum Zugangszeitpunkt auf die Abteilung <28 Tage)
+* Nein (Alter zum Zugangszeitpunkt auf die Abteilung >=28 Tage)
 """
 Usage: #definition 
 
