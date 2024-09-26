@@ -1,8 +1,8 @@
-Instance: KostenuebernahmeAnfrageCheckStatus
+Instance: VersichertenanspruchserklärungAnfrageCheckStatus
 InstanceOf: OperationDefinition
-Title: "Kostenübernahme-Anfrage $checkStatus (POC)"
+Title: "Versichertenanspruchserklärung-Anfrage $checkStatus (POC)"
 Description: """
-Die Kostenübernahme-Anfrage $checkStatus Operation wird aufgerufen, um zu überprüfen, in welchem Status sich die Bearbeitung seitens SV derzeit befindet. Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
+Die Versichertenanspruchserklärung-Anfrage $checkStatus Operation wird aufgerufen, um zu überprüfen, in welchem Status sich die Bearbeitung seitens SV derzeit befindet. Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 
 1. Suchen des MOPEDAccounts: Über die Referenz der Ressource *MOPEDEncounter.account*. Dabei handelt es sich um jenen Encounter, der den *aufnahmezahl* Parameter als *identifier* gespeichert hat. 
 2. Suchen des Requests: Es geht um jenen Request, der in *MOPEDAccount.coverageEligibilityRequest* Feld referenziert wurde
@@ -30,7 +30,7 @@ Usage: #definition
   * use = #in 
   * min = 1
   * max = "1"
-  * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall dessen Kostenübernahme-Status überprüft werden soll."
+  * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall dessen Versichertenanspruchserklärung-Status überprüft werden soll."
   * type = #Identifier
 * parameter[+]
   * name = #return

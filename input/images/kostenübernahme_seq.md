@@ -21,7 +21,7 @@ sequenceDiagram
     activate SV
     M->>+SV: $check-eligibility FHIR Operation
     Note over SV: SV FHIR Server stellt Funktionalität<br/> für automatische Verarbeitung des <br/>CoverageEligibilityRequest zur Verfügung<br/>um sofortige Rückmeldung zu bekommen
-    SV->>M: POST CoverageEligibilityResponse <br/>(enthält Entscheidung zur Kostenübernahme)
+    SV->>M: POST CoverageEligibilityResponse <br/>(enthält Entscheidung zur Versichertenanspruchserklärung)
     deactivate SV
     M->>M: $status-change Operation (Status: SV verarbeitet)
     M->>+KH: Benachrichtigung: CoverageEligibilityResponse verfügbar <br/>(Subscription/Notified PUll?)

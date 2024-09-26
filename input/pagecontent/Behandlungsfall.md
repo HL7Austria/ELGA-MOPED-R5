@@ -6,7 +6,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#Aufnahme"> <strong>Aufnahme</strong></a></li>
-        <li><a data-toggle="tab" href="#Kostenübernahme"> <strong>Kostenübernahme</strong></a></li>
+        <li><a data-toggle="tab" href="#Versichertenanspruchserklärung"> <strong>Versichertenanspruchserklärung</strong></a></li>
         <li><a data-toggle="tab" href="#Patientenversorgung"> <strong>Patientenversorgung</strong></a></li>
         <li><a data-toggle="tab" href="#Entlassung"> <strong>Entlassung</strong></a></li>
     </ul>
@@ -14,8 +14,8 @@
         <div id="Aufnahme" class="tab-pane fade in active">
         {% include Aufnahme.md %}
         </div>
-        <div id="Kostenübernahme" class="tab-pane fade">
-            <h1>Kostenübernahme</h1>
+        <div id="Versichertenanspruchserklärung" class="tab-pane fade">
+            <h1>Versichertenanspruchserklärung</h1>
             <img src="Sollprozess/SollProzesse_einzeln/Versichertenanspruchserklärung.png" width ="50%">
             <img src="Sollprozess/eEPKs/Versichertenanspruchserklärung.png" width ="40%">
         </div>

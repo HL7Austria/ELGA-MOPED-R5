@@ -16,7 +16,7 @@
         </div>
         <div id="actor-SV" class="tab-pane fade">
            <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
-              Im MOPED-Kontext übernimmt die Sozialversicherung (SV) eine zentrale Rolle, indem sie Rückmeldungen zur Kostenübernahme bereitstellt, über die Entlassung von Patienten informiert wird und Benachrichtigungen über freigegebene Daten erhält. Darüber hinaus ist die SV verantwortlich für die Kostenmeldungsanforderung und Rückmeldungen im Zusammenhang mit der Ausländerverrechnung sowie Regressen.
+              Im MOPED-Kontext übernimmt die Sozialversicherung (SV) eine zentrale Rolle, indem sie Rückmeldungen zur Versichertenanspruchserklärung bereitstellt, über die Entlassung von Patienten informiert wird und Benachrichtigungen über freigegebene Daten erhält. Darüber hinaus ist die SV verantwortlich für die Kostenmeldungsanforderung und Rückmeldungen im Zusammenhang mit der Ausländerverrechnung sowie Regressen.
            </div>
         </div>
         <div id="actor-LGF" class="tab-pane fade">
