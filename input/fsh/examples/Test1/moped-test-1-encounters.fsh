@@ -1,7 +1,7 @@
-Instance: Test1MOPEDEncounter1
+Instance: Test1MOPEDEncounter
 InstanceOf: MOPEDEncounter
 Usage: #example
-* id = "Test1MOPEDEncounter1"
+* id = "Test1MOPEDEncounter"
 * status = #in-progress
 * meta.profile = "http://example.org/StructureDefinition/MOPEDEncounter"
 /*//Fallnummer
@@ -45,7 +45,7 @@ Usage: #example
 //Diagnosen
 * diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ"
 * diagnosis[=].use.coding.code = #H
-* diagnosis.condition = Reference(Condition/Test1Condition1)
+* diagnosis[=].condition = Reference(Condition/Test1Condition1)
 
 //Zugewiesen von
 * admission.origin = Reference(Organization/Test1OrganizationUeberweisendeOrganisation)
