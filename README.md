@@ -34,3 +34,10 @@ To contribute to this project, please follow the steps below to ensure a smooth 
 
 9. **Request Review**  
    - Request a review on your PR and label the corresponding Issue with `review` to notify team members that it's ready for evaluation.
+  
+# Helpful References
+
+- [FHIR Financial Module for more information about many related resources](https://www.hl7.org/fhir/financial-module.html)
+- [FSH School for testing fhir shorthand files directly online](https://fshonline.fshschool.org/)
+
+
