@@ -1,9 +1,8 @@
 {
 	"info": {
-		"_postman_id": "ac8f8f20-97c4-4606-8e0e-2b9318a10aeb",
-		"name": "Operations-Aufnahme PineIT",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21943930"
+		"_postman_id": "8a970c4e-60d4-4634-ae67-476f8e2e670e",
+		"name": "Operations-Aufnahme PineIT POC Teil 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -282,7 +281,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"resourceType\" : \"Encounter\",\n  \"id\" : \"Test1TransferEncounter1\",\n  \"meta\" : {\n    \"profile\" : [\"http://example.org/StructureDefinition/MOPEDTransferEncounter\"]\n  },\n  \"text\" : {\n    \"status\" : \"extensions\",\n    \"div\" : \"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><p class=\\\"res-header-id\\\"><b>Generated Narrative: Encounter Test1TransferEncounter1</b></p><a name=\\\"Test1TransferEncounter1\\\"> </a><a name=\\\"hcTest1TransferEncounter1\\\"> </a><a name=\\\"Test1TransferEncounter1-en-US\\\"> </a><p><b>Altersgruppe</b>: 50</p><p><b>Neugeborenes</b>: false</p><p><b>status</b>: In Progress</p><p><b>subject</b>: <a href=\\\"Patient-Test1Patient.html\\\">Patientenkommun Moderne (official) Female, DoB: 1969-04-21 ( Social Security Number: 9994210469)</a></p><p><b>partOf</b>: <a href=\\\"Encounter/Test1MOPEDEncounter1\\\">Encounter/Test1MOPEDEncounter1</a></p><p><b>serviceProvider</b>: <a href=\\\"Organization-Test1OrganizationAbteilung1.html\\\">Organization: extension = ; identifier = Funktionscode,Funktionssubcode</a></p><p><b>actualPeriod</b>: 2024-02-22 19:33:00+0200 --&gt; (ongoing)</p></div>\"\n  },\n  \"extension\" : [{\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-Altersgruppe\",\n    \"valueUnsignedInt\" : 50\n  },\n  {\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-Neugeborenes\",\n    \"valueBoolean\" : false\n  }],\n  \"status\" : \"in-progress\",\n  \"subject\" : {\n    \"reference\" : \"Patient/Test1Patient\"\n  },\n  \"partOf\" : {\n    \"reference\" : \"Encounter/Test1MOPEDEncounter1\"\n  },\n  \"serviceProvider\" : {\n    \"reference\" : \"Organization/Test1OrganizationAbteilung1\"\n  },\n  \"actualPeriod\" : {\n    \"start\" : \"2024-02-22T19:33:00+02:00\"\n  }\n}",
+					"raw": "{\n  \"resourceType\" : \"Encounter\",\n  \"id\" : \"resultTransferEncounter1\",\n  \"meta\" : {\n    \"profile\" : [\"http://example.org/StructureDefinition/MOPEDTransferEncounter\"]\n  },\n  \"extension\" : [{\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-Altersgruppe\",\n    \"valueUnsignedInt\" : 50\n  },\n  {\n    \"url\" : \"http://example.org/StructureDefinition/moped-ext-Neugeborenes\",\n    \"valueBoolean\" : false\n  }],\n  \"status\" : \"in-progress\",\n  \"subject\" : {\n    \"reference\" : \"Patient/transactionPatient1\"\n  },\n  \"partOf\" : {\n    \"reference\" : \"Encounter/transactionEncounter1\"\n  },\n  \"serviceProvider\" : {\n    \"reference\" : \"Organization/Test1OrganizationAbteilung1\"\n  },\n  \"actualPeriod\" : {\n    \"start\" : \"2024-02-22T19:33:00+02:00\"\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
