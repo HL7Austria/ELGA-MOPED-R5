@@ -18,9 +18,10 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * *MOPEDTransferEncounter.partOf* referenziert den MOPEDEncounter aus Schritt 1. 
   * *MOPEDTransferEncounter.actualPeriod.start* wird mit dem *zeitpunkt* lt. Operation-Parameter befüllt.
   * *MOPEDTransferEncounter.serviceProvider* setzt eine Referenz auf die MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* bzw. *funktionssubcode* lt. Operation-Parameter. 
-  * *MOPEDTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet (siehe Hinweis 1).
+  * *MOPEDTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet, anhand des *MOPEDEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 1).
+  * *MOPEDTransferEncounter.Altersgruppe* wird lt. LKF-Regeln berechnet, anhand des *MOPEDEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2).
   * *MOPEDTransferEncounter.PhysischeAnwesenheit* wird lt. Operation-Parameter befüllt.
-3. Account AnzahlVerlegungen: Die Extension *Account.extension.AnzahlVerlegungen* im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht. Dies ist auch so, wenn es sich bei der Verlegung um einen Urlaub handeln sollte (siehe Hinweis 2).
+3. Account AnzahlVerlegungen: Die Extension *Account.extension.AnzahlVerlegungen* im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht. Dies ist auch so, wenn es sich bei der Verlegung um einen Urlaub handeln sollte (siehe Hinweis 3).
 3. Alter Transfer Encounter: 
   * Dieser Schritt ist nur relevant, wenn es sich *nicht* um eine Neufaufnahme (lt. Operation-Parameter) handelt.
   * Suche des alten MOPEDTransferEncounter: Mit *MOPEDTransferEncounter.partOf* einer Referenz auf den MOPEDEncounter aus Schritt 1 und den Status *in-progress*
@@ -41,7 +42,19 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
 * Hinweis 1: LKF 4.2.16 Neugeborenes
   * Ja (Alter zum Zugangszeitpunkt auf die Abteilung <28 Tage)
   * Nein (Alter zum Zugangszeitpunkt auf die Abteilung >=28 Tage)
-* Hinweis 2: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
+* Hinweis 2: LKF 4.1.9 Altersgruppe bei Entlassung/Kontakt
+  * Vollendete Lebensjahre sind ausschlaggebend
+  * 0: 0
+  * 1-4: 1
+  * 5-9: 5
+  * 10-14: 10
+  * 15-19: 15
+  * 20-24: 20
+  * ... immer weiter so, die untere Grenze des Alters in 5er-Schritten
+  * 85-89: 85
+  * 90-95: 90
+  * 95 und älter: 95
+* Hinweis 3: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
 
 """
 Usage: #definition 
