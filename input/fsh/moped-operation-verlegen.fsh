@@ -2,20 +2,47 @@ Instance: MOPEDPatientVerlegen
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $verlegen"
 Description: """
-Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
+**Wer ruft diese Operation in welchem Zusammenhang auf?**
 
-Die Patient $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. 
+Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. Auch initial, wenn ein Patient auf eine bestimmte Station aufgenommen wird, wird diese Operation aufgerufen (dies passiert automatisch im Zuge der Operation $aufnehmen).
 
-1. Neuer Transfer Encounter: Der MOPEDEncounter mit der jeweiligen Aufnahmezahl wird gesucht, und ein neuer MOPEDTransferEncounter der mit partOf den MOPEDEncounter referenziert wird erstellt. Beim neu erstellten MOPEDTransferEncounter wird der *zeitpunkt* als *MOPEDTransferEncounter.actualPeriod.start* eingefügt und als *MOPEDTransferEncounter.serviceProvider* die Abteilung MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* referenziert. Die Extension *MOPEDTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet (siehe Note 2).
-2. Alter Transfer Encounter: Der alte MOPEDTransferEncounter der partOf des MOPEDEncounters mit der jeweiligen Aufnahmezahl war und noch den Status *in-progress* hat, wird gesucht. Der Status wird auf *completed* gesetzt und die MOPEDTransferEncounter.actualPeriod.end mit dem *zeitpunkt* der Verlegung versehen. Ebenso wird beim alten Encounter die *abgangsart* von diesem Funktionscode dokumentiert. 
-3. AnzahlBeurlaubungen: Dieser Counter gibt die Wiederaufnahmen nach Urlaub an. Wenn es sich beim alten MOPEDTransferEncounter der gerade auf *completed* gesetzt wurde um eine Beurlaubung gehandelt hat (i.e. Funktionscode XXX-TBD), dann wird der Counter Account.extension.AnzahlBeurlaubungen um 1 erhöht. 
-4. AnzahlVerlegungen: Die Extension Account.extension.AnzahlVerlegungen im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht.
-5. Validierung: Es kann immer nur einen MOPEDTransferEncounter für den jeweiligen Fall geben der partOf eines MOPEDEncounters mit der *aufnahmezahl* ist und den Status *in-progress* hat. 
+**Voraussetzungen für den Aufruf**
 
-Note 1: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
-Note 2: LKF 4.2.16 Neugeborenes
-* Ja (Alter zum Zugangszeitpunkt auf die Abteilung <28 Tage)
-* Nein (Alter zum Zugangszeitpunkt auf die Abteilung >=28 Tage)
+* Account-Status: `Aufnahme in Arbeit` oder `Aufnahme freigegeben`
+
+**Detaillierte Business-Logik**
+
+1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
+2. Neuer Transfer Encounter: 
+  * Ein neuer MOPEDTransferEncounter wird vorbereitet
+  * *MOPEDTransferEncounter.partOf* referenziert den MOPEDEncounter aus Schritt 1. 
+  * *MOPEDTransferEncounter.actualPeriod.start* wird mit dem *zeitpunkt* lt. Operation-Parameter befüllt.
+  * *MOPEDTransferEncounter.serviceProvider* setzt eine Referenz auf die MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* lt. Operation-Parameter. 
+  * *MOPEDTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet (siehe Hinweis 1).
+  * *MOPEDTransferEncounter.PhysischeAnwesenheit* wird lt. Operation-Parameter befüllt.
+3. Account AnzahlVerlegungen: Die Extension *Account.extension.AnzahlVerlegungen* im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht. Dies ist auch so, wenn es sich bei der Verlegung um einen Urlaub handeln sollte (siehe Hinweis 2).
+3. Alter Transfer Encounter: 
+  * Dieser Schritt ist nur relevant, wenn es sich *nicht* um eine Neufaufnahme (lt. Operation-Parameter) handelt.
+  * Suche des alten MOPEDTransferEncounter: Mit *MOPEDTransferEncounter.partOf* einer Referenz auf den MOPEDEncounter aus Schritt 1 und den Status *in-progress*
+  * Abschließen des alten MOPEDTransferEncounter: *MOPEDTransferEncounter.status* wird auf *completed* gesetzt
+  * Endzeitpunkt des alten MOPEDTransferEncounter: *MOPEDTransferEncounter.actualPeriod.end* wird auf den *zeitpunkt* lt. Operation-Parameter gesetzt. 
+  * Abgangsart vom alten MOPEDTransferEncounter: *MOPEDTransferEncounter.abgangsart* wird auf *abgangsart* lt. Operation-Parameter gesetzt. 
+4. Account AnzahlBeurlaubungen:
+  * Dieser Schritt ist nur relevant, wenn es sich *nicht* um eine Neufaufnahme (lt. Operation-Parameter) handelt.
+  * War alter MOPEDTransferEncounter aus Schritt 3.2 ein Urlaub (i.e. Funktionscode `10000000`)? 
+    * Wenn ja, dann wird der Counter *Account.extension.AnzahlBeurlaubungen* um 1 erhöht. 
+
+**Validierung / Fehlerbehandlung**
+* Bei Neuaufnahme (lt. Operation-Parameter) muss das Feld *AnzahlVerlegungen* nach Ausführen der Operation den Wert `1` aufweisen und das Feld *AnzahlBeurlaubungen* den Wert `0`.
+* Es kann immer nur einen MOPEDTransferEncounter für den jeweiligen Fall geben der *partOf* eines MOPEDEncounters mit der *aufnahmezahl* ist und den Status *in-progress* hat. 
+* Wenn es sich um eine Neuaufnahme (lt. Operation-Parameter) handelt, kann es keine Abgangsart (Operation-Parameter) geben.
+
+**Weitere Hinweise**
+* Hinweis 1: LKF 4.2.16 Neugeborenes
+  * Ja (Alter zum Zugangszeitpunkt auf die Abteilung <28 Tage)
+  * Nein (Alter zum Zugangszeitpunkt auf die Abteilung >=28 Tage)
+* Hinweis 2: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
+
 """
 Usage: #definition 
 
@@ -57,6 +84,13 @@ Usage: #definition
   * min = 0
   * max = "1"
   * documentation = "Der *pysischeAnwesenheit* Parameter definiert ob der Patient physisch anwesend ist oder nicht."
+  * type = #boolean
+* parameter[+]
+  * name = #neuaufnahme
+  * use = #in 
+  * min = 0
+  * max = "1"
+  * documentation = "Der *neuaufnahme* Parameter definiert ob es sich bei der Verlegung um die initiale Aufnahme des Patienten auf eine bestimmte Station handelt."
   * type = #boolean
 * parameter[+]
   * name = #abgangsart
