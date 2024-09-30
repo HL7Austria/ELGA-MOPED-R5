@@ -48,6 +48,7 @@ Usage: #definition
 
 * id = "MOPED.Patient.Verlegen"
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-verlegen"
+* comment = "TBD: was passiert, wenn eine $aufnehmen Operation mehrmals mit Status `Aufnahme in Arbeit` aufgerufen wird und damit zu mehreren MOPEDTransferEncounter führt?"
 * name = "MOPED_Patient_Verlegen"
 * status = #draft
 * kind = #operation 
