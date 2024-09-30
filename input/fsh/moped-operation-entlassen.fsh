@@ -38,7 +38,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 **Weitere Hinweise**
 
 * Hinweis 1: Wurde der Patient direkt aus der Intensivstation entlassen, so müsste auch eine Abgangsart im MOPEDTransferEncounter gesetzt werden. Dieser Spezialfall wurde noch nicht berücksichtigt.
-
 """
 Usage: #definition 
 
