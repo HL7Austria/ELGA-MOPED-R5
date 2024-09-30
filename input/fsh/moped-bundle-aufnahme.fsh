@@ -33,3 +33,6 @@ TBD: wenn es mehrere Coverages gibt, kann es auch mehrere Hauptversicherte geben
 * entry contains
   Hauptversicherter 0..1
 * entry[Hauptversicherter].resource only HL7ATCorePatient
+* entry contains
+  ÜberweisendeOrganisation 0..1
+* entry[ÜberweisendeOrganisation].resource only HL7ATCoreOrganization
