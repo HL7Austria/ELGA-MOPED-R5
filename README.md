@@ -12,7 +12,7 @@ To contribute to this project, please follow the steps below to ensure a smooth 
    - Start by creating a new GitHub Issue for the feature or bug you're working on, or pick an existing Issue that aligns with your task.
 
 2. **Create a Feature Branch**  
-   - Create a new branch using the format: `issue-number-description`, e.g., `12-adding-profile-for-coverage`. This helps in linking the branch with the Issue for better traceability.
+   - Create a new branch using the format: `issue-number-description`, e.g., `12-adding-profile-for-coverage`. Do not include the '#' symbol before the issue number. This helps in linking the branch with the Issue for better traceability.
 
 3. **Implement Your Changes**  
    - Work on the required changes in your feature branch. 
