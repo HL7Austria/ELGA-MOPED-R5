@@ -35,8 +35,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 **Validierung / Fehlerbehandlung**
 
 * Wenn der *freigeben*-Parameter auf *true* ist, muss eine Validierung aller Ressourcen im *falldaten*-Bundle erfolgreich sein, oder die Operation schlägt fehl.
-* Es kann nie mehrere Enconuter-Instanzen mit der gleichen Aufnahmezahl geben
-* Der Status *Encounter.status* muss den Wert 'in-progress' haben
+* Es kann nie mehrere MOPEDEnconuter-Instanzen mit der gleichen Aufnahmezahl geben
+* Der Status *MOPEDEncounter.status* muss den Wert 'in-progress' haben
 
 **Weitere Hinweise**
 
