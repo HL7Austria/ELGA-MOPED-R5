@@ -9,15 +9,15 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: SV verarbeitet
+* Account-Status: `SV verarbeitet`
 
 **Detaillierte Business-Logik**
 
 1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
 2. Update des MOPEDEncounters:
-  a. *MOPEDEncounter.actualPeriod.end* mit dem *zeitpunkt* lt. Operation-Parameter befüllen
-  b. *MOPEDEncounter.status* mit `discharged`  befüllen
-  c. *MOPEDEncounter.admission.dischargeDisposition* mit *entlassungsart* lt. Operation-Parameter befüllen
+  * *MOPEDEncounter.actualPeriod.end* mit dem *zeitpunkt* lt. Operation-Parameter befüllen
+  * *MOPEDEncounter.status* mit `discharged`  befüllen
+  * *MOPEDEncounter.admission.dischargeDisposition* mit *entlassungsart* lt. Operation-Parameter befüllen
 3. Suche des letzten MOPEDTransferEncounter: Mit *MOPEDTransferEncounter.partOf* einer Referenz auf den MOPEDEncounter aus Schritt 1 und den Status *in-progress*
 4. Update des letzten MOPEDTransferEncounter:
   * *MOPEDTransferEncounter.status* mit `completed` befüllen gesetzt 
@@ -26,12 +26,11 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
   * *MOPEDClaim.status* mit `draft` befüllen
 5. Änderungen im Account:
   * *MOPEDAccount.claim* mit der Referenz aus Schritt 4 befüllen  
-  * *MOPEDAccount.WorkflowStatus* mit `*Entlassungs Aviso*` befüllen, oder, falls der *freigeben*-Operation-Parameter auf `true` gesetzt war und die Validierung erfolgreich war, wird *MOPEDAccount.WorkflowStatus* mit `Entlassung vollständig` befüllt. 
+  * *MOPEDAccount.WorkflowStatus* mit `Entlassungs Aviso` befüllen, oder, falls der *freigeben*-Operation-Parameter auf `true` gesetzt war und die Validierung erfolgreich war, wird *MOPEDAccount.WorkflowStatus* mit `Entlassung vollständig` befüllt. 
   * *MOPEDAccount.TageOhneKostenbeitrag* lt. gleichnamigen Opeartion-Parameter befüllen
 
 **Validierung / Fehlerbehandlung**
 
-* TageOhneKostenbeitrag bei freigeben verpflichtend
 * Wenn der *freigeben*-Parameter auf *true* ist, muss eine Validierung aller Ressourcen (MOPEDEncounter, Account) erfolgreich sein, oder die Operation schlägt fehl.
 * Wenn der *freigeben*-Parameter auf *true* ist, muss Information zu den Tagen ohne Kostenbeitrag vorliegen (i.e. der Operation-Parameter *TageOhneKostenbeitrag* muss befüllt sein)
 * Wurden bei der Suche in Schritt 4 mehrere MOPEDTransferEncounter gefunden, liegen inkonsistente Daten vor und die Operation schlägt fehl.

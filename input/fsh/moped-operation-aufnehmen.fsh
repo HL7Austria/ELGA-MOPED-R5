@@ -8,7 +8,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: keiner (die Ressource Account wird erst mit dieser Operation erstellt)
+* Account-Status: n/a (die Ressource Account wird erst mit dieser Operation erstellt)
 
 **Detaillierte Business-Logik**
 

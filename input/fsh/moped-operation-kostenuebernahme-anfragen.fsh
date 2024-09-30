@@ -10,22 +10,22 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: : 'Aufnahme freigegeben'
+* Account-Status: : `Aufnahme freigegeben`
 
 **Detaillierte Business-Logik**
 
 1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
 2. Suchen des MOPEDAccounts: Die Referenz des *MOPEDEncounter.account* aus Schritt 1.
 3. Erstellung des MOPEDCoverageEligibilityRequest: 
-  a. *MOPEDCoverageEligibilityRequest.status* mit 'active' befüllen
-  b. *MOPEDCoverageEligibilityRequest.purpose* mit 'validation' befüllen
-  c. *MOPEDCoverageEligibilityRequest.created* mit dem aktuellem Zeitpunkt befüllen
-  d. *MOPEDCoverageEligibilityRequest.ExtensionDays* mit *verlaengerungstage* lt. Operation-Parameter befüllen
-  e. *MOPEDCoverageEligibilityRequest.PremiumClass* mit *sonderklasse* lt. Operation-Parameter befüllen
-  f. *MOPEDCoverageEligibilityRequest.patient* mit *MOPEDAccount.subject* befüllen
-  g. *MOPEDCoverageEligibilityRequest.insurance.coverage* mit *MOPEDAccount.coverage.coverage* befüllen
-  h. *MOPEDCoverageEligibilityRequest.provider* mit *MOPEDAccount.owner* befüllen
-  i. *MOPEDCoverageEligibilityRequest.insurer* mit einer Referenz auf jene Organization befüllen, deren *Organization.identifier* dem Identifier *versicherer* lt. Operation-Parameter entspricht
+  * a. *MOPEDCoverageEligibilityRequest.status* mit 'active' befüllen
+  * b. *MOPEDCoverageEligibilityRequest.purpose* mit 'validation' befüllen
+  * c. *MOPEDCoverageEligibilityRequest.created* mit dem aktuellem Zeitpunkt befüllen
+  * d. *MOPEDCoverageEligibilityRequest.ExtensionDays* mit *verlaengerungstage* lt. Operation-Parameter befüllen
+  * e. *MOPEDCoverageEligibilityRequest.PremiumClass* mit *sonderklasse* lt. Operation-Parameter befüllen
+  * f. *MOPEDCoverageEligibilityRequest.patient* mit *MOPEDAccount.subject* befüllen
+  * g. *MOPEDCoverageEligibilityRequest.insurance.coverage* mit *MOPEDAccount.coverage.coverage* befüllen
+  * h. *MOPEDCoverageEligibilityRequest.provider* mit *MOPEDAccount.owner* befüllen
+  * i. *MOPEDCoverageEligibilityRequest.insurer* mit einer Referenz auf jene Organization befüllen, deren *Organization.identifier* dem Identifier *versicherer* lt. Operation-Parameter entspricht
 6. POSTen des neu erstellten CoverageEligibilityRequest
 7. Referenz im MOPEDAccount:
   a. *MOPEDAccount.coverageEligibilityRequest* mit Hilfe der resultierenden ID aus Schritt 6 referenzieren
