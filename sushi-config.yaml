@@ -98,12 +98,8 @@ pages:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  Sollprozess (Entwurf): use_case_description.html
-  Akteure: actors.html
-  Workflowmanagement: workflowmanagement.html
   Proof of Concept: poc.html
-  LKF Mapping: lkf_mapping.html
-  Ka-Org Mapping: ka-org_mapping.html
+
 
 
   
