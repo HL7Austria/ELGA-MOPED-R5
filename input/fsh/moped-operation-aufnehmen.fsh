@@ -22,7 +22,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
    * *MOPEDAccount.VDASID* lt. Operation-Parameter *vdasid* befüllen
    * *MOPEDAccount.AnzahlVerlegungen* mit Wert '0' befüllen
    * *MOPEDAccount.AnzahlBeurlaubungen* mit Wert '0' befüllen
-   * *MOPEDAccount.coverage.coverage* mit der Referenz lt. Parameter befüllen und ggf. Hauptversicherter (Patient) anlegen, falls noch nicht am Server. Hinweis: Eine vorangegangene VDAS-Anfrage an die SVC kann mehrere Coverages retournieren, im Input-Bundle *falldaten* wären somit mehrere Coverages die bei der Transaction angelegt werden. In diesem Fall sind *alle* im Account zu referenzieren.
+   * *MOPEDAccount.coverage.coverage* mit der Referenz lt. Parameter befüllen und ggf. Hauptversicherter (Patient) anlegen, falls noch nicht am Server. 
 3. Account im Encounter referenzieren: Den neuen MOPEDAccount im *MOPEDEncounter.account* referenzieren
 4. Durchführung der Operation `$verlegen` für Neufaufnahme:
   * *$verlegen#aufnahmezahl* = *$aufnehmen#aufnahmezahl*
