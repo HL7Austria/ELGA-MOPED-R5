@@ -5,7 +5,7 @@ Alias: $ecard-versichertenkategorien-vs = https://www.chipkarte.at/de/vdas-on-fh
 
 Profile: SVCCoverage
 Parent: Coverage
-Description: "MOPED Profil der Coverage Ressource für Versicherungen. Basierend auf dem Profil \"ecardAnspruch\": https://www.chipkarte.at/de/vdas-on-fhir/site/StructureDefinition-ecard-anspruch-profile.html "
+Description: "SVC Profil der Coverage Ressource für Versicherungen. Basierend auf dem Profil \"ecardAnspruch\": https://www.chipkarte.at/de/vdas-on-fhir/site/StructureDefinition-ecard-anspruch-profile.html "
 
 
 * extension contains
