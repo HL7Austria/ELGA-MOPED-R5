@@ -99,6 +99,13 @@ Usage: #definition
   * documentation = "Mit Hilfe des *verdachtFremdverschulden* Parameters wird festgehalten, ob es bei der Patienten-Aufnahme einen Verdacht auf Fremdverschulden gibt. Wird dieser Parameter mitgegeben, ist im Account das entsprechende Feld zu befüllen."
   * type = #boolean
 * parameter[+]
+  * name = #funktionscode
+  * use = #in 
+  * min = 1
+  * max = "1"
+  * documentation = "Der *funktionscode* Parameter definiert auf welchen Funktionscode die Neuaufnahme stattfindet."
+  * type = #string
+* parameter[+]
   * name = #return
   * use = #out
   * min = 1
