@@ -28,6 +28,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * *$verlegen#aufnahmezahl* = *$aufnehmen#aufnahmezahl*
   * *$verlegen#zeitpunkt* = *$aufnehmen#zeitpunkt*
   * *$verlegen#funktionscode* = *$aufnehmen#funktionscode*
+  * *$verlgegen#funktionssubcode* = *$aufnehmen#funktionssubcode*
   * *$verlegen#physischeAnwesenheit* = *$aufnehmen#physischeAnwesenheit*
   * *$verlegen#neuaufnahme* = `true`
 
@@ -104,6 +105,13 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Der *funktionscode* Parameter definiert auf welchen Funktionscode die Neuaufnahme stattfindet."
+  * type = #string
+* parameter[+]
+  * name = #funktionssubcode
+  * use = #in 
+  * min = 1
+  * max = "1"
+  * documentation = "Der *funktionssubcode* Parameter definiert auf welchen Funktionssubcode die Neuaufnahme stattfindet."
   * type = #string
 * parameter[+]
   * name = #return
