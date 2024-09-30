@@ -80,19 +80,9 @@ dependencies:
 pages:
   index.md:
     title: Home
-  use_case_description.md:
-    title: Anwendungsfallbeschreibung
-  actors.md:
-    title: Akteure
-  workflowmanagement.md:
-    title: Workflowmanagement
   poc.md:
     title: Proof of Concept
-  ka-org_mapping.md:
-    title: Ka-Org Mapping
-  lkf_mapping.md:
-    title: LKF Mapping
-    
+
 
 
 menu:
