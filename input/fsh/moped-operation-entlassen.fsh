@@ -24,8 +24,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
   * *MOPEDTransferEncounter.actualPeriod.end* mit *zeitpunkt* lt. Operation-Parameter befüllen 
 4. Erstellung eines leeren *MOPEDClaim*: 
   * *MOPEDClaim.status* mit `draft` befüllen
+  * *MOPEDClaim.patient* mit MOPEDAccount.subject befüllen
 5. Änderungen im Account:
-  * *MOPEDAccount.claim* mit der Referenz aus Schritt 4 befüllen  
+  * *MOPEDAccount.ClaimRef* mit der Referenz aus Schritt 4 befüllen  
   * *MOPEDAccount.WorkflowStatus* mit `Entlassungs Aviso` befüllen, oder, falls der *freigeben*-Operation-Parameter auf `true` gesetzt war und die Validierung erfolgreich war, wird *MOPEDAccount.WorkflowStatus* mit `Entlassung vollständig` befüllt. 
   * *MOPEDAccount.TageOhneKostenbeitrag* lt. gleichnamigen Opeartion-Parameter befüllen
 
