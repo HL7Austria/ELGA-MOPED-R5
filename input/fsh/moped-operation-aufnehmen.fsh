@@ -26,7 +26,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 3. Account im Encounter referenzieren: Den neuen MOPEDAccount im *MOPEDEncounter.account* referenzieren
 4. Durchführung der Operation `$verlegen` für Neufaufnahme:
   * *$verlegen#aufnahmezahl* = *$aufnehmen#aufnahmezahl*
-  * *$verlegen#zeitpunkt* = *$aufnehmen#zeitpunkt*
+  * *$verlegen#zeitpunkt* = Operation-Parameter falldaten mit dem Pfad *Bundle.Encounter.actualPeriod.start*
   * *$verlegen#funktionscode* = *$aufnehmen#funktionscode*
   * *$verlgegen#funktionssubcode* = *$aufnehmen#funktionssubcode*
   * *$verlegen#physischeAnwesenheit* = *$aufnehmen#physischeAnwesenheit*
@@ -52,7 +52,7 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-aufnehmen"
 * name = "MOPED_Patient_Aufnehmen"
 * status = #draft
-* comment = "TBD: möchten wir zusätzlich zur GDA-Referenz einen Input-Parameter, der gleich sein muss? Um in einem Extra-Schritt zusätzlich auf Gleichheit mit der Referenz in falldaten.MOPEDEncounter.serviceProvider prüfen zu können?; Frage an Architektur: gibt es Möglichkeiten, einen solchen Input-Parameter (GDA als Kontext) automatisiert auf einem anderen Sicherheits-Level zu befüllen als der Inhalt des Transaction Body?; Check, wo version-specific References nötig sind - ggf. relevant für Account.subject, Account.owner und Account.coverage sobald Modus auf *freigeben*."
+* comment = "TBD: möchten wir zusätzlich zur GDA-Referenz einen Input-Parameter, der gleich sein muss? Um in einem Extra-Schritt zusätzlich auf Gleichheit mit der Referenz in falldaten.MOPEDEncounter.serviceProvider prüfen zu können?; Frage an Architektur: gibt es Möglichkeiten, einen solchen Input-Parameter (GDA als Kontext) automatisiert auf einem anderen Sicherheits-Level zu befüllen als der Inhalt des Transaction Body?; Check, wo version-specific References nötig sind - ggf. relevant für Account.subject, Account.owner und Account.coverage sobald Modus auf *freigeben*. Überlegen, für was der Status Aufnahme in Arbeit tatsächlich nützlich ist und wenn dieser wirklich nötig ist, was passiert, wenn diese Operation mehrfach aufgerufen wird (speziell mit POSTen von Coverages, das Anlegen von MOPEDTransfer Encounters via $verlgen ect.)"
 * kind = #operation 
 * affectsState = true
 * resource = #Encounter
@@ -98,6 +98,13 @@ Usage: #definition
   * min = 0
   * max = "1"
   * documentation = "Mit Hilfe des *verdachtFremdverschulden* Parameters wird festgehalten, ob es bei der Patienten-Aufnahme einen Verdacht auf Fremdverschulden gibt. Wird dieser Parameter mitgegeben, ist im Account das entsprechende Feld zu befüllen."
+  * type = #boolean
+  * parameter[+]
+* name = #physischeAnwesenheit
+  * use = #in 
+  * min = 0
+  * max = "1"
+  * documentation = "Der *physischeAnwesenheit* Parameter definiert ob der Patient physisch anwesend ist oder nicht."
   * type = #boolean
 * parameter[+]
   * name = #funktionscode

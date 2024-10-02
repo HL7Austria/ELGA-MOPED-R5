@@ -102,11 +102,11 @@ Usage: #definition
   * documentation = "Der *funktionssubcode* Parameter definiert auf welchen Funktionssubcode die Verlegung stattfindet."
   * type = #string
 * parameter[+]
-  * name = #pysischeAnwesenheit
+  * name = #physischeAnwesenheit
   * use = #in 
   * min = 0
   * max = "1"
-  * documentation = "Der *pysischeAnwesenheit* Parameter definiert ob der Patient physisch anwesend ist oder nicht."
+  * documentation = "Der *physischeAnwesenheit* Parameter definiert ob der Patient physisch anwesend ist oder nicht."
   * type = #boolean
 * parameter[+]
   * name = #neuaufnahme
