@@ -99,8 +99,8 @@ Usage: #definition
   * max = "1"
   * documentation = "Mit Hilfe des *verdachtFremdverschulden* Parameters wird festgehalten, ob es bei der Patienten-Aufnahme einen Verdacht auf Fremdverschulden gibt. Wird dieser Parameter mitgegeben, ist im Account das entsprechende Feld zu befüllen."
   * type = #boolean
-  * parameter[+]
-* name = #physischeAnwesenheit
+* parameter[+]
+  * name = #physischeAnwesenheit
   * use = #in 
   * min = 0
   * max = "1"
