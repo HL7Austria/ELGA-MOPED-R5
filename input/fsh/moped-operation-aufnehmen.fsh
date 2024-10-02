@@ -8,7 +8,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: keiner (die Ressource Account wird erst mit dieser Operation erstellt)
+* Account-Status: n/a (die Ressource Account wird erst mit dieser Operation erstellt)
 
 **Detaillierte Business-Logik**
 
@@ -22,11 +22,11 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
    * *MOPEDAccount.VDASID* lt. Operation-Parameter *vdasid* befüllen
    * *MOPEDAccount.AnzahlVerlegungen* mit Wert '0' befüllen
    * *MOPEDAccount.AnzahlBeurlaubungen* mit Wert '0' befüllen
-   * *MOPEDAccount.coverage.coverage* mit der Referenz lt. Parameter befüllen und ggf. Hauptversicherter (Patient) anlegen, falls noch nicht am Server. Hinweis: Eine vorangegangene VDAS-Anfrage an die SVC kann mehrere Coverages retournieren, im Input-Bundle *falldaten* wären somit mehrere Coverages die bei der Transaction angelegt werden. In diesem Fall sind *alle* im Account zu referenzieren.
+   * *MOPEDAccount.coverage.coverage* mit der Referenz lt. Parameter befüllen und ggf. Hauptversicherter (Patient) anlegen, falls noch nicht am Server. 
 3. Account im Encounter referenzieren: Den neuen MOPEDAccount im *MOPEDEncounter.account* referenzieren
 4. Durchführung der Operation `$verlegen` für Neufaufnahme:
   * *$verlegen#aufnahmezahl* = *$aufnehmen#aufnahmezahl*
-  * *$verlegen#zeitpunkt* = *$aufnehmen#zeitpunkt*
+  * *$verlegen#zeitpunkt* = Operation-Parameter falldaten mit dem Pfad *Bundle.Encounter.actualPeriod.start*
   * *$verlegen#funktionscode* = *$aufnehmen#funktionscode*
   * *$verlgegen#funktionssubcode* = *$aufnehmen#funktionssubcode*
   * *$verlegen#physischeAnwesenheit* = *$aufnehmen#physischeAnwesenheit*
@@ -35,8 +35,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 **Validierung / Fehlerbehandlung**
 
 * Wenn der *freigeben*-Parameter auf *true* ist, muss eine Validierung aller Ressourcen im *falldaten*-Bundle erfolgreich sein, oder die Operation schlägt fehl.
-* Es kann nie mehrere Enconuter-Instanzen mit der gleichen Aufnahmezahl geben
-* Der Status *Encounter.status* muss den Wert 'in-progress' haben
+* Es kann nie mehrere MOPEDEnconuter-Instanzen mit der gleichen Aufnahmezahl geben
+* Der Status *MOPEDEncounter.status* muss den Wert 'in-progress' haben
 
 **Weitere Hinweise**
 
@@ -52,7 +52,7 @@ Usage: #definition
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-aufnehmen"
 * name = "MOPED_Patient_Aufnehmen"
 * status = #draft
-* comment = "TBD: möchten wir zusätzlich zur GDA-Referenz einen Input-Parameter, der gleich sein muss? Um in einem Extra-Schritt zusätzlich auf Gleichheit mit der Referenz in falldaten.MOPEDEncounter.serviceProvider prüfen zu können?; Frage an Architektur: gibt es Möglichkeiten, einen solchen Input-Parameter (GDA als Kontext) automatisiert auf einem anderen Sicherheits-Level zu befüllen als der Inhalt des Transaction Body?; Check, wo version-specific References nötig sind - ggf. relevant für Account.subject, Account.owner und Account.coverage sobald Modus auf *freigeben*."
+* comment = "TBD: möchten wir zusätzlich zur GDA-Referenz einen Input-Parameter, der gleich sein muss? Um in einem Extra-Schritt zusätzlich auf Gleichheit mit der Referenz in falldaten.MOPEDEncounter.serviceProvider prüfen zu können?; Frage an Architektur: gibt es Möglichkeiten, einen solchen Input-Parameter (GDA als Kontext) automatisiert auf einem anderen Sicherheits-Level zu befüllen als der Inhalt des Transaction Body?; Check, wo version-specific References nötig sind - ggf. relevant für Account.subject, Account.owner und Account.coverage sobald Modus auf *freigeben*. Überlegen, für was der Status Aufnahme in Arbeit tatsächlich nützlich ist und wenn dieser wirklich nötig ist, was passiert, wenn diese Operation mehrfach aufgerufen wird (speziell mit POSTen von Coverages, das Anlegen von MOPEDTransfer Encounters via $verlgen ect.)"
 * kind = #operation 
 * affectsState = true
 * resource = #Encounter
@@ -98,6 +98,13 @@ Usage: #definition
   * min = 0
   * max = "1"
   * documentation = "Mit Hilfe des *verdachtFremdverschulden* Parameters wird festgehalten, ob es bei der Patienten-Aufnahme einen Verdacht auf Fremdverschulden gibt. Wird dieser Parameter mitgegeben, ist im Account das entsprechende Feld zu befüllen."
+  * type = #boolean
+* parameter[+]
+  * name = #physischeAnwesenheit
+  * use = #in 
+  * min = 0
+  * max = "1"
+  * documentation = "Der *physischeAnwesenheit* Parameter definiert ob der Patient physisch anwesend ist oder nicht."
   * type = #boolean
 * parameter[+]
   * name = #funktionscode
