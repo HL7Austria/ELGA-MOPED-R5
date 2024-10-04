@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard für die Auslastung der Krankenanstalten</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 3em;
+            margin: 0.5em 0;
+        }
+        p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="patientCount">0</h1>
+        <p>Patients in Hospital</p>
+        <p id="lastUpdated">Last updated: Never</p>
+        <button onclick="updatePatientCount()">Update Now</button>
+    </div>
+
+    <script>
+        async function fetchPatientCount() {
+            try {
+                const response = await fetch('http://cql-sandbox.projekte.fh-hagenberg.at:8080/fhir/Measure/KAAuslastungsDashboardMeasure/$evaluate-measure');
+                const data = await response.json();
+                
+                const patientCount = data.group[0].population.find(pop => pop.code.coding[0].code === "initial-population").count;
+                
+                return patientCount;
+            } catch (error) {
+                console.error('Error fetching patient count:', error);
+                return null;
+            }
+        }
+
+        function updatePatientCount() {
+            fetchPatientCount().then(patientCount => {
+                if (patientCount !== null) {
+                    document.getElementById('patientCount').innerText = patientCount;
+                    document.getElementById('lastUpdated').innerText = `Last updated: ${new Date().toLocaleString()}`;
+                } else {
+                    alert('Failed to fetch patient count.');
+                }
+            });
+        }
+
+        // Update patient count on page load
+        updatePatientCount();
+
+        // Update patient count every minute
+        setInterval(updatePatientCount, 600000);
+    </script>
+</body>
+</html>
