@@ -23,32 +23,32 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDAccount</td>
-        <td>.identifier</td>
+        <td>MOPEDEncounter</td>
+        <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>KOSTCODE</td>
         <td>Leistungszuständiger Kostenträger – Code</td>
-        <td>Claim</td>
-        <td>.extension:payer:HL7ATCoreOrganization.identifier</td>
+        <td>MOPEDAccount + MOPEDClaim</td>
+        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td></td>
         <td>Abrechnender Kostenträger – Code</td>
-        <td>Claim</td>
-        <td>.insurer:Organization.identifier</td>
+        <td>MOPEDAccount + MOPEDClaim</td>
+        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -127,9 +127,9 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ALTERSGRUPPE</td>
         <td>Altersgruppe bei Entlassung/Kontakt</td>
-        <td>MOPEDEncounter</td>
+        <td>MOPEDTransferEncounter</td>
         <td>.extension</td>
-        <td>AgeGroupAdmission</td>
+        <td>Altersgruppe</td>
         <td></td>
     </tr>
     <tr>
@@ -207,7 +207,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>FONDSREL</td>
         <td>Fondsrelevanz</td>
-        <td>Claim</td>
+        <td>MOPEDClaim</td>
         <td>.extension</td>
         <td>Fondsrelevanz</td>
         <td></td>
@@ -215,7 +215,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>PFLAG</td>
         <td>Plausibilitätskennzeichen</td>
-        <td>Claim</td>
+        <td>MOPEDClaim</td>
         <td>.extension</td>
         <td>Plausibilitaetskennzeichen</td>
         <td></td>
@@ -223,7 +223,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td></td>
         <td>Abrechnungsquartal der Sozialversicherung</td>
-        <td>Claim</td>
+        <td>MOPEDClaim</td>
         <td>.extension</td>
         <td>SVAbrechnungsquartal</td>
         <td></td>
@@ -252,16 +252,16 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDAccount</td>
-        <td>.identifier</td>
+        <td>MOPEDEncounter</td>
+        <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
     </tr>
@@ -276,9 +276,9 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ALTERSGRUPPE</td>
         <td>Altersgruppe bei Zugang/Kontakt</td>
-        <td>MOPEDEncounter</td>
+        <td>MOPEDTransferEncounter</td>
         <td>.extension</td>
-        <td>AgeGroupDischarge</td>
+        <td>Altersgruppe</td>
         <td></td>
     </tr>
     <tr>
@@ -292,9 +292,9 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ABTPOS</td>
         <td>Hauptkostenstelle/Fachgebiet – Positionsnummer</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MOPEDAccount</td>
+        <td>.extension</td>
+        <td>AnzahlVerlegungen</td>
         <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht => count(TransferEncounter)-1 </td>
     </tr>
     <tr>
@@ -308,7 +308,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ABTZDAT</td>
         <td>Hauptkostenstelle/Fachgebiet – Zugangsdatum/Kontaktdatum</td>
-        <td>TransferEncounter</td>
+        <td>MOPEDTransferEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td></td>
@@ -316,7 +316,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ABTZZEIT</td>
         <td>Hauptkostenstelle/Fachgebiet – Zugangsuhrzeit/Kontaktuhrzeit</td>
-        <td>TransferEncounter</td>
+        <td>MOPEDTransferEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td></td>
@@ -324,15 +324,15 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ANWESEND</td>
         <td>Physische Anwesenheit</td>
-        <td>TransferEncounter</td>
-        <td>.extension</td>
-        <td>physischeAnwesenheit</td>
+        <td>MOPEDTransferEncounter</td>
+        <td> .subjectStatus</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
         <td>ABTADAT</td>
         <td>Hauptkostenstelle – Abgangsdatum</td>
-        <td>TransferEncounter</td>
+        <td>MOPEDTransferEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -340,7 +340,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ABTAZEIT</td>
         <td>Hauptkostenstelle – Abgangsuhrzeit</td>
-        <td>TransferEncounter</td>
+        <td>MOPEDTransferEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -348,7 +348,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ABTAART</td>
         <td>Hauptkostenstelle – Abgangsart</td>
-        <td>TransferEncounter</td>
+        <td>MOPEDTransferEncounter</td>
         <td>.admission.dischargeDisposition</td>
         <td></td>
         <td></td>
@@ -356,7 +356,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ABTFC_FACH</td>
         <td>Hauptkostenstelle – Fachlicher Funktionscode</td>
-        <td>MopedAbteilungsOrganization</td>
+        <td>MOPEDOrganizationAbteilung</td>
         <td>.identifier:Funktionscode</td>
         <td></td>
         <td></td>
@@ -372,9 +372,9 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>NEUGEBORENES</td>
         <td>Neugeborenes</td>
-        <td>Claim</td>
+        <td>MOPEDTransferEncounter</td>
         <td>.extension</td>
-        <td>newborn</td>
+        <td>Neugeborenes</td>
         <td></td>
     </tr>
 </table>
@@ -401,16 +401,16 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDAccount</td>
-        <td>.identifier</td>
+        <td>MOPEDEncounter</td>
+        <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
     </tr>
@@ -451,13 +451,13 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Diagnose – Art</td>
         <td>Condition</td>
         <td>.verificationStatus</td>
-        <td>DiagnoseArt</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
         <td>DIAGERW</td>
         <td>Diagnose – im stationären Aufenthalt erworben</td>
-        <td>MOPEDAccount</td>
+        <td>MOPEDClaim</td>
         <td>.diagnosis.onAdmission</td>
         <td></td>
         <td></td>
@@ -486,16 +486,16 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDAccount</td>
-        <td>.identifier</td>
+        <td>MOPEDEncounter</td>
+        <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
     </tr>
@@ -534,9 +534,9 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>MELCODEREL</td>
         <td>Medizinische Leistung – Abrechnungsrelevanz</td>
-        <td>Claim</td>
+        <td>MOPEDClaim</td>
         <td>.procedure.extension</td>
-        <td>.billingRelevance</td>
+        <td>AbrechnungsRelevanz</td>
         <td></td>
     </tr>
     <tr>
@@ -603,16 +603,16 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDAccount</td>
-        <td>.identifier</td>
+        <td>MOPEDEncounter</td>
+        <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
     </tr>
@@ -635,7 +635,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>LDFGRP</td>
         <td>Abrechnung – Gruppe</td>
-        <td>Claim & ClaimResponse</td>
+        <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.diagnosisRelatedGroup</td>
         <td></td>
         <td></td>
@@ -643,7 +643,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>LDFKNT</td>
         <td>Abrechnung – Knoten</td>
-        <td>Claim & ClaimResponse</td>
+        <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
         <td>diagnosisRelatedNode</td>
         <td></td>
@@ -651,7 +651,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>BDZU</td>
         <td>Zusatzpunkte Belagsdauerausreißer nach oben</td>
-        <td>Claim & ClaimResponse</td>
+        <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteBelagsdauerausreisserNachOben</td>
         <td></td>
@@ -659,7 +659,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>INTZU</td>
         <td>Zusatzpunkte Intensiv</td>
-        <td>Claim & ClaimResponse</td>
+        <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteIntensiv</td>
         <td></td>
@@ -667,7 +667,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>MELZU</td>
         <td>Zusatzpunkte Mehrfachleistungen</td>
-        <td>Claim & ClaimResponse</td>
+        <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteMehrfachleistungen</td>
         <td></td>
@@ -675,7 +675,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>SCSPEZ</td>
         <td>Punkte spezieller Bereiche (tageweise)</td>
-        <td>Claim & ClaimResponse</td>
+        <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
         <td>PunkteSpeziellerBereicheTageweise</td>
         <td></td>
@@ -683,7 +683,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>SCGES</td>
         <td>Punkte total</td>
-        <td>Claim & ClaimResponse</td>
+        <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
         <td>TotalPoints</td>
         <td></td>
@@ -691,7 +691,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td></td>
         <td>Leistungskomponente/Leistungspunkte</td>
-        <td>Claim & ClaimResponse</td>
+        <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
         <td>LeistungskomponenteLeistungspunkte</td>
         <td></td>
@@ -699,7 +699,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td></td>
         <td>Tageskomponente/Kontaktpunkte</td>
-        <td>Claim & ClaimResponse</td>
+        <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
         <td>TageskomponenteKontaktpunkte</td>
         <td></td>
@@ -707,7 +707,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>SCULK</td>
         <td>Punkte Belagsdauerausreißer nach unten – Leistungskomponente</td>
-        <td>Claim & ClaimResponse</td>
+        <td>Claim</td>
         <td>.extension</td>
         <td>PunkteBelagsdauerausreisseruntenLeistungskomponente</td>
         <td></td>
@@ -715,7 +715,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>SCUTK</td>
         <td>Punkte Belagsdauerausreißer nach unten – Tageskomponente</td>
-        <td>Claim & ClaimResponse</td>
+        <td>Claim</td>
         <td>.extension</td>
         <td>PunkteBelagsdauerausreisseruntenTageskomponente</td>
         <td></td>
@@ -752,16 +752,16 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDAccount</td>
-        <td>.identifier</td>
+        <td>MOPEDEncounter</td>
+        <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
     </tr>
@@ -784,25 +784,25 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>EWWERT</td>
         <td>Error/Warning – Wert</td>
-        <td>Claim</td>
+        <td>MOPEDClaim</td>
         <td>.extension</td>
-        <td>error.value</td>
+        <td>ErrorWarning.value</td>
         <td></td>
     </tr>
     <tr>
         <td>EWCODE</td>
         <td>Error/Warning – Code</td>
-        <td>Claim</td>
+        <td>MOPEDClaim</td>
         <td>.extension</td>
-        <td>error.code</td>
+        <td>ErrorWarning.code</td>
         <td></td>
     </tr>
     <tr>
         <td>EWKOMMENTAR</td>
         <td>Error/Warning – Kommentar</td>
-        <td>Claim</td>
+        <td>MOPEDClaim</td>
         <td>.extension</td>
-        <td>error.comment</td>
+        <td>ErrorWarning.comment</td>
         <td></td>
     </tr>
 </table>
@@ -837,16 +837,16 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDAccount</td>
-        <td>.identifier</td>
+        <td>MOPEDEncounter</td>
+        <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
     </tr>
@@ -946,16 +946,16 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDAccount</td>
-        <td>.identifier</td>
+        <td>MOPEDEncounter</td>
+        <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
     </tr>
@@ -970,9 +970,9 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ABTPOS</td>
         <td>Bettenführende Hauptkostenstelle – Positionsnummer</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MOPEDAccount</td>
+        <td>.extension</td>
+        <td>AnzahlVerlegungen</td>
         <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht => count(TransferEncounter)-1 </td>
     </tr>
     <tr>
@@ -1271,16 +1271,16 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer/Leistungserbringer-ID</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDAccount</td>
-        <td>.identifier</td>
+        <td>MOPEDEncounter</td>
+        <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
     </tr>
@@ -1295,9 +1295,9 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>ABTPOS</td>
         <td>Bettenführende Hauptkostenstelle – Positionsnummer</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MOPEDAccount</td>
+        <td>.extension</td>
+        <td>AnzahlVerlegungen</td>
         <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht => count(TransferEncounter)-1 </td>
     </tr>
     <tr>
@@ -1580,15 +1580,15 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KANR</td>
         <td>Krankenanstaltennummer</td>
-        <td>HL7ATCoreOrganization</td>
-        <td>.identifier:GDA-OID</td>
+        <td>MOPEDAccount</td>
+        <td>.owner:HL7ATCoreOrganization.identifier:GDA-OID</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>FC</td>
         <td>Funktionscode</td>
-        <td>MopedAbteilungsOrganization</td>
+        <td>MOPEDOrganizationAbteilung</td>
         <td>.identifier:Funktionscode+.identifier:Funktionssubcode</td>
         <td></td>
         <td></td>
@@ -1596,31 +1596,31 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>KOSTNR</td>
         <td>m             </td>
-        <td>MopedAbteilungsOrganization</td>
+        <td>MOPEDOrganizationAbteilung</td>
         <td>.extension</td>
-        <td>Kostenstelle.nummer</td>
+        <td>Kostenstelle.InterneKostenstellennummer</td>
         <td></td>
     </tr>
     <tr>
         <td>KOSTBEZ</td>
         <td>Interne Kostenstellenbezeichnung</td>
-        <td>MopedAbteilungsOrganization</td>
+        <td>MOPEDOrganizationAbteilung</td>
         <td>.extension</td>
-        <td>Kostenstelle.nummer.description</td>
+        <td>Kostenstelle.InterneKostenstellenbezeichnung</td>
         <td></td>
     </tr>
     <tr>
         <td>SPEZORG</td>
         <td>Spezielle Organisationsform</td>
-        <td>MopedAbteilungsOrganization</td>
+        <td>MOPEDOrganizationAbteilung</td>
         <td>.extension</td>
-        <td>Kostenstelle.Organisationsform</td>
+        <td>Kostenstelle.SpezielleOrganisationsform</td>
         <td></td>
     </tr>
     <tr>
         <td>JAHR</td>
         <td>Jahr</td>
-        <td>MopedAbteilungsOrganization</td>
+        <td>MOPEDOrganizationAbteilung</td>
         <td>.extension</td>
         <td>Kostenstelle.period</td>
         <td></td>
