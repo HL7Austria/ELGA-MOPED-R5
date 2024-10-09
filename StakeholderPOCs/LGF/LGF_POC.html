@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POC - Patientenverlauf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+    
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+    
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+    
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+    
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #45a049;
+        }
+    
+        .response {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+    
+        .error {
+            color: red;
+        }
+    
+        .success {
+            color: green;
+        }
+    
+        .timeline {
+            position: relative;
+            max-width: 100%; 
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #4CAF50;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+    
+        .timeline-item {
+            padding: 10px 20px;
+            position: relative;
+            width: calc(50% - 20px);
+            border-radius: 6px;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    
+        .timeline-item-left {
+            left: 0;
+            margin-right: 10px;
+        }
+    
+        .timeline-item-right {
+            left: 50%;
+            margin-left: 10px;
+        }
+    
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+    
+        .timeline-item-left::after {
+            top: 15px;
+            right: -15px;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+    
+        .timeline-item-right::after {
+            top: 15px;
+            left: -15px;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+    
+        .date {
+            font-size: 12px;
+            color: #777;
+        }
+    
+        .description {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Patientenverlauf</h2>
+        <label for="state">Wähle das Bundesland</label>
+        <select id="state">
+            <option value="Wien">Wien</option>
+            <option value="Oberösterreich">Oberösterreich</option>
+            <option value="Niederösterreich">Niederösterreich</option>
+            <option value="Salzburg">Salzburg</option>
+            <option value="Steiermark">Steiermark</option>
+            <option value="Kärnten">Kärnten</option>
+            <option value="Burgenland">Burgenland</option>
+            <option value="Vorarlberg">Vorarlberg</option>
+            <option value="Tirol">Tirol</option>
+        </select>
+
+        <label for="bpkgh">BPKGH eingeben</label>
+        <input type="text" id="bpkgh" placeholder="BPKGH">
+
+        <button onclick="fetchPatient()">Patientenverlauf anzeigen</button>
+
+        <div id="response" class="response"></div>
+
+        <div class="timeline" id="timeline"></div>
+    </div>
+
+    <script>
+        async function fetchPatient() {
+            const bpkgh = document.getElementById("bpkgh").value;
+            const state = document.getElementById("state").value;
+            const responseDiv = document.getElementById("response");
+            const timelineDiv = document.getElementById("timeline");
+            const fhirServer = 'http://localhost:8080/fhir'; // FHIR Server URL 
+    
+            responseDiv.innerHTML = ''; // vorherige Responses löschen
+            timelineDiv.innerHTML = ''; // eventuelle vorherige Timelines löschen
+    
+            if (!bpkgh) {
+                responseDiv.innerHTML = '<p class="error">Bitte geben Sie eine BPKGH ein.</p>';
+                return;
+            }
+    
+            try {
+                // Patienten mit GET Request suchen
+                const patientResponse = await fetch(`${fhirServer}/Patient?identifier=${bpkgh}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/fhir+json'
+                    }
+                });
+    
+                if (patientResponse.status === 200) {
+                    const patientData = await patientResponse.json();
+                    if (patientData.entry && patientData.entry.length > 0) {
+                        const patientId = patientData.entry[0].resource.id;
+                        
+    
+                        // Dann GET request für alle Encounter des Patienten
+                        const encounterResponse = await fetch(`${fhirServer}/Encounter?subject=${patientId}`, {
+                            method: 'GET',
+                            headers: {
+                                'Content-Type': 'application/fhir+json'
+                            }
+                        });
+    
+                        if (encounterResponse.status === 200) {
+                            const encounterData = await encounterResponse.json();
+                            const filteredEncounters = [];
+    
+                            // Encounter nach KH Bundesland filtern
+                            for (const entry of encounterData.entry || []) {
+                                const encounter = entry.resource;
+                                const serviceProviderUrl = encounter.serviceProvider.reference;
+    
+                                // Organization Ressource des KH fetchen
+                                const organizationResponse = await fetch(`${fhirServer}/${serviceProviderUrl}`, {
+                                    method: 'GET',
+                                    headers: {
+                                        'Content-Type': 'application/fhir+json'
+                                    }
+                                });
+    
+                                if (organizationResponse.status === 200) {
+                                    const organizationData = await organizationResponse.json();
+                                    const address = organizationData.address?.[0];
+    
+                                    if (address && address.state === state) {
+                                        // Gefilterter Encounter ist im ausgewählten Bundesland
+                                        filteredEncounters.push({
+                                            date: encounter.period?.start || 'N/A',  // Datum des Encounter
+                                            hospital: organizationData.name || 'N/A' // Name der KA
+                                        });
+                                    }
+                                }
+                            }
+    
+                            // Gefilterte Encounter nach Datum sortieren
+                            filteredEncounters.sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+                            if (filteredEncounters.length > 0) {
+                                filteredEncounters.forEach((encounter, index) => {
+                                    const side = index % 2 === 0 ? 'left' : 'right'; // alternierend links und rechts in der Timeline
+    
+                                    const timelineItem = `
+                                        <div class="timeline-item timeline-item-${side}">
+                                            <p class="date">${new Date(encounter.date).toLocaleDateString()}</p>
+                                            <p class="description">${encounter.hospital}</p>
+                                        </div>
+                                    `;
+                                    timelineDiv.innerHTML += timelineItem;
+                                });
+                            } else {
+                                responseDiv.innerHTML += `<p class="error">Keine Encounters im ausgewählten Bundesland gefunden.</p>`;
+                            }
+                        } else {
+                            responseDiv.innerHTML += `<p class="error">Fehler beim Abrufen der Encounters.</p>`;
+                        }
+                    } else {
+                        responseDiv.innerHTML = `<p class="error">Kein Patient mit dieser BPKGH gefunden.</p>`;
+                    }
+                } else {
+                    responseDiv.innerHTML = `<p class="error">Fehler bei der Suche nach dem Patienten.</p>`;
+                }
+            } catch (error) {
+                responseDiv.innerHTML = `<p class="error">Ein Fehler ist aufgetreten: ${error.message}</p>`;
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
