@@ -1,5 +1,5 @@
-ValueSet: VersichertenanspruchserklärungStatus
-Id: VersichertenanspruchserklärungStatus
+ValueSet: VAEStatus
+Id: VAEStatus
 Title: "Status der Versichertenanspruchserklärung"
 Description: "Status der Versichertenanspruchserklärung"
 * $VAEStatus#00 "bewilligt (nur für stationären Bereich)"

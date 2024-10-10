@@ -20,3 +20,4 @@ Alias: $KostenmeldungARK = http://tbd.at/MOPED-KostenmeldungARK
 Alias: $EconomicUnitUse = http://tbd.at/EconomicUnitUse
 Alias: $SpezielleOrganisationsform = http://tbd.at/MOPED-SpezielleOrganisationsform
 Alias: $Sonderklasse = http://tbd.at/MOPED-Sonderklasse
+Alias: $Altersgruppe = http://tbd.at/MOPED-Altersgruppe
