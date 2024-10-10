@@ -1,7 +1,7 @@
 ValueSet: Altersgruppe
-Id: Altersgruppe
-Title: "Altersgruppe bei Zugang/Kontakt"
-Description: "Altersgruppe bei Zugang/Kontakt"
+Id: moped-altersgruppe-valueset
+Title: "Altersgruppe des Patienten"
+Description: "ValueSet für die Altersgruppe des Patienten"
 * $Altersgruppe#0 "0 Jahre"
 * $Altersgruppe#1 "1 bis 4 Jahre"
 * $Altersgruppe#5 "5 bis 9 Jahre"

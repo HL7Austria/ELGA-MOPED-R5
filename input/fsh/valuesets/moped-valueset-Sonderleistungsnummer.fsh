@@ -1,5 +1,5 @@
 ValueSet: Sonderleistungsnummern
-Id: Sonderleistungsnummern
+Id: moped-sonderleistungsnummern-valueset
 Title: "Nummer für Sonderleistung"
 Description: "Nummer für Sonderleistung"
 * $Sonderleistungsnummern#00 "orthopädisches Hilfsmittel (Körperersatzstücke), die nicht therapeutische Behelfe darstellen"

@@ -1,5 +1,5 @@
 ValueSet: VAEStatus
-Id: VAEStatus
+Id: moped-VAEStatus-valueset
 Title: "Status der Versichertenanspruchserklärung"
 Description: "Status der Versichertenanspruchserklärung"
 * $VAEStatus#00 "bewilligt (nur für stationären Bereich)"
