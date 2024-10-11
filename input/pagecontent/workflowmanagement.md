@@ -2,8 +2,8 @@
    
    <h3> Account-/Prozessstatus </h3>
     <div>
-        <a style="border:none;" href="account_state_machine.png" target="_blank">
-            <img src="account_state_machine.png" width ="100%" />
+        <a style="border:none;" href="Account_Status.png" target="_blank">
+            <img src="Account_Status.png" width ="50%" />
         </a>
     </div>
     <table>
