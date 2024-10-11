@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patienten Hauptwohnsitz POC</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        label {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        select, input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #aaa;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            // Default values für das Datum vergeben - einfacher für schnelles herzeigen in Kombination mit den Testdaten
+            const vonDateInput = document.getElementById('von-date');
+            const bisDateInput = document.getElementById('bis-date');
+            
+            vonDateInput.value = '2023-10-07';
+            bisDateInput.value = '2024-10-07';
+        }
+
+        async function evaluateMeasure() {
+            const bundesland = document.getElementById("bundesland").value;
+            const periodStart = document.getElementById("von-date").value + "T00:00:00";
+            const periodEnd = document.getElementById("bis-date").value + "T23:59:59";
+
+            const url = `http://localhost:8080/fhir/Measure/HauptwohnsitzPOCMeasure/$evaluate-measure?periodStart=${periodStart}&periodEnd=${periodEnd}`;
+
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/fhir+json'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error("Request failed with status " + response.status);
+                }
+
+                const measureReport = await response.json();
+                const measureScore = measureReport.group[0].measureScore.value;
+
+                // Ergebnis anzeigen
+                document.getElementById("result").textContent = `Ergebnis: ${(measureScore * 100).toFixed(2)}% der in ${bundesland} behandelten Patienten haben ihren Hauptwohnsitz in einem anderen Bundesland`;
+                
+                //Anstatt eines Measure könnte man auch ein GET {{server-base}}/Encounter machen um alle Krankenhausaufenthalte zu erhalten.
+                //Diese dann einzeln durchgehen und überprüfen, ob die KA, welche den Encounter durchgefüht hat im jeweiligen Bundesland ist also: GET  {{server-base}}/Organization/{Encounter.serviceProvider.reference} und dann Organization.address.state überprüfen
+                //Die Encounter, welche im ausgewählten Bundesland stattgefunden haben werden nun gefilter je nachdem welchen Hauptwohnsitz der jeweilige Patient hat: GET {{server-base}}/Patient/{Encounter.subject.reference} und dann Patient.address.state
+                //Die Anzahl der Encounter, welche dabei übrig bleiben müssen nun verglichen werden mit der Anzahl der Encounter im ganzen Bundesland
+                //Disclaimer: Bei diesem Ansatz wird jedoch als Ausgangsbasis die Anzahl der Encounter mit Hauptwohnsitz vs. ohne Hauptwohnsitz verglichen wobei im Measure die Anzahl der im Bundesland behandelten Patienten mit vs. ohne Hauptwohnsitz verglichen wird.
+
+            } catch (error) {
+                console.error("Error fetching measure:", error);
+                document.getElementById("result").textContent = "Error retrieving data.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Patienten Hauptwohnsitz Analyse</h1>
+
+        <label for="bundesland">Bundesland:</label>
+        <select id="bundesland">
+            <option value="Wien">Wien</option>
+            <option value="Oberösterreich">Oberösterreich</option>
+            <option value="Niederösterreich">Niederösterreich</option>
+            <option value="Salzburg">Salzburg</option>
+            <option value="Steiermark">Steiermark</option>
+            <option value="Kärnten">Kärnten</option>
+            <option value="Burgenland">Burgenland</option>
+            <option value="Vorarlberg">Vorarlberg</option>
+            <option value="Tirol">Tirol</option>
+        </select>
+
+        <label for="von-date">Von:</label>
+        <input type="date" id="von-date" required>
+
+        <label for="bis-date">Bis:</label>
+        <input type="date" id="bis-date" required>
+
+        <button onclick="evaluateMeasure()">Evaluate Measure</button>
+
+        <p id="result">Noch kein Ergebnis.</p>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Hauptwohnsitz POC Evaluation
+    </div>
+</body>
+</html>
