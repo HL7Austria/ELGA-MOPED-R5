@@ -2,8 +2,8 @@
    
    <h3> Account-/Prozessstatus </h3>
     <div>
-        <a style="border:none;" href="account_state_machine.png" target="_blank">
-            <img src="account_state_machine.png" width ="100%" />
+        <a style="border:none;" href="Account_Status.png" target="_blank">
+            <img src="Account_Status.png" width ="100%" />
         </a>
     </div>
     <table>
@@ -98,8 +98,8 @@
     </table>
     <h3>Überblick der Statusänderungen der unterschiedlichen Ressourcen während des Prozesses</h3>
     <div>
-        <a style="border:none;" href="Account_Status.jpg" target="_blank">
-            <img src="Account_Status.jpg" width ="100%" />
+        <a style="border:none;" href="Resource_Status_Overview.jpg" target="_blank">
+            <img src="Resource_Status_Overview.jpg" width ="100%" />
         </a>
     </div>
 </div>
