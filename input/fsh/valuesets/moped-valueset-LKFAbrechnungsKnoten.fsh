@@ -1,5 +1,5 @@
 ValueSet: LKFAbrechnungsKnoten
-Id: moped-LKFbrechnungsKnoten-valueset
+Id: moped-LKFAbrechnungsKnoten-valueset
 Title: "LKF Abrechnungsknoten"
 Description: "LKF Abrechnungsknoten"
 * $LKFAbrechnungsKnoten#A "A"
