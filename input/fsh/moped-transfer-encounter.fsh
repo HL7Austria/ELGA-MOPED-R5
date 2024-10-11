@@ -7,7 +7,8 @@ Description: "MOPED Profil der Encounter Ressource für die Verlegung innerhalb 
 
 * actualPeriod ^short = "Zugangs- und Abgangsdatum"
 
-* extension contains PhysischeAnwesenheit named PhysischeAnwesenheit 0..1
+* subjectStatus from Anwesenheitsart (required)
+
 * extension contains Altersgruppe named Altersgruppe 0..1
 * extension contains Neugeborenes named Neugeborenes 0..1
 
