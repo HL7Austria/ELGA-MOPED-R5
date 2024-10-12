@@ -19,11 +19,11 @@ Title: "LKF MBDS Bundle"
     leistungen 1.. and
     kh 1..1 and
     abteilung 1.. and
-    patient 1..1
+    patient 1..1 and
     account 1..1 and
     versicherung 1..1 and
     kostentraeger 1..1 and
-    coverage 1..1 and
+    coverage 1..1
 * entry[claim].resource 1..
 * entry[claim].resource only MOPEDClaim   
 * entry[claimresponse].resource 1..
