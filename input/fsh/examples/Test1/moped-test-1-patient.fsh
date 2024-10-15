@@ -6,10 +6,13 @@ InstanceOf: HL7ATCorePatient
 Usage: #example
 * id = "Test1Patient"
 * meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-patient"
-* identifier.system = "urn:oid:1.2.40.0.10.1.4.3.1"
-* identifier.value = "9994210469"
-* identifier.type = $v2-0203#SS "Social Security Number"
-* identifier.assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
+* identifier[+].system = "urn:oid:1.2.40.0.10.1.4.3.1"
+* identifier[=].value = "9994210469"
+* identifier[=].type = $v2-0203#SS "Social Security Number"
+* identifier[=].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
+* identifier[+].system = "urn:oid:1.2.40.0.10.1.4.3.1"
+* identifier[=].type = $v2-0203#NI
+* identifier[=].value = "12345abcdtest"
 * name.use = #official
 * name.family = "Moderne"
 * name.given = "Patientenkommun"
