@@ -4,7 +4,7 @@ Instance: Test2Condition1
 InstanceOf: Condition
 Usage: #example
 * id = "Test2Condition1"
-* code = $icd-10#S82.0 "TBD"
+* code = $icd-10#S82.0 "Fracture of Patella"
 * subject = Reference(Patient/Test2Patient)
 * clinicalStatus = #active
 
