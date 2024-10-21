@@ -1,7 +1,9 @@
 Instance: MOPEDPatientEntlassen
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $entlassen (POC)"
-Description: """
+Description: "Die $entlassen Operation wird aufgerufen, wenn ein(e) Patient*in aus dem Krankenhaus entlassen wurde."
+Usage: #definition
+* purpose = """
 
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
 
@@ -40,7 +42,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 
 * Hinweis 1: Wurde der Patient direkt aus der Intensivstation entlassen, so müsste auch eine Abgangsart im MOPEDTransferEncounter gesetzt werden. Dieser Spezialfall wurde noch nicht berücksichtigt.
 """
-Usage: #definition
 
 * id = "MOPED.Patient.Entlassen"
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-entlassen"
