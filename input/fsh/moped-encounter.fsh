@@ -49,6 +49,6 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * diagnosis.use from https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ (required)
 * diagnosis.use ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
 
-* admission.extension contains Zugangsart named Zugangsart 0..1
-* admission.extension contains Transportart named Transportart 0..1
-* extension contains Unfalldatum named Unfalldatum 0..1
+* admission.extension contains Zugangsart named zugangsart 0..1
+* admission.extension contains Transportart named transportart 0..1
+* extension contains Unfalldatum named unfalldatum 0..1

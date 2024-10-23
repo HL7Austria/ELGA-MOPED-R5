@@ -30,21 +30,21 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * diagnosisRelatedGroup from $LKFAbrechnungsGruppe (required)
 * diagnosisRelatedGroup. ^short =  "\"Abrechnung - Gruppe:\" Dieses Datenfeld ist mit der Codenummer der zutreffenden Abrechnungsgruppe zu befüllen. Bei Datensätzen von stationären Krankenhausaufenthalten, die keiner leistungsorientier- ten Diagnosenfallgruppe zugeordnet werden, erfolgt ein Eintrag entsprechend der jeweiligen Aufnahmeart."
 
-* extension contains ErrorWarning named ErrorWarning 0..
-* extension contains DiagnosisRelatedNode named DiagnosisRelatedNode 0..1
-* extension contains LKFPunkte named LKFPunkte 0..
-* extension contains LDFPunktewertNetto named LDFPunktewertNetto 0..1
-* extension contains LDFBetragNetto named LDFBetragNetto 0..1
-* extension contains PatientenanteilAngehoerige named PatientenanteilAngehoerige 0..1
-* extension contains Patientenanteil named Patientenanteil 0..1
-* extension contains Beihilfenaequivalent named Beihilfenaequivalent 0..1
-* extension contains ForderungsbetragAuslaenderverrechnungRegress named ForderungsbetragAuslaenderverrechnungRegress 0..1
-* extension contains RechnungsnummerKHLGF named RechnungsnummerKHLGF 0..1
+* extension contains ErrorWarning named fehlerWarnung 0..
+* extension contains DiagnosisRelatedNode named diagnoseKnoten 0..1
+* extension contains LKFPunkte named LkfPunkte 0..
+* extension contains LDFPunktewertNetto named ldfPunktewertNetto 0..1
+* extension contains LDFBetragNetto named ldfBetragNetto 0..1
+* extension contains PatientenanteilAngehoerige named patientenanteilAngehoerige 0..1
+* extension contains Patientenanteil named patientenanteil 0..1
+* extension contains Beihilfenaequivalent named beihilfenaequivalent 0..1
+* extension contains ForderungsbetragAuslaenderverrechnungRegress named forderungsbetragAuslaenderverrechnungRegress 0..1
+* extension contains RechnungsnummerKHLGF named rechnungsnummerKHLGF 0..1
 
-* extension contains Note named Note 0..
+* extension contains Note named note 0..
 
-* extension contains Sonderleistungsnummer named Sonderleistungsnummer 0..1
-* extension contains AnzahlSonderleistungen named AnzahlSonderleistungen 0..1
-* extension contains PunkteLDFPauschale named PunkteLDFPauschale 0..1
-* extension contains KonstenmeldungARK named KonstenmeldungARK 0..1
+* extension contains Sonderleistungsnummer named sonderleistungsnummer 0..1
+* extension contains AnzahlSonderleistungen named anzahlSonderleistungen 0..1
+* extension contains PunkteLDFPauschale named punkteLdfPauschale 0..1
+* extension contains KonstenmeldungARK named konstenmeldungArk 0..1
 

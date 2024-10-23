@@ -6,7 +6,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 
 * patient only Reference(HL7ATCorePatient)
 
-* procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 0..1
+* procedure.extension contains AbrechnungsRelevanz named abrechnungsRelevanz 0..1
 * diagnosisRelatedGroup from $LKFAbrechnungsGruppe (required)
 * diagnosisRelatedGroup. ^short =  "\"Abrechnung - Gruppe:\" Dieses Datenfeld ist mit der Codenummer der zutreffenden Abrechnungsgruppe zu befüllen. Bei Datensätzen von stationären Krankenhausaufenthalten, die keiner leistungsorientier- ten Diagnosenfallgruppe zugeordnet werden, erfolgt ein Eintrag entsprechend der jeweiligen Aufnahmeart."
 
@@ -25,11 +25,13 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
 * encounter[TransferEncounter] only Reference(MOPEDTransferEncounter)
 
-* extension contains Note named Note 0..
+* extension contains Note named notiz 0..
 * diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
-* extension contains DiagnosisRelatedNode named DiagnosisRelatedNode 0..1
-* extension contains LKFPunkte named LKFPunkte 0..
-* extension contains ErrorWarning named ErrorWarning 0..
-* extension contains Fondsrelevanz named Fondsrelevanz 0..1
-* extension contains Plausibilitaetskennzeichen named Plausibilitaetskennzeichen 0..1
-* extension contains SVAbrechnungsquartal named SVAbrechnungsquartal 0..1
+
+* extension contains DiagnosisRelatedNode named diagnoseKnoten 0..1
+* extension contains LKFPunkte named LkfPunkte 0..
+* extension contains ErrorWarning named fehlerWarnung 0..
+* extension contains Fondsrelevanz named fondRelevant 0..1
+* extension contains Plausibilitaetskennzeichen named plausibilitaetskennzeichen 0..1
+* extension contains SVAbrechnungsquartal named svAbrechnungsquartal 0..1
+
