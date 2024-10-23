@@ -1,13 +1,13 @@
 Instance: MOPEDLeistungEinmelden
 InstanceOf: OperationDefinition
-Title: "MOPED Patient $leistungMelden (POC)"
-Description: "Die $leistungMelden Operation wird aufgerufen, wenn eine erbrachte Leistung eingemeldet wird."
+Title: "MOPED Encounter Leistung und Diagnosen $erfassen (POC)"
+Description: "Die $erfassen Operation wird aufgerufen, wenn eine erbrachte Leistungen und Diagnosen eingemeldet wird."
 Usage: #definition
 * purpose = """
 
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
 
-Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $leistungMelden Operation wird aufgerufen, wenn ein(e) im Zuge des Falles erbrachte Leistung eingemeldet wird.
+Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $erfassen Operation wird aufgerufen, wenn ein(e) im Zuge des Falles erbrachte Leistung und Diagnosen eingemeldet wird.
 
 **Voraussetzungen für den Aufruf**
 
@@ -42,9 +42,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $leistungMelden O
 
 """
 
-* id = "MOPED.Patient.LeistungMelden"
-* base = "http://hl7.org/fhir/OperationDefinition/Patient-leistungMelden"
-* name = "MOPED_Patient_LeistungMelden"
+* id = "MOPED.Encounter.erfassen"
+* base = "http://hl7.org/fhir/OperationDefinition/Enconuter-erfassen"
+* name = "MOPED_Encounter_erfassen"
 * status = #draft
 * kind = #operation
 * affectsState = true
@@ -52,7 +52,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $leistungMelden O
 * system = false
 * type = true
 * instance = false
-* code = #leistungMelden
+* code = #erfassen
 * parameter[+]
   * name = #aufnahmezahl
   * use = #in
