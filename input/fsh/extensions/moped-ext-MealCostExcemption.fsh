@@ -1,6 +1,6 @@
 
 Extension: MealCostExcemption
-Id: moped-ext-MealCostExcemption
+Id: moped-ext-mealCostExcemption
 Title: "MealCostExcemption"
 Description: "VKBEFR – Verpflegskosten-Beitragsbefreiung"
 Context: CoverageEligibilityResponse

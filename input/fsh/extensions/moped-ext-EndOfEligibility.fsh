@@ -1,6 +1,6 @@
 
 Extension: EndOfEligibility
-Id: moped-ext-EndOfEligibility
+Id: moped-ext-endOfEligibility
 Title: "EndOfEligibility"
 Description: "Fristende - Befristungen sind in folgenden Fällen vorgesehen:
 - Bei zeitlichen Beschränkungen aufgrund einer zu erwartenden, nachfolgenden medizini-

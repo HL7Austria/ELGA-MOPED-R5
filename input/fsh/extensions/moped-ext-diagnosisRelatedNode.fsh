@@ -1,4 +1,3 @@
-
 Extension: DiagnosisRelatedNode
 Id: moped-ext-diagnosisRelatedNode
 Title: "Abrechnung - Knoten"
