@@ -1,6 +1,6 @@
 
 Extension: TotalPoints
-Id: totalPoints
+Id: moped-ext-totalPoints
 Title: "Punkte total"
 Description: "In dieses Datenfeld ist die Gesamtsumme der für den stationären Aufenthalt/den ambulanten Besuch ermittelten Punkte einzutragen."
 * valueUnsignedInt 0..1

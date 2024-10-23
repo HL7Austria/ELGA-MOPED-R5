@@ -1,6 +1,6 @@
 
 Extension: PremiumClass
-Id: moped-ext-PremiumClass
+Id: moped-ext-premiumClass
 Title: "PremiumClass"
 Description: "KLAS – Allgemeine Gebührenklasse/Sonderklasse"
 

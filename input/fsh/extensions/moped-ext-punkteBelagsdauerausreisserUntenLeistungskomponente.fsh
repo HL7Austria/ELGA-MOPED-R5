@@ -1,6 +1,6 @@
 
 Extension: PunkteBelagsdauerausreisserUntenLeistungskomponente
-Id: Punkte-Belagsdauerausreisser-unten-Leistungskomponente
+Id: moped-ext-punkteBelagsdauerausreisserUntenLeistungskomponente
 Title: "Punkte Belagsdauerausreisser unten - Leistungskomponente"
 Description: "In dieses Datenfeld ist – soweit zutreffend – die ermittelte Leistungskomponente für jene Patient:innen einzutragen, deren Belagsdauer des akutstationären Krankenhausaufenthalts unter der im LKF-Modell in der jeweiligen LDF-Pauschale festgelegten Belagsdaueruntergrenze liegt."
 * valueUnsignedInt 0..1

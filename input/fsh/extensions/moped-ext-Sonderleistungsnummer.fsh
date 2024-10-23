@@ -1,5 +1,5 @@
 Extension:    Sonderleistungsnummer
-Id:           moped-ext-Sonderleistungsnummer
+Id:           moped-ext-sonderleistungsnummer
 Title:        "Sonderleistungsnummer" 
 Description:  "MOPED Extension für die Sonderleistungsnummer"
 Context: MOPEDClaimResponse

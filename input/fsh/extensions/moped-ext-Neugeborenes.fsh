@@ -1,6 +1,6 @@
 
 Extension:    Neugeborenes
-Id:           moped-ext-Neugeborenes
+Id:           moped-ext-neugeborenes
 Title:        "Neugeborenes" 
 Description:  "Ein Patient wird als Neugeborenes bezeichnet, wenn das Alter zum Zugangszeitpunkt auf die Abteilung <28 Tage ist."
 Context: MOPEDTransferEncounter

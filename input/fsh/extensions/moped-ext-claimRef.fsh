@@ -1,5 +1,5 @@
 Extension:    ClaimRef
-Id:           moped-ext-ClaimRef
+Id:           moped-ext-claimRef
 Title:        "Claim Referenz" 
 Description:  "Referenz vom Account auf den Claim."
 Context: MOPEDAccount
