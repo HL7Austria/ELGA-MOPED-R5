@@ -66,14 +66,16 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $leistungMelden O
   * min = 0
   * max = "*"
   * documentation = "Der *leistung* Parameter beinhält eine erbrachte Leistung in MEL-Codierung."
-  * type = #MOPEDProcedure
+  * type = #Procedure
+  * targetProfile = "MOPEDProcedure"
 * parameter[+]
   * name = #diagnose
   * use = #in
   * min = 0
   * max = "*"
   * documentation = "Der *diagnose* Parameter beinhält eine Diagnose in HDG-Codierung."
-  * type = #MOPEDCondition
+  * type = #Condition
+  * targetProfile = "MOPEDCondition"
 * parameter[+]
   * name = #return
   * use = #out

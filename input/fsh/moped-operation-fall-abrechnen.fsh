@@ -75,7 +75,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
   * min = 1
   * max = "1"
   * documentation = "Der *claim* Parameter beinhält sämtliche Details zur Abrechnung lt. MOPEDClaim Profil."
-  * type = #MOPEDClaim
+  * type = #Claim
+  * targetProfile = "MOPEDClaim"
 * parameter[+]
   * name = #return
   * use = #out
