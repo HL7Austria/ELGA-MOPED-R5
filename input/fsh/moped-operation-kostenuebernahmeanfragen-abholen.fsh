@@ -1,7 +1,9 @@
 Instance: VersichertenanspruchserklärungAnfragenAbholen
 InstanceOf: OperationDefinition
 Title: "Versichertenanspruchserklärung-Anfragen $abholen"
-Description: """
+Description: "Die Versichertenanspruchserklärung-Anfragen $abholen Operation wird aufgerufen, um alle noch offenen Versichertenanspruchserklärung-Anfragen, die bisher seitens SV noch nicht bearbeitet wurden, abgeholt werden können."
+Usage: #definition 
+* purpose = """
 Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die Versichertenanspruchserklärung-Anfragen $abholen Operation wird aufgerufen, um alle noch offenen Versichertenanspruchserklärung-Anfragen, die bisher seitens SV noch nicht bearbeitet wurden, abgeholt werden können.
 1. Suche nach relevanten Requests: Alle CoverageEligibilityRequests, 
   * die im Feld *CoverageEligibilityRequest.insurer* die Organization mit *Organization.identifier* = Operation-Parameter *versicherer* referenziert haben UND
@@ -13,7 +15,7 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die Versichert
    * mit Feld *CoverageEligibilityResponse.request* = Referenz auf jeweiligen Request
    * mit Feld *CoverageEligibilityResponse.outcome* = *queued*
 """
-Usage: #definition 
+
 
 * id = "MOPED.CoverageEligibilityRequest.Abholen"
 * base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-abholen"

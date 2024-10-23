@@ -1,8 +1,9 @@
 Instance: MOPEDPatientVerlegen
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $verlegen (POC)"
-Description: """
-
+Description: "Die $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. Auch initial, wenn ein Patient auf eine bestimmte Station aufgenommen wird, wird diese Operation aufgerufen (dies passiert automatisch im Zuge der Operation $aufnehmen)."
+Usage: #definition
+* purpose = """
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. Auch initial, wenn ein Patient auf eine bestimmte Station aufgenommen wird, wird diese Operation aufgerufen (dies passiert automatisch im Zuge der Operation $aufnehmen).
@@ -58,7 +59,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
 * Hinweis 3: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
 
 """
-Usage: #definition
 
 * id = "MOPED.Patient.Verlegen"
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-verlegen"

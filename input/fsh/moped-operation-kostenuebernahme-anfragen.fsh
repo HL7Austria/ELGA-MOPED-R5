@@ -1,7 +1,10 @@
 Instance: VersichertenanspruchserklärungAnfragen
 InstanceOf: OperationDefinition
 Title: "MOPED Versichertenanspruchserklärung $anfragen (POC)"
-Description: """
+Description: "Die Versichertenanspruchserklärung $anfragen Operation wird aufgerufen, um die Versichertenanspruchserklärung-Anfrage an die SV anzustoßen. Diese Operation ist irrelevant für Selbstzahler (das ist wichtig für künftige weiterentwicklung - wenn im Account auf eine Coverage-Ressource für Selbstzahler referenziert wird, darf die Operation $anfragen nicht ausgeführt werden)."
+Usage: #definition 
+* purpose = """
+Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. 
 
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
 
@@ -39,8 +42,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 
 * Hinweis 1: Nach dieser Operation findet lt. Soll-Prozess kein Update des Status *MOPEDAccount.workflowStatus* statt.
 """
-Usage: #definition 
-
 * id = "MOPED.CoverageEligibilityRequest.Anfragen"
 * base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-anfragen"
 * comment = "TBD: Ist hier evtl. eine Transaction die bessere Lösung? Bei dieser Operation findet keine Status-Änderung statt. Lediglich auf die Precondition des Workflow-Status müsste geachtet werden."
