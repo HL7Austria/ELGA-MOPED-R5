@@ -1,7 +1,7 @@
 Instance: MOPEDFallAbrechnen
 InstanceOf: OperationDefinition
 Title: "MOPED Encounter $abrechnen (POC)"
-Description: "Die $abrechnen Operation wird aufgerufen, wenn eine Fall abgerechnet werden sollte."
+Description: "Die $abrechnen Operation wird aufgerufen, wenn ein Fall abgerechnet werden sollte."
 Usage: #definition
 * purpose = """
 
