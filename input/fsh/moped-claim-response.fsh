@@ -3,12 +3,20 @@ Profile: MOPEDClaimResponse
 Parent: ClaimResponse
 Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort."
 
+* status = #active
+* type.coding.code = #institutional
+* use = #claim
 
 * patient only Reference(HL7ATCorePatient)
+* insurer only Reference(HL7ATCoreOrganization)
+* insurer 1..1
 * request only Reference(MOPEDClaim)
+* request 1..1
 * requestor only Reference(HL7ATCoreOrganization)
+* requestor 1..1
 
 * insurance.coverage only Reference(SVCCoverage)
+* insurance.coverage 1..1
 
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
@@ -24,12 +32,7 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 
 * extension contains ErrorWarning named ErrorWarning 0..
 * extension contains DiagnosisRelatedNode named DiagnosisRelatedNode 0..1
-* extension contains ZusatzpunkteBelagsdauerausreisserNachOben named ZusatzpunkteBelagsdauerausreisserNachOben 0..1
-* extension contains ZusatzpunkteIntensiv named ZusatzpunkteIntensiv 0..1
-* extension contains ZusatzpunkteMehrfachleistungen named ZusatzpunkteMehrfachleistungen 0..1
-* extension contains PunkteSpeziellerBereicheTageweise named PunkteSpeziellerBereicheTageweise 0..1
-* extension contains TotalPoints named TotalPoints 0..1
-
+* extension contains LKFPunkte named LKFPunkte 0..
 * extension contains LDFPunktewertNetto named LDFPunktewertNetto 0..1
 * extension contains LDFBetragNetto named LDFBetragNetto 0..1
 * extension contains PatientenanteilAngehoerige named PatientenanteilAngehoerige 0..1
@@ -39,13 +42,9 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * extension contains RechnungsnummerKHLGF named RechnungsnummerKHLGF 0..1
 
 * extension contains Note named Note 0..
-* extension contains LeistungskomponenteLeistungspunkte named LeistungskomponenteLeistungspunkte 0..1
-* extension contains TageskomponenteKontaktpunkte named TageskomponenteKontaktpunkte 0..1
 
 * extension contains Sonderleistungsnummer named Sonderleistungsnummer 0..1
 * extension contains AnzahlSonderleistungen named AnzahlSonderleistungen 0..1
 * extension contains PunkteLDFPauschale named PunkteLDFPauschale 0..1
 * extension contains KonstenmeldungARK named KonstenmeldungARK 0..1
 
-* extension contains PunkteBelagsdauerausreisserUntenLeistungskomponente named PunkteBelagsdauerausreisserUntenLeistungskomponente 0..1
-* extension contains PunkteBelagsdauerausreisserUntenTageskomponente named PunkteBelagsdauerausreisserUntenTageskomponente 0..1
