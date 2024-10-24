@@ -2,12 +2,12 @@
 
 name: PublishIG
 
-# Run on updates to the master
+# Run on updates to the master and POC-IG
 on:
   push:
-    branches: [ main ]
+    branches: [ main, POC-IG ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, POC-IG  ]
 
 jobs:
   build:
