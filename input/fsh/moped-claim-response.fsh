@@ -3,12 +3,20 @@ Profile: MOPEDClaimResponse
 Parent: ClaimResponse
 Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort."
 
+* status = #active
+* type.coding.code = #institutional
+* use = #claim
 
 * patient only Reference(HL7ATCorePatient)
+* insurer only Reference(HL7ATCoreOrganization)
+* insurer 1..1
 * request only Reference(MOPEDClaim)
+* request 1..1
 * requestor only Reference(HL7ATCoreOrganization)
+* requestor 1..1
 
 * insurance.coverage only Reference(SVCCoverage)
+* insurance.coverage 1..1
 
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
