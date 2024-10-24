@@ -18,7 +18,7 @@ Usage: #example
 * extension[=].valueUnsignedInt = 0
 
 //PremiumClass
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-PremiumClass"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-premiumClass"
 * extension[=].valueCoding = $Sonderklasse#A
 
 
@@ -43,15 +43,15 @@ Usage: #example
 * insurance.coverage = Reference(Coverage/Test1SVCCoverage)
 
 //Fristende
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-EndOfEligibility"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-fristende"
 * extension[=].valueBoolean = true
 
 //VAEStatus
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vaestatus"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vaeStatus"
 * extension[=].valueCoding = $VAEStatus#00
 
 //VerpflegskostenBeitragsbefreiung
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-VerpflegskostenBeitragsbefreiung"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-verpflegskostenBeitragsbefreiung"
 * extension[=].valueCoding = $VerpflegskostenBeitragsbefreiung#N
 
 //VortageanzahlAufKostenbeitrag
