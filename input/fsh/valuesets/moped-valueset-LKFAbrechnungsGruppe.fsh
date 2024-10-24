@@ -17,10 +17,4 @@ Einheit"
 * $LKFAbrechnungsGruppe#REMOB "bei Patient:innen mit ausschließlichem Aufenthalt auf einer Einheit für
 Remobilisation/Nachsorge"
 * $LKFAbrechnungsGruppe#VERBLEIB "bei am Jahresende verbleibenden Patient:innen"
-* $LKFAbrechnungsGruppe#HDG24.01 "HDG24.01"
-* $LKFAbrechnungsGruppe#HDG24.02 "HDG24.02"
-* $LKFAbrechnungsGruppe#HDG24.03 "HDG24.03"
-* $LKFAbrechnungsGruppe#MEL01.01 "MEL01.01"
-* $LKFAbrechnungsGruppe#MEL01.02 "MEL01.02"
-* $LKFAbrechnungsGruppe#MEL01.03 "MEL01.03"
-* $LKFAbrechnungsGruppe#MEL01.04 "MEL01.04"
+//MEL und HDG Codes in eigenen Valuesets
