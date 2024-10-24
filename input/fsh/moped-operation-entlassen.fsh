@@ -12,6 +12,11 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 * Account-Status: `SV verarbeitet`
 
 **Detaillierte Business-Logik**
+**Voraussetzungen für den Aufruf**
+
+* Account-Status: `SV verarbeitet`
+
+**Detaillierte Business-Logik**
 
 1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
 2. Update des MOPEDEncounters:
@@ -56,21 +61,21 @@ Usage: #definition
 * code = #entlassen
 * parameter[+]
   * name = #aufnahmezahl
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
   * name = #zeitpunkt
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *zeitpunkt* Parameter definiert zu welchem Zeitpunkt die Beurlaubung startet."
   * type = #dateTime
 * parameter[+]
   * name = #entlassungsart
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *entlassungsart* Parameter definiert die Entlassungsart des Patienten."
@@ -80,7 +85,7 @@ Usage: #definition
     * valueSet = "moped-entlassungsart-valueset"
 * parameter[+]
   * name = #tageOhneKostenbeitrag
-  * use = #in 
+  * use = #in
   * min = 0
   * max = "1"
   * documentation = "Der *tageOhneKostenbeitrag* Parameter definiert zu für wie viele Tage kein Kostenbeitrag eingehoben wurde."

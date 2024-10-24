@@ -15,9 +15,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
 **Detaillierte Business-Logik**
 
 1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
-2. Neuer Transfer Encounter: 
+2. Neuer Transfer Encounter:
   * Ein neuer MOPEDTransferEncounter wird vorbereitet
-  * *MOPEDTransferEncounter.partOf* referenziert den MOPEDEncounter aus Schritt 1. 
+  * *MOPEDTransferEncounter.partOf* referenziert den MOPEDEncounter aus Schritt 1.
   * *MOPEDTransferEncounter.actualPeriod.start* wird mit dem *zeitpunkt* lt. Operation-Parameter befüllt.
   * *MOPEDTransferEncounter.serviceProvider* setzt eine Referenz auf die MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* bzw. *funktionssubcode* lt. Operation-Parameter. 
   * *MOPEDTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet, anhand des *MOPEDEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 1).
@@ -57,16 +57,28 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * 90-95: 90
   * 95 und älter: 95
 * Hinweis 3: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
+* Hinweis 2: LKF 4.1.9 Altersgruppe bei Entlassung/Kontakt
+  * Vollendete Lebensjahre sind ausschlaggebend
+  * 0: 0
+  * 1-4: 1
+  * 5-9: 5
+  * 10-14: 10
+  * 15-19: 15
+  * 20-24: 20
+  * ... immer weiter so, die untere Grenze des Alters in 5er-Schritten
+  * 85-89: 85
+  * 90-95: 90
+  * 95 und älter: 95
+* Hinweis 3: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
 
 """
-Usage: #definition 
 
 * id = "MOPED.Patient.Verlegen"
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-verlegen"
 * comment = "TBD: was passiert, wenn eine $aufnehmen Operation mehrmals mit Status `Aufnahme in Arbeit` aufgerufen wird und damit zu mehreren MOPEDTransferEncounter führt?"
 * name = "MOPED_Patient_Verlegen"
 * status = #draft
-* kind = #operation 
+* kind = #operation
 * affectsState = true
 * resource = #Encounter
 * system = false
@@ -75,34 +87,34 @@ Usage: #definition
 * code = #verlegen
 * parameter[+]
   * name = #aufnahmezahl
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
   * name = #zeitpunkt
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *zeitpunkt* Parameter definiert zu welchem Zeitpunkt die Verlegung stattfindet."
   * type = #dateTime
 * parameter[+]
   * name = #funktionscode
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *funktionscode* Parameter definiert auf welchen Funktionscode die Verlegung stattfindet."
   * type = #string
 * parameter[+]
   * name = #funktionssubcode
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *funktionssubcode* Parameter definiert auf welchen Funktionssubcode die Verlegung stattfindet."
   * type = #string
 * parameter[+]
-  * name = #physischeAnwesenheit
+  * name = #pysischeAnwesenheit
   * use = #in 
   * min = 0
   * max = "1"
@@ -110,14 +122,14 @@ Usage: #definition
   * type = #boolean
 * parameter[+]
   * name = #neuaufnahme
-  * use = #in 
+  * use = #in
   * min = 0
   * max = "1"
   * documentation = "Der *neuaufnahme* Parameter definiert ob es sich bei der Verlegung um die initiale Aufnahme des Patienten auf eine bestimmte Station handelt."
   * type = #boolean
 * parameter[+]
   * name = #abgangsart
-  * use = #in 
+  * use = #in
   * min = 0
   * max = "1"
   * documentation = "Der *abgangsart* Parameter definiert die Abgangsart des Patienten vom bisher aktuellen MOPEDTransferEncounter."
@@ -133,4 +145,3 @@ Usage: #definition
   * documentation = "Der *return* Parameter gibt Auskunft über den Erfolg der Operation."
   * type = #Resource
   * targetProfile[+] = Canonical(OperationOutcome)
-

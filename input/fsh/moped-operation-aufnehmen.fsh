@@ -1,13 +1,16 @@
 Instance: MOPEDPatientAufnehmen
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $aufnehmen (POC)"
-Description: """
+Description: "Die $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wird."
+Usage: #definition
+* purpose = """
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wird.
 
 **Voraussetzungen für den Aufruf**
 
+* Account-Status: n/a (die Ressource Account wird erst mit dieser Operation erstellt)
 * Account-Status: n/a (die Ressource Account wird erst mit dieser Operation erstellt)
 
 **Detaillierte Business-Logik**
@@ -27,10 +30,13 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 4. Durchführung der Operation `$verlegen` für Neufaufnahme:
   * *$verlegen#aufnahmezahl* = *$aufnehmen#aufnahmezahl*
   * *$verlegen#zeitpunkt* = Operation-Parameter falldaten mit dem Pfad *Bundle.Encounter.actualPeriod.start*
+  * *$verlegen#zeitpunkt* = Operation-Parameter falldaten mit dem Pfad *Bundle.Encounter.actualPeriod.start*
   * *$verlegen#funktionscode* = *$aufnehmen#funktionscode*
   * *$verlgegen#funktionssubcode* = *$aufnehmen#funktionssubcode*
   * *$verlegen#physischeAnwesenheit* = *$aufnehmen#physischeAnwesenheit*
   * *$verlegen#neuaufnahme* = `true`
+5. Berechnung der Datensatz-ID:
+  * Die Datensatz-ID wird aus der Aufnahmezahl lt. LKF Dokumentation als SHA-256 Hash berechnet und in das entsprechende Identifier-Slice des MOPEDEncounter eingefügt.
 5. Berechnung der Datensatz-ID:
   * Die Datensatz-ID wird aus der Aufnahmezahl lt. LKF Dokumentation als SHA-256 Hash berechnet und in das entsprechende Identifier-Slice des MOPEDEncounter eingefügt.
 
@@ -39,17 +45,17 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 * Wenn der *freigeben*-Parameter auf *true* ist, muss eine Validierung aller Ressourcen im *falldaten*-Bundle erfolgreich sein, oder die Operation schlägt fehl.
 * Es kann nie mehrere MOPEDEnconuter-Instanzen mit der gleichen Aufnahmezahl geben
 * Der Status *MOPEDEncounter.status* muss den Wert 'in-progress' haben
+* Es kann nie mehrere MOPEDEnconuter-Instanzen mit der gleichen Aufnahmezahl geben
+* Der Status *MOPEDEncounter.status* muss den Wert 'in-progress' haben
 
 **Weitere Hinweise**
 
 * Hinweis 1: Die Werte-Ausprägung des *freigeben* Parameters haben eine Auswirkung auf das Verhalten der Operation:
   * *false*: Die Patientenaufnahme ist noch nicht vollständig und wird lediglich zwischengespeichert. Hier findet keine Validierung der Encounter Ressource statt. Eine Account-Ressource wird erstellt, die den *WorkflowStatus* 'Aufnahme in Arbeit' hat und im Encounter referenziert.
-  * *true*: Die Patientenaufnahme ist vollständig und es ist zu erwarten, dass alle nötigen Felder befüllt sind. Schlägt die Validierung der *falldaten* fehl, kann die Operation nicht erfolgreich durchgeführt werden. Ist die Validierung erfolgreich, wird eine im Encounter referenzierte Account-Ressource erstellt bzw. upgedatet, die den *WorkflowStatus* 'Aufnahme freigegeben' hat. 
+  * *true*: Die Patientenaufnahme ist vollständig und es ist zu erwarten, dass alle nötigen Felder befüllt sind. Schlägt die Validierung der *falldaten* fehl, kann die Operation nicht erfolgreich durchgeführt werden. Ist die Validierung erfolgreich, wird eine im Encounter referenzierte Account-Ressource erstellt bzw. upgedatet, die den *WorkflowStatus* 'Aufnahme freigegeben' hat.
 * Hinweis 2: Es ist nicht nötig, bei dieser Operation den GDA-Identifier als Kontext mitzugeben. Auf den GDA wird im *falldaten*-Bundle als conditional Reference mittels entsprechendem Identifier im MOPEDEncounter verwiesen. Somit wird auch vermieden, dass Duplikate einer GDA-Organization-Ressource am Server angelegt/verwendet werden.
-* Hinweis 3: Im Parameter *falldaten* wird unter Anderem eine Coverage Ressource mitgegeben. Diese Ressource stammt in der Regel aus einer erfolgreichen VDAS-Abfrage. In Zukunft wird Moped auch andere Optionen unterstützen, wie die Verarbeitung von Daten von Selbstzahlern (wofür ein separates Coverage-Profil angelegt wird), oder die Verarbeitung von Fällen mit privater Krankenversicherung (auch hierfür wird ein separates Coverage-Profil angelegt). Im Ersten Schritt liegt der Fokus auf den Standard-Fall, der als Ausgangsbasis eine erfolgreich abgeschlossene VDAS-Abfrage voraussetzt. 
+* Hinweis 3: Im Parameter *falldaten* wird unter Anderem eine Coverage Ressource mitgegeben. Diese Ressource stammt in der Regel aus einer erfolgreichen VDAS-Abfrage. In Zukunft wird Moped auch andere Optionen unterstützen, wie die Verarbeitung von Daten von Selbstzahlern (wofür ein separates Coverage-Profil angelegt wird), oder die Verarbeitung von Fällen mit privater Krankenversicherung (auch hierfür wird ein separates Coverage-Profil angelegt). Im Ersten Schritt liegt der Fokus auf den Standard-Fall, der als Ausgangsbasis eine erfolgreich abgeschlossene VDAS-Abfrage voraussetzt.
 """
-Usage: #definition 
-
 * id = "MOPED.Patient.Aufnehmen"
 * base = "http://hl7.org/fhir/OperationDefinition/Patient-aufnehmen"
 * name = "MOPED_Patient_Aufnehmen"
@@ -64,7 +70,7 @@ Usage: #definition
 * code = #aufnehmen
 * parameter[+]
   * name = #falldaten
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *falldaten* Parameter beinhält die nötigen Elemente um die Details zum Fall zu beschreiben die bei Patientenaufnahme bekannt sind, inklusive Patient, Encounter und Coverage."
@@ -72,7 +78,7 @@ Usage: #definition
   * targetProfile[+] = Canonical(MOPEDAufnahmeBundle)
 * parameter[+]
   * name = #vdasid
-  * use = #in 
+  * use = #in
   * min = 0
   * max = "1"
   * documentation = "Der *vdasid* Parameter wird mitgegeben, um die Coverages die im *falldaten* Transaction-Bundle angeführt sind, die VDAS-ID zuzuweisen. Weil es je VDAS-Abfrage mehrere Coverages geben kann, ist die VDAS ID derzeit nicht als Identifier in der Coverage hinterlegt und wird separat vom System eingemeldet. Über diesen Parameter wird die VDAS ID dem Moped-Server bekannt gegeben."
@@ -110,14 +116,14 @@ Usage: #definition
   * type = #boolean
 * parameter[+]
   * name = #funktionscode
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *funktionscode* Parameter definiert auf welchen Funktionscode die Neuaufnahme stattfindet."
   * type = #string
 * parameter[+]
   * name = #funktionssubcode
-  * use = #in 
+  * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *funktionssubcode* Parameter definiert auf welchen Funktionssubcode die Neuaufnahme stattfindet."
