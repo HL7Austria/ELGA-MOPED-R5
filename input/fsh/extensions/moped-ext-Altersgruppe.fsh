@@ -1,6 +1,6 @@
 
 Extension:    Altersgruppe
-Id:           moped-ext-Altersgruppe
+Id:           moped-ext-altersgruppe
 Title:        "Altersgruppe" 
 Description:  "In Gruppen eingeteilt, wobei vollendete Lebensjahre ausschlaggebend sind."
 Context: MOPEDTransferEncounter

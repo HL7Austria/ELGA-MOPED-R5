@@ -39,17 +39,17 @@ Usage: #example
 * insurance.coverage = Reference(Coverage/Test2SVCCoverage)
 
 //Fristende
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-EndOfEligibility"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-fristende"
 * extension[=].valueBoolean = true
 
 //VAEStatus
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-vaestatus"
 * extension[=].valueCoding = $VAEStatus#00
 
-//MealcostExcemption
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-MealCostExcemption"
-* extension[=].valueCoding = $MealCostExcemption#N
+//VerpflegskostenBeitragsbefreiung
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-verpflegskostenBeitragsbefreiung"
+* extension[=].valueCoding = $VerpflegskostenBeitragsbefreiung#N
 
-//NumberOfPreviouslyPaidDays
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-NumberOfPreviouslyPaidDays"
+//VortageanzahlAufKostenbeitrag
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vortageanzahlAufKostenbeitrag"
 * extension[=].valueUnsignedInt = 0

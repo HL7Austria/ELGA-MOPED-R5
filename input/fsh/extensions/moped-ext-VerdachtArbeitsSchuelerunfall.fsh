@@ -1,6 +1,6 @@
 
 Extension: VerdachtArbeitsSchuelerunfall
-Id: moped-ext-VerdachtArbeitsSchuelerunfall
+Id: moped-ext-verdachtArbeitsSchuelerunfall
 Title: "Verdacht auf Arbeits- oder Schuelerunfall"
 Description: "MOPED Extension für den Verdacht auf einen Arbeits- oder Schuelerunfall."
 Context: MOPEDAccount

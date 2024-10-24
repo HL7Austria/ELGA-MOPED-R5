@@ -1,7 +1,7 @@
 
-Extension: EndOfEligibility
-Id: moped-ext-EndOfEligibility
-Title: "EndOfEligibility"
+Extension: Fristende
+Id: moped-ext-fristende
+Title: "Fristende"
 Description: "Fristende - Befristungen sind in folgenden Fällen vorgesehen:
 - Bei zeitlichen Beschränkungen aufgrund einer zu erwartenden, nachfolgenden medizini-
 schen Hauskrankenpflege

@@ -864,7 +864,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Anzahl der Verlängerungstage</td>
         <td>MOPEDCoverageEligibilityRequest</td>
         <td>.extension</td>
-        <td>ExtensionDays</td>
+        <td>Verlaengerungstage</td>
         <td></td>
     </tr>
     <tr>
@@ -1141,7 +1141,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Fristende</td>
         <td>MOPEDCoverageEligibilityResponse</td>
         <td>.extension</td>
-        <td>EndOfEligibility</td>
+        <td>Fristende</td>
         <td></td>
     </tr>
     <tr>
@@ -1157,7 +1157,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Verpflegskosten-Beitragsbefreiung</td>
         <td>MOPEDCoverageEligibilityResponse</td>
         <td>.extension</td>
-        <td>MealCostExcemption</td>
+        <td>MealCoVerpflegskostenBeitragsbefreiungstExcemption</td>
         <td></td>
     </tr>
     <tr>
@@ -1839,7 +1839,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>LDF-Gruppe Teil2</td>
         <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
-        <td>diagnosisRelatedNode</td>
+        <td>diagnoseKnoten</td>
         <td></td>
     </tr>
     <tr>
@@ -2614,7 +2614,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>LDF-Gruppe 2</td>
         <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
-        <td>diagnosisRelatedNode</td>
+        <td>diagnoseKnoten</td>
         <td></td>
     </tr>
     <tr>

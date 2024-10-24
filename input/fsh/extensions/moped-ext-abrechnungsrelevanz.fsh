@@ -1,6 +1,6 @@
 
 Extension:    AbrechnungsRelevanz
-Id:           moped-ext-AbrechnungsRelevanz
+Id:           moped-ext-abrechnungsRelevanz
 Title:        "Medizinische Leistung - Abrechnungsrelevanz" 
 Description:  "Hier ist anzugeben, ob die medizinische Leistung bei der Bepunktung des ambulanten Besuchs/stationären Aufenthalts (Satzart X01) zu berücksichtigen ist."
 * value[x] 0..1

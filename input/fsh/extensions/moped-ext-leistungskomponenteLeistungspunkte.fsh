@@ -1,6 +1,6 @@
 
 Extension: LeistungskomponenteLeistungspunkte
-Id: Leistungskomponente-Leistungspunkte
+Id: moped-ext-leistungskomponenteLeistungspunkte
 Title: "Leistungskomponente/Leistungspunkte"
 Description: "In dieses Datenfeld ist – soweit zutreffend – die Leistungskomponente bzw. sind die Leistungspunkte einzutragen."
 * valueUnsignedInt 0..1

@@ -13,8 +13,8 @@ Usage: #example
 * patient = Reference(Patient/Test1Patient)
 * provider = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)
 
-//ExtensionDays
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-extensionDays"
+//Verlaengerungstage
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-verlaengerungstage"
 * extension[=].valueUnsignedInt = 0
 
 //PremiumClass
@@ -50,10 +50,10 @@ Usage: #example
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-vaestatus"
 * extension[=].valueCoding = $VAEStatus#00
 
-//MealcostExcemption
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-MealCostExcemption"
-* extension[=].valueCoding = $MealCostExcemption#N
+//VerpflegskostenBeitragsbefreiung
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-VerpflegskostenBeitragsbefreiung"
+* extension[=].valueCoding = $VerpflegskostenBeitragsbefreiung#N
 
-//NumberOfPreviouslyPaidDays
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-NumberOfPreviouslyPaidDays"
+//VortageanzahlAufKostenbeitrag
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vortageanzahlAufKostenbeitrag"
 * extension[=].valueUnsignedInt = 2
