@@ -7,11 +7,13 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.ordered = false
-* identifier contains Aufnahmezahl 0..1
+* identifier contains Aufnahmezahl 0..1 and DatensatzID 0..1
 * identifier[Aufnahmezahl].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
 * identifier[Aufnahmezahl].type.coding.code = #VN (exactly)
 * identifier[Aufnahmezahl].assigner only Reference(HL7ATCoreOrganization)
-
+* identifier[DatensatzID].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
+* identifier[DatensatzID].type.coding.code = #ANON (exactly)
+* identifier[DatensatzID] ^short = "SHA-256 verschlüsselte Aufnahmezahl"
 * account only Reference(MOPEDAccount)
 
 * subject only Reference(HL7ATCorePatient)
