@@ -11,11 +11,13 @@ Description: "MOPED Profil der Condition Ressource für die LDF-Abrechnung"
 * identifier[MOPEDConditionIdentifier].type.coding.code = #RI (exactly)
 * identifier[MOPEDConditionIdentifier] ^short = "MOPED Identifier = Aufnahmezahl+ICD10Code"
 
+* encounter only Reference(MOPEDEncounter)
+* encounter 1..1
 * subject only Reference(HL7ATCorePatient)
 * code.coding ^slicing.rules = #open
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.ordered = false
 * code.coding contains ICD10 0..1 and HDG 0..1
-* code.coding[ICD10] from http://hl7.org/fhir/sid/icd-10 //TBD exchange with austrian version of icd 10
+* code.coding[ICD10] from https://termgit.elga.gv.at/CodeSystem/bmg-icd-10-2024
 * code.coding[HDG] from LKFHauptdiagnosegruppen
