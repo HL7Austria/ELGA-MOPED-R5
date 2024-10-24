@@ -24,7 +24,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 
 * extension contains Note named notiz 0..
 * diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
-* extension contains DiagnosisRelatedNode named diagnoseKnoten 0..1
+* extension contains DiagnoseKnoten named diagnoseKnoten 0..1
 * extension contains PunkteBelagsdauerausreisserUntenLeistungskomponente named punkteBelagsdauerausreisserUntenLeistungskomponente 0..1
 * extension contains PunkteBelagsdauerausreisserUntenTageskomponente named punkteBelagsdauerausreisserUntenTageskomponente 0..1
 * extension contains ZusatzpunkteBelagsdauerausreisserNachOben named zusatzpunkteBelagsdauerausreisserNachOben 0..1
@@ -35,7 +35,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * extension contains LeistungskomponenteLeistungspunkte named leistungskomponenteLeistungspunkte 0..1
 * extension contains TageskomponenteKontaktpunkte named tageskomponenteKontaktpunkte 0..1
 * extension contains TotalPoints named allePunkte 0..1
-* extension contains ErrorWarning named fehlerWarnung 0..
+* extension contains FehlerWarnung named fehlerWarnung 0..
 * extension contains Fondsrelevanz named fondRelevant 0..1
 * extension contains Plausibilitaetskennzeichen named plausibilitaetskennzeichen 0..1
 * extension contains SVAbrechnungsquartal named svAbrechnungsquartal 0..1
