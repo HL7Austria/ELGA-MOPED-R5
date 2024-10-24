@@ -36,7 +36,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 
 * reason ^slicing.rules = #open
 * reason ^slicing.discriminator.type = #value
-* reason ^slicing.discriminator.path = "type.coding.code"
+* reason ^slicing.discriminator.path = "use.coding.code"
 * reason ^slicing.ordered = false
 * reason contains Ursache 0..1
 * reason[Ursache].use from http://hl7.org/fhir/ValueSet/encounter-reason-use (required)
