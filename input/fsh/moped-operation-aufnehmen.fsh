@@ -33,6 +33,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * *$verlgegen#funktionssubcode* = *$aufnehmen#funktionssubcode*
   * *$verlegen#physischeAnwesenheit* = *$aufnehmen#physischeAnwesenheit*
   * *$verlegen#neuaufnahme* = `true`
+5. Berechnung der Datensatz-ID:
+  * Die Datensatz-ID wird aus der Aufnahmezahl lt. LKF Dokumentation als SHA-256 Hash berechnet und in das entsprechende Identifier-Slice des MOPEDEncounter eingefügt.
 
 **Validierung / Fehlerbehandlung**
 
