@@ -16,8 +16,10 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 **Detaillierte Business-Logik**
 
 1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
-2. Der Claim wird lt. Regeln (siehe unten) validiert und eingespielt
-3. Falls Schritt 2 erfolgreich war, wird der Encounter.account.workflowStatus (Encounter aus Schritt 1) wird auf 
+2. Suche aller MOPEDProcedures und MOPEDConditions, die auf den Encounter aus Schritt 1 referenzieren
+3. Suche aller MOPEDTransferEncounter die *partOf* den MOPEDEncounter aus Schritt 1 referenzieren
+4. Der Claim wird lt. Regeln (siehe unten) validiert und eingespielt
+5. Falls Schritt 4 erfolgreich war, wird der Encounter.account.workflowStatus (Encounter aus Schritt 1) wird auf 
    * `Vorläufige Meldung` gesetzt, falls der `abschliessen`-Parameter `false` ist
    * `Endgültige Meldung` gesetzt, falls der `abschliessen`-Parameter `true` ist
 
@@ -25,6 +27,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 **Validierung / Fehlerbehandlung**
 
 * Alle Procedures und Conditions aus Schritt 2 müssen im Claim vorkommen (referenziert unter `Claim.diagnosis` oder `Claim.procedure`)
+* Alle TransferEncounter aus Schritt 3 müssen in *Claim.encounter* vorkommen
+* Claim.encounter.identifier des Slice *MopedEncounter* muss der Aufnahmezahl lt. Operation-Parameter entsprechen
 * Claim.status soll `draft` sein, falls der `abschließen`-Parameter = `false` ist. 
 * Claim.status soll `active` sein, falls der `abschließen`-Parameter = `true` ist. 
 * Claim.patient muss gleich wie Encounter.subject sein (Encounter aus Schritt 1).
