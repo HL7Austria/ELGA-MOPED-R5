@@ -20,3 +20,5 @@ Alias: $KostenmeldungARK = http://tbd.at/MOPED-KostenmeldungARK
 Alias: $EconomicUnitUse = http://tbd.at/EconomicUnitUse
 Alias: $SpezielleOrganisationsform = http://tbd.at/MOPED-SpezielleOrganisationsform
 Alias: $Sonderklasse = http://tbd.at/MOPED-Sonderklasse
+Alias: $LKFHauptdiagnosegruppen = http://tbd.at/MOPED-LKFHauptdiagnosegruppen
+Alias: $LKFmedizinischeEinzelleistungen = http://tbd.at/MOPED-LKFmedizinischeEinzelleistungen
