@@ -1,6 +1,6 @@
 
-Extension: LKFPunkte
-Id: lkfPunkte
+Extension: LkfPunkte
+Id: moped-ext-lkfPunkte
 Title: "LKF Punkte"
 Description: "In dieser Extension werden alle möglichen Punkteangaben im LKF zusammengefasst."
 * extension contains
