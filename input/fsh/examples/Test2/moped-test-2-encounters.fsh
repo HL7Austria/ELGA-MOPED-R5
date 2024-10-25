@@ -126,7 +126,7 @@ Usage: #example
 * status = #in-progress
 * subject = Reference(Patient/Test2Patient)
 * partOf = Reference(Encounter/Test2MOPEDEncounter1)
-* serviceProvider = Reference(Organization/Test2OrganizationAbteilung5)
+* serviceProvider = Reference(Organization/Test2OrganizationAbteilung3)
 * actualPeriod.start = "2024-08-10T17:00:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
 * extension[=].valueUnsignedInt = 35
