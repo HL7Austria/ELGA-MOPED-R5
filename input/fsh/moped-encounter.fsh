@@ -46,7 +46,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * reason[Ursache].value from UrsacheValueSet (required)
 * reason[Ursache] ^short = "Ursache für Behandlung"
 
-* diagnosis.use from https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ (required)
+* diagnosis.use from $LKFdiagnoseTyp (required)
 * diagnosis.use ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
 
 * admission.extension contains Zugangsart named Zugangsart 0..1
