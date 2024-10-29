@@ -1,7 +1,7 @@
 
-Extension: PremiumClass
-Id: moped-ext-premiumClass
-Title: "PremiumClass"
+Extension: Sonderklasse
+Id: moped-ext-sonderklasse
+Title: "Sonderklasse"
 Description: "KLAS – Allgemeine Gebührenklasse/Sonderklasse"
 
 * value[x] 0..1

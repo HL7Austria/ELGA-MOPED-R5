@@ -656,7 +656,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Allgemeine Gebührenklasse/Sonderklasse</td>
         <td>MOPEDCoverageEligibilityRequest</td>
         <td>.extension</td>
-        <td>PremiumClass</td>
+        <td>Sonderklasse</td>
         <td></td>
     </tr>
     <tr>
@@ -1117,7 +1117,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Allgemeine Gebührenklasse/Sonderklasse</td>
         <td>MOPEDCoverageEligibilityRequest</td>
         <td>.extension</td>
-        <td>PremiumClass</td>
+        <td>Sonderklasse</td>
         <td></td>
     </tr>
     <tr>

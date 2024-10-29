@@ -46,6 +46,6 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 
 * extension contains Sonderleistungsnummer named sonderleistungsnummer 0..1
 * extension contains AnzahlSonderleistungen named anzahlSonderleistungen 0..1
-* extension contains PunkteLDFPauschale named punkteLdfPauschale 0..1
-* extension contains KonstenmeldungARK named konstenmeldungArk 0..1
+* extension contains PunkteLDFPauschale named punkteLDFPauschale 0..1
+* extension contains KonstenmeldungARK named konstenmeldungARK 0..1
 

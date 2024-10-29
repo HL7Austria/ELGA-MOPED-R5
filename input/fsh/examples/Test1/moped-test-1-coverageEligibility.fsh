@@ -17,8 +17,8 @@ Usage: #example
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-verlaengerungstage"
 * extension[=].valueUnsignedInt = 0
 
-//PremiumClass
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-premiumClass"
+//Sonderklasse
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-sonderklasse"
 * extension[=].valueCoding = $Sonderklasse#A
 
 

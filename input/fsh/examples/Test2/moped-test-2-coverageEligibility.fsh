@@ -13,8 +13,8 @@ Usage: #example
 * patient = Reference(Patient/Test2Patient)
 * provider = Reference(Organization/Test2OrganizationKrankenhausRied)
 
-//PremiumClass
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-PremiumClass"
+//Sonderklasse
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-sonderklasse"
 * extension[=].valueCoding = $Sonderklasse#A
 
 
