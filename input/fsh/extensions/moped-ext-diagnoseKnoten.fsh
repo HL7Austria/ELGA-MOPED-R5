@@ -1,6 +1,5 @@
-
-Extension: DiagnosisRelatedNode
-Id: moped-ext-diagnosisRelatedNode
+Extension: DiagnoseKnoten
+Id: moped-ext-diagnoseKnoten
 Title: "Abrechnung - Knoten"
 Description: "Lukriert die Patient:innen über eine reguläre Gruppe Punkte, so ist in diesem Datenfeld die entsprechende Knotenbezeichnung einzutragen."
 

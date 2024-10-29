@@ -1,5 +1,5 @@
 Extension:    CoverageEligibilityRequestRef
-Id:           moped-ext-CoverageEligibilityRequestRef
+Id:           moped-ext-coverageEligibilityRequestRef
 Title:        "CoverageEligibilityRequest Referenz" 
 Description:  "Referenz vom Account auf den CoverageEligibilityRequest."
 Context: MOPEDAccount

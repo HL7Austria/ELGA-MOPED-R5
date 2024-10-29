@@ -9,8 +9,8 @@ Description: "SVC Profil der Coverage Ressource für Versicherungen. Basierend a
 
 
 * extension contains
-    RezeptgebbefreitExtension named RezeptgebbefreitExtension 0..1 and
-    KostenanteilbefreitExtension named KostenanteilbefreitExtension 0..1
+    RezeptgebbefreitExtension named rezeptgebbefreitExtension 0..1 and
+    KostenanteilbefreitExtension named kostenanteilbefreitExtension 0..1
 
 * type from $ecard-anspruchsarten-vs (required)
 * type ^short = "Anspruchsart"

@@ -1,7 +1,5 @@
-
-
-Extension: ErrorWarning
-Id: moped-ext-ErrorWarning
+Extension: FehlerWarnung
+Id: moped-ext-fehlerWarnung
 Title: "Error/Warning"
 Description: "MOPED Extension für akzeptierte Errors und Warnings"
 * extension contains

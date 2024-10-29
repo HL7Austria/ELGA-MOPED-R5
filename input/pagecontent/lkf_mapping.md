@@ -645,7 +645,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Abrechnung – Knoten</td>
         <td>MOPEDClaim & MOPEDClaimResponse</td>
         <td>.extension</td>
-        <td>diagnosisRelatedNode</td>
+        <td>diagnoseKnoten</td>
         <td></td>
     </tr>
     <tr>
@@ -786,7 +786,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Error/Warning – Wert</td>
         <td>MOPEDClaim</td>
         <td>.extension</td>
-        <td>ErrorWarning.value</td>
+        <td>FehlerWarnung.value</td>
         <td></td>
     </tr>
     <tr>
@@ -794,7 +794,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Error/Warning – Code</td>
         <td>MOPEDClaim</td>
         <td>.extension</td>
-        <td>ErrorWarning.code</td>
+        <td>FehlerWarnung.code</td>
         <td></td>
     </tr>
     <tr>
@@ -802,7 +802,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Error/Warning – Kommentar</td>
         <td>MOPEDClaim</td>
         <td>.extension</td>
-        <td>ErrorWarning.comment</td>
+        <td>FehlerWarnung.comment</td>
         <td></td>
     </tr>
 </table>

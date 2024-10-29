@@ -17,7 +17,7 @@ Description: "MOPED Profil für Abteilungen innerhalb einer Krankenanstalt."
 * identifier[Funktionssubcode].type = #Funktionssubcode (exactly)
 
 
-* extension contains Kostenstelle named Kostenstelle 0..1
+* extension contains Kostenstelle named kostenstelle 0..1
 
 
 

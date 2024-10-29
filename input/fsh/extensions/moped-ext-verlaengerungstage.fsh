@@ -1,6 +1,6 @@
 
-Extension: ExtensionDays
-Id: moped-ext-extensionDays
+Extension: Verlaengerungstage
+Id: moped-ext-verlaengerungstage
 Title: "Verlaengerungstage"
 Description: "Anzahl der Verlaengerungstage bei Verlängerung"
 Context: MOPEDCoverageEligibilityRequest

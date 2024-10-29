@@ -1,6 +1,6 @@
 
 Extension: SVAbrechnungsquartal
-Id: SVAbrechnungsquartal
+Id: moped-ext-svAbrechnungsquartal
 Title: "Abrechnungsquartal der Sozialversicherung"
 Description: "Das Abrechnungsquartal ist in der Form Jahr (JJJJ) und Quartal (Q) zu melden."
 * valueDate
