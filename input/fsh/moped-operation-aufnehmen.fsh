@@ -31,7 +31,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * *$verlegen#zeitpunkt* = Operation-Parameter falldaten mit dem Pfad *Bundle.Encounter.actualPeriod.start*
   * *$verlegen#funktionscode* = *$aufnehmen#funktionscode*
   * *$verlgegen#funktionssubcode* = *$aufnehmen#funktionssubcode*
-  * *$verlegen#physischeAnwesenheit* = *$aufnehmen#physischeAnwesenheit*
+  * *$verlegen#anwesenheitsart* = *$aufnehmen#anwesenheitsart*
   * *$verlegen#neuaufnahme* = `true`
 5. Berechnung der Datensatz-ID:
   * Die Datensatz-ID wird aus der Aufnahmezahl lt. LKF Dokumentation als SHA-256 Hash berechnet und in das entsprechende Identifier-Slice des MOPEDEncounter eingefügt.
@@ -102,12 +102,15 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * documentation = "Mit Hilfe des *verdachtFremdverschulden* Parameters wird festgehalten, ob es bei der Patienten-Aufnahme einen Verdacht auf Fremdverschulden gibt. Wird dieser Parameter mitgegeben, ist im Account das entsprechende Feld zu befüllen."
   * type = #boolean
 * parameter[+]
-  * name = #physischeAnwesenheit
+  * name = #anwesenheitsart
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Der *physischeAnwesenheit* Parameter definiert ob der Patient physisch anwesend ist oder nicht."
-  * type = #boolean
+  * documentation = "Der *anwesenheitsart* Parameter definiert in welcher art der Pateint anwesend ist."
+  * type = #code
+  * binding[+]
+    * strength = #required
+    * valueSet = "moped-Anwesenheitsart-valueset"
 * parameter[+]
   * name = #funktionscode
   * use = #in
