@@ -1,4 +1,4 @@
-Profile: MOPEDEncounterSV
+Profile: MOPEDEncounterKH
 Parent: MOPEDEncounter
 Title: "MOPED Encounter KH"
 Description: "MOPED Profil der Encounter Ressource für die Rolle: KH"
