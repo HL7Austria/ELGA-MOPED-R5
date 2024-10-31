@@ -1,7 +1,8 @@
 Instance: Test2Procedure1
-InstanceOf: Procedure
+InstanceOf: MOPEDProcedure
 Usage: #example
 * id = "Test2Procedure1"
+* identifier[MOPEDConditionIdentifier].type.coding.code = #RI
 * code = $LKFmedizinischeEinzelleistungen#MEL01.01
 * subject = Reference(Patient/Test2Patient)
 * encounter = Reference(MOPEDEncounter/Test2MOPEDEncounter1)
