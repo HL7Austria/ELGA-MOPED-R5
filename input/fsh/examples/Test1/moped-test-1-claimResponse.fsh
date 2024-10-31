@@ -6,7 +6,7 @@ Usage: #example
 * type.coding.code = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * use = #claim
 * patient = Reference(Patient/Test1Patient)
-* outcome = #completed
+* outcome = #complete
 * created = "2024-11-01"
 * diagnosisRelatedGroup = $LKFAbrechnungsGruppe#HDG01.31
 * extension[DiagnoseKnoten].valueCoding = $LKFAbrechnungsKnoten#D
