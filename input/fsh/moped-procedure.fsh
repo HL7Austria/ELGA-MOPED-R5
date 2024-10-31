@@ -8,7 +8,7 @@ Description: "MOPED Profil der Procedure Ressource für die LDF-Abrechnung"
 * identifier contains MOPEDConditionIdentifier 1..1
 * identifier[MOPEDConditionIdentifier].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
 * identifier[MOPEDConditionIdentifier].type.coding.code = #RI (exactly)
-* identifier[MOPEDConditionIdentifier] ^short = "MOPED Identifier = Aufnahmezahl+ICD10Code+Procedure.occurrence(YYYY-MM-DDTHH:MM)" //TBD With or without time?
+* identifier[MOPEDConditionIdentifier] ^short = "MOPED Identifier = Aufnahmezahl+Leistungscode+Procedure.occurrence(YYYY-MM-DDTHH:MM)" //TBD With or without time?
 * encounter only Reference(MOPEDEncounter)
 * encounter 1..1
 * subject only Reference(HL7ATCorePatient)
