@@ -1,5 +1,6 @@
 Profile: MOPEDEncounter
 Parent: Encounter
+Title: "MOPED Encounter"
 Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung"
 
 
