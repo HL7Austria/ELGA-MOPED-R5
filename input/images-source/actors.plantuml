@@ -1,0 +1,18 @@
+@startuml actors
+rectangle "[[index.html Moped]]" as Moped
+
+rectangle "[[#actor-KH Krankenhaus]]" as KH
+rectangle "[[#actor-SV Sozialversicherung]]" as SV
+rectangle "[[#actor-LGF Landesgesundheitsfonds]]" as LGF
+rectangle "[[#actor-BMSGPK Bundesministerium für Soziales, \nGesundheit, Pflege \nund Konsumentenschutz]]" as BMSGPK
+
+KH -r-> Moped : "[[OperationDefinition-MOPED.Patient.Aufnehmen.html Aufnahme]]"
+SV -r-> Moped : "[[test.html Test]]"
+LGF -r-> Moped : "[[test.html Test]]"
+BMSGPK -r-> Moped : "[[test.html Test]]"
+
+KH -[hidden]-> SV
+SV -[hidden]-> LGF
+LGF -[hidden]-> BMSGPK
+
+@enduml
