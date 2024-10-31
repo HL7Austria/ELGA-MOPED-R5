@@ -5,10 +5,10 @@ Description: "MOPED Profil der Procedure Ressource für die LDF-Abrechnung"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.ordered = false
-* identifier contains MOPEDConditionIdentifier 1..1
-* identifier[MOPEDConditionIdentifier].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
-* identifier[MOPEDConditionIdentifier].type.coding.code = #RI (exactly)
-* identifier[MOPEDConditionIdentifier] ^short = "MOPED Identifier = Aufnahmezahl+Leistungscode+Procedure.occurrence(YYYY-MM-DDTHH:MM)" //TBD With or without time?
+* identifier contains MOPEDProcedureIdentifier 1..1
+* identifier[MOPEDProcedureIdentifier].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
+* identifier[MOPEDProcedureIdentifier].type.coding.code = #RI (exactly)
+* identifier[MOPEDProcedureIdentifier] ^short = "MOPED Identifier = Aufnahmezahl+Leistungscode+Procedure.occurrence(YYYY-MM-DDTHH:MM)" //TBD With or without time?
 * encounter only Reference(MOPEDEncounter)
 * encounter 1..1
 * subject only Reference(HL7ATCorePatient)
