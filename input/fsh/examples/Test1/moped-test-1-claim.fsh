@@ -10,7 +10,8 @@ Usage: #example
 * procedure[+].procedureReference = Reference(Procedure/Test1Procedure1)
 * procedure[=].extension[AbrechnungsRelevanz].valueCoding = $AbrechnungsRelevanz#J
 * procedure[=].sequence = 1
-
+* diagnosis[+].diagnosisReference = Reference(Condition/Test1Condition1)
+* diagnosis[=].sequence = 1
 * diagnosisRelatedGroup = $LKFAbrechnungsGruppe#HDG01.31
 * extension[DiagnoseKnoten].valueCoding = $LKFAbrechnungsKnoten#D
 
