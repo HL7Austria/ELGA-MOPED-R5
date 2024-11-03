@@ -11,4 +11,5 @@ Usage: #example
 * subject = Reference(Patient/Test1Patient)
 * clinicalStatus = #active
 * encounter = Reference(MOPEDEncounter/Test1MOPEDEncounter)
-* verificationStatus = #confirmed
+* verificationStatus = #confirmed //TBD
+* status = #completed
