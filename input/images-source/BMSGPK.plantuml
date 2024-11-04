@@ -1,0 +1,9 @@
+@startuml BMSGPK
+rectangle "[[index.html Moped]]" as Moped
+
+rectangle "Bundesministerium für Soziales, \nGesundheit, Pflege \nund Konsumentenschutz" as BMSGPK
+
+
+Moped -l--> BMSGPK : "[[StructureDefinition-MOPEDClaimResponse.html ClaimResponse]]"
+
+@enduml

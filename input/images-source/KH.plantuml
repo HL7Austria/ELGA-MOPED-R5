@@ -1,0 +1,16 @@
+@startuml KH
+rectangle "[[index.html Moped]]" as Moped
+
+rectangle "Krankenhaus" as KH
+
+
+KH -r--> Moped : "[[OperationDefinition-MOPED.Patient.Aufnehmen.html $aufnehmen]]"
+KH -r--> Moped : "[[OperationDefinition-MOPED.CoverageEligibilityRequest.Anfragen.html $anfragen]]"
+KH -r--> Moped : "[[OperationDefinition-MOPED.Encounter.erfassen.html $entlassen]]"
+KH -r--> Moped : "[[test.html $einmelden]]"
+KH -r--> Moped : "[[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]]"
+Moped -l--> KH : "[[StructureDefinition-MOPEDCoverageEligibilityResponse.html CoverageEligibilityResponse]]"
+Moped -l--> KH : "[[StructureDefinition-MOPEDClaimResponse.html ClaimResponse]]"
+
+
+@enduml

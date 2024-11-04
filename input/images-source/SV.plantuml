@@ -1,0 +1,11 @@
+@startuml SV
+rectangle "[[index.html Moped]]" as Moped
+
+rectangle "Sozialversicherung" as SV
+
+
+SV -r--> Moped : "[[StructureDefinition-MOPEDCoverageEligibilityResponse.html CoverageEligibility\nResponse]]"
+Moped -l--> SV : "[[StructureDefinition-MOPEDCoverageEligibilityRequest.html CoverageEligibility\nRequest]]"
+Moped -l--> SV : "[[StructureDefinition-MOPEDClaimResponse.html ClaimResponse]]"
+
+@enduml
