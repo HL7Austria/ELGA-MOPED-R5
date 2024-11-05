@@ -6,7 +6,7 @@ Usage: #example
 * id = "Test2OrganizationKrankenhausRied"
 * meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"
 * identifier[+].system = "urn:ietf:rfc:3986"
-* identifier[=].value = "1.3.6.1.4.1.36124.5.427"
+* identifier[=].value = "urn:oid:1.3.6.1.4.1.36124.5.427"
 * identifier[+].system = "TBD"
 * identifier[=].value = "K427" // Krankenanstaltennummer leistungserbringend
 * identifier[+].system = "urn:oid:1.2.40.0.10.1.4.3.2"
