@@ -7,7 +7,7 @@ Description: "MOPED Profil der Condition Ressource für die LDF-Abrechnung"
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.ordered = false
 * identifier contains MOPEDConditionIdentifier 1..1
-* identifier[MOPEDConditionIdentifier].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
+* identifier[MOPEDConditionIdentifier].type from http://terminology.hl7.org/CodeSystem/v2-0203 (required)
 * identifier[MOPEDConditionIdentifier].type.coding.code = #RI (exactly)
 * identifier[MOPEDConditionIdentifier] ^short = "MOPED Identifier = Aufnahmezahl+ICD10Code"
 * identifier 1..

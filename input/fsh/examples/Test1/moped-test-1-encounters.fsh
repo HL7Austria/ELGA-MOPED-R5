@@ -13,7 +13,7 @@ Usage: #example
 
 //Aufnahmezahl
 * identifier[+].type.coding.code = #VN 
-* identifier[=].type.coding.system = "https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier"
+* identifier[=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[=].value = "1024000028"
 * identifier[=].system = "urn:oid:1.3.6.1.4.1.36124.5.914"
 * identifier[=].assigner = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)
