@@ -57,7 +57,7 @@ jobs:
 
     - name: Install GraphViz
       run: |
-        sudo apt install graphviz
+        sudo apt-get install graphviz
 
     - name: Download IG Publisher
       uses: Legion2/download-release-action@v2.1.0
