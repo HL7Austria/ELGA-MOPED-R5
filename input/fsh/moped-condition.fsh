@@ -13,7 +13,7 @@ Description: "MOPED Profil der Condition Ressource für die LDF-Abrechnung"
 * identifier 1..
 * verificationStatus 1..1
 * clinicalStatus.extension contains DataAbsentReason named data-absent-reason 1..1
-* clinicalStatus.extension[DataAbsentReason].valueCode = http://hl7.org/fhir/StructureDefinition/data-absent-reason#not-asked
+* clinicalStatus.extension[DataAbsentReason].valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-asked
 * encounter only Reference(MOPEDEncounter)
 * encounter 1..1
 * subject only Reference(HL7ATCorePatient)
