@@ -1,8 +1,16 @@
 
-<figure>
-  {%include actors.svg%}
-  <figcaption>Moped Akteure</figcaption>
-</figure>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+</script>
+<pre class="mermaid">
+    graph LR
+    A[Test]
+    B[<a href="http://google.com">Test link on Node</a>] 
+    A ---|<a href="http://google.com">Test link on Arrow</a>| B
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner);
+</pre>
+
   <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#actor-KH"> <strong>KH</strong></a></li>
