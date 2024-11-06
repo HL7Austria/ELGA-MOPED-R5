@@ -79,7 +79,7 @@ Usage: #example
 * partOf = Reference(Encounter/Test2MOPEDEncounter1)
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung2)
 * actualPeriod.start = "2024-08-08T11:22:00+02:00" 
-* actualPeriod.end = "2024-08-08T19:22:00+02:00"
+* actualPeriod.end = "2024-08-08T11:41:00+02:00"
 * admission.dischargeDisposition.coding.system = $Abgangsart
 * admission.dischargeDisposition.coding.code = #1
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
@@ -98,6 +98,7 @@ Usage: #example
 * partOf = Reference(Encounter/Test2MOPEDEncounter1)
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung3)
 * actualPeriod.start = "2024-08-08T11:41:00+02:00" 
+* actualPeriod.end = "2024-08-08T11:41:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
 * extension[=].valueUnsignedInt = 35
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
@@ -126,7 +127,7 @@ Usage: #example
 * status = #in-progress
 * subject = Reference(Patient/Test2Patient)
 * partOf = Reference(Encounter/Test2MOPEDEncounter1)
-* serviceProvider = Reference(Organization/Test2OrganizationAbteilung5)
+* serviceProvider = Reference(Organization/Test2OrganizationAbteilung3)
 * actualPeriod.start = "2024-08-10T17:00:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
 * extension[=].valueUnsignedInt = 35
