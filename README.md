@@ -34,7 +34,17 @@ To contribute to this project, please follow the steps below to ensure a smooth 
 
 9. **Request Review**  
    - Request a review on your PR and label the corresponding Issue with `review` to notify team members that it's ready for evaluation.
-  
+
+# Updating the mapping
+
+1. **Document mapping changes**  
+   - Make changes in docs/FHIR_Mapping_for_IG.xlsx
+   - Save the file
+2. **Run python script**
+   - Run docs/generateMappingHTMLs.py
+3. **Contribute changes**
+   - Commit and push the new changes to the files ka-org_mapping.md and lkf_mapping.md according to the contribution guidelines.
+
 # Helpful References
 
 - [FHIR Financial Module for more information about many related resources](https://www.hl7.org/fhir/financial-module.html)
