@@ -1,4 +1,4 @@
 Profile: Hauptversicherter
-Parent: HL7ATCorePatient
+Parent: Person
 Title: "Hauptversicherter"
-Description: "MOPED Profil der Patient Ressource für den Hauptversicherten"
+Description: "MOPED Profil der Person Ressource für den Hauptversicherten"
