@@ -14,7 +14,7 @@ Description: "SVC Profil der Coverage Ressource für Versicherungen. Basierend a
 
 * type from $ecard-anspruchsarten-vs (required)
 * type ^short = "Anspruchsart"
-* subscriber only Reference(HL7ATCorePatient)
+* subscriber only Reference(HL7ATCorePatient or Hauptversicherter)
 * beneficiary only Reference(HL7ATCorePatient)
 * class ^slicing.discriminator.type = #value
 * class ^slicing.discriminator.path = "type.coding.code"
