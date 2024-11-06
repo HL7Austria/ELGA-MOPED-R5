@@ -1,5 +1,5 @@
 Extension:    KonstenmeldungARK
-Id:           moped-ext-KonstenmeldungARK
+Id:           moped-ext-konstenmeldungARK
 Title:        "Kostenmeldung für (A/R/K)" 
 Description:  "MOPED Extension für die Kostenmeldung. Konstenmeldung für A = Ausländerverrechnung, R = Regressangelegenheiten oder K = Kosteninformation"
 Context: MOPEDClaimResponse

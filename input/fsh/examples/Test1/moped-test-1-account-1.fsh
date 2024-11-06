@@ -4,15 +4,15 @@ InstanceOf: MOPEDAccount
 Usage: #example
 * meta.profile = "http://example.org/StructureDefinition/MOPEDAccount"
 * id = "Test1Account"
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-workflow-status"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-workflowStatus"
 * extension[=].valueCoding = $workflowstatus#TBD
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-VerdachtArbeitsSchuelerunfall"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-verdachtArbeitsSchuelerunfall"
 * extension[=].valueCoding = $VerdachtArbeitsSchuelerunfall#0
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-VerdachtFremdverschulden"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-verdachtFremdverschulden"
 * extension[=].valueBoolean = false
 
 //VDAS-ID
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-VDASID"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vdasid"
 * extension[=].valueString = "TEST12345678"
 
 * status = #active

@@ -22,8 +22,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
   * a. *MOPEDCoverageEligibilityRequest.status* mit 'active' befüllen
   * b. *MOPEDCoverageEligibilityRequest.purpose* mit 'validation' befüllen
   * c. *MOPEDCoverageEligibilityRequest.created* mit dem aktuellem Zeitpunkt befüllen
-  * d. *MOPEDCoverageEligibilityRequest.ExtensionDays* mit *verlaengerungstage* lt. Operation-Parameter befüllen
-  * e. *MOPEDCoverageEligibilityRequest.PremiumClass* mit *sonderklasse* lt. Operation-Parameter befüllen
+  * d. *MOPEDCoverageEligibilityRequest.verlaengerungstage* mit *verlaengerungstage* lt. Operation-Parameter befüllen
+  * e. *MOPEDCoverageEligibilityRequest.sonderklasse* mit *sonderklasse* lt. Operation-Parameter befüllen
   * f. *MOPEDCoverageEligibilityRequest.patient* mit *MOPEDAccount.subject* befüllen
   * g. *MOPEDCoverageEligibilityRequest.insurance.coverage* mit *MOPEDAccount.coverage.coverage* befüllen
   * h. *MOPEDCoverageEligibilityRequest.provider* mit *MOPEDAccount.owner* befüllen

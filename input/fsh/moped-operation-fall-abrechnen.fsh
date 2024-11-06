@@ -22,7 +22,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 5. Falls Schritt 4 erfolgreich war, wird der Encounter.account.workflowStatus (Encounter aus Schritt 1) wird auf 
    * `Vorläufige Meldung` gesetzt, falls der `abschliessen`-Parameter `false` ist
    * `Endgültige Meldung` gesetzt, falls der `abschliessen`-Parameter `true` ist
-
+6. Alle Referenzen sollen versionsspezifisch aufgelöst werden.
 
 **Validierung / Fehlerbehandlung**
 

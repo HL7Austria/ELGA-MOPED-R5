@@ -22,7 +22,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * *MOPEDTransferEncounter.serviceProvider* setzt eine Referenz auf die MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* bzw. *funktionssubcode* lt. Operation-Parameter.
   * *MOPEDTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet, anhand des *MOPEDEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 1).
   * *MOPEDTransferEncounter.Altersgruppe* wird lt. LKF-Regeln berechnet, anhand des *MOPEDEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2).
-  * *MOPEDTransferEncounter.PhysischeAnwesenheit* wird lt. Operation-Parameter befüllt.
+  * *MOPEDTransferEncounter.subjectStatus.code* enthält den code lt. Operations-Parameter anwesenheitsart, und zusätzlich wird aus dem ValueSet der Display-Wert ausgelesen und in MOPEDTransferEncounter.subjectStatus.display gepseichert
 3. Account AnzahlVerlegungen: Die Extension *Account.extension.AnzahlVerlegungen* im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht. Dies ist auch so, wenn es sich bei der Verlegung um einen Urlaub handeln sollte (siehe Hinweis 3).
 4. Alter Transfer Encounter:
   * Dieser Schritt ist nur relevant, wenn es sich *nicht* um eine Neufaufnahme (lt. Operation-Parameter) handelt.
@@ -101,12 +101,15 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * documentation = "Der *funktionssubcode* Parameter definiert auf welchen Funktionssubcode die Verlegung stattfindet."
   * type = #string
 * parameter[+]
-  * name = #physischeAnwesenheit
+  * name = #anwesenheitsart
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Der *physischeAnwesenheit* Parameter definiert ob der Patient physisch anwesend ist oder nicht."
-  * type = #boolean
+  * documentation = "Der *anwesenheitsart* Parameter definiert in welcher art der Pateint anwesend ist."
+  * type = #code
+  * binding[+]
+    * strength = #required
+    * valueSet = "moped-Anwesenheitsart-valueset"
 * parameter[+]
   * name = #neuaufnahme
   * use = #in

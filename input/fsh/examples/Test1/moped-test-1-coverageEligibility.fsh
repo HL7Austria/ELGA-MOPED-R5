@@ -13,12 +13,12 @@ Usage: #example
 * patient = Reference(Patient/Test1Patient)
 * provider = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)
 
-//ExtensionDays
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-extensionDays"
+//Verlaengerungstage
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-verlaengerungstage"
 * extension[=].valueUnsignedInt = 0
 
-//PremiumClass
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-PremiumClass"
+//Sonderklasse
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-sonderklasse"
 * extension[=].valueCoding = $Sonderklasse#A
 
 
@@ -43,17 +43,17 @@ Usage: #example
 * insurance.coverage = Reference(Coverage/Test1SVCCoverage)
 
 //Fristende
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-EndOfEligibility"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-fristende"
 * extension[=].valueBoolean = true
 
 //VAEStatus
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vaestatus"
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vaeStatus"
 * extension[=].valueCoding = $VAEStatus#00
 
-//MealcostExcemption
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-MealCostExcemption"
-* extension[=].valueCoding = $MealCostExcemption#N
+//VerpflegskostenBeitragsbefreiung
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-verpflegskostenBeitragsbefreiung"
+* extension[=].valueCoding = $VerpflegskostenBeitragsbefreiung#N
 
-//NumberOfPreviouslyPaidDays
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-NumberOfPreviouslyPaidDays"
+//VortageanzahlAufKostenbeitrag
+* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vortageanzahlAufKostenbeitrag"
 * extension[=].valueUnsignedInt = 2

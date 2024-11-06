@@ -1,7 +1,5 @@
-
-
 Extension: Kostenstelle
-Id: moped-ext-Kostenstelle
+Id: moped-ext-kostenstelle
 Title: "Kostenstelle"
 Description: "MOPED Extension für akzeptierte Errors und Warnings"
 * extension contains

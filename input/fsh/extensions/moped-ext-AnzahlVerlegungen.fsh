@@ -1,6 +1,6 @@
 
 Extension:    AnzahlVerlegungen
-Id:           moped-ext-AnzahlVerlegungen
+Id:           moped-ext-anzahlVerlegungen
 Title:        "AnzahlVerlegungen" 
 Description:  "MOPED Extension für die Anzahl der Verlegungen"
 Context: MOPEDAccount
