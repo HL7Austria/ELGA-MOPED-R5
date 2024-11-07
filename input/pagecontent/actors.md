@@ -4,13 +4,30 @@
 </script>
 <pre class="mermaid">
     graph LR
-    A[Test]
-    B[<a href="http://google.com">Test link on Node</a>] 
-    A ---|<a href="http://google.com">Test link on Arrow</a>| B
-    B-->C[fa:fa-ban forbidden]
-    B-->D(fa:fa-spinner);
-</pre>
+    KH[Krankenhaus]
+    SV[Sozialversicherung]
+    BMSGPK[BMSGPK]
+    LGF[Landesgesundheitsfonds]
+    Moped[<a href="index.html">Moped</a>] 
 
+    KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> $aufnehmen</a>| Moped 
+    KH -->|<a href="OperationDefinition-MOPED.CoverageEligibilityRequest.Anfragen.html"> $anfragen</a>| Moped
+    KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html"> $entlassen</a>| Moped 
+    KH -->|$einmelden| Moped
+    KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped
+    Moped -->|<a href="StructureDefinition-MOPEDCoverageEligibilityResponse.html"> GET_CoverageEligibilityResponse</a>| KH
+    Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET_ClaimResponse</a>| KH
+
+    Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET ClaimResponse</a>| SV
+    Moped --->|<a href="StructureDefinition-MOPEDCoverageEligibilityRequest.html"> GET CoverageEligibilityRequest</a>| SV
+    SV --->|<a href="StructureDefinition-MOPEDCoverageEligibilityResponse.html"> GET CoverageEligibilityResponse</a>| Moped
+
+    Moped --->|<a href="StructureDefinition-MOPEDClaim.html"> GET Claim</a>| LGF
+    LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Freigeben.html"> $freigeben</a>| Moped
+    LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Auffordern.html"> $auffordern</a>| Moped
+
+    Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET_ClaimResponse</a>| BMSGPK 
+</pre>  
   <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#actor-KH"> <strong>KH</strong></a></li>
@@ -21,42 +38,64 @@
         <li><a data-toggle="tab" href="#actor-medMel"> <strong>med. Melderegister</strong></a></li>
     </ul>
     <div class="tab-content">
-        <div id="actor-KH" class="tab-pane fade in active">
+        <div id="actor-KH" class="tab-pane active">
             <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
                 Im MOPED-Kontext spielt eine Krankenanstalt (KH) eine zentrale Rolle als Initiator zahlreicher Prozesse und als Meldestelle für vielfältige Daten. Diese umfassen unter anderem die Patientenaufnahme, die Abfrage des Versicherungsstatus und -anspruchs, die Erfassung von Versorgungsdaten während der Patientenbehandlung, die Entlassung sowie die Initiierung der Leistungsabrechnung.
             </div>
-            <figure>
-              {%include KH.svg%}
-            </figure>    
+            <pre class="mermaid">
+                graph LR
+                KH[Krankenhaus]
+                Moped[<a href="index.html">Moped</a>] 
+                KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> $aufnehmen</a>| Moped 
+                KH -->|<a href="OperationDefinition-MOPED.CoverageEligibilityRequest.Anfragen.html"> $anfragen</a>| Moped
+                KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html"> $entlassen</a>| Moped 
+                KH -->|$einmelden| Moped
+                KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped
+                Moped -->|<a href="StructureDefinition-MOPEDCoverageEligibilityResponse.html"> GET_CoverageEligibilityResponse</a>| KH
+                Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET_ClaimResponse</a>| KH
+            </pre>  
         </div>
-        <div id="actor-SV" class="tab-pane fade">
+        <div id="actor-SV" class="tab-pane active">
            <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
               Im MOPED-Kontext übernimmt die Sozialversicherung (SV) eine zentrale Rolle, indem sie Rückmeldungen zur Versichertenanspruchserklärung bereitstellt, über die Entlassung von Patienten informiert wird und Benachrichtigungen über freigegebene Daten erhält. Darüber hinaus ist die SV verantwortlich für die Kostenmeldungsanforderung und Rückmeldungen im Zusammenhang mit der Ausländerverrechnung sowie Regressen.
            </div>
-           <figure>
-              {%include SV.svg%}
-            </figure>   
+           <pre class="mermaid">
+              graph LR
+              SV[Sozialversicherung]
+              Moped[<a href="index.html">Moped</a>] 
+              Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET ClaimResponse</a>| SV
+              Moped --->|<a href="StructureDefinition-MOPEDCoverageEligibilityRequest.html"> GET CoverageEligibilityRequest</a>| SV
+              SV --->|<a href="StructureDefinition-MOPEDCoverageEligibilityResponse.html"> GET CoverageEligibilityResponse</a>| Moped
+            </pre>   
         </div>
-        <div id="actor-LGF" class="tab-pane fade">
+        <div id="actor-LGF" class="tab-pane active">
           <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
               Im MOPED-Kontext sind die Landesgesundheitsfonds (LGF) für das Scoring der Leistungen im Rahmen der Abrechnung verantwortlich. Sie geben Hinweise und Begründungen bei Abweisungen und fordern gegebenenfalls Korrekturen an. Sobald von den Krankenanstalten ein endgültiges Scoring vorliegt, wird der LGF informiert und vergibt anschließend die endgültige Freigabe. Der LGF erhält zusätzliche Informationen der SV über den Verrechnungsstatus bei Ausländerverrechnung und Regressen.
           </div>
-          <figure>
-            {%include LGF.svg%}
-          </figure> 
+          <pre class="mermaid">
+              graph LR
+              LGF[Landesgesundheitsfonds]
+              Moped[<a href="index.html">Moped</a>] 
+              Moped --->|<a href="StructureDefinition-MOPEDClaim.html"> GET Claim</a>| LGF
+              LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Freigeben.html"> $freigeben</a>| Moped
+              LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Auffordern.html"> $auffordern</a>| Moped
+          </pre>
         </div>
-        <div id="actor-BMSGPK" class="tab-pane fade">
+        <div id="actor-BMSGPK" class="tab-pane active">
             <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
               Im MOPED-Kontext spielt das Bundesministerium für Soziales, Gesundheit, Pflege und Konsumentenschutz (BMSGPK) eine bedeutende Rolle, da nach der Abrechnung pseudonymisierte Daten freigegeben werden. Diese Daten liefern dem BMSGPK wichtige Informationen für die strategische Steuerung im Gesundheitswesen.
             </div>
-            <figure>
-              {%include BMSGPK.svg%}
-            </figure>   
+            <pre class="mermaid">
+                graph LR
+                BMSGPK[BMSGPK]
+                Moped[<a href="index.html">Moped</a>] 
+                Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET_ClaimResponse</a>| BMSGPK  
+            </pre>
         </div>
-        <div id="actor-EMS" class="tab-pane fade">
+        <div id="actor-EMS" class="tab-pane">
            TBD
         </div>
-        <div id="actor-medMel" class="tab-pane fade">
+        <div id="actor-medMel" class="tab-pane">
             TBD
         </div>
     </div>
