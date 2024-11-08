@@ -1,9 +1,0 @@
-@startuml LGF
-rectangle "[[index.html Moped]]" as Moped
-rectangle "Landesgesundheitsfonds" as LGF
-
-Moped -l--> LGF : "[[StructureDefinition-MOPEDClaim.html Claim]]"
-LGF -r--> Moped : "[[OperationDefinition-MOPED.ClaimResponse.Freigeben.html $freigeben]]"
-LGF -r--> Moped : "[[OperationDefinition-MOPED.ClaimResponse.Auffordern.html $auffordern]]"
-
-@enduml
