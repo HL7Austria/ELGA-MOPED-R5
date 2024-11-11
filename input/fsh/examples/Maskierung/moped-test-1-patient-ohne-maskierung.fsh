@@ -15,11 +15,19 @@ Usage: #example
 * name.given = "Patientenkommun"
 * gender = #female
 * birthDate = "1969-04-21"
-* address.use = #home
-* address.line = "Baumgasse 20a"
-* address.city = "Wien"
-* address.postalCode = "1030"
-* address.country = "AT"
+* address = MOPEDTest1PatientOhneMaskierungAddress
 * extension[+].extension.url = "code"
 * extension[=].extension.valueCodeableConcept = $iso-3166-1-alpha-3#AUT "Österreich"
 * extension[=].url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
+
+Instance:    MOPEDTest1PatientOhneMaskierungAddress
+InstanceOf:  HL7ATCoreAddress
+Usage:       #inline
+* use = http://hl7.org/fhir/address-use#home
+* line = "Baumgasse 20a" 
+* line.extension[street].valueString = "Baumgasse"
+* line.extension[streetNumber].valueString = "20a"
+* city = "Wien"
+* postalCode = "1030"
+* country = "AUT"
+* extension[AddressMunicipalityCode].valueString = "90301"
