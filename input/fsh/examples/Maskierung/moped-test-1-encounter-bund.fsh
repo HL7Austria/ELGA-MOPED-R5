@@ -7,7 +7,8 @@ Usage: #example
 //DatensatzID
 * identifier[+].type.coding.code = #ANON
 * identifier[=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[=].value = "TBD"
+* identifier[=].value = "fb0db1bc083206dd011294220dd43884249f9bff9b830bd18d433b45466b8e62"
+* identifier[=].system = "http://example.org/DatensatzID"
 * account = Reference(Account/Test1Account)
 //Behandlungsart
 * class[+].coding.system = $Behandlungsart
