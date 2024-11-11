@@ -24,7 +24,7 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 * entry ^slicing.ordered = false
 * entry contains
   Encounter 1..1
-* entry[Encounter].resource only MOPEDEncounter
+* entry[Encounter].resource only MOPEDEncounterKH
 * entry contains
   Coverage 1..1
 * entry[Coverage].resource only SVCCoverage
