@@ -8,7 +8,7 @@ Usage: #example
 * created = "2024-09-17"
 * insurer = Reference(Organization/Test1OrganizationInsurance1)
 
-* insurance.coverage = Reference(Coverage/Test1SVCCoverage)
+* insurance.coverage = Reference(Coverage/Test1MOPEDCoverage)
 
 * patient = Reference(Patient/Test1Patient)
 * provider = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)
@@ -40,7 +40,7 @@ Usage: #example
 //VAE Beginn & Enddatum
 * insurance.benefitPeriod.start = "2024-02-22"
 * insurance.benefitPeriod.end = "2024-08-21"
-* insurance.coverage = Reference(Coverage/Test1SVCCoverage)
+* insurance.coverage = Reference(Coverage/Test1MOPEDCoverage)
 
 //Fristende
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-fristende"

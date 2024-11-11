@@ -1,5 +1,5 @@
 Instance: Test2SVCCoverage
-InstanceOf: SVCCoverage
+InstanceOf: MOPEDCoverage
 Usage: #example
 * id = "Test2SVCCoverage"
 * meta.profile = "http://example.org/StructureDefinition/SVCCoverage"
