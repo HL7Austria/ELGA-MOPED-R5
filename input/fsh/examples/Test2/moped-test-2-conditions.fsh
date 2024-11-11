@@ -9,9 +9,9 @@ Usage: #example
 * code.coding[ICD10] = $icd-10#S82.0 "TBD"
 * code.coding[HDG] = $LKFHauptdiagnosegruppen#HDG24.01 "TBD"
 * subject = Reference(Patient/Test2Patient)
-* clinicalStatus = #active
+* clinicalStatus.coding.code = #active
 * encounter = Reference(MOPEDEncounter/Test2MOPEDEncounter1)
-* verificationStatus = #confirmed
+* verificationStatus.coding.code = #confirmed
 
 
 Instance: Test2Condition2
@@ -23,6 +23,6 @@ Usage: #example
 * code.coding[ICD10] = $icd-10#999.9 "TBD"
 * code.coding[HDG] = $LKFHauptdiagnosegruppen#HDG24.01 "TBD"
 * subject = Reference(Patient/Test2Patient)
-* clinicalStatus = #active
+* clinicalStatus.coding.code = #active
 * encounter = Reference(MOPEDEncounter/Test2MOPEDEncounter1)
-* verificationStatus = #confirmed
+* verificationStatus.coding.code = #confirmed

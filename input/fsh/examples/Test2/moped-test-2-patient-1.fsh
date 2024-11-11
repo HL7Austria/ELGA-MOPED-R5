@@ -1,5 +1,5 @@
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $elga-laendercodes = https://termgit.elga.gv.at/ValueSet/elga-laendercodes
+Alias: $iso-3166-1-alpha-3 = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3
 
 Instance: Test2Patient
 InstanceOf: HL7ATCorePatient
@@ -20,5 +20,6 @@ Usage: #example
 * address.city = "Wien"
 * address.postalCode = "1020"
 * address.country = "AT"
-* extension.url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
-* extension.valueCodeableConcept = $elga-laendercodes#AT "Austria"
+* extension[+].extension.url = "code"
+* extension[=].extension.valueCodeableConcept = $iso-3166-1-alpha-3#AUT "Österreich"
+* extension[=].url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"

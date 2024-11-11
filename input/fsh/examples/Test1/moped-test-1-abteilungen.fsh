@@ -3,10 +3,10 @@ InstanceOf: MOPEDOrganizationAbteilung
 * id = "Test1OrganizationAbteilung1"
 * meta.profile = "http://example.org/StructureDefinition/MOPEDOrganizationAbteilung"
 * partOf = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)
-* identifier[+].type = #Funktionscode
-* identifier[=].value = "131180"
-* identifier[+].type = #Funktionssubcode
-* identifier[=].value = "00"
+* identifier[+].value = "131180"
+* identifier[=].system = "http://example.org/lkf-system/funktionscode"
+* identifier[+].value = "00"
+* identifier[=].system = "http://example.org/lkf-system/funktionssubcode"
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-Kostenstelle"
 * extension[=].extension[+].url = "InterneKostenstellennummer"
 * extension[=].extension[=].valueUnsignedInt = 11160

@@ -7,14 +7,14 @@ Description: "MOPED Profil für Abteilungen innerhalb einer Krankenanstalt."
 
 //Slice for identifier
 * identifier ^slicing.rules = #open
-* identifier ^slicing.discriminator.type = #type
-* identifier ^slicing.discriminator.path = "type.coding.code"
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.ordered = false
 * identifier contains Funktionscode 0..1 and Funktionssubcode 0..1
 * identifier[Funktionscode] ^short = "Funktionscode der Abteilung laut LKF"
-* identifier[Funktionscode].type = #Funktionscode (exactly)
+* identifier[Funktionscode].system = "http://example.org/lkf-system/funktionscode" (exactly)
 * identifier[Funktionssubcode] ^short = "Funktionssubcode der Abteilung laut LKF"
-* identifier[Funktionssubcode].type = #Funktionssubcode (exactly)
+* identifier[Funktionssubcode].system = "http://example.org/lkf-system/funktionssubcode" (exactly)
 
 
 * extension contains Kostenstelle named kostenstelle 0..1

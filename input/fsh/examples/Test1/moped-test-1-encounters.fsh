@@ -64,7 +64,7 @@ Usage: #example
 * serviceProvider = Reference(Organization/Test1OrganizationAbteilung1)
 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-Altersgruppe"
-* extension[=].valueUnsignedInt = 50
+* extension[=].valueCode = #55
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-Neugeborenes"
 * extension[=].valueBoolean = false
 

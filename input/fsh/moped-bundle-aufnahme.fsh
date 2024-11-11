@@ -35,5 +35,5 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
   Hauptversicherter 0..1
 * entry[Hauptversicherter].resource only Hauptversicherter
 * entry contains
-  ÜberweisendeOrganisation 0..1
-* entry[ÜberweisendeOrganisation].resource only HL7ATCoreOrganization
+  UeberweisendeOrganisation 0..1
+* entry[UeberweisendeOrganisation].resource only HL7ATCoreOrganization

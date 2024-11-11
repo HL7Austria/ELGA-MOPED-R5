@@ -64,7 +64,7 @@ Usage: #example
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung1)
 * actualPeriod.start = "2024-08-08T08:21:00+02:00" //für ersten TransferEncounter gleich mit MOPEDEncounter start
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueUnsignedInt = 35
+* extension[=].valueCode = #35
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
 * extension[=].valueBoolean = false
 
@@ -83,7 +83,7 @@ Usage: #example
 * admission.dischargeDisposition.coding.system = $Abgangsart
 * admission.dischargeDisposition.coding.code = #1
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueUnsignedInt = 35
+* extension[=].valueCode = #35
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
 * extension[=].valueBoolean = false
 
@@ -100,7 +100,7 @@ Usage: #example
 * actualPeriod.start = "2024-08-08T11:41:00+02:00" 
 * actualPeriod.end = "2024-08-08T11:41:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueUnsignedInt = 35
+* extension[=].valueCode = #35
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
 * extension[=].valueBoolean = false
 
@@ -115,7 +115,7 @@ Usage: #example
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung4)
 * actualPeriod.start = "2024-08-09T11:38:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueUnsignedInt = 35
+* extension[=].valueCode = #35
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
 * extension[=].valueBoolean = false
 
@@ -130,6 +130,6 @@ Usage: #example
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung3)
 * actualPeriod.start = "2024-08-10T17:00:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueUnsignedInt = 35
+* extension[=].valueCode = #35
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
 * extension[=].valueBoolean = false

@@ -7,7 +7,7 @@ Description: "MOPED Profil der CoverageEligibilityRequest Ressource für die Ver
 * patient only Reference(HL7ATCorePatient)
 
 
-* extension contains Verlaengerungstage named verlängerungstage 0..1
+* extension contains Verlaengerungstage named verlaengerungstage 0..1
 * extension contains Sonderklasse named sonderklasse 0..1
 
 * provider only Reference(HL7ATCoreOrganization)
