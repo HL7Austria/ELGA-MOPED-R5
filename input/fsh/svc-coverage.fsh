@@ -1,7 +1,7 @@
 
-Alias: $ecard-anspruchsarten-vs = https://www.chipkarte.at/de/vdas-on-fhir/site/ValueSet-ecard-anspruchsarten-vs.html
-Alias: $ecard-versichertenarten-vs = https://www.chipkarte.at/de/vdas-on-fhir/site/ValueSet-ecard-versichertenarten-vs.html
-Alias: $ecard-versichertenkategorien-vs = https://www.chipkarte.at/de/vdas-on-fhir/site/ValueSet-ecard-versichertenkategorien-vs.html
+Alias: $ecard-anspruchsarten-vs = http://svc.co.at/Valueset/ecard-anspruchsarten-vs
+Alias: $ecard-versichertenarten-vs = http://svc.co.at/CodeSystem/ecard-versichertenart-vs
+Alias: $ecard-versichertenkategorien-vs = http://svc.co.at/CodeSystem/ecard-versichertenkategorie-vs
 
 Profile: SVCCoverage
 Parent: Coverage
