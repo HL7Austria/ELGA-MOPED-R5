@@ -23,6 +23,8 @@ Description: "MOPED Profil der Condition Ressource für die LDF-Abrechnung"
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.ordered = false
 * code.coding contains ICD10 1..1 and HDG 1..1
-* code.coding[ICD10] from https://termgit.elga.gv.at/CodeSystem/bmg-icd-10-2024
-* code.coding[HDG] from LKFHauptdiagnosegruppen
+* code.coding[ICD10] from $ICD10AT (required)
+* code.coding[ICD10].system = $ICD10AT
+* code.coding[HDG] from LKFHauptdiagnosegruppen (required)
+* code.coding[HDG].system = $LKFHauptdiagnosegruppen
 
