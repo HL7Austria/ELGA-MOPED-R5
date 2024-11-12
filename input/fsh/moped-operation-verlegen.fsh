@@ -58,6 +58,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * 95 und älter: 95
 * Hinweis 3: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
 
+**Annahmen an das BeS**
+* Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle verlegt werden können.
+
 """
 Usage: #definition 
 

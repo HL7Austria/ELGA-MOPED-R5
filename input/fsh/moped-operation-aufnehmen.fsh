@@ -47,6 +47,10 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * *true*: Die Patientenaufnahme ist vollständig und es ist zu erwarten, dass alle nötigen Felder befüllt sind. Schlägt die Validierung der *falldaten* fehl, kann die Operation nicht erfolgreich durchgeführt werden. Ist die Validierung erfolgreich, wird eine im Encounter referenzierte Account-Ressource erstellt bzw. upgedatet, die den *WorkflowStatus* 'Aufnahme freigegeben' hat. 
 * Hinweis 2: Es ist nicht nötig, bei dieser Operation den GDA-Identifier als Kontext mitzugeben. Auf den GDA wird im *falldaten*-Bundle als conditional Reference mittels entsprechendem Identifier im MOPEDEncounter verwiesen. Somit wird auch vermieden, dass Duplikate einer GDA-Organization-Ressource am Server angelegt/verwendet werden.
 * Hinweis 3: Im Parameter *falldaten* wird unter Anderem eine Coverage Ressource mitgegeben. Diese Ressource stammt in der Regel aus einer erfolgreichen VDAS-Abfrage. In Zukunft wird Moped auch andere Optionen unterstützen, wie die Verarbeitung von Daten von Selbstzahlern (wofür ein separates Coverage-Profil angelegt wird), oder die Verarbeitung von Fällen mit privater Krankenversicherung (auch hierfür wird ein separates Coverage-Profil angelegt). Im Ersten Schritt liegt der Fokus auf den Standard-Fall, der als Ausgangsbasis eine erfolgreich abgeschlossene VDAS-Abfrage voraussetzt. 
+
+**Annahmen an das BeS**
+* Es wurde vorab geprüft, ob das `system` des Parameters `falldaten`.encounter.identifier dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle aufgenommen werden können.
+
 """
 Usage: #definition 
 
@@ -70,13 +74,6 @@ Usage: #definition
   * documentation = "Der *falldaten* Parameter beinhält die nötigen Elemente um die Details zum Fall zu beschreiben die bei Patientenaufnahme bekannt sind, inklusive Patient, Encounter und Coverage."
   * type = #Resource
   * targetProfile[+] = Canonical(MOPEDAufnahmeBundle)
-* parameter[+]
-  * name = #vdasid
-  * use = #in 
-  * min = 0
-  * max = "1"
-  * documentation = "Der *vdasid* Parameter wird mitgegeben, um die Coverages die im *falldaten* Transaction-Bundle angeführt sind, die VDAS-ID zuzuweisen. Weil es je VDAS-Abfrage mehrere Coverages geben kann, ist die VDAS ID derzeit nicht als Identifier in der Coverage hinterlegt und wird separat vom System eingemeldet. Über diesen Parameter wird die VDAS ID dem Moped-Server bekannt gegeben."
-  * type = #string
 * parameter[+]
   * name = #freigeben
   * use = #in
