@@ -30,7 +30,6 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantwort
 """
 
 * id = "MOPED.CoverageEligibilityResponse.Beantworten"
-* base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityResponse-beantworten"
 * name = "MOPED_CoverageEligibilityResponse_Beantworten"
 * status = #draft
 * kind = #operation

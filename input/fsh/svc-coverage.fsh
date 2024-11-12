@@ -12,7 +12,7 @@ Description: "SVC Profil der Coverage Ressource für Versicherungen. Basierend a
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.ordered = false
 * identifier contains VDASID 0..1
-* identifier.system = "http://tbd-svc/vdasid"
+* identifier[VDASID].system = "http://tbd-svc/vdasid"
 * identifier[VDASID].assigner only Reference(HL7ATCoreOrganization)
 * extension contains
     RezeptgebbefreitExtension named RezeptgebbefreitExtension 0..1 and

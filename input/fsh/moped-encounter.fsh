@@ -12,6 +12,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * identifier[Aufnahmezahl].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
 * identifier[Aufnahmezahl].type.coding.code = #VN (exactly)
 * identifier[Aufnahmezahl].assigner only Reference(HL7ATCoreOrganization)
+* identifier[Aufnahmezahl].system 1..1
 * identifier[DatensatzID].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
 * identifier[DatensatzID].type.coding.code = #ANON (exactly)
 * identifier[DatensatzID] ^short = "SHA-256 verschlüsselte Aufnahmezahl"
@@ -34,8 +35,10 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * class contains Behandlungsart 0..1 and Aufnahmeart 0..1
 * class[Behandlungsart] ^short = "Behandlungsart"
 * class[Behandlungsart] from Behandlungsart (required)
+* class[Behandlungsart].coding.system = $Behandlungsart
 * class[Aufnahmeart] ^short = "Aufnahmeart"
 * class[Aufnahmeart] from Aufnahmeart (required)
+* class[Aufnahmeart].coding.system = $Aufnahmeart
 
 * reason ^slicing.rules = #open
 * reason ^slicing.discriminator.type = #value

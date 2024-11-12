@@ -19,9 +19,11 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * insurance.coverage 1..1
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
-* encounter contains MopedEncounter 1..1 and TransferEncounter 1..
-* encounter[MopedEncounter] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
-* encounter[MopedEncounter] only Reference(MOPEDEncounter)
+* encounter ^slicing.discriminator[+].type = #profile
+* encounter ^slicing.discriminator[=].path = "resolve()"
+* encounter contains MopedEncounterKH 1..1 and TransferEncounter 0..
+* encounter[MopedEncounterKH] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
+* encounter[MopedEncounterKH] only Reference(MOPEDEncounterKH)
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
 * encounter[TransferEncounter] only Reference(MOPEDTransferEncounter)
 

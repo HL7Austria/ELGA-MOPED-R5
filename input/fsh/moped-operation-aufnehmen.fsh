@@ -55,7 +55,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 Usage: #definition 
 
 * id = "MOPED.Patient.Aufnehmen"
-* base = "http://hl7.org/fhir/OperationDefinition/Patient-aufnehmen"
 * name = "MOPED_Patient_Aufnehmen"
 * status = #draft
 * comment = "TBD: möchten wir zusätzlich zur GDA-Referenz einen Input-Parameter, der gleich sein muss? Um in einem Extra-Schritt zusätzlich auf Gleichheit mit der Referenz in falldaten.MOPEDEncounter.serviceProvider prüfen zu können?; Frage an Architektur: gibt es Möglichkeiten, einen solchen Input-Parameter (GDA als Kontext) automatisiert auf einem anderen Sicherheits-Level zu befüllen als der Inhalt des Transaction Body?; Check, wo version-specific References nötig sind - ggf. relevant für Account.subject, Account.owner und Account.coverage sobald Modus auf *freigeben*. Überlegen, für was der Status Aufnahme in Arbeit tatsächlich nützlich ist und wenn dieser wirklich nötig ist, was passiert, wenn diese Operation mehrfach aufgerufen wird (speziell mit dem Einbringen von Hauptversicherten im Zuge der Speicherung von Coverages, das Anlegen von MOPEDTransfer Encounters via $verlgen ect.)"
@@ -90,7 +89,7 @@ Usage: #definition
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = "moped-VerdachtArbeitsSchuelerunfall-valueset"
+    * valueSet = Canonical(VerdachtArbeitsSchuelerunfallVS)
 * parameter[+]
   * name = #verdachtFremdverschulden
   * use = #in
