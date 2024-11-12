@@ -1,4 +1,4 @@
-Die folgende Beschreibung und die zugehörigen Diagramme illustrieren den neuen Sollprozess in FHIR. Ziel ist es, die Kommunikation und Datenübermittlung im österreichischen Gesundheitswesen zu standardisieren und zu harmonisieren. Dies umfasst die verschiedenen Phasen der Aufnahme, Patientenversorgung, Entlassung, Abrechnung und Dokumentation.
+Die folgende Beschreibung und die zugehörigen Diagramme illustrieren den neuen Prozess in FHIR. Ziel ist es, die Kommunikation und Datenübermittlung im österreichischen Gesundheitswesen zu standardisieren und zu harmonisieren. Dies umfasst die verschiedenen Phasen der Aufnahme, Patientenversorgung, Entlassung, Abrechnung und Dokumentation.
 
 Die einzelnen Abschnitte beschreiben detailliert die Schritte und Interaktionen zwischen den beteiligten Akteuren. Die Diagramme verdeutlichen, wie der neue Prozess zur effizienten und konsistenten Datenkommunikation eingesetzt werden kann. 
 
