@@ -16,7 +16,3 @@ Usage: #example
 * status = #active
 * subject = Reference(Patient/Test2Patient)
 * owner = Reference(Organization/Test2OrganizationKrankenhausRied)
-
-//VDAS-ID
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vdasid"
-* extension[=].valueString = "FJK5MCDPMRCY"

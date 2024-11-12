@@ -4,7 +4,7 @@ Description: "MOPED Profil der Coverage Ressource für Versicherungen."
 
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding.code"
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.ordered = false
 * identifier contains VDASID 0..1
 * identifier.system = "http://tbd-svc/vdasid"

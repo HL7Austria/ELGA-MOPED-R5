@@ -9,6 +9,10 @@ Usage: #example
 * kind = #insurance
 * status = #active
 
+//VDAS-ID
+* identifier[+].system = "http://tbd-svc/vdasid"
+* identifier[=].value = "TEST12345678"
+
 //Versichertenkategorie
 * class[+].type.coding.system = "http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs"
 * class[=].type.coding.code = #01
