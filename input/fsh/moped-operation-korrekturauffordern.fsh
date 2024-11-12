@@ -43,7 +43,6 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
 """
 
 * id = "MOPED.ClaimResponse.Auffordern"
-* base = "http://hl7.org/fhir/OperationDefinition/ClaimResponse-Auffordern"
 * name = "MOPED_ClaimResponse_Auffordern"
 * status = #draft
 * kind = #operation

@@ -13,7 +13,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
 Usage: #definition
 
 * id = "MOPED.Patient.Beurlauben"
-* base = "http://hl7.org/fhir/OperationDefinition/Patient-beurlauben"
 * name = "MOPED_Patient_Beurlauben"
 * status = #draft
 * kind = #operation 

@@ -47,7 +47,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 
 """
 * id = "MOPED.CoverageEligibilityRequest.Anfragen"
-* base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-anfragen"
 * comment = "TBD: Ist hier evtl. eine Transaction die bessere Lösung? Bei dieser Operation findet keine Status-Änderung statt. Lediglich auf die Precondition des Workflow-Status müsste geachtet werden."
 * name = "MOPED_CoverageEligibilityRequest_Anfragen"
 * status = #draft

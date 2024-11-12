@@ -40,7 +40,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $erfassen Operati
 """
 
 * id = "MOPED.Encounter.erfassen"
-* base = "http://hl7.org/fhir/OperationDefinition/Enconuter-erfassen"
 * name = "MOPED_Encounter_erfassen"
 * status = #draft
 * kind = #operation

@@ -42,7 +42,6 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $frei
 """
 
 * id = "MOPED.ClaimResponse.Freigeben"
-* base = "http://hl7.org/fhir/OperationDefinition/ClaimResponse-freigeben"
 * name = "MOPED_ClaimResponse_Freigeben"
 * status = #draft
 * kind = #operation

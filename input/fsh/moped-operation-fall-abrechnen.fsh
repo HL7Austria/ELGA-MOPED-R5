@@ -49,7 +49,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 """
 
 * id = "MOPED.Encounter.Abrechnen"
-* base = "http://hl7.org/fhir/OperationDefinition/Patient-leistungMelden"
 * name = "MOPED_Encounter_Abrechnen"
 * status = #draft
 * kind = #operation
