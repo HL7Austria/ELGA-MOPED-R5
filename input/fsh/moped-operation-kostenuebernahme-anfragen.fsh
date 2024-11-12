@@ -41,6 +41,10 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 **Weitere Hinweise**
 
 * Hinweis 1: Nach dieser Operation findet lt. Soll-Prozess kein Update des Status *MOPEDAccount.workflowStatus* statt.
+
+**Annahmen an das BeS**
+* Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur Kostenübernahmen für eigene Fälle angefragt werden können.
+
 """
 * id = "MOPED.CoverageEligibilityRequest.Anfragen"
 * base = "http://hl7.org/fhir/OperationDefinition/CoverageEligibilityRequest-anfragen"
