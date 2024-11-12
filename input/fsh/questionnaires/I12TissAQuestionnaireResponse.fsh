@@ -5,8 +5,8 @@ InstanceOf: QuestionnaireResponse
 Title: "I12 QuestionnaireResponse für TISS-A-Daten"
 * id = "tiss-a-questionnaireresponse"
 * status = #completed
-* subject = Reference(Patient/example)
-* questionnaire = "Questionnaire/tiss-a-questionnaire"
+* subject = Reference(Test1Patient)
+* questionnaire = Canonical(TISSAQuestionnaire)
 * authored = "2024-08-08"
 
 // Sazartenkennzeichen
@@ -23,7 +23,7 @@ Title: "I12 QuestionnaireResponse für TISS-A-Daten"
 
 // Datensatz-ID
 * item[+].linkId = "datensatz-id"
-* item[=].answer.valueString = ""
+* item[=].answer.valueString = "-"
 
 // Aufnahme-/Kontaktdatum
 * item[+].linkId = "aufnahme-kontaktdatum"
@@ -31,7 +31,7 @@ Title: "I12 QuestionnaireResponse für TISS-A-Daten"
 
 // Bettenführende Hauptkostenstelle – Positionsnummer
 * item[+].linkId = "bettenfuhrende-hauptkostenstelle-positionsnummer"
-* item[=].answer.valueInteger = 2
+* item[=].answer.valueString = "2"
 
 // Erhebungsdatum
 * item[+].linkId = "erhebungsdatum"

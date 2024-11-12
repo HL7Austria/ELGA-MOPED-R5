@@ -6,7 +6,7 @@ InstanceOf: Questionnaire
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2024-07-12T00:00:00+00:00"
-* url = "http://example.org/fhir/Questionnaire/saps3-questionnaire"
+* url = "http://example.org/fhir/Questionnaire/SAPS3Questionnaire"
 * version = "1.0"
 * id = "SAPS3Questionnaire"
 * name = "SAPS3Questionnaire"
@@ -47,7 +47,7 @@ Usage: #example
 * item[0].item[=].text = "Akute Infektion bei Aufnahme - Nosokomiale Infektion"
 * item[0].item[=].type = #boolean
 
-* item[0].item[+].linkId = "saps3-08"
+* item[0].item[+].linkId = "saps3-08a"
 * item[0].item[=].text = "Akute Infektion bei Aufnahme - Respiratorische Infektion"
 * item[0].item[=].type = #boolean
 

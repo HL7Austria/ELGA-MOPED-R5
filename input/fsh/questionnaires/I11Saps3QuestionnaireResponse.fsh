@@ -2,9 +2,9 @@ Instance: Test2SAPS3QuestionnaireResponse1
 InstanceOf: QuestionnaireResponse
 Usage: #example
 * id = "Test2SAPS3QuestionnaireResponse1"
-* questionnaire = "Questionnaire/SAPS3Questionnaire"
+* questionnaire = Canonical(saps3-questionnaire)
 * status = #completed
-* subject = Reference(Patient/Test1Patient) 
+* subject = Reference(Test1Patient) 
 * authored = "2024-09-16T19:39:58.676Z"
 * item.linkId = "saps3-set"
 * item.text = "SAPS3 Data Set"
@@ -29,7 +29,7 @@ Usage: #example
 * item.item[+].linkId = "saps3-08"
 * item.item[=].text = "Akute Infektion bei Aufnahme - Nosokomiale Infektion"
 * item.item[=].answer.valueBoolean = false
-* item.item[+].linkId = "saps3-08"
+* item.item[+].linkId = "saps3-08a"
 * item.item[=].text = "Akute Infektion bei Aufnahme - Respiratorische Infektion"
 * item.item[=].answer.valueBoolean = false
 * item.item[+].linkId = "saps3-09"

@@ -47,7 +47,7 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 // Erhebungsdatum
 * item[+].linkId = "erhebungsdatum"
 * item[=].text = "Erhebungsdatum"
-* item[=].type = #date
+* item[=].type = #string
 * item[=].maxLength = 8
 
 // Standard-Monitoring
