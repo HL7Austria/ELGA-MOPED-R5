@@ -87,7 +87,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = "moped-sonderklasse-valueset"
+    * valueSet = Canonical(SonderklasseVS)
 * parameter[+]
   * name = #return
   * use = #out

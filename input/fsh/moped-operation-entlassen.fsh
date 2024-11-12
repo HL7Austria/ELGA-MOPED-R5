@@ -81,7 +81,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = "moped-entlassungsart-valueset"
+    * valueSet = Canonical(Entlassungsart)
 * parameter[+]
   * name = #tageOhneKostenbeitrag
   * use = #in

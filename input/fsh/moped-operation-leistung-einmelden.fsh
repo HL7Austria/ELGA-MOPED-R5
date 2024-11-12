@@ -63,7 +63,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $erfassen Operati
   * max = "*"
   * documentation = "Der *leistung* Parameter beinhält eine erbrachte Leistung in MEL-Codierung."
   * type = #Procedure
-  * targetProfile = "MOPEDProcedure"
+  * targetProfile = Canonical(MOPEDProcedure)
 * parameter[+]
   * name = #diagnose
   * use = #in
@@ -71,7 +71,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $erfassen Operati
   * max = "*"
   * documentation = "Der *diagnose* Parameter beinhält eine Diagnose in HDG-Codierung."
   * type = #Condition
-  * targetProfile = "MOPEDCondition"
+  * targetProfile = Canonical(MOPEDCondition)
 * parameter[+]
   * name = #return
   * use = #out
