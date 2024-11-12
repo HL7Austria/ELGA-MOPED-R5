@@ -1,4 +1,4 @@
-ValueSet: Zugangsart
+ValueSet: ZugangsartVS
 Id: moped-zugangsart-valueset
 Title: "Zugangsart des Patienten"
 Description: "ValueSet für die Zugangsart des Patienten (LKF + Ka-Org)"

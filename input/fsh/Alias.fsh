@@ -23,4 +23,4 @@ Alias:	$Ursache	=	http://tbd.at/MOPED-encounter-ursache
 Alias:	$VAEStatus	=	http://tbd.at/MOPED-VAEStatus
 Alias:	$VerdachtArbeitsSchuelerunfall	=	http://tbd.at/MOPED-account-VerdachtArbeitsSchuelerunfall
 Alias:	$workflowstatus	=	http://tbd.at/moped-ext-workflow-status
-Alias:	$Zugangsart	=	http://tbd.at/moped-ext-diagnose-art
+Alias:	$Zugangsart	=	http://tbd.at/moped-ext-zugangsart

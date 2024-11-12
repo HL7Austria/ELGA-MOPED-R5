@@ -40,8 +40,7 @@ Usage: #example
 * reason[=].value = #00
 
 //Zugangsart
-* admission.extension[+].url = "http://example.org/StructureDefinition/moped-ext-zugangsart"
-* admission.extension[=].valueCoding = $Zugangsart#A
+* admission.extension[zugangsart].valueCoding = $Zugangsart#A
 
 //Diagnosen
 * diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ"
