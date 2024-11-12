@@ -24,5 +24,5 @@ Usage: #example
 * code.coding[HDG] = $LKFHauptdiagnosegruppen#HDG24.01 "TBD"
 * subject = Reference(Patient/Test2Patient)
 * clinicalStatus.coding.code = #active
-* encounter = Reference(MOPEDEncounter/Test2MOPEDEncounter1)
+* encounter = Reference(Test2MOPEDEncounter1)
 * verificationStatus.coding.code = #confirmed
