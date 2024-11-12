@@ -60,7 +60,7 @@ Usage: #example
 * status = #in-progress
 
 * subject = Reference(Patient/Test1Patient)
-* partOf = Reference(Encounter/Test1MOPEDEncounter1)
+* partOf = Reference(Encounter/Test1MOPEDEncounter)
 * serviceProvider = Reference(Organization/Test1OrganizationAbteilung1)
 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-Altersgruppe"
