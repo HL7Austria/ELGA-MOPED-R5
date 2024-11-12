@@ -5,6 +5,10 @@ Description: """
 Die Patient $beurlauben Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wurde und während eines laufenden Falles beurlaubt wird. Die Operation $verlegen wird aufgerufen mit dem Funktionscode '10000000' als Parameter, der Abgangsart '1' und ohne physische Anwesenheit. 
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen.
+
+**Annahmen an das BeS**
+* Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle beurlaubt werden können.
+
 """
 Usage: #definition
 
