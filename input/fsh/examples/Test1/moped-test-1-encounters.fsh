@@ -15,6 +15,7 @@ Usage: #example
 * identifier[+].type.coding.code = #VN 
 * identifier[=].type.coding.system = "https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier"
 * identifier[=].value = "1024000028"
+* identifier[=].system = "urn:oid:1.3.6.1.4.1.36124.5.914"
 * identifier[=].assigner = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)
 
 
@@ -34,7 +35,7 @@ Usage: #example
 * actualPeriod.start = "2024-02-22T19:33:00+02:00"
 
 //Ursache
-* reason[+].use.coding.system = "http://hl7.org/fhir/ValueSet/encounter-reason-use"
+* reason[+].use.coding.system = "http://hl7.org/fhir/encounter-reason-use"
 * reason[=].use.coding.code = #RV
 * reason[=].value = #00
 
