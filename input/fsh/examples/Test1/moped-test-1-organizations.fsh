@@ -6,7 +6,7 @@ Usage: #example
 * id = "Test1OrganizationHerzJesuKrankenhaus"
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:oid:1.3.6.1.4.1.36124.5.914"
-* identifier[+].system = "TBD"
+* identifier[+].system = "urn:oid:1.2.40.0.34.3.1.1"
 * identifier[=].value = "K914" // Krankenanstaltennummer leistungserbringend
 * identifier[+].system = "urn:oid:1.2.40.0.10.1.4.3.2"
 * identifier[=].value = "832138" // VPNR
