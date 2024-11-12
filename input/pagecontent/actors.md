@@ -2,7 +2,7 @@
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 </script>
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
-    Übersicht über alle akteure:
+    Übersicht über alle Akteure:
 </div>
 <pre class="mermaid">
     graph LR
