@@ -3,8 +3,8 @@ InstanceOf: MOPEDCoverage
 Usage: #example
 * id = "Test1MOPEDCoverage"
 * meta.profile = "http://example.org/StructureDefinition/MOPEDCoverage"
-* subscriber = Reference(Patient/Test1Patient)
-* beneficiary = Reference(Patient/Test1Patient)
+* subscriber = Reference(Test1Patient)
+* beneficiary = Reference(Test1Patient)
 
 * kind = #insurance
 * status = #active
@@ -14,6 +14,6 @@ Usage: #example
 * identifier[=].value = "TEST12345678"
 
 //Versichertenkategorie
-* class[+].type.coding.system = "http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs"
+* class[+].type.coding.system = $SVCVersichertenkategorien
 * class[=].type.coding.code = #01
 * class[=].value.value = #01
