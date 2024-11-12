@@ -88,7 +88,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = "moped-VerdachtArbeitsSchuelerunfall-valueset"
+    * valueSet = Canonical(VerdachtArbeitsSchuelerunfallVS)
 * parameter[+]
   * name = #verdachtFremdverschulden
   * use = #in
