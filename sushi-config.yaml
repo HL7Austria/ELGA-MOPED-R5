@@ -96,7 +96,7 @@ pages:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  Sollprozess (Entwurf): use_case_description.html
+  Prozess (Entwurf): use_case_description.html
   Akteure: actors.html
   Workflowmanagement: workflowmanagement.html
   LKF Mapping: lkf_mapping.html
