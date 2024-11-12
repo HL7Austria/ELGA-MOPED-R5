@@ -15,7 +15,7 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * requestor only Reference(HL7ATCoreOrganization)
 * requestor 1..1
 
-* insurance.coverage only Reference(SVCCoverage)
+* insurance.coverage only Reference(MOPEDCoverage)
 * insurance.coverage 1..1
 
 * diagnosisRelatedGroup from $LKFAbrechnungsGruppe (required)

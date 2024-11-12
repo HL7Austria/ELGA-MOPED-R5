@@ -11,4 +11,4 @@ Description: "MOPED Profil der CoverageEligibilityResponse Ressource für die Ve
 * extension contains VerpflegskostenBeitragsbefreiung named verpflegskostenBeitragsbefreiung 0..1
 * extension contains VortageanzahlAufKostenbeitrag named vortageanzahlAufKostenbeitrag 0..1
 
-* insurance.coverage only Reference(SVCCoverage)
+* insurance.coverage only Reference(MOPEDCoverage)

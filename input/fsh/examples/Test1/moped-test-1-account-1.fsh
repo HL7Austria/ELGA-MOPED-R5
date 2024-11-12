@@ -11,10 +11,6 @@ Usage: #example
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-verdachtFremdverschulden"
 * extension[=].valueBoolean = false
 
-//VDAS-ID
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-vdasid"
-* extension[=].valueString = "TEST12345678"
-
 * status = #active
 * subject = Reference(Patient/Test1Patient)
 * owner = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)

@@ -13,4 +13,4 @@ Description: "MOPED Profil der CoverageEligibilityRequest Ressource für die Ver
 * provider only Reference(HL7ATCoreOrganization)
 * insurer only Reference(Organization)
 
-* insurance.coverage only Reference(SVCCoverage)
+* insurance.coverage only Reference(MOPEDCoverage)

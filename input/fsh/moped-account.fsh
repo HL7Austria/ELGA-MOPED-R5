@@ -8,7 +8,6 @@ Description: "MOPED Profil der Account Ressource für die administrative Fallfü
 
 * extension contains AnzahlVerlegungen named anzahlVerlegungen 0..1
 * extension contains AnzahlBeurlaubungen named anzahlBeurlaubungen 0..1
-* extension contains VDASID named vdasid 0..1
 * extension contains WorkflowStatus named workflowStatus 1..1
 * extension contains VerdachtArbeitsSchuelerunfall named verdachtArbeitsSchuelerunfall 0..1
 * extension contains VerdachtFremdverschulden named verdachtFremdverschulden 0..1
