@@ -9,3 +9,4 @@ Usage: #example
 * clinicalStatus = $ConditionClinicalStatus#active
 * encounter = Reference(Test2MOPEDEncounter1)
 * verificationStatus = $ConditionVerificationStatus#confirmed
+

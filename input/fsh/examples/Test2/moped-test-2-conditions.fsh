@@ -18,7 +18,7 @@ Usage: #example
 * id = "Test2Condition2"
 * identifier[MOPEDConditionIdentifier].type.coding.code = https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier#RI
 * identifier[MOPEDConditionIdentifier].value = "324200063urn:oid:1.3.6.1.4.1.36124.5.427999.9"
-* code = $icd-10#T88.8XXA "Other specified complications of surgical and medical care, not elsewhere classified, initial encounter"
+* code = $ICD10AT#T88.8XXA "Other specified complications of surgical and medical care, not elsewhere classified, initial encounter"
 * code.coding[HDG] = $LKFHauptdiagnosegruppen#HDG24.01 "TBD"
 * subject = Reference(Test2Patient)
 * clinicalStatus.coding = $ConditionClinicalStatus#active
