@@ -11,6 +11,7 @@ Alias:	$EconomicUnitUse	=	http://tbd.at/EconomicUnitUse
 Alias:	$Entlassungsart	=	http://tbd.at/MOPED-encounter-entlassungsart
 Alias:	$Fondsrelevanz	=	http://tbd.at/MOPED-Fondsrelevanz
 Alias:  $ICD10AT = https://termgit.elga.gv.at/CodeSystem/bmg-icd-10-2024
+Alias:  $IdentifyerCodeSystem = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:	$KostenmeldungARK	=	http://tbd.at/MOPED-KostenmeldungARK
 Alias:	$LKFAbrechnungsGruppe	=	http://tbd.at/MOPED-LKFAbrechnungsGruppe
 Alias:	$LKFAbrechnungsKnoten	=	http://tbd.at/MOPED-LKFAbrechnungsKnoten

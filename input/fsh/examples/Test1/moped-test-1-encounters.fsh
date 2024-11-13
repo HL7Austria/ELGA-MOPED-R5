@@ -12,7 +12,7 @@ Usage: #example
 * extension[=] = */ //Warum Unfalldatum 00000000?
 
 //Aufnahmezahl
-* identifier[+].type.coding.code = #v2-0203-VN
+* identifier[+].type = $IdentifyerCodeSystem#VN
 * identifier[=].value = "1024000028"
 * identifier[=].system = "urn:oid:1.3.6.1.4.1.36124.5.914"
 * identifier[=].assigner = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)
