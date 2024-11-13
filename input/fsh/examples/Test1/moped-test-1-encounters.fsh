@@ -34,8 +34,8 @@ Usage: #example
 * actualPeriod.start = "2024-02-22T19:33:00+02:00"
 
 //Ursache
-* reason[+].use.coding.system = "https://hl7.org/fhir/codesystem-encounter-reason-use.html"
-* reason[=].use.coding.code = #RV
+* reason[+].use.coding.system = "https://hl7.org/fhir/codesystem/encounter-reason-use"
+* reason[=].use.coding.code = #encounter-reason-use-RV
 * reason[=].value = #00
 
 //Zugangsart
@@ -43,7 +43,7 @@ Usage: #example
 
 //Diagnosen
 * diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/CodeSystem/lkf-diagnose-typ"
-* diagnosis[=].use.coding.code = #lkf-diagnose-typ-H
+* diagnosis[=].use.coding.code = #H
 * diagnosis[=].condition = Reference(Condition/Test1Condition1)
 
 //Zugewiesen von

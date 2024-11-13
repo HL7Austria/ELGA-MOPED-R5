@@ -45,7 +45,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * reason ^slicing.ordered = false
 * reason contains Ursache 0..1
 * reason[Ursache].use from http://hl7.org/fhir/ValueSet/encounter-reason-use (required)
-* reason[Ursache].use.coding.code = #encounter-reason-use-RV (exactly)
+* reason[Ursache].use.coding.code = #RV (exactly)
 * reason[Ursache].value from UrsacheValueSet (required)
 * reason[Ursache] ^short = "Ursache für Behandlung"
 
