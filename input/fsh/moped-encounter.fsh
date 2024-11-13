@@ -8,11 +8,11 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.ordered = false
 * identifier contains Aufnahmezahl 0..1 and DatensatzID 0..1
-* identifier[Aufnahmezahl].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
+* identifier[Aufnahmezahl].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[Aufnahmezahl].type.coding.code = #VN (exactly)
 * identifier[Aufnahmezahl].assigner only Reference(HL7ATCoreOrganization)
 * identifier[Aufnahmezahl].system 1..1
-* identifier[DatensatzID].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
+* identifier[DatensatzID].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[DatensatzID].type.coding.code = #ANON (exactly)
 * identifier[DatensatzID] ^short = "SHA-256 verschlüsselte Aufnahmezahl"
 * account only Reference(MOPEDAccount)
@@ -45,7 +45,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * reason ^slicing.ordered = false
 * reason contains Ursache 0..1
 * reason[Ursache].use from http://hl7.org/fhir/ValueSet/encounter-reason-use (required)
-* reason[Ursache].use.coding.code = #RV (exactly)
+* reason[Ursache].use.coding.code = #encounter-reason-use-RV (exactly)
 * reason[Ursache].value from UrsacheValueSet (required)
 * reason[Ursache] ^short = "Ursache für Behandlung"
 
