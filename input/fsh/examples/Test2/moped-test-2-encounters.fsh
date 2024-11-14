@@ -12,8 +12,8 @@ Usage: #example
 * extension[=] = */ //Warum Unfalldatum 00000000?
 
 //Aufnahmezahl
-* identifier[+].type.coding.code = #VN 
-* identifier[=].type.coding.system = "https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier"
+* identifier[+].type.coding.code = #v2-0203-VN
+* identifier[=].type.coding.system = "https://terminology.hl7.org/6.0.2/CodeSystem-v2-0203.html"
 * identifier[=].value = "324200063"
 * identifier[=].system = "urn:oid:1.3.6.1.4.1.36124.5.427"
 * identifier[=].assigner = Reference(Organization/Test2OrganizationKrankenhausRied)
@@ -33,8 +33,8 @@ Usage: #example
 * actualPeriod.start = "2024-08-08T08:21:00+02:00"
 * actualPeriod.end = "2024-08-08T19:22:00+02:00"
 //Ursache
-* reason[+].use.coding.system = "http://hl7.org/fhir/encounter-reason-use"
-* reason[=].use.coding.code = #RV
+* reason[+].use.coding.system = "https://hl7.org/fhir/codesystem/encounter-reason-use"
+* reason[=].use.coding.code = #encounter-reason-use-RV
 * reason[=].value = #00
 //Zugangsart
 * admission.extension[+].url = "http://example.org/StructureDefinition/moped-ext-zugangsart"
@@ -43,10 +43,10 @@ Usage: #example
 * admission.dischargeDisposition.coding.system = $Entlassungsart
 * admission.dischargeDisposition.coding.code = #E
 //Diagnosen
-* diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ"
+* diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/CodeSystem/lkf-diagnose-typ"
 * diagnosis[=].use.coding.code = #H
 * diagnosis[=].condition = Reference(Condition/Test2Condition1)
-* diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ"
+* diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/CodeSystem/lkf-diagnose-typ"
 * diagnosis[=].use.coding.code = #Z
 * diagnosis[=].condition = Reference(Condition/Test2Condition2)
 //Zugewiesen von
