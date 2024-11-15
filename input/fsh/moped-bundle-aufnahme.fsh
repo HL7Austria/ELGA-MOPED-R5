@@ -17,7 +17,7 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 * type = #transaction
 * entry 1..*
 * entry ^slicing.discriminator[+].type = #profile
-* entry ^slicing.discriminator[=].path = "resolve()"
+* entry ^slicing.discriminator[=].path = "resource.resolve()"
 * entry ^slicing.rules = #open
 * entry contains
   Encounter 1..1
