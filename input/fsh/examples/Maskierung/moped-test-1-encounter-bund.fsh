@@ -3,7 +3,6 @@ InstanceOf: MOPEDEncounterBund
 Usage: #example
 * id = "Test1MOPEDEncounterBund"
 * status = #in-progress
-* meta.profile = "http://example.org/StructureDefinition/MOPEDEncounterBund"
 //DatensatzID
 * identifier[+].type.coding.code = #ANON
 * identifier[=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"

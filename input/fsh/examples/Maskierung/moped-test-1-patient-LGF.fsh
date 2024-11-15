@@ -5,7 +5,6 @@ Instance: Test1PatientLGF
 InstanceOf: MOPEDPatientLGF
 Usage: #example
 * id = "Test1PatientLGF"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDPatientSV"
 * name.use = #official
 * name.family = "MSK"
 * name.given = "MSK"

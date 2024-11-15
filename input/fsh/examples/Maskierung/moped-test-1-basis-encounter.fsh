@@ -3,7 +3,6 @@ InstanceOf: MOPEDEncounter
 Usage: #example
 * id = "Test1MOPEDEncounterBasis"
 * status = #in-progress
-* meta.profile = "http://example.org/StructureDefinition/MOPEDEncounter"
 //Aufnahmezahl
 * identifier[+].type.coding.code = #VN 
 * identifier[=].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"

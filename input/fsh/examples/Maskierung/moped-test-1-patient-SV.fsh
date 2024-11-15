@@ -5,7 +5,6 @@ Instance: Test1PatientSV
 InstanceOf: MOPEDPatientSV
 Usage: #example
 * id = "Test1PatientSV"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDPatientSV"
 * identifier.system = "urn:oid:1.2.40.0.10.1.4.3.1"
 * identifier.value = "9994210469"
 * identifier.type = $v2-0203#SS "Social Security Number"

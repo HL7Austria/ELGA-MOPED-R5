@@ -4,7 +4,6 @@ Instance: Test1PatientBund
 InstanceOf: MOPEDPatientBund
 Usage: #example
 * id = "Test1PatientBund"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDPatientSV"
 * name.use = #official
 * name.family = "MSK" //oder ganz entfernen
 * name.given = "MSK"  //oder ganz entfernen

@@ -4,7 +4,6 @@ Instance: Test1PatientOhneMaskierung
 InstanceOf: HL7ATCorePatient
 Usage: #example
 * id = "Test1PatientOhneMaskierung"
-* meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-patient"
 * identifier.system = "urn:oid:1.2.40.0.10.1.4.3.1"
 * identifier.value = "9994210469"
 * identifier.type = $IdentifyerCodeSystem#SS "Social Security Number"
