@@ -19,7 +19,6 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 * entry ^slicing.discriminator[+].type = #profile
 * entry ^slicing.discriminator[=].path = "resolve()"
 * entry ^slicing.rules = #open
-* entry ^slicing.ordered = false
 * entry contains
   Encounter 1..1
 * entry[Encounter].resource only MOPEDEncounterKH
