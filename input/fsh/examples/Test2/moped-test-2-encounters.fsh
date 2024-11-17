@@ -65,9 +65,10 @@ Usage: #example
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung1)
 * actualPeriod.start = "2024-08-08T08:21:00+02:00" //für ersten TransferEncounter gleich mit MOPEDEncounter start
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueCode = #35
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
-* extension[=].valueBoolean = false
+* extension[=].extension[+].url = "beiZugang"
+* extension[=].extension[=].valueCode = #35
+* extension[=].extension[+].url = "neugeborenes"
+* extension[=].extension[=].valueBoolean = false
 
 
 Instance: Test2TransferEncounter2
@@ -84,9 +85,10 @@ Usage: #example
 * admission.dischargeDisposition.coding.system = $Abgangsart
 * admission.dischargeDisposition.coding.code = #1
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueCode = #35
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
-* extension[=].valueBoolean = false
+* extension[=].extension[+].url = "beiZugang"
+* extension[=].extension[=].valueCode = #35
+* extension[=].extension[+].url = "neugeborenes"
+* extension[=].extension[=].valueBoolean = false
 
 
 Instance: Test2TransferEncounter3
@@ -101,9 +103,10 @@ Usage: #example
 * actualPeriod.start = "2024-08-08T11:41:00+02:00" 
 * actualPeriod.end = "2024-08-08T11:41:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueCode = #35
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
-* extension[=].valueBoolean = false
+* extension[=].extension[+].url = "beiZugang"
+* extension[=].extension[=].valueCode = #35
+* extension[=].extension[+].url = "neugeborenes"
+* extension[=].extension[=].valueBoolean = false
 
 Instance: Test2TransferEncounter4
 InstanceOf: MOPEDTransferEncounter
@@ -116,9 +119,10 @@ Usage: #example
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung4)
 * actualPeriod.start = "2024-08-09T11:38:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueCode = #35
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
-* extension[=].valueBoolean = false
+* extension[=].extension[+].url = "beiZugang"
+* extension[=].extension[=].valueCode = #35
+* extension[=].extension[+].url = "neugeborenes"
+* extension[=].extension[=].valueBoolean = false
 
 Instance: Test2TransferEncounter5
 InstanceOf: MOPEDTransferEncounter
@@ -131,6 +135,7 @@ Usage: #example
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung3)
 * actualPeriod.start = "2024-08-10T17:00:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
-* extension[=].valueCode = #35
-* extension[+].url = "http://example.org/StructureDefinition/moped-ext-neugeborenes"
-* extension[=].valueBoolean = false
+* extension[=].extension[+].url = "beiZugang"
+* extension[=].extension[=].valueCode = #35
+* extension[=].extension[+].url = "neugeborenes"
+* extension[=].extension[=].valueBoolean = false
