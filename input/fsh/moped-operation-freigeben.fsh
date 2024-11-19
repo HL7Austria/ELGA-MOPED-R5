@@ -29,7 +29,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $frei
 * ClaimResponse.patient muss gleich ClaimResponse.request.patient sein
 * ClaimResponse.insurer muss gleich ClaimResponse.request.insurer sein
 * ClaimResponse.requestor muss gleich ClaimResponse.request.provider sein
-* ClaimResponse.outcome muss `completed` oder `partial` sein
+* ClaimResponse.outcome muss `complete` oder `partial` sein
 * ClaimResponse.insurance.coverage muss gleich der Claim.insurance.coverage sein
 
 **Weitere Hinweise**
