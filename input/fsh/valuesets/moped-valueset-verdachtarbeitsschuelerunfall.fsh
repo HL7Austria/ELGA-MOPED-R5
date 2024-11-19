@@ -1,6 +1,6 @@
-ValueSet: VerdachtArbeitsSchuelerunfall
+ValueSet: VerdachtArbeitsSchuelerunfallVS
 Id: moped-VerdachtArbeitsSchuelerunfall-valueset
-Title: "Verdacht auf Arbeits- oder Schuelerunfall"
+Title: "Verdacht auf Arbeits- oder Schuelerunfall ValueSet"
 Description: "ValueSet für den Verdacht auf einen Arbeits- oder Schuelerunfall"
 * $VerdachtArbeitsSchuelerunfall#1 "Arbeitsunfall"
 * $VerdachtArbeitsSchuelerunfall#2 "Schüler-/Studentenunfall"

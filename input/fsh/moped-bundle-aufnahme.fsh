@@ -16,13 +16,12 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 
 * type = #transaction
 * entry 1..*
-* entry ^slicing.discriminator.type = #type
-* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "resource.resolve().meta.profile"
 * entry ^slicing.rules = #open
-* entry ^slicing.ordered = false
 * entry contains
   Encounter 1..1
-* entry[Encounter].resource only MOPEDEncounter
+* entry[Encounter].resource only MOPEDEncounterKH
 * entry contains
   Coverage 1..1
 * entry[Coverage].resource only SVCCoverage
@@ -31,4 +30,4 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 * entry[Patient].resource only HL7ATCorePatient
 * entry contains
   Hauptversicherter 0..1
-* entry[Hauptversicherter].resource only HL7ATCorePatient
+* entry[Hauptversicherter].resource only Hauptversicherter

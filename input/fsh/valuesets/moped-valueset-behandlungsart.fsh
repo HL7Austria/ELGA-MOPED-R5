@@ -1,4 +1,3 @@
-
 ValueSet: Behandlungsart
 Id: moped-behandlungsart-valueset
 Title: "Behandlungsart"
