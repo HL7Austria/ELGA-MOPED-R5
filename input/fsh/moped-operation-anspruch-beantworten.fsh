@@ -44,7 +44,7 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantwort
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *coverageEligibilityResponse* Parameter beinhält sämtliche Details zur Antwort auf den CoverageEligibilityRequest."
+  * documentation = "Der *coverageEligibilityResponse* Parameter beinhaltet sämtliche Details zur Antwort auf den CoverageEligibilityRequest."
   * type = #CoverageEligibilityResponse
 * parameter[+]
   * name = #return
