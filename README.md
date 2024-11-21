@@ -3,6 +3,11 @@ This repository serves to host the developed FHIR® profiles for the project MOP
 
 The rendered version of the current version of the MOPED Implementation Guide will be published at https://fhir.hl7.at/r5-ELGA-MOPED-main/index.html. The publishing is done fully automatically after every successful merge to master.
 
+# Current Definitions
+
+Following link contains all current definitions on the main branch to download:
+https://github.com/HL7Austria/hl7austria.github.io/tree/pages/r5-ELGA-MOPED-main
+
 
 # Contribution Guidelines
 
