@@ -63,7 +63,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
+  * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
   * name = #abschliessen
@@ -77,7 +77,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *claim* Parameter beinhält sämtliche Details zur Abrechnung lt. MOPEDClaim Profil."
+  * documentation = "Der *claim* Parameter beinhaltet sämtliche Details zur Abrechnung lt. MOPEDClaim Profil."
   * type = #Claim
   * targetProfile = Canonical(MOPEDClaim)
 * parameter[+]
