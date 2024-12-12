@@ -1,9 +1,11 @@
 Profile: MOPEDOrganizationAbteilung
 Parent: Organization
+Title: "MOPED Organization Abteilung"
 Description: "MOPED Profil für Abteilungen innerhalb einer Krankenanstalt."
 
-* partOf only Reference(HL7ATCoreOrganization)
+* partOf only Reference(MOPEDKrankenanstaltOrganization)
 * partOf ^short = "Krankenanstalt zu welcher die Abteilung gehört"
+* type = http://snomed.info/sct#284548004  "Hospital department (environment)"
 
 //Slice for identifier
 * identifier ^slicing.rules = #open
