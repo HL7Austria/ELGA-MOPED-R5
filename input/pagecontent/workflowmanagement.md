@@ -16,7 +16,7 @@
             <td></td>
         </tr>
         <tr>
-            <td>geplant</td>
+            <td>Aufnahme in Arbeit</td>
             <td>KH</td>
             <td></td>
             <td></td>
@@ -24,15 +24,7 @@
             <td></td>
         </tr>
         <tr>
-            <td>in Arbeit</td>
-            <td>KH</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>freigegeben</td>
+            <td>Aufnahme freigeben</td>
             <td>KH</td>
             <td></td>
             <td></td>
@@ -64,7 +56,7 @@
             <td></td>
         </tr>
         <tr>
-            <td>KH vorläufig gescored</td>
+            <td>Vorläufige Meldung</td>
             <td>KH</td>
             <td></td>
             <td></td>
@@ -72,7 +64,7 @@
             <td></td>
         </tr>
         <tr>
-            <td>Für Bund vorläufig freigegeben</td>
+            <td>LGF Korrekturaufforderung</td>
             <td>LGF</td>
             <td></td>
             <td></td>
@@ -80,7 +72,7 @@
             <td></td>
         </tr>
         <tr>
-            <td>LGF-Siegel </td>
+            <td>Vorläufige Freigabe</td>
             <td>LGF</td>
             <td></td>
             <td></td>
@@ -88,7 +80,15 @@
             <td></td>
         </tr>
         <tr>
-            <td>LGF-Korrekturaufforderung</td>
+            <td>Endgültige Meldung</td>
+            <td>KH</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Endgültige Freigabe</td>
             <td>LGF</td>
             <td></td>
             <td></td>
@@ -98,8 +98,8 @@
     </table>
     <h3>Überblick der Statusänderungen der unterschiedlichen Ressourcen während des Prozesses</h3>
     <div>
-        <a style="border:none;" href="Resource_Status_Overview.jpg" target="_blank">
-            <img src="Resource_Status_Overview.jpg" width ="100%" />
+        <a style="border:none;" href="Resource_Status_Overview.png" target="_blank">
+            <img src="Resource_Status_Overview.png" width ="100%" />
         </a>
     </div>
 </div>
