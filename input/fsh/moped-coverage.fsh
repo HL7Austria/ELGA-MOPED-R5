@@ -6,7 +6,7 @@ Description: "MOPED Profil der Coverage Ressource für Versicherungen."
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.ordered = false
-* identifier contains VDASID 0..1
+* identifier contains VDASID 0..1 MS
 * identifier[VDASID].system = $VdasIdSystem
 * identifier[VDASID].assigner only Reference(HL7ATCoreOrganization)
 * paymentBy.party only Reference(HL7ATCoreOrganization)

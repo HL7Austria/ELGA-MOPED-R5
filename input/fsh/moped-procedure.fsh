@@ -17,4 +17,4 @@ Description: "MOPED Profil der Procedure Ressource für die LDF-Abrechnung"
 * performer.onBehalfOf 1..1
 * occurrence[x] 1..1
 * code from LKFmedizinischeEinzelleistungen
-* code 1..1
+* code 1..1 MS

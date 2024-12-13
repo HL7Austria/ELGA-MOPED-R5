@@ -9,7 +9,7 @@ Description: "MOPED Profil der Encounter Ressource für die Verlegung innerhalb 
 
 * subjectStatus from Anwesenheitsart (required)
 
-* admission.extension contains Altersgruppe named Altersgruppe 0..1
+* admission.extension contains Altersgruppe named Altersgruppe 0..1 MS
 
 * admission.dischargeDisposition ^short = "Abgangsart"
 * admission.dischargeDisposition from Abgangsart (required)
