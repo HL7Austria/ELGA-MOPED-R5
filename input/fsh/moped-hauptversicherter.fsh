@@ -1,4 +1,4 @@
 Profile: Hauptversicherter
 Parent: RelatedPerson
-Title: "Hauptversicherter"
+Title: "MOPED Hauptversicherter"
 Description: "MOPED Profil der Person Ressource für den Hauptversicherten"

@@ -1,6 +1,7 @@
 Profile: MOPEDEncounter
 Parent: Encounter
 Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung"
+Title: "MOPED Encounter"
 
 
 * identifier ^slicing.rules = #open

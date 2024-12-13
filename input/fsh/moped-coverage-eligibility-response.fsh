@@ -2,7 +2,7 @@
 Profile: MOPEDCoverageEligibilityResponse
 Parent: CoverageEligibilityResponse
 Description: "MOPED Profil der CoverageEligibilityResponse Ressource für die Versichertenanspruchserklärung-Antwort."
-
+Title: "MOPED Coverage Eligibility Response"
 
 * patient only Reference(HL7ATCorePatient)
 

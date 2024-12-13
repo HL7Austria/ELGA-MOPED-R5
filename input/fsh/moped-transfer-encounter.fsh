@@ -1,6 +1,7 @@
 Profile: MOPEDTransferEncounter
 Parent: Encounter
 Description: "MOPED Profil der Encounter Ressource für die Verlegung innerhalb oder zwischen Krankenanstalten"
+Title: "MOPED Transfer Encounter"
 
 * subject only Reference(HL7ATCorePatient)
 * serviceProvider only Reference(MOPEDOrganizationAbteilung)

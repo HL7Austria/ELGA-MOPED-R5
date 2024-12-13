@@ -1,6 +1,7 @@
 Profile: MOPEDCoverage
 Parent: Coverage
 Description: "MOPED Profil der Coverage Ressource für Versicherungen."
+Title: "MOPED Coverage"
 
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value

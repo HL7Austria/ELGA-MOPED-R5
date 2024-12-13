@@ -1,6 +1,7 @@
 Profile: MOPEDCondition
 Parent: Condition
 Description: "MOPED Profil der Condition Ressource für die LDF-Abrechnung"
+Title: "MOPED Condition"
 
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value

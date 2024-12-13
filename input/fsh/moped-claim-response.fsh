@@ -2,6 +2,7 @@
 Profile: MOPEDClaimResponse
 Parent: ClaimResponse
 Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort."
+Title: "MOPED Claim Response"
 
 * status = #active
 * type.coding.code = #institutional
