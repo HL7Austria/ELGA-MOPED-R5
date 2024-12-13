@@ -1,6 +1,8 @@
 Profile: MOPEDProcedure
 Parent: Procedure
 Description: "MOPED Profil der Procedure Ressource für die LDF-Abrechnung"
+Title: "MOPED Procedure"
+
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"

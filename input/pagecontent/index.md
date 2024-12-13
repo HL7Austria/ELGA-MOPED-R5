@@ -1,14 +1,5 @@
-# Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)
- 
-Dieser Implementierungsleitfaden modelliert eine harmonisierte Kommunikation zwischen Krankenanstalten und anderen Akteuren des österreichischen Gesundheitssystems. Relevante Anwendungsbereiche sind u.a. Patientenbewegungsdaten (Aufnahme, Verlegung, Entlassung), Krankenversicherungsschutz sowie Leistungen und Verrechnung nach dem LKF-System. 
+Das MOPED-Projekt („Moderne Patient:innenabrechnung und Datenkommunikation on FHIR“) verfolgt das Ziel, die österreichische Gesundheitsdatenkommunikation im administrativen Bereich durch eine standardisierte, zukunftsfähige digitale Infrastruktur zu modernisieren.
 
-Zu den Akteuren gehören unter anderem:
-- LGF (Landesgesundheitsfonds)
-- SV (Sozialversicherungsträger)
-- Private Krankenversicherungen (PKV)
-- BMSGPK (Bundesministerium für Soziales, Gesundheit, Pflege und Konsumentenschutz)
-- Epidemiologisches Meldesystem
-- Geburts- und Todesmeldungen an Standesämter
-- ...
+Durch den Einsatz des HL7 FHIR Standards werden die Daten zu Patientenbewegungen (Aufnahme, Verlegung, Entlassung) und zur Versicherungs- sowie Leistungsabrechnung strukturiert und sicher erfasst. MOPED unterstützt damit eine einheitliche Datenkommunikation und verbessert die Effizienz und Datenqualität im Gesundheitssystem. Zu den zentralen Zielen gehört die Konzeption einer Lösungsarchitektur, die auf der Nutzung standardisierter Schnittstellen innerhalb der österreichischen Gesundheitstelematikinfrastruktur basiert und langfristig eine nahtlose Integration zukünftiger Anforderungen ermöglicht.
 
-
+Das Projekt ist eine Kooperation zwischen den Krankenanstaltenträgern, dem Landesgesundheitsfonds (LGF), dem Bund und den Sozialversicherungsträgern (SV), während die technische Ausarbeitung von der ELGA GmbH mit Unterstützung der FH OÖ Campus Hagenberg und unter Beteiligung von HL7 Austria durchgeführt wird. Diese Institutionen arbeiten gemeinsam daran, den Implementation Guide kontinuierlich zu erweitern und sicherzustellen, dass alle technischen, rechtlichen und organisatorischen Anforderungen erfüllt werden.
