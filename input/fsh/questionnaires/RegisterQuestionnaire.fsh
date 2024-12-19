@@ -34,18 +34,26 @@ Usage: #example
 * item[=].item.extension.valueCodeableConcept.text = "Help-Button"
 
 * item[+].type = #string
-* item[=].maxLength = 4
-* item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/minLength"
-* item[=].extension.valueInteger = 4
-* item[=].text = "Abteilungsnummer"
-* item[=].required = true
+* item[=].maxLength = 172
+* item[=].linkId = "550421449451"
+* item[=].text = "VBPK-AS"
+* item[=].required = false
+* item[=].item.type = #display
+* item[=].item.text = "verschlüsseltes bereichsspezifisches Personenkennzeichen Amtliche Statistik"
+* item[=].item.extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item.extension.valueCodeableConcept = $questionnaire-item-control#help "Help-Button"
+* item[=].item.extension.valueCodeableConcept.text = "Help-Button"
 
 * item[+].type = #string
-* item[=].maxLength = 2
+* item[=].maxLength = 10
 * item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/minLength"
-* item[=].extension.valueInteger = 2
-* item[=].text = "Subcode zur Abteilungsnummer"
-* item[=].required = true
+* item[=].extension.valueInteger = 10
+* item[=].text = "Sozialversicherungsnummer"
+* item[=].enableWhen.question = "550421449451"
+* item[=].enableWhen.operator = #exists
+* item[=].enableWhen.answerBoolean = false
+* item[=].enableBehavior = #any
+* item[=].required = false
 
 * item[+].type = #date
 * item[=].text = "Aufenthalt am"
@@ -61,10 +69,10 @@ Usage: #example
 * item[=].extension.valueCodeableConcept = $questionnaire-item-control#drop-down "Drop down"
 * item[=].text = "Histopathologisches Grading"
 * item[=].required = true
-* item[=].answerOption[0].valueCoding = #1 "Grad I gut differenziert differenziert o.n.A."
-* item[=].answerOption[+].valueCoding = #2 "Grad II mäßig differenziert mäßig gut differenziert mittelgradig differenziert"
-* item[=].answerOption[+].valueCoding = #3 "Grad III schlecht differenziert"
-* item[=].answerOption[+].valueCoding = #4 "Grad IV undifferenziert anaplastisch"
+* item[=].answerOption[0].valueCoding = #1 "\"Grad I gut differenziert differenziert o.n.A.\""
+* item[=].answerOption[+].valueCoding = #2 "\"Grad II mäßig differenziert mäßig gut differenziert mittelgradig differenziert\""
+* item[=].answerOption[+].valueCoding = #3 "\"Grad III schlecht differenziert\""
+* item[=].answerOption[+].valueCoding = #4 "\"Grad IV undifferenziert anaplastisch\""
 * item[=].answerOption[+].valueCoding = #9 "Grading bzw. Bestimmung des Zelltyps nicht durchgeführt, nicht angegeben oder entfällt"
 
 * item[+].type = #choice
@@ -92,7 +100,7 @@ Usage: #example
 * item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].extension.valueCodeableConcept = $questionnaire-item-control#check-box "Check-box"
 * item[=].text = "Behandlung"
-* item[=].required = true
+* item[=].required = false
 * item[=].repeats = true
 * item[=].answerOption[0].valueCoding = #00 "sonstige (7)"
 * item[=].answerOption[+].valueCoding = #10 "chirurgisch radikal (1)"
