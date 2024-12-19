@@ -10,7 +10,7 @@ Title: "MOPED Condition"
 * identifier contains MOPEDConditionIdentifier 1..1
 * identifier[MOPEDConditionIdentifier].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[MOPEDConditionIdentifier].type.coding.code = #RI (exactly)
-* identifier[MOPEDConditionIdentifier] ^short = "MOPED Identifier = Aufnahmezahl+ICD10Code"
+* identifier[MOPEDConditionIdentifier] ^short = "MOPED Identifier = Aufnahmezahl-ICD10Code"
 * identifier 1..
 * verificationStatus 1..1
 * clinicalStatus.extension contains DataAbsentReason named data-absent-reason 1..1
