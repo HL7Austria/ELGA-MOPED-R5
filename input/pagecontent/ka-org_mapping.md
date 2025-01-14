@@ -156,7 +156,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>SVCCoverage</td>
+        <td>MOPEDCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -542,7 +542,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>SVCCoverage</td>
+        <td>MOPEDCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -1019,7 +1019,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>SVCCoverage</td>
+        <td>MOPEDCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -1312,7 +1312,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>SVCCoverage</td>
+        <td>MOPEDCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -1693,7 +1693,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>SVCCoverage</td>
+        <td>MOPEDCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -2287,7 +2287,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>SVCCoverage</td>
+        <td>MOPEDCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -3110,7 +3110,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>SVCCoverage</td>
+        <td>MOPEDCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
