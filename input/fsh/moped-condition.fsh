@@ -13,7 +13,7 @@ Title: "MOPED Condition"
 * identifier[MOPEDConditionIdentifier] ^short = "MOPED Identifier = Aufnahmezahl-ICD10Code"
 * identifier 1..
 * verificationStatus 1..1
-* clinicalStatus.extension contains DataAbsentReason named data-absent-reason 1..1
+* clinicalStatus.extension contains DataAbsentReason named data-absent-reason 1..1 MS
 * clinicalStatus.extension[DataAbsentReason].valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-asked
 * encounter only Reference(MOPEDEncounter)
 * encounter 1..1
@@ -23,7 +23,7 @@ Title: "MOPED Condition"
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.ordered = false
-* code.coding contains ICD10 1..1 and HDG 1..1
+* code.coding contains ICD10 1..1 MS and HDG 1..1 MS
 * code.coding[ICD10] from $ICD10AT (required)
 * code.coding[ICD10].system = $ICD10AT
 * code.coding[HDG] from LKFHauptdiagnosegruppen (required)
