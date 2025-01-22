@@ -1,9 +1,9 @@
 Alias: $questionnaire-item-control = http://hl7.org/fhir/questionnaire-item-control
 
-Instance: register-questionnaire
+Instance: krebs-register-questionnaire
 InstanceOf: Questionnaire
 Usage: #example
-* title = "register-questionnaire"
+* title = "krebs-register-questionnaire"
 * status = #draft
 
 * item[0].type = #string
