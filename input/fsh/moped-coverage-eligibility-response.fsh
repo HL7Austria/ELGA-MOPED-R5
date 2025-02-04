@@ -11,4 +11,4 @@ Description: "MOPED Profil der CoverageEligibilityResponse Ressource für die Ve
 * extension contains MealCostExcemption named MealCostExcemption 0..1
 * extension contains NumberOfPreviouslyPaidDays named NumberOfPreviouslyPaidDays 0..1
 
-* insurance.coverage only Reference(SVCCoverage)
+* insurance.coverage only Reference(MOPEDCoverage)

@@ -13,25 +13,30 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 **Detaillierte Business-Logik**
 
 1. Ressourcen der Transaction erstellen: FHIR Transaction ausführen, wie im Operation-Parameter *falldaten* mitgegeben. Dabei soll geprüft werden, ob bereits ein Patient mit dem jeweiligen identifier (bPK bzw. Sozialversicherungsnummer) vorliegt um Duplikate zu vermeiden. Das gleiche gilt für die anderen Ressourcen im Bundle, und kann technisch mit Hilfe von conditional References im Input-Bundle realisiert werden.
-2. Account anlegen:
+2. Coverage aktualisieren:
+   * *MOPEDCoverage.beneficiary mit der gleichen Referenz befüllen wie *MOPEDEncounter.subject*
+   wenn im Operation Parameter falldaten (Aufnahmebundle) ein Hauptversicherter vorhanden ist: 
+      * *MOPEDCoverage.subsciber mit der Referenz auf den Hauptversicherten befüllen
+   sonst:
+      * *MOPEDCoverage.subsciber mit der gleichen Referenz befüllen wie *MOPEDEncounter.subject*
+3. Account anlegen:
    * *MOPEDAccount.WorkflowStatus*: lt. Beschreibung der Werte-Ausprägungen des *freigeben* Parameter (siehe Hinweis 1)
    * *MOPEDAccount.VerdachtArbeitsSchuelerunfall* lt. Operation-Parameter
    * *MOPEDAccount.VerdachtFremdverschulden* lt. Operation-Parameter
-   * *MOPEDAccount.subject* mit der gleichen Referenz befüllen wie *MOPEDEncounter.subjec*
+   * *MOPEDAccount.subject* mit der gleichen Referenz befüllen wie *MOPEDEncounter.subject*
    * *MOPEDAccount.owner* mit der gleichen Referenz befüllen wie *MOPEDEncounter.serviceProvider*
-   * *MOPEDAccount.VDASID* lt. Operation-Parameter *vdasid* befüllen
    * *MOPEDAccount.AnzahlVerlegungen* mit Wert '0' befüllen
    * *MOPEDAccount.AnzahlBeurlaubungen* mit Wert '0' befüllen
    * *MOPEDAccount.coverage.coverage* mit der Referenz lt. *falldaten*-Parameter befüllen und ggf. Hauptversicherten anlegen, falls noch nicht am Server. 
-3. Account im Encounter referenzieren: Den neuen MOPEDAccount im *MOPEDEncounter.account* referenzieren
-4. Durchführung der Operation `$verlegen` für Neufaufnahme:
+4. Account im Encounter referenzieren: Den neuen MOPEDAccount im *MOPEDEncounter.account* referenzieren
+5. Durchführung der Operation `$verlegen` für Neufaufnahme:
   * *$verlegen#aufnahmezahl* = *$aufnehmen#aufnahmezahl*
   * *$verlegen#zeitpunkt* = Operation-Parameter falldaten mit dem Pfad *Bundle.Encounter.actualPeriod.start*
   * *$verlegen#funktionscode* = *$aufnehmen#funktionscode*
   * *$verlgegen#funktionssubcode* = *$aufnehmen#funktionssubcode*
   * *$verlegen#physischeAnwesenheit* = *$aufnehmen#physischeAnwesenheit*
   * *$verlegen#neuaufnahme* = `true`
-5. Berechnung der Datensatz-ID:
+6. Berechnung der Datensatz-ID:
   * Die Datensatz-ID wird aus der Aufnahmezahl lt. LKF Dokumentation als SHA-256 Hash berechnet und in das entsprechende Identifier-Slice des MOPEDEncounter eingefügt.
 
 **Validierung / Fehlerbehandlung**
