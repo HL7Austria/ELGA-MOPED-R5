@@ -108,7 +108,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
         <td></td>
@@ -116,7 +116,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ZUNA</td>
         <td>Zuname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.given</td>
         <td></td>
         <td></td>
@@ -124,7 +124,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.family</td>
         <td></td>
         <td></td>
@@ -132,7 +132,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GESCHL</td>
         <td>Geschlecht des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.gender</td>
         <td></td>
         <td></td>
@@ -140,7 +140,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -337,7 +337,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEVDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -494,7 +494,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
         <td></td>
@@ -502,7 +502,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ZUNA</td>
         <td>Zuname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.given</td>
         <td></td>
         <td></td>
@@ -510,7 +510,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.family</td>
         <td></td>
         <td></td>
@@ -518,7 +518,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GESCHL</td>
         <td>Geschlecht des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.gender</td>
         <td></td>
         <td></td>
@@ -526,7 +526,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -870,8 +870,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VDAS</td>
         <td>VDAS-ID, Ergebnis der Abfrage</td>
-        <td>MOPEDAccount</td>
-        <td>.extension</td>
+        <td>MOPEDCoverage</td>
+        <td>.identifier:VDASID</td>
         <td>VDASID</td>
         <td></td>
     </tr>
@@ -971,7 +971,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
         <td></td>
@@ -979,7 +979,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ZUNA</td>
         <td>Zuname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.given</td>
         <td></td>
         <td></td>
@@ -987,7 +987,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.family</td>
         <td></td>
         <td></td>
@@ -995,7 +995,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GESCHL</td>
         <td>Geschlecht des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.gender</td>
         <td></td>
         <td></td>
@@ -1003,7 +1003,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -1264,7 +1264,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
         <td></td>
@@ -1272,7 +1272,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ZUNA</td>
         <td>Zuname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.given</td>
         <td></td>
         <td></td>
@@ -1280,7 +1280,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.family</td>
         <td></td>
         <td></td>
@@ -1288,7 +1288,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GESCHL</td>
         <td>Geschlecht des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.gender</td>
         <td></td>
         <td></td>
@@ -1296,7 +1296,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -1639,7 +1639,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Aufnahmeart</td>
         <td>MOPEDEncounter</td>
         <td>.admission.extension</td>
-        <td>Zugangsart</td>
+        <td>Aufnahmeart</td>
         <td></td>
     </tr>
     <tr>
@@ -1661,7 +1661,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
         <td></td>
@@ -1669,7 +1669,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GESL</td>
         <td>Geschlecht</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.gender</td>
         <td></td>
         <td></td>
@@ -1677,7 +1677,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -2066,7 +2066,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEVDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -2239,7 +2239,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
         <td></td>
@@ -2247,7 +2247,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ZUNA</td>
         <td>Zuname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.given</td>
         <td></td>
         <td></td>
@@ -2255,7 +2255,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.family</td>
         <td></td>
         <td></td>
@@ -2263,7 +2263,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GESCHL</td>
         <td>Geschlecht des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.gender</td>
         <td></td>
         <td></td>
@@ -2271,7 +2271,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -2508,7 +2508,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEVDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -2777,7 +2777,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEVDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>
@@ -3062,7 +3062,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VSNR</td>
         <td>Versicherungsnummer des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>identifier:socialSecurityNumber</td>
         <td></td>
         <td></td>
@@ -3070,7 +3070,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ZUNA</td>
         <td>Zuname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.given</td>
         <td></td>
         <td></td>
@@ -3078,7 +3078,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VONA</td>
         <td>Vorname des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.name.family</td>
         <td></td>
         <td></td>
@@ -3086,7 +3086,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GESCHL</td>
         <td>Geschlecht des Hauptversicherten</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.gender</td>
         <td></td>
         <td></td>
@@ -3094,7 +3094,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>GEBDAT</td>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
-        <td>HL7ATCorePatient</td>
+        <td>RelatedPerson</td>
         <td>.birthDate</td>
         <td></td>
         <td></td>

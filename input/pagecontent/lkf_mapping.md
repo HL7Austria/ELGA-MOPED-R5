@@ -103,7 +103,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Aufnahme-/Zugangsart 1</td>
         <td>MOPEDEncounter</td>
         <td>.admission.extension</td>
-        <td>Zugangsart</td>
+        <td>Aufnahmeart</td>
         <td></td>
     </tr>
     <tr>
@@ -111,7 +111,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Aufnahme-/Zugangsart 2</td>
         <td>MOPEDEncounter</td>
         <td>.class</td>
-        <td>Aufnahmeart</td>
+        <td>Aufnahmeart2</td>
         <td></td>
     </tr>
     <tr>
@@ -182,8 +182,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>WGC</td>
         <td>Wohnsitz – Gemeindecode</td>
         <td>HL7ATCorePatient</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.address.extension:municipalityCode</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>

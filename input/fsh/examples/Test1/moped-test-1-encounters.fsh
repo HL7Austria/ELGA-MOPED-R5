@@ -24,7 +24,7 @@ Usage: #example
 * class[+].coding.system = $Behandlungsart
 * class[=].coding.code = #S
 //Aufnahme-/Zugangsart2
-* class[+].coding.system = $Aufnahmeart
+* class[+].coding.system = $Aufnahmeart2
 * class[=].coding.code = #P
 //Patientenreferenz
 * subject = Reference(Patient/Test1Patient)
@@ -39,7 +39,7 @@ Usage: #example
 * reason[=].value = #00
 
 //Zugangsart
-* admission.extension[zugangsart].valueCoding = $Zugangsart#A
+* admission.extension[aufnahmeart].valueCoding = $Aufnahmeart#A
 
 //Diagnosen
 * diagnosis[+].use.coding.system = "https://termgit.elga.gv.at/CodeSystem/lkf-diagnose-typ"

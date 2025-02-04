@@ -23,7 +23,7 @@ Usage: #example
 * class[+].coding.system = $Behandlungsart
 * class[=].coding.code = #S
 //Aufnahme-/Zugangsart2
-* class[+].coding.system = $Aufnahmeart
+* class[+].coding.system = $Aufnahmeart2
 * class[=].coding.code = #A
 //Patientenreferenz
 * subject = Reference(Patient/Test2Patient)
@@ -38,7 +38,7 @@ Usage: #example
 * reason[=].value = #00
 //Zugangsart
 * admission.extension[+].url = "http://example.org/StructureDefinition/moped-ext-zugangsart"
-* admission.extension[=].valueCoding = $Zugangsart#A
+* admission.extension[=].valueCoding = $Aufnahmeart#A
 //Entlassungsart
 * admission.dischargeDisposition.coding.system = $Entlassungsart
 * admission.dischargeDisposition.coding.code = #E
