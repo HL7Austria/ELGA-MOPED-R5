@@ -1,8 +1,9 @@
 Instance: MOPEDPatientEntlassen
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $entlassen (POC)"
-Description: """
-
+Description: "Die $entlassen Operation wird aufgerufen, wenn ein(e) Patient*in aus dem Krankenhaus entlassen wurde."
+Usage: #definition 
+* purpose = """
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operation wird aufgerufen, wenn ein(e) Patient*in aus dem Krankenhaus entlassen wurde.
@@ -40,7 +41,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle entlassen werden können.
 
 """
-Usage: #definition 
 
 * id = "MOPED.Patient.Entlassen"
 * name = "MOPED_Patient_Entlassen"

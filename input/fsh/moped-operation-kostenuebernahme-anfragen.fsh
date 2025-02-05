@@ -1,7 +1,10 @@
 Instance: VersichertenanspruchserklärungAnfragen
 InstanceOf: OperationDefinition
 Title: "MOPED Versichertenanspruchserklärung $anfragen (POC)"
-Description: """
+Description: "Die Versichertenanspruchserklärung $anfragen Operation wird aufgerufen, um die Versichertenanspruchserklärung-Anfrage an die SV anzustoßen. Diese Operation ist irrelevant für Selbstzahler (das ist wichtig für künftige weiterentwicklung - wenn im Account auf eine Coverage-Ressource für Selbstzahler referenziert wird, darf die Operation $anfragen nicht ausgeführt werden)."
+Usage: #definition
+* purpose = """
+
 Legende: ~~durchgestrichen~~ heißt, dass es für den IG zwar bedacht wird, für den ersten POC jedoch nicht relevant ist.
 
 **Wer ruft diese Operation in welchem Zusammenhang auf?**

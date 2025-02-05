@@ -1,7 +1,10 @@
 Instance: MOPEDPatientVerlegen
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $verlegen (POC)"
-Description: """
+Description: "Die $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. Auch initial, wenn ein Patient auf eine bestimmte Station aufgenommen wird, wird diese Operation aufgerufen (dies passiert automatisch im Zuge der Operation $aufnehmen)."
+Usage: #definition
+* purpose = """
+
 Legende: ~~durchgestrichen~~ heißt, dass es für den IG zwar bedacht wird, für den ersten POC jedoch nicht relevant ist.
 
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
@@ -62,7 +65,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle verlegt werden können.
 
 """
-Usage: #definition 
 
 * id = "MOPED.Patient.Verlegen"
 * comment = "TBD: was passiert, wenn eine $aufnehmen Operation mehrmals mit Status `Aufnahme in Arbeit` aufgerufen wird und damit zu mehreren MOPEDTransferEncounter führt?"

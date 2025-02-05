@@ -1,7 +1,10 @@
 Instance: MOPEDPatientAufnehmen
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $aufnehmen (POC)"
-Description: """
+Description: "Die $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wird."
+Usage: #definition 
+* purpose = """
+
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wird.
@@ -57,7 +60,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 * Es wurde vorab geprüft, ob das `system` des Parameters `falldaten`.encounter.identifier dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle aufgenommen werden können.
 
 """
-Usage: #definition 
 
 * id = "MOPED.Patient.Aufnehmen"
 * name = "MOPED_Patient_Aufnehmen"
