@@ -82,12 +82,15 @@ pages:
     title: Home
   poc.md:
     title: Proof of Concept
+  HackathonRequestOverview.md:
+    title: Hackathon Gesamtübersicht
 
 
 
 menu:
   Home: index.html
   Artifacts: artifacts.html
+  Hackathon Gesamtübersicht: HackathonRequestOverview.html
   Proof of Concept: poc.html
 
 
