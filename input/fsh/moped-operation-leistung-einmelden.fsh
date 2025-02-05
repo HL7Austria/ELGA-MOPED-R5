@@ -11,7 +11,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $erfassen Operati
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: `Entlassung vollständig` 
+* Account-Status: `Aufnahme in Arbeit`, `Aufnahme freigegeben`, `SV verarbeitet`, `Entlassung Aviso`, `Entlassung vollständig`, `vorläufige Meldung` oder `vorläufige Freigabe`
 
 **Detaillierte Business-Logik**
 
