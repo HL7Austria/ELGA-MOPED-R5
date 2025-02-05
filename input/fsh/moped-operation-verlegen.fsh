@@ -10,7 +10,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: `Aufnahme in Arbeit` oder `Aufnahme freigegeben`
+* Account-Status: `Aufnahme in Arbeit`, `Aufnahme freigegeben` oder `SV verarbeitet`
 
 **Detaillierte Business-Logik**
 
