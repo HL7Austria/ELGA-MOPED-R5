@@ -12,7 +12,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: `Entlassung vollständig` oder `Vorläufige Meldung`
+* Account-Status: `Entlassung vollständig`, `Vorläufige Meldung`, `Vorläufige Freigabe`, `LGF Korrekturaufforderung` oder `Endgültige Korrekturaufforderung`
 
 **Detaillierte Business-Logik**
 
