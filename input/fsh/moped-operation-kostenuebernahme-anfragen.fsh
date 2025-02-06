@@ -77,7 +77,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
   * use = #in 
   * min = 1
   * max = "1"
-  * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer an dem der CoverageEligibilityRequest gerichtet ist."
+  * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer an dem der VAEClaim gerichtet ist."
   * type = #Identifier
 * parameter[+]
   * name = #verlaengerungstage

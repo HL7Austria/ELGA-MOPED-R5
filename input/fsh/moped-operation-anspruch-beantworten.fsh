@@ -1,6 +1,6 @@
 Instance: MOPEDAnspruchBeantworten
 InstanceOf: OperationDefinition
-Title: "MOPED CoverageEligibilityResponse $beantworten (POC)"
+Title: "MOPED VAEClaim $beantworten (POC)"
 Description: "Die $beantworten Operation wird aufgerufen, wenn eine Versichertenanspruchserklärung beantwortet wird."
 Usage: #definition
 * purpose = """
@@ -15,37 +15,37 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantwort
 
 **Detaillierte Business-Logik**
 
-1. Die CoverageEligibilityResponse wird lt. Regeln (siehe unten) validiert und eingespielt
-2. Falls Schritt 1 erfolgreich war, wird die Ressource Account gesucht, die eine Referenz auf den CoverageEligibilityResponse.request beihält (CoverageEligibilityResponse lt. Operation-Parameter) und auf `SV verarbeitet` gesetzt
+1. Die VAEClaimResponse wird lt. Regeln (siehe unten) validiert und eingespielt
+2. Falls Schritt 1 erfolgreich war, wird die Ressource Account gesucht, die eine Referenz auf den VAEClaimResponse.request beihält (VAEClaimResponse lt. Operation-Parameter) und auf `SV verarbeitet` gesetzt
 
 **Validierung / Fehlerbehandlung**
 
-* CoverageEligibilityResponse.patient muss gleich CoverageEligibilityResponse.request.patient sein
+* VAEClaimResponse.patient muss gleich VAEClaimResponse.request.patient sein
 
 **Weitere Hinweise**
 
 **Annahmen an das BeS**
-* Es wurde vorab geprüft, ob *CoverageEligibilityResponse.insurance* auch der SV entspricht, der die Operation aufruft. Somit ist sichergestellt, dass jede SV nur eigene CoverageEligibilityRequests beantworten kann.
+* Es wurde vorab geprüft, ob *VAEClaimResponse.insurance* auch der SV entspricht, der die Operation aufruft. Somit ist sichergestellt, dass jede SV nur eigene CoverageEligibilityRequests beantworten kann.
 
 """
 
-* id = "MOPED.CoverageEligibilityResponse.Beantworten"
-* name = "MOPED_CoverageEligibilityResponse_Beantworten"
+* id = "MOPED.VAEClaimResponse.Beantworten"
+* name = "MOPED_VAEClaimResponse_Beantworten"
 * status = #draft
 * kind = #operation
 * affectsState = true
-* resource = #CoverageEligibilityResponse
+* resource = #ClaimResponse
 * system = false
 * type = true
 * instance = false
 * code = #beantworten
 * parameter[+]
-  * name = #coverageEligibilityResponse
+  * name = #VAEClaimResponse
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *coverageEligibilityResponse* Parameter beinhält sämtliche Details zur Antwort auf den CoverageEligibilityRequest."
-  * type = #CoverageEligibilityResponse
+  * documentation = "Der *VAEClaimResponse* Parameter beinhält sämtliche Details zur Antwort auf den VAEClaim."
+  * type = #ClaimResponse
 * parameter[+]
   * name = #return
   * use = #out
