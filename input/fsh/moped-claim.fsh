@@ -5,6 +5,8 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 
 
 * patient only Reference(HL7ATCorePatient)
+* use = http://hl7.org/fhir/claim-use#claim
+* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 
 * procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 0..1
 * diagnosisRelatedGroup from LKFAbrechnungsGruppe (required)

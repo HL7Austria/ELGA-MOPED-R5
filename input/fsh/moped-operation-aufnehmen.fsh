@@ -24,8 +24,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
       * *MOPEDCoverage.subsciber mit der gleichen Referenz befüllen wie *MOPEDEncounter.subject*
 3. Account anlegen:
    * *MOPEDAccount.WorkflowStatus*: lt. Beschreibung der Werte-Ausprägungen des *freigeben* Parameter (siehe Hinweis 1)
-   * *MOPEDAccount.VerdachtArbeitsSchuelerunfall* lt. Operation-Parameter
-   * *MOPEDAccount.VerdachtFremdverschulden* lt. Operation-Parameter
    * *MOPEDAccount.subject* mit der gleichen Referenz befüllen wie *MOPEDEncounter.subject*
    * *MOPEDAccount.owner* mit der gleichen Referenz befüllen wie *MOPEDEncounter.serviceProvider*
    * *MOPEDAccount.AnzahlVerlegungen* mit Wert '0' befüllen
@@ -86,23 +84,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * min = 1
   * max = "1"
   * documentation = "Mit Hilfe des *freigeben* Parameters wird angegeben, ob es sich bei der Patienten-Aufnahme um vollständige Daten handelt und somit eine Validierung erfolgen soll (*freigeben* = *true*), oder ob lediglich unvollständige Daten zwischengespeichert werden (*freigeben* = *false*)."
-  * type = #boolean
-* parameter[+]
-  * name = #verdachtArbeitsSchuelerunfall
-  * use = #in
-  * min = 0
-  * max = "1"
-  * documentation = "Mit Hilfe des *verdachtArbeitsSchuelerunfall* Parameters wird festgehalten, ob es bei der Patienten-Aufnahme einen Verdacht auf einen Schüler- oder Arbeitsunfall gibt. Wird dieser Parameter mitgegeben, ist im Account das entsprechende Feld zu befüllen."
-  * type = #code
-  * binding[+]
-    * strength = #required
-    * valueSet = Canonical(VerdachtArbeitsSchuelerunfallVS)
-* parameter[+]
-  * name = #verdachtFremdverschulden
-  * use = #in
-  * min = 0
-  * max = "1"
-  * documentation = "Mit Hilfe des *verdachtFremdverschulden* Parameters wird festgehalten, ob es bei der Patienten-Aufnahme einen Verdacht auf Fremdverschulden gibt. Wird dieser Parameter mitgegeben, ist im Account das entsprechende Feld zu befüllen."
   * type = #boolean
 * parameter[+]
   * name = #physischeAnwesenheit
