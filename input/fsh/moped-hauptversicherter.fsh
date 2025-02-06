@@ -21,5 +21,5 @@ Description: "MOPED Profil der Person Ressource für den Hauptversicherten"
 //* identifier[socialSecurityNumber].assigner.reference = "https://www.gesundheit.gv.at/OID_Frontend/oiddetail.htm?smallView=true&actualOid=1.2.40.0.10.1.4.3.1" (exactly)
 * identifier[socialSecurityNumber].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger" (exactly)
 
-* relationship from http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (required)
-* relationship.coding.code = http://terminology.hl7.org/CodeSystem/v3-RoleClass#GUAR (exactly)
+* relationship from MOPEDRelatedPersonRelationshipType (required)
+* relationship.coding.code = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SELF (exactly)
