@@ -20,30 +20,30 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
 2. Suche aller MOPEDTransferEncounter die *partOf* den MOPEDEncounter aus Schritt 1 referenzieren
 3. Suchen des MOPEDAccounts: Die Referenz des *MOPEDEncounter.account* aus Schritt 1.
-4. Erstellung des MOPEDVAEClaim: 
-  * a. *MOPEDVAEClaim.status* mit 'active'
-  * b. *MOPEDVAEClaim.type* mit 'institutional'
-  * c. *MOPEDVAEClaim.use* mit 'preauthorization'
-  * d. *MOPEDVAEClaim.Verlaengerungstage* mit *verlaengerungstage* lt. Operation-Parameter befüllen
-  * e. *MOPEDVAEClaim.created* mit dem aktuellem Zeitpunkt befüllen
-  * f. *MOPEDVAEClaim.PremiumClass* mit *sonderklasse* lt. Operation-Parameter befüllen
-  * g. *MOPEDVAEClaim.patient* mit *MOPEDAccount.subject* befüllen
-  * h. *MOPEDVAEClaim.insurance.coverage* mit *MOPEDAccount.coverage.coverage* befüllen
-  * h. *MOPEDVAEClaim.provider* mit *MOPEDAccount.owner* befüllen
-  * i. *MOPEDVAEClaim.insurer* mit einer Referenz auf jene Organization befüllen, deren *Organization.identifier* dem Identifier *versicherer* lt. Operation-Parameter entspricht
-  * j. *MOPEDVAEClaim.encounter* mit allen gefundenen Encountern aus Schritt 1 und 2 befüllen.
-  * k. *MOPEDVAEClaim.Sonderklasse* lt. Operation-Parameter befüllen
-  * l. *MOPEDVAEClaim.supportingInfo[VerdachtFremdverschulden]* lt. Operation-Parameter befüllen
-  * m. *MOPEDVAEClaim.VerdachtArbeitsSchuelerunfall* lt. Operation-Parameter befüllen
-5. POSTen des neu erstellten MOPEDVAEClaim
+4. Erstellung des MopedVAERequest: 
+  * a. *MopedVAERequest.status* mit 'active'
+  * b. *MopedVAERequest.type* mit 'institutional'
+  * c. *MopedVAERequest.use* mit 'preauthorization'
+  * d. *MopedVAERequest.Verlaengerungstage* mit *verlaengerungstage* lt. Operation-Parameter befüllen
+  * e. *MopedVAERequest.created* mit dem aktuellem Zeitpunkt befüllen
+  * f. *MopedVAERequest.PremiumClass* mit *sonderklasse* lt. Operation-Parameter befüllen
+  * g. *MopedVAERequest.patient* mit *MOPEDAccount.subject* befüllen
+  * h. *MopedVAERequest.insurance.coverage* mit *MOPEDAccount.coverage.coverage* befüllen
+  * h. *MopedVAERequest.provider* mit *MOPEDAccount.owner* befüllen
+  * i. *MopedVAERequest.insurer* mit einer Referenz auf jene Organization befüllen, deren *Organization.identifier* dem Identifier *versicherer* lt. Operation-Parameter entspricht
+  * j. *MopedVAERequest.encounter* mit allen gefundenen Encountern aus Schritt 1 und 2 befüllen.
+  * k. *MopedVAERequest.Sonderklasse* lt. Operation-Parameter befüllen
+  * l. *MopedVAERequest.supportingInfo[VerdachtFremdverschulden]* lt. Operation-Parameter befüllen
+  * m. *MopedVAERequest.VerdachtArbeitsSchuelerunfall* lt. Operation-Parameter befüllen
+5. POSTen des neu erstellten MopedVAERequest
 6. Referenz im MOPEDAccount:
   a. *MOPEDAccount.claimRef* mit Hilfe der resultierenden ID aus Schritt 5 referenzieren
 
 **Validierung / Fehlerbehandlung**
 * *MOPEDAccount.coverage* darf nur eine Versicherung gelistet haben
-* *MOPEDVAEClaim.subject* muss mit *Coverage.beneficiary* aus Schritt 3g übereinstimmen
-* *MOPEDVAEClaim.insurer* muss mit *Coverage.insurer* aus Schritt 3g übereinstimmen
-* ~~*MOPEDVAEClaim.provider* muss gleichzeitig die gleiche Organisation sein, die lt. Token die Operation aufgerufen hat.~~
+* *MopedVAERequest.subject* muss mit *Coverage.beneficiary* aus Schritt 3g übereinstimmen
+* *MopedVAERequest.insurer* muss mit *Coverage.insurer* aus Schritt 3g übereinstimmen
+* ~~*MopedVAERequest.provider* muss gleichzeitig die gleiche Organisation sein, die lt. Token die Operation aufgerufen hat.~~
 
 **Weitere Hinweise**
 
@@ -54,9 +54,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 
 """
 
-* id = "MOPED.VAEClaim.Anfragen"
+* id = "MOPED.VAERequest.Anfragen"
 * comment = "TBD: Ist hier evtl. eine Transaction die bessere Lösung? Bei dieser Operation findet keine Status-Änderung statt. Lediglich auf die Precondition des Workflow-Status müsste geachtet werden."
-* name = "MOPED_CVAEClaim_Anfragen"
+* name = "MOPED_VAERequest_Anfragen"
 * status = #draft
 * kind = #operation 
 * affectsState = true
@@ -77,7 +77,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
   * use = #in 
   * min = 1
   * max = "1"
-  * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer an dem der VAEClaim gerichtet ist."
+  * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer an dem der VAERequest gerichtet ist."
   * type = #Identifier
 * parameter[+]
   * name = #verlaengerungstage

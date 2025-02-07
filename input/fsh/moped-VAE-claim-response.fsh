@@ -1,7 +1,7 @@
 
-Profile: MOPEDVAEClaimResponse
+Profile: MopedVAEResponse
 Parent: ClaimResponse
-Description: "MOPED Profil der ClaimResponse Ressource für die Versichertenanspruchserklärung VAE."
+Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklärung VAE."
 
 * status = #active
 * type.coding.code = #institutional
@@ -10,7 +10,7 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Versichertenansp
 * patient only Reference(HL7ATCorePatient)
 * insurer only Reference(HL7ATCoreOrganization)
 * insurer 1..1
-* request only Reference(MOPEDClaim)
+* request only Reference(MopedVAERequest)
 * request 1..1
 * requestor only Reference(HL7ATCoreOrganization)
 * requestor 1..1

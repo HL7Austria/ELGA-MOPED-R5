@@ -1,7 +1,7 @@
 
-Profile: MOPEDVAEClaim
+Profile: MopedVAERequest
 Parent: Claim
-Description: "MOPED Profil der Claim Ressource für die Versichertenanspruchserklärung VAE."
+Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung VAE."
 
 * extension contains ExtensionDays named verlaengerungstage 0..1
 * extension contains VerdachtArbeitsSchuelerunfall named VerdachtArbeitsSchuelerunfall 0..1
@@ -14,7 +14,7 @@ Description: "MOPED Profil der Claim Ressource für die Versichertenanspruchserk
 * insurer 1..1
 * provider only Reference(HL7ATCoreOrganization)
 * provider 1..1
-* related.claim only Reference(MOPEDClaim)
+* related.claim only Reference(MopedVAERequest)
 * insurance.coverage only Reference(MOPEDCoverage)
 * insurance.coverage 1..1
 
