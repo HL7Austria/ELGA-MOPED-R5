@@ -1,5 +1,5 @@
-Profile: MOPEDEncounterKH
-Parent: MOPEDEncounter
+Profile: MopedEncounterKH
+Parent: MopedEncounter
 Title: "MOPED Encounter KH"
 Description: "MOPED Profil der Encounter Ressource für die Rolle: KH"
 

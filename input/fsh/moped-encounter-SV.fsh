@@ -1,5 +1,5 @@
-Profile: MOPEDEncounterSV
-Parent: MOPEDEncounter
+Profile: MopedEncounterSV
+Parent: MopedEncounter
 Title: "MOPED Encounter SV"
 Description: "MOPED Profil der Encounter Ressource für die Rolle: SV"
 

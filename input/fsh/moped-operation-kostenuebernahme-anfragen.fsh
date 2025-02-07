@@ -17,9 +17,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 
 **Detaillierte Business-Logik**
 
-1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
-2. Suche aller MOPEDTransferEncounter die *partOf* den MOPEDEncounter aus Schritt 1 referenzieren
-3. Suchen des MOPEDAccounts: Die Referenz des *MOPEDEncounter.account* aus Schritt 1.
+1. Suche des MopedEncounter: Der MopedEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
+2. Suche aller MopedTransferEncounter die *partOf* den MopedEncounter aus Schritt 1 referenzieren
+3. Suchen des MopedAccounts: Die Referenz des *MopedEncounter.account* aus Schritt 1.
 4. Erstellung des MopedVAERequest: 
   * a. *MopedVAERequest.status* mit 'active'
   * b. *MopedVAERequest.type* mit 'institutional'
@@ -27,27 +27,27 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
   * d. *MopedVAERequest.Verlaengerungstage* mit *verlaengerungstage* lt. Operation-Parameter befüllen
   * e. *MopedVAERequest.created* mit dem aktuellem Zeitpunkt befüllen
   * f. *MopedVAERequest.PremiumClass* mit *sonderklasse* lt. Operation-Parameter befüllen
-  * g. *MopedVAERequest.patient* mit *MOPEDAccount.subject* befüllen
-  * h. *MopedVAERequest.insurance.coverage* mit *MOPEDAccount.coverage.coverage* befüllen
-  * h. *MopedVAERequest.provider* mit *MOPEDAccount.owner* befüllen
+  * g. *MopedVAERequest.patient* mit *MopedAccount.subject* befüllen
+  * h. *MopedVAERequest.insurance.coverage* mit *MopedAccount.coverage.coverage* befüllen
+  * h. *MopedVAERequest.provider* mit *MopedAccount.owner* befüllen
   * i. *MopedVAERequest.insurer* mit einer Referenz auf jene Organization befüllen, deren *Organization.identifier* dem Identifier *versicherer* lt. Operation-Parameter entspricht
   * j. *MopedVAERequest.encounter* mit allen gefundenen Encountern aus Schritt 1 und 2 befüllen.
   * k. *MopedVAERequest.Sonderklasse* lt. Operation-Parameter befüllen
   * l. *MopedVAERequest.supportingInfo[VerdachtFremdverschulden]* lt. Operation-Parameter befüllen
   * m. *MopedVAERequest.VerdachtArbeitsSchuelerunfall* lt. Operation-Parameter befüllen
 5. POSTen des neu erstellten MopedVAERequest
-6. Referenz im MOPEDAccount:
-  a. *MOPEDAccount.claimRef* mit Hilfe der resultierenden ID aus Schritt 5 referenzieren
+6. Referenz im MopedAccount:
+  a. *MopedAccount.claimRef* mit Hilfe der resultierenden ID aus Schritt 5 referenzieren
 
 **Validierung / Fehlerbehandlung**
-* *MOPEDAccount.coverage* darf nur eine Versicherung gelistet haben
+* *MopedAccount.coverage* darf nur eine Versicherung gelistet haben
 * *MopedVAERequest.subject* muss mit *Coverage.beneficiary* aus Schritt 3g übereinstimmen
 * *MopedVAERequest.insurer* muss mit *Coverage.insurer* aus Schritt 3g übereinstimmen
 * ~~*MopedVAERequest.provider* muss gleichzeitig die gleiche Organisation sein, die lt. Token die Operation aufgerufen hat.~~
 
 **Weitere Hinweise**
 
-* Hinweis 1: Nach dieser Operation findet lt. Soll-Prozess kein Update des Status *MOPEDAccount.workflowStatus* statt.
+* Hinweis 1: Nach dieser Operation findet lt. Soll-Prozess kein Update des Status *MopedAccount.workflowStatus* statt.
 
 **Annahmen an das BeS**
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur Kostenübernahmen für eigene Fälle angefragt werden können.

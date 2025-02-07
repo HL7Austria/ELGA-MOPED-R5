@@ -15,7 +15,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * provider only Reference(HL7ATCoreOrganization)
 * provider 1..1
 * related.claim only Reference(MopedVAERequest)
-* insurance.coverage only Reference(MOPEDCoverage)
+* insurance.coverage only Reference(MopedCoverage)
 * insurance.coverage 1..1
 
 * encounter ^slicing.rules = #open
@@ -24,9 +24,9 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * encounter ^slicing.discriminator[=].path = "resolve()"
 * encounter contains MopedEncounterKH 1..1 and TransferEncounter 0..
 * encounter[MopedEncounterKH] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
-* encounter[MopedEncounterKH] only Reference(MOPEDEncounterKH)
+* encounter[MopedEncounterKH] only Reference(MopedEncounterKH)
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
-* encounter[TransferEncounter] only Reference(MOPEDTransferEncounter)
+* encounter[TransferEncounter] only Reference(MopedTransferEncounter)
 
 * diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
 

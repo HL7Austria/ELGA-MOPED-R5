@@ -1,4 +1,4 @@
-Profile: MOPEDPatientLGF
+Profile: MopedPatientLGF
 Parent: HL7ATCorePatient
 Title: "MOPED Patient LGF"
 Description: "MOPED Profil der Patient Ressource aus der Sicht der Rolle: LGF"
