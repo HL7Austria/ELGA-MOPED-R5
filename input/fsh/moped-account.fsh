@@ -1,4 +1,4 @@
-Profile: MOPEDAccount
+Profile: MopedAccount
 Parent: Account
 Description: "MOPED Profil der Account Ressource für die administrative Fallführung und Abrechnung."
 Title: "MOPED Account"

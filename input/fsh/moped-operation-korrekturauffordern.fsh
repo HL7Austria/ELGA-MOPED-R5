@@ -1,4 +1,4 @@
-Instance: MOPEDAbrechnungKorrekturAuffordern
+Instance: MopedAbrechnungKorrekturAuffordern
 InstanceOf: OperationDefinition
 Title: "MOPED ClaimResponse $auffordern (POC)"
 Description: "Die $auffordern Operation wird aufgerufen, wenn eine Abrechnung beantwortet wird und das Krankehaus zu einer Korrektur aufgefordert wird."
@@ -16,7 +16,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
 **Detaillierte Business-Logik**
 
 1. Die ClaimResponse wird lt. Regeln (siehe unten) validiert und eingespielt
-2. Falls Schritt 1 erfolgreich war, wird der ClaimResponse.encounter.account.workflowStatus (ClaimResponse aus Operation-Parameter; der Encounter vom Profil MOPEDEncounter) wird auf 
+2. Falls Schritt 1 erfolgreich war, wird der ClaimResponse.encounter.account.workflowStatus (ClaimResponse aus Operation-Parameter; der Encounter vom Profil MopedEncounter) wird auf 
    * `LGF Korrekturaufforderung` gesetzt, falls der vorherige Status `Vorläufige Meldung` war
    * `Endgültige Korrekturaufforderung` gesetzt, falls der vorherige Status `Endgültige Meldung` war
 3. Alle Referenzen sollen versionsspezifisch aufgelöst werden.
@@ -59,7 +59,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
   * max = "1"
   * documentation = "Der *claimResponse* Parameter beinhaltet sämtliche Details zur Antwort auf den Claim."
   * type = #ClaimResponse
-  * targetProfile = Canonical(MOPEDClaimResponse)
+  * targetProfile = Canonical(MopedLKFResponse)
 * parameter[+]
   * name = #return
   * use = #out

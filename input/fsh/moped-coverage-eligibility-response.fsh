@@ -1,5 +1,5 @@
 
-Profile: MOPEDCoverageEligibilityResponse
+Profile: MopedCoverageEligibilityResponse
 Parent: CoverageEligibilityResponse
 Description: "MOPED Profil der CoverageEligibilityResponse Ressource für die Versichertenanspruchserklärung-Antwort."
 Title: "MOPED Coverage Eligibility Response"
@@ -11,4 +11,4 @@ Title: "MOPED Coverage Eligibility Response"
 * extension contains VerpflegskostenBeitragsbefreiung named verpflegskostenBeitragsbefreiung 0..1
 * extension contains VortageanzahlAufKostenbeitrag named vortageanzahlAufKostenbeitrag 0..1
 
-* insurance.coverage only Reference(MOPEDCoverage)
+* insurance.coverage only Reference(MopedCoverage)

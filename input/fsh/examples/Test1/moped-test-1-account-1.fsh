@@ -1,8 +1,8 @@
 Instance: Test1Account
-InstanceOf: MOPEDAccount
+InstanceOf: MopedAccount
 
 Usage: #example
-* meta.profile = "http://example.org/StructureDefinition/MOPEDAccount"
+* meta.profile = "http://example.org/StructureDefinition/MopedAccount"
 * id = "Test1Account"
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-workflowStatus"
 * extension[=].valueCoding = $workflowstatus#TBD

@@ -52,7 +52,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -60,7 +60,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -68,23 +68,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -92,7 +92,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -156,7 +156,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>MOPEDCoverage</td>
+        <td>MopedCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -220,8 +220,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -281,7 +281,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -289,7 +289,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -297,23 +297,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -321,7 +321,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -377,8 +377,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -438,7 +438,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -446,7 +446,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -454,23 +454,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -478,7 +478,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -542,7 +542,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>MOPEDCoverage</td>
+        <td>MopedCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -606,8 +606,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -633,12 +633,12 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>EREIG=AUFART -> MOPEDEncounter.admission.extension:Zugangsart</td>
+        <td>EREIG=AUFART -> MopedEncounter.admission.extension:Zugangsart</td>
     </tr>
     <tr>
         <td>FKRA</td>
         <td>Funktionscode der Abteilung lt. LKF</td>
-        <td>MOPEDOrganizationAbteilung</td>
+        <td>MopedOrganizationAbteilung</td>
         <td>.identifier:Funktionscode</td>
         <td></td>
         <td></td>
@@ -646,7 +646,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FKRASU</td>
         <td>Funktionssubcode der Abteilung lt. LKF</td>
-        <td>MOPEDOrganizationAbteilung</td>
+        <td>MopedOrganizationAbteilung</td>
         <td>.identifier:Funktionssubcode</td>
         <td></td>
         <td></td>
@@ -654,7 +654,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KLAS</td>
         <td>Allgemeine Gebührenklasse/Sonderklasse</td>
-        <td>MOPEDCoverageEligibilityRequest</td>
+        <td>MopedCoverageEligibilityRequest</td>
         <td>.extension</td>
         <td>Sonderklasse</td>
         <td></td>
@@ -702,7 +702,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VERDAU</td>
         <td>Verdacht auf Arbeits-/Schülerunfall</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>VerdachtArbeitsSchülerUnfall</td>
         <td></td>
@@ -782,7 +782,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FREVER</td>
         <td>Fremdversschluden</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>VerdachtFremdverschulden</td>
         <td></td>
@@ -798,7 +798,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>URS</td>
         <td>Ursache der Behandlung</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.reason</td>
         <td></td>
         <td></td>
@@ -814,7 +814,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>USVPNR</td>
         <td>Überweisende Stelle, Vertragspartnernummer</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.admission.origin:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
@@ -854,7 +854,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ERDAT</td>
         <td>Ereignis-/Unfalldatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.extension</td>
         <td>Unfalldatum</td>
         <td></td>
@@ -862,7 +862,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VTAG</td>
         <td>Anzahl der Verlängerungstage</td>
-        <td>MOPEDCoverageEligibilityRequest</td>
+        <td>MopedCoverageEligibilityRequest</td>
         <td>.extension</td>
         <td>Verlaengerungstage</td>
         <td></td>
@@ -870,7 +870,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VDAS</td>
         <td>VDAS-ID, Ergebnis der Abfrage</td>
-        <td>MOPEDCoverage</td>
+        <td>MopedCoverage</td>
         <td>.identifier:VDASID</td>
         <td>VDASID</td>
         <td></td>
@@ -915,7 +915,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -923,7 +923,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -931,23 +931,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -955,7 +955,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -1019,7 +1019,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>MOPEDCoverage</td>
+        <td>MopedCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -1083,8 +1083,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -1110,12 +1110,12 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>EREIG=AUFART -> MOPEDEncounter.admission.extension:Zugangsart</td>
+        <td>EREIG=AUFART -> MopedEncounter.admission.extension:Zugangsart</td>
     </tr>
     <tr>
         <td>KLAS</td>
         <td>Allgemeine Gebührenklasse/Sonderklasse</td>
-        <td>MOPEDCoverageEligibilityRequest</td>
+        <td>MopedCoverageEligibilityRequest</td>
         <td>.extension</td>
         <td>Sonderklasse</td>
         <td></td>
@@ -1123,7 +1123,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>DAT-VON</td>
         <td>VAE Beginndatum</td>
-        <td>MOPEDCoverageEligibilityResponse</td>
+        <td>MopedCoverageEligibilityResponse</td>
         <td>.insurance.benefitPeriod.start</td>
         <td></td>
         <td></td>
@@ -1131,7 +1131,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>DATBIS</td>
         <td>VAE Endedatum</td>
-        <td>MOPEDCoverageEligibilityResponse</td>
+        <td>MopedCoverageEligibilityResponse</td>
         <td>.insurance.benefitPeriod.end</td>
         <td></td>
         <td></td>
@@ -1139,7 +1139,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENDE</td>
         <td>Fristende</td>
-        <td>MOPEDCoverageEligibilityResponse</td>
+        <td>MopedCoverageEligibilityResponse</td>
         <td>.extension</td>
         <td>Fristende</td>
         <td></td>
@@ -1147,7 +1147,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VAEST</td>
         <td>Status der VAE</td>
-        <td>MOPEDCoverageEligibilityResponse</td>
+        <td>MopedCoverageEligibilityResponse</td>
         <td>.extension</td>
         <td>VAEStatus</td>
         <td></td>
@@ -1155,7 +1155,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VKBEFR</td>
         <td>Verpflegskosten-Beitragsbefreiung</td>
-        <td>MOPEDCoverageEligibilityResponse</td>
+        <td>MopedCoverageEligibilityResponse</td>
         <td>.extension</td>
         <td>VerpflegskostenBeitragsbefreiung</td>
         <td></td>
@@ -1163,7 +1163,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VTAGE</td>
         <td>Vortageanzahl auf Kostenbeitrag</td>
-        <td>MOPEDCoverageEligibilityResponse</td>
+        <td>MopedCoverageEligibilityResponse</td>
         <td>.extension</td>
         <td>VortageanzahlAufKostenbeitrag</td>
         <td></td>
@@ -1208,7 +1208,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -1216,7 +1216,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -1224,23 +1224,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -1248,7 +1248,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -1312,7 +1312,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>MOPEDCoverage</td>
+        <td>MopedCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -1376,8 +1376,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -1448,7 +1448,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FREVER</td>
         <td>Fremdverschulden</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>VerdachtFremdverschulden</td>
         <td></td>
@@ -1464,7 +1464,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>URS</td>
         <td>Ursache der Behandlung</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.reason</td>
         <td></td>
         <td></td>
@@ -1512,7 +1512,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTS</td>
         <td>Entlassungsschlüssel</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.admission.dischargeDisposition</td>
         <td></td>
         <td></td>
@@ -1544,7 +1544,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KABEFR</td>
         <td>Anzahl der Tage, für welche kein Kostenbeitrag seitens der Krankenanstalt eingehoben wurde</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>TageOhneKostenbeitrag</td>
         <td></td>
@@ -1589,7 +1589,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -1597,7 +1597,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -1605,23 +1605,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -1629,7 +1629,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -1637,7 +1637,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFART</td>
         <td>Aufnahmeart</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.admission.extension</td>
         <td>Aufnahmeart</td>
         <td></td>
@@ -1648,7 +1648,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>ENTLART = ENTS -> MOPEDEncounter.admission.dischargeDisposition</td>
+        <td>ENTLART = ENTS -> MopedEncounter.admission.dischargeDisposition</td>
     </tr>
     <tr>
         <td>KOMM</td>
@@ -1693,7 +1693,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>MOPEDCoverage</td>
+        <td>MopedCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -1725,8 +1725,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -1789,7 +1789,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>SOND</td>
         <td>Sonderleistungsnummer</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>Sonderleistungsnummer</td>
         <td></td>
@@ -1797,7 +1797,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>SOANZ</td>
         <td>Anzahl Sonderleistung</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>AnzahlSonderleistungen</td>
         <td></td>
@@ -1805,7 +1805,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KVAB</td>
         <td>Ablehnungsgrund für Leistungserbringung stationär</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.adjudication.reason</td>
         <td></td>
         <td></td>
@@ -1821,7 +1821,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOANF</td>
         <td>Kostenmeldung für (A/R/K)</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>KostenmeldungARK</td>
         <td></td>
@@ -1829,7 +1829,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFGRP</td>
         <td>LDF-Gruppe Teil1</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.diagnosisRelatedGroup</td>
         <td></td>
         <td></td>
@@ -1837,7 +1837,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFKNT</td>
         <td>LDF-Gruppe Teil2</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>DiagnoseKnoten</td>
         <td></td>
@@ -1845,7 +1845,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFPP</td>
         <td>Punkte LDF-Pauschale</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>PunkteLDFPauschale</td>
         <td></td>
@@ -1853,7 +1853,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VDU</td>
         <td>Punkte Verweildauerausreißer unten</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>PunkteBelagsdauerausreisseruntenLeistungskomponente</td>
         <td></td>
@@ -1861,7 +1861,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VDO</td>
         <td>Zusatzpunkte Verweildauerausreißer oben</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteBelagsdauerausreisserNachOben</td>
         <td></td>
@@ -1869,7 +1869,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ZUINT</td>
         <td>Zusatzpunkte Intensiv</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteIntensiv</td>
         <td></td>
@@ -1877,7 +1877,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ZUMEHR</td>
         <td>Zusatzpunkte Mehrleistungen</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteMehrfachleistungen</td>
         <td></td>
@@ -1885,7 +1885,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>PSPEZ</td>
         <td>Punkte spezieller Bereich</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>PunkteSpeziellerBereicheTageweise</td>
         <td></td>
@@ -1893,7 +1893,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>PTOT</td>
         <td>Punkte total</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>TotalPoints</td>
         <td></td>
@@ -1901,7 +1901,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFFAK</td>
         <td>LDF-Punktewert Netto</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>LDFPunktewertNetto</td>
         <td></td>
@@ -1909,7 +1909,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFBET</td>
         <td>LDF-Betrag Netto</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>LDFBetragNetto</td>
         <td></td>
@@ -1917,7 +1917,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VERSATZ</td>
         <td>Patientenanteil für Angehörige (tägl. Satz) netto</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>PatientenanteilAngehoerige</td>
         <td></td>
@@ -1925,7 +1925,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VERPA</td>
         <td>Patientenanteil netto</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>Patientenanteil </td>
         <td></td>
@@ -1933,7 +1933,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BEIH</td>
         <td>Beihilfenäquivalent</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>Beihilfenaequivalent</td>
         <td></td>
@@ -1941,7 +1941,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FORDAV</td>
         <td>Forderungsbetrag für Ausländerverrechnung</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>ForderungsbetragAuslaenderverrechnungRegress</td>
         <td></td>
@@ -1949,7 +1949,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FORDRG</td>
         <td>Forderungsbetrag für den Regress</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>ForderungsbetragAuslaenderverrechnungRegress</td>
         <td></td>
@@ -1965,7 +1965,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>RENR</td>
         <td>RENR</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>RechnungsnummerKHLGF</td>
         <td></td>
@@ -2010,7 +2010,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -2018,7 +2018,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -2026,23 +2026,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -2050,7 +2050,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -2106,8 +2106,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -2138,7 +2138,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOANF</td>
         <td>Kostenmeldung für</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>KostenmeldungARK</td>
         <td></td>
@@ -2183,7 +2183,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -2191,7 +2191,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -2199,23 +2199,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -2223,7 +2223,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -2287,7 +2287,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>MOPEDCoverage</td>
+        <td>MopedCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -2351,8 +2351,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -2383,7 +2383,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>TEXT1</td>
         <td>Kommentartext</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>note</td>
         <td></td>
@@ -2391,7 +2391,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>TEXT2</td>
         <td>Kommentartext</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>note</td>
         <td></td>
@@ -2399,7 +2399,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>TEXT3</td>
         <td>Kommentartext</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>note</td>
         <td></td>
@@ -2407,7 +2407,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>TEXT4</td>
         <td>Kommentartext</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>note</td>
         <td></td>
@@ -2452,7 +2452,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -2460,7 +2460,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -2468,23 +2468,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -2492,7 +2492,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -2548,8 +2548,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -2572,7 +2572,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FKRA</td>
         <td>Abteilung - Funktionscode der Ambulanz</td>
-        <td>MOPEDOrganizationAbteilung</td>
+        <td>MopedOrganizationAbteilung</td>
         <td>.identifier:Funktionscode</td>
         <td></td>
         <td></td>
@@ -2580,7 +2580,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FKRASU</td>
         <td>Abteilung - Subcode</td>
-        <td>MOPEDOrganizationAbteilung</td>
+        <td>MopedOrganizationAbteilung</td>
         <td>.identifier:Funktionssubcode</td>
         <td></td>
         <td></td>
@@ -2588,7 +2588,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BDAT</td>
         <td>Behandlungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td></td>
@@ -2596,7 +2596,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOANF</td>
         <td>Kostenmeldung</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>KostenmeldungARK</td>
         <td></td>
@@ -2604,7 +2604,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFGRP</td>
         <td>LDF-Gruppe 1</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.diagnosisRelatedGroup</td>
         <td></td>
         <td></td>
@@ -2612,7 +2612,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFKNR</td>
         <td>LDF-Gruppe 2</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>DiagnoseKnoten</td>
         <td></td>
@@ -2620,7 +2620,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td> PTOT</td>
         <td>Punkte Total</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>TotalPoints</td>
         <td></td>
@@ -2628,7 +2628,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFFAK</td>
         <td>LDF-Punktewert netto</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>LDFPunktewertNetto</td>
         <td></td>
@@ -2636,7 +2636,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFBET</td>
         <td>LDF-Betrag Netto</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>LDFBetragNetto</td>
         <td></td>
@@ -2644,7 +2644,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BEIH</td>
         <td>Beihilfenäquivalent</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>Beihilfenaequivalent</td>
         <td></td>
@@ -2652,7 +2652,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FORDAV</td>
         <td>Forderungsbetrag für Ausländerverrechnung</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>ForderungsbetragAuslaenderverrechnungRegress</td>
         <td></td>
@@ -2660,7 +2660,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FORDRG</td>
         <td>Forderungsbetrag für den Regress</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>ForderungsbetragAuslaenderverrechnungRegress</td>
         <td></td>
@@ -2668,7 +2668,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ABTFC_LP</td>
         <td>Leistungspunkte</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>LeistungskomponenteLeistungspunkte</td>
         <td></td>
@@ -2676,7 +2676,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ABTFC_KP</td>
         <td>Kontaktpunkte</td>
-        <td>MOPEDClaim & MOPEDClaimResponse</td>
+        <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>TageskomponenteKontaktpunkte</td>
         <td></td>
@@ -2721,7 +2721,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -2729,7 +2729,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -2737,23 +2737,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -2761,7 +2761,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -2817,8 +2817,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>
@@ -2841,7 +2841,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOANF</td>
         <td>Kostenmeldung</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>KostenmeldungARK</td>
         <td></td>
@@ -2849,7 +2849,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>LDFBET</td>
         <td>LDF-Betrag Netto</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>LDFBetragNetto</td>
         <td></td>
@@ -2857,7 +2857,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VERSATZ</td>
         <td>Patientenanteil für Angehörige</td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>PatientenanteilAngehoerige</td>
         <td></td>
@@ -2865,7 +2865,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VERPA</td>
         <td>Patientenanteil </td>
-        <td>MOPEDClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
         <td>Patientenanteil </td>
         <td></td>
@@ -3006,7 +3006,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>AUFZL</td>
         <td>Aufnahmezahl</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
         <td></td>
@@ -3014,7 +3014,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>FANU</td>
         <td>Fallnummer</td>
-        <td>MOPEDAccount</td>
+        <td>MopedAccount</td>
         <td>.extension</td>
         <td>.AnzahlBeurlaubungen</td>
         <td>Anzahl der Wiederaufnahmen nach Urlaub</td>
@@ -3022,23 +3022,23 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>KOST</td>
         <td>Kostenträger (leistungszuständig)</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MOPEDClaim.insurance.coverage:MOPEDCoverage.paymentBy.party</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
         <td></td>
     </tr>
     <tr>
         <td>VSTR</td>
         <td>zuständiger Versicherungsträger</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.coverage.insurer:Organization.identifier + MOPEDClaim.insurer:Organization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
         <td>AUFN</td>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.start</td>
         <td></td>
         <td>AUFN = AUFDAT; SV (erstes im Quartal mit der gleichen Aufnahmezahl)</td>
@@ -3046,7 +3046,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>ENTL</td>
         <td>Entlassungsdatum JJJJMMTT</td>
-        <td>MOPEDEncounter</td>
+        <td>MopedEncounter</td>
         <td>.period.end</td>
         <td></td>
         <td></td>
@@ -3110,7 +3110,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>VGR</td>
         <td>Versichertengruppe/Kategorie</td>
-        <td>MOPEDCoverage</td>
+        <td>MopedCoverage</td>
         <td>.class:Versichertenkategorien</td>
         <td></td>
         <td></td>
@@ -3174,8 +3174,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>BKANR</td>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
-        <td>MOPEDAccount + MOPEDClaim</td>
-        <td>MOPEDAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MOPEDClaim.provider:HL7ATCoreOrganization.identifier</td>
+        <td>MopedAccount + MopedLKFRequest</td>
+        <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
     </tr>

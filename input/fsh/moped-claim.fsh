@@ -1,5 +1,5 @@
 
-Profile: MOPEDClaim
+Profile: MopedLKFRequest
 Parent: Claim
 Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfrage."
 Title: "MOPED Claim"
@@ -14,8 +14,8 @@ Title: "MOPED Claim"
 * insurer 1..1
 * provider only Reference(HL7ATCoreOrganization)
 * provider 1..1
-* related.claim only Reference(MOPEDClaim)
-* insurance.coverage only Reference(MOPEDCoverage)
+* related.claim only Reference(MopedLKFRequest)
+* insurance.coverage only Reference(MopedCoverage)
 * insurance.coverage 1..1
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
@@ -24,9 +24,9 @@ Title: "MOPED Claim"
 
 * encounter contains MopedEncounter 1..1 and TransferEncounter 1..
 * encounter[MopedEncounter] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
-* encounter[MopedEncounter] only Reference(MOPEDEncounter)
+* encounter[MopedEncounter] only Reference(MopedEncounter)
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
-* encounter[TransferEncounter] only Reference(MOPEDTransferEncounter)
+* encounter[TransferEncounter] only Reference(MopedTransferEncounter)
 
 * extension contains Note named notiz 0..
 * diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"

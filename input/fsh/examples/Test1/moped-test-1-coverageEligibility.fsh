@@ -1,14 +1,14 @@
-Instance: Test1MOPEDCoverageEligibilityRequest1
-InstanceOf: MOPEDCoverageEligibilityRequest
+Instance: Test1MopedCoverageEligibilityRequest1
+InstanceOf: MopedCoverageEligibilityRequest
 Usage: #example
-* id = "Test1MOPEDCoverageEligibilityRequest1"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDCoverageEligibilityRequest"
+* id = "Test1MopedCoverageEligibilityRequest1"
+* meta.profile = "http://example.org/StructureDefinition/MopedCoverageEligibilityRequest"
 * status = #active
 * purpose = #validation
 * created = "2024-09-17"
 * insurer = Reference(Organization/Test1OrganizationInsurance1)
 
-* insurance.coverage = Reference(Coverage/Test1MOPEDCoverage)
+* insurance.coverage = Reference(Coverage/Test1MopedCoverage)
 
 * patient = Reference(Patient/Test1Patient)
 * provider = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)
@@ -22,25 +22,25 @@ Usage: #example
 * extension[=].valueCoding = $Sonderklasse#A
 
 
-Instance: Test1MOPEDCoverageEligibilityResponse1
-InstanceOf: MOPEDCoverageEligibilityResponse
+Instance: Test1MopedCoverageEligibilityResponse1
+InstanceOf: MopedCoverageEligibilityResponse
 Usage: #example
-* id = "Test1MOPEDCoverageEligibilityResponse1"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDCoverageEligibilityResponse"
+* id = "Test1MopedCoverageEligibilityResponse1"
+* meta.profile = "http://example.org/StructureDefinition/MopedCoverageEligibilityResponse"
 * status = #active
 * purpose = #validation
 * created = "2024-09-17"
 * insurer = Reference(Organization/Test1OrganizationInsurance1)
 
 * patient = Reference(Patient/Test1Patient)
-* request = Reference(CoverageEligibilityRequest/Test1MOPEDCoverageEligibilityRequest1)
+* request = Reference(CoverageEligibilityRequest/Test1MopedCoverageEligibilityRequest1)
 
 * outcome = #complete
 
 //VAE Beginn & Enddatum
 * insurance.benefitPeriod.start = "2024-02-22"
 * insurance.benefitPeriod.end = "2024-08-21"
-* insurance.coverage = Reference(Coverage/Test1MOPEDCoverage)
+* insurance.coverage = Reference(Coverage/Test1MopedCoverage)
 
 //Fristende
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-fristende"

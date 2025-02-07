@@ -1,4 +1,4 @@
-Profile: MOPEDCoverageEligibilityRequest
+Profile: MopedCoverageEligibilityRequest
 Parent: CoverageEligibilityRequest
 Description: "MOPED Profil der CoverageEligibilityRequest Ressource für die Versichertenanspruchserklärung-Anfrage."
 Title: "MOPED Coverage Eligibility Request"
@@ -12,4 +12,4 @@ Title: "MOPED Coverage Eligibility Request"
 * provider only Reference(HL7ATCoreOrganization)
 * insurer only Reference(Organization)
 
-* insurance.coverage only Reference(MOPEDCoverage)
+* insurance.coverage only Reference(MopedCoverage)

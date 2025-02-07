@@ -1,7 +1,7 @@
-Instance: Test1MOPEDEncounterSV
-InstanceOf: MOPEDEncounterSV
+Instance: Test1MopedEncounterSV
+InstanceOf: MopedEncounterSV
 Usage: #example
-* id = "Test1MOPEDEncounterSV"
+* id = "Test1MopedEncounterSV"
 * status = #in-progress
 //Aufnahmezahl
 * identifier[+].type.coding.code = #VN 

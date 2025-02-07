@@ -1,4 +1,4 @@
-Profile: MOPEDEncounter
+Profile: MopedEncounter
 Parent: Encounter
 Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung"
 Title: "MOPED Encounter"
@@ -16,12 +16,12 @@ Title: "MOPED Encounter"
 * identifier[DatensatzID].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[DatensatzID].type.coding.code = #ANON (exactly)
 * identifier[DatensatzID] ^short = "SHA-256 verschlüsselte Aufnahmezahl"
-* account only Reference(MOPEDAccount)
+* account only Reference(MopedAccount)
 
 * subject only Reference(HL7ATCorePatient)
 * admission.origin only Reference(Organization)
 * admission.destination only Reference(Organization)
-* serviceProvider only Reference(MOPEDOrganizationAbteilung)
+* serviceProvider only Reference(MopedOrganizationAbteilung)
 * actualPeriod ^short = "Aufnahme- und Entlassungsdatum"
 
 * admission.dischargeDisposition ^short = "Entlassungsart"

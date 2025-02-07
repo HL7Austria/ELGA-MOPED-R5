@@ -1,9 +1,9 @@
-Instance: Test1MOPEDEncounter
-InstanceOf: MOPEDEncounter
+Instance: Test1MopedEncounter
+InstanceOf: MopedEncounter
 Usage: #example
-* id = "Test1MOPEDEncounter"
+* id = "Test1MopedEncounter"
 * status = #in-progress
-* meta.profile = "http://example.org/StructureDefinition/MOPEDEncounter"
+* meta.profile = "http://example.org/StructureDefinition/MopedEncounter"
 /*//Fallnummer
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-fallnummer"
 * extension[=] = 
@@ -52,14 +52,14 @@ Usage: #example
 
 
 Instance: Test1TransferEncounter1
-InstanceOf: MOPEDTransferEncounter
+InstanceOf: MopedTransferEncounter
 Usage: #example
 * id = "Test1TransferEncounter1"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDTransferEncounter"
+* meta.profile = "http://example.org/StructureDefinition/MopedTransferEncounter"
 * status = #in-progress
 
 * subject = Reference(Patient/Test1Patient)
-* partOf = Reference(Encounter/Test1MOPEDEncounter)
+* partOf = Reference(Encounter/Test1MopedEncounter)
 * serviceProvider = Reference(Organization/Test1OrganizationAbteilung1)
 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
@@ -68,7 +68,7 @@ Usage: #example
 * extension[=].extension[+].url = "neugeborenes"
 * extension[=].extension[=].valueBoolean = false
 
-* actualPeriod.start = "2024-02-22T19:33:00+02:00" //für ersten TransferEncounter gleich mit MOPEDEncounter start
+* actualPeriod.start = "2024-02-22T19:33:00+02:00" //für ersten TransferEncounter gleich mit MopedEncounter start
 
 
 

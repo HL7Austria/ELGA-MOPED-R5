@@ -1,4 +1,4 @@
-Instance: MOPEDAnspruchBeantworten
+Instance: MopedAnspruchBeantworten
 InstanceOf: OperationDefinition
 Title: "MOPED CoverageEligibilityResponse $beantworten (POC)"
 Description: "Die $beantworten Operation wird aufgerufen, wenn eine Versichertenanspruchserklärung beantwortet wird."

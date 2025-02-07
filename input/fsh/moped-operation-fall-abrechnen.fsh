@@ -1,4 +1,4 @@
-Instance: MOPEDFallAbrechnen
+Instance: MopedFallAbrechnen
 InstanceOf: OperationDefinition
 Title: "MOPED Encounter $abrechnen (POC)"
 Description: "Die $abrechnen Operation wird aufgerufen, wenn ein Fall abgerechnet werden sollte."
@@ -15,9 +15,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 
 **Detaillierte Business-Logik**
 
-1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
-2. Suche aller MOPEDProcedures und MOPEDConditions, die auf den Encounter aus Schritt 1 referenzieren
-3. Suche aller MOPEDTransferEncounter die *partOf* den MOPEDEncounter aus Schritt 1 referenzieren
+1. Suche des MopedEncounter: Der MopedEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
+2. Suche aller MopedProcedures und MopedConditions, die auf den Encounter aus Schritt 1 referenzieren
+3. Suche aller MopedTransferEncounter die *partOf* den MopedEncounter aus Schritt 1 referenzieren
 4. Der Claim wird lt. Regeln (siehe unten) validiert und eingespielt
 5. Falls Schritt 4 erfolgreich war, wird der Encounter.account.workflowStatus (Encounter aus Schritt 1) wird auf 
    * `Vorläufige Meldung` gesetzt, falls der `abschliessen`-Parameter `false` ist
@@ -77,9 +77,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *claim* Parameter beinhaltet sämtliche Details zur Abrechnung lt. MOPEDClaim Profil."
+  * documentation = "Der *claim* Parameter beinhaltet sämtliche Details zur Abrechnung lt. MopedLKFRequest Profil."
   * type = #Claim
-  * targetProfile = Canonical(MOPEDClaim)
+  * targetProfile = Canonical(MopedLKFRequest)
 * parameter[+]
   * name = #return
   * use = #out

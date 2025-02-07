@@ -13,12 +13,12 @@ Usage: #example
 * name.given = "Patientenkommun"
 * gender = #female
 * birthDate = "1969-04-21"
-* address = MOPEDTest1PatientOhneMaskierungAddress
+* address = MopedTest1PatientOhneMaskierungAddress
 * extension[+].extension.url = "code"
 * extension[=].extension.valueCodeableConcept = $iso-3166-1-alpha-3#AUT "Österreich"
 * extension[=].url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
 
-Instance:    MOPEDTest1PatientOhneMaskierungAddress
+Instance:    MopedTest1PatientOhneMaskierungAddress
 InstanceOf:  HL7ATCoreAddress
 Usage:       #inline
 * use = http://hl7.org/fhir/address-use#home

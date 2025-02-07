@@ -17,18 +17,18 @@
     KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> $entlassen</a>| Moped 
     KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html">$erfassen</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped
-    Moped -->|<a href="StructureDefinition-MOPEDCoverageEligibilityResponse.html"> GET CoverageEligibilityResponse</a>| KH
-    Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET ClaimResponse</a>| KH
+    Moped -->|<a href="StructureDefinition-MopedCoverageEligibilityResponse.html"> GET CoverageEligibilityResponse</a>| KH
+    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| KH
 
-    Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET ClaimResponse</a>| SV
-    Moped --->|<a href="StructureDefinition-MOPEDCoverageEligibilityRequest.html"> GET CoverageEligibilityRequest</a>| SV
+    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| SV
+    Moped --->|<a href="StructureDefinition-MopedCoverageEligibilityRequest.html"> GET CoverageEligibilityRequest</a>| SV
     SV --->|<a href="OperationDefinition-MOPED.CoverageEligibilityResponse.Beantworten.html"> $beantworten</a>| Moped
 
-    Moped --->|<a href="StructureDefinition-MOPEDClaim.html"> GET Claim</a>| LGF
+    Moped --->|<a href="StructureDefinition-MopedLKFRequest.html"> GET Claim</a>| LGF
     LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Freigeben.html"> $freigeben</a>| Moped
     LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Auffordern.html"> $auffordern</a>| Moped
 
-    Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET ClaimResponse</a>| BMSGPK 
+    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| BMSGPK 
 </pre>  
 
 ### Krankenanstalt {#actor-KH}
@@ -44,8 +44,8 @@
     KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> $entlassen</a>| Moped 
     KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html">$erfassen</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped
-    Moped -->|<a href="StructureDefinition-MOPEDCoverageEligibilityResponse.html"> GET CoverageEligibilityResponse</a>| KH
-    Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET ClaimResponse</a>| KH
+    Moped -->|<a href="StructureDefinition-MopedCoverageEligibilityResponse.html"> GET CoverageEligibilityResponse</a>| KH
+    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| KH
 </pre>
 
 ### Sozialversicherung {#actor-SV}
@@ -56,8 +56,8 @@
     graph LR
     SV[Sozialversicherung]
     Moped[<a href="#top">Moped</a>] 
-    Moped --->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET ClaimResponse</a>| SV
-    Moped --->|<a href="StructureDefinition-MOPEDCoverageEligibilityRequest.html"> GET CoverageEligibilityRequest</a>| SV
+    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| SV
+    Moped --->|<a href="StructureDefinition-MopedCoverageEligibilityRequest.html"> GET CoverageEligibilityRequest</a>| SV
     SV --->|<a href="OperationDefinition-MOPED.CoverageEligibilityResponse.Beantworten.html"> $beantworten</a>| Moped
 </pre>   
 
@@ -69,7 +69,7 @@
     graph LR
     LGF[Landesgesundheitsfonds]
     Moped[<a href="#top">Moped</a>] 
-    Moped --->|<a href="StructureDefinition-MOPEDClaim.html"> GET Claim</a>| LGF
+    Moped --->|<a href="StructureDefinition-MopedLKFRequest.html"> GET Claim</a>| LGF
     LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Freigeben.html"> $freigeben</a>| Moped
     LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Auffordern.html"> $auffordern</a>| Moped
 </pre>
@@ -82,7 +82,7 @@
     graph LR
     BMSGPK[BMSGPK]
     Moped[<a href="#top">Moped</a>] 
-    Moped -->|<a href="StructureDefinition-MOPEDClaimResponse.html"> GET ClaimResponse</a>| BMSGPK   
+    Moped -->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| BMSGPK   
 </pre>
 
 ### EMS

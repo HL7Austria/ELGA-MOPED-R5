@@ -1,4 +1,4 @@
-Instance: MOPEDPatientBeurlauben
+Instance: MopedPatientBeurlauben
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $beurlauben"
 Description: """
