@@ -32,13 +32,13 @@ Title: "MOPED Encounter"
 * class ^slicing.discriminator.type = #value
 * class ^slicing.discriminator.path = "coding.system"
 * class ^slicing.ordered = false
-* class contains Behandlungsart 0..1 and Aufnahmeart 0..1
+* class contains Behandlungsart 0..1 and Aufnahmeart2 0..1
 * class[Behandlungsart] ^short = "Behandlungsart"
 * class[Behandlungsart] from Behandlungsart (required)
 * class[Behandlungsart].coding.system = $Behandlungsart
-* class[Aufnahmeart] ^short = "Aufnahmeart"
-* class[Aufnahmeart] from Aufnahmeart (required)
-* class[Aufnahmeart].coding.system = $Aufnahmeart
+* class[Aufnahmeart2] ^short = "Aufnahmeart2"
+* class[Aufnahmeart2] from Aufnahmeart2 (required)
+* class[Aufnahmeart2].coding.system = $Aufnahmeart2
 
 * reason ^slicing.rules = #open
 * reason ^slicing.discriminator.type = #value
@@ -53,6 +53,6 @@ Title: "MOPED Encounter"
 * diagnosis.use from $LKFdiagnoseTyp (required)
 * diagnosis.use ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
 
-* admission.extension contains Zugangsart named zugangsart 0..1
+* admission.extension contains Aufnahmeart named aufnahmeart 0..1
 * admission.extension contains Transportart named transportart 0..1
 * extension contains Unfalldatum named unfalldatum 0..1
