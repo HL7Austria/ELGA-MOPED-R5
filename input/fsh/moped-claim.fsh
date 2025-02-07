@@ -1,5 +1,5 @@
 
-Profile: MOPEDClaim
+Profile: MopedLKFRequest
 Parent: Claim
 Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfrage."
 
@@ -16,7 +16,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * insurer 1..1
 * provider only Reference(HL7ATCoreOrganization)
 * provider 1..1
-* related.claim only Reference(MOPEDClaim)
+* related.claim only Reference(MopedLKFRequest)
 * insurance.coverage only Reference(MOPEDCoverage)
 * insurance.coverage 1..1
 * encounter ^slicing.rules = #open
