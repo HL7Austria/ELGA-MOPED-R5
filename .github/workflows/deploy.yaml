@@ -5,9 +5,9 @@ name: PublishIG
 # Run on updates to the master and POC-IG
 on:
   push:
-    branches: [ main, POC-IG ]
+    branches: [ main, POC-IG, Hackathon-2025 ]
   pull_request:
-    branches: [ main, POC-IG  ]
+    branches: [ main, POC-IG, Hackathon-2025 ]
 
 jobs:
   build:
