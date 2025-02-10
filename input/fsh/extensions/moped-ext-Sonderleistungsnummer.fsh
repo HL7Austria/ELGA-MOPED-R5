@@ -6,4 +6,4 @@ Context: MOPEDClaimResponse
 
 * value[x] 0..1
 * value[x] only Coding
-* value[x] from $Sonderleistungsnummern (required)
+* value[x] from Sonderleistungsnummern (required)

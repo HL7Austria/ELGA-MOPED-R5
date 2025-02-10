@@ -22,11 +22,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 4. Update des letzten MOPEDTransferEncounter:
   * *MOPEDTransferEncounter.status* mit `completed` befüllen gesetzt 
   * *MOPEDTransferEncounter.actualPeriod.end* mit *zeitpunkt* lt. Operation-Parameter befüllen 
-4. Erstellung eines leeren *MOPEDClaim*: 
-  * *MOPEDClaim.status* mit `draft` befüllen
-  * *MOPEDClaim.patient* mit MOPEDAccount.subject befüllen
 5. Änderungen im Account:
-  * *MOPEDAccount.ClaimRef* mit der Referenz aus Schritt 4 befüllen  
   * *MOPEDAccount.WorkflowStatus* mit `Entlassungs Aviso` befüllen, oder, falls der *freigeben*-Operation-Parameter auf `true` gesetzt war und die Validierung erfolgreich war, wird *MOPEDAccount.WorkflowStatus* mit `Entlassung vollständig` befüllt. 
   * *MOPEDAccount.TageOhneKostenbeitrag* lt. gleichnamigen Opeartion-Parameter befüllen
 
@@ -39,11 +35,14 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 **Weitere Hinweise**
 
 * Hinweis 1: Wurde der Patient direkt aus der Intensivstation entlassen, so müsste auch eine Abgangsart im MOPEDTransferEncounter gesetzt werden. Dieser Spezialfall wurde noch nicht berücksichtigt.
+
+**Annahmen an das BeS**
+* Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle entlassen werden können.
+
 """
 Usage: #definition 
 
 * id = "MOPED.Patient.Entlassen"
-* base = "http://hl7.org/fhir/OperationDefinition/Patient-entlassen"
 * name = "MOPED_Patient_Entlassen"
 * status = #draft
 * comment = "TBD: Abgangsart beim MOPEDTransferEncounter falls intensiv, muss befüllt werden; In dieser Operation werden noch keine Leitungen erfasst, hier muss eine Möglichkeit gegeben werden, dies nachzuholen - in einer separaten Transaction/Operation.; Der Status 'SV verarbeitet' stimmt zwar als Voraussetzung für den ersten Schritt. Kann das aber so weiterverfolgt werden, sobald Selbstzahler / private Versicherungen hinzukommen? Was passiert in einer schnellen Entlassung, wenn die SV sich noch nicht zurück gemeldet hat?"
@@ -77,7 +76,7 @@ Usage: #definition
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = "moped-entlassungsart-valueset"
+    * valueSet = Canonical(Entlassungsart)
 * parameter[+]
   * name = #tageOhneKostenbeitrag
   * use = #in 

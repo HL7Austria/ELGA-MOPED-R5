@@ -1,13 +1,19 @@
 
-Alias: $ecard-anspruchsarten-vs = https://www.chipkarte.at/de/vdas-on-fhir/site/ValueSet-ecard-anspruchsarten-vs.html
-Alias: $ecard-versichertenarten-vs = https://www.chipkarte.at/de/vdas-on-fhir/site/ValueSet-ecard-versichertenarten-vs.html
-Alias: $ecard-versichertenkategorien-vs = https://www.chipkarte.at/de/vdas-on-fhir/site/ValueSet-ecard-versichertenkategorien-vs.html
+Alias: $ecard-anspruchsarten-vs = http://svc.co.at/Valueset/ecard-anspruchsarten-vs
+Alias: $ecard-versichertenarten-vs = http://svc.co.at/CodeSystem/ecard-versichertenart-vs
+Alias: $ecard-versichertenkategorien-vs = http://svc.co.at/CodeSystem/ecard-versichertenkategorie-vs
 
 Profile: SVCCoverage
 Parent: Coverage
 Description: "SVC Profil der Coverage Ressource für Versicherungen. Basierend auf dem Profil \"ecardAnspruch\": https://www.chipkarte.at/de/vdas-on-fhir/site/StructureDefinition-ecard-anspruch-profile.html "
 
-
+* identifier ^slicing.rules = #open
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.ordered = false
+* identifier contains VDASID 0..1
+* identifier[VDASID].system = "http://tbd-svc/vdasid"
+* identifier[VDASID].assigner only Reference(HL7ATCoreOrganization)
 * extension contains
     RezeptgebbefreitExtension named RezeptgebbefreitExtension 0..1 and
     KostenanteilbefreitExtension named KostenanteilbefreitExtension 0..1
