@@ -1,5 +1,5 @@
 
-Profile: MOPEDClaimResponse
+Profile: MopedLKFResponse
 Parent: ClaimResponse
 Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort."
 
@@ -10,12 +10,12 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * patient only Reference(HL7ATCorePatient)
 * insurer only Reference(HL7ATCoreOrganization)
 * insurer 1..1
-* request only Reference(MOPEDClaim)
+* request only Reference(MopedLKFRequest)
 * request 1..1
 * requestor only Reference(HL7ATCoreOrganization)
 * requestor 1..1
 
-* insurance.coverage only Reference(MOPEDCoverage)
+* insurance.coverage only Reference(MopedCoverage)
 * insurance.coverage 1..1
 
 

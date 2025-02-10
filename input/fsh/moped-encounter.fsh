@@ -1,4 +1,4 @@
-Profile: MOPEDEncounter
+Profile: MopedEncounter
 Parent: Encounter
 Title: "MOPED Encounter"
 Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung"
@@ -16,12 +16,12 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * identifier[DatensatzID].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
 * identifier[DatensatzID].type.coding.code = #ANON (exactly)
 * identifier[DatensatzID] ^short = "SHA-256 verschlüsselte Aufnahmezahl"
-* account only Reference(MOPEDAccount)
+* account only Reference(MopedAccount)
 
 * subject only Reference(HL7ATCorePatient)
 * admission.origin only Reference(Organization)
 * admission.destination only Reference(Organization)
-* serviceProvider only Reference(MOPEDOrganizationAbteilung)
+* serviceProvider only Reference(MopedOrganizationAbteilung)
 * actualPeriod ^short = "Aufnahme- und Entlassungsdatum"
 
 * admission.dischargeDisposition ^short = "Entlassungsart"
@@ -32,13 +32,13 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * class ^slicing.discriminator.type = #value
 * class ^slicing.discriminator.path = "coding.system"
 * class ^slicing.ordered = false
-* class contains Behandlungsart 0..1 and Aufnahmeart 0..1
+* class contains Behandlungsart 0..1 and Aufnahmeart2 0..1
 * class[Behandlungsart] ^short = "Behandlungsart"
 * class[Behandlungsart] from Behandlungsart (required)
 * class[Behandlungsart].coding.system = $Behandlungsart
-* class[Aufnahmeart] ^short = "Aufnahmeart"
-* class[Aufnahmeart] from Aufnahmeart (required)
-* class[Aufnahmeart].coding.system = $Aufnahmeart
+* class[Aufnahmeart2] ^short = "Aufnahmeart2"
+* class[Aufnahmeart2] from Aufnahmeart2 (required)
+* class[Aufnahmeart2].coding.system = $Aufnahmeart2
 
 * reason ^slicing.rules = #open
 * reason ^slicing.discriminator.type = #value
@@ -53,6 +53,6 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * diagnosis.use from $LKFdiagnoseTyp (required)
 * diagnosis.use ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
 
-* admission.extension contains Zugangsart named Zugangsart 0..1
-* admission.extension contains Transportart named Transportart 0..1
+* admission.extension contains Aufnahmeart named aufnahmeart 0..1
+* admission.extension contains Transportart named transportart 0..1
 * extension contains Unfalldatum named Unfalldatum 0..1

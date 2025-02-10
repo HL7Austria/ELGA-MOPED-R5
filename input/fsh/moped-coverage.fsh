@@ -1,4 +1,4 @@
-Profile: MOPEDCoverage
+Profile: MopedCoverage
 Parent: Coverage
 Description: "MOPED Profil der Coverage Ressource für Versicherungen."
 Title: "MOPED Coverage"

@@ -1,10 +1,12 @@
 
-Profile: MOPEDClaim
+Profile: MopedLKFRequest
 Parent: Claim
 Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfrage."
 
 
 * patient only Reference(HL7ATCorePatient)
+* use = http://hl7.org/fhir/claim-use#claim
+* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 
 * procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 0..1
 * diagnosisRelatedGroup from LKFAbrechnungsGruppe (required)
@@ -14,8 +16,8 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * insurer 1..1
 * provider only Reference(HL7ATCoreOrganization)
 * provider 1..1
-* related.claim only Reference(MOPEDClaim)
-* insurance.coverage only Reference(MOPEDCoverage)
+* related.claim only Reference(MopedLKFRequest)
+* insurance.coverage only Reference(MopedCoverage)
 * insurance.coverage 1..1
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
@@ -23,9 +25,9 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * encounter ^slicing.discriminator[=].path = "resolve()"
 * encounter contains MopedEncounterKH 1..1 and TransferEncounter 0..
 * encounter[MopedEncounterKH] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
-* encounter[MopedEncounterKH] only Reference(MOPEDEncounterKH)
+* encounter[MopedEncounterKH] only Reference(MopedEncounterKH)
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
-* encounter[TransferEncounter] only Reference(MOPEDTransferEncounter)
+* encounter[TransferEncounter] only Reference(MopedTransferEncounter)
 
 * extension contains Note named Note 0..
 * diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"

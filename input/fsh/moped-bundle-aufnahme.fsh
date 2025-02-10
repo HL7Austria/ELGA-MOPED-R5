@@ -1,4 +1,4 @@
-Profile: MOPEDAufnahmeBundle
+Profile: MopedAufnahmeBundle
 Parent: Bundle
 Title: "MOPED Aufnahme Bundle"
 Description: """
@@ -21,10 +21,10 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 * entry ^slicing.rules = #open
 * entry contains
   Encounter 1..1
-* entry[Encounter].resource only MOPEDEncounterKH
+* entry[Encounter].resource only MopedEncounterKH
 * entry contains
   Coverage 1..1
-* entry[Coverage].resource only MOPEDCoverage
+* entry[Coverage].resource only MopedCoverage
 * entry contains
   Patient 1..1
 * entry[Patient].resource only HL7ATCorePatient

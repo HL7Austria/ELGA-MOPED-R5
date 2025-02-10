@@ -1,5 +1,5 @@
-Profile: MOPEDEncounterBund
-Parent: MOPEDEncounter
+Profile: MopedEncounterBund
+Parent: MopedEncounter
 Title: "MOPED Encounter Bund"
 Description: "MOPED Profil der Encounter Ressource für die Rolle: Bund"
 
