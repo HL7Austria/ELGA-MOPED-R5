@@ -45,7 +45,7 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantwort
   * min = 1
   * max = "1"
   * documentation = "Der *MopedVAEResponse* Parameter beinhält sämtliche Details zur Antwort auf den VAERequest."
-  * type = #MopedVAEResponse
+  * type = #ClaimResponse
 * parameter[+]
   * name = #return
   * use = #out

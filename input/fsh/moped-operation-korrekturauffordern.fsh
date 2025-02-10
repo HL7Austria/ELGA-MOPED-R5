@@ -59,7 +59,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
   * min = 1
   * max = "1"
   * documentation = "Der *MopedLKFResponse* Parameter beinhält sämtliche Details zur Antwort auf den Claim."
-  * type = #MopedLKFResponse
+  * type = #ClaimResponse
   * targetProfile = Canonical(MopedLKFResponse)
 * parameter[+]
   * name = #return
