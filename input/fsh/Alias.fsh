@@ -1,6 +1,7 @@
 Alias: $DiagnoseArt = https://termgit.elga.gv.at/ValueSet/lkf-diagnose-art
 Alias: $Aufnahmeart = http://tbd.at/moped-ext-aufnahmeart
 Alias: $Aufnahmeart2 = http://tbd.at/moped-ext-aufnahmeart2
+Alias:  $Altersgruppe = http://tbd.at/moped-ext-altersgruppe
 Alias: $LKFdiagnoseTyp = https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ
 Alias: $Transportart = http://tbd.at/moped-ext-transportart
 Alias: $workflowstatus = http://tbd.at/moped-ext-workflow-status
