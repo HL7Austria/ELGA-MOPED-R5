@@ -1,4 +1,4 @@
-ValueSet: Aufnahmeart
+ValueSet: Aufnahmeart2
 Id: moped-aufnahmeart2-valueset
 Title: "Aufnahmeart2 des Patienten"
 Description: "ValueSet für die Aufnahmeart des Patienten"
