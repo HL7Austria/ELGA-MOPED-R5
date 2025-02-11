@@ -10,4 +10,3 @@ Description: "MOPED Profil der Account Ressource für die administrative Fallfü
 * extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 0..1
 * extension contains WorkflowStatus named WorkflowStatus 1..1
 * extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1
-* extension contains ClaimRef named ClaimRef 0..
