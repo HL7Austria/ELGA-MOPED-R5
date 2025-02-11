@@ -25,7 +25,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * *MopedTransferEncounter.serviceProvider* setzt eine Referenz auf die MopedOrganizationAbteilung mit dem jeweiligen *funktionscode* bzw. *funktionssubcode* lt. Operation-Parameter. 
   * *MopedTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 1).
   * *MopedTransferEncounter.Altersgruppe* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2).
-  * *MopedTransferEncounter.PhysischeAnwesenheit* wird lt. Operation-Parameter befüllt.
+  * *MopedTransferEncounter.subjectStatus* wird lt. Operation-Parameter *physischeAnwesenheit* befüllt.
 3. Account AnzahlVerlegungen: Die Extension *Account.extension.AnzahlVerlegungen* im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht. Dies ist auch so, wenn es sich bei der Verlegung um einen Urlaub handeln sollte (siehe Hinweis 3).
 4. ~~Alter Transfer Encounter:~~
   * ~~Dieser Schritt ist nur relevant, wenn es sich *nicht* um eine Neufaufnahme (lt. Operation-Parameter) handelt.~~
