@@ -7,7 +7,7 @@ Usage: #definition
 
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
 
-Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantworten Operation wird aufgerufen, wenn der CoverageEligibilityRequest eines Krankenhauses beantwortet wird.
+Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantworten Operation wird aufgerufen, wenn der MopedVAERequest eines Krankenhauses beantwortet wird.
 
 **Voraussetzungen für den Aufruf**
 
@@ -25,7 +25,7 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantwort
 **Weitere Hinweise**
 
 **Annahmen an das BeS**
-* Es wurde vorab geprüft, ob *MopedVAEResponse.insurance* auch der SV entspricht, der die Operation aufruft. Somit ist sichergestellt, dass jede SV nur eigene CoverageEligibilityRequests beantworten kann.
+* Es wurde vorab geprüft, ob *MopedVAEResponse.insurance* auch der SV entspricht, der die Operation aufruft. Somit ist sichergestellt, dass jede SV nur eigene MopedVAERequests beantworten kann.
 
 """
 
