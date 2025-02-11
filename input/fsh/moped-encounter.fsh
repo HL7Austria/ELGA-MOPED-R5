@@ -9,11 +9,11 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.ordered = false
 * identifier contains Aufnahmezahl 0..1 and DatensatzID 0..1
-* identifier[Aufnahmezahl].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
+* identifier[Aufnahmezahl].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[Aufnahmezahl].type.coding.code = #VN (exactly)
 * identifier[Aufnahmezahl].assigner only Reference(HL7ATCoreOrganization)
 * identifier[Aufnahmezahl].system 1..1
-* identifier[DatensatzID].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
+* identifier[DatensatzID].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[DatensatzID].type.coding.code = #ANON (exactly)
 * identifier[DatensatzID] ^short = "SHA-256 verschlüsselte Aufnahmezahl"
 * account only Reference(MopedAccount)
