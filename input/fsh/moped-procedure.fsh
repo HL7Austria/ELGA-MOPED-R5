@@ -16,5 +16,9 @@ Description: "MOPED Profil der Procedure Ressource für die LDF-Abrechnung"
 * performer.onBehalfOf only Reference(HL7ATCoreOrganization)
 * performer.onBehalfOf 1..1
 * occurrence[x] 1..1
-* code from LKFmedizinischeEinzelleistungen
-* code 1..1
+* code 1..
+* code.coding contains LKAT 1..1 and MELGruppe 0..
+* code.coding[LKAT] from LKFLeistungskatalog (required)
+* code.coding[LKAT].system = $LKFLeistungskatalog
+* code.coding[MELGruppe] from LKFmedizinischeEinzelleistungen (required)
+* code.coding[MELGruppe].system = $LKFmedizinischeEinzelleistungen
