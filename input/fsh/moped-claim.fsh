@@ -33,7 +33,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
 * extension contains DiagnoseKnoten named DiagnoseKnoten 0..1
 * extension contains LKFPunkte named LKFPunkte 0..
-* extension contains ErrorWarning named ErrorWarning 0..
+* extension contains FehlerWarnung named FehlerWarnung 0..
 * extension contains Fondsrelevanz named Fondsrelevanz 0..1
 * extension contains Plausibilitaetskennzeichen named Plausibilitaetskennzeichen 0..1
 * extension contains SVAbrechnungsquartal named SVAbrechnungsquartal 0..1
