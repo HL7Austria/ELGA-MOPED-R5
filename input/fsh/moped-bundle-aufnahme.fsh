@@ -21,7 +21,7 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 * entry ^slicing.rules = #open
 * entry contains
   Encounter 1..1
-* entry[Encounter].resource only MopedEncounterKH
+* entry[Encounter].resource only MopedEncounter
 * entry contains
   Coverage 1..1
 * entry[Coverage].resource only MopedCoverage

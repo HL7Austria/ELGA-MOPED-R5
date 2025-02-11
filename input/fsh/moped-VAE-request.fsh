@@ -22,9 +22,9 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * encounter ^slicing.ordered = false
 * encounter ^slicing.discriminator[+].type = #profile
 * encounter ^slicing.discriminator[=].path = "resolve()"
-* encounter contains MopedEncounterKH 1..1 and TransferEncounter 0..
-* encounter[MopedEncounterKH] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
-* encounter[MopedEncounterKH] only Reference(MopedEncounterKH)
+* encounter contains MopedEncounter 1..1 and TransferEncounter 0..
+* encounter[MopedEncounter] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
+* encounter[MopedEncounter] only Reference(MopedEncounter)
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
 * encounter[TransferEncounter] only Reference(MopedTransferEncounter)
 
