@@ -5,7 +5,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 
 * extension contains ExtensionDays named verlaengerungstage 0..1
 * extension contains VerdachtArbeitsSchuelerunfall named VerdachtArbeitsSchuelerunfall 0..1
-* extension contains PremiumClass named Sonderklasse 0..1
+* extension contains Sonderklasse named Sonderklasse 0..1
 * patient only Reference(HL7ATCorePatient)
 * use = http://hl7.org/fhir/claim-use#preauthorization
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
