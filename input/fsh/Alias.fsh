@@ -10,6 +10,7 @@ Alias: $Ursache =  http://tbd.at/MOPED-encounter-ursache
 Alias: $Entlassungsart = http://tbd.at/MOPED-encounter-entlassungsart
 Alias: $Abgangsart = http://tbd.at/MOPED-encounter-abgangsart
 Alias: $VerdachtArbeitsSchuelerunfall = http://tbd.at/MOPED-account-VerdachtArbeitsSchuelerunfall
+Alias: $ICD10AT = https://termgit.elga.gv.at/CodeSystem/bmg-icd-10-2024
 Alias: $LKFAbrechnungsGruppe = http://tbd.at/MOPED-LKFAbrechnungsGruppe
 Alias: $LKFAbrechnungsKnoten = http://tbd.at/MOPED-LKFAbrechnungsKnoten
 Alias: $AbrechnungsRelevanz = http://tbd.at/MOPED-LKFAbrechnungsRelevanz
