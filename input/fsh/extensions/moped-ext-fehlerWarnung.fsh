@@ -2,6 +2,7 @@ Extension: FehlerWarnung
 Id: moped-ext-fehlerWarnung
 Title: "Error/Warning"
 Description: "MOPED Extension für akzeptierte Errors und Warnings"
+Context: MopedLKFRequest, MopedLKFResponse
 * extension contains
     ErrorWert 0..1 MS and
     ErrorCode 0..1 MS and

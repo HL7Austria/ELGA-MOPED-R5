@@ -3,6 +3,7 @@ Extension: LKFPunkte
 Id: moped-ext-LKFPunkte
 Title: "LKF Punkte"
 Description: "In dieser Extension werden alle möglichen Punkteangaben im LKF zusammengefasst."
+Context: MopedLKFRequest, MopedLKFResponse
 * extension contains
     PunkteBelagsdauerausreisserUntenLeistungskomponente 0..1 and
     PunkteBelagsdauerausreisserUntenTageskomponente 0..1 and
