@@ -7,7 +7,7 @@ on:
   push:
     branches: [ main, POC-IG ]
   pull_request:
-    branches: [ main, POC-IG  ]
+    branches: [ main, POC-IG ]
 
 jobs:
   build:
