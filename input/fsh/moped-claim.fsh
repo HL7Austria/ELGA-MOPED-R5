@@ -23,17 +23,17 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * encounter ^slicing.ordered = false
 * encounter ^slicing.discriminator[+].type = #profile
 * encounter ^slicing.discriminator[=].path = "resolve()"
-* encounter contains MopedEncounterKH 1..1 and TransferEncounter 0..
-* encounter[MopedEncounterKH] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
-* encounter[MopedEncounterKH] only Reference(MopedEncounterKH)
+* encounter contains MopedEncounter 1..1 and TransferEncounter 0..
+* encounter[MopedEncounter] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
+* encounter[MopedEncounter] only Reference(MopedEncounter)
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
 * encounter[TransferEncounter] only Reference(MopedTransferEncounter)
 
 * extension contains Note named Note 0..
 * diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
-* extension contains DiagnosisRelatedNode named DiagnosisRelatedNode 0..1
+* extension contains DiagnoseKnoten named DiagnoseKnoten 0..1
 * extension contains LKFPunkte named LKFPunkte 0..
-* extension contains ErrorWarning named ErrorWarning 0..
+* extension contains FehlerWarnung named FehlerWarnung 0..
 * extension contains Fondsrelevanz named Fondsrelevanz 0..1
 * extension contains Plausibilitaetskennzeichen named Plausibilitaetskennzeichen 0..1
 * extension contains SVAbrechnungsquartal named SVAbrechnungsquartal 0..1

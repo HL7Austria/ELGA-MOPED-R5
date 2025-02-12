@@ -22,8 +22,8 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * diagnosisRelatedGroup from LKFAbrechnungsGruppe (required)
 * diagnosisRelatedGroup. ^short =  "\"Abrechnung - Gruppe:\" Dieses Datenfeld ist mit der Codenummer der zutreffenden Abrechnungsgruppe zu befüllen. Bei Datensätzen von stationären Krankenhausaufenthalten, die keiner leistungsorientier- ten Diagnosenfallgruppe zugeordnet werden, erfolgt ein Eintrag entsprechend der jeweiligen Aufnahmeart."
 
-* extension contains ErrorWarning named ErrorWarning 0..
-* extension contains DiagnosisRelatedNode named DiagnosisRelatedNode 0..1
+* extension contains FehlerWarnung named FehlerWarnung 0..
+* extension contains DiagnoseKnoten named DiagnoseKnoten 0..1
 * extension contains LKFPunkte named LKFPunkte 0..
 * extension contains LDFPunktewertNetto named LDFPunktewertNetto 0..1
 * extension contains LDFBetragNetto named LDFBetragNetto 0..1

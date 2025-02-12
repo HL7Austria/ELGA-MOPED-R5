@@ -30,8 +30,8 @@ schen Hauskrankenpflege
 - Bei unsicherer, versicherungsrechtlicher Entwicklung
 Bei den ersten beiden Punkten wird von den Krankenversicherungsträgern das Fristende individuell gesetzt. Beim dritten Punkt wird im Regelfall eine generelle Tagesbeschränkung erfolgen, weil die Versichertenanspruchserklärung in die Zukunft gerichtet ist und der Krankenversicherungsträger seine Zuständigkeit von vornherein nur für einen bestimmten Zeitraum annehmen kann (Ausleis- tungssituation gem. § 122 ASVG).
 Durch die Angabe eines Fristendes wird signalisiert, dass bei einem über das Fristende hinaus dau- ernden Aufenthalt eine Verlängerungsanzeige vorzulegen ist."
-* extension contains MealCostExcemption named MealCostExcemption 0..1
-* extension contains NumberOfPreviouslyPaidDays named NumberOfPreviouslyPaidDays 0..1
+* extension contains VerpflegskostenBeitragsbefreiung named VerpflegskostenBeitragsbefreiung 0..1
+* extension contains VortageanzahlAufKostenbeitrag named VortageanzahlAufKostenbeitrag 0..1
 
 
 

@@ -3,9 +3,9 @@ Profile: MopedVAERequest
 Parent: Claim
 Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung VAE."
 
-* extension contains ExtensionDays named verlaengerungstage 0..1
-* extension contains VerdachtArbeitsSchuelerunfall named VerdachtArbeitsSchuelerunfall 0..1
-* extension contains PremiumClass named Sonderklasse 0..1
+* extension contains Verlaengerungstage named Verlaengerungstage 0..1
+* accident.extension contains VerdachtArbeitsSchuelerunfall named VerdachtArbeitsSchuelerunfall 0..1
+* extension contains Sonderklasse named Sonderklasse 0..1
 * patient only Reference(HL7ATCorePatient)
 * use = http://hl7.org/fhir/claim-use#preauthorization
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
@@ -22,9 +22,9 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * encounter ^slicing.ordered = false
 * encounter ^slicing.discriminator[+].type = #profile
 * encounter ^slicing.discriminator[=].path = "resolve()"
-* encounter contains MopedEncounterKH 1..1 and TransferEncounter 0..
-* encounter[MopedEncounterKH] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
-* encounter[MopedEncounterKH] only Reference(MopedEncounterKH)
+* encounter contains MopedEncounter 1..1 and TransferEncounter 0..
+* encounter[MopedEncounter] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
+* encounter[MopedEncounter] only Reference(MopedEncounter)
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
 * encounter[TransferEncounter] only Reference(MopedTransferEncounter)
 

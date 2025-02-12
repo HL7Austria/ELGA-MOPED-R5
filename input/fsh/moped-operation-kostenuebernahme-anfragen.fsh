@@ -26,18 +26,15 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
   * c. *MopedVAERequest.use* mit 'preauthorization'
   * d. *MopedVAERequest.Verlaengerungstage* mit *verlaengerungstage* lt. Operation-Parameter befüllen
   * e. *MopedVAERequest.created* mit dem aktuellem Zeitpunkt befüllen
-  * f. *MopedVAERequest.PremiumClass* mit *sonderklasse* lt. Operation-Parameter befüllen
+  * f. *MopedVAERequest.Sonderklasse* mit *sonderklasse* lt. Operation-Parameter befüllen
   * g. *MopedVAERequest.patient* mit *MopedAccount.subject* befüllen
   * h. *MopedVAERequest.insurance.coverage* mit *MopedAccount.coverage.coverage* befüllen
   * h. *MopedVAERequest.provider* mit *MopedAccount.owner* befüllen
   * i. *MopedVAERequest.insurer* mit einer Referenz auf jene Organization befüllen, deren *Organization.identifier* dem Identifier *versicherer* lt. Operation-Parameter entspricht
   * j. *MopedVAERequest.encounter* mit allen gefundenen Encountern aus Schritt 1 und 2 befüllen.
-  * k. *MopedVAERequest.Sonderklasse* lt. Operation-Parameter befüllen
-  * l. *MopedVAERequest.supportingInfo[VerdachtFremdverschulden]* lt. Operation-Parameter befüllen
-  * m. *MopedVAERequest.VerdachtArbeitsSchuelerunfall* lt. Operation-Parameter befüllen
+  * k. *MopedVAERequest.supportingInfo[VerdachtFremdverschulden]* lt. Operation-Parameter befüllen
+  * l. *MopedVAERequest.accident.VerdachtArbeitsSchuelerunfall* lt. Operation-Parameter befüllen
 5. POSTen des neu erstellten MopedVAERequest
-6. Referenz im MopedAccount:
-  a. *MopedAccount.claimRef* mit Hilfe der resultierenden ID aus Schritt 5 referenzieren
 
 **Validierung / Fehlerbehandlung**
 * *MopedAccount.coverage* darf nur eine Versicherung gelistet haben
