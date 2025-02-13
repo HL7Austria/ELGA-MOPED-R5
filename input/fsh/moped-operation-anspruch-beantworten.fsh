@@ -16,7 +16,7 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantwort
 **Detaillierte Business-Logik**
 
 1. Die MopedVAEResponse wird lt. Regeln (siehe unten) validiert und eingespielt
-2. Falls Schritt 1 erfolgreich war, wird die Ressource Account gesucht (MopedVAEResponse.request.encount[MopedEncounter].account; MopedVAEResponse lt. Operation-Parameter) und auf `SV verarbeitet` gesetzt
+2. Falls Schritt 1 erfolgreich war, wird die Ressource Account gesucht (MopedVAEResponse.request.encounter[MopedEncounter].account; MopedVAEResponse lt. Operation-Parameter) und auf `SV verarbeitet` gesetzt
 
 **Validierung / Fehlerbehandlung**
 
