@@ -17,6 +17,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * identifier[DatensatzID].type.coding.code = #ANON (exactly)
 * identifier[DatensatzID] ^short = "SHA-256 verschlüsselte Aufnahmezahl"
 * account only Reference(MopedAccount)
+* account 0..1
 
 * subject only Reference(HL7ATCorePatient)
 * admission.origin only Reference(Organization)

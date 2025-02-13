@@ -16,8 +16,7 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 
 * type = #transaction
 * entry 1..*
-* entry ^slicing.discriminator[+].type = #profile
-* entry ^slicing.discriminator[=].path = "resource.resolve().meta.profile"
+* entry ^slicing.discriminator[+].type = #type
 * entry ^slicing.rules = #open
 * entry contains
   Encounter 1..1
@@ -32,5 +31,3 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
   Hauptversicherter 0..1
 * entry[Hauptversicherter].resource only Hauptversicherter
 * entry contains
-  UeberweisendeOrganisation 0..1
-* entry[UeberweisendeOrganisation].resource only HL7ATCoreOrganization
