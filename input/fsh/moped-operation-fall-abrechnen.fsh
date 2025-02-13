@@ -37,12 +37,11 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 * Claim.insurer muss gleich sein wie Encounter.account.coverage.insurer (falls dieser befüllt ist; Encounter aus Schritt 1).
 * Claim.provider muss gleich sein wie Encounter.serviceProvider (Encounter aus Schritt 1).
 * Claim.insurance.coverage muss gleich sein wie Encounter.account.coverage (falls diese beüllt ist; Encounter aus Schritt 1)
-* Claim.accident muss befüllt sein, falls Encounter.account.VerdachtArbeitsSchuelerunfall	!= `0` ist
 
 
 **Weitere Hinweise**
 
-* Hinweis 1: Die Referenzen zu Diagnosis und Claims die bereits nach $leistungMelden am Server liegen werden mit Hilfe der logischen Identifier hergestellt
+* Hinweis 1: Die Referenzen zu Diagnosis und Claims die bereits nach $erfassen am Server liegen werden mit Hilfe der logischen Identifier hergestellt
 
 **Annahmen an das BeS**
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle abgerechnet werden können.
