@@ -28,3 +28,4 @@ Alias: $Sonderklasse = http://tbd.at/MOPED-Sonderklasse
 Alias: $SVCVersichertenkategorien = http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs
 Alias: $LKFHauptdiagnosegruppen = http://tbd.at/MOPED-LKFHauptdiagnosegruppen
 Alias: $LKFmedizinischeEinzelleistungen = http://tbd.at/MOPED-LKFmedizinischeEinzelleistungen
+Alias: $LKFLeistungskatalog = https://termgit.elga.gv.at/CodeSystem/lkat-bmsgpk-2025

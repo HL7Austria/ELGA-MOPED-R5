@@ -18,5 +18,14 @@ Title: "MOPED Procedure"
 * performer.onBehalfOf only Reference(HL7ATCoreOrganization)
 * performer.onBehalfOf 1..1
 * occurrence[x] 1..1
-* code from LKFmedizinischeEinzelleistungen
+* category.coding ^slicing.rules = #open
+* category.coding ^slicing.discriminator.type = #value
+* category.coding ^slicing.discriminator.path = "system"
+* category.coding ^slicing.ordered = false
+* category.coding contains MELGruppe 0..1
+* category.coding[MELGruppe] from LKFmedizinischeEinzelleistungen (required)
+* category.coding[MELGruppe].system = $LKFmedizinischeEinzelleistungen
 * code 1..1
+* code ^short = "Leistungskatalog BMSGPK"
+* code.coding from LKFLeistungskatalog (required)
+* code.coding.system = $LKFLeistungskatalog
