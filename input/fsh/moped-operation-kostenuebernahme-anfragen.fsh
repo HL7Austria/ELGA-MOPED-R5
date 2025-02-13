@@ -67,14 +67,14 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
   * use = #in 
   * min = 1
   * max = "1"
-  * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
+  * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
   * name = #versicherer
   * use = #in 
   * min = 1
   * max = "1"
-  * documentation = "Der *versicherer* Parameter beinhält den eindeutigen Identifizierer für den Versicherer an dem der VAERequest gerichtet ist."
+  * documentation = "Der *versicherer* Parameter beinhaltet den eindeutigen Identifizierer für den Versicherer an dem der VAERequest gerichtet ist."
   * type = #Identifier
 * parameter[+]
   * name = #verlaengerungstage

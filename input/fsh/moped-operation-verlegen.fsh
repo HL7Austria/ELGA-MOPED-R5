@@ -86,7 +86,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * use = #in 
   * min = 1
   * max = "1"
-  * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
+  * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
   * name = #zeitpunkt
