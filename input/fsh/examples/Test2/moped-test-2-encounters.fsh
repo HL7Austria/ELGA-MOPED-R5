@@ -1,9 +1,9 @@
-Instance: Test2MOPEDEncounter1
-InstanceOf: MOPEDEncounter
+Instance: Test2MopedEncounter1
+InstanceOf: MopedEncounter
 Usage: #example
-* id = "Test2MOPEDEncounter1"
+* id = "Test2MopedEncounter1"
 * status = #in-progress
-* meta.profile = "http://example.org/StructureDefinition/MOPEDEncounter"
+* meta.profile = "http://example.org/StructureDefinition/MopedEncounter"
 /*//Fallnummer
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-fallnummer"
 * extension[=] = 
@@ -55,15 +55,15 @@ Usage: #example
 
 
 Instance: Test2TransferEncounter1
-InstanceOf: MOPEDTransferEncounter
+InstanceOf: MopedTransferEncounter
 Usage: #example
 * id = "Test2TransferEncounter1"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDTransferEncounter"
+* meta.profile = "http://example.org/StructureDefinition/MopedTransferEncounter"
 * status = #in-progress
 * subject = Reference(Patient/Test2Patient)
-* partOf = Reference(Encounter/Test2MOPEDEncounter1)
+* partOf = Reference(Encounter/Test2MopedEncounter1)
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung1)
-* actualPeriod.start = "2024-08-08T08:21:00+02:00" //für ersten TransferEncounter gleich mit MOPEDEncounter start
+* actualPeriod.start = "2024-08-08T08:21:00+02:00" //für ersten TransferEncounter gleich mit MopedEncounter start
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
 * extension[=].extension[+].url = "beiZugang"
 * extension[=].extension[=].valueCode = #35
@@ -72,13 +72,13 @@ Usage: #example
 
 
 Instance: Test2TransferEncounter2
-InstanceOf: MOPEDTransferEncounter
+InstanceOf: MopedTransferEncounter
 Usage: #example
 * id = "Test2TransferEncounter2"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDTransferEncounter"
+* meta.profile = "http://example.org/StructureDefinition/MopedTransferEncounter"
 * status = #in-progress
 * subject = Reference(Patient/Test2Patient)
-* partOf = Reference(Encounter/Test2MOPEDEncounter1)
+* partOf = Reference(Encounter/Test2MopedEncounter1)
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung2)
 * actualPeriod.start = "2024-08-08T11:22:00+02:00" 
 * actualPeriod.end = "2024-08-08T11:41:00+02:00"
@@ -92,13 +92,13 @@ Usage: #example
 
 
 Instance: Test2TransferEncounter3
-InstanceOf: MOPEDTransferEncounter
+InstanceOf: MopedTransferEncounter
 Usage: #example
 * id = "Test2TransferEncounter3"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDTransferEncounter"
+* meta.profile = "http://example.org/StructureDefinition/MopedTransferEncounter"
 * status = #in-progress
 * subject = Reference(Patient/Test2Patient)
-* partOf = Reference(Encounter/Test2MOPEDEncounter1)
+* partOf = Reference(Encounter/Test2MopedEncounter1)
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung3)
 * actualPeriod.start = "2024-08-08T11:41:00+02:00" 
 * actualPeriod.end = "2024-08-08T11:41:00+02:00" 
@@ -109,13 +109,13 @@ Usage: #example
 * extension[=].extension[=].valueBoolean = false
 
 Instance: Test2TransferEncounter4
-InstanceOf: MOPEDTransferEncounter
+InstanceOf: MopedTransferEncounter
 Usage: #example
 * id = "Test2TransferEncounter4"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDTransferEncounter"
+* meta.profile = "http://example.org/StructureDefinition/MopedTransferEncounter"
 * status = #in-progress
 * subject = Reference(Patient/Test2Patient)
-* partOf = Reference(Encounter/Test2MOPEDEncounter1)
+* partOf = Reference(Encounter/Test2MopedEncounter1)
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung4)
 * actualPeriod.start = "2024-08-09T11:38:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"
@@ -125,13 +125,13 @@ Usage: #example
 * extension[=].extension[=].valueBoolean = false
 
 Instance: Test2TransferEncounter5
-InstanceOf: MOPEDTransferEncounter
+InstanceOf: MopedTransferEncounter
 Usage: #example
 * id = "Test2TransferEncounter5"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDTransferEncounter"
+* meta.profile = "http://example.org/StructureDefinition/MopedTransferEncounter"
 * status = #in-progress
 * subject = Reference(Patient/Test2Patient)
-* partOf = Reference(Encounter/Test2MOPEDEncounter1)
+* partOf = Reference(Encounter/Test2MopedEncounter1)
 * serviceProvider = Reference(Organization/Test2OrganizationAbteilung3)
 * actualPeriod.start = "2024-08-10T17:00:00+02:00" 
 * extension[+].url = "http://example.org/StructureDefinition/moped-ext-altersgruppe"

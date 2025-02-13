@@ -1,7 +1,7 @@
 Instance: Test1OrganizationAbteilung1
-InstanceOf: MOPEDOrganizationAbteilung
+InstanceOf: MopedOrganizationAbteilung
 * id = "Test1OrganizationAbteilung1"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDOrganizationAbteilung"
+* meta.profile = "http://example.org/StructureDefinition/MopedOrganizationAbteilung"
 * partOf = Reference(Organization/Test1OrganizationHerzJesuKrankenhaus)
 * identifier[+].value = "131180"
 * identifier[=].system = "http://example.org/lkf-system/funktionscode"

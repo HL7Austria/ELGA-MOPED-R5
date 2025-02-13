@@ -1,7 +1,7 @@
-Instance: Test1MOPEDEncounterBund
-InstanceOf: MOPEDEncounterBund
+Instance: Test1MopedEncounterBund
+InstanceOf: MopedEncounterBund
 Usage: #example
-* id = "Test1MOPEDEncounterBund"
+* id = "Test1MopedEncounterBund"
 * status = #in-progress
 //DatensatzID
 * identifier[+].type.coding.code = #ANON

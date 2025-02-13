@@ -24,5 +24,5 @@ Description: "MOPED Profil der Person Ressource für den Hauptversicherten"
 * patient only Reference(HL7ATCorePatient)
 * address only HL7ATCoreAddress
 
-* relationship from MOPEDRelatedPersonRelationshipType (required)
+* relationship from MopedRelatedPersonRelationshipType (required)
 * relationship.coding.code = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SELF (exactly)

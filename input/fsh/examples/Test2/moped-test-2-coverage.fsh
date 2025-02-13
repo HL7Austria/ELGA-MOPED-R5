@@ -1,8 +1,8 @@
-Instance: Test2MOPEDCoverage
-InstanceOf: MOPEDCoverage
+Instance: Test2MopedCoverage
+InstanceOf: MopedCoverage
 Usage: #example
-* id = "Test2MOPEDCoverage"
-* meta.profile = "http://example.org/StructureDefinition/MOPEDCoverage"
+* id = "Test2MopedCoverage"
+* meta.profile = "http://example.org/StructureDefinition/MopedCoverage"
 * subscriber = Reference(Test2Patient)
 * beneficiary = Reference(Test2Patient)
 

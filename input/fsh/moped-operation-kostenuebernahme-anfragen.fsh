@@ -16,31 +16,31 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 
 **Detaillierte Business-Logik**
 
-1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
-2. Suchen des MOPEDAccounts: Die Referenz des *MOPEDEncounter.account* aus Schritt 1.
-3. Erstellung des MOPEDCoverageEligibilityRequest: 
-  * a. *MOPEDCoverageEligibilityRequest.status* mit 'active' befüllen
-  * b. *MOPEDCoverageEligibilityRequest.purpose* mit 'validation' befüllen
-  * c. *MOPEDCoverageEligibilityRequest.created* mit dem aktuellem Zeitpunkt befüllen
-  * d. *MOPEDCoverageEligibilityRequest.verlaengerungstage* mit *verlaengerungstage* lt. Operation-Parameter befüllen
-  * e. *MOPEDCoverageEligibilityRequest.sonderklasse* mit *sonderklasse* lt. Operation-Parameter befüllen
-  * f. *MOPEDCoverageEligibilityRequest.patient* mit *MOPEDAccount.subject* befüllen
-  * g. *MOPEDCoverageEligibilityRequest.insurance.coverage* mit *MOPEDAccount.coverage.coverage* befüllen
-  * h. *MOPEDCoverageEligibilityRequest.provider* mit *MOPEDAccount.owner* befüllen
-  * i. *MOPEDCoverageEligibilityRequest.insurer* mit einer Referenz auf jene Organization befüllen, deren *Organization.identifier* dem Identifier *versicherer* lt. Operation-Parameter entspricht
+1. Suche des MopedEncounter: Der MopedEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
+2. Suchen des MopedAccounts: Die Referenz des *MopedEncounter.account* aus Schritt 1.
+3. Erstellung des MopedCoverageEligibilityRequest: 
+  * a. *MopedCoverageEligibilityRequest.status* mit 'active' befüllen
+  * b. *MopedCoverageEligibilityRequest.purpose* mit 'validation' befüllen
+  * c. *MopedCoverageEligibilityRequest.created* mit dem aktuellem Zeitpunkt befüllen
+  * d. *MopedCoverageEligibilityRequest.verlaengerungstage* mit *verlaengerungstage* lt. Operation-Parameter befüllen
+  * e. *MopedCoverageEligibilityRequest.sonderklasse* mit *sonderklasse* lt. Operation-Parameter befüllen
+  * f. *MopedCoverageEligibilityRequest.patient* mit *MopedAccount.subject* befüllen
+  * g. *MopedCoverageEligibilityRequest.insurance.coverage* mit *MopedAccount.coverage.coverage* befüllen
+  * h. *MopedCoverageEligibilityRequest.provider* mit *MopedAccount.owner* befüllen
+  * i. *MopedCoverageEligibilityRequest.insurer* mit einer Referenz auf jene Organization befüllen, deren *Organization.identifier* dem Identifier *versicherer* lt. Operation-Parameter entspricht
 6. POSTen des neu erstellten CoverageEligibilityRequest
-7. Referenz im MOPEDAccount:
-  a. *MOPEDAccount.coverageEligibilityRequest* mit Hilfe der resultierenden ID aus Schritt 6 referenzieren
+7. Referenz im MopedAccount:
+  a. *MopedAccount.coverageEligibilityRequest* mit Hilfe der resultierenden ID aus Schritt 6 referenzieren
 
 **Validierung / Fehlerbehandlung**
-* *MOPEDAccount.coverage* darf nur eine Versicherung gelistet haben
+* *MopedAccount.coverage* darf nur eine Versicherung gelistet haben
 * *CoverageEligibilityRequest.subject* muss mit *Coverage.beneficiary* aus Schritt 3g übereinstimmen
-* *MOPEDCoverageEligibilityRequest.insurer* muss mit *Coverage.insurer* aus Schritt 3g übereinstimmen
-* *MOPEDCoverageEligibilityRequest.provider* muss gleichzeitig die gleiche Organisation sein, die lt. Token die Operation aufgerufen hat.
+* *MopedCoverageEligibilityRequest.insurer* muss mit *Coverage.insurer* aus Schritt 3g übereinstimmen
+* *MopedCoverageEligibilityRequest.provider* muss gleichzeitig die gleiche Organisation sein, die lt. Token die Operation aufgerufen hat.
 
 **Weitere Hinweise**
 
-* Hinweis 1: Nach dieser Operation findet lt. Soll-Prozess kein Update des Status *MOPEDAccount.workflowStatus* statt.
+* Hinweis 1: Nach dieser Operation findet lt. Soll-Prozess kein Update des Status *MopedAccount.workflowStatus* statt.
 
 **Annahmen an das BeS**
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur Kostenübernahmen für eigene Fälle angefragt werden können.
