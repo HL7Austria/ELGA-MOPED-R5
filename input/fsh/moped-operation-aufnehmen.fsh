@@ -40,7 +40,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 * Wenn der *freigeben*-Parameter auf *true* ist, muss eine Validierung aller Ressourcen im *falldaten*-Bundle erfolgreich sein, oder die Operation schlägt fehl.
 * Es kann nie mehrere MopedEnconuter-Instanzen mit der gleichen Aufnahmezahl geben. Es muss vorab überprüft werden, ob bereits ein Encounter mit dieser Aufnahmezahl vorliegt und die Operation muss in dem Fall fehlschlagen (siehe Hinweis 5).
 * Der Status *MopedEncounter.status* muss den Wert 'in-progress' haben
-* Wenn im MopedAufnahmeBundle[Hauptversicherter] muss gleich sein wie MopedAufnahmeBundle[Coverage].policyHolder
+* Der Hauptversicherte lt. MopedAufnahmeBundle[Hauptversicherter] muss gleich sein wie MopedAufnahmeBundle[Coverage].policyHolder
 * In MopedAccount.coverage darf nur eine Coverage gelistet sein, ansonsten wird (derzeit) ein Fehler geworfen. Dieser Zustand wäre vor allem möglich, wenn $aufnehmen mehrmals aufgerufen wird, mit unterschiedlichen Coverages. Siehe Hinweis 4.
 
 **Weitere Hinweise**
