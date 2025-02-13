@@ -92,7 +92,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * binding[+]
     * strength = #required
     * valueSet = Canonical(Anwesenheitsart)
-  * parameter[+]
+* parameter[+]
   * name = #funktionscode
   * use = #in 
   * min = 1
