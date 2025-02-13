@@ -36,8 +36,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 
 **Validierung / Fehlerbehandlung**
 
+* Nur POC: Der Operation-Parameter 'freigeben' muss `true` sein (siehe Hinweis 5)
 * Wenn der *freigeben*-Parameter auf *true* ist, muss eine Validierung aller Ressourcen im *falldaten*-Bundle erfolgreich sein, oder die Operation schlägt fehl.
-* Es kann nie mehrere MopedEnconuter-Instanzen mit der gleichen Aufnahmezahl geben
+* Es kann nie mehrere MopedEnconuter-Instanzen mit der gleichen Aufnahmezahl geben. Es muss vorab überprüft werden, ob bereits ein Encounter mit dieser Aufnahmezahl vorliegt und die Operation muss in dem Fall fehlschlagen (siehe Hinweis 5).
 * Der Status *MopedEncounter.status* muss den Wert 'in-progress' haben
 * Wenn im MopedAufnahmeBundle[Hauptversicherter] muss gleich sein wie MopedAufnahmeBundle[Coverage].policyHolder
 * In MopedAccount.coverage darf nur eine Coverage gelistet sein, ansonsten wird (derzeit) ein Fehler geworfen. Dieser Zustand wäre vor allem möglich, wenn $aufnehmen mehrmals aufgerufen wird, mit unterschiedlichen Coverages. Siehe Hinweis 4.
@@ -49,7 +50,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * *true*: Die Patientenaufnahme ist vollständig und es ist zu erwarten, dass alle nötigen Felder befüllt sind. Schlägt die Validierung der *falldaten* fehl, kann die Operation nicht erfolgreich durchgeführt werden. Ist die Validierung erfolgreich, wird eine im Encounter referenzierte Account-Ressource erstellt bzw. upgedatet, die den *WorkflowStatus* 'Aufnahme freigegeben' hat. 
 * Hinweis 2: Es ist nicht nötig, bei dieser Operation den GDA-Identifier als Kontext mitzugeben. Auf den GDA wird im *falldaten*-Bundle als conditional Reference mittels entsprechendem Identifier im MopedEncounter verwiesen. Somit wird auch vermieden, dass Duplikate einer GDA-Organization-Ressource am Server angelegt/verwendet werden.
 * Hinweis 3: Im Parameter *falldaten* wird unter Anderem eine Coverage Ressource mitgegeben. Diese Ressource stammt in der Regel aus einer erfolgreichen VDAS-Abfrage. In Zukunft wird Moped auch andere Optionen unterstützen, wie die Verarbeitung von Daten von Selbstzahlern (wofür ein separates Coverage-Profil angelegt wird), oder die Verarbeitung von Fällen mit privater Krankenversicherung (auch hierfür wird ein separates Coverage-Profil angelegt). Im Ersten Schritt liegt der Fokus auf den Standard-Fall, der als Ausgangsbasis eine erfolgreich abgeschlossene VDAS-Abfrage voraussetzt. 
-* Hinweis 4: Das Wecheln von Versicherungen, insbesondere durch inkonsistente Covearges bei mehrfachem Ausführen von $aufnehmen wird derzeit nicht unterstützt. Hierfür müssen erst die Prozesse für den Sonderfall des Versicherungswechselns definiert werden.
+* Hinweis 4: Das Wecheln von Versicherungen, insbesondere durch inkonsistente Coverages bei mehrfachem Ausführen von $aufnehmen wird derzeit nicht unterstützt. Hierfür müssen erst die Prozesse für den Sonderfall des Versicherungswechselns definiert werden.
+* Hinweis 5: In einer erweiterten Version wird es möglich sein, diese Operation mehrmals aufzurufen. Das wird konkret zumindest der Fall sein, wenn die Aufnahme 1x in Arbeit ist und 1x freigegeben wird. Im POC soll die Operation nur einmal ausgeführt werden können, direkt mit der Freigabe.
 
 **Annahmen an das BeS**
 * Es wurde vorab geprüft, ob das `system` des Parameters `falldaten`.encounter.identifier dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle aufgenommen werden können.

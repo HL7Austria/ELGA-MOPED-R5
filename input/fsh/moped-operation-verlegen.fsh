@@ -63,7 +63,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * 85-89: 85
   * 90-95: 90
   * 95 und älter: 95
-* Hinweis 3: Die Altersgruppe wird mittlerweile als Code repräsentiert (siehe ValueSet `Altersgruppe`)
+* Hinweis 3: Die Altersgruppe wird als Code repräsentiert (siehe ValueSet `Altersgruppe`)
 * Hinweis 4: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
 
 **Annahmen an das BeS**
