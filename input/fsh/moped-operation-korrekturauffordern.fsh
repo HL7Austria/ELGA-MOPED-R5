@@ -17,7 +17,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
 
 1. Die MopedLKFResponse wird lt. Regeln (siehe unten) validiert und eingespielt
 2. Falls Schritt 1 erfolgreich war, wird der MopedLKFResponse.encounter.account.workflowStatus (MopedLKFResponse aus Operation-Parameter; der Encounter vom Profil MopedEncounter) wird auf 
-   * `LGF Korrekturaufforderung` gesetzt, falls der vorherige Status `Vorläufige Meldung`, `Vorläufige Freigabe`oder `LGF Korrekturaufforderung` war
+   * `LGF Korrekturaufforderung` gesetzt, falls der vorherige Status `Vorläufige Meldung`, `Vorläufige Freigabe` oder `LGF Korrekturaufforderung` war
    * `Endgültige Korrekturaufforderung` gesetzt, falls der vorherige Status `Endgültige Meldung` oder `Endgültige Korrekturaufforderung` war
 3. Alle Referenzen sollen versionsspezifisch aufgelöst werden.
 
