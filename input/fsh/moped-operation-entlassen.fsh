@@ -30,12 +30,11 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 **Validierung / Fehlerbehandlung**
 
 * Wenn der *freigeben*-Parameter auf *true* ist, muss eine Validierung aller Ressourcen (MopedEncounter, Account) erfolgreich sein, oder die Operation schlägt fehl.
-* Wenn der *freigeben*-Parameter auf *true* ist, muss Information zu den Tagen ohne Kostenbeitrag vorliegen (i.e. der Operation-Parameter *TageOhneKostenbeitrag* muss befüllt sein)
 * Wurden bei der Suche in Schritt 4 mehrere MopedTransferEncounter gefunden, liegen inkonsistente Daten vor und die Operation schlägt fehl.
 
 **Weitere Hinweise**
 
-* Hinweis 1: Wurde der Patient direkt aus der Intensivstation entlassen, so müsste auch eine Abgangsart im MopedTransferEncounter gesetzt werden. Dieser Spezialfall wurde noch nicht berücksichtigt.
+* ~~Hinweis 1: Wurde der Patient direkt aus der Intensivstation entlassen, so müsste auch eine Abgangsart im MopedTransferEncounter gesetzt werden. Dieser Spezialfall wurde noch nicht berücksichtigt.~~
 
 **Annahmen an das BeS**
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle entlassen werden können.
