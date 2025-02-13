@@ -26,20 +26,20 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $erheben Operatio
 
 
 **Annahmen an das BeS**
-* Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle entlassen werden können.
+* Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle in einem Fragebogen erhoben werden können.
 
 """
 
-* id = "MOPED.Patient.Entlassen"
-* name = "MOPED_Patient_Entlassen"
+* id = "MOPED.QuestionnaireResponse.Erheben"
+* name = "MOPED_QuestionnaireResponse.Erheben"
 * status = #draft
 * kind = #operation 
 * affectsState = true
-* resource = #Encounter
+* resource = #QuestionnaireResponse
 * system = false
 * type = true
 * instance = false
-* code = #entlassen
+* code = #erheben
 * parameter[+]
   * name = #aufnahmezahl
   * use = #in 
