@@ -5,6 +5,8 @@ Description: "Die $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in i
 Usage: #definition 
 * purpose = """
 
+Legende: ~~durchgestrichen~~ heißt, dass es für den IG zwar bedacht wird, für den ersten POC jedoch nicht relevant ist.
+
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wird.
