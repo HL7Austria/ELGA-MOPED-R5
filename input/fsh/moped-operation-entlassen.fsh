@@ -44,7 +44,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 * id = "MOPED.Patient.Entlassen"
 * name = "MOPED_Patient_Entlassen"
 * status = #draft
-* comment = "TBD: Abgangsart beim MopedTransferEncounter falls intensiv, muss befüllt werden; In dieser Operation werden noch keine Leitungen erfasst, hier muss eine Möglichkeit gegeben werden, dies nachzuholen - in einer separaten Transaction/Operation.; Der Status 'SV verarbeitet' stimmt zwar als Voraussetzung für den ersten Schritt. Kann das aber so weiterverfolgt werden, sobald Selbstzahler / private Versicherungen hinzukommen? Was passiert in einer schnellen Entlassung, wenn die SV sich noch nicht zurück gemeldet hat?"
+* comment = "TBD: Abgangsart beim MopedTransferEncounter falls intensiv, muss befüllt werden"
 * kind = #operation 
 * affectsState = true
 * resource = #Encounter
