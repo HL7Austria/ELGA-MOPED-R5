@@ -10,7 +10,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: `SV verarbeitet`
+* Account-Status: `Aufnahme freigegeben`, `SV verarbeitet`
 
 **Detaillierte Business-Logik**
 
