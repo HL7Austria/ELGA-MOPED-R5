@@ -17,6 +17,7 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 * type = #transaction
 * entry 1..*
 * entry ^slicing.discriminator[+].type = #type
+* entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #open
 * entry contains
   Encounter 1..1
@@ -30,4 +31,3 @@ Bundle für die Input-Ressourcen bei Patienten-Aufnahme
 * entry contains
   Hauptversicherter 0..1
 * entry[Hauptversicherter].resource only Hauptversicherter
-* entry contains
