@@ -11,7 +11,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: `Vorläufige Meldung`, `Vorläufige Freigabe`, `Endgültige Meldung`, `LGF Korrekturaufforderung` oder `Endgültige Korrekturaufforderung`
+* Account-Status: `Vorläufige Meldung`, `Vorläufige Freigabe`, `Endgültige Meldung`
 
 **Detaillierte Business-Logik**
 
