@@ -18,8 +18,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $erheben Operatio
 
 **Validierung / Fehlerbehandlung**
 * Die Aufnahmezahl lt. Operation-Parameter muss die gleiche sein wie im Encounter mit dem Pfad QuestionnaireResponse.encounter (QuestionnaireResponse lt. Operation-Parameter *fragebogen*)
-* *QuestionnaireResponse.subject* muss gleich sein wie *QuestionnaireResponse.enocunter.subject*
-* *QuestionnaireResponse.source* muss gleich sein wie *QuestionnaireResponse.enocunter.serviceProvider*
+* *QuestionnaireResponse.subject* muss gleich sein wie *QuestionnaireResponse.encounter.subject*
+* *QuestionnaireResponse.source* muss gleich sein wie *QuestionnaireResponse.encounter.serviceProvider*
 
 
 **Weitere Hinweise**
