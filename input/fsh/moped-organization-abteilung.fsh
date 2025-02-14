@@ -1,4 +1,4 @@
-Profile: MOPEDOrganizationAbteilung
+Profile: MopedOrganizationAbteilung
 Parent: Organization
 Description: "MOPED Profil für Abteilungen innerhalb einer Krankenanstalt."
 

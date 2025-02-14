@@ -1,9 +1,8 @@
-
-
-Extension: ErrorWarning
-Id: moped-ext-ErrorWarning
+Extension: FehlerWarnung
+Id: moped-ext-fehlerWarnung
 Title: "Error/Warning"
 Description: "MOPED Extension für akzeptierte Errors und Warnings"
+Context: MopedLKFRequest, MopedLKFResponse
 * extension contains
     ErrorWert 0..1 MS and
     ErrorCode 0..1 MS and
@@ -27,4 +26,3 @@ Description: "MOPED Extension für akzeptierte Errors und Warnings"
     ErrorKommentar,
     "Error/Warning - Kommentar",
     "In diesem Datenfeld sind die akzeptierten Unplausibilitäten/Hinweise zu begründen.")
-

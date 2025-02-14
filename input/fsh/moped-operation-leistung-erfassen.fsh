@@ -1,4 +1,4 @@
-Instance: MOPEDLeistungEinmelden
+Instance: MopedLeistungErfassen
 InstanceOf: OperationDefinition
 Title: "MOPED Encounter Leistung und Diagnosen $erfassen (POC)"
 Description: "Die $erfassen Operation wird aufgerufen, wenn eine erbrachte Leistungen und Diagnosen eingemeldet wird."
@@ -11,11 +11,11 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $erfassen Operati
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: `Entlassung vollständig` 
+* Account-Status: `Aufnahme in Arbeit`, `Aufnahme freigegeben`, `SV verarbeitet`, `Entlassung Aviso`, `Entlassung vollständig`, `vorläufige Meldung` oder `vorläufige Freigabe`
 
 **Detaillierte Business-Logik**
 
-1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
+1. Suche des MopedEncounter: Der MopedEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
 2. Falls bisher Conditions oder Procedures eingemeldet wurden, die zum Encounter aus Schritt 1 gehören (also diesen Encounter in Procedure.encounter bzw. Condition.encounter referenzieren), dann werden diese auf den verificationStatus `entered-in-error` gesetzt bzw. mit der neuen Ressource upgedatet, falls der gefundene Identifier mit dem neu-übermittelten übereinstimmt. Die neuen Conditions und Procedures werden lt. Ressourcen in den Operation-Parametern eingespielt (bzw. upgedatet), sofern die Validierung (siehe unten) erfolgreich war.
 
 
@@ -55,24 +55,24 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $erfassen Operati
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
+  * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
   * name = #leistung
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Der *leistung* Parameter beinhält eine erbrachte Leistung in MEL-Codierung."
+  * documentation = "Der *leistung* Parameter beinhaltet eine erbrachte Leistung in MEL-Codierung."
   * type = #Procedure
-  * targetProfile = Canonical(MOPEDProcedure)
+  * targetProfile = Canonical(MopedProcedure)
 * parameter[+]
   * name = #diagnose
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Der *diagnose* Parameter beinhält eine Diagnose in HDG-Codierung."
+  * documentation = "Der *diagnose* Parameter beinhaltet eine Diagnose in HDG-Codierung."
   * type = #Condition
-  * targetProfile = Canonical(MOPEDCondition)
+  * targetProfile = Canonical(MopedCondition)
 * parameter[+]
   * name = #return
   * use = #out

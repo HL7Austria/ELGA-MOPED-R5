@@ -1,4 +1,4 @@
-Instance: MOPEDFallAbrechnen
+Instance: MopedFallAbrechnen
 InstanceOf: OperationDefinition
 Title: "MOPED Encounter $abrechnen (POC)"
 Description: "Die $abrechnen Operation wird aufgerufen, wenn ein Fall abgerechnet werden sollte."
@@ -12,15 +12,15 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: `Entlassung vollständig` oder `Vorläufige Meldung`
+* Account-Status: `Entlassung vollständig`, `Vorläufige Meldung`, `Vorläufige Freigabe`, `LGF Korrekturaufforderung` oder `Endgültige Korrekturaufforderung`
 
 **Detaillierte Business-Logik**
 
-1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
-2. Suche aller MOPEDProcedures und MOPEDConditions, die auf den Encounter aus Schritt 1 referenzieren
-3. Suche aller MOPEDTransferEncounter die *partOf* den MOPEDEncounter aus Schritt 1 referenzieren
+1. Suche des MopedEncounter: Der MopedEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
+2. Suche aller MopedProcedures und MopedConditions, die auf den Encounter aus Schritt 1 referenzieren
+3. Suche aller MopedTransferEncounter die *partOf* den MopedEncounter aus Schritt 1 referenzieren
 4. Der Claim wird lt. Regeln (siehe unten) validiert
-5. Der Claim wird um alle in Schritt 3 gefundenen MOPEDTransferEncounter erweitert und am Server eingespielt
+5. Der Claim wird um alle in Schritt 3 gefundenen MopedTransferEncounter erweitert und am Server eingespielt
 6. Falls Schritt 5 erfolgreich war, wird der Encounter.account.workflowStatus (Encounter aus Schritt 1) auf 
    * `Vorläufige Meldung` gesetzt, falls der `abschliessen`-Parameter `false` ist
    * `Endgültige Meldung` gesetzt, falls der `abschliessen`-Parameter `true` ist
@@ -37,12 +37,11 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 * Claim.insurer muss gleich sein wie Encounter.account.coverage.insurer (falls dieser befüllt ist; Encounter aus Schritt 1).
 * Claim.provider muss gleich sein wie Encounter.serviceProvider (Encounter aus Schritt 1).
 * Claim.insurance.coverage muss gleich sein wie Encounter.account.coverage (falls diese beüllt ist; Encounter aus Schritt 1)
-* Claim.accident muss befüllt sein, falls Encounter.account.VerdachtArbeitsSchuelerunfall	!= `0` ist
 
 
 **Weitere Hinweise**
 
-* Hinweis 1: Die Referenzen zu Diagnosis und Claims die bereits nach $leistungMelden am Server liegen werden mit Hilfe der logischen Identifier hergestellt
+* Hinweis 1: Die Referenzen zu Diagnosis und Claims die bereits nach $erfassen am Server liegen werden mit Hilfe der logischen Identifier hergestellt
 
 **Annahmen an das BeS**
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle abgerechnet werden können.
@@ -64,7 +63,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
+  * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
   * name = #abschliessen
@@ -78,9 +77,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *claim* Parameter beinhält sämtliche Details zur Abrechnung lt. MOPEDClaim Profil."
+  * documentation = "Der *claim* Parameter beinhaltet sämtliche Details zur Abrechnung lt. MopedLKFRequest Profil."
   * type = #Claim
-  * targetProfile = Canonical(MOPEDClaim)
+  * targetProfile = Canonical(MopedLKFRequest)
 * parameter[+]
   * name = #return
   * use = #out
