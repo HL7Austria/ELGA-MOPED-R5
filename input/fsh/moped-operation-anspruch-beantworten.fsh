@@ -16,11 +16,12 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantwort
 **Detaillierte Business-Logik**
 
 1. Die MopedVAEResponse wird lt. Regeln (siehe unten) validiert und eingespielt
-2. Falls Schritt 1 erfolgreich war, wird die Ressource Account gesucht, die eine Referenz auf den MopedVAEResponse.request beihält (MopedVAEResponse lt. Operation-Parameter) und auf `SV verarbeitet` gesetzt
+2. Falls Schritt 1 erfolgreich war, wird die Ressource Account gesucht (`MopedVAEResponse.request.encounter[MopedEncounter].account`; MopedVAEResponse lt. Operation-Parameter) und auf `SV verarbeitet` gesetzt
 
 **Validierung / Fehlerbehandlung**
 
-* MopedVAEResponse.patient muss gleich MopedVAEResponse.request.patient sein
+* MopedVAEResponse.patient muss gleich mit `MopedVAEResponse.request.patient`und mit `MopedVAEResponse.request.encounter[MopedEncounter].subject` und mit `MopedVAEResponse.request.encounter[MopedEncounter].account.subject` sein
+* MopedVAEResponse.requestor muss gleich sein mit `MopedVAEResponse.request.provider` und mit `MopedVAEResponse.request.encounter.serviceProvider`
 
 **Weitere Hinweise**
 
@@ -44,7 +45,7 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantwort
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *MopedVAEResponse* Parameter beinhält sämtliche Details zur Antwort auf den VAERequest."
+  * documentation = "Der *MopedVAEResponse* Parameter beinhaltet sämtliche Details zur Antwort auf den VAERequest."
   * type = #ClaimResponse
 * parameter[+]
   * name = #return

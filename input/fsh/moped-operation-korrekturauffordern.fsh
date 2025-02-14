@@ -11,13 +11,13 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: `Vorläufige Meldung`, `Vorläufige Freigabe`, `Endgültige Meldung`, `LGF Korrekturaufforderung` oder `Endgültige Korrekturaufforderung`
+* Account-Status: `Vorläufige Meldung`, `Vorläufige Freigabe`, `Endgültige Meldung`
 
 **Detaillierte Business-Logik**
 
 1. Die MopedLKFResponse wird lt. Regeln (siehe unten) validiert und eingespielt
 2. Falls Schritt 1 erfolgreich war, wird der MopedLKFResponse.encounter.account.workflowStatus (MopedLKFResponse aus Operation-Parameter; der Encounter vom Profil MopedEncounter) wird auf 
-   * `LGF Korrekturaufforderung` gesetzt, falls der vorherige Status `Vorläufige Meldung`, `Vorläufige Freigabe`oder `LGF Korrekturaufforderung` war
+   * `LGF Korrekturaufforderung` gesetzt, falls der vorherige Status `Vorläufige Meldung`, `Vorläufige Freigabe` oder `LGF Korrekturaufforderung` war
    * `Endgültige Korrekturaufforderung` gesetzt, falls der vorherige Status `Endgültige Meldung` oder `Endgültige Korrekturaufforderung` war
 3. Alle Referenzen sollen versionsspezifisch aufgelöst werden.
 
@@ -58,7 +58,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *MopedLKFResponse* Parameter beinhält sämtliche Details zur Antwort auf den Claim."
+  * documentation = "Der *MopedLKFResponse* Parameter beinhaltet sämtliche Details zur Antwort auf den Claim."
   * type = #ClaimResponse
   * targetProfile = Canonical(MopedLKFResponse)
 * parameter[+]
