@@ -84,6 +84,10 @@ pages:
     title: Proof of Concept
   HackathonRequestOverview.md:
     title: Hackathon Gesamtübersicht
+  ka-org_mapping.md:
+    title: Ka-Org Mapping
+  lkf_mapping.md:
+    title: LKF Mapping
 
 
 
@@ -92,6 +96,8 @@ menu:
   Artifacts: artifacts.html
   Hackathon Gesamtübersicht: HackathonRequestOverview.html
   Proof of Concept: poc.html
+  LKF Mapping: lkf_mapping.html
+  Ka-Org Mapping: ka-org_mapping.html
 
 
 
