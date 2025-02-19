@@ -24,7 +24,6 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * *MopedTransferEncounter.partOf* referenziert den MopedEncounter aus Schritt 1. 
   * *MopedTransferEncounter.actualPeriod.start* wird mit dem *zeitpunkt* lt. Operation-Parameter befüllt.
   * *MopedTransferEncounter.serviceProvider* setzt eine Referenz auf die MopedOrganizationAbteilung mit dem jeweiligen *funktionscode* bzw. *funktionssubcode* lt. Operation-Parameter. 
-  * *MopedTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 1).
   * *MopedTransferEncounter.admission.extension[Altersgruppe].extension[beiZugang].value* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2 und 3).
   * *MopedTransferEncounter.admission.extension[Altersgruppe].extension[Neugeborenes].value* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 1).
   * *MopedTransferEncounter.subjectStatus* wird lt. Operation-Parameter *physischeAnwesenheit* befüllt.
