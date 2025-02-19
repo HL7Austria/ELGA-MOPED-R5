@@ -22,7 +22,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 3. Suche des letzten MopedTransferEncounter: Mit *MopedTransferEncounter.partOf* einer Referenz auf den MopedEncounter aus Schritt 1 und den Status *in-progress*
 4. Update des letzten MopedTransferEncounter:
   * *MopedTransferEncounter.status* mit `completed` befüllen gesetzt 
-  * *MopedTransferEncounter.actualPeriod.end* mit *zeitpunkt* lt. Operation-Parameter befüllen 
+  * *MopedTransferEncounter.actualPeriod.end* mit *zeitpunkt* lt. Operation-Parameter befüllen  
+  * Abgangsart vom alten MopedTransferEncounter: *MopedTransferEncounter.admission.dischargeDisposition* wird auf *abgangsart* lt. Operation-Parameter gesetzt.
+  * Altersgruppe bei Abgang vom alten MopedTransferEncounter: *MopedTransferEncounter.admission.extension[Altersgruppe].extension[beiAbgang].value* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2 und 3).
 5. Änderungen im Account:
   * *MopedAccount.WorkflowStatus* mit `Entlassungs Aviso` befüllen, oder, falls der *freigeben*-Operation-Parameter auf `true` gesetzt war und die Validierung erfolgreich war, wird *MopedAccount.WorkflowStatus* mit `Entlassung vollständig` befüllt. 
   * *MopedAccount.TageOhneKostenbeitrag* lt. gleichnamigen Opeartion-Parameter befüllen
@@ -33,8 +35,19 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 * Wurden bei der Suche in Schritt 4 mehrere MopedTransferEncounter gefunden, liegen inkonsistente Daten vor und die Operation schlägt fehl.
 
 **Weitere Hinweise**
-
-* ~~Hinweis 1: Wurde der Patient direkt aus der Intensivstation entlassen, so müsste auch eine Abgangsart im MopedTransferEncounter gesetzt werden. Dieser Spezialfall wurde noch nicht berücksichtigt.~~
+* Hinweis 1: LKF 4.1.9 Altersgruppe bei Entlassung/Kontakt
+  * Vollendete Lebensjahre sind ausschlaggebend
+  * 0: 0
+  * 1-4: 1
+  * 5-9: 5
+  * 10-14: 10
+  * 15-19: 15
+  * 20-24: 20
+  * ... immer weiter so, die untere Grenze des Alters in 5er-Schritten
+  * 85-89: 85
+  * 90-95: 90
+  * 95 und älter: 95
+* Hinweis 2: Die Altersgruppe wird als Code repräsentiert (siehe ValueSet `Altersgruppe`)
 
 **Annahmen an das BeS**
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle entlassen werden können.
@@ -83,6 +96,16 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
   * max = "1"
   * documentation = "Der *tageOhneKostenbeitrag* Parameter definiert zu für wie viele Tage kein Kostenbeitrag eingehoben wurde."
   * type = #unsignedInt
+* parameter[+]
+  * name = #abgangsart
+  * use = #in 
+  * min = 0
+  * max = "1"
+  * documentation = "Der *abgangsart* Parameter definiert die Abgangsart des Patienten vom letzten offenen MopedTransferEncounter."
+  * type = #code
+  * binding[+]
+    * strength = #required
+    * valueSet = Canonical(Abgangsart)
 * parameter[+]
   * name = #freigeben
   * use = #in
