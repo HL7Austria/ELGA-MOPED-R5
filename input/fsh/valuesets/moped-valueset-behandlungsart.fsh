@@ -1,7 +1,15 @@
+CodeSystem: BehandlungsartCS
+Title: "Behandlungsart"
+Description: "CodeSystem für die Behandlungsart"
+* ^status = #active
+* ^experimental = true
+* ^caseSensitive = true
+* #S "Stationär"
+* #I "Spitalsambulant"
+* #E "Extramural ambulant"
+
 ValueSet: Behandlungsart
-Id: moped-behandlungsart-valueset
 Title: "Behandlungsart"
 Description: "ValueSet für die Behandlungsart"
-* $Behandlungsart#S "Stationär"
-* $Behandlungsart#I "Spitalsambulant"
-* $Behandlungsart#E "Extramural ambulant"
+* ^experimental = true
+* include codes from system BehandlungsartCS

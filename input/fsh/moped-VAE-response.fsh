@@ -4,7 +4,7 @@ Parent: ClaimResponse
 Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklärung VAE."
 
 * status = #active
-* type.coding.code = #institutional
+* type.coding = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * use = #preauthorization
 
 * patient only Reference(HL7ATCorePatient)

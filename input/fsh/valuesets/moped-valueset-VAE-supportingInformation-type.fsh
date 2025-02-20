@@ -1,7 +1,15 @@
-ValueSet: VAESupportingInformationTypes
-Id: moped-sv-vae-supporting-information-types
+CodeSystem: VAESupportingInformationTypesCS
 Title: "MOPED VAESupportingInformationTypes"
 Description: "Arten von zusätzlichen Informationen in der VAE"
-* $VAESupportingInfo#KLAS "Allgemeine Gebührenklasse/Sonderklasse"
-* $VAESupportingInfo#VERDAU "Verdacht auf Arbeits-/Schülerunfall"
-* $VAESupportingInfo#FREVER "Fremdversschluden"
+* ^status = #active
+* ^experimental = true
+* ^caseSensitive = true
+* #KLAS "Allgemeine Gebührenklasse/Sonderklasse"
+* #VERDAU "Verdacht auf Arbeits-/Schülerunfall"
+* #FREVER "Fremdversschluden"
+
+ValueSet: VAESupportingInformationTypes
+Title: "MOPED VAESupportingInformationTypes"
+Description: "Arten von zusätzlichen Informationen in der VAE"
+* ^experimental = true
+* include codes from system VAESupportingInformationTypesCS

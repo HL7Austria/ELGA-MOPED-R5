@@ -22,7 +22,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * subject only Reference(HL7ATCorePatient)
 * admission.origin only Reference(Organization)
 * admission.destination only Reference(Organization)
-* serviceProvider only Reference(MopedOrganizationAbteilung)
+* serviceProvider only Reference(HL7ATCoreOrganization)
 * actualPeriod ^short = "Aufnahme- und Entlassungsdatum"
 
 * admission.dischargeDisposition ^short = "Entlassungsart"
@@ -36,10 +36,12 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * class contains Behandlungsart 0..1 and Aufnahmeart2 0..1
 * class[Behandlungsart] ^short = "Behandlungsart"
 * class[Behandlungsart] from Behandlungsart (required)
-* class[Behandlungsart].coding.system = $Behandlungsart
+* class[Behandlungsart].coding.system = Canonical(BehandlungsartCS)
 * class[Aufnahmeart2] ^short = "Aufnahmeart2"
 * class[Aufnahmeart2] from Aufnahmeart2 (required)
-* class[Aufnahmeart2].coding.system = $Aufnahmeart2
+* class[Aufnahmeart2].coding.system = Canonical(Aufnahmeart2CS)
+
+* type = MopedEncounterTypesCS#ENC
 
 * reason ^slicing.rules = #open
 * reason ^slicing.discriminator.type = #value

@@ -1,16 +1,23 @@
+CodeSystem: WorkflowStatusCS
+Title: "Workflow Status eines Falls"
+Description: "CodeSystem für die Statusoptionen in denen sich ein Fall befinden kann."
+* ^status = #active
+* ^experimental = true
+* ^caseSensitive = true
+* #Aufnahme-in-arbeit "Aufnahme in Arbeit"
+* #Aufnahme-freigegeben "Aufnahme freigegeben"
+* #SV-verarbeitet "SV verarbeitet"
+* #Entlassungs-Aviso "Entlassungs Aviso"
+* #Entlassung-vollständig "Entlassung vollständig"
+* #Vorläufige-Meldung "Vorläufige Meldung"
+* #LGF-Korrekturaufforderung "LGF Korrekturaufforderung"
+* #Endgueltige-Korrekturaufforderung "LGF Endgültige Korrekturaufforderung"
+* #Vorlaeufige-Freigabe "Vorläufige Freigabe"
+* #Endgueltige-Meldung "Endgültige Meldung"
+* #Endgueltige-Freigabe "Endgültige Freigabe"
+
 ValueSet: WorkflowStatus
-Id: moped-WorkflowStatus-valueset
 Title: "Workflow Status eines Falls"
 Description: "ValueSet für die Statusoptionen in denen sich ein Fall befinden kann."
-
-* $workflowstatus#Aufnahme-in-arbeit "Aufnahme in Arbeit"
-* $workflowstatus#Aufnahme-freigegeben "Aufnahme freigegeben"
-* $workflowstatus#SV-verarbeitet "SV verarbeitet"
-* $workflowstatus#Entlassungs-Aviso "Entlassungs Aviso"
-* $workflowstatus#Entlassung-vollständig "Entlassung vollständig"
-* $workflowstatus#Vorläufige-Meldung "Vorläufige Meldung"
-* $workflowstatus#LGF-Korrekturaufforderung "LGF Korrekturaufforderung"
-* $workflowstatus#Endgueltige-Korrekturaufforderung "LGF Endgültige Korrekturaufforderung"
-* $workflowstatus#Vorlaeufige-Freigabe "Vorläufige Freigabe"
-* $workflowstatus#Endgueltige-Meldung "Endgültige Meldung"
-* $workflowstatus#Endgueltige-Freigabe "Endgültige Freigabe"
+* ^experimental = true
+* include codes from system WorkflowStatusCS

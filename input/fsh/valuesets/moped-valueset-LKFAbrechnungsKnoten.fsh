@@ -1,12 +1,20 @@
-ValueSet: LKFAbrechnungsKnoten
-Id: moped-LKFAbrechnungsKnoten-valueset
+CodeSystem: LKFAbrechnungsKnotenCS
 Title: "LKF Abrechnungsknoten"
 Description: "LKF Abrechnungsknoten"
-* $LKFAbrechnungsKnoten#A "A"
-* $LKFAbrechnungsKnoten#B "B"
-* $LKFAbrechnungsKnoten#C "C"
-* $LKFAbrechnungsKnoten#D "D"
-* $LKFAbrechnungsKnoten#E "E"
-* $LKFAbrechnungsKnoten#F "F"
-* $LKFAbrechnungsKnoten#G "G"
-* $LKFAbrechnungsKnoten#H "H"
+* ^status = #active
+* ^experimental = true
+* ^caseSensitive = true
+* #A "A"
+* #B "B"
+* #C "C"
+* #D "D"
+* #E "E"
+* #F "F"
+* #G "G"
+* #H "H"
+
+ValueSet: LKFAbrechnungsKnoten
+Title: "LKF Abrechnungsknoten"
+Description: "LKF Abrechnungsknoten"
+* ^experimental = true
+* include codes from system LKFAbrechnungsKnotenCS
