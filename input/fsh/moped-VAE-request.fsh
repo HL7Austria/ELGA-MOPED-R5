@@ -1,6 +1,7 @@
 
 Profile: MopedVAERequest
 Parent: Claim
+Title : "MOPED VAERequest"
 Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung VAE."
 
 * extension contains Verlaengerungstage named Verlaengerungstage 0..1
@@ -33,7 +34,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.discriminator.type = #value
-* supportingInfo ^slicing.discriminator.path = "code.coding.code"
+* supportingInfo ^slicing.discriminator.path = "code.coding"
 * supportingInfo ^slicing.ordered = false
 * supportingInfo contains VerdachtFremdverschulden 0..1
 /** supportingInfo contains Sonderklasse 0..1 and VerdachtFremdverschulden 0..1 and VerdachtArbeitsSchuelerunfall 0..1
@@ -55,5 +56,5 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 
 * supportingInfo[VerdachtFremdverschulden] ^short = "Verdacht auf Fremdversschluden"
 * supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claim-informationcategory#info
-* supportingInfo[VerdachtFremdverschulden].code = $VAESupportingInfo#FREVER
+* supportingInfo[VerdachtFremdverschulden].code.coding = VAESupportingInformationTypesCS#FREVER
 * supportingInfo[VerdachtFremdverschulden].value[x] only boolean

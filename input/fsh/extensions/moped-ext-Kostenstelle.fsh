@@ -15,7 +15,7 @@ Context: MopedOrganizationAbteilung
 * extension[SpezielleOrganisationsform].value[x] 0..1
 * extension[SpezielleOrganisationsform].value[x] only code
 * extension[KostenstellenJahr].value[x] 0..1
-* extension[KostenstellenJahr].value[x] only Period
+* extension[KostenstellenJahr].value[x] only date
 
 * insert DocumentExtension (
     InterneKostenstellennummer,

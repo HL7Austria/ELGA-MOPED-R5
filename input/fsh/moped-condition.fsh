@@ -1,5 +1,6 @@
 Profile: MopedCondition
 Parent: Condition
+Title : "MOPED Condition"
 Description: "MOPED Profil der Condition Ressource für die LDF-Abrechnung"
 
 * identifier ^slicing.rules = #open
@@ -26,5 +27,5 @@ Description: "MOPED Profil der Condition Ressource für die LDF-Abrechnung"
 * code.coding[ICD10] from $ICD10AT (required)
 * code.coding[ICD10].system = $ICD10AT
 * code.coding[HDG] from LKFHauptdiagnosegruppen (required)
-* code.coding[HDG].system = $LKFHauptdiagnosegruppen
+* code.coding[HDG].system = Canonical(LKFHauptdiagnosegruppenCS)
 
