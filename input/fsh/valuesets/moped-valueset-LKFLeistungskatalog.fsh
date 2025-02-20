@@ -1,5 +1,5 @@
 ValueSet: LKFLeistungskatalog
-Id: moped-LKFLeistungskatalog-valueset
 Title: "LKF Leistungskatalog BMSGPK"
 Description: "LKF Hauptdiagnosegruppen"
+* ^experimental = true
 * include codes from system $LKFLeistungskatalog
