@@ -4,7 +4,7 @@ Parent: ClaimResponse
 Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort."
 
 * status = #active
-* type.coding.code = #institutional
+* type.coding = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * use = #claim
 
 * patient only Reference(HL7ATCorePatient)
