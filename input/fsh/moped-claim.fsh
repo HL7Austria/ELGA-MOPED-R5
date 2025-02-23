@@ -30,6 +30,15 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
 * encounter[TransferEncounter] only Reference(MopedTransferEncounter)
 
+* item ^slicing.rules = #open
+* item ^slicing.ordered = true
+* item ^slicing.discriminator[+].type = #value
+* item ^slicing.discriminator[=].path = "category.coding"
+* item contains ConditionItem 1..
+* item[ConditionItem].diagnosisSequence 1..1
+* item[ConditionItem].category.coding from $LKFdiagnoseTyp (required)
+* item[ConditionItem].category ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
+
 * extension contains Note named Note 0..
 * diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
 * extension contains DiagnoseKnoten named DiagnoseKnoten 0..1
