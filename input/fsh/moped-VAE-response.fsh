@@ -1,6 +1,7 @@
 
 Profile: MopedVAEResponse
 Parent: ClaimResponse
+Title: "MOPED VAEResponse"
 Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklärung VAE."
 
 * status = #active

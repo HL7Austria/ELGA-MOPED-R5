@@ -1,6 +1,7 @@
 
 Profile: MopedLKFResponse
 Parent: ClaimResponse
+Title: "MOPED LKFResponse"
 Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort."
 
 * status = #active

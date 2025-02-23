@@ -1,6 +1,7 @@
 
 Profile: MopedLKFRequest
 Parent: Claim
+Title: "MOPED LKFRequest"
 Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfrage."
 
 
