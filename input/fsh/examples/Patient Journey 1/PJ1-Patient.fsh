@@ -26,4 +26,4 @@ Usage:       #inline
 * state = "Wien"
 * postalCode = "1030"
 * country = "AUT"
-* extension[AddressMunicipalityCode].valueString = "40101"
+* extension[AddressMunicipalityCode].valueString = "90301"
