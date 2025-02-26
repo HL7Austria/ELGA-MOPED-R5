@@ -16,7 +16,7 @@ Usage: #example
 * encounter[+] = Reference(PJ2TransferEncounter3)
 * encounter[+] = Reference(PJ2TransferEncounter4)
 * encounter[+] = Reference(PJ2TransferEncounter5)
-* diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG01.31
+* diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG15.03
 * insurance.coverage.reference = "Coverage?identifier=FJK5MCDPMRCY"
 * insurance.sequence = 1
 * insurance.focal = true

@@ -16,9 +16,9 @@ Usage: #example
 * insurance.sequence = 1
 * insurance.focal = true
 * outcome = #complete
-* diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG01.31
+* diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG15.03
 
-* extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#D
+* extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#C
 * extension[LKFPunkte].extension[PunkteBelagsdauerausreisserUntenLeistungskomponente].valueUnsignedInt = 0
 * extension[LKFPunkte].extension[PunkteBelagsdauerausreisserUntenTageskomponente].valueUnsignedInt = 0
 * extension[LKFPunkte].extension[ZusatzpunkteBelagsdauerausreisserNachOben].valueUnsignedInt = 0
