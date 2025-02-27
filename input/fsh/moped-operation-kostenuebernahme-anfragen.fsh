@@ -32,7 +32,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
   * i. *MopedVAERequest.provider* mit *MopedAccount.owner* befüllen
   * j. *MopedVAERequest.insurer* mit einer Referenz auf jene Organization befüllen, deren *Organization.identifier* dem Identifier *versicherer* lt. Operation-Parameter entspricht
   * k. *MopedVAERequest.encounter* mit allen gefundenen Encountern aus Schritt 1 und 2 befüllen.
-  * l. *MopedVAERequest.supportingInfo[VerdachtFremdverschulden]* lt. Operation-Parameter befüllen
+  * l. *MopedVAERequest.supportingInfo[VerdachtFremdverschulden].valueBoolean* lt. Operation-Parameter befüllen
   * m. *MopedVAERequest.accident.VerdachtArbeitsSchuelerunfall* lt. Operation-Parameter befüllen
 5. POSTen des neu erstellten MopedVAERequest
 

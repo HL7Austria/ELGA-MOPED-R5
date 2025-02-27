@@ -34,7 +34,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * Abschließen des alten MopedTransferEncounter: *MopedTransferEncounter.status* wird auf *completed* gesetzt
   * Endzeitpunkt des alten MopedTransferEncounter: *MopedTransferEncounter.actualPeriod.end* wird auf den *zeitpunkt* lt. Operation-Parameter gesetzt.
   * Abgangsart vom alten MopedTransferEncounter: *MopedTransferEncounter.admission.dischargeDisposition* wird auf *abgangsart* lt. Operation-Parameter gesetzt.
-  * Altersgruppe bei Abgang vom alten MopedTransferEncounter: *MopedTransferEncounter.admission.extension[Altersgruppe].extension[beiAbgang].value* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2 und 3).
+  * Altersgruppe bei Abgang vom alten MopedTransferEncounter: *MopedTransferEncounter.admission.extension[Altersgruppe].extension[beiEntlassung].value* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2 und 3).
 5. ~~Account AnzahlBeurlaubungen:~~
   * ~~Dieser Schritt ist nur relevant, wenn es sich *nicht* um eine Neufaufnahme (lt. Operation-Parameter) handelt.~~
   * ~~War alter MopedTransferEncounter aus Schritt 4.2 ein Urlaub (i.e. Funktionscode `10000000`)?~~
