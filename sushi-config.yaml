@@ -80,10 +80,10 @@ dependencies:
 pages:
   index.md:
     title: Home
-  poc.md:
-    title: Proof of Concept
+  vdas.md:
+    title: VDAS Gesamtübersicht
   HackathonRequestOverview.md:
-    title: Hackathon Gesamtübersicht
+    title: MOPED Gesamtübersicht
   ka-org_mapping.md:
     title: Ka-Org Mapping
   lkf_mapping.md:
@@ -94,8 +94,8 @@ pages:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  Hackathon Gesamtübersicht: HackathonRequestOverview.html
-  Proof of Concept: poc.html
+  MOPED Gesamtübersicht: HackathonRequestOverview.html
+  VDAS Gesamtübersicht: vdas.html
   LKF Mapping: lkf_mapping.html
   Ka-Org Mapping: ka-org_mapping.html
 
