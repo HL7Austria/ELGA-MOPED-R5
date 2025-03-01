@@ -1,6 +1,7 @@
 
 Profile: MopedAccount
 Parent: Account
+Title: "MOPED Account"
 Description: "MOPED Profil der Account Ressource für die administrative Fallführung und Abrechnung."
 
 * subject only Reference(HL7ATCorePatient)

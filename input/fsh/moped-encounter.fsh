@@ -53,9 +53,6 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * reason[Ursache].value from UrsacheValueSet (required)
 * reason[Ursache] ^short = "Ursache für Behandlung"
 
-* diagnosis.use from $LKFdiagnoseTyp (required)
-* diagnosis.use ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
-
 * admission.extension contains Aufnahmeart named aufnahmeart 0..1
 * admission.extension contains Transportart named transportart 0..1
 * extension contains Unfalldatum named Unfalldatum 0..1

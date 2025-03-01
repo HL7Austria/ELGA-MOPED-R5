@@ -28,6 +28,7 @@ Usage: #example
 * item[=].procedureSequence = 1
 * item[+].sequence = 2
 * item[=].diagnosisSequence = 1
+* item[=].category = https://termgit.elga.gv.at/CodeSystem/lkf-diagnose-typ#H
 
 * extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#D
 * extension[LKFPunkte].extension[PunkteBelagsdauerausreisserUntenLeistungskomponente].valueUnsignedInt = 0
