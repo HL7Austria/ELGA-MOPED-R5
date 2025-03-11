@@ -1,6 +1,6 @@
 
 Extension:    WorkflowStatus
-Id:           moped-ext-workflowStatus
+Id:           moped-ext-workflow-status
 Title:        "Workflow Status" 
 Description:  "MOPED Extension für den Workflowstatus. Dieser beschreibt den Zustand in dem sich der administrative Fall derzeit befindet"
 Context: MopedAccount

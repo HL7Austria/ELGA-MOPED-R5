@@ -1,6 +1,6 @@
 
 Extension:    AnzahlSonderleistungen
-Id:           moped-ext-anzahlSonderleistungen
+Id:           moped-ext-AnzahlSonderleistungen
 Title:        "Anzahl Sonderleistungen" 
 Description:  "MOPED Extension für die Anzahl der Sonderleistungen"
 Context: MopedLKFResponse
