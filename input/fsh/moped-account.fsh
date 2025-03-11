@@ -6,11 +6,7 @@ Title: "MOPED Account"
 * subject only Reference(HL7ATCorePatient)
 * owner only Reference(HL7ATCoreOrganization)
 
-* extension contains AnzahlVerlegungen named anzahlVerlegungen 0..1
-* extension contains AnzahlBeurlaubungen named anzahlBeurlaubungen 0..1
-* extension contains WorkflowStatus named workflowStatus 1..1
-* extension contains VerdachtArbeitsSchuelerunfall named verdachtArbeitsSchuelerunfall 0..1
-* extension contains VerdachtFremdverschulden named verdachtFremdverschulden 0..1
-* extension contains TageOhneKostenbeitrag named tageOhneKostenbeitrag 0..1
-* extension contains CoverageEligibilityRequestRef named coverageEligibilityRequestRef 0..1
-* extension contains ClaimRef named claimRef 0..1
+* extension contains AnzahlVerlegungen named AnzahlVerlegungen 0..1
+* extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 0..1
+* extension contains WorkflowStatus named WorkflowStatus 1..1
+* extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1

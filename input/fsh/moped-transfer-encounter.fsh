@@ -1,7 +1,7 @@
 Profile: MopedTransferEncounter
 Parent: Encounter
 Description: "MOPED Profil der Encounter Ressource für die Verlegung innerhalb oder zwischen Krankenanstalten"
-Title: "MOPED Transfer Encounter"
+Title: "MOPED TransferEncounter"
 
 * subject only Reference(HL7ATCorePatient)
 * serviceProvider only Reference(MopedOrganizationAbteilung)
@@ -10,9 +10,11 @@ Title: "MOPED Transfer Encounter"
 
 * subjectStatus from Anwesenheitsart (required)
 
+* type = MopedEncounterTypesCS#TENC
 * admission.extension contains Altersgruppe named Altersgruppe 0..1 MS
 
 * admission.dischargeDisposition ^short = "Abgangsart"
 * admission.dischargeDisposition from Abgangsart (required)
 
 * partOf only Reference (MopedEncounter)
+* partOf 1..1

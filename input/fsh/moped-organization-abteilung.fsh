@@ -6,7 +6,6 @@ Title: "MOPED Organization Abteilung"
 * partOf only Reference(HL7ATCoreOrganization)
 * partOf ^short = "Krankenanstalt zu welcher die Abteilung gehört"
 
-//Slice for identifier
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -18,7 +17,7 @@ Title: "MOPED Organization Abteilung"
 * identifier[Funktionssubcode].system = "http://example.org/lkf-system/funktionssubcode" (exactly)
 
 
-* extension contains Kostenstelle named kostenstelle 0..1
+* extension contains Kostenstelle named Kostenstelle 0..1
 
 
 
