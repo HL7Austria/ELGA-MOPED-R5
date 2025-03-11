@@ -18,7 +18,7 @@ sequenceDiagram
     end
     KH->>M: POST Encounter (Status: draft)
     Note over KH: VDAS Abfrage <br/>(Ergebnis: Liste von Coverages)
-    %%Ergebnis der VDAS Abfrage teil des CoverageEligibilityRequest? -> Request dann nur relevant für Übernahme der Kosten???
+    %%Ergebnis der VDAS Abfrage teil des VAERequest? -> Request dann nur relevant für Übernahme der Kosten???
     KH->>M: POST Coverage mit Informationen der E-Card und Informationen aus der VDAS Abfrage
     KH->>M: POST Account <br/>(ref Patient & Encounter)
     KH->>M: $status-change Operation (Status:geplant)
