@@ -5,7 +5,7 @@ InstanceOf: QuestionnaireResponse
 Title: "I12 QuestionnaireResponse für TISS-A-Daten"
 * id = "tiss-a-questionnaireresponse"
 * status = #completed
-* subject = Reference(Test1Patient)
+* subject = Reference(PJ1Patient)
 * questionnaire = Canonical(TISSAQuestionnaire)
 * authored = "2024-08-08"
 

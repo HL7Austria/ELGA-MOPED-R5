@@ -4,7 +4,7 @@ Usage: #example
 * id = "Test2SAPS3QuestionnaireResponse1"
 * questionnaire = Canonical(saps3-questionnaire)
 * status = #completed
-* subject = Reference(Test1Patient) 
+* subject = Reference(PJ1Patient) 
 * authored = "2024-09-16T19:39:58.676Z"
 * item.linkId = "saps3-set"
 * item.text = "SAPS3 Data Set"

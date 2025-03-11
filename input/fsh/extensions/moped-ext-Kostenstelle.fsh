@@ -1,7 +1,8 @@
 Extension: Kostenstelle
-Id: moped-ext-kostenstelle
+Id: moped-ext-Kostenstelle
 Title: "Kostenstelle"
 Description: "MOPED Extension für akzeptierte Errors und Warnings"
+Context: MopedOrganizationAbteilung
 * extension contains
     InterneKostenstellennummer 0..1 and
     InterneKostenstellenbezeichnung 0..1 and
@@ -14,7 +15,7 @@ Description: "MOPED Extension für akzeptierte Errors und Warnings"
 * extension[SpezielleOrganisationsform].value[x] 0..1
 * extension[SpezielleOrganisationsform].value[x] only code
 * extension[KostenstellenJahr].value[x] 0..1
-* extension[KostenstellenJahr].value[x] only Period
+* extension[KostenstellenJahr].value[x] only date
 
 * insert DocumentExtension (
     InterneKostenstellennummer,

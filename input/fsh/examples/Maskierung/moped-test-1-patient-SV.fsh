@@ -3,21 +3,20 @@ Alias: $iso-3166-1-alpha-3 = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-al
 
 Instance: Test1PatientSV
 InstanceOf: MopedPatientSV
+Description: "Maskierung Beispiel PatientSV"
 Usage: #example
-* id = "Test1PatientSV"
-* identifier.system = "urn:oid:1.2.40.0.10.1.4.3.1"
-* identifier.value = "9994210469"
-* identifier.type = $v2-0203#SS "Social Security Number"
-* identifier.assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
+* meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-patient"
+* extension[citizenship].extension[code].valueCodeableConcept = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3#AUT "Österreich"
+* identifier[socialSecurityNumber].type = HL7V2#SS "Social Security Number"
+* identifier[socialSecurityNumber].system = "urn:oid:1.2.40.0.10.1.4.3.1"
+* identifier[socialSecurityNumber].value = "9994210469"
+* identifier[socialSecurityNumber].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger"
 * name.use = #official
-* name.family = "Moderne"
-* name.given = "Patientenkommun"
+* name.family = "Susi"
+* name.given = "Sonnenschein"
 * gender = #female
 * birthDate = "1969-04-21"
 * address = MopedTest1PatientSVAddress
-* extension[+].extension.url = "code"
-* extension[=].extension.valueCodeableConcept = $iso-3166-1-alpha-3#AUT "Österreich"
-* extension[=].url = "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
 
 Instance:    MopedTest1PatientSVAddress
 InstanceOf:  HL7ATCoreAddress

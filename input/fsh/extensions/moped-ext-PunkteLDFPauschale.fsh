@@ -1,5 +1,5 @@
 Extension:    PunkteLDFPauschale
-Id:           moped-ext-punkteLDFPauschale
+Id:           moped-ext-PunkteLDFPauschale
 Title:        "Punkte LDF Pauschale" 
 Description:  "MOPED Extension für die LDF Punkte Pauschale"
 Context: MopedLKFResponse

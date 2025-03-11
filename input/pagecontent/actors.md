@@ -13,16 +13,16 @@
     Moped[Moped] 
 
     KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> $aufnehmen</a>| Moped 
-    KH -->|<a href="OperationDefinition-MOPED.CoverageEligibilityRequest.Anfragen.html"> $anfragen</a>| Moped
+    KH -->|<a href="OperationDefinition-MOPED.VAERequest.Anfragen.html"> $anfragen</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> $entlassen</a>| Moped 
     KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html">$erfassen</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped
-    Moped -->|<a href="StructureDefinition-MopedCoverageEligibilityResponse.html"> GET CoverageEligibilityResponse</a>| KH
+    Moped -->|<a href="StructureDefinition-MopedVAEResponse.html"> GET VAEResponse</a>| KH
     Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| KH
 
     Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| SV
-    Moped --->|<a href="StructureDefinition-MopedCoverageEligibilityRequest.html"> GET CoverageEligibilityRequest</a>| SV
-    SV --->|<a href="OperationDefinition-MOPED.CoverageEligibilityResponse.Beantworten.html"> $beantworten</a>| Moped
+    Moped --->|<a href="StructureDefinition-MopedVAERequest.html"> GET VAERequest</a>| SV
+    SV --->|<a href="OperationDefinition-MOPED.VAEResponse.Beantworten.html"> $beantworten</a>| Moped
 
     Moped --->|<a href="StructureDefinition-MopedLKFRequest.html"> GET Claim</a>| LGF
     LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Freigeben.html"> $freigeben</a>| Moped
@@ -40,11 +40,11 @@
     KH[Krankenanstalt]
     Moped[<a href="#top">Moped</a>] 
     KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> $aufnehmen</a>| Moped 
-    KH -->|<a href="OperationDefinition-MOPED.CoverageEligibilityRequest.Anfragen.html"> $anfragen</a>| Moped
+    KH -->|<a href="OperationDefinition-MOPED.VAERequest.Anfragen.html"> $anfragen</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> $entlassen</a>| Moped 
     KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html">$erfassen</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped
-    Moped -->|<a href="StructureDefinition-MopedCoverageEligibilityResponse.html"> GET CoverageEligibilityResponse</a>| KH
+    Moped -->|<a href="StructureDefinition-MopedVAEResponse.html"> GET VAEResponse</a>| KH
     Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| KH
 </pre>
 
@@ -57,8 +57,8 @@
     SV[Sozialversicherung]
     Moped[<a href="#top">Moped</a>] 
     Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| SV
-    Moped --->|<a href="StructureDefinition-MopedCoverageEligibilityRequest.html"> GET CoverageEligibilityRequest</a>| SV
-    SV --->|<a href="OperationDefinition-MOPED.CoverageEligibilityResponse.Beantworten.html"> $beantworten</a>| Moped
+    Moped --->|<a href="StructureDefinition-MopedVAERequest.html"> GET VAERequest</a>| SV
+    SV --->|<a href="OperationDefinition-MOPED.VAEResponse.Beantworten.html"> $beantworten</a>| Moped
 </pre>   
 
 ### Landesgesundheitsfonds {#actor-LGF}

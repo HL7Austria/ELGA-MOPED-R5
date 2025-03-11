@@ -24,6 +24,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
@@ -32,6 +34,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -40,6 +44,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -48,6 +54,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -56,6 +64,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.coverage.paymentBy.party:HL7ATCoreOrganization.identifier |MopedLKFRequest.insurance.coverage:MopedCoverage.paymentBy.party</td>
         <td>payer</td>
+        <td>falldaten:Coverage</td>
+        <td></td>
         <td></td>
     </tr>
     <tr>
@@ -64,38 +74,48 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.coverage.insurer:Organization.identifier + MopedLKFRequest.insurer:Organization.identifier</td>
         <td></td>
+        <td>falldaten:Coverage</td>
+        <td>Stammdaten; verlinkt in $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFZEIT</td>
         <td>Aufnahme-/Kontaktuhrzeit</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>ENTDAT</td>
         <td>Entlassungsdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.end</td>
+        <td>.actualPeriod.end</td>
         <td></td>
+        <td>zeitpunkt</td>
+        <td>$entlassen</td>
         <td></td>
     </tr>
     <tr>
         <td>ENTZEIT</td>
         <td>Entlassungsuhrzeit</td>
         <td>MopedEncounter</td>
-        <td>.period.end</td>
+        <td>.actualPeriod.end</td>
         <td></td>
+        <td>zeitpunkt</td>
+        <td>$entlassen</td>
         <td></td>
     </tr>
     <tr>
@@ -104,6 +124,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.admission.extension</td>
         <td>Aufnahmeart</td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -112,6 +134,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.class</td>
         <td>Aufnahmeart2</td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -120,6 +144,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.admission.dischargeDisposition</td>
         <td></td>
+        <td>entlassungsart</td>
+        <td>$entlassen</td>
         <td></td>
     </tr>
     <tr>
@@ -128,6 +154,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>.gender</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -136,6 +164,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>.birthDate</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -144,15 +174,19 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedTransferEncounter</td>
         <td>.extension</td>
         <td>Altersgruppe.beiEntlassung</td>
+        <td>von Operation aus birthdate und period.end berechnet</td>
+        <td>$verlegen oder $entlassen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR_ID</td>
         <td>Datensatz-ID</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>MopedEncounter</td>
+        <td>.identifier:DatensatzID</td>
+        <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
+        <td></td>
     </tr>
     <tr>
         <td>STAATSB</td>
@@ -160,6 +194,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>.extension</td>
         <td>citizenship</td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -168,6 +204,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>address.country</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -176,6 +214,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>.address.postalCode</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -184,6 +224,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>HL7ATCorePatient</td>
         <td>.address.extension:municipalityCode</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -192,6 +234,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.admission.origin:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; verlinkt in $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -201,6 +245,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>.admission.destination:HL7ATCoreOrganization.identifier</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>BHART</td>
@@ -208,6 +254,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.class</td>
         <td>Behandlungsart</td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -216,6 +264,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.extension</td>
         <td>Transportart</td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -224,6 +274,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest</td>
         <td>.extension</td>
         <td>Fondsrelevanz</td>
+        <td>claim</td>
+        <td>$abrechnen</td>
         <td></td>
     </tr>
     <tr>
@@ -232,6 +284,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest</td>
         <td>.extension</td>
         <td>Plausibilitaetskennzeichen</td>
+        <td>claim</td>
+        <td>$abrechnen</td>
         <td></td>
     </tr>
     <tr>
@@ -240,6 +294,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest</td>
         <td>.extension</td>
         <td>SVAbrechnungsquartal</td>
+        <td>claim</td>
+        <td>$abrechnen</td>
         <td></td>
     </tr>
 </table>
@@ -253,6 +309,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
@@ -261,6 +319,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -269,6 +329,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -277,14 +339,18 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -293,15 +359,19 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedTransferEncounter</td>
         <td>.extension</td>
         <td>Altersgruppe.beiZugang</td>
+        <td>von Operation aus birthdate und period.start berechnet</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR_ID</td>
         <td>Datensatz-ID</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>MopedEncounter</td>
+        <td>.identifier:DatensatzID</td>
+        <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
+        <td></td>
     </tr>
     <tr>
         <td>ABTPOS</td>
@@ -309,6 +379,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount</td>
         <td>.extension</td>
         <td>AnzahlVerlegungen</td>
+        <td>wird von Operation berechnet</td>
+        <td>$verlegen</td>
         <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht => count(TransferEncounter)-1 </td>
     </tr>
     <tr>
@@ -317,22 +389,28 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedOrganizationAbteilung</td>
         <td>.identifier:Funktionscode</td>
         <td></td>
+        <td>funktionscode</td>
+        <td>Stammdaten; $aufnehmen und $verlegen</td>
         <td></td>
     </tr>
     <tr>
         <td>ABTZDAT</td>
         <td>Hauptkostenstelle/Fachgebiet – Zugangsdatum/Kontaktdatum</td>
         <td>MopedTransferEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>zeitpunkt</td>
+        <td>$aufnehmen und $verlegen</td>
         <td></td>
     </tr>
     <tr>
         <td>ABTZZEIT</td>
         <td>Hauptkostenstelle/Fachgebiet – Zugangsuhrzeit/Kontaktuhrzeit</td>
         <td>MopedTransferEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>zeitpunkt</td>
+        <td>$aufnehmen und $verlegen</td>
         <td></td>
     </tr>
     <tr>
@@ -341,22 +419,28 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedTransferEncounter</td>
         <td> .subjectStatus</td>
         <td></td>
+        <td>physischeAnwesenheit</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>ABTADAT</td>
         <td>Hauptkostenstelle – Abgangsdatum</td>
         <td>MopedTransferEncounter</td>
-        <td>.period.end</td>
+        <td>.actualPeriod.end</td>
         <td></td>
+        <td>zeitpunkt</td>
+        <td>in $verlegen oder $entlassen</td>
         <td></td>
     </tr>
     <tr>
         <td>ABTAZEIT</td>
         <td>Hauptkostenstelle – Abgangsuhrzeit</td>
         <td>MopedTransferEncounter</td>
-        <td>.period.end</td>
+        <td>.actualPeriod.end</td>
         <td></td>
+        <td>zeitpunkt</td>
+        <td>in $verlegen oder $entlassen</td>
         <td></td>
     </tr>
     <tr>
@@ -365,6 +449,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedTransferEncounter</td>
         <td>.admission.dischargeDisposition</td>
         <td></td>
+        <td>abgangsart</td>
+        <td>$entlassen</td>
         <td></td>
     </tr>
     <tr>
@@ -373,14 +459,18 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedOrganizationAbteilung</td>
         <td>.identifier:Funktionscode</td>
         <td></td>
+        <td>funktionscode</td>
+        <td>Stammdaten;  in $aufnehmen oder $verlegen</td>
         <td></td>
     </tr>
     <tr>
         <td>ABTFC_PFLEGE</td>
         <td>Hauptkostenstelle – Pflegerischer Funktionscode</td>
         <td>MopedAbteilungsOrganization</td>
-        <td>TBD</td>
-        <td>TBD</td>
+        <td>.identifier:Funktionscode</td>
+        <td></td>
+        <td>funktionscode</td>
+        <td>Stammdaten;  in $aufnehmen oder $verlegen</td>
         <td></td>
     </tr>
     <tr>
@@ -389,6 +479,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedTransferEncounter</td>
         <td>.extension</td>
         <td>Neugeborenes</td>
+        <td>von Operation aus birthdate und period.start berechnet</td>
+        <td>$aufnehmen und $verlegen</td>
         <td></td>
     </tr>
 </table>
@@ -402,6 +494,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
@@ -410,6 +504,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -418,6 +514,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -426,23 +524,29 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR_ID</td>
         <td>Datensatz-ID</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>MopedEncounter</td>
+        <td>.identifier:DatensatzID</td>
+        <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
+        <td></td>
     </tr>
     <tr>
         <td>DIAGCODE</td>
@@ -451,13 +555,17 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>.code</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>DIAGTYP</td>
         <td>Diagnose – Typ</td>
-        <td>MopedEncounter</td>
-        <td>.diagnosis.use</td>
+        <td>MopedLKFRequest</td>
+        <td>.item[ConditionItem].category</td>
         <td></td>
+        <td>claim</td>
+        <td>$abrechnen</td>
         <td></td>
     </tr>
     <tr>
@@ -466,6 +574,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Condition</td>
         <td>.verificationStatus</td>
         <td></td>
+        <td>diagnose</td>
+        <td>$erfassen</td>
         <td></td>
     </tr>
     <tr>
@@ -474,6 +584,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest</td>
         <td>.diagnosis.onAdmission</td>
         <td></td>
+        <td>claim</td>
+        <td>$abrechnen</td>
         <td></td>
     </tr>
 </table>
@@ -487,6 +599,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
@@ -495,6 +609,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -503,6 +619,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -511,23 +629,29 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR_ID</td>
         <td>Datensatz-ID</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>MopedEncounter</td>
+        <td>.identifier:DatensatzID</td>
+        <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
+        <td></td>
     </tr>
     <tr>
         <td>MELCODE</td>
@@ -535,6 +659,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>.code</td>
         <td></td>
+        <td>leistung</td>
+        <td>$erfassen</td>
         <td></td>
     </tr>
     <tr>
@@ -543,6 +669,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>.bodysite</td>
         <td></td>
+        <td>leistung</td>
+        <td>$erfassen</td>
         <td></td>
     </tr>
     <tr>
@@ -551,6 +679,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest</td>
         <td>.procedure.extension</td>
         <td>AbrechnungsRelevanz</td>
+        <td>claim</td>
+        <td>$abrechnen</td>
         <td></td>
     </tr>
     <tr>
@@ -560,6 +690,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>TBD</td>
         <td>TBD</td>
         <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>MELDAT</td>
@@ -567,6 +699,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>.occurrenceDateTime</td>
         <td></td>
+        <td>leistung</td>
+        <td>$erfassen</td>
         <td></td>
     </tr>
     <tr>
@@ -575,6 +709,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>.occurrenceDateTime</td>
         <td></td>
+        <td>leistung</td>
+        <td>$erfassen</td>
         <td></td>
     </tr>
     <tr>
@@ -583,6 +719,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>.performer.actor</td>
         <td></td>
+        <td>leistung</td>
+        <td>$erfassen</td>
         <td></td>
     </tr>
     <tr>
@@ -591,6 +729,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>.performer.actor.partOf.identifier:GDA-OID</td>
         <td></td>
+        <td>leistung</td>
+        <td>$erfassen</td>
         <td></td>
     </tr>
 </table>
@@ -604,6 +744,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
@@ -612,6 +754,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -620,6 +764,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -628,23 +774,29 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR_ID</td>
         <td>Datensatz-ID</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>MopedEncounter</td>
+        <td>.identifier:DatensatzID</td>
+        <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
+        <td></td>
     </tr>
     <tr>
         <td>LDFGRP</td>
@@ -652,6 +804,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.diagnosisRelatedGroup</td>
         <td></td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -660,6 +814,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>DiagnoseKnoten</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -668,6 +824,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteBelagsdauerausreisserNachOben</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -676,6 +834,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteIntensiv</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -684,6 +844,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>ZusatzpunkteMehrfachleistungen</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -692,6 +854,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>PunkteSpeziellerBereicheTageweise</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -700,6 +864,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>TotalPoints</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -708,6 +874,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>LeistungskomponenteLeistungspunkte</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -716,6 +884,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>TageskomponenteKontaktpunkte</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -724,6 +894,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>PunkteBelagsdauerausreisseruntenLeistungskomponente</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -732,6 +904,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>PunkteBelagsdauerausreisseruntenTageskomponente</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
 </table>
@@ -745,10 +919,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
         <td>Akzeptierte Errors/Warnings</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -761,6 +939,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -769,6 +949,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -777,23 +959,29 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR_ID</td>
         <td>Datensatz-ID</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>MopedEncounter</td>
+        <td>.identifier:DatensatzID</td>
+        <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
+        <td></td>
     </tr>
     <tr>
         <td>EWWERT</td>
@@ -801,6 +989,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest</td>
         <td>.extension</td>
         <td>FehlerWarnung.value</td>
+        <td>MopedLKFResponse</td>
+        <td>$auffordern (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -809,6 +999,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest</td>
         <td>.extension</td>
         <td>FehlerWarnung.code</td>
+        <td>MopedLKFResponse</td>
+        <td>$auffordern (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -817,6 +1009,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest</td>
         <td>.extension</td>
         <td>FehlerWarnung.comment</td>
+        <td>MopedLKFResponse</td>
+        <td>$auffordern (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
 </table>
@@ -830,10 +1024,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
         <td>Kommentare</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -846,6 +1044,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -854,6 +1054,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -862,23 +1064,29 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFNR_ID</td>
         <td>Datensatz-ID</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>MopedEncounter</td>
+        <td>.identifier:DatensatzID</td>
+        <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
+        <td></td>
     </tr>
     <tr>
         <td>KOMMENTAR1</td>
@@ -886,6 +1094,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>note</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -894,6 +1104,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>note</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -902,6 +1114,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>note</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
@@ -910,19 +1124,25 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedLKFRequest & MopedLKFResponse</td>
         <td>.extension</td>
         <td>note</td>
+        <td>claim und MopedLKFResponse</td>
+        <td>$abrechnen & $freigeben</td>
         <td></td>
     </tr>
     <tr>
         <td>KOMMENTAR5</td>
         <td>Kommentar 5</td>
-        <td>ClaimResponse</td>
+        <td>MopedLKFResponse</td>
         <td>.extension</td>
+        <td>note</td>
+        <td>note</td>
         <td>note</td>
         <td></td>
     </tr>
     <tr>
         <td>KOMMENTAR6</td>
         <td>Kommentar 6</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -939,10 +1159,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
         <td>SAPS3</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -955,6 +1179,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -963,6 +1189,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -971,14 +1199,18 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -987,6 +1219,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount</td>
         <td>.extension</td>
         <td>AnzahlVerlegungen</td>
+        <td>wird von Operation berechnet</td>
+        <td>$verlegen</td>
         <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht => count(TransferEncounter)-1 </td>
     </tr>
     <tr>
@@ -996,6 +1230,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>ADM_INF</td>
@@ -1003,6 +1239,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1012,6 +1250,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>R_BASIC</td>
@@ -1019,6 +1259,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1028,6 +1270,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>R_HAEMA</td>
@@ -1035,6 +1279,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1044,6 +1290,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>R_HEPATIC</td>
@@ -1051,6 +1299,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1060,6 +1310,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>R_NEURO</td>
@@ -1067,6 +1319,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1076,6 +1330,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>R_RESP</td>
@@ -1083,6 +1339,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1092,6 +1350,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>ADM_ART</td>
@@ -1099,6 +1359,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1108,6 +1370,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>PH</td>
@@ -1115,6 +1379,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1124,6 +1390,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>ANATOMIC</td>
@@ -1131,6 +1399,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1140,6 +1410,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>GCS_MR</td>
@@ -1147,6 +1419,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1156,6 +1430,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>GCS_ER</td>
@@ -1163,6 +1439,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1172,6 +1450,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>COKH</td>
@@ -1179,6 +1459,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1188,6 +1470,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>MECH_VENT</td>
@@ -1195,6 +1479,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1204,6 +1490,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>FIO2</td>
@@ -1211,6 +1499,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1220,6 +1510,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>CREA</td>
@@ -1227,6 +1519,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1236,6 +1530,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>THERA</td>
@@ -1244,6 +1540,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>IH_LOC</td>
@@ -1251,6 +1549,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
 </table>
@@ -1264,10 +1564,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
         <td>TISS-A</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1280,6 +1584,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -1288,6 +1594,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -1296,14 +1604,18 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedEncounter</td>
         <td>.identifier:Aufnahmezahl</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
         <td>AUFDAT</td>
         <td>Aufnahme-/Kontaktdatum</td>
         <td>MopedEncounter</td>
-        <td>.period.start</td>
+        <td>.actualPeriod.start</td>
         <td></td>
+        <td>falldaten</td>
+        <td>$aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -1312,6 +1624,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount</td>
         <td>.extension</td>
         <td>AnzahlVerlegungen</td>
+        <td>wird von Operation berechnet</td>
+        <td>$verlegen</td>
         <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht => count(TransferEncounter)-1 </td>
     </tr>
     <tr>
@@ -1321,6 +1635,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_STAND_MON</td>
@@ -1328,6 +1644,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1337,6 +1655,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_MED</td>
@@ -1344,6 +1664,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1353,6 +1675,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_DRAIN</td>
@@ -1360,6 +1684,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1369,6 +1695,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_AIRWAY</td>
@@ -1376,6 +1704,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1385,6 +1715,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_LUNG</td>
@@ -1392,6 +1724,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1401,6 +1735,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_L_FLUID</td>
@@ -1408,6 +1744,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1417,6 +1755,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_HDM</td>
@@ -1424,6 +1764,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1433,6 +1775,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_CPR</td>
@@ -1440,6 +1784,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1449,6 +1795,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_URINARY</td>
@@ -1456,6 +1804,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1465,6 +1815,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_ICP</td>
@@ -1472,6 +1824,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1481,6 +1835,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_NUT_ENT</td>
@@ -1488,6 +1844,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1497,6 +1855,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_INT</td>
@@ -1504,6 +1864,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1513,6 +1875,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_AGITATION</td>
@@ -1520,6 +1884,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1529,6 +1895,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_PULMASS</td>
@@ -1536,6 +1904,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
     <tr>
@@ -1545,6 +1915,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_LIVER_SUPP</td>
@@ -1553,6 +1925,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td></td>
         <td></td>
         <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
+        <td></td>
     </tr>
     <tr>
         <td>TA_ANTIEPI</td>
@@ -1560,6 +1934,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Intensivdokumentation als FHIR Questionnaire</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td>$erheben (nicht Teil des Hackathon)</td>
         <td></td>
     </tr>
 </table>
@@ -1573,10 +1949,14 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Resource</td>
         <td>FHIRPath</td>
         <td>Extension</td>
+        <td>befüllt in</td>
+        <td>Operation</td>
         <td>Anmerkung</td>
     </tr>
     <tr>
         <td>Kostenstellenplan</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1589,6 +1969,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
@@ -1597,6 +1979,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedAccount + MopedLKFRequest</td>
         <td>MopedAccount.owner:HL7ATCoreOrganization.identifier:GDA-OID | MopedLKFRequest.provider:HL7ATCoreOrganization.identifier</td>
         <td></td>
+        <td>falldaten</td>
+        <td>Stammdaten; $aufnehmen</td>
         <td></td>
     </tr>
     <tr>
@@ -1605,6 +1989,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedOrganizationAbteilung</td>
         <td>.identifier:Funktionscode+.identifier:Funktionssubcode</td>
         <td></td>
+        <td>funktionscode/funktionssubcode</td>
+        <td>Stammdaten; $aufnehmen und $verlegen</td>
         <td></td>
     </tr>
     <tr>
@@ -1613,6 +1999,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedOrganizationAbteilung</td>
         <td>.extension</td>
         <td>Kostenstelle.InterneKostenstellennummer</td>
+        <td>wird in Operation verlinkt</td>
+        <td>Stammdaten; $aufnehmen und $verlegen</td>
         <td></td>
     </tr>
     <tr>
@@ -1621,6 +2009,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedOrganizationAbteilung</td>
         <td>.extension</td>
         <td>Kostenstelle.InterneKostenstellenbezeichnung</td>
+        <td>wird in Operation verlinkt</td>
+        <td>Stammdaten; $aufnehmen und $verlegen</td>
         <td></td>
     </tr>
     <tr>
@@ -1629,6 +2019,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedOrganizationAbteilung</td>
         <td>.extension</td>
         <td>Kostenstelle.SpezielleOrganisationsform</td>
+        <td>wird in Operation verlinkt</td>
+        <td>Stammdaten; $aufnehmen und $verlegen</td>
         <td></td>
     </tr>
     <tr>
@@ -1637,6 +2029,8 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>MopedOrganizationAbteilung</td>
         <td>.extension</td>
         <td>Kostenstelle.period</td>
+        <td>wird in Operation verlinkt</td>
+        <td>Stammdaten; $aufnehmen und $verlegen</td>
         <td></td>
     </tr>
 </table>

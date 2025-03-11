@@ -57,7 +57,7 @@ def createMappingTable(heading, LKF=True):
     LKF_column_pairs = [(i, i + 1) for i in range(0, 20, 2)]
 
     # Additional columns
-    additional_columns = ['Resource', 'FHIRPath', 'Extension', 'Anmerkung']
+    additional_columns = ['Resource', 'FHIRPath', 'Extension', 'befüllt in','Operation','Anmerkung']
 
     KaOrg_section_titles = ["Identifikationsteil", "Identifikationsteil für den Landesgesundheitsfonds", "K01", "K03", "K05", "K09", "K20", "K12", "K13", "K21", "K27"]
     LKF_section_titles = ["X01","X02","X03","X04","X05","X06","X07","I11","I12","K01*"]
