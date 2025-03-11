@@ -1,8 +1,17 @@
+CodeSystem: AbgangsartCS
+Title: "Moped Aufnahmeart des Patienten"
+Description: "Zulässige Ausprägungen Aufnahmeart (LKF & KaOrg)"
+* ^status = #active
+* ^experimental = true
+* ^caseSensitive = true
+
+* #1 "Lebend"
+* #2 "Lebend mit Therapiereduktion"
+* #3 "Gestorben"
+* #4 "Gestorben mit Therapiereduktion"
+
 ValueSet: Abgangsart
-Id: moped-abgangsart-valueset
 Title: "Abgangsart des Patienten"
 Description: "ValueSet für die Abgangsart des Patienten"
-* $Abgangsart#1 "Lebend"
-* $Abgangsart#2 "Lebend mit Therapiereduktion"
-* $Abgangsart#3 "Gestorben"
-* $Abgangsart#4 "Gestorben mit Therapiereduktion"
+* ^experimental = true
+* include codes from system AbgangsartCS
