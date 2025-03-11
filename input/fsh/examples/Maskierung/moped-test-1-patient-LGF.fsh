@@ -3,6 +3,7 @@ Alias: $iso-3166-1-alpha-3 = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-al
 
 Instance: Test1PatientLGF
 InstanceOf: MopedPatientLGF
+Description: "Maskierung Beispiel PatientLGF"
 Usage: #example
 * id = "Test1PatientLGF"
 * name.use = #official
