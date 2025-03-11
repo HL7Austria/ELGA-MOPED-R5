@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "508b788c-0969-4919-b752-e000912318e9",
+		"_postman_id": "6f387403-3b1b-4fae-afac-f53373a66c86",
 		"name": "Patient Journey 2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "21943930"
@@ -75,7 +75,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Organization?identifier=urn:ietf:rfc:3986|{{gda-oid-value}}",
+									"raw": "{{server-base}}/Organization?identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -86,6 +86,10 @@
 										{
 											"key": "identifier",
 											"value": "urn:ietf:rfc:3986|{{gda-oid-value}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -167,7 +171,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:account",
+									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:account&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -182,6 +186,10 @@
 										{
 											"key": "_include",
 											"value": "Encounter:account"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -276,7 +284,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Patient?identifier=urn:oid:1.2.40.0.10.1.4.3.1|{{svnr}}",
+									"raw": "{{server-base}}/Patient?identifier=urn:oid:1.2.40.0.10.1.4.3.1|{{svnr}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -287,6 +295,10 @@
 										{
 											"key": "identifier",
 											"value": "urn:oid:1.2.40.0.10.1.4.3.1|{{svnr}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -398,7 +410,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active",
+									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -426,6 +438,10 @@
 											"key": "_has:ClaimResponse:request:status:not",
 											"value": "active",
 											"description": "nur unbeantwortete Requests"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -537,7 +553,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -569,6 +585,10 @@
 										{
 											"key": "claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -668,7 +688,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}",
+									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -696,6 +716,10 @@
 											"key": "_include",
 											"value": "*",
 											"disabled": true
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -795,7 +819,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -822,6 +846,10 @@
 										{
 											"key": "request.claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -945,7 +973,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -956,6 +984,10 @@
 										{
 											"key": "identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -1079,7 +1111,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Encounter?service-provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}",
+									"raw": "{{server-base}}/Encounter?service-provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -1090,6 +1122,10 @@
 										{
 											"key": "service-provider.identifier",
 											"value": "urn:ietf:rfc:3986|{{gda-oid-value}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -1203,7 +1239,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Encounter?part-of.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:subject",
+									"raw": "{{server-base}}/Encounter?part-of.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:subject&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -1218,6 +1254,10 @@
 										{
 											"key": "_include",
 											"value": "Encounter:subject"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -1315,7 +1355,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Coverage?identifier={{vdasID}}",
+									"raw": "{{server-base}}/Coverage?identifier={{vdasID}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -1326,6 +1366,10 @@
 										{
 											"key": "identifier",
 											"value": "{{vdasID}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -1440,7 +1484,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Condition?encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Condition?encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -1456,6 +1500,10 @@
 										{
 											"key": "encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -1575,7 +1623,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Procedure?encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Procedure?encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -1586,6 +1634,10 @@
 										{
 											"key": "encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -1733,7 +1785,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=claim&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active",
+									"raw": "{{server-base}}/Claim?status=active&use=claim&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -1761,6 +1813,10 @@
 											"key": "_has:ClaimResponse:request:status:not",
 											"value": "active",
 											"description": "nur unbeantwortete Requests"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -1908,7 +1964,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=claim&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Claim?status=active&use=claim&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -1940,6 +1996,10 @@
 										{
 											"key": "claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -2103,7 +2163,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}",
+									"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -2131,6 +2191,10 @@
 											"key": "",
 											"value": null,
 											"disabled": true
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -2294,7 +2358,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -2321,6 +2385,10 @@
 										{
 											"key": "request.claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -2447,7 +2515,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Patient?identifier=urn:oid:1.2.40.0.10.1.4.3.1|{{svnr}}",
+									"raw": "{{server-base}}/Patient?identifier=urn:oid:1.2.40.0.10.1.4.3.1|{{svnr}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -2458,6 +2526,10 @@
 										{
 											"key": "identifier",
 											"value": "urn:oid:1.2.40.0.10.1.4.3.1|{{svnr}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -2539,7 +2611,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:account",
+									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:account&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -2554,6 +2626,10 @@
 										{
 											"key": "_include",
 											"value": "Encounter:account"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -2677,7 +2753,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -2688,6 +2764,10 @@
 										{
 											"key": "identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -2818,7 +2898,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -2845,6 +2925,10 @@
 										{
 											"key": "request.claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -3067,7 +3151,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Encounter?part-of.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:subject",
+									"raw": "{{server-base}}/Encounter?part-of.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:subject&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -3082,6 +3166,10 @@
 										{
 											"key": "_include",
 											"value": "Encounter:subject"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -3174,7 +3262,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -3201,6 +3289,10 @@
 										{
 											"key": "request.claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -3341,7 +3433,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Encounter?part-of.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:subject",
+									"raw": "{{server-base}}/Encounter?part-of.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=Encounter:subject&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -3356,6 +3448,10 @@
 										{
 											"key": "_include",
 											"value": "Encounter:subject"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -3479,7 +3575,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -3490,6 +3586,10 @@
 										{
 											"key": "identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -3636,7 +3736,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Condition?encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Condition?encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -3652,6 +3752,10 @@
 										{
 											"key": "encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -3771,7 +3875,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Procedure?encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Procedure?encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -3782,6 +3886,10 @@
 										{
 											"key": "encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -3961,7 +4069,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=claim&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Claim?status=active&use=claim&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -3993,6 +4101,10 @@
 										{
 											"key": "claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -4156,7 +4268,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -4183,6 +4295,10 @@
 										{
 											"key": "request.claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -4341,7 +4457,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active",
+									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -4370,6 +4486,10 @@
 											"key": "_has:ClaimResponse:request:status:not",
 											"value": "active",
 											"description": "nur unbeantwortete Requests"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -4481,7 +4601,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&provider.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -4513,6 +4633,10 @@
 										{
 											"key": "claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -4639,7 +4763,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/ClaimResponse?status=active&use=preauthorization&requestor.identifier=urn:ietf:rfc:3986|{{gda-oid-value}}&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -4666,6 +4790,10 @@
 										{
 											"key": "request.claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -4777,7 +4905,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active",
+									"raw": "{{server-base}}/Claim?status=active&use=preauthorization&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_has:ClaimResponse:request:status:not=active&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -4806,6 +4934,10 @@
 											"key": "_has:ClaimResponse:request:status:not",
 											"value": "active",
 											"description": "nur unbeantwortete Requests"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -4878,7 +5010,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server-base}}/Organization?identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}",
+							"raw": "{{server-base}}/Organization?identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_count=1000",
 							"host": [
 								"{{server-base}}"
 							],
@@ -4889,6 +5021,10 @@
 								{
 									"key": "identifier",
 									"value": "http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}"
+								},
+								{
+									"key": "_count",
+									"value": "1000"
 								}
 							]
 						}
@@ -5012,7 +5148,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+							"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 							"host": [
 								"{{server-base}}"
 							],
@@ -5023,6 +5159,10 @@
 								{
 									"key": "identifier",
 									"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+								},
+								{
+									"key": "_count",
+									"value": "1000"
 								}
 							]
 						}
@@ -5117,7 +5257,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server-base}}/Patient?identifier=urn:oid:1.2.40.0.10.1.4.3.1|{{svnr}}",
+							"raw": "{{server-base}}/Patient?identifier=urn:oid:1.2.40.0.10.1.4.3.1|{{svnr}}&_count=1000",
 							"host": [
 								"{{server-base}}"
 							],
@@ -5128,6 +5268,10 @@
 								{
 									"key": "identifier",
 									"value": "urn:oid:1.2.40.0.10.1.4.3.1|{{svnr}}"
+								},
+								{
+									"key": "_count",
+									"value": "1000"
 								}
 							]
 						}
@@ -5291,7 +5435,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}",
+							"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&_count=1000",
 							"host": [
 								"{{server-base}}"
 							],
@@ -5320,6 +5464,10 @@
 									"key": "",
 									"value": "",
 									"disabled": true
+								},
+								{
+									"key": "_count",
+									"value": "1000"
 								}
 							]
 						}
@@ -5483,7 +5631,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+							"raw": "{{server-base}}/ClaimResponse?status=active&use=claim&insurer.identifier=http://svc.co.at/CodeSystem/ecard-svt-cs|{{sv-identifier-value}}&request.claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 							"host": [
 								"{{server-base}}"
 							],
@@ -5511,6 +5659,10 @@
 								{
 									"key": "request.claim-encounter.identifier",
 									"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+								},
+								{
+									"key": "_count",
+									"value": "1000"
 								}
 							]
 						}
@@ -5703,7 +5855,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=claim&_has:ClaimResponse:request:status:not=active",
+									"raw": "{{server-base}}/Claim?status=active&use=claim&_has:ClaimResponse:request:status:not=active&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -5733,6 +5885,10 @@
 											"key": "_has:ClaimResponse:request:status:not",
 											"value": "active",
 											"description": "nur unbeantwortete Requests"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -5880,7 +6036,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=claim&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Claim?status=active&use=claim&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -5914,6 +6070,10 @@
 										{
 											"key": "claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -6088,7 +6248,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=claim&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+									"raw": "{{server-base}}/Claim?status=active&use=claim&_has:ClaimResponse:request:status:not=active&claim-encounter.identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -6122,6 +6282,10 @@
 										{
 											"key": "claim-encounter.identifier",
 											"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -6269,7 +6433,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/Claim?status=active&use=claim&_has:ClaimResponse:request:status:not=active",
+									"raw": "{{server-base}}/Claim?status=active&use=claim&_has:ClaimResponse:request:status:not=active&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -6299,6 +6463,10 @@
 											"key": "_has:ClaimResponse:request:status:not",
 											"value": "active",
 											"description": "nur unbeantwortete Requests"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
@@ -6358,13 +6526,19 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server-base}}/Organization/OrganizationLGF",
+							"raw": "{{server-base}}/Organization/OrganizationLGF?_count=1000",
 							"host": [
 								"{{server-base}}"
 							],
 							"path": [
 								"Organization",
 								"OrganizationLGF"
+							],
+							"query": [
+								{
+									"key": "_count",
+									"value": "1000"
+								}
 							]
 						}
 					},
@@ -6487,7 +6661,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}",
+							"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_count=1000",
 							"host": [
 								"{{server-base}}"
 							],
@@ -6498,6 +6672,10 @@
 								{
 									"key": "identifier",
 									"value": "{{gda-oid-value}}|{{aufnahmezahl}}"
+								},
+								{
+									"key": "_count",
+									"value": "1000"
 								}
 							]
 						}
@@ -6592,7 +6770,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=*",
+							"raw": "{{server-base}}/Encounter?identifier={{gda-oid-value}}|{{aufnahmezahl}}&_include=*&_count=1000",
 							"host": [
 								"{{server-base}}"
 							],
@@ -6607,6 +6785,10 @@
 								{
 									"key": "_include",
 									"value": "*"
+								},
+								{
+									"key": "_count",
+									"value": "1000"
 								}
 							]
 						}
@@ -6815,7 +6997,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{server-base}}/ClaimResponse?_include=*&outcome=complete&use=claim",
+									"raw": "{{server-base}}/ClaimResponse?_include=*&outcome=complete&use=claim&_count=1000",
 									"host": [
 										"{{server-base}}"
 									],
@@ -6834,6 +7016,10 @@
 										{
 											"key": "use",
 											"value": "claim"
+										},
+										{
+											"key": "_count",
+											"value": "1000"
 										}
 									]
 								}
