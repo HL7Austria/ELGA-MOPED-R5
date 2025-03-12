@@ -8,7 +8,7 @@ Description: "CodeSystem für die Fondsrelevanz"
 * #K "Nein (Abrechnung des stationären Aufenthalts/ambulanten Besuchs erfolgt über den Sozialversicherungsträger)"
 * #N "Nein (Abrechnung des stationären Aufenthalts/ambulanten Besuchs erfolgt weder über den Landesgesundheitsfonds/PRIKRAF noch über den Sozialversicherungsträger)"
 
-ValueSet: Fondsrelevanz
+ValueSet: FondsrelevanzVS
 Title: "Fondsrelevanz"
 Description: "ValueSet für die Fondsrelevanz"
 * ^experimental = true

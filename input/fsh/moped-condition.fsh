@@ -26,5 +26,5 @@ Title: "MOPED Condition"
 * code.coding contains ICD10 1..1 MS and HDG 1..1 MS
 * code.coding[ICD10] from ICD10AT (required)
 * code.coding[ICD10].system = $ICD10AT
-* code.coding[HDG] from LKFHauptdiagnosegruppen (required)
+* code.coding[HDG] from LKFHauptdiagnosegruppenVS (required)
 * code.coding[HDG].system = Canonical(LKFHauptdiagnosegruppenCS)

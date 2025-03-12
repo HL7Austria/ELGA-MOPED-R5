@@ -32,7 +32,7 @@ Description: "CodeSystem für die Entlassungsart des Patienten"
 * #LKF_8 "Sterbefall"
 * #LKF_9 "Sonstige Abgangsart"
 
-ValueSet: Entlassungsart
+ValueSet: EntlassungsartVS
 Title: "Entlassungsart des Patienten"
 Description: "ValueSet für die Entlassungsart des Patienten"
 * ^experimental = true

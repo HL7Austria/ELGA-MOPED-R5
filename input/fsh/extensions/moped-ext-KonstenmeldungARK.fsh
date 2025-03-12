@@ -6,4 +6,4 @@ Context: MopedLKFResponse
 
 * value[x] 0..1
 * value[x] only Coding
-* value[x] from KostenmeldungARK (required)
+* value[x] from KostenmeldungARKVS (required)

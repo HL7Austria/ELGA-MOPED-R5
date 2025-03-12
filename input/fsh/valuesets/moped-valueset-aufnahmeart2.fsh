@@ -8,7 +8,7 @@ Description: "CodeSystem für die Aufnahmeart des Patienten"
 * #A "akute stationäre Aufnahme/akuter ambulanter Besuch (ohne vorhergehende Terminvereinbarung)"
 * #K "stationäre Aufnahme/ambulanter Besuch aus Kapazitätsgründen zugewiesen"
 
-ValueSet: Aufnahmeart2
+ValueSet: Aufnahmeart2VS
 Title: "Aufnahmeart2 des Patienten"
 Description: "ValueSet für die Aufnahmeart des Patienten"
 * ^experimental = true

@@ -23,9 +23,9 @@ Title: "MOPED Procedure"
 * category.coding ^slicing.discriminator.path = "system"
 * category.coding ^slicing.ordered = false
 * category.coding contains MELGruppe 0..1
-* category.coding[MELGruppe] from LKFmedizinischeEinzelleistungen (required)
+* category.coding[MELGruppe] from LKFmedizinischeEinzelleistungenVS (required)
 * category.coding[MELGruppe].system = Canonical(LKFmedizinischeEinzelleistungenCS)
 * code 1..1
 * code ^short = "Leistungskatalog BMSGPK"
-* code.coding from LKFLeistungskatalog (required)
+* code.coding from LKFLeistungskatalogVS (required)
 * code.coding.system = $LKFLeistungskatalog

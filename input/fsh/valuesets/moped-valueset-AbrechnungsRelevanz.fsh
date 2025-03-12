@@ -8,7 +8,7 @@ Description: "Abrechnungsrelevanz der medizinischen Leistung"
 * #N "Nein (Die Leistung ist bei der Bepunktung nicht zu berücksichtigen.)"
 * #K "Nein (Die Leistung ist bei der Bepunktung nicht zu berücksichtigen, wird aber von einem Sozialversicherungsträger vergütet.)"
 
-ValueSet: AbrechnungsRelevanz
+ValueSet: AbrechnungsRelevanzVS
 Title: "Abrechnungsrelevanz der medizinischen Leistung"
 Description: "Abrechnungsrelevanz der medizinischen Leistung"
 * ^experimental = true
