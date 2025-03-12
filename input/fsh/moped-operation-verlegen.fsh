@@ -1,7 +1,10 @@
-Instance: MOPEDPatientVerlegen
+Instance: MopedPatientVerlegen
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $verlegen (POC)"
-Description: """
+Description: "Die $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. Auch initial, wenn ein Patient auf eine bestimmte Station aufgenommen wird, wird diese Operation aufgerufen (dies passiert automatisch im Zuge der Operation $aufnehmen)."
+Usage: #definition
+* purpose = """
+
 Legende: ~~durchgestrichen~~ heißt, dass es für den IG zwar bedacht wird, für den ersten POC jedoch nicht relevant ist.
 
 **Wer ruft diese Operation in welchem Zusammenhang auf?**
@@ -10,34 +13,36 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
 
 **Voraussetzungen für den Aufruf**
 
-* Account-Status: `Aufnahme in Arbeit` oder `Aufnahme freigegeben`
+* Account-Status: `Aufnahme in Arbeit`, `Aufnahme freigegeben` oder `SV verarbeitet`
 
 **Detaillierte Business-Logik**
 
-1. Suche des MOPEDEncounter: Der MOPEDEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
+1. Suche des MopedEncounter: Der MopedEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
 2. Neuer Transfer Encounter: 
-  * Ein neuer MOPEDTransferEncounter wird vorbereitet
-  * *MOPEDTransferEncounter.partOf* referenziert den MOPEDEncounter aus Schritt 1. 
-  * *MOPEDTransferEncounter.actualPeriod.start* wird mit dem *zeitpunkt* lt. Operation-Parameter befüllt.
-  * *MOPEDTransferEncounter.serviceProvider* setzt eine Referenz auf die MOPEDOrganizationAbteilung mit dem jeweiligen *funktionscode* bzw. *funktionssubcode* lt. Operation-Parameter. 
-  * *MOPEDTransferEncounter.Neugeborenes* wird lt. LKF-Regeln berechnet, anhand des *MOPEDEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 1).
-  * *MOPEDTransferEncounter.Altersgruppe* wird lt. LKF-Regeln berechnet, anhand des *MOPEDEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2).
-  * *MOPEDTransferEncounter.PhysischeAnwesenheit* wird lt. Operation-Parameter befüllt.
-3. Account AnzahlVerlegungen: Die Extension *Account.extension.AnzahlVerlegungen* im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht. Dies ist auch so, wenn es sich bei der Verlegung um einen Urlaub handeln sollte (siehe Hinweis 3).
-4. ~~Alter Transfer Encounter:~~
-  * ~~Dieser Schritt ist nur relevant, wenn es sich *nicht* um eine Neufaufnahme (lt. Operation-Parameter) handelt.~~
-  * ~~Suche des alten MOPEDTransferEncounter: Mit *MOPEDTransferEncounter.partOf* einer Referenz auf den MOPEDEncounter aus Schritt 1 und den Status *in-progress*~~
-  * ~~Abschließen des alten MOPEDTransferEncounter: *MOPEDTransferEncounter.status* wird auf *completed* gesetzt~~
-  * ~~Endzeitpunkt des alten MOPEDTransferEncounter: *MOPEDTransferEncounter.actualPeriod.end* wird auf den *zeitpunkt* lt. Operation-Parameter gesetzt.~~
-  * ~~Abgangsart vom alten MOPEDTransferEncounter: *MOPEDTransferEncounter.abgangsart* wird auf *abgangsart* lt. Operation-Parameter gesetzt.~~
+  * Ein neuer MopedTransferEncounter wird vorbereitet
+  * *MopedTransferEncounter.status* wird mit 'in-progress' befüllt
+  * *MopedTransferEncounter.partOf* referenziert den MopedEncounter aus Schritt 1. 
+  * *MopedTransferEncounter.actualPeriod.start* wird mit dem *zeitpunkt* lt. Operation-Parameter befüllt.
+  * *MopedTransferEncounter.serviceProvider* setzt eine Referenz auf die MopedOrganizationAbteilung mit dem jeweiligen *funktionscode* bzw. *funktionssubcode* lt. Operation-Parameter. 
+  * *MopedTransferEncounter.admission.extension[Altersgruppe].extension[beiZugang].value* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2 und 3).
+  * *MopedTransferEncounter.admission.extension[Altersgruppe].extension[Neugeborenes].value* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 1).
+  * *MopedTransferEncounter.subjectStatus* wird lt. Operation-Parameter *physischeAnwesenheit* befüllt.
+3. Account AnzahlVerlegungen: Die Extension *Account.extension.AnzahlVerlegungen* im zur Aufnahmezahl gehöhrenden Account wird um 1 erhöht. Dies ist auch so, wenn es sich bei der Verlegung um einen Urlaub handeln sollte (siehe Hinweis 4).
+4. Alter Transfer Encounter:
+  * Dieser Schritt ist nur relevant, wenn es sich *nicht* um eine Neufaufnahme (lt. Operation-Parameter) handelt.
+  * Suche des alten MopedTransferEncounter: Mit *MopedTransferEncounter.partOf* einer Referenz auf den MopedEncounter aus Schritt 1 und den Status *in-progress*
+  * Abschließen des alten MopedTransferEncounter: *MopedTransferEncounter.status* wird auf *completed* gesetzt
+  * Endzeitpunkt des alten MopedTransferEncounter: *MopedTransferEncounter.actualPeriod.end* wird auf den *zeitpunkt* lt. Operation-Parameter gesetzt.
+  * Abgangsart vom alten MopedTransferEncounter: *MopedTransferEncounter.admission.dischargeDisposition* wird auf *abgangsart* lt. Operation-Parameter gesetzt.
+  * Altersgruppe bei Abgang vom alten MopedTransferEncounter: *MopedTransferEncounter.admission.extension[Altersgruppe].extension[beiEntlassung].value* wird lt. LKF-Regeln berechnet, anhand des *MopedEncounter.subject.birthdate* aus dem Encounter aus Schritt 1 (für Berechnugns-Details siehe Hinweis 2 und 3).
 5. ~~Account AnzahlBeurlaubungen:~~
   * ~~Dieser Schritt ist nur relevant, wenn es sich *nicht* um eine Neufaufnahme (lt. Operation-Parameter) handelt.~~
-  * ~~War alter MOPEDTransferEncounter aus Schritt 4.2 ein Urlaub (i.e. Funktionscode `10000000`)?~~
+  * ~~War alter MopedTransferEncounter aus Schritt 4.2 ein Urlaub (i.e. Funktionscode `10000000`)?~~
     * ~~Wenn ja, dann wird der Counter *Account.extension.AnzahlBeurlaubungen* um 1 erhöht.~~
     
 **Validierung / Fehlerbehandlung**
 * Bei Neuaufnahme (lt. Operation-Parameter) muss das Feld *AnzahlVerlegungen* nach Ausführen der Operation $verlegen den Wert `1` aufweisen und das Feld *AnzahlBeurlaubungen* den Wert `0`.
-* Es kann immer nur einen MOPEDTransferEncounter für den jeweiligen Fall geben der *partOf* eines MOPEDEncounters mit der *aufnahmezahl* ist und den Status *in-progress* hat. 
+* Es kann immer nur einen MopedTransferEncounter für den jeweiligen Fall geben der *partOf* eines MopedEncounters mit der *aufnahmezahl* ist und den Status *in-progress* hat. 
 * Wenn es sich um eine Neuaufnahme (lt. Operation-Parameter) handelt, kann es keine Abgangsart (Operation-Parameter) geben.
 
 **Weitere Hinweise**
@@ -56,16 +61,16 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * 85-89: 85
   * 90-95: 90
   * 95 und älter: 95
-* Hinweis 3: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
+* Hinweis 3: Die Altersgruppe wird als Code repräsentiert (siehe ValueSet `Altersgruppe`)
+* Hinweis 4: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
 
 **Annahmen an das BeS**
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle verlegt werden können.
 
 """
-Usage: #definition 
 
 * id = "MOPED.Patient.Verlegen"
-* comment = "TBD: was passiert, wenn eine $aufnehmen Operation mehrmals mit Status `Aufnahme in Arbeit` aufgerufen wird und damit zu mehreren MOPEDTransferEncounter führt?"
+* comment = "TBD: was passiert, wenn eine $aufnehmen Operation mehrmals mit Status `Aufnahme in Arbeit` aufgerufen wird und damit zu mehreren MopedTransferEncounter führt?"
 * name = "MOPED_Patient_Verlegen"
 * status = #draft
 * kind = #operation 
@@ -80,7 +85,7 @@ Usage: #definition
   * use = #in 
   * min = 1
   * max = "1"
-  * documentation = "Der *aufnahmezahl* Parameter beinhält den eindeutigen Identifizierer für den relevanten Fall."
+  * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
   * name = #zeitpunkt
@@ -109,7 +114,10 @@ Usage: #definition
   * min = 0
   * max = "1"
   * documentation = "Der *physischeAnwesenheit* Parameter definiert ob der Patient physisch anwesend ist oder nicht."
-  * type = #boolean
+  * type = #code
+  * binding[+]
+    * strength = #required
+    * valueSet = Canonical(Anwesenheitsart)
 * parameter[+]
   * name = #neuaufnahme
   * use = #in 
@@ -122,7 +130,7 @@ Usage: #definition
   * use = #in 
   * min = 0
   * max = "1"
-  * documentation = "Der *abgangsart* Parameter definiert die Abgangsart des Patienten vom bisher aktuellen MOPEDTransferEncounter."
+  * documentation = "Der *abgangsart* Parameter definiert die Abgangsart des Patienten vom bisher aktuellen MopedTransferEncounter."
   * type = #code
   * binding[+]
     * strength = #required

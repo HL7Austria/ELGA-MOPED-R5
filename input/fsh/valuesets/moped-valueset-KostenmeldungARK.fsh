@@ -1,7 +1,15 @@
+CodeSystem: KostenmeldungARKCS
+Title: "Kostenmeldung für (A/R/K)"
+Description: "CodeSystem für die Art der Kostenmeldung"
+* ^status = #active
+* ^experimental = true
+* ^caseSensitive = true
+* #A "Ausländerverrechnung"
+* #R "Regressangelegenheiten"
+* #K "Kosteninformation"
+
 ValueSet: KostenmeldungARK
-Id: moped-KostenmeldungARK-valueset
 Title: "Kostenmeldung für (A/R/K)"
 Description: "ValueSet für die Art der Kostenmeldung"
-* $KostenmeldungARK#A "Ausländerverrechnung"
-* $KostenmeldungARK#R "Regressangelegenheiten"
-* $KostenmeldungARK#K "Kosteninformation"
+* ^experimental = true
+* include codes from system KostenmeldungARKCS
