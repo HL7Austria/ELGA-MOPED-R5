@@ -1,4 +1,4 @@
-ValueSet: MopedRelatedPersonRelationshipType
+ValueSet: MopedRelatedPersonRelationshipTypeVS
 Title: "MOPED RelatedPerson Relationship Type ValueSet"
 Description:   "A value set containing codes for the type of relationship of a related person to the patient."
 * ^experimental = true

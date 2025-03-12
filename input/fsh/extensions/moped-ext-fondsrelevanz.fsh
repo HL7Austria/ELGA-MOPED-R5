@@ -6,4 +6,4 @@ Description:  "Hier ist anzugeben, ob der stationäre Aufenthalt/ambulante Besuc
 Context: MopedLKFRequest
 * value[x] 0..1
 * value[x] only Coding
-* value[x] from Fondsrelevanz (required)
+* value[x] from FondsrelevanzVS (required)

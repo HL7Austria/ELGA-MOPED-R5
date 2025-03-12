@@ -13,7 +13,7 @@ Description: "LKF Abrechnungsknoten"
 * #G "G"
 * #H "H"
 
-ValueSet: LKFAbrechnungsKnoten
+ValueSet: LKFAbrechnungsKnotenVS
 Title: "LKF Abrechnungsknoten"
 Description: "LKF Abrechnungsknoten"
 * ^experimental = true

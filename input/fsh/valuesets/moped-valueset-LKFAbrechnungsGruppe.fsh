@@ -1,4 +1,4 @@
-ValueSet: LKFAbrechnungsGruppe
+ValueSet: LKFAbrechnungsGruppeVS
 Title: "LKF Abrechnungsgruppe"
 Description: "LKF Abrechnungsgruppe"
 * ^experimental = true

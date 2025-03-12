@@ -28,7 +28,7 @@ Description: "Status der Versichertenanspruchserklärung"
 * #98 "in Bearbeitung"
 * #99 "kasseninterne Berichtigung"
 
-ValueSet: VAEStatus
+ValueSet: VAEStatusVS
 Title: "Status der Versichertenanspruchserklärung"
 Description: "Status der Versichertenanspruchserklärung"
 * ^experimental = true

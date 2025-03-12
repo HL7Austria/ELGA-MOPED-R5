@@ -19,7 +19,7 @@ Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklä
 * insurance.coverage only Reference(MopedCoverage)
 * insurance.coverage 1..1
 
-* decision from VAEStatus (required)
+* decision from VAEStatusVS (required)
 * . ^definition =  "\"VAEST - Status der Versichertenanspruchserklärung\""
 * . ^short =  "\"VAEST - Status der Versichertenanspruchserklärung\""
 

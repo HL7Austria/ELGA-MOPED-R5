@@ -9,7 +9,7 @@ Description: "CodeSystem für die Befreiung für den Verpflegskostenbeitrag"
 * #S "Es liegt eine Befreiung vom Verpflegskostenbeitrag aufgrund eines gemeldeten Aufenthaltes von
 Patienten in der Sonderklasse vor (BVAEB-EB, SVS-GW, BVAEB-OEB)."
 
-ValueSet: VerpflegskostenBeitragsbefreiung
+ValueSet: VerpflegskostenBeitragsbefreiungVS
 Title: "Befreiung für den Verpflegskostenbeitrag"
 Description: "Befreiung für den Verpflegskostenbeitrag"
 * ^experimental = true

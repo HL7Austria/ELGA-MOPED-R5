@@ -7,7 +7,7 @@ Description: "CodeSystem für die Anwesenheitsart"
 * #ANW "physisch anwesend"
 * #ABW "physisch nicht anwesend"
 
-ValueSet: Anwesenheitsart
+ValueSet: AnwesenheitsartVS
 Title: "Anwesenheitsart"
 Description: "ValueSet für die Anwesenheitsart"
 * ^experimental = true

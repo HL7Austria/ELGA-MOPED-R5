@@ -10,7 +10,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 
 * procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 0..1
-* diagnosisRelatedGroup from LKFAbrechnungsGruppe (required)
+* diagnosisRelatedGroup from LKFAbrechnungsGruppeVS (required)
 * diagnosisRelatedGroup. ^short =  "\"Abrechnung - Gruppe:\" Dieses Datenfeld ist mit der Codenummer der zutreffenden Abrechnungsgruppe zu befüllen. Bei Datensätzen von stationären Krankenhausaufenthalten, die keiner leistungsorientier- ten Diagnosenfallgruppe zugeordnet werden, erfolgt ein Eintrag entsprechend der jeweiligen Aufnahmeart."
 
 * insurer only Reference(HL7ATCoreOrganization)

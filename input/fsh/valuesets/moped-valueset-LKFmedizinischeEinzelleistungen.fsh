@@ -210,7 +210,7 @@ Description: "LKF medizinische Einzelleistungen (MEL)"
 * #MEL32.01 "Behandlung in der PSO im Turnus (Erwachsene)"
 * #MEL32.03 "Behandlung in der PSO im Turnus (Kinder und Jugendliche)"
 
-ValueSet: LKFmedizinischeEinzelleistungen
+ValueSet: LKFmedizinischeEinzelleistungenVS
 Title: "LKF medizinische Einzelleistungen (MEL)"
 Description: "LKF medizinische Einzelleistungen (MEL)"
 * ^experimental = true

@@ -8,7 +8,7 @@ Description: "Arten von zusätzlichen Informationen in der VAE"
 * #VERDAU "Verdacht auf Arbeits-/Schülerunfall"
 * #FREVER "Fremdversschluden"
 
-ValueSet: VAESupportingInformationTypes
+ValueSet: VAESupportingInformationTypesVS
 Title: "MOPED VAESupportingInformationTypes"
 Description: "Arten von zusätzlichen Informationen in der VAE"
 * ^experimental = true
