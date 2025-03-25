@@ -1,5 +1,5 @@
-Profile: MOPEDEncounterLGF
-Parent: MOPEDEncounter
+Profile: MopedEncounterLGF
+Parent: MopedEncounter
 Title: "MOPED Encounter LGF"
 Description: "MOPED Profil der Encounter Ressource für die Rolle: LGF"
 

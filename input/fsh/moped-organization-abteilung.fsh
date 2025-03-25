@@ -1,5 +1,6 @@
-Profile: MOPEDOrganizationAbteilung
+Profile: MopedOrganizationAbteilung
 Parent: Organization
+Title: "MOPED Organization Abteilung"
 Description: "MOPED Profil für Abteilungen innerhalb einer Krankenanstalt."
 
 * partOf only Reference(HL7ATCoreOrganization)

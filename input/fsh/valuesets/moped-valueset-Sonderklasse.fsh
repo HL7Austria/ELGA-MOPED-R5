@@ -1,6 +1,14 @@
+CodeSystem: SonderklasseCS
+Title: "Sonderklasse CodeSystem"
+Description: "CodeSystem für die Klasse (KaOrg)"
+* ^status = #active
+* ^experimental = true
+* ^caseSensitive = true
+* #A "Allgemeine Gebührenklasse"
+* #S "Sonderklasse"
+
 ValueSet: SonderklasseVS
-Id: moped-Sonderklasse-valueset
 Title: "Sonderklasse ValueSet"
 Description: "ValueSet für die Klasse (KaOrg)"
-* $Sonderklasse#A "Allgemeine Gebührenklasse"
-* $Sonderklasse#S "Sonderklasse"
+* ^experimental = true
+* include codes from system SonderklasseCS
