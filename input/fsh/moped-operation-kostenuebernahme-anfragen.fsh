@@ -38,8 +38,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 
 **Validierung / Fehlerbehandlung**
 * *Nur POC: MopedAccount.coverage* darf nur eine Versicherung gelistet haben
-* *MopedVAERequest.patient* muss mit *Coverage.beneficiary* mit der Coverage aus Schritt 3h übereinstimmen
-* *MopedVAERequest.insurer* muss mit *Coverage.insurer* mit der Coverage aus aus Schritt 3h übereinstimmen
+* *MopedVAERequest.patient* muss mit *Coverage.beneficiary* mit der Coverage aus Schritt 4h übereinstimmen
+* *MopedVAERequest.insurer* muss mit *Coverage.insurer* mit der Coverage aus aus Schritt 4h übereinstimmen
 * ~~*MopedVAERequest.provider* muss gleichzeitig die gleiche Organisation sein, die lt. Token die Operation aufgerufen hat.~~
 
 **Weitere Hinweise**
