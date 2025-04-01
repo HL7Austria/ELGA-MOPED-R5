@@ -3,7 +3,7 @@ InstanceOf: MopedComposition
 Description: "PJ1 Beispiel der Composition Ressource nach $aufnehmen"
 Title: "MOPED PJ1 Composition nach $aufnehmen"
 * subject = Reference(PJ1Patient)
-* encounter = Reference(PJ1Encounter)
+* encounter = Reference(PJ1EncounterAufnahme)
 * type = http://loinc.org#34133-9
 * useContext[Workflow].code = http://terminology.hl7.org/CodeSystem/usage-context-type#workflow
 * useContext[Workflow].valueCodeableConcept = WorkflowStatusCS#Aufnahme-freigegeben
@@ -13,12 +13,12 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 * author = Reference(OrganizationHerzJesuKrankenhaus)
 * section[MopedEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
 * section[MopedEncounter].code.coding.code = #ENC
-* section[MopedEncounter].entry = Reference(PJ1Encounter)
+* section[MopedEncounter].entry = Reference(PJ1EncounterAufnahme)
 * section[MopedEncounter].author =  Reference(OrganizationHerzJesuKrankenhaus)
 
 * section[TransferEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
 * section[TransferEncounter].code.coding.code = #TENC
-* section[TransferEncounter].entry = Reference(PJ1TransferEncounter1)
+* section[TransferEncounter].entry = Reference(PJ1TransferEncounter1Aufnahme)
 
 * section[zustaendigeSV].code.coding.system = Canonical(CompositionSectionsCS)
 * section[zustaendigeSV].code.coding.code = #SV
