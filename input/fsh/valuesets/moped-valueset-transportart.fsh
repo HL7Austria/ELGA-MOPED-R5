@@ -11,7 +11,7 @@ Description: "CodeSystem für die Transportart des Patienten"
 * #S "Selbstanreise des Patienten/der Patientin"
 * #Z "Sonstige Transportart"
 
-ValueSet: Transportart
+ValueSet: TransportartVS
 Title: "Transportart"
 Description: "ValueSet für die Transportart des Patienten"
 * ^experimental = true

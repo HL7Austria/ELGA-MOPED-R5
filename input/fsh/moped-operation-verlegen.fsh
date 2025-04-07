@@ -111,7 +111,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = Canonical(Anwesenheitsart)
+    * valueSet = Canonical(AnwesenheitsartVS)
 * parameter[+]
   * name = #neuaufnahme
   * use = #in
@@ -128,7 +128,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = Canonical(Abgangsart)
+    * valueSet = Canonical(AbgangsartVS)
 * parameter[+]
   * name = #return
   * use = #out

@@ -11,7 +11,7 @@ Description: "Arten von Moped Encounter"
 * #ENC-LGF "Moped Encounter Bund"
 * #ENC-SV "Moped Encounter Bund"
 
-ValueSet: MopedEncounterTypes
+ValueSet: MopedEncounterTypesVS
 Title: "Arten von Moped Encounter"
 Description: "Arten von Moped Encounter"
 * ^experimental = true

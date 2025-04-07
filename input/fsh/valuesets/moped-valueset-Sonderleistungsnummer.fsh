@@ -8,7 +8,7 @@ Description: "Nummer für Sonderleistung"
 * #01 "Ersatz der Kosten für den fallweisen Beistand durch eine nicht in der Anstalt angestellte Hebamme"
 
 
-ValueSet: Sonderleistungsnummern
+ValueSet: SonderleistungsnummernVS
 Title: "Nummer für Sonderleistung"
 Description: "Nummer für Sonderleistung"
 * ^experimental = true

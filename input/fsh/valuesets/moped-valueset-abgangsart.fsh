@@ -10,7 +10,7 @@ Description: "Zulässige Ausprägungen Aufnahmeart (LKF & KaOrg)"
 * #3 "Gestorben"
 * #4 "Gestorben mit Therapiereduktion"
 
-ValueSet: Abgangsart
+ValueSet: AbgangsartVS
 Title: "Abgangsart des Patienten"
 Description: "ValueSet für die Abgangsart des Patienten"
 * ^experimental = true

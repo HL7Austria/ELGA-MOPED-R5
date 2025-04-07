@@ -34,7 +34,7 @@ Description: "CodeSystem für die Ursache der Behandlung laut Ka-Org"
 * #80 "Humangenetische Untersuchung"
 * #99 "Sonstige Ursache"
 
-ValueSet: UrsacheValueSet
+ValueSet: UrsacheVS
 Title: "Ursache für Behandlung"
 Description: "ValueSet für die Ursache der Behandlung laut Ka-Org"
 * ^experimental = true

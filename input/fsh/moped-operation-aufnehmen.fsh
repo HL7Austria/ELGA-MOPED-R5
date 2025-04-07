@@ -111,7 +111,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = Canonical(Anwesenheitsart)
+    * valueSet = Canonical(AnwesenheitsartVS)
 * parameter[+]
   * name = #funktionscode
   * use = #in

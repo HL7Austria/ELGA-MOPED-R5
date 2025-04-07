@@ -26,7 +26,7 @@ Title: "MOPED Encounter"
 * actualPeriod ^short = "Aufnahme- und Entlassungsdatum"
 
 * admission.dischargeDisposition ^short = "Entlassungsart"
-* admission.dischargeDisposition from Entlassungsart (required)
+* admission.dischargeDisposition from EntlassungsartVS (required)
 
 
 * class ^slicing.rules = #open
@@ -35,10 +35,10 @@ Title: "MOPED Encounter"
 * class ^slicing.ordered = false
 * class contains Behandlungsart 0..1 and Aufnahmeart2 0..1
 * class[Behandlungsart] ^short = "Behandlungsart"
-* class[Behandlungsart] from Behandlungsart (required)
+* class[Behandlungsart] from BehandlungsartVS (required)
 * class[Behandlungsart].coding.system = Canonical(BehandlungsartCS)
 * class[Aufnahmeart2] ^short = "Aufnahmeart2"
-* class[Aufnahmeart2] from Aufnahmeart2 (required)
+* class[Aufnahmeart2] from Aufnahmeart2VS (required)
 * class[Aufnahmeart2].coding.system = Canonical(Aufnahmeart2CS)
 
 * type = MopedEncounterTypesCS#ENC
@@ -50,7 +50,7 @@ Title: "MOPED Encounter"
 * reason contains Ursache 0..1
 * reason[Ursache].use from http://hl7.org/fhir/ValueSet/encounter-reason-use (required)
 * reason[Ursache].use.coding.code = #RV (exactly)
-* reason[Ursache].value from UrsacheValueSet (required)
+* reason[Ursache].value from UrsacheVS (required)
 * reason[Ursache] ^short = "Ursache für Behandlung"
 
 * admission.extension contains Aufnahmeart named aufnahmeart 0..1
