@@ -7,5 +7,5 @@ Usage: #example
 * identifier[=].system = "http://example.org/lkf-system/funktionscode"
 * identifier[+].value = "00"
 * identifier[=].system = "http://example.org/lkf-system/funktionssubcode"
-
 * partOf = Reference(Organization/OrganizationKrankenhausRied)
+* type = http://terminology.hl7.org/CodeSystem/organization-type#dept
