@@ -40,14 +40,14 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 /** supportingInfo contains Sonderklasse 0..1 and VerdachtFremdverschulden 0..1 and VerdachtArbeitsSchuelerunfall 0..1
 
 * supportingInfo[Sonderklasse] ^short = "Allgemeine Gebührenklasse/Sonderklasse"
-* supportingInfo[Sonderklasse].category = http://terminology.hl7.org/CodeSystem/claim-informationcategory#info
+* supportingInfo[Sonderklasse].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
 * supportingInfo[Sonderklasse].code = $VAESupportingInfo#KLAS
 * supportingInfo[Sonderklasse].value[x] only Coding
 * supportingInfo[Sonderklasse].value[x] from SonderklasseVS
 
 * supportingInfo[VerdachtArbeitsSchuelerunfall] ^short = "Verdacht auf Arbeits-/Schülerunfall"
 * supportingInfo[VerdachtArbeitsSchuelerunfall] ^short = "Verdacht auf Fremdversschluden"
-* supportingInfo[VerdachtArbeitsSchuelerunfall].category = http://terminology.hl7.org/CodeSystem/claim-informationcategory#info
+* supportingInfo[VerdachtArbeitsSchuelerunfall].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
 * supportingInfo[VerdachtArbeitsSchuelerunfall].code = $VAESupportingInfo#VERDAU
 * supportingInfo[VerdachtArbeitsSchuelerunfall].value[x] only Coding
 * supportingInfo[VerdachtArbeitsSchuelerunfall].value[x] from VerdachtArbeitsSchuelerunfallVS (required)
@@ -55,6 +55,6 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 */
 
 * supportingInfo[VerdachtFremdverschulden] ^short = "Verdacht auf Fremdversschluden"
-* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claim-informationcategory#info
+* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
 * supportingInfo[VerdachtFremdverschulden].code.coding = VAESupportingInformationTypesCS#FREVER
 * supportingInfo[VerdachtFremdverschulden].value[x] only boolean
