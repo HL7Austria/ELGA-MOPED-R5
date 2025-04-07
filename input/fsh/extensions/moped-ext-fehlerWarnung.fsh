@@ -10,7 +10,8 @@ Context: MopedLKFRequest, MopedLKFResponse
 * extension[ErrorWert].value[x] 0..1
 * extension[ErrorWert].value[x] only code
 * extension[ErrorCode].value[x] 0..1
-* extension[ErrorCode].value[x] only code
+* extension[ErrorCode].value[x] only Coding 
+* extension[ErrorCode].value[x] from EWCodes2025VS
 * extension[ErrorKommentar].value[x] 0..1
 * extension[ErrorKommentar].value[x] only string
 
