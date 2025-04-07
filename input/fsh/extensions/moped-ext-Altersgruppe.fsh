@@ -33,5 +33,5 @@ Context: MopedTransferEncounter.admission
 
 Invariant:    moped-inv-Altersgruppe-1
 Description:  "If 'neugeborenes' is true then 'beiZugang' must be age group 0."
-Expression:   "$this.extension('neugeborenes') = true implies $this.extension('beiZugang') = '0'"
+Expression:   "extension.where(url = 'neugeborenes').value = true implies extension.where(url = 'beiZugang').value = '0'"
 Severity:     #error
