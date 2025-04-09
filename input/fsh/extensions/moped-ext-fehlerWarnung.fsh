@@ -8,7 +8,7 @@ Context: MopedLKFRequest, MopedLKFResponse
     ErrorCode 0..1 MS and
     ErrorKommentar 0..1 MS
 * extension[ErrorWert].value[x] 0..1
-* extension[ErrorWert].value[x] only code
+* extension[ErrorWert].value[x] only string
 * extension[ErrorCode].value[x] 0..1
 * extension[ErrorCode].value[x] only Coding 
 * extension[ErrorCode].value[x] from EWCodes2025VS
