@@ -53,15 +53,18 @@ Usage: #example
         * url = "http://hl7.org/fhir/StructureDefinition/minValue"
         * valueDate = "1900-01-01"
       * extension[+]
-        * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxValueExpression"
-        * valueExpression
-          * language = #text/fhirpath
-          * expression = "today()"
+        * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+        * valueDate = "1900-01-01" // placeholder
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+          * valueExpression.language = #text/fhirpath
+          * valueExpression.expression = "today()"
+
 
     * item[+]
       * linkId = "2032"
       * text = "Wohnort"
-      * type = #question
+      * type = #coding
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         * valueCodeableConcept.coding[+]
@@ -102,11 +105,10 @@ Usage: #example
     * linkId = "gruppe-geschlecht"
     * text = "Geschlecht"
     * type = #group
-
     * item[+]
       * linkId = "2005"
       * text = "Geschlecht"
-      * type = #question
+      * type = #coding
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         * valueCodeableConcept.coding[+]
@@ -126,7 +128,7 @@ Usage: #example
     * item[+]
       * linkId = "2006"
       * text = "Akuter Schlaganfall"
-      * type = #question
+      * type = #coding
       * answerOption[0].valueCoding = #1 "ja"
       * answerOption[1].valueCoding = #0 "nein"
       * answerOption[2].valueCoding = #2 "Monitoring an der SU bei Hochrisikopatient:innen"
@@ -134,7 +136,7 @@ Usage: #example
     * item[+]
       * linkId = "2007"
       * text = "Falls kein akuter Schlaganfall"
-      * type = #question
+      * type = #coding
       * answerOption[0].valueCoding = #1 "Nicht-vaskuläre Erkrankung, kein klinisches Bild eines Schlaganfalls (TIA)"
       * answerOption[1].valueCoding = #2 "Monitoring nach vaskulärer Intervention"
       * answerOption[2].valueCoding = #3 "Nicht-vaskuläre Erkrankung als Ursache für Schlaganfallbild (TIA)"
@@ -164,16 +166,20 @@ Usage: #example
       * question = "3052"
       * operator = #=
       * answerBoolean = true
-    * extension[0]
-      * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minValueExpression"
-      * valueExpression
-        * language = #text/fhirpath
-        * expression = "today() - 1 years"
     * extension[+]
-      * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxValueExpression"
-      * valueExpression
-        * language = #text/fhirpath
-        * expression = "today()"
+      * url = "http://hl7.org/fhir/StructureDefinition/minValue"
+      * valueDate = "1900-01-01" // placeholder
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+        * valueExpression.language = #text/fhirpath
+        * valueExpression.expression = "today() - 1 years"
+    * extension[+]
+      * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+      * valueDate = "1900-01-01" // placeholder
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+        * valueExpression.language = #text/fhirpath
+        * valueExpression.expression = "today()"
 
   * item[+]
     * linkId = "3040"
@@ -188,21 +194,25 @@ Usage: #example
       * question = "3040"
       * operator = #=
       * answerBoolean = true
-    * extension[0]
-      * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minValueExpression"
-      * valueExpression
-        * language = #text/fhirpath
-        * expression = "today() - 1 years"
     * extension[+]
-      * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxValueExpression"
-      * valueExpression
-        * language = #text/fhirpath
-        * expression = "today()"
+      * url = "http://hl7.org/fhir/StructureDefinition/minValue"
+      * valueDate = "1900-01-01" // placeholder
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+        * valueExpression.language = #text/fhirpath
+        * valueExpression.expression = "today() - 1 years"
+    * extension[+]
+      * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+      * valueDate = "1900-01-01" // placeholder
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+        * valueExpression.language = #text/fhirpath
+        * valueExpression.expression = "today()"
 
   * item[+]
     * linkId = "3053"
     * text = "Uhrzeit Ereignis bekannt"
-    * type = #question
+    * type = #coding
     * answerOption[0].valueCoding = #1 "ja"
     * answerOption[1].valueCoding = #2 "nein, im Schlaf"
     * answerOption[2].valueCoding = #3 "nein, nicht erhebbar"
@@ -211,10 +221,7 @@ Usage: #example
     * linkId = "3003"
     * text = "Uhrzeit Ereignis"
     * type = #time
-    * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-    * extension[=].valueInteger = 5
-    * extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxLength"
-    * extension[=].valueInteger = 5
+    * maxLength = 5
     * enableWhen[+]
       * question = "3053"
       * operator = #=
@@ -239,10 +246,7 @@ Usage: #example
     * linkId = "3051"
     * text = "Uhrzeit 'last seen well'"
     * type = #time
-    * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-    * extension[=].valueInteger = 5
-    * extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxLength"
-    * extension[=].valueInteger = 5
+    * maxLength = 5
     * enableWhen[+]
       * question = "3050"
       * operator = #=
@@ -256,7 +260,7 @@ Usage: #example
     * item[+]
       * linkId = "3005"
       * text = "Ereignis aufgetreten"
-      * type = #question
+      * type = #coding
       * answerOption[0].valueCoding = #1 "Im Wachzustand"
       * answerOption[1].valueCoding = #2 "Im Schlafzustand"
       * answerOption[2].valueCoding = #3 "Unbekannt"
@@ -265,49 +269,51 @@ Usage: #example
       * linkId = "3006"
       * text = "Datum Krankenhausaufnahme"
       * type = #date
-      * extension[0]
-        * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minValueExpression"
-        * valueExpression
-          * language = #text/fhirpath
-          * expression = "today() - 10 years"
       * extension[+]
-        * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxValueExpression"
-        * valueExpression
-          * language = #text/fhirpath
-          * expression = "today()"
+        * url = "http://hl7.org/fhir/StructureDefinition/minValue"
+        * valueDate = "1900-01-01" // placeholder
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+          * valueExpression.language = #text/fhirpath
+          * valueExpression.expression = "today() - 10 years"
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+        * valueDate = "1900-01-01" // placeholder
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+          * valueExpression.language = #text/fhirpath
+          * valueExpression.expression = "today()"
 
     * item[+]
       * linkId = "3007"
       * text = "Uhrzeit Krankenhausaufnahme"
       * type = #time
-      * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-      * extension[=].valueInteger = 5
-      * extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxLength"
-      * extension[=].valueInteger = 5
+      * maxLength = 5
 
     * item[+]
       * linkId = "3008"
       * text = "Datum Aufnahme Stroke Unit"
       * type = #date
-      * extension[0]
-        * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minValueExpression"
-        * valueExpression
-          * language = #text/fhirpath
-          * expression = "today() - 10 years"
       * extension[+]
-        * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxValueExpression"
-        * valueExpression
-          * language = #text/fhirpath
-          * expression = "today()"
+        * url = "http://hl7.org/fhir/StructureDefinition/minValue"
+        * valueDate = "1900-01-01" // placeholder
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+          * valueExpression.language = #text/fhirpath
+          * valueExpression.expression = "today() - 10 years"
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+        * valueDate = "1900-01-01" // placeholder
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+          * valueExpression.language = #text/fhirpath            
+          * valueExpression.expression = "today()"
 
     * item[+]
       * linkId = "3009"
       * text = "Uhrzeit Aufnahme Stroke Unit"
       * type = #time
-      * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-      * extension[=].valueInteger = 5
-      * extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxLength"
-      * extension[=].valueInteger = 5
+      * maxLength = 5
 
     * item[+]
       * linkId = "3012"
@@ -332,7 +338,7 @@ Usage: #example
     * item[+]
       * linkId = "30541"
       * text = "Zutransport"
-      * type = #question
+      * type = #coding
       * answerOption[0].valueCoding = #1 "Zutransport intern"
       * answerOption[1].valueCoding = #2 "Zutransport extern"
 
@@ -348,7 +354,7 @@ Usage: #example
     * item[+]
       * linkId = "3010"
       * text = "Zutransport extern"
-      * type = #question
+      * type = #coding
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         * valueCodeableConcept.coding[+]
@@ -361,7 +367,7 @@ Usage: #example
     * item[+]
       * linkId = "3011"
       * text = "Art Zutransport – anderes Krankenhaus"
-      * type = #question
+      * type = #coding
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         * valueCodeableConcept.coding[+]
@@ -379,7 +385,7 @@ Usage: #example
     * item[+]
       * linkId = "3020"
       * text = "Art Zutransport – direkt"
-      * type = #question
+      * type = #coding
       * answerOption[0].valueCoding = #1 "Rettung mit Notarzt mit Aviso"
       * answerOption[1].valueCoding = #2 "Rettung ohne Notarzt mit Aviso"
       * answerOption[2].valueCoding = #3 "Rettungshubschrauber"
@@ -414,7 +420,7 @@ Usage: #example
     * item[+]
       * linkId = "zutransport-intern-auswahl"
       * text = "Zutransport intern"
-      * type = #question
+      * type = #coding
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         * valueCodeableConcept.coding[+]
@@ -496,7 +502,7 @@ Usage: #example
   * item[+]
     * linkId = "7001"
     * text = "Syndrom"
-    * type = #question
+    * type = #coding
     * answerOption[0].valueCoding = #1 "Ischämie"
     * answerOption[1].valueCoding = #2 "Primäre intrazerebrale Blutung"
     * answerOption[2].valueCoding = #3 "Sinus-/Venenthrombose (SVT)"
@@ -513,7 +519,7 @@ Usage: #example
     * item[+]
       * linkId = "7005"
       * text = "Lokalisation Ischämie"
-      * type = #question
+      * type = #coding
       * answerOption[0].valueCoding = #1 "Linke Großhirnhemisphäre"
       * answerOption[1].valueCoding = #2 "Rechte Großhirnhemisphäre"
       * answerOption[2].valueCoding = #3 "Beide Großhirnhemisphären"
@@ -533,7 +539,7 @@ Usage: #example
     * item[+]
       * linkId = "7010"
       * text = "Klinisches Syndrom"
-      * type = #question
+      * type = #coding
       * answerOption[0].valueCoding = #1 "LACS"
       * answerOption[1].valueCoding = #2 "TACS"
       * answerOption[2].valueCoding = #3 "PACS"
@@ -561,9 +567,9 @@ Usage: #example
     * item[+]
       * linkId = "7015"
       * text = "Seite primäre intrazerebrale Blutung"
-      * type = #question
+      * type = #coding
       * extension[+]
-        * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+        * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
         * valueCode = #horizontal
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -617,9 +623,9 @@ Usage: #example
     * item[+]
       * linkId = "7030"
       * text = "Wenn IVH: Lokalisation"
-      * type = #question
+      * type = #coding
       * extension[+]
-        * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+        * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
         * valueCode = #horizontal
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -710,16 +716,20 @@ Usage: #example
       * linkId = "8001"
       * text = "Datum"
       * type = #date
-      * extension[0]
-        * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minValueExpression"
-        * valueExpression
-          * language = #text/fhirpath
-          * expression = "today() - 10 years"
       * extension[+]
-        * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxValueExpression"
-        * valueExpression
-          * language = #text/fhirpath
-          * expression = "today()"
+        * url = "http://hl7.org/fhir/StructureDefinition/minValue"
+        * valueDate = "1900-01-01" // placeholder
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+          * valueExpression.language = #text/fhirpath
+          * valueExpression.expression = "today() - 10 years"
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+        * valueDate = "1900-01-01" // placeholder
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+          * valueExpression.language = #text/fhirpath
+          * valueExpression.expression = "today()"
       * enableBehavior = #any
       * enableWhen[+]
         * question = "8000"
@@ -738,10 +748,7 @@ Usage: #example
       * linkId = "8002"
       * text = "Uhrzeit CCT"
       * type = #time
-      * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-      * extension[=].valueInteger = 5
-      * extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxLength"
-      * extension[=].valueInteger = 5
+      * maxLength = 5
       * enableBehavior = #any
       * enableWhen[+]
         * question = "8000"
@@ -812,25 +819,26 @@ Usage: #example
         * question = "8006"
         * operator = #=
         * answerBoolean = true
-      * extension[0]
-        * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minValueExpression"
-        * valueExpression
-          * language = #text/fhirpath
-          * expression = "today() - 10 years"
       * extension[+]
-        * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxValueExpression"
-        * valueExpression
-          * language = #text/fhirpath
-          * expression = "today()"
+        * url = "http://hl7.org/fhir/StructureDefinition/minValue"
+        * valueDate = "1900-01-01" // placeholder
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+          * valueExpression.language = #text/fhirpath
+          * valueExpression.expression = "today() - 10 years"
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+        * valueDate = "1900-01-01" // placeholder
+        * extension[+]
+          * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+          * valueExpression.language = #text/fhirpath
+          * valueExpression.expression = "today()"
 
     * item[+]
       * linkId = "8010"
       * text = "Uhrzeit"
       * type = #time
-      * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-      * extension[=].valueInteger = 5
-      * extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxLength"
-      * extension[=].valueInteger = 5
+      * maxLength = 5
       * enableBehavior = #any
       * enableWhen[0]
         * question = "8011"
@@ -882,7 +890,7 @@ Usage: #example
     * item[+]
       * linkId = "8030"
       * text = "Erste Untersuchung der Hirngefäße"
-      * type = #question
+      * type = #coding
       * answerOption[0].valueCoding = #1 "Sonografie"
       * answerOption[1].valueCoding = #2 "CTA"
       * answerOption[2].valueCoding = #3 "MR-Angio"
@@ -897,14 +905,15 @@ Usage: #example
     * item[+]
       * linkId = "806X"
       * text = "Lokalisation des Gefäßverschlusses"
-      * type = #question
+      * type = #coding
       * repeats = true
+      * answerConstraint = http://hl7.org/fhir/questionnaire-answer-constraint#optionsOrString
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         * valueCodeableConcept.coding[+]
           * system = "http://hl7.org/fhir/questionnaire-item-control"
           * code = #check-box
-          * display = "Check Box"
+          * display = "Check-box"
       * extension[+]
         * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel"
         * valueString = "Sonstiger Verschluss (bitte angeben)"
@@ -965,9 +974,9 @@ Usage: #example
   * item[+]
     * linkId = "8070"
     * text = "Plättchenhemmer"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -982,9 +991,9 @@ Usage: #example
   * item[+]
     * linkId = "8075"
     * text = "Vitamin K Antagonist"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1014,9 +1023,9 @@ Usage: #example
   * item[+]
     * linkId = "8080"
     * text = "Apixaban"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1031,9 +1040,9 @@ Usage: #example
   * item[+]
     * linkId = "8085"
     * text = "Dabigatran"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1048,9 +1057,9 @@ Usage: #example
   * item[+]
     * linkId = "8090"
     * text = "Edoxaban"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1065,9 +1074,9 @@ Usage: #example
   * item[+]
     * linkId = "8095"
     * text = "Rivaroxaban"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1091,9 +1100,9 @@ Usage: #example
   * item[+]
     * linkId = "9001"
     * text = "Hypertonie"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1108,9 +1117,9 @@ Usage: #example
   * item[+]
     * linkId = "9002"
     * text = "Diabetes mellitus"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1125,9 +1134,9 @@ Usage: #example
   * item[+]
     * linkId = "9003"
     * text = "Vorinsult"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1142,9 +1151,9 @@ Usage: #example
   * item[+]
     * linkId = "9004"
     * text = "Herzinfarkt"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1159,9 +1168,9 @@ Usage: #example
   * item[+]
     * linkId = "9005"
     * text = "Hypercholesterinämie"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1192,9 +1201,9 @@ Usage: #example
   * item[+]
     * linkId = "9006"
     * text = "Vorhofflimmern"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1209,9 +1218,9 @@ Usage: #example
   * item[+]
     * linkId = "9009"
     * text = "Nikotin"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1226,9 +1235,9 @@ Usage: #example
   * item[+]
     * linkId = "9012"
     * text = "Alkohol"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1243,9 +1252,9 @@ Usage: #example
   * item[+]
     * linkId = "9013"
     * text = "Niereninsuffizienz"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1269,9 +1278,9 @@ Usage: #example
   * item[+]
     * linkId = "10001"
     * text = "Lyse i.v."
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1286,13 +1295,13 @@ Usage: #example
   * item[+]
     * linkId = "10002"
     * text = "Art der Thrombolyse"
-    * type = #question
+    * type = #coding
     * enableWhen[+]
       * question = "10001"
       * operator = #=
       * answerCoding = #1
       * extension[+]
-        * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+        * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
         * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1311,25 +1320,26 @@ Usage: #example
       * question = "10001"
       * operator = #=
       * answerCoding = #1
-    * extension[0]
-      * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minValueExpression"
-      * valueExpression
-        * language = #text/fhirpath
-        * expression = "today() - 10 years"
     * extension[+]
-      * url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxValueExpression"
-      * valueExpression
-        * language = #text/fhirpath
-        * expression = "today()"
+      * url = "http://hl7.org/fhir/StructureDefinition/minValue"
+      * valueDate = "1900-01-01" // placeholder
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+        * valueExpression.language = #text/fhirpath
+        * valueExpression.expression = "today() - 10 years"
+    * extension[+]
+      * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+      * valueDate = "1900-01-01" // placeholder
+      * extension[+]
+        * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
+        * valueExpression.language = #text/fhirpath
+        * valueExpression.expression = "today()"
 
   * item[+]
     * linkId = "10041"
     * text = "Uhrzeit Lyse i.v."
     * type = #time
-    * extension[+].url = "http://hl7.org/fhir/StructureDefinition/minLength"
-    * extension[=].valueInteger = 5
-    * extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxLength"
-    * extension[=].valueInteger = 5
+    * maxLength = 5
     * enableWhen[+]
       * question = "10001"
       * operator = #=
@@ -1343,9 +1353,9 @@ Usage: #example
   * item[+]
     * linkId = "10005"
     * text = "Thrombozytenaggregationshemmer"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1360,7 +1370,7 @@ Usage: #example
   * item[+]
     * linkId = "10091"
     * text = "Heparin"
-    * type = #question
+    * type = #coding
     * answerOption[+].valueCoding = #1 "Keines"
     * answerOption[+].valueCoding = #2 "Low"
     * answerOption[+].valueCoding = #3 "Medium"
@@ -1369,9 +1379,9 @@ Usage: #example
   * item[+]
     * linkId = "10092"
     * text = "PTA/Stent der ACI"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1386,9 +1396,9 @@ Usage: #example
   * item[+]
     * linkId = "10093"
     * text = "CEA"
-    * type = #question
+    * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-questionOrientation"
+      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
       * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
@@ -1404,6 +1414,7 @@ Usage: #example
   * linkId = "gruppe-therapie-icb"
   * text = "Therapie intrazerebrale Blutung"
   * type = #group
+  * enableBehavior = #all
   * enableWhen[+]
     * question = "2006"
     * operator = #=

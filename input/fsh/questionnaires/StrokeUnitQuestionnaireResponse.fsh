@@ -3,11 +3,11 @@ InstanceOf: QuestionnaireResponse
 Usage: #example
 * status = #in-progress
 * questionnaire = "http://example.org/Questionnaire/strokeunit-questionnaire"
-* subject = Reference(Patient/PJ1Patient) "Susi Sonnenschein"
+* subject = Reference(Patient/PJ1Patient)
 * source = Reference(Organization/OrganizationHerzJesuKrankenhaus)
 * author = Reference(Organization/OrganizationHerzJesuKrankenhaus)
 * encounter = Reference(Encounter/PJ1Encounter)
-* authored = "2025-04-06T10:35:42.845Z"
+* authored = "2025-04-06"
 * item[0].linkId = "gruppe-patientendaten"
 * item[=].text = "Patientendaten"
 * item[=].item[0].linkId = "2001"
