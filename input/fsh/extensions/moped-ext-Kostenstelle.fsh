@@ -13,7 +13,8 @@ Context: MopedOrganizationAbteilung
 * extension[InterneKostenstellenbezeichnung].value[x] 0..1
 * extension[InterneKostenstellenbezeichnung].value[x] only string
 * extension[SpezielleOrganisationsform].value[x] 0..1
-* extension[SpezielleOrganisationsform].value[x] only code
+* extension[SpezielleOrganisationsform].value[x] only Coding
+* extension[SpezielleOrganisationsform].value[x] from SpezielleOrganisationsformVS (required)
 * extension[KostenstellenJahr].value[x] 0..1
 * extension[KostenstellenJahr].value[x] only date
 
