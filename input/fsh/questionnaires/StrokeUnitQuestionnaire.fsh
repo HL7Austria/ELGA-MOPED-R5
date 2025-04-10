@@ -221,7 +221,6 @@ Usage: #example
     * linkId = "3003"
     * text = "Uhrzeit Ereignis"
     * type = #time
-    * maxLength = 5
     * enableWhen[+]
       * question = "3053"
       * operator = #=
@@ -246,7 +245,6 @@ Usage: #example
     * linkId = "3051"
     * text = "Uhrzeit 'last seen well'"
     * type = #time
-    * maxLength = 5
     * enableWhen[+]
       * question = "3050"
       * operator = #=
@@ -288,7 +286,6 @@ Usage: #example
       * linkId = "3007"
       * text = "Uhrzeit Krankenhausaufnahme"
       * type = #time
-      * maxLength = 5
 
     * item[+]
       * linkId = "3008"
@@ -313,7 +310,6 @@ Usage: #example
       * linkId = "3009"
       * text = "Uhrzeit Aufnahme Stroke Unit"
       * type = #time
-      * maxLength = 5
 
     * item[+]
       * linkId = "3012"
@@ -569,9 +565,6 @@ Usage: #example
       * text = "Seite primäre intrazerebrale Blutung"
       * type = #coding
       * extension[+]
-        * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-        * valueCode = #horizontal
-      * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         * valueCodeableConcept.coding[+]
           * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -624,9 +617,6 @@ Usage: #example
       * linkId = "7030"
       * text = "Wenn IVH: Lokalisation"
       * type = #coding
-      * extension[+]
-        * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-        * valueCode = #horizontal
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
         * valueCodeableConcept.coding[+]
@@ -748,7 +738,6 @@ Usage: #example
       * linkId = "8002"
       * text = "Uhrzeit CCT"
       * type = #time
-      * maxLength = 5
       * enableBehavior = #any
       * enableWhen[+]
         * question = "8000"
@@ -838,7 +827,6 @@ Usage: #example
       * linkId = "8010"
       * text = "Uhrzeit"
       * type = #time
-      * maxLength = 5
       * enableBehavior = #any
       * enableWhen[0]
         * question = "8011"
@@ -976,9 +964,6 @@ Usage: #example
     * text = "Plättchenhemmer"
     * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
-    * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
         * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -992,9 +977,6 @@ Usage: #example
     * linkId = "8075"
     * text = "Vitamin K Antagonist"
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1025,9 +1007,6 @@ Usage: #example
     * text = "Apixaban"
     * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
-    * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
         * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -1041,9 +1020,6 @@ Usage: #example
     * linkId = "8085"
     * text = "Dabigatran"
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1059,9 +1035,6 @@ Usage: #example
     * text = "Edoxaban"
     * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
-    * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
         * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -1075,9 +1048,6 @@ Usage: #example
     * linkId = "8095"
     * text = "Rivaroxaban"
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1102,9 +1072,6 @@ Usage: #example
     * text = "Hypertonie"
     * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
-    * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
         * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -1118,9 +1085,6 @@ Usage: #example
     * linkId = "9002"
     * text = "Diabetes mellitus"
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1136,9 +1100,6 @@ Usage: #example
     * text = "Vorinsult"
     * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
-    * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
         * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -1153,9 +1114,6 @@ Usage: #example
     * text = "Herzinfarkt"
     * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
-    * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
         * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -1169,9 +1127,6 @@ Usage: #example
     * linkId = "9005"
     * text = "Hypercholesterinämie"
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1203,9 +1158,6 @@ Usage: #example
     * text = "Vorhofflimmern"
     * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
-    * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
         * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -1219,9 +1171,6 @@ Usage: #example
     * linkId = "9009"
     * text = "Nikotin"
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1237,9 +1186,6 @@ Usage: #example
     * text = "Alkohol"
     * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
-    * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
         * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -1253,9 +1199,6 @@ Usage: #example
     * linkId = "9013"
     * text = "Niereninsuffizienz"
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1274,14 +1217,10 @@ Usage: #example
     * question = "2006"
     * operator = #=
     * answerCoding = #1
-
   * item[+]
     * linkId = "10001"
     * text = "Lyse i.v."
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1300,9 +1239,6 @@ Usage: #example
       * question = "10001"
       * operator = #=
       * answerCoding = #1
-      * extension[+]
-        * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-        * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1339,7 +1275,6 @@ Usage: #example
     * linkId = "10041"
     * text = "Uhrzeit Lyse i.v."
     * type = #time
-    * maxLength = 5
     * enableWhen[+]
       * question = "10001"
       * operator = #=
@@ -1354,9 +1289,6 @@ Usage: #example
     * linkId = "10005"
     * text = "Thrombozytenaggregationshemmer"
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
@@ -1381,9 +1313,6 @@ Usage: #example
     * text = "PTA/Stent der ACI"
     * type = #coding
     * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
-    * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
         * system = "http://hl7.org/fhir/questionnaire-item-control"
@@ -1397,9 +1326,6 @@ Usage: #example
     * linkId = "10093"
     * text = "CEA"
     * type = #coding
-    * extension[+]
-      * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation"
-      * valueCode = #horizontal
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
       * valueCodeableConcept.coding[+]
