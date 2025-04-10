@@ -1,8 +1,9 @@
 Instance: oegk-oberoesterreich
-InstanceOf: HL7ATCoreOrganization
+InstanceOf: SVOrganization
 Description: "Hackathon Stammdaten: ÖGK Oberösterreich"
 Usage: #example
 * meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"
+* type = https://termgit.elga.gv.at/CodeSystem/elga-gtelvogdarollen#406 "Sozialversicherung"
 * name = "Österreichische Gesundheitskasse Oberösterreich"
 * alias = "14"
 * identifier[+].system = "http://svc.co.at/CodeSystem/ecard-svt-cs"
