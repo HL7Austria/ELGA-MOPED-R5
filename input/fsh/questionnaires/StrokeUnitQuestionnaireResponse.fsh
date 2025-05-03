@@ -172,16 +172,16 @@ Usage: #example
 * item[=].item[=].item[=].text = "Datum"
 * item[=].item[=].item[=].answer.valueDate = "2025-04-06"
 * item[=].item[=].item[+].linkId = "8002"
-* item[=].item[=].item[=].text = "Uhrzeit CCT"
+* item[=].item[=].item[=].text = "Uhrzeit"
 * item[=].item[=].item[=].answer.valueTime = "10:15:00"
 * item[=].item[+].linkId = "gruppe-bildgebung-verfahren"
 * item[=].item[=].text = "Bildgebendes Verfahren"
 * item[=].item[=].item[0].linkId = "8003"
 * item[=].item[=].item[=].text = "CCT durchgeführt"
-* item[=].item[=].item[=].answer.valueBoolean = true
+* item[=].item[=].item[=].answer.valueBoolean = false
 * item[=].item[=].item[+].linkId = "8004"
 * item[=].item[=].item[=].text = "MRI durchgeführt"
-* item[=].item[=].item[=].answer.valueBoolean = false
+* item[=].item[=].item[=].answer.valueBoolean = true
 * item[=].item[+].linkId = "gruppe-gefäßdiagnostik-extrakraniell"
 * item[=].item[=].text = "Erste Untersuchung der hirnzuführenden Gefäße (extrakraniell)"
 * item[=].item[=].item[0].linkId = "8889"
