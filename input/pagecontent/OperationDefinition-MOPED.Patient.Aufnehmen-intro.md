@@ -4,7 +4,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
 
 ## Voraussetzungen für den Aufruf
 
-* Account-Status: n/a (die Ressource Account wird erst mit dieser Operation erstellt)
+* Workflow-Status: n/a (die Ressource MasterComposition bzw. AufnahmeComposition wird erst mit dieser Operation erstellt)
 
 ## Detaillierte Business-Logik
 
@@ -19,7 +19,7 @@ Alle Referenzen müssen versionsspezifisch sein.
    * *MasterComposition.extension[AnzahlBeurlaubungen]* mit Wert '0' befüllen
    * *MasterComposition.section[Coverages].entry* mit der Referenz lt. *falldaten*-Parameter befüllen
    * falls es einen Hauptversicherten gibt: *MasterComposition.section[Hauptversicherter].entry* mit der Referenz lt. *falldaten*-Parameter befüllen
-   * *MasterComposition.section[zustaendigerLGF].entry* lt MopedEncounter.serviceProvider.partOf befüllen
+   * *MasterComposition.section[zustaendigerLGF].entry* lt MopedEncounter.serviceProvider OrganizationAffiliation befüllen
    * *MasterComposition.section[Diagnosen].section[Aufnahmediagnosen].entry* *falldaten*-Parameter befüllen
 
 TODO Diagnosen ins Aufnahmebundle mit aufnehmen
