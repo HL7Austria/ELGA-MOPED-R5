@@ -1,5 +1,5 @@
 Instance: PJ1CompositionAufnehmen
-InstanceOf: MopedComposition
+InstanceOf: MopedAufnahmeComposition
 Description: "PJ1 Beispiel der Composition Ressource nach $aufnehmen"
 Title: "MOPED PJ1 Composition nach $aufnehmen"
 * subject = Reference(PJ1Patient)

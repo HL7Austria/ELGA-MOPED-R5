@@ -1,4 +1,4 @@
-Profile: MopedComposition
+Profile: MopedAufnahmeComposition
 Parent: Composition
 Description: "MOPED Profil der Composition Ressource für die Composition in der sich der gesamte Moped Datensatz aufbaut."
 Title: "MOPED Composition"
@@ -21,6 +21,10 @@ Title: "MOPED Composition"
 * useContext[AuthorizedUser].value[x] only Reference(HL7ATCoreOrganization)
 
 * author only Reference(HL7ATCoreOrganization)
+
+* extension contains AnzahlVerlegungen named AnzahlVerlegungen 0..1
+* extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 0..1
+* extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1
 
 * section 1..*
 * section.code from CompositionSectionsVS
