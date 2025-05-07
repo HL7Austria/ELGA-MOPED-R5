@@ -1,19 +1,12 @@
-Instance: MopedAbrechnungKorrekturAuffordern
-InstanceOf: OperationDefinition
-Title: "MOPED ClaimResponse $auffordern (POC)"
-Description: "Die $auffordern Operation wird aufgerufen, wenn eine Abrechnung beantwortet wird und das Krankehaus zu einer Korrektur aufgefordert wird."
-Usage: #definition
-* purpose = """
-
-**Wer ruft diese Operation in welchem Zusammenhang auf?**
+## Wer ruft diese Operation in welchem Zusammenhang auf?
 
 Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auffordern Operation wird aufgerufen, wenn die Abrechnung eines Krankenhauses nicht freigegeben wird, sondern eine Korrektur der Abrechnung angefordert wird.
 
-**Voraussetzungen für den Aufruf**
+## Voraussetzungen für den Aufruf
 
 * Account-Status: `Vorläufige Meldung` oder `Endgültige Meldung`
 
-**Detaillierte Business-Logik**
+## Detaillierte Business-Logik
 
 1. Die ClaimResponse wird lt. Regeln (siehe unten) validiert und eingespielt
 2. Falls Schritt 1 erfolgreich war, wird der ClaimResponse.encounter.account.workflowStatus (ClaimResponse aus Operation-Parameter; der Encounter vom Profil MopedEncounter) wird auf 
@@ -21,7 +14,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
    * `Endgültige Korrekturaufforderung` gesetzt, falls der vorherige Status `Endgültige Meldung` war
 3. Alle Referenzen sollen versionsspezifisch aufgelöst werden.
 
-**Validierung / Fehlerbehandlung**
+## Validierung / Fehlerbehandlung
 
 * ClaimResponse.status muss `active` sein (lt. Profil)
 * ClaimResponse.type muss `institutional` sein (lt. Profil)
@@ -33,38 +26,9 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auff
 * ClaimResponse.insurance.coverage muss gleich der Claim.insurance.coverage sein
 * ClaimResponse.error muss befüllt sein
 
-**Weitere Hinweise**
+## Weitere Hinweise
 
 * Hinweis 1: Für den Fall, dass ein Claim freigegeben wird und kein Fehler auftritt, gibt es eine weitere Operation die anstelle einer Korrekturaufforderung eine Freigabe definiert
 
-**Annahmen an das BeS**
+## Annahmen an das BeS
 * Es wurde vorab geprüft, ob die ClaimResponse auch dem LGF entspricht, der die Operation aufruft. Somit ist sichergestellt, dass jeder LGF nur eigene Claims beantworten kann.
-
-"""
-
-* id = "MOPED.ClaimResponse.Auffordern"
-* name = "MOPED_ClaimResponse_Auffordern"
-* status = #draft
-* kind = #operation
-* affectsState = true
-* resource = #ClaimResponse
-* system = false
-* type = true
-* instance = false
-* code = #auffordern
-* parameter[+]
-  * name = #claimResponse
-  * use = #in
-  * min = 1
-  * max = "1"
-  * documentation = "Der *claimResponse* Parameter beinhaltet sämtliche Details zur Antwort auf den Claim."
-  * type = #ClaimResponse
-  * targetProfile = Canonical(MopedLKFResponse)
-* parameter[+]
-  * name = #return
-  * use = #out
-  * min = 1
-  * max = "1"
-  * documentation = "Der *return* Parameter gibt Auskunft über den Erfolg der Operation."
-  * type = #Resource
-  * targetProfile[+] = Canonical(OperationOutcome)
