@@ -8,13 +8,8 @@ Usage: #example
 * use = http://hl7.org/fhir/claim-use#claim
 * patient = Reference(PJ1Patient)
 * created = "2024-10-31"
-* insurer = Reference(oegk-wien)
-* requestor = Reference(OrganizationHerzJesuKrankenhaus)
 * request = Reference(PJ1LKFRequest1)
 
-* insurance.coverage = Reference(PJ1Coverage)
-* insurance.sequence = 1
-* insurance.focal = true
 * outcome = #complete
 * diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG01.31
 
