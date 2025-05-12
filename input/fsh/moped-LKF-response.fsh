@@ -9,15 +9,9 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * use = #claim
 
 * patient only Reference(HL7ATCorePatient)
-* insurer only Reference(HL7ATCoreOrganization)
-* insurer 1..1
 * request only Reference(MopedLKFRequest)
 * request 1..1
-* requestor only Reference(HL7ATCoreOrganization)
-* requestor 1..1
 
-* insurance.coverage only Reference(MopedCoverage)
-* insurance.coverage 1..1
 
 
 * diagnosisRelatedGroup from LKFAbrechnungsGruppeVS (required)

@@ -8,12 +8,7 @@ Usage: #example
 * use = #preauthorization
 * created = "2025-02-24"
 * patient = Reference(PJ2Patient)
-* insurer = Reference(oegk-oberoesterreich)
 * request = Reference(PJ2VAERequest1)
-* requestor = Reference(OrganizationKrankenhausRied)
-* insurance[+].coverage = Reference(PJ2Coverage)
-* insurance[=].sequence = 1
-* insurance[=].focal = true
 * outcome = #complete
 * decision.coding = VAEStatusCS#00
 * preAuthPeriod.start = "2024-08-08"
