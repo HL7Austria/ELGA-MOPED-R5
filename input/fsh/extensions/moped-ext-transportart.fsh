@@ -3,7 +3,7 @@ Extension: Transportart
 Id: moped-ext-transportart
 Title: "Transportart"
 Description: "MOPED Extension für die Transportart."
-Context: MopedEncounter
+Context: MopedEncounter.admission
 * value[x] 0..1
 * value[x] only Coding
 * value[x] from TransportartVS (required)
