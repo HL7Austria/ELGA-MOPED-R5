@@ -1,18 +1,12 @@
-Instance: MopedPatientVerlegen
-InstanceOf: OperationDefinition
-Title: "MOPED Patient $verlegen (POC)"
-Description: "Die $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. Auch initial, wenn ein Patient auf eine bestimmte Station aufgenommen wird, wird diese Operation aufgerufen (dies passiert automatisch im Zuge der Operation $aufnehmen)."
-Usage: #definition
-* purpose = """
-**Wer ruft diese Operation in welchem Zusammenhang auf?**
+## Wer ruft diese Operation in welchem Zusammenhang auf?
 
 Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operation wird aufgerufen, wenn ein(e) Patient*in auf eine andere Station verlegt wird. Auch initial, wenn ein Patient auf eine bestimmte Station aufgenommen wird, wird diese Operation aufgerufen (dies passiert automatisch im Zuge der Operation $aufnehmen).
 
-**Voraussetzungen für den Aufruf**
+## Voraussetzungen für den Aufruf
 
 * Account-Status: `Aufnahme in Arbeit`, `Aufnahme freigegeben` oder `SV verarbeitet`
 
-**Detaillierte Business-Logik**
+## Detaillierte Business-Logik
 
 1. Suche des MopedEncounter: Der MopedEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
 2. Neuer Transfer Encounter:
@@ -35,12 +29,12 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * War alter MopedTransferEncounter aus Schritt 4.2 ein Urlaub (i.e. Funktionscode `10000000`)?
     * Wenn ja, dann wird der Counter *Account.extension.AnzahlBeurlaubungen* um 1 erhöht.
 
-**Validierung / Fehlerbehandlung**
+## Validierung / Fehlerbehandlung
 * Bei Neuaufnahme (lt. Operation-Parameter) muss das Feld *AnzahlVerlegungen* nach Ausführen der Operation $verlegen den Wert `1` aufweisen und das Feld *AnzahlBeurlaubungen* den Wert `0`.
 * Es kann immer nur einen MopedTransferEncounter für den jeweiligen Fall geben der *partOf* eines MopedEncounters mit der *aufnahmezahl* ist und den Status *in-progress* hat.
 * Wenn es sich um eine Neuaufnahme (lt. Operation-Parameter) handelt, kann es keine Abgangsart (Operation-Parameter) geben.
 
-**Weitere Hinweise**
+## Weitere Hinweise
 * Hinweis 1: LKF 4.2.16 Neugeborenes
   * Ja (Alter zum Zugangszeitpunkt auf die Abteilung <28 Tage)
   * Nein (Alter zum Zugangszeitpunkt auf die Abteilung >=28 Tage)
@@ -58,82 +52,5 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $verlegen Operati
   * 95 und älter: 95
 * Hinweis 3: Der Counter für AnzahlVerlegungen wird auch im Falle einer Beurlaubung erhöht, bei der eine reguläre Verlegung-Operation aufgerufen wird.
 
-**Annahmen an das BeS**
+## Annahmen an das BeS
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle verlegt werden können.
-
-"""
-
-* id = "MOPED.Patient.Verlegen"
-* comment = "TBD: was passiert, wenn eine $aufnehmen Operation mehrmals mit Status `Aufnahme in Arbeit` aufgerufen wird und damit zu mehreren MopedTransferEncounter führt?"
-* name = "MOPED_Patient_Verlegen"
-* status = #draft
-* kind = #operation
-* affectsState = true
-* resource = #Encounter
-* system = false
-* type = true
-* instance = false
-* code = #verlegen
-* parameter[+]
-  * name = #aufnahmezahl
-  * use = #in
-  * min = 1
-  * max = "1"
-  * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
-  * type = #Identifier
-* parameter[+]
-  * name = #zeitpunkt
-  * use = #in
-  * min = 1
-  * max = "1"
-  * documentation = "Der *zeitpunkt* Parameter definiert zu welchem Zeitpunkt die Verlegung stattfindet."
-  * type = #dateTime
-* parameter[+]
-  * name = #funktionscode
-  * use = #in
-  * min = 1
-  * max = "1"
-  * documentation = "Der *funktionscode* Parameter definiert auf welchen Funktionscode die Verlegung stattfindet."
-  * type = #string
-* parameter[+]
-  * name = #funktionssubcode
-  * use = #in
-  * min = 1
-  * max = "1"
-  * documentation = "Der *funktionssubcode* Parameter definiert auf welchen Funktionssubcode die Verlegung stattfindet."
-  * type = #string
-* parameter[+]
-  * name = #anwesenheitsart
-  * use = #in
-  * min = 0
-  * max = "1"
-  * documentation = "Der *anwesenheitsart* Parameter definiert in welcher art der Pateint anwesend ist."
-  * type = #code
-  * binding[+]
-    * strength = #required
-    * valueSet = Canonical(AnwesenheitsartVS)
-* parameter[+]
-  * name = #neuaufnahme
-  * use = #in
-  * min = 0
-  * max = "1"
-  * documentation = "Der *neuaufnahme* Parameter definiert ob es sich bei der Verlegung um die initiale Aufnahme des Patienten auf eine bestimmte Station handelt."
-  * type = #boolean
-* parameter[+]
-  * name = #abgangsart
-  * use = #in
-  * min = 0
-  * max = "1"
-  * documentation = "Der *abgangsart* Parameter definiert die Abgangsart des Patienten vom bisher aktuellen MopedTransferEncounter."
-  * type = #code
-  * binding[+]
-    * strength = #required
-    * valueSet = Canonical(AbgangsartVS)
-* parameter[+]
-  * name = #return
-  * use = #out
-  * min = 1
-  * max = "1"
-  * documentation = "Der *return* Parameter gibt Auskunft über den Erfolg der Operation."
-  * type = #Resource
-  * targetProfile[+] = Canonical(OperationOutcome)
