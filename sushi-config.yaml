@@ -3,10 +3,10 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: fhir.example
+id: elga.moped.POC
 canonical: http://example.org
 name: MOPED
-title: Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)
+title: POC erster Entwurf - Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
 version: 0.1.0

@@ -1,3 +1,6 @@
+>** Dieser Implementation Guide spiegelt die Version zum Zeitpunkt des ersten Entwurfs des POC 2024 wieder. Die aktuellste Version findet man [hier](https://fhir.hl7.at/r5-ELGA-MOPED-main/index.html). **
+
+
 # Moderne Patient:innenabrechnung und Datenkommunikation on FHIR (MOPED)
  
 Dieser Implementierungsleitfaden modelliert eine harmonisierte Kommunikation zwischen Krankenanstalten und anderen Akteuren des österreichischen Gesundheitssystems. Relevante Anwendungsbereiche sind u.a. Patientenbewegungsdaten (Aufnahme, Verlegung, Entlassung), Krankenversicherungsschutz sowie Leistungen und Verrechnung nach dem LKF-System. 
