@@ -22,7 +22,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
    * *MOPEDAccount.VDASID* lt. Operation-Parameter *vdasid* befüllen
    * *MOPEDAccount.AnzahlVerlegungen* mit Wert '0' befüllen
    * *MOPEDAccount.AnzahlBeurlaubungen* mit Wert '0' befüllen
-   * *MOPEDAccount.coverage.coverage* mit der Referenz lt. Parameter befüllen und ggf. Hauptversicherter (Patient) anlegen, falls noch nicht am Server. 
+   * *MOPEDAccount.coverage.coverage* mit der Referenz lt. *falldaten*-Parameter befüllen und ggf. Hauptversicherten anlegen, falls noch nicht am Server. 
 3. Account im Encounter referenzieren: Den neuen MOPEDAccount im *MOPEDEncounter.account* referenzieren
 4. Durchführung der Operation `$verlegen` für Neufaufnahme:
   * *$verlegen#aufnahmezahl* = *$aufnehmen#aufnahmezahl*
@@ -31,6 +31,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * *$verlgegen#funktionssubcode* = *$aufnehmen#funktionssubcode*
   * *$verlegen#physischeAnwesenheit* = *$aufnehmen#physischeAnwesenheit*
   * *$verlegen#neuaufnahme* = `true`
+5. Berechnung der Datensatz-ID:
+  * Die Datensatz-ID wird aus der Aufnahmezahl lt. LKF Dokumentation als SHA-256 Hash berechnet und in das entsprechende Identifier-Slice des MOPEDEncounter eingefügt.
 
 **Validierung / Fehlerbehandlung**
 
@@ -45,14 +47,17 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $aufnehmen Operat
   * *true*: Die Patientenaufnahme ist vollständig und es ist zu erwarten, dass alle nötigen Felder befüllt sind. Schlägt die Validierung der *falldaten* fehl, kann die Operation nicht erfolgreich durchgeführt werden. Ist die Validierung erfolgreich, wird eine im Encounter referenzierte Account-Ressource erstellt bzw. upgedatet, die den *WorkflowStatus* 'Aufnahme freigegeben' hat. 
 * Hinweis 2: Es ist nicht nötig, bei dieser Operation den GDA-Identifier als Kontext mitzugeben. Auf den GDA wird im *falldaten*-Bundle als conditional Reference mittels entsprechendem Identifier im MOPEDEncounter verwiesen. Somit wird auch vermieden, dass Duplikate einer GDA-Organization-Ressource am Server angelegt/verwendet werden.
 * Hinweis 3: Im Parameter *falldaten* wird unter Anderem eine Coverage Ressource mitgegeben. Diese Ressource stammt in der Regel aus einer erfolgreichen VDAS-Abfrage. In Zukunft wird Moped auch andere Optionen unterstützen, wie die Verarbeitung von Daten von Selbstzahlern (wofür ein separates Coverage-Profil angelegt wird), oder die Verarbeitung von Fällen mit privater Krankenversicherung (auch hierfür wird ein separates Coverage-Profil angelegt). Im Ersten Schritt liegt der Fokus auf den Standard-Fall, der als Ausgangsbasis eine erfolgreich abgeschlossene VDAS-Abfrage voraussetzt. 
+
+**Annahmen an das BeS**
+* Es wurde vorab geprüft, ob das `system` des Parameters `falldaten`.encounter.identifier dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle aufgenommen werden können.
+
 """
 Usage: #definition 
 
 * id = "MOPED.Patient.Aufnehmen"
-* base = "http://hl7.org/fhir/OperationDefinition/Patient-aufnehmen"
 * name = "MOPED_Patient_Aufnehmen"
 * status = #draft
-* comment = "TBD: möchten wir zusätzlich zur GDA-Referenz einen Input-Parameter, der gleich sein muss? Um in einem Extra-Schritt zusätzlich auf Gleichheit mit der Referenz in falldaten.MOPEDEncounter.serviceProvider prüfen zu können?; Frage an Architektur: gibt es Möglichkeiten, einen solchen Input-Parameter (GDA als Kontext) automatisiert auf einem anderen Sicherheits-Level zu befüllen als der Inhalt des Transaction Body?; Check, wo version-specific References nötig sind - ggf. relevant für Account.subject, Account.owner und Account.coverage sobald Modus auf *freigeben*. Überlegen, für was der Status Aufnahme in Arbeit tatsächlich nützlich ist und wenn dieser wirklich nötig ist, was passiert, wenn diese Operation mehrfach aufgerufen wird (speziell mit POSTen von Coverages, das Anlegen von MOPEDTransfer Encounters via $verlgen ect.)"
+* comment = "TBD: möchten wir zusätzlich zur GDA-Referenz einen Input-Parameter, der gleich sein muss? Um in einem Extra-Schritt zusätzlich auf Gleichheit mit der Referenz in falldaten.MOPEDEncounter.serviceProvider prüfen zu können?; Frage an Architektur: gibt es Möglichkeiten, einen solchen Input-Parameter (GDA als Kontext) automatisiert auf einem anderen Sicherheits-Level zu befüllen als der Inhalt des Transaction Body?; Check, wo version-specific References nötig sind - ggf. relevant für Account.subject, Account.owner und Account.coverage sobald Modus auf *freigeben*. Überlegen, für was der Status Aufnahme in Arbeit tatsächlich nützlich ist und wenn dieser wirklich nötig ist, was passiert, wenn diese Operation mehrfach aufgerufen wird (speziell mit dem Einbringen von Hauptversicherten im Zuge der Speicherung von Coverages, das Anlegen von MOPEDTransfer Encounters via $verlgen ect.)"
 * kind = #operation 
 * affectsState = true
 * resource = #Encounter
@@ -69,13 +74,6 @@ Usage: #definition
   * type = #Resource
   * targetProfile[+] = Canonical(MOPEDAufnahmeBundle)
 * parameter[+]
-  * name = #vdasid
-  * use = #in 
-  * min = 0
-  * max = "1"
-  * documentation = "Der *vdasid* Parameter wird mitgegeben, um die Coverages die im *falldaten* Transaction-Bundle angeführt sind, die VDAS-ID zuzuweisen. Weil es je VDAS-Abfrage mehrere Coverages geben kann, ist die VDAS ID derzeit nicht als Identifier in der Coverage hinterlegt und wird separat vom System eingemeldet. Über diesen Parameter wird die VDAS ID dem Moped-Server bekannt gegeben."
-  * type = #string
-* parameter[+]
   * name = #freigeben
   * use = #in
   * min = 1
@@ -91,7 +89,7 @@ Usage: #definition
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = "moped-VerdachtArbeitsSchuelerunfall-valueset"
+    * valueSet = Canonical(VerdachtArbeitsSchuelerunfallVS)
 * parameter[+]
   * name = #verdachtFremdverschulden
   * use = #in

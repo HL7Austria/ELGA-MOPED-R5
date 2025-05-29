@@ -1,5 +1,6 @@
 Profile: MOPEDEncounter
 Parent: Encounter
+Title: "MOPED Encounter"
 Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung"
 
 
@@ -7,11 +8,14 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.ordered = false
-* identifier contains Aufnahmezahl 0..1
+* identifier contains Aufnahmezahl 0..1 and DatensatzID 0..1
 * identifier[Aufnahmezahl].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
 * identifier[Aufnahmezahl].type.coding.code = #VN (exactly)
 * identifier[Aufnahmezahl].assigner only Reference(HL7ATCoreOrganization)
-
+* identifier[Aufnahmezahl].system 1..1
+* identifier[DatensatzID].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
+* identifier[DatensatzID].type.coding.code = #ANON (exactly)
+* identifier[DatensatzID] ^short = "SHA-256 verschlüsselte Aufnahmezahl"
 * account only Reference(MOPEDAccount)
 
 * subject only Reference(HL7ATCorePatient)
@@ -31,12 +35,14 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * class contains Behandlungsart 0..1 and Aufnahmeart 0..1
 * class[Behandlungsart] ^short = "Behandlungsart"
 * class[Behandlungsart] from Behandlungsart (required)
+* class[Behandlungsart].coding.system = $Behandlungsart
 * class[Aufnahmeart] ^short = "Aufnahmeart"
 * class[Aufnahmeart] from Aufnahmeart (required)
+* class[Aufnahmeart].coding.system = $Aufnahmeart
 
 * reason ^slicing.rules = #open
 * reason ^slicing.discriminator.type = #value
-* reason ^slicing.discriminator.path = "type.coding.code"
+* reason ^slicing.discriminator.path = "use.coding.code"
 * reason ^slicing.ordered = false
 * reason contains Ursache 0..1
 * reason[Ursache].use from http://hl7.org/fhir/ValueSet/encounter-reason-use (required)
@@ -44,7 +50,7 @@ Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufn
 * reason[Ursache].value from UrsacheValueSet (required)
 * reason[Ursache] ^short = "Ursache für Behandlung"
 
-* diagnosis.use from https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ (required)
+* diagnosis.use from $LKFdiagnoseTyp (required)
 * diagnosis.use ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
 
 * admission.extension contains Zugangsart named Zugangsart 0..1

@@ -1,7 +1,7 @@
-Alias: $DiagnoseArt = https://termgit.elga.gv.at/ValueSet-lkf-diagnose-art.html
+Alias: $DiagnoseArt = https://termgit.elga.gv.at/ValueSet/lkf-diagnose-art
 Alias: $Aufnahmeart = http://tbd.at/moped-ext-aufnahmeart
 Alias: $Zugangsart = http://tbd.at/moped-ext-diagnose-art
-Alias: $LKFdiagnoseTyp = https://termgit.elga.gv.at/ValueSet-lkf-diagnose-typ.html
+Alias: $LKFdiagnoseTyp = https://termgit.elga.gv.at/ValueSet/lkf-diagnose-typ
 Alias: $Transportart = http://tbd.at/moped-ext-transportart
 Alias: $workflowstatus = http://tbd.at/moped-ext-workflow-status
 Alias: $Behandlungsart =  http://tbd.at/MOPED-encounter-behandlungsart
@@ -20,3 +20,5 @@ Alias: $KostenmeldungARK = http://tbd.at/MOPED-KostenmeldungARK
 Alias: $EconomicUnitUse = http://tbd.at/EconomicUnitUse
 Alias: $SpezielleOrganisationsform = http://tbd.at/MOPED-SpezielleOrganisationsform
 Alias: $Sonderklasse = http://tbd.at/MOPED-Sonderklasse
+Alias: $LKFHauptdiagnosegruppen = http://tbd.at/MOPED-LKFHauptdiagnosegruppen
+Alias: $LKFmedizinischeEinzelleistungen = http://tbd.at/MOPED-LKFmedizinischeEinzelleistungen
