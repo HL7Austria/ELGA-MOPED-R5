@@ -14,6 +14,8 @@
 
     KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> $aufnehmen</a>| Moped 
     KH -->|<a href="OperationDefinition-MOPED.VAERequest.Anfragen.html"> $anfragen</a>| Moped
+    KH -->|<a href="OperationDefinition-MOPED.Patient.Verlegen.html"> $verlegen</a>| Moped
+    KH -->|<a href="OperationDefinition-MOPED.Patient.Beurlauben.html"> $beurlauben</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> $entlassen</a>| Moped 
     KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html">$erfassen</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped
@@ -41,6 +43,8 @@
     Moped[<a href="#top">Moped</a>] 
     KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> $aufnehmen</a>| Moped 
     KH -->|<a href="OperationDefinition-MOPED.VAERequest.Anfragen.html"> $anfragen</a>| Moped
+    KH -->|<a href="OperationDefinition-MOPED.Patient.Verlegen.html"> $verlegen</a>| Moped
+    KH -->|<a href="OperationDefinition-MOPED.Patient.Beurlauben.html"> $beurlauben</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> $entlassen</a>| Moped 
     KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html">$erfassen</a>| Moped
     KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped

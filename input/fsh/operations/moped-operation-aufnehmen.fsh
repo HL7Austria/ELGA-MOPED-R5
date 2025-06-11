@@ -56,7 +56,7 @@ Usage: #definition
   * type = #code
   * binding[+]
     * strength = #required
-    * valueSet = Canonical(Anwesenheitsart)
+    * valueSet = Canonical(AnwesenheitsartVS)
 * parameter[+]
   * name = #funktionscode
   * use = #in

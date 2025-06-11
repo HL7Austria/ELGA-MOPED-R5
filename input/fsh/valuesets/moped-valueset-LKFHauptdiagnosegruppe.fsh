@@ -225,7 +225,7 @@ Description: "LKF Hauptdiagnosegruppen"
 * #HDG24.02 "Andere kongenitale Anomalien"
 * #HDG24.03 "Sonstige unspezifische Befunde"
 
-ValueSet: LKFHauptdiagnosegruppen
+ValueSet: LKFHauptdiagnosegruppenVS
 Title: "LKF Hauptdiagnosegruppen"
 Description: "LKF Hauptdiagnosegruppen"
 * ^experimental = true

@@ -5,7 +5,7 @@ Title: "MOPED Organization Abteilung"
 
 * partOf only Reference(HL7ATCoreOrganization)
 * partOf ^short = "Krankenanstalt zu welcher die Abteilung gehört"
-
+* type = http://terminology.hl7.org/CodeSystem/organization-type#dept (exactly)
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"

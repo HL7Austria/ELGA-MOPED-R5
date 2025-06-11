@@ -8,7 +8,7 @@ Description: "CodeSystem für die Art der Kostenmeldung"
 * #R "Regressangelegenheiten"
 * #K "Kosteninformation"
 
-ValueSet: KostenmeldungARK
+ValueSet: KostenmeldungARKVS
 Title: "Kostenmeldung für (A/R/K)"
 Description: "ValueSet für die Art der Kostenmeldung"
 * ^experimental = true

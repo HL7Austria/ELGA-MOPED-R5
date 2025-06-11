@@ -16,7 +16,7 @@ Description: "CodeSystem für die Statusoptionen in denen sich ein Fall befinden
 * #Endgueltige-Meldung "Endgültige Meldung"
 * #Endgueltige-Freigabe "Endgültige Freigabe"
 
-ValueSet: WorkflowStatus
+ValueSet: WorkflowStatusVS
 Title: "Workflow Status eines Falls"
 Description: "ValueSet für die Statusoptionen in denen sich ein Fall befinden kann."
 * ^experimental = true

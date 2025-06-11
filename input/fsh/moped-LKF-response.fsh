@@ -9,18 +9,12 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * use = #claim
 
 * patient only Reference(HL7ATCorePatient)
-* insurer only Reference(HL7ATCoreOrganization)
-* insurer 1..1
 * request only Reference(MopedLKFRequest)
 * request 1..1
-* requestor only Reference(HL7ATCoreOrganization)
-* requestor 1..1
-
-* insurance.coverage only Reference(MopedCoverage)
-* insurance.coverage 1..1
 
 
-* diagnosisRelatedGroup from LKFAbrechnungsGruppe (required)
+
+* diagnosisRelatedGroup from LKFAbrechnungsGruppeVS (required)
 * diagnosisRelatedGroup. ^short =  "\"Abrechnung - Gruppe:\" Dieses Datenfeld ist mit der Codenummer der zutreffenden Abrechnungsgruppe zu befüllen. Bei Datensätzen von stationären Krankenhausaufenthalten, die keiner leistungsorientier- ten Diagnosenfallgruppe zugeordnet werden, erfolgt ein Eintrag entsprechend der jeweiligen Aufnahmeart."
 
 * extension contains FehlerWarnung named FehlerWarnung 0..

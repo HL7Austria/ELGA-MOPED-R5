@@ -1,19 +1,12 @@
-Instance: MopedAbrechnungFreigeben
-InstanceOf: OperationDefinition
-Title: "MOPED ClaimResponse $freigeben (POC)"
-Description: "Die $freigeben Operation wird aufgerufen, wenn eine Abrechnung beantwortet wird und freigegeben wird."
-Usage: #definition
-* purpose = """
-
-**Wer ruft diese Operation in welchem Zusammenhang auf?**
+## Wer ruft diese Operation in welchem Zusammenhang auf?
 
 Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $freigeben Operation wird aufgerufen, wenn die Abrechnung eines Krankenhauses freigegeben wird.
 
-**Voraussetzungen für den Aufruf**
+## Voraussetzungen für den Aufruf
 
 * Account-Status: `Vorläufige Meldung` oder `Endgültige Meldung`
 
-**Detaillierte Business-Logik**
+## Detaillierte Business-Logik
 
 1. Die ClaimResponse wird lt. Regeln (siehe unten) validiert und eingespielt
 2. Falls Schritt 1 erfolgreich war, wird der ClaimResponse.encounter.account.workflowStatus (ClaimResponse aus Operation-Parameter; der Encounter vom Profil MopedEncounter) wird auf 
@@ -21,7 +14,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $frei
    * `Endgültige Freigabe` gesetzt, falls der vorherige Status `Endgültige Meldung` war
 3. Alle Referenzen sollen versionsspezifisch aufgelöst werden.
 
-**Validierung / Fehlerbehandlung**
+## Validierung / Fehlerbehandlung
 
 * ClaimResponse.status muss `active` sein (lt. Profil)
 * ClaimResponse.type muss `institutional` sein (lt. Profil)
@@ -32,38 +25,10 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $frei
 * ClaimResponse.outcome muss `completed` oder `partial` sein
 * ClaimResponse.insurance.coverage muss gleich der Claim.insurance.coverage sein
 
-**Weitere Hinweise**
+## Weitere Hinweise
 
 * Hinweis 1: Für den Fehlerfall gibt es eine weitere Operation die eine Korrekturaufforderung anstelle einer Freigabe macht
 
-**Annahmen an das BeS**
+## Annahmen an das BeS
 * Es wurde vorab geprüft, ob die ClaimResponse auch dem LGF entspricht, der die Operation aufruft. Somit ist sichergestellt, dass jeder LGF nur eigene Claims beantworten kann.
 
-"""
-
-* id = "MOPED.ClaimResponse.Freigeben"
-* name = "MOPED_ClaimResponse_Freigeben"
-* status = #draft
-* kind = #operation
-* affectsState = true
-* resource = #ClaimResponse
-* system = false
-* type = true
-* instance = false
-* code = #freigeben
-* parameter[+]
-  * name = #claimResponse
-  * use = #in
-  * min = 1
-  * max = "1"
-  * documentation = "Der *claimResponse* Parameter beinhaltet sämtliche Details zur Antwort auf den Claim."
-  * type = #ClaimResponse
-  * targetProfile = Canonical(MopedLKFResponse)
-* parameter[+]
-  * name = #return
-  * use = #out
-  * min = 1
-  * max = "1"
-  * documentation = "Der *return* Parameter gibt Auskunft über den Erfolg der Operation."
-  * type = #Resource
-  * targetProfile[+] = Canonical(OperationOutcome)

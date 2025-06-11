@@ -9,17 +9,10 @@ Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklä
 * use = #preauthorization
 
 * patient only Reference(HL7ATCorePatient)
-* insurer only Reference(HL7ATCoreOrganization)
-* insurer 1..1
 * request only Reference(MopedVAERequest)
 * request 1..1
-* requestor only Reference(HL7ATCoreOrganization)
-* requestor 1..1
 
-* insurance.coverage only Reference(MopedCoverage)
-* insurance.coverage 1..1
-
-* decision from VAEStatus (required)
+* decision from VAEStatusVS (required)
 * . ^definition =  "\"VAEST - Status der Versichertenanspruchserklärung\""
 * . ^short =  "\"VAEST - Status der Versichertenanspruchserklärung\""
 

@@ -23,7 +23,7 @@ Description: "CodeSystem für die Altersgruppe des Patienten"
 * #75 "75 bis 79 Jahre"
 * #80 "80 bis 84 Jahre"
 
-ValueSet: Altersgruppe
+ValueSet: AltersgruppeVS
 Title: "Altersgruppe des Patienten"
 Description: "ValueSet für die Altersgruppe des Patienten"
 * ^experimental = true

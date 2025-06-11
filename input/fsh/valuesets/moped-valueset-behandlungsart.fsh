@@ -8,7 +8,7 @@ Description: "CodeSystem für die Behandlungsart"
 * #I "Spitalsambulant"
 * #E "Extramural ambulant"
 
-ValueSet: Behandlungsart
+ValueSet: BehandlungsartVS
 Title: "Behandlungsart"
 Description: "ValueSet für die Behandlungsart"
 * ^experimental = true
