@@ -14,7 +14,7 @@ Title: "MOPED Composition"
   Workflow 1..1
 * useContext[Workflow].code = http://terminology.hl7.org/CodeSystem/usage-context-type#workflow
 * useContext[Workflow].value[x] only CodeableConcept
-* useContext[Workflow].valueCodeableConcept from WorkflowStatus
+* useContext[Workflow].valueCodeableConcept from WorkflowStatusVS
 
 /*
 * useContext contains
