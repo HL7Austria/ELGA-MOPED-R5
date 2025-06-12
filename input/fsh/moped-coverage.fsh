@@ -12,7 +12,7 @@ Title: "MOPED Coverage"
 * identifier[VDASID].assigner only Reference(HL7ATCoreOrganization)
 * paymentBy.party only Reference(HL7ATCoreOrganization)
 * insurer only Reference(HL7ATCoreOrganization)
-* subscriber only Reference(HL7ATCorePatient or Hauptversicherter)
+* policyHolder only Reference(HL7ATCorePatient or Hauptversicherter)
 * beneficiary only Reference(HL7ATCorePatient)
 * class ^slicing.discriminator.type = #value
 * class ^slicing.discriminator.path = "type.coding"

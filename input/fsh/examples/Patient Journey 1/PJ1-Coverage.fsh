@@ -9,7 +9,7 @@ Usage: #example
 * status = #active
 * kind = #insurance
 * beneficiary = Reference(PJ1Patient)
-* subscriber = Reference(PJ1Patient)
+* policyHolder = Reference(PJ1Patient)
 * insurer = Reference(oegk-wien)
 * class[+].type.coding = http://terminology.hl7.org/CodeSystem/coverage-class#group
 * class[=].value.system = "http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs"
