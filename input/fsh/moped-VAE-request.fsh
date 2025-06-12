@@ -4,7 +4,7 @@ Parent: Claim
 Title : "MOPED VAERequest"
 Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung VAE."
 
-* extension contains Verlaengerungstage named Verlaengerungstage 0..1
+//* extension contains Verlaengerungstage named Verlaengerungstage 0..1
 * accident.type from VerdachtArbeitsSchuelerunfallVS
 * extension contains Sonderklasse named Sonderklasse 0..1
 * patient only Reference(HL7ATCorePatient)
@@ -36,25 +36,23 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "code.coding"
 * supportingInfo ^slicing.ordered = false
-* supportingInfo contains VerdachtFremdverschulden 0..1
-/** supportingInfo contains Sonderklasse 0..1 and VerdachtFremdverschulden 0..1 and VerdachtArbeitsSchuelerunfall 0..1
-
-* supportingInfo[Sonderklasse] ^short = "Allgemeine Gebührenklasse/Sonderklasse"
+* supportingInfo contains /*Sonderklasse 0.. and*/ VerdachtFremdverschulden 0..1 and Verlaengerungstage 0..1
+/* supportingInfo[Sonderklasse] ^short = "Allgemeine Gebührenklasse/Sonderklasse"
 * supportingInfo[Sonderklasse].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
-* supportingInfo[Sonderklasse].code = $VAESupportingInfo#KLAS
+* supportingInfo[Sonderklasse].code = VAESupportingInformationTypesCS#KLAS
 * supportingInfo[Sonderklasse].value[x] only Coding
 * supportingInfo[Sonderklasse].value[x] from SonderklasseVS
-
-* supportingInfo[VerdachtArbeitsSchuelerunfall] ^short = "Verdacht auf Arbeits-/Schülerunfall"
-* supportingInfo[VerdachtArbeitsSchuelerunfall] ^short = "Verdacht auf Fremdversschluden"
-* supportingInfo[VerdachtArbeitsSchuelerunfall].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
-* supportingInfo[VerdachtArbeitsSchuelerunfall].code = $VAESupportingInfo#VERDAU
-* supportingInfo[VerdachtArbeitsSchuelerunfall].value[x] only Coding
-* supportingInfo[VerdachtArbeitsSchuelerunfall].value[x] from VerdachtArbeitsSchuelerunfallVS (required)
-* supportingInfo[VerdachtArbeitsSchuelerunfall].value[x] ^binding.description = "Code für die Art des Verdachts"
-*/
+* supportingInfo[Sonderklasse].timingPeriod 1..1*/
 
 * supportingInfo[VerdachtFremdverschulden] ^short = "Verdacht auf Fremdversschluden"
-* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
+* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#externalcause
 * supportingInfo[VerdachtFremdverschulden].code.coding = VAESupportingInformationTypesCS#FREVER
 * supportingInfo[VerdachtFremdverschulden].value[x] only boolean
+
+* supportingInfo[Verlaengerungstage] ^short = "Anzahl der Verlängerungstage"
+* supportingInfo[Verlaengerungstage].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
+* supportingInfo[Verlaengerungstage].code.coding = VAESupportingInformationTypesCS#VERLAENG
+* supportingInfo[Verlaengerungstage].valueQuantity.value 1..1
+* supportingInfo[Verlaengerungstage].valueQuantity.unit = "day"
+* supportingInfo[Verlaengerungstage].valueQuantity.code = #day
+* supportingInfo[Verlaengerungstage].valueQuantity.system = "http://unitsofmeasure.org"

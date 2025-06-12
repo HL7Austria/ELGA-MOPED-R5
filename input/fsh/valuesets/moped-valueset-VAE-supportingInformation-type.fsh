@@ -5,8 +5,9 @@ Description: "Arten von zusätzlichen Informationen in der VAE"
 * ^experimental = true
 * ^caseSensitive = true
 * #KLAS "Allgemeine Gebührenklasse/Sonderklasse"
-* #VERDAU "Verdacht auf Arbeits-/Schülerunfall"
+/* #VERDAU "Verdacht auf Arbeits-/Schülerunfall"*/
 * #FREVER "Fremdversschluden"
+* #VERLAENG "Verlängerungstage"
 
 ValueSet: VAESupportingInformationTypesVS
 Title: "MOPED VAESupportingInformationTypes"
