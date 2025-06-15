@@ -18,9 +18,15 @@ Title: "MOPED Coverage"
 * class ^slicing.discriminator.path = "type.coding"
 * class ^slicing.ordered = false
 * class ^slicing.rules = #open
+* class.extension contains CoverageClassValueCode named CoverageClassValueCode 0..1
 * class contains
     Versichertenkategorien 0..1 MS
-* class[Versichertenkategorien].type from $SVCVersichertenkategorien (required)
 * class[Versichertenkategorien].type.coding = http://terminology.hl7.org/CodeSystem/coverage-class#group
 * class[Versichertenkategorien] ^short = "Versichertenkategorien"
-* class[Versichertenkategorien].value.system = "http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs"
+* class[Versichertenkategorien].extension[CoverageClassValueCode].valueCodeableConcept from $SVCVersichertenkategorienVS
+* class[Versichertenkategorien] obeys class-value-matches-extension
+
+Invariant: class-value-matches-extension
+Description: "Falls Coverage.class.extension[CoverageClassValueCode] vorhanden ist, muss Coverage.class.value denselben Code enthalten wie Coverage.class.extension[CoverageClassValueCode].valueCodeableConcept.coding.code."
+Severity: #error
+Expression: "extension.where(url = 'https://elga.moped.at/StructureDefinition/CoverageClassValueCode').valueCodeableConcept.coding.code.contains(value.value)"
