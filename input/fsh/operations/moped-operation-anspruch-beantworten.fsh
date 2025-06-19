@@ -1,6 +1,6 @@
-Instance: MopedAnspruchBeantworten
+Instance: MopedVAEBeantworten
 InstanceOf: OperationDefinition
-Title: "MOPED VAERequest $beantworten (POC)"
+Title: "MOPED VAERequest $beantworten"
 Description: "Die $beantworten Operation wird aufgerufen, wenn eine Versichertenanspruchserklärung beantwortet wird."
 Usage: #definition
 
