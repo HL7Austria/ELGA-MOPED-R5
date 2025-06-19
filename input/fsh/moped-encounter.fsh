@@ -56,3 +56,4 @@ Title: "MOPED Encounter"
 * admission.extension contains Aufnahmeart named aufnahmeart 0..1
 * admission.extension contains Transportart named transportart 0..1
 * extension contains Unfalldatum named Unfalldatum 0..1
+* extension contains Altersgruppe named Altersgruppe 0..1

@@ -1,5 +1,5 @@
 Instance: PJ1TransferEncounter1Aufnahme
-InstanceOf: MopedTransferEncounter
+InstanceOf: MopedTransferEncounterS
 Description: "Hackathon Patient Journey 1 Beispiel: TransferEncounter 1"
 Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"

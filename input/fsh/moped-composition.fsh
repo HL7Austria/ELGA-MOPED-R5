@@ -25,8 +25,8 @@ Title: "MOPED Composition"
 
 * author only Reference(HL7ATCoreOrganization)
 
-* extension contains AnzahlVerlegungen named AnzahlVerlegungen 0..1
-* extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 0..1
+* extension contains AnzahlVerlegungen named AnzahlVerlegungen 1..1
+* extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 1..1
 * extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1
 
 * section 1..*
@@ -44,7 +44,7 @@ Title: "MOPED Composition"
 * section[TransferEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
 * section[TransferEncounter].code.coding.code = #TENC
 * section[TransferEncounter].entry 1..
-* section[TransferEncounter].entry only Reference(MopedEncounter)
+* section[TransferEncounter].entry only Reference(MopedTransferEncounterI or MopedTransferEncounterA or MopedTransferEncounterS)
 * section contains zustaendigeSV 0..1
 * section[zustaendigeSV].code.coding.system = Canonical(CompositionSectionsCS)
 * section[zustaendigeSV].code.coding.code = #SV
@@ -69,7 +69,7 @@ Title: "MOPED Composition"
 * section contains Diagnosen 0..1 
 * section[Diagnosen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Diagnosen].code.coding.code = #DIAG
-* section[Diagnosen].entry 1..
+* section[Diagnosen].entry 0..0 //Keine Diagnose ohne Kategorisierung
 * section[Diagnosen].section ^slicing.discriminator[+].type = #value
 * section[Diagnosen].section ^slicing.discriminator[=].path = "code.coding.code"
 * section[Diagnosen].section ^slicing.rules = #open
@@ -79,7 +79,7 @@ Title: "MOPED Composition"
 * section[Diagnosen].section[Hauptdiagnosen].entry 1..
 * section[Diagnosen].section[Hauptdiagnosen].entry only Reference(MopedCondition)
 * section[Diagnosen].section[Hauptdiagnosen].author only Reference(KHOrganization)
-* section[Diagnosen].section[Zusatzdiagnosen].code.coding from LKFDiagnoseTypVS
+* section[Diagnosen].section[Hauptdiagnosen].code.coding from LKFDiagnoseTypVS
 * section[Diagnosen].section[Zusatzdiagnosen].code.coding.code = #Z
 * section[Diagnosen].section[Zusatzdiagnosen].entry 1..
 * section[Diagnosen].section[Zusatzdiagnosen].entry only Reference(MopedCondition)
@@ -89,6 +89,8 @@ Title: "MOPED Composition"
 * section[Diagnosen].section[Aufnahmediagnosen].entry 1..
 * section[Diagnosen].section[Aufnahmediagnosen].entry only Reference(MopedCondition)
 * section[Diagnosen].section[Aufnahmediagnosen].author only Reference(KHOrganization)
+* section[Diagnosen].section[Aufnahmediagnosen].code.coding from LKFDiagnoseTypVS
+
 * section contains Leistungen 0..1 
 * section[Leistungen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Leistungen].code.coding.code = #LEI

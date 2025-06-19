@@ -4,17 +4,15 @@ Description: "MOPED Profil der Encounter Ressource für die Verlegung innerhalb 
 Title: "MOPED TransferEncounter"
 
 * subject only Reference(HL7ATCorePatient)
+* subject 1..1
 * serviceProvider only Reference(MopedOrganizationAbteilung)
-
+* serviceProvider 1..1
 * actualPeriod ^short = "Zugangs- und Abgangsdatum"
-
-* subjectStatus from AnwesenheitsartVS (required)
+* actualPeriod.start 1..1
 
 * type = MopedEncounterTypesCS#TENC
-* admission.extension contains Altersgruppe named Altersgruppe 0..1 MS
-
-* admission.dischargeDisposition ^short = "Abgangsart"
-* admission.dischargeDisposition from AbgangsartVS (required)
-
+* admission.extension contains Altersgruppe named Altersgruppe 1..1 MS
+* admission.extension[Altersgruppe].extension[beiZugang].value[x] 1..1
+* admission.extension[Altersgruppe].extension[beiZugang] 1..1
 * partOf only Reference (MopedEncounter)
 * partOf 1..1
