@@ -11,6 +11,8 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 * date = "2025-03-31"
 * title = "PJ1CompositionNachAufnehmen"
 * author = Reference(OrganizationHerzJesuKrankenhaus)
+* extension[AnzahlVerlegungen].valueUnsignedInt = 1
+* extension[AnzahlBeurlaubungen].valueUnsignedInt = 0
 * section[MopedEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
 * section[MopedEncounter].code.coding.code = #ENC
 * section[MopedEncounter].entry = Reference(PJ1EncounterAufnahme)
