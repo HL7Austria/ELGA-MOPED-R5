@@ -1,13 +1,9 @@
 Profile: MopedTransferEncounterI
-Parent: MopedTransferEncounter
+Parent: MopedTransferEncounterS
 Description: "MOPED Profil der Encounter Ressource für die Verlegung auf Intensivstationen"
 Title: "MOPED TransferEncounter Intensiv"
 
-* actualPeriod ^short = "Zugangs- und Abgangsdatum"
 //TBD actualPeriod.start Uhrzeit verpflichtend machen
-* admission.extension[Altersgruppe].extension[neugeborenes] 1..1
-* admission.extension[Altersgruppe].extension[neugeborenes].value[x] 1..1
-
 
 * obeys moped-TENC-status-entweder-in-progress-oder-completed
 * obeys moped-verlegen-intensiv-verpflichtendes-abgangsdatum
