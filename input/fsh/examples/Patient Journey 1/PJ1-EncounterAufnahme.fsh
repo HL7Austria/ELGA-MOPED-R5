@@ -27,7 +27,7 @@ Usage: #example
 * admission.origin = Reference(OrganizationUeberweisendeOrganization2)
 * account = Reference(PJ1Account)
 /*
-* admission.extension.url = "https://elga.moped.at/StructureDefinition/moped-ext-transportart"
+* admission.extension.url = "http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival"
 * admission.extension.valueCode = TransportartCS#
 
 * extension.url = "https://elga.moped.at/StructureDefinition/moped-ext-unfalldatum"
