@@ -15,6 +15,13 @@ Usage: #definition
 * instance = false
 * code = #beantworten
 * parameter[+]
+  * name = #compositionID
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation = "Der *compositionID* Parameter beinhaltet die technische ID (inklusive Version) der Composition des zu bearbeitenden Falls"
+  * type = #id
+* parameter[+]
   * name = #MopedVAEResponse
   * use = #in
   * min = 1
