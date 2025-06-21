@@ -1,13 +1,12 @@
 Instance: MopedPatientEntlassen
 InstanceOf: OperationDefinition
-Title: "MOPED Patient $entlassen (POC)"
+Title: "MOPED Patient $entlassen"
 Description: "Die $entlassen Operation wird aufgerufen, wenn ein(e) Patient*in aus dem Krankenhaus entlassen wurde."
 Usage: #definition
 
 * id = "MOPED.Patient.Entlassen"
 * name = "MOPED_Patient_Entlassen"
 * status = #draft
-* comment = "TBD: Abgangsart beim MopedTransferEncounter falls intensiv, muss befüllt werden; In dieser Operation werden noch keine Leitungen erfasst, hier muss eine Möglichkeit gegeben werden, dies nachzuholen - in einer separaten Transaction/Operation.; Der Status 'SV verarbeitet' stimmt zwar als Voraussetzung für den ersten Schritt. Kann das aber so weiterverfolgt werden, sobald Selbstzahler / private Versicherungen hinzukommen? Was passiert in einer schnellen Entlassung, wenn die SV sich noch nicht zurück gemeldet hat?"
 * kind = #operation
 * affectsState = true
 * resource = #Encounter
@@ -25,33 +24,34 @@ Usage: #definition
 * parameter[+]
   * name = #zeitpunkt
   * use = #in
-  * min = 1
+  * min = 0
   * max = "1"
-  * documentation = "Der *zeitpunkt* Parameter definiert zu welchem Zeitpunkt die Beurlaubung startet."
+  * documentation = "Der *zeitpunkt* Parameter definiert zu welchem Zeitpunkt die Entlassung stattfindet. Verpflichtend bei stationären Entlassungen."
   * type = #dateTime
 * parameter[+]
   * name = #entlassungsart
   * use = #in
-  * min = 1
+  * min = 0
   * max = "1"
-  * documentation = "Der *entlassungsart* Parameter definiert die Entlassungsart des Patienten."
+  * documentation = "Der *entlassungsart* Parameter definiert die Entlassungsart des Patienten. Verpflichtend bei stationären Entlassungen."
   * type = #code
   * binding[+]
     * strength = #required
     * valueSet = Canonical(EntlassungsartVS)
 * parameter[+]
-  * name = #tageOhneKostenbeitrag
+  * name = #zugewiesenAn
   * use = #in
   * min = 0
   * max = "1"
-  * documentation = "Der *tageOhneKostenbeitrag* Parameter definiert zu für wie viele Tage kein Kostenbeitrag eingehoben wurde."
-  * type = #unsignedInt
+  * documentation = "Der *zugewiesenAn* Parameter beinhaltet eine Referenz auf die Organization an die der Patient zugewiesen wird. Verpflichtend bei einem Transfer."
+  * type = #Reference
+  * targetProfile[+] = Canonical(KHOrganization)
 * parameter[+]
-  * name = #freigeben
+  * name = #aviso
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Mit Hilfe des *freigeben* Parameters wird angegeben, ob es sich bei der Patienten-Entlassung um vollständige Daten handelt (*freigeben* = *true*) und somit eine Validierung erfolgen soll, oder ob lediglich unvollständige Daten zwischengespeichert werden (*freigeben* = *false*) - in diesem Fall wird ein Entlassungs-Aviso erstellt."
+  * documentation = "Mit Hilfe des *aviso* Parameters wird angegeben, ob es sich bei der Patienten-Entlassung um vollständige Daten inklusive Hauptdiagnose handelt (*aviso* = *true*) und somit eine Validierung erfolgen soll, oder ob lediglich eine unvollständige Entlassung zwischengespeichert werden soll (*aviso* = *false*) - in diesem Fall wird ein Entlassungs-Aviso erstellt."
   * type = #boolean
 * parameter[+]
   * name = #return
