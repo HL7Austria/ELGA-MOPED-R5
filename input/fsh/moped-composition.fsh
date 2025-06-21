@@ -3,7 +3,7 @@ Parent: Composition
 Description: "MOPED Profil der Composition Ressource von der alle anderen Compositions ableiten."
 Title: "MOPED Composition"
 * subject only Reference(HL7ATCorePatient)
-* encounter only Reference(MopedEncounter)
+* encounter only Reference(MopedEncounterA or MopedEncounterS)
 * ^experimental = true
 
 * useContext 1..*
@@ -38,7 +38,7 @@ Title: "MOPED Composition"
 * section[MopedEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
 * section[MopedEncounter].code.coding.code = #ENC
 * section[MopedEncounter].entry 1..
-* section[MopedEncounter].entry only Reference(MopedEncounter)
+* section[MopedEncounter].entry only Reference(MopedEncounterA or MopedEncounterS)
 * section[MopedEncounter].author only Reference(KHOrganization)
 * section contains TransferEncounter 1..1
 * section[TransferEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
