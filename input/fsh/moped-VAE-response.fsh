@@ -5,14 +5,19 @@ Title: "MOPED VAEResponse"
 Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklärung VAE."
 
 * status = #active
+* type.coding 1..
 * type.coding = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * use = #preauthorization
 
 * patient only Reference(HL7ATCorePatient)
+* patient 1..1
 * request only Reference(MopedVAERequest)
 * request 1..1
+* insurer only Reference(SVOrganization)
+* insurer 1..1
 
 * decision from VAEStatusVS (required)
+* decision 1..1
 * . ^definition =  "\"VAEST - Status der Versichertenanspruchserklärung\""
 * . ^short =  "\"VAEST - Status der Versichertenanspruchserklärung\""
 
@@ -24,8 +29,12 @@ schen Hauskrankenpflege
 - Bei unsicherer, versicherungsrechtlicher Entwicklung
 Bei den ersten beiden Punkten wird von den Krankenversicherungsträgern das Fristende individuell gesetzt. Beim dritten Punkt wird im Regelfall eine generelle Tagesbeschränkung erfolgen, weil die Versichertenanspruchserklärung in die Zukunft gerichtet ist und der Krankenversicherungsträger seine Zuständigkeit von vornherein nur für einen bestimmten Zeitraum annehmen kann (Ausleis- tungssituation gem. § 122 ASVG).
 Durch die Angabe eines Fristendes wird signalisiert, dass bei einem über das Fristende hinaus dau- ernden Aufenthalt eine Verlängerungsanzeige vorzulegen ist."
-* extension contains VerpflegskostenBeitragsbefreiung named VerpflegskostenBeitragsbefreiung 0..1
-* extension contains VortageanzahlAufKostenbeitrag named VortageanzahlAufKostenbeitrag 0..1
+* preAuthPeriod 1..1
+* preAuthPeriod.start 1..1
+* preAuthPeriod.end 0..1
+* extension contains Sonderklasse named Sonderklasse 1..1
+* extension contains VerpflegskostenBeitragsbefreiung named VerpflegskostenBeitragsbefreiung 1..1
+* extension contains VortageanzahlAufKostenbeitrag named VortageanzahlAufKostenbeitrag 1..1
 
 
 
