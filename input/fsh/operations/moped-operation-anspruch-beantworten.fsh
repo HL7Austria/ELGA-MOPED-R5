@@ -28,6 +28,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *MopedVAEResponse* Parameter beinhaltet sämtliche Details zur Antwort auf den VAERequest."
   * type = #ClaimResponse
+  * targetProfile[+] = Canonical(MopedVAEResponse)
 * parameter[+]
   * name = #return
   * use = #out
