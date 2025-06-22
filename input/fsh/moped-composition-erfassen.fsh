@@ -1,7 +1,7 @@
-Profile: MopedAufnahmeComposition
+Profile: MopedErfassenComposition
 Parent: MopedComposition
-Description: "MOPED Profil der Composition Ressource nach $aufnehmen"
-Title: "MOPED Aufnahme Composition"
+Description: "MOPED Profil der Composition Ressource nach $erfassen"
+Title: "MOPED Erfassen Composition"
 * ^experimental = true
 * status = #partial
 * section[MopedEncounter].entry 1..1
