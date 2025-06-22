@@ -8,8 +8,20 @@ Title: "MOPED Aufnahme Composition"
 
 
 * obeys moped-erfassen-TBD
+* obeys moped-erfassen-stationaer-leistung-z-seitenlokalisation
+* obeys moped-erfassen-entweder-funktionscode-oder-KANummer-extern
 // Leistung/Diagnose muss nach dem Aufnahmedatum sein
 Invariant: moped-erfassen-TBD
 Severity: #error
 Description: "TBD"
+Expression: ""
+
+Invariant: moped-erfassen-stationaer-leistung-z-seitenlokalisation
+Severity: #error
+Description: "Bei allen stationären Fällen muss bei den Leistungen verpflichtend die Seitenlokalistion befüllt werden."
+Expression: ""
+
+Invariant: moped-erfassen-entweder-funktionscode-oder-KANummer-extern
+Severity: #error
+Description: "Entweder der Funktionscode leistungserbringend oder die KANummer leistungserbringend muss befüllt sein aber nicht beides. (KANummer nur bei extern erbrachten Leistungen)."
 Expression: ""
