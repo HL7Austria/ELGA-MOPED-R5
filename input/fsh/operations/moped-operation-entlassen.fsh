@@ -36,6 +36,13 @@ Usage: #definition
   * documentation = "Der *zeitpunkt* Parameter definiert zu welchem Zeitpunkt die Entlassung stattfindet. Verpflichtend bei stationären Entlassungen."
   * type = #dateTime
 * parameter[+]
+  * name = #tageOhneKostenbeitrag
+  * use = #in
+  * min = 0
+  * max = "1"
+  * documentation = "Der *tageOhneKostenbeitrag* Parameter definiert die Anzahl der Tage, für welche kein Kostenbeitrag seitens der Krankenanstalt eingehoben wurde"
+  * type = #valueUnsignedInt
+* parameter[+]
   * name = #entlassungsart
   * use = #in
   * min = 0

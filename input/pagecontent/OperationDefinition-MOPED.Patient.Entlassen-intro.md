@@ -9,10 +9,12 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 ## Detaillierte Business-Logik
 
 1. Suche der Composition: Die Composition mit der jeweiligen *compositionID* lt. Operation-Parameter wird gesucht
+  * *Composition.extension:TageOhneKostenbeitrag* lt. Operation-Parameter *tageOhneKostenbeitrag* befüllen
 2. Update des MopedEncounters (Composition.encounter):
   * *MopedEncounter.actualPeriod.end* mit dem *zeitpunkt* lt. Operation-Parameter befüllen
   * *MopedEncounter.status* mit `discharged` oder `complete`  befüllen je nach Ausprägung von *aviso* (siehe Hinweis 1)
   * *MopedEncounter.admission.dischargeDisposition* mit *entlassungsart* lt. Operation-Parameter befüllen
+  * *MopedEncounter.zugewiesenAn* lt. Operation-Parameter *zugewiesenAn* befüllen
   * *MopedEncounter.extension:Altersgruppe.extension:beiEntlassung* berechnen und befüllen (siehe Hinweis 2)
 
 ## Validierung
