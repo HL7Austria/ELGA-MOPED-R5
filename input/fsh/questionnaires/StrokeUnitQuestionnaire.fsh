@@ -54,8 +54,8 @@ Usage: #example
         * valueDate = "1900-01-01"
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-        * valueDate = "1900-01-01" // placeholder
-        * extension[+]
+        * valueDate = "2026-01-01" // placeholder
+        * valueDate.extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
           * valueExpression.language = #text/fhirpath
           * valueExpression.expression = "today()"
@@ -168,15 +168,15 @@ Usage: #example
       * answerBoolean = true
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/minValue"
-      * valueDate = "1900-01-01" // placeholder
-      * extension[+]
+      * valueDate = "2024-01-01" // placeholder
+      * valueDate.extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
         * valueExpression.language = #text/fhirpath
         * valueExpression.expression = "today() - 1 years"
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-      * valueDate = "1900-01-01" // placeholder
-      * extension[+]
+      * valueDate = "2026-01-01" // placeholder
+      * valueDate.extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
         * valueExpression.language = #text/fhirpath
         * valueExpression.expression = "today()"
@@ -196,15 +196,15 @@ Usage: #example
       * answerBoolean = true
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/minValue"
-      * valueDate = "1900-01-01" // placeholder
-      * extension[+]
+      * valueDate = "2024-01-01" // placeholder
+      * valueDate.extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
         * valueExpression.language = #text/fhirpath
         * valueExpression.expression = "today() - 1 years"
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-      * valueDate = "1900-01-01" // placeholder
-      * extension[+]
+      * valueDate = "2026-01-01" // placeholder
+      * valueDate.extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
         * valueExpression.language = #text/fhirpath
         * valueExpression.expression = "today()"
@@ -269,15 +269,15 @@ Usage: #example
       * type = #date
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/minValue"
-        * valueDate = "1900-01-01" // placeholder
-        * extension[+]
+        * valueDate = "2015-01-01" // placeholder
+        * valueDate.extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
           * valueExpression.language = #text/fhirpath
           * valueExpression.expression = "today() - 10 years"
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-        * valueDate = "1900-01-01" // placeholder
-        * extension[+]
+        * valueDate = "2026-01-01" // placeholder
+        * valueDate.extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
           * valueExpression.language = #text/fhirpath
           * valueExpression.expression = "today()"
@@ -293,15 +293,15 @@ Usage: #example
       * type = #date
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/minValue"
-        * valueDate = "1900-01-01" // placeholder
-        * extension[+]
+        * valueDate = "2015-01-01" // placeholder
+        * valueDate.extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
           * valueExpression.language = #text/fhirpath
           * valueExpression.expression = "today() - 10 years"
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-        * valueDate = "1900-01-01" // placeholder
-        * extension[+]
+        * valueDate = "2026-01-01" // placeholder
+        * valueDate.extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
           * valueExpression.language = #text/fhirpath            
           * valueExpression.expression = "today()"
@@ -708,15 +708,15 @@ Usage: #example
       * type = #date
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/minValue"
-        * valueDate = "1900-01-01" // placeholder
-        * extension[+]
+        * valueDate = "2015-01-01" // placeholder
+        * valueDate.extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
           * valueExpression.language = #text/fhirpath
           * valueExpression.expression = "today() - 10 years"
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-        * valueDate = "1900-01-01" // placeholder
-        * extension[+]
+        * valueDate = "2026-01-01" // placeholder
+        * valueDate.extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
           * valueExpression.language = #text/fhirpath
           * valueExpression.expression = "today()"
@@ -810,15 +810,15 @@ Usage: #example
         * answerBoolean = true
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/minValue"
-        * valueDate = "1900-01-01" // placeholder
-        * extension[+]
+        * valueDate = "2015-01-01" // placeholder
+        * valueDate.extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
           * valueExpression.language = #text/fhirpath
           * valueExpression.expression = "today() - 10 years"
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-        * valueDate = "1900-01-01" // placeholder
-        * extension[+]
+        * valueDate = "2026-01-01" // placeholder
+        * valueDate.extension[+]
           * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
           * valueExpression.language = #text/fhirpath
           * valueExpression.expression = "today()"
@@ -1258,15 +1258,15 @@ Usage: #example
       * answerCoding = #1
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/minValue"
-      * valueDate = "1900-01-01" // placeholder
-      * extension[+]
+      * valueDate = "2015-01-01" // placeholder
+      * valueDate.extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
         * valueExpression.language = #text/fhirpath
         * valueExpression.expression = "today() - 10 years"
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-      * valueDate = "1900-01-01" // placeholder
-      * extension[+]
+      * valueDate = "2026-01-01" // placeholder
+      * valueDate.extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/cqf-calculatedValue"
         * valueExpression.language = #text/fhirpath
         * valueExpression.expression = "today()"
