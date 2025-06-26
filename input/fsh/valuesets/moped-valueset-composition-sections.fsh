@@ -18,6 +18,9 @@ Description: "CodeSystem für die Moped Sections der Composition Ressource"
 * #LKFReq "LKFRequests"
 * #LKFResp "LKFResponses"
 * #HAUPTV "Hauptversicherter"
+* #TISSA "TISS-A"
+* #SAPS3 "SAPS-3"
+* #OTHERQ "Weitere Fragebogen"
 
 ValueSet: CompositionSectionsVS
 Title: "Moped Composition Sections ValueSet"

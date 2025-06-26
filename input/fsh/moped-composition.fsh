@@ -139,3 +139,21 @@ Title: "MOPED Composition"
 * section[Hauptversicherter].entry 1..1
 * section[Hauptversicherter].entry only Reference(Hauptversicherter)
 * section[Hauptversicherter].author only Reference(KHOrganization)
+* section contains TISS-A 0..1 
+* section[TISS-A].code.coding.system = Canonical(CompositionSectionsCS)
+* section[TISS-A].code.coding.code = #TISSA
+* section[TISS-A].entry 0..
+* section[TISS-A].entry only Reference(MopedTISSAQuestionnaireResponse)
+* section[TISS-A].author only Reference(KHOrganization)
+* section contains SAPS-3 0..1 
+* section[SAPS-3].code.coding.system = Canonical(CompositionSectionsCS)
+* section[SAPS-3].code.coding.code = #SAPS3
+* section[SAPS-3].entry 0..
+* section[SAPS-3].entry only Reference(MopedSAPS3QuestionnaireResponse)
+* section[SAPS-3].author only Reference(KHOrganization)
+* section contains weitereFrageboegen 0..1 
+* section[weitereFrageboegen].code.coding.system = Canonical(CompositionSectionsCS)
+* section[weitereFrageboegen].code.coding.code = #OTHERQ
+* section[weitereFrageboegen].entry 0..
+* section[weitereFrageboegen].entry only Reference(MopedQuestionnaireResponse)
+* section[weitereFrageboegen].author only Reference(KHOrganization)
