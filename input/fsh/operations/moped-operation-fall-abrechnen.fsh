@@ -1,7 +1,7 @@
 Instance: MopedFallAbrechnen
 InstanceOf: OperationDefinition
-Title: "MOPED Encounter $abrechnen (POC)"
-Description: "Die $abrechnen Operation wird aufgerufen, wenn ein Fall abgerechnet werden sollte."
+Title: "MOPED Encounter $abrechnen"
+Description: "Die $abrechnen Operation wird aufgerufen, wenn ein Fall abgerechnet werden soll."
 Usage: #definition
 
 * id = "MOPED.Encounter.Abrechnen"
@@ -14,6 +14,13 @@ Usage: #definition
 * type = true
 * instance = false
 * code = #abrechnen
+* parameter[+]
+  * name = #compositionID
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation = "Der *compositionID* Parameter beinhaltet die technische ID (inklusive Version) der Composition des zu bearbeitenden Falls"
+  * type = #id
 * parameter[+]
   * name = #aufnahmezahl
   * use = #in
