@@ -41,7 +41,7 @@ Usage: #definition
   * min = 0
   * max = "1"
   * documentation = "Der *tageOhneKostenbeitrag* Parameter definiert die Anzahl der Tage, für welche kein Kostenbeitrag seitens der Krankenanstalt eingehoben wurde"
-  * type = #valueUnsignedInt
+  * type = #unsignedInt
 * parameter[+]
   * name = #entlassungsart
   * use = #in
