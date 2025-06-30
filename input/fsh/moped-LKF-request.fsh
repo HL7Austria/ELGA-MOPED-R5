@@ -10,6 +10,8 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 
 * procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 0..1
+* procedure.procedure[x] 1..
+* procedure.procedure[x] only Reference(MopedProcedure)
 * diagnosisRelatedGroup from LKFAbrechnungsGruppeVS (required)
 * diagnosisRelatedGroup. ^short =  "\"Abrechnung - Gruppe:\" Dieses Datenfeld ist mit der Codenummer der zutreffenden Abrechnungsgruppe zu befüllen. Bei Datensätzen von stationären Krankenhausaufenthalten, die keiner leistungsorientier- ten Diagnosenfallgruppe zugeordnet werden, erfolgt ein Eintrag entsprechend der jeweiligen Aufnahmeart."
 
@@ -31,7 +33,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * encounter[TransferEncounter] only Reference(MopedTransferEncounter)
 
 * item ^slicing.rules = #open
-* item ^slicing.ordered = true
+* item ^slicing.ordered = false
 * item ^slicing.discriminator[+].type = #value
 * item ^slicing.discriminator[=].path = "category.coding"
 * item contains ConditionItem 1..
@@ -41,6 +43,8 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 
 * extension contains Note named Note 0..
 * diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
+* diagnosis.diagnosis[x] 1..
+* diagnosis.diagnosis[x] only Reference(MopedCondition)
 * extension contains DiagnoseKnoten named DiagnoseKnoten 0..1
 * extension contains LKFPunkte named LKFPunkte 0..
 * extension contains FehlerWarnung named FehlerWarnung 0..
