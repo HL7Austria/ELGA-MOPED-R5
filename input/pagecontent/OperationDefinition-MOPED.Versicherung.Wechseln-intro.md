@@ -21,7 +21,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $wechseln Operati
 7. Neue zuständige SV:
   * neue zuständige SV laut Operation Parameter *zustaendigeSV* in der Composition.section:zustaendigeSV einfügen
 
-# Validierung
+## Validierung
 * Es muss überprüft werden, ob der Parameter *aufnahmezahl* mit dem Encounter.identifier:Aufnahmezahl der Composition aus Schritt 1 übereinstimmt.
 
 ## Annahmen an das BeS
