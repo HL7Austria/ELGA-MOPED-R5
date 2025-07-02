@@ -24,7 +24,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 * *Composition.useContext:Workflow* wird um einen Eintrag "Entlassung Aviso" oder "Entlassung vollständig" erweitert je nach Wert des Parameters *aviso* und nur sofern der status nicht bereits existiert
 
 ## Weitere Hinweise
-* Hinweis 1: *aviso* = true führt zum Encounter.status `discharged` und *aviso* = false führt zum Encounter.status `complete`
+* Hinweis 1: *aviso* = false führt zum Encounter.status `discharged` und *aviso* = true führt zum Encounter.status `complete`
 * Hinweis 2: LKF 4.1.9 Altersgruppe bei Entlassung/Kontakt
   * Vollendete Lebensjahre sind ausschlaggebend
   * 0: 0

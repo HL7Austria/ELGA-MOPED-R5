@@ -65,7 +65,7 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Mit Hilfe des *aviso* Parameters wird angegeben, ob es sich bei der Patienten-Entlassung um vollständige Daten inklusive Hauptdiagnose handelt (*aviso* = *true*) und somit eine Validierung erfolgen soll, oder ob lediglich eine unvollständige Entlassung zwischengespeichert werden soll (*aviso* = *false*) - in diesem Fall wird ein Entlassungs-Aviso erstellt."
+  * documentation = "Mit Hilfe des *aviso* Parameters wird angegeben, ob es sich bei der Patienten-Entlassung um vollständige Daten inklusive Hauptdiagnose handelt (*aviso* = *false*) und somit eine Validierung erfolgen soll, oder ob lediglich eine unvollständige Entlassung zwischengespeichert werden soll (*aviso* = *true*) - in diesem Fall wird ein Entlassungs-Aviso erstellt."
   * type = #boolean
 * parameter[+]
   * name = #return
