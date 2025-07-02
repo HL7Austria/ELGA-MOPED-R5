@@ -21,7 +21,7 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Der *compositionID* Parameter beinhaltet die technische ID (inklusive Version) der Composition des zu verlegenden Falls"
-  * type = #Identifier
+  * type = #id
 * parameter[+]
   * name = #aufnahmezahl
   * use = #in
@@ -49,7 +49,7 @@ Usage: #definition
 * parameter[+]
   * name = #verlegung
   * use = #in
-  * min = 0
+  * min = 1
   * max = "1"
   * documentation = "Der *verlegung* Parameter beinhaltet den Transferencounter inklusive aller notwendigen Informationen (siehe Profil)"
   * type = #Encounter
