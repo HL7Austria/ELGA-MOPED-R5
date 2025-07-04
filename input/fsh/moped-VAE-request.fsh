@@ -45,13 +45,13 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * supportingInfo[Sonderklasse].timingPeriod 1..1*/
 
 * supportingInfo[VerdachtFremdverschulden] ^short = "Verdacht auf Fremdversschluden"
-* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#externalcause
-* supportingInfo[VerdachtFremdverschulden].code.coding = VAESupportingInformationTypesCS#FREVER
+* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
+* supportingInfo[VerdachtFremdverschulden].code.coding = ClaimSupportingInformationTypesCS#FREVER
 * supportingInfo[VerdachtFremdverschulden].value[x] only boolean
 
 * supportingInfo[Verlaengerungstage] ^short = "Anzahl der Verlängerungstage"
 * supportingInfo[Verlaengerungstage].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
-* supportingInfo[Verlaengerungstage].code.coding = VAESupportingInformationTypesCS#VERLAENG
+* supportingInfo[Verlaengerungstage].code.coding = ClaimSupportingInformationTypesCS#VERLAENG
 * supportingInfo[Verlaengerungstage].valueQuantity.value 1..1
 * supportingInfo[Verlaengerungstage].valueQuantity.unit = "day"
 * supportingInfo[Verlaengerungstage].valueQuantity.code = #day

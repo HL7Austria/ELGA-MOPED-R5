@@ -20,8 +20,8 @@ Usage: #example
 * accident.extension[DataAbsentReason].valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable 
 * encounter[MopedEncounter] = Reference(PJ1Encounter)
 * encounter[MopedTransferEncounter] = Reference(PJ1TransferEncounter1)
-* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#externalcause
-* supportingInfo[VerdachtFremdverschulden].code.coding = VAESupportingInformationTypesCS#FREVER
+* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
+* supportingInfo[VerdachtFremdverschulden].code.coding = ClaimSupportingInformationTypesCS#FREVER
 * supportingInfo[VerdachtFremdverschulden].valueBoolean = false
 * supportingInfo[VerdachtFremdverschulden].sequence = 1
 
