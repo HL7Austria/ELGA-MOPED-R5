@@ -18,6 +18,7 @@ Description: "CodeSystem für die Moped Sections der Composition Ressource"
 * #LKFReq "LKFRequests"
 * #LKFResp "LKFResponses"
 * #HAUPTV "Hauptversicherter"
+* #QResp "QuestionnaireResponses"
 
 ValueSet: CompositionSectionsVS
 Title: "Moped Composition Sections ValueSet"

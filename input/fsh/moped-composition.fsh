@@ -139,3 +139,9 @@ Title: "MOPED Composition"
 * section[Hauptversicherter].entry 1..1
 * section[Hauptversicherter].entry only Reference(Hauptversicherter)
 * section[Hauptversicherter].author only Reference(KHOrganization)
+* section contains Frageboegen 0..1 
+* section[Frageboegen].code.coding.system = Canonical(CompositionSectionsCS)
+* section[Frageboegen].code.coding.code = #QResp
+* section[Frageboegen].entry 0..
+* section[Frageboegen].entry only Reference(MopedQuestionnaireResponse)
+* section[Frageboegen].author only Reference(KHOrganization)
