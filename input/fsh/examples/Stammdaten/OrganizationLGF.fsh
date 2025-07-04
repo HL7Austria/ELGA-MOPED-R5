@@ -1,5 +1,5 @@
 Instance: OrganizationLGF
-InstanceOf: HL7ATCoreOrganization
+InstanceOf: LGFOrganization
 Description: "Hackathon Stammdaten: LGF Wien"
 Usage: #example
 * name = "Wiener Gesundheitsfonds (WGF)"

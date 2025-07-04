@@ -1,19 +1,19 @@
-Instance: VersichertenanspruchserklärungAnfragen
+Instance: MopedQuestionnaireResponseErheben
 InstanceOf: OperationDefinition
-Title: "MOPED Versichertenanspruchserklärung $anfragen (POC)"
-Description: "Die Versichertenanspruchserklärung $anfragen Operation wird aufgerufen, um die Versichertenanspruchserklärung-Anfrage an die SV anzustoßen. Diese Operation ist irrelevant für Selbstzahler (-> wenn es keine zuständige SV gibt darf die Operation $anfragen nicht ausgeführt werden)."
-Usage: #definition 
+Title: "MOPED QuestionnaireResponse $erheben"
+Description: "Die $erheben Operation wird aufgerufen, wenn ein Fragebogen für einen bestimmten Fall eingemeldet wird."
+Usage: #definition
 
-* id = "MOPED.VAERequest.Anfragen"
-* name = "MOPED_VAERequest_Anfragen"
+* id = "MOPED.QuestionnaireResponse.Erheben"
+* name = "MOPED_QuestionnaireResponse.Erheben"
 * status = #draft
 * kind = #operation 
 * affectsState = true
-* resource = #Claim
+* resource = #QuestionnaireResponse
 * system = false
 * type = true
 * instance = false
-* code = #anfragen
+* code = #erheben
 * parameter[+]
   * name = #compositionID
   * use = #in
@@ -29,13 +29,13 @@ Usage: #definition
   * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
-  * name = #vae
-  * use = #in
+  * name = #fragebogen
+  * use = #in 
   * min = 1
-  * max = "*"
-  * documentation = "Der *vae* Parameter beinhaltet die Versichertenanspruchserklärung"
-  * type = #Claim
-  * targetProfile = Canonical(MopedVAERequest)
+  * max = "1"
+  * documentation = "Der *fragebogen* Parameter übermittelt den abzuspeichernden ausgefüllten Fragebogen über einen bestimmten Fall."
+  * type = #Resource
+  * targetProfile[+] = Canonical(MopedQuestionnaireResponse)
 * parameter[+]
   * name = #return
   * use = #out

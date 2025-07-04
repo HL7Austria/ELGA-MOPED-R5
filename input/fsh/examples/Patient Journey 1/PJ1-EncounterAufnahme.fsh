@@ -1,4 +1,4 @@
-Instance: PJ1Encounter
+Instance: PJ1EncounterAufnahme
 InstanceOf: MopedEncounter
 Description: "Hackathon Patient Journey 1 Beispiel: Encounter"
 Usage: #example
@@ -11,13 +11,12 @@ Usage: #example
 * identifier[DatensatzID].value = "V8321382402233647600"
 * identifier[DatensatzID].system = "urn:oid:1.3.6.1.4.1.36124.5.914"
 
-* status = #discharged
+* status = #in-progress
 * class[Behandlungsart].coding = BehandlungsartCS#S
 * class[Aufnahmeart2].coding = Aufnahmeart2CS#P
 * subject = Reference(PJ1Patient)
 * serviceProvider = Reference(OrganizationHerzJesuKrankenhaus)
 * actualPeriod.start = "2024-02-22T19:33:00+02:00"
-* actualPeriod.end = "2024-02-23T07:38:00+02:00"
 * type = MopedEncounterTypesCS#ENC
 * reason[+].use = http://hl7.org/fhir/encounter-reason-use#RV
 * reason[=].value.concept.coding = UrsacheCS#00
@@ -26,7 +25,6 @@ Usage: #example
 * admission.extension.url = "https://elga.moped.at/StructureDefinition/moped-ext-aufnahmeart"
 * admission.extension.valueCoding = AufnahmeartCS#A
 * admission.origin = Reference(OrganizationUeberweisendeOrganization2)
-* admission.dischargeDisposition = EntlassungsartCS#E
 * account = Reference(PJ1Account)
 /*
 * admission.extension.url = "http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival"

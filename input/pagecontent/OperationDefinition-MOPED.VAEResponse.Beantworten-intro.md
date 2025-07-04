@@ -4,19 +4,13 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $beantwort
 
 ## Voraussetzungen für den Aufruf
 
-* Account-Status: `Aufnahme Freigegeben`
+* Ein aktiver VAERequest an die zuständige SV liegt vor
 
 ## Detaillierte Business-Logik
 
-1. Die MopedVAEResponse wird lt. Regeln (siehe unten) validiert und eingespielt
-2. Falls Schritt 1 erfolgreich war, wird die Ressource Account gesucht (`MopedVAEResponse.request.encounter[MopedEncounter].account`; MopedVAEResponse lt. Operation-Parameter) und auf `SV verarbeitet` gesetzt
+1. Die MopedVAEResponse wird lt. Regeln (siehe unten) validiert und erstellt
+2. Die MopedVAEResponse wird in der Composition.section:VAEResponses eingefügt
 
-## Validierung / Fehlerbehandlung
-
-* MopedVAEResponse.patient muss gleich mit `MopedVAEResponse.request.patient`und mit `MopedVAEResponse.request.encounter[MopedEncounter].subject` und mit `MopedVAEResponse.request.encounter[MopedEncounter].account.subject` sein
-* MopedVAEResponse.requestor muss gleich sein mit `MopedVAEResponse.request.provider` und mit `MopedVAEResponse.request.encounter.serviceProvider`
-
-## Weitere Hinweise
 
 ## Annahmen an das BeS
-* Es wurde vorab geprüft, ob *MopedVAEResponse.insurance* auch der SV entspricht, der die Operation aufruft. Somit ist sichergestellt, dass jede SV nur eigene MopedVAERequests beantworten kann.
+* Es wurde vorab geprüft, ob *MopedVAEResponse.insurance* auch der SV entspricht, die die Operation aufruft. Somit ist sichergestellt, dass jede SV nur eigene MopedVAERequests beantworten kann.

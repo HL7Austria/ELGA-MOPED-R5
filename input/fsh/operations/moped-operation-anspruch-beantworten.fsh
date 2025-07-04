@@ -1,6 +1,6 @@
-Instance: MopedAnspruchBeantworten
+Instance: MopedVAEBeantworten
 InstanceOf: OperationDefinition
-Title: "MOPED VAERequest $beantworten (POC)"
+Title: "MOPED VAERequest $beantworten"
 Description: "Die $beantworten Operation wird aufgerufen, wenn eine Versichertenanspruchserklärung beantwortet wird."
 Usage: #definition
 
@@ -15,12 +15,20 @@ Usage: #definition
 * instance = false
 * code = #beantworten
 * parameter[+]
+  * name = #compositionID
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation = "Der *compositionID* Parameter beinhaltet die technische ID (inklusive Version) der Composition des zu bearbeitenden Falls"
+  * type = #id
+* parameter[+]
   * name = #MopedVAEResponse
   * use = #in
   * min = 1
   * max = "1"
   * documentation = "Der *MopedVAEResponse* Parameter beinhaltet sämtliche Details zur Antwort auf den VAERequest."
   * type = #ClaimResponse
+  * targetProfile[+] = Canonical(MopedVAEResponse)
 * parameter[+]
   * name = #return
   * use = #out
