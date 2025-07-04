@@ -9,28 +9,28 @@ Context: MopedLKFRequest, MopedLKFResponse
     PunkteBelagsdauerausreisserUntenTageskomponente 0..1 and
     ZusatzpunkteBelagsdauerausreisserNachOben 0..1 and
     ZusatzpunkteIntensiv 0..1 and
-    ZusatzpunkteMehrfachleistungen 0..1 and
+    ZusatzpunkteMehrfachleistungen 1..1 and
     PunkteSpeziellerBereicheTageweise 0..1 and
-    PunkteTotal 0..1 and 
-    Leistungskomponente 0..1 and
-    TageskomponenteKontaktpunkte 0..1
-* extension[PunkteBelagsdauerausreisserUntenLeistungskomponente].value[x] 0..1
+    PunkteTotal 1..1 and 
+    Leistungskomponente 1..1 and
+    TageskomponenteKontaktpunkte 1..1
+* extension[PunkteBelagsdauerausreisserUntenLeistungskomponente].value[x] 1..1
 * extension[PunkteBelagsdauerausreisserUntenLeistungskomponente].value[x] only unsignedInt
-* extension[PunkteBelagsdauerausreisserUntenTageskomponente].value[x] 0..1
+* extension[PunkteBelagsdauerausreisserUntenTageskomponente].value[x] 1..1
 * extension[PunkteBelagsdauerausreisserUntenTageskomponente].value[x] only unsignedInt
-* extension[ZusatzpunkteBelagsdauerausreisserNachOben].value[x] 0..1
+* extension[ZusatzpunkteBelagsdauerausreisserNachOben].value[x] 1..1
 * extension[ZusatzpunkteBelagsdauerausreisserNachOben].value[x] only unsignedInt
-* extension[ZusatzpunkteIntensiv].value[x] 0..1
+* extension[ZusatzpunkteIntensiv].value[x] 1..1
 * extension[ZusatzpunkteIntensiv].value[x] only unsignedInt
-* extension[ZusatzpunkteMehrfachleistungen].value[x] 0..1
+* extension[ZusatzpunkteMehrfachleistungen].value[x] 1..1
 * extension[ZusatzpunkteMehrfachleistungen].value[x] only unsignedInt
-* extension[PunkteSpeziellerBereicheTageweise].value[x] 0..1
+* extension[PunkteSpeziellerBereicheTageweise].value[x] 1..1
 * extension[PunkteSpeziellerBereicheTageweise].value[x] only unsignedInt
-* extension[PunkteTotal].value[x] 0..1
+* extension[PunkteTotal].value[x] 1..1
 * extension[PunkteTotal].value[x] only unsignedInt
-* extension[Leistungskomponente].value[x] 0..1
+* extension[Leistungskomponente].value[x] 1..1
 * extension[Leistungskomponente].value[x] only unsignedInt
-* extension[TageskomponenteKontaktpunkte].value[x] 0..1
+* extension[TageskomponenteKontaktpunkte].value[x] 1..1
 * extension[TageskomponenteKontaktpunkte].value[x] only unsignedInt
 
 * insert DocumentExtension (
