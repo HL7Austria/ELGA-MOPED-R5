@@ -27,7 +27,6 @@ Usage: #example
 * admission.extension.valueCoding = AufnahmeartCS#A
 * admission.origin = Reference(OrganizationUeberweisendeOrganization2)
 * admission.dischargeDisposition = EntlassungsartCS#E
-* account = Reference(PJ1Account)
 /*
 * admission.extension.url = "http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival"
 * admission.extension.valueCode = TransportartCS#
