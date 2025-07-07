@@ -13,6 +13,9 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 * author = Reference(OrganizationHerzJesuKrankenhaus)
 * extension[AnzahlVerlegungen].valueUnsignedInt = 1
 * extension[AnzahlBeurlaubungen].valueUnsignedInt = 0
+* extension[Fondsrelevanz].valueCoding = FondsrelevanzCS#J
+* extension[SVAbrechnungsquartal].extension[year].valueDate = "2025"
+* extension[SVAbrechnungsquartal].extension[quater].valuePositiveInt = 1
 * section[MopedEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
 * section[MopedEncounter].code.coding.code = #ENC
 * section[MopedEncounter].entry = Reference(PJ1EncounterAufnahme)

@@ -28,6 +28,8 @@ Title: "MOPED Composition"
 * extension contains AnzahlVerlegungen named AnzahlVerlegungen 1..1
 * extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 1..1
 * extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1
+* extension contains Fondsrelevanz named Fondsrelevanz 1..1
+* extension contains SVAbrechnungsquartal named SVAbrechnungsquartal 1..1
 
 * section 1..*
 * section.code from CompositionSectionsVS

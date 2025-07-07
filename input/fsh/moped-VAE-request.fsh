@@ -56,5 +56,5 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 
 * supportingInfo[VerdachtFremdverschulden] ^short = "Verdacht auf Fremdversschluden"
 * supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
-* supportingInfo[VerdachtFremdverschulden].code.coding = VAESupportingInformationTypesCS#FREVER
+* supportingInfo[VerdachtFremdverschulden].code.coding = ClaimSupportingInformationTypesCS#FREVER
 * supportingInfo[VerdachtFremdverschulden].value[x] only boolean

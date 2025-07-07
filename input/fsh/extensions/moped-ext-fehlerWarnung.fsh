@@ -4,8 +4,8 @@ Title: "Error/Warning"
 Description: "MOPED Extension für akzeptierte Errors und Warnings"
 Context: MopedLKFRequest, MopedLKFResponse
 * extension contains
-    ErrorWert 0..1 MS and
-    ErrorCode 0..1 MS and
+    ErrorWert 1..1 MS and
+    ErrorCode 1..1 MS and
     ErrorKommentar 0..1 MS
 * extension[ErrorWert].value[x] 0..1
 * extension[ErrorWert].value[x] only string
