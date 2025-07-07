@@ -11,11 +11,11 @@ Usage: #example
 * insurer = Reference(oegk-oberoesterreich)
 * provider = Reference(OrganizationKrankenhausRied)
 * encounter[MopedEncounter] = Reference(PJ2Encounter)
-* encounter[MopedTransferEncounter] = Reference(PJ2TransferEncounter1)
-* encounter[MopedTransferEncounter] = Reference(PJ2TransferEncounter2)
-* encounter[MopedTransferEncounter] = Reference(PJ2TransferEncounter3)
-* encounter[MopedTransferEncounter] = Reference(PJ2TransferEncounter4)
-* encounter[MopedTransferEncounter] = Reference(PJ2TransferEncounter5)
+* encounter[TransferEncounter] = Reference(PJ2TransferEncounter1)
+* encounter[TransferEncounter] = Reference(PJ2TransferEncounter2)
+* encounter[TransferEncounter] = Reference(PJ2TransferEncounter3)
+* encounter[TransferEncounter] = Reference(PJ2TransferEncounter4)
+* encounter[TransferEncounter] = Reference(PJ2TransferEncounter5)
 * diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG15.03
 * insurance.coverage = Reference(PJ2Coverage)
 * insurance.sequence = 1
@@ -29,12 +29,14 @@ Usage: #example
 * procedure[=].procedureReference = Reference(PJ2Procedure2)
 
 
-* diagnosis[+].diagnosisReference = Reference(PJ2Condition1)
-* diagnosis[=].sequence = 1
-* diagnosis[=].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
-* diagnosis[+].diagnosisReference = Reference(PJ2Condition2)
-* diagnosis[=].sequence = 2
-* diagnosis[=].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
+* diagnosis[Hauptdiagnose].diagnosisReference = Reference(PJ2Condition1)
+* diagnosis[Hauptdiagnose].sequence = 1
+* diagnosis[Hauptdiagnose].type.coding = $LKFdiagnoseTyp#H
+* diagnosis[Hauptdiagnose].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
+* diagnosis[Zusatzdiagnose].diagnosisReference = Reference(PJ2Condition2)
+* diagnosis[Zusatzdiagnose].sequence = 2
+* diagnosis[Zusatzdiagnose].type.coding = $LKFdiagnoseTyp#Z
+* diagnosis[Zusatzdiagnose].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
 
 
 * item[+].sequence = 1
@@ -48,6 +50,10 @@ Usage: #example
 * item[+].sequence = 4
 * item[=].procedureSequence = 2
 
+* supportingInfo[Plausibilitaetskennzeichen].sequence = 1
+* supportingInfo[Plausibilitaetskennzeichen].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
+* supportingInfo[Plausibilitaetskennzeichen].code.coding = ClaimSupportingInformationTypesCS#PLAUS
+* supportingInfo[Plausibilitaetskennzeichen].valueString = "1234"
 
 * extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#C
 * extension[LKFPunkte].extension[PunkteBelagsdauerausreisserUntenLeistungskomponente].valueUnsignedInt = 0
@@ -59,7 +65,3 @@ Usage: #example
 * extension[LKFPunkte].extension[PunkteTotal].valueUnsignedInt = 1384
 * extension[LKFPunkte].extension[Leistungskomponente].valueUnsignedInt = 62
 * extension[LKFPunkte].extension[TageskomponenteKontaktpunkte].valueUnsignedInt = 1322
-
-* extension[Fondsrelevanz].valueCoding = FondsrelevanzCS#J
-* extension[Plausibilitaetskennzeichen].valueString = "2"
-//* extension[SVAbrechnungsquartal] = 
