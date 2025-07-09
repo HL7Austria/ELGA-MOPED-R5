@@ -8,7 +8,7 @@
     </div>
     <table>
         <tr>
-            <td>Account/Prozess Status</td>
+            <td>Prozess Status</td>
             <td>auslösender Stakeholder</td>
             <td>Bedingung</td>
             <td>Konsequenz</td>

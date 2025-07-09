@@ -27,4 +27,3 @@ Usage: #example
 * admission.extension.valueCoding = AufnahmeartCS#A
 * admission.origin = Reference(OrganizationUeberweisendeOrganization2)
 * admission.dischargeDisposition = EntlassungsartCS#E
-* account = Reference (PJ1Account)
