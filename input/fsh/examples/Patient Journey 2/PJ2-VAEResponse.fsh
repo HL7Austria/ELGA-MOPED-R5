@@ -15,5 +15,7 @@ Usage: #example
 * extension[Sonderklasse].valueCoding = SonderklasseCS#A
 * preAuthPeriod.start = "2024-08-08"
 * preAuthPeriod.end = "2024-08-26"
-* extension[VerpflegskostenBeitragsbefreiung].valueCoding = VerpflegskostenBeitragsbefreiungCS#N
+* extension[VerpflegskostenBeitragsbefreiung].extension[Befreiung].valueCoding = VerpflegskostenBeitragsbefreiungCS#N
+* extension[VerpflegskostenBeitragsbefreiung].extension[Zeitraum].valuePeriod.start = "2024-08-08"
+* extension[VerpflegskostenBeitragsbefreiung].extension[Zeitraum].valuePeriod.start = "2024-08-26"
 * extension[VortageanzahlAufKostenbeitrag].valueUnsignedInt = 0
