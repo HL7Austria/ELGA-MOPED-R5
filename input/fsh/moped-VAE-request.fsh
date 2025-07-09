@@ -7,15 +7,16 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 //* extension contains Verlaengerungstage named Verlaengerungstage 0..1
 * accident.type from VerdachtArbeitsSchuelerunfallVS
 * accident.type 1..1
+* accident.type ^short = "Verdacht auf Fremdversschluden"
 * extension contains Sonderklasse named Sonderklasse 0..1
 * patient only Reference(HL7ATCorePatient)
 * patient 1..1
 * use = http://hl7.org/fhir/claim-use#preauthorization
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 
-* insurer only Reference(HL7ATCoreOrganization)
+* insurer only Reference(SVOrganization)
 * insurer 1..1
-* provider only Reference(HL7ATCoreOrganization)
+* provider only Reference(KHOrganization)
 * provider 1..1
 * related.claim only Reference(MopedVAERequest) //bei Verlängerungsanträgen als Referenz zum initialen
 * insurance.coverage only Reference(MopedCoverage)

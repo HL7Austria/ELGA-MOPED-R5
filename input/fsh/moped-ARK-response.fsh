@@ -9,6 +9,7 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Rückmeldung der
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * subType from KostenmeldungARKVS (required)
 * subType 1..1
+* subType ^short = "Kostenmeldung für Ausländerverrechnung, Regressangelegenheiten und Kosteninformation"
 * request only Reference(MopedARKRequest)
 * request 1..1
 
@@ -23,7 +24,7 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Rückmeldung der
 * identifier[ZwischenstaatlicheRENR].system 1..1
 * identifier[OEGKForderungsnummer].type from http://hl7.org/fhir/ValueSet/identifier-type (required)
 * identifier[OEGKForderungsnummer].type.coding.code = #PLAC (exactly)
-* identifier[OEGKForderungsnummer] ^short = "SHA-256 verschlüsselte Aufnahmezahl"
+* identifier[OEGKForderungsnummer].system 1..1
 
 
 * addItem ^slicing.rules = #open

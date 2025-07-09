@@ -9,6 +9,7 @@ Description: "MOPED Profil der Claim Ressource f체r die Kostenmeldung f체r Ausl�
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * subType from KostenmeldungARKVS (required)
 * subType 1..1
+* subType ^short = "Kostenmeldung f체r Ausl채nderverrechnung, Regressangelegenheiten und Kosteninformation"
 * diagnosisRelatedGroup from LKFAbrechnungsGruppeVS (required)
 * diagnosisRelatedGroup. ^short =  "\"Abrechnung - Gruppe:\" Dieses Datenfeld ist mit der Codenummer der zutreffenden Abrechnungsgruppe zu bef체llen. Bei Datens채tzen von station채ren Krankenhausaufenthalten, die keiner leistungsorientier- ten Diagnosenfallgruppe zugeordnet werden, erfolgt ein Eintrag entsprechend der jeweiligen Aufnahmeart."
 * extension contains DiagnoseKnoten named DiagnoseKnoten 0..1

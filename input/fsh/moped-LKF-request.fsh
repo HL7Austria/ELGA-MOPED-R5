@@ -15,9 +15,9 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * diagnosisRelatedGroup ^short =  "\"Abrechnung - Gruppe:\" Dieses Datenfeld ist mit der Codenummer der zutreffenden Abrechnungsgruppe zu befüllen. Bei Datensätzen von stationären Krankenhausaufenthalten, die keiner leistungsorientier- ten Diagnosenfallgruppe zugeordnet werden, erfolgt ein Eintrag entsprechend der jeweiligen Aufnahmeart."
 * diagnosisRelatedGroup 1..1
 
-* insurer only Reference(HL7ATCoreOrganization)
+* insurer only Reference(SVOrganization)
 * insurer 1..1
-* provider only Reference(HL7ATCoreOrganization)
+* provider only Reference(KHOrganization)
 * provider 1..1
 * related.claim only Reference(MopedLKFRequest)
 * related.claim 1..1
