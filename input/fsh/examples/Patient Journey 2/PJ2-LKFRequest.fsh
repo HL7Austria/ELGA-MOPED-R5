@@ -38,30 +38,46 @@ Usage: #example
 * diagnosis[Zusatzdiagnose].type.coding = $LKFdiagnoseTyp#Z
 * diagnosis[Zusatzdiagnose].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
 
-
-* item[+].sequence = 1
-* item[=].diagnosisSequence = 1
-* item[=].category = https://termgit.elga.gv.at/CodeSystem/lkf-diagnose-typ#H
-* item[+].sequence = 2
-* item[=].diagnosisSequence = 2
-* item[=].category = https://termgit.elga.gv.at/CodeSystem/lkf-diagnose-typ#Z
-* item[+].sequence = 3
-* item[=].procedureSequence = 1
-* item[+].sequence = 4
-* item[=].procedureSequence = 2
-
 * supportingInfo[Plausibilitaetskennzeichen].sequence = 1
 * supportingInfo[Plausibilitaetskennzeichen].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
 * supportingInfo[Plausibilitaetskennzeichen].code.coding = ClaimSupportingInformationTypesCS#PLAUS
 * supportingInfo[Plausibilitaetskennzeichen].valueString = "1234"
 
 * extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#C
-* extension[LKFPunkte].extension[PunkteBelagsdauerausreisserUntenLeistungskomponente].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[PunkteBelagsdauerausreisserUntenTageskomponente].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[ZusatzpunkteBelagsdauerausreisserNachOben].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[ZusatzpunkteIntensiv].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[ZusatzpunkteMehrfachleistungen].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[PunkteSpeziellerBereicheTageweise].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[PunkteTotal].valueUnsignedInt = 1384
-* extension[LKFPunkte].extension[Leistungskomponente].valueUnsignedInt = 62
-* extension[LKFPunkte].extension[TageskomponenteKontaktpunkte].valueUnsignedInt = 1322
+
+* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.value = 0
+* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].category.coding = MopedClaimItemCategoryCS#Punkte
+* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].productOrService = LKFPunkteArtenCS#SCULK
+* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].sequence = 1
+* item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.value = 0
+* item[PunkteBelagsdauerausreisserUntenTageskomponente].category.coding = MopedClaimItemCategoryCS#Punkte
+* item[PunkteBelagsdauerausreisserUntenTageskomponente].productOrService = LKFPunkteArtenCS#SCUTK
+* item[PunkteBelagsdauerausreisserUntenTageskomponente].sequence = 2
+* item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.value = 0
+* item[ZusatzpunkteBelagsdauerausreisserNachOben].category.coding = MopedClaimItemCategoryCS#Punkte
+* item[ZusatzpunkteBelagsdauerausreisserNachOben].productOrService = LKFPunkteArtenCS#BDZU
+* item[ZusatzpunkteBelagsdauerausreisserNachOben].sequence = 3
+* item[ZusatzpunkteIntensiv].quantity.value = 0
+* item[ZusatzpunkteIntensiv].category.coding = MopedClaimItemCategoryCS#Punkte
+* item[ZusatzpunkteIntensiv].productOrService = LKFPunkteArtenCS#INTZU
+* item[ZusatzpunkteIntensiv].sequence = 4
+* item[ZusatzpunkteMehrfachleistungen].quantity.value = 0
+* item[ZusatzpunkteMehrfachleistungen].category.coding = MopedClaimItemCategoryCS#Punkte
+* item[ZusatzpunkteMehrfachleistungen].productOrService = LKFPunkteArtenCS#MELZU
+* item[ZusatzpunkteMehrfachleistungen].sequence = 5
+* item[PunkteSpeziellerBereicheTageweise].quantity.value = 0
+* item[PunkteSpeziellerBereicheTageweise].category.coding = MopedClaimItemCategoryCS#Punkte
+* item[PunkteSpeziellerBereicheTageweise].productOrService = LKFPunkteArtenCS#SCSPEZ
+* item[PunkteSpeziellerBereicheTageweise].sequence = 6
+* item[Gesamtpunkte].quantity.value = 1384
+* item[Gesamtpunkte].category.coding = MopedClaimItemCategoryCS#Punkte
+* item[Gesamtpunkte].productOrService = LKFPunkteArtenCS#SCGES
+* item[Gesamtpunkte].sequence = 7
+* item[Leistungskomponente].quantity.value = 62
+* item[Leistungskomponente].category.coding = MopedClaimItemCategoryCS#Punkte
+* item[Leistungskomponente].productOrService = LKFPunkteArtenCS#LDFPLK
+* item[Leistungskomponente].sequence = 8
+* item[Tageskomponente].quantity.value = 1322
+* item[Tageskomponente].category.coding = MopedClaimItemCategoryCS#Punkte
+* item[Tageskomponente].productOrService = LKFPunkteArtenCS#LDFPTK
+* item[Tageskomponente].sequence = 9

@@ -6,8 +6,10 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 
 //* extension contains Verlaengerungstage named Verlaengerungstage 0..1
 * accident.type from VerdachtArbeitsSchuelerunfallVS
+* accident.type 1..1
 * extension contains Sonderklasse named Sonderklasse 0..1
 * patient only Reference(HL7ATCorePatient)
+* patient 1..1
 * use = http://hl7.org/fhir/claim-use#preauthorization
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 
@@ -15,7 +17,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * insurer 1..1
 * provider only Reference(HL7ATCoreOrganization)
 * provider 1..1
-* related.claim only Reference(MopedVAERequest)
+* related.claim only Reference(MopedVAERequest) //bei Verlängerungsanträgen als Referenz zum initialen
 * insurance.coverage only Reference(MopedCoverage)
 * insurance.coverage 1..1
 
@@ -36,7 +38,8 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * supportingInfo ^slicing.discriminator.type = #value
 * supportingInfo ^slicing.discriminator.path = "code.coding"
 * supportingInfo ^slicing.ordered = false
-* supportingInfo contains /*Sonderklasse 0.. and*/ VerdachtFremdverschulden 0..1 and Verlaengerungstage 0..1
+* supportingInfo.code.coding from VAESupportingInformationTypesVS
+* supportingInfo contains /*Sonderklasse 0.. and*/ VerdachtFremdverschulden 1..1 and Verlaengerungstage 0..1
 /* supportingInfo[Sonderklasse] ^short = "Allgemeine Gebührenklasse/Sonderklasse"
 * supportingInfo[Sonderklasse].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
 * supportingInfo[Sonderklasse].code = VAESupportingInformationTypesCS#KLAS
@@ -56,3 +59,6 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * supportingInfo[Verlaengerungstage].valueQuantity.unit = "day"
 * supportingInfo[Verlaengerungstage].valueQuantity.code = #day
 * supportingInfo[Verlaengerungstage].valueQuantity.system = "http://unitsofmeasure.org"
+
+
+//Invariante: Wenn die Verlängerungstage befüllt sind muss auch der vorherige VAERequest (related.claim) befüllt sein

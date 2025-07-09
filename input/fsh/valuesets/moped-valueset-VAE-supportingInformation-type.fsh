@@ -15,7 +15,6 @@ Title: "MOPED VAESupportingInformationTypes"
 Description: "Arten von zusätzlichen Informationen in der VAE"
 * ^experimental = true
 * https://elga.moped.at/CodeSystem/ClaimSupportingInformationTypesCS#KLAS
-* https://elga.moped.at/CodeSystem/ClaimSupportingInformationTypesCS#VERDAU
 * https://elga.moped.at/CodeSystem/ClaimSupportingInformationTypesCS#FREVER
 
 ValueSet: LKFSupportingInformationTypesVS
