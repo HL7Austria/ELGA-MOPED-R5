@@ -12,3 +12,5 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * request only Reference(MopedLKFRequest)
 * request 1..1
 * decision 1..1
+
+* addItem.extension contains AddItemCategory named AddItemCategory 0..1

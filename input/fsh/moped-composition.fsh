@@ -128,6 +128,24 @@ Title: "MOPED Composition"
 * section[LKFResponses].entry 1..
 * section[LKFResponses].entry only Reference(MopedLKFResponse)
 * section[LKFResponses].author only Reference(LGFOrganization)
+* section contains ARKKostenInformation 0..1 
+* section[ARKKostenInformation].code.coding.system = Canonical(CompositionSectionsCS)
+* section[ARKKostenInformation].code.coding.code = #ARKReq
+* section[ARKKostenInformation].entry 1..
+* section[ARKKostenInformation].entry only Reference(MopedARKRequest)
+* section[ARKKostenInformation].author only Reference(KHOrganization)
+* section contains ARKRueckmeldung 0..1 
+* section[ARKRueckmeldung].code.coding.system = Canonical(CompositionSectionsCS)
+* section[ARKRueckmeldung].code.coding.code = #ARKResp
+* section[ARKRueckmeldung].entry 1..
+* section[ARKRueckmeldung].entry only Reference(MopedARKResponse)
+* section[ARKRueckmeldung].author only Reference(LGFOrganization)
+* section contains ARKStatusUpdate 0..1 
+* section[ARKStatusUpdate].code.coding.system = Canonical(CompositionSectionsCS)
+* section[ARKStatusUpdate].code.coding.code = #ARKPay
+* section[ARKStatusUpdate].entry 1..
+* section[ARKStatusUpdate].entry only Reference(MopedARKStatusUpdate)
+* section[ARKStatusUpdate].author only Reference(LGFOrganization)
 * section contains Observations 0..1 
 * section[Observations].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Observations].code.coding.code = #OBS

@@ -53,13 +53,13 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.discriminator.type = #value
-* supportingInfo ^slicing.discriminator.path = "code.coding"
+* supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.ordered = false
 * supportingInfo contains Plausibilitaetskennzeichen 1..1 
 * supportingInfo[Plausibilitaetskennzeichen] ^short = "Plausibilitätskennzeichen - Dieses Datenfeld enthält eine Kennzeichnung als Ergebnis der vom Gesundheitsministerium vorgegebenen Plausibilitätsprüfung."
-* supportingInfo[Plausibilitaetskennzeichen].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
-* supportingInfo[Plausibilitaetskennzeichen].code.coding = ClaimSupportingInformationTypesCS#PLAUS
-* supportingInfo[Plausibilitaetskennzeichen].value[x] only string
+* supportingInfo[Plausibilitaetskennzeichen].category = ClaimSupportingInformationCategoryCS#PLAUS
+* supportingInfo[Plausibilitaetskennzeichen].value[x] only string //change to unsignedInt in R6
+//TBD: * supportingInfo[Plausibilitaetskennzeichen].value[x] //add regex pattern so it can only have numbers from 0-5
 
 * extension contains DiagnoseKnoten named DiagnoseKnoten 1..1
 * extension contains FehlerWarnung named FehlerWarnung 0..
@@ -68,8 +68,6 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * item ^slicing.ordered = false
 * item ^slicing.discriminator[+].type = #value
 * item ^slicing.discriminator[=].path = "category.coding"
-* item ^slicing.discriminator[+].type = #value
-* item ^slicing.discriminator[=].path = "productOrService"
 * item contains Leistungskomponente 1..1 
 and Tageskomponente 1..1 
 and PunkteBelagsdauerausreisserUntenLeistungskomponente 0..1 
@@ -80,64 +78,63 @@ and ZusatzpunkteMehrfachleistungen 0..1
 and PunkteSpeziellerBereicheTageweise 0..1
 and Gesamtpunkte 1..1
 * item[Leistungskomponente].category from MopedClaimItemCategoryVS (required)
-* item[Leistungskomponente].category.coding = MopedClaimItemCategoryCS#Punkte
-* item[Leistungskomponente].productOrService from ClaimItemArtenVS (required)
-* item[Leistungskomponente].productOrService = LKFPunkteArtenCS#LDFPLK
+* item[Leistungskomponente].category.coding = MopedClaimItemCategoryCS#LDFPLK
 * item[Leistungskomponente].quantity 1..1
+* item[Leistungskomponente].quantity.unit = "LKF Punkte"
 * item[Leistungskomponente].quantity ^short = "Punkteanzahl"
 
 * item[Tageskomponente].category.coding from MopedClaimItemCategoryVS (required)
-* item[Tageskomponente].category.coding = MopedClaimItemCategoryCS#Punkte
-* item[Tageskomponente].productOrService = LKFPunkteArtenCS#LDFPTK
-* item[Tageskomponente].productOrService from ClaimItemArtenVS (required)
+* item[Tageskomponente].category.coding = MopedClaimItemCategoryCS#LDFPTK
 * item[Tageskomponente].quantity 1..1
+* item[Tageskomponente].quantity.value 1..1
+* item[Tageskomponente].quantity.unit = "LKF Punkte"
 * item[Tageskomponente].quantity ^short = "Punkteanzahl"
 
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].category.coding from MopedClaimItemCategoryVS (required)
-* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].category.coding = MopedClaimItemCategoryCS#Punkte
-* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].productOrService = LKFPunkteArtenCS#SCULK
-* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].productOrService from ClaimItemArtenVS (required)
+* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].category.coding = MopedClaimItemCategoryCS#SCULK
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity 1..1
+* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.value 1..1
+* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.unit = "LKF Punkte"
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity ^short = "Punkteanzahl"
 
 * item[PunkteBelagsdauerausreisserUntenTageskomponente].category.coding from MopedClaimItemCategoryVS (required)
-* item[PunkteBelagsdauerausreisserUntenTageskomponente].category.coding = MopedClaimItemCategoryCS#Punkte
-* item[PunkteBelagsdauerausreisserUntenTageskomponente].productOrService = LKFPunkteArtenCS#SCUTK
-* item[PunkteBelagsdauerausreisserUntenTageskomponente].productOrService from ClaimItemArtenVS (required)
+* item[PunkteBelagsdauerausreisserUntenTageskomponente].category.coding = MopedClaimItemCategoryCS#SCUTK
 * item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity 1..1
+* item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.value 1..1
+* item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.unit = "LKF Punkte"
 * item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity ^short = "Punkteanzahl"
 
 * item[ZusatzpunkteBelagsdauerausreisserNachOben].category.coding from MopedClaimItemCategoryVS (required)
-* item[ZusatzpunkteBelagsdauerausreisserNachOben].category.coding = MopedClaimItemCategoryCS#Punkte
-* item[ZusatzpunkteBelagsdauerausreisserNachOben].productOrService = LKFPunkteArtenCS#BDZU
-* item[ZusatzpunkteBelagsdauerausreisserNachOben].productOrService from ClaimItemArtenVS (required)
+* item[ZusatzpunkteBelagsdauerausreisserNachOben].category.coding = MopedClaimItemCategoryCS#BDZU
 * item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity 1..1
+* item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.value 1..1
+* item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.unit = "LKF Punkte"
 * item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity ^short = "Punkteanzahl"
 
 * item[ZusatzpunkteIntensiv].category.coding from MopedClaimItemCategoryVS (required)
-* item[ZusatzpunkteIntensiv].category.coding = MopedClaimItemCategoryCS#Punkte
-* item[ZusatzpunkteIntensiv].productOrService = LKFPunkteArtenCS#INTZU
-* item[ZusatzpunkteIntensiv].productOrService from ClaimItemArtenVS (required)
+* item[ZusatzpunkteIntensiv].category.coding = MopedClaimItemCategoryCS#INTZU
 * item[ZusatzpunkteIntensiv].quantity 1..1
+* item[ZusatzpunkteIntensiv].quantity.value 1..1
+* item[ZusatzpunkteIntensiv].quantity.unit = "LKF Punkte"
 * item[ZusatzpunkteIntensiv].quantity ^short = "Punkteanzahl"
 
 * item[ZusatzpunkteMehrfachleistungen].category.coding from MopedClaimItemCategoryVS (required)
-* item[ZusatzpunkteMehrfachleistungen].category.coding = MopedClaimItemCategoryCS#Punkte
-* item[ZusatzpunkteMehrfachleistungen].productOrService = LKFPunkteArtenCS#MELZU
-* item[ZusatzpunkteMehrfachleistungen].productOrService from ClaimItemArtenVS (required)
+* item[ZusatzpunkteMehrfachleistungen].category.coding = MopedClaimItemCategoryCS#MELZU
 * item[ZusatzpunkteMehrfachleistungen].quantity 1..1
+* item[ZusatzpunkteMehrfachleistungen].quantity.value 1..1
+* item[ZusatzpunkteMehrfachleistungen].quantity.unit = "LKF Punkte"
 * item[ZusatzpunkteMehrfachleistungen].quantity ^short = "Punkteanzahl"
 
 * item[PunkteSpeziellerBereicheTageweise].category.coding from MopedClaimItemCategoryVS (required)
-* item[PunkteSpeziellerBereicheTageweise].category.coding = MopedClaimItemCategoryCS#Punkte
-* item[PunkteSpeziellerBereicheTageweise].productOrService = LKFPunkteArtenCS#SCSPEZ
-* item[PunkteSpeziellerBereicheTageweise].productOrService from ClaimItemArtenVS (required)
+* item[PunkteSpeziellerBereicheTageweise].category.coding = MopedClaimItemCategoryCS#SCSPEZ
 * item[PunkteSpeziellerBereicheTageweise].quantity 1..1
+* item[PunkteSpeziellerBereicheTageweise].quantity.value 1..1
+* item[PunkteSpeziellerBereicheTageweise].quantity.unit = "LKF Punkte"
 * item[PunkteSpeziellerBereicheTageweise].quantity ^short = "Punkteanzahl"
 
 * item[Gesamtpunkte].category.coding from MopedClaimItemCategoryVS (required)
-* item[Gesamtpunkte].category.coding = MopedClaimItemCategoryCS#Punkte
-* item[Gesamtpunkte].productOrService = LKFPunkteArtenCS#SCGES
-* item[Gesamtpunkte].productOrService from ClaimItemArtenVS (required)
+* item[Gesamtpunkte].category.coding = MopedClaimItemCategoryCS#SCGES
 * item[Gesamtpunkte].quantity 1..1
+* item[Gesamtpunkte].quantity.value 1..1
+* item[Gesamtpunkte].quantity.unit = "LKF Punkte"
 * item[Gesamtpunkte].quantity ^short = "Punkteanzahl"

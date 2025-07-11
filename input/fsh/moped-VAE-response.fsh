@@ -35,9 +35,9 @@ Durch die Angabe eines Fristendes wird signalisiert, dass bei einem über das Fr
 * preAuthPeriod.start ^short = "VAE Beginndatum"
 * preAuthPeriod.end 0..1
 * preAuthPeriod.end ^short = "VAE Enddatum und Indikator, ob es ein Fristende gibt"
-* extension contains Sonderklasse named Sonderklasse 1..1
+* extension contains MopedSupportingInfoSonderklasse named MopedSupportingInfoSonderklasse 1..1
 * extension contains VerpflegskostenBeitragsbefreiung named VerpflegskostenBeitragsbefreiung 1..1
-* extension contains VortageanzahlAufKostenbeitrag named VortageanzahlAufKostenbeitrag 1..1
+* extension contains MopedSupportingInfoVortageanzahlAufKostenbeitrag named MopedSupportingInfoVortageanzahlAufKostenbeitrag 1..1
 
-
+* addItem.extension contains AddItemCategory named AddItemCategory 0..1
 

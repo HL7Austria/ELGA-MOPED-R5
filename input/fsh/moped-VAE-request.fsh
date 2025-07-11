@@ -8,7 +8,6 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * accident.type from VerdachtArbeitsSchuelerunfallVS
 * accident.type 1..1
 * accident.type ^short = "Verdacht auf Fremdversschluden"
-* extension contains Sonderklasse named Sonderklasse 0..1
 * patient only Reference(HL7ATCorePatient)
 * patient 1..1
 * use = http://hl7.org/fhir/claim-use#preauthorization
@@ -37,26 +36,25 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.discriminator.type = #value
-* supportingInfo ^slicing.discriminator.path = "code.coding"
+* supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.ordered = false
-* supportingInfo.code.coding from VAESupportingInformationTypesVS
-* supportingInfo contains /*Sonderklasse 0.. and*/ VerdachtFremdverschulden 1..1 and Verlaengerungstage 0..1
-/* supportingInfo[Sonderklasse] ^short = "Allgemeine Gebührenklasse/Sonderklasse"
-* supportingInfo[Sonderklasse].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
-* supportingInfo[Sonderklasse].code = VAESupportingInformationTypesCS#KLAS
-* supportingInfo[Sonderklasse].value[x] only Coding
-* supportingInfo[Sonderklasse].value[x] from SonderklasseVS
-* supportingInfo[Sonderklasse].timingPeriod 1..1*/
+* supportingInfo.code.coding from VAESupportingInformationCategoryVS
+* supportingInfo contains Sonderklasse 0.. and VerdachtFremdverschulden 1..1 and Verlaengerungstage 0..1
+* supportingInfo[Sonderklasse] ^short = "Allgemeine Gebührenklasse/Sonderklasse"
+* supportingInfo[Sonderklasse].category = ClaimSupportingInformationCategoryCS#KLAS
+* supportingInfo[Sonderklasse].code from SonderklasseVS
+* supportingInfo[Sonderklasse].code 1..1
+* supportingInfo[Sonderklasse].timingPeriod 1..1
 
 * supportingInfo[VerdachtFremdverschulden] ^short = "Verdacht auf Fremdversschluden"
-* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
-* supportingInfo[VerdachtFremdverschulden].code.coding = ClaimSupportingInformationTypesCS#FREVER
+* supportingInfo[VerdachtFremdverschulden].category = ClaimSupportingInformationCategoryCS#FREVER
 * supportingInfo[VerdachtFremdverschulden].value[x] only boolean
+* supportingInfo[VerdachtFremdverschulden].valueBoolean 1..1
 
 * supportingInfo[Verlaengerungstage] ^short = "Anzahl der Verlängerungstage"
-* supportingInfo[Verlaengerungstage].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
-* supportingInfo[Verlaengerungstage].code.coding = ClaimSupportingInformationTypesCS#VERLAENG
-* supportingInfo[Verlaengerungstage].valueQuantity.value 1..1
+* supportingInfo[Verlaengerungstage].category = ClaimSupportingInformationCategoryCS#VERLAENG
+* supportingInfo[Verlaengerungstage].valueQuantity.value 1..1 //change to unsignedInt in R6
+* supportingInfo[Verlaengerungstage].valueQuantity.value ^short = "Verlängerungstage"
 * supportingInfo[Verlaengerungstage].valueQuantity.unit = "day"
 * supportingInfo[Verlaengerungstage].valueQuantity.code = #day
 * supportingInfo[Verlaengerungstage].valueQuantity.system = "http://unitsofmeasure.org"
