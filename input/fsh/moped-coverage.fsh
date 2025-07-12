@@ -11,7 +11,7 @@ Title: "MOPED Coverage"
 * identifier[VDASID].system = $VdasIdSystem
 * identifier[VDASID].assigner only Reference(HL7ATCoreOrganization)
 * paymentBy.party only Reference(HL7ATCoreOrganization)
-* insurer only Reference(HL7ATCoreOrganization)
+* insurer only Reference(SVOrganization)
 * policyHolder only Reference(HL7ATCorePatient or Hauptversicherter)
 * beneficiary only Reference(HL7ATCorePatient)
 * class ^slicing.discriminator.type = #value
