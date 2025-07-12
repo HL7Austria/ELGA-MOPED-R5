@@ -14,7 +14,7 @@ Usage: #definition
 * system = false
 * type = true
 * instance = false
-* code = #verlegen
+* code = #wechseln
 * parameter[+]
   * name = #compositionID
   * use = #in
@@ -29,14 +29,6 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
-* parameter[+]
-  * name = #zustaendigeSV
-  * use = #in
-  * min = 1
-  * max = "1"
-  * documentation = "Der *zustaendigeSV* Parameter beinhaltet die Referenz auf die neue zuständige SV"
-  * type = #Reference
-  * targetProfile[+] = Canonical(SVOrganization)
 * parameter[+]
   * name = #coverage
   * use = #in

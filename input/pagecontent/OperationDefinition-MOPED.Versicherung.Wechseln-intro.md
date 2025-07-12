@@ -17,9 +17,9 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $wechseln Operati
 5. Alter Hauptversicherter:
   * Suchen und löschen der alten RelatedPersion in Composition.section:Hauptversicherter
 6. Neue Coverage:
-  * neue Coverage laut Operation Parameter *coverage* in der Composition.section:Coverages einfügen
+  * Die neue Coverage laut Operation Parameter *coverage* in der Composition.section:Coverages einfügen
 7. Neue zuständige SV:
-  * neue zuständige SV laut Operation Parameter *zustaendigeSV* in der Composition.section:zustaendigeSV einfügen
+  * Für die neue zuständige SV aus dem Operation Parameter *coverage* die Referenz im Element Coverage.insurer auslesen und in der Composition.section:zustaendigeSV.entry einfügen
 
 ## Validierung
 * Es muss überprüft werden, ob der Parameter *aufnahmezahl* mit dem Encounter.identifier:Aufnahmezahl der Composition aus Schritt 1 übereinstimmt.
