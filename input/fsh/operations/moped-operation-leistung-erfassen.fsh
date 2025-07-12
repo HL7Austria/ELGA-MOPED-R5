@@ -1,7 +1,7 @@
-Instance: MopedLeistungEinmelden
+Instance: MopedDiagnosenLeistungErfassen
 InstanceOf: OperationDefinition
-Title: "MOPED Encounter Leistung und Diagnosen $erfassen (POC)"
-Description: "Die $erfassen Operation wird aufgerufen, wenn eine erbrachte Leistungen und Diagnosen eingemeldet wird."
+Title: "MOPED Encounter Leistung und Diagnosen $erfassen"
+Description: "Die $erfassen Operation wird aufgerufen, wenn eine erbrachte Leistungen oder Diagnosen eingemeldet wird."
 Usage: #definition
 
 * id = "MOPED.Encounter.erfassen"
@@ -15,6 +15,13 @@ Usage: #definition
 * instance = false
 * code = #erfassen
 * parameter[+]
+  * name = #compositionID
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation = "Der *compositionID* Parameter beinhaltet die technische ID (inklusive Version) der Composition des zu bearbeitenden Falls"
+  * type = #id
+* parameter[+]
   * name = #aufnahmezahl
   * use = #in
   * min = 1
@@ -22,21 +29,13 @@ Usage: #definition
   * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
-  * name = #leistung
+  * name = #leistungenDiagnosen
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Der *leistung* Parameter beinhaltet eine erbrachte Leistung in MEL-Codierung."
-  * type = #Procedure
-  * targetProfile = Canonical(MopedProcedure)
-* parameter[+]
-  * name = #diagnose
-  * use = #in
-  * min = 0
-  * max = "*"
-  * documentation = "Der *diagnose* Parameter beinhaltet eine Diagnose in HDG-Codierung."
-  * type = #Condition
-  * targetProfile = Canonical(MopedCondition)
+  * documentation = "Der *leistungenDiagnosen* Parameter beinhaltet ein Bundle mit sämtlichen zu ändernden, hinzuzufügenden oder zu löschenden Diagnosen und Leistungen"
+  * type = #Bundle
+  * targetProfile = Canonical(MopedErfassenBundle)
 * parameter[+]
   * name = #return
   * use = #out

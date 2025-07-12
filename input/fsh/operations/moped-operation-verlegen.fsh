@@ -30,32 +30,13 @@ Usage: #definition
   * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
   * type = #Identifier
 * parameter[+]
-  * name = #zeitpunkt
+  * name = #verlegungen
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *zeitpunkt* Parameter definiert zu welchem Zeitpunkt die Verlegung stattfindet aber insbesondere das Abgangsdatum des vorherigen TENC."
-  * type = #dateTime
-* parameter[+]
-  * name = #abgangsart
-  * use = #in
-  * min = 0
-  * max = "1"
-  * documentation = "Der *abgangsart* Parameter definiert die Abgangsart des Patienten vom bisher aktuellen MopedTransferEncounter."
-  * type = #code
-  * binding[+]
-    * strength = #required
-    * valueSet = Canonical(AbgangsartVS)
-* parameter[+]
-  * name = #verlegung
-  * use = #in
-  * min = 1
-  * max = "1"
-  * documentation = "Der *verlegung* Parameter beinhaltet den Transferencounter inklusive aller notwendigen Informationen (siehe Profil)"
-  * type = #Encounter
-  * targetProfile[+] = Canonical(MopedTransferEncounterA)
-  * targetProfile[+] = Canonical(MopedTransferEncounterI)
-  * targetProfile[+] = Canonical(MopedTransferEncounterS)
+  * documentation = "Der *verlegungen* Parameter beinhaltet die Transferencounter inklusive aller notwendigen Informationen (siehe Profil)"
+  * type = #Bundle
+  * targetProfile[+] = Canonical(MopedVerlegenBundle)
 * parameter[+]
   * name = #return
   * use = #out

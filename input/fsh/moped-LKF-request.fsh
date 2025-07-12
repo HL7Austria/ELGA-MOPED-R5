@@ -10,7 +10,9 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * use = http://hl7.org/fhir/claim-use#claim
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 
-* procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 1..1
+* procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 0..1
+* procedure.procedure[x] 1..
+* procedure.procedure[x] only Reference(MopedProcedure)
 * diagnosisRelatedGroup from LKFAbrechnungsGruppeVS (required)
 * diagnosisRelatedGroup ^short =  "\"Abrechnung - Gruppe:\" Dieses Datenfeld ist mit der Codenummer der zutreffenden Abrechnungsgruppe zu befüllen. Bei Datensätzen von stationären Krankenhausaufenthalten, die keiner leistungsorientier- ten Diagnosenfallgruppe zugeordnet werden, erfolgt ein Eintrag entsprechend der jeweiligen Aufnahmeart."
 * diagnosisRelatedGroup 1..1
