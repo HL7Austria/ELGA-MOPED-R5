@@ -12,26 +12,5 @@ Usage: #example
 
 * outcome = #complete
 * diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG01.31
-
+* decision = http://hl7.org/fhir/claim-decision#approved
 * extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#D
-* extension[LKFPunkte].extension[PunkteBelagsdauerausreisserUntenLeistungskomponente].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[PunkteBelagsdauerausreisserUntenTageskomponente].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[ZusatzpunkteBelagsdauerausreisserNachOben].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[ZusatzpunkteIntensiv].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[ZusatzpunkteMehrfachleistungen].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[PunkteSpeziellerBereicheTageweise].valueUnsignedInt = 0
-* extension[LKFPunkte].extension[PunkteTotal].valueUnsignedInt = 1110
-* extension[LKFPunkte].extension[Leistungskomponente].valueUnsignedInt = 743
-* extension[LKFPunkte].extension[TageskomponenteKontaktpunkte].valueUnsignedInt = 367
-
-* extension[LDFPunktewertNetto].valueDecimal = 14892
-* extension[LDFBetragNetto].valueDecimal = 165301
-* extension[PatientenanteilAngehoerige].valueMoney.value = 0
-* extension[Patientenanteil].valueMoney.value = 0
-* extension[Beihilfenaequivalent].valueUnsignedInt = 1111
-* extension[ForderungsbetragAuslaenderverrechnungRegress].valueMoney.value = 0
-//* extension[RechnungsnummerKHLGF] = 
-//* extension[Sonderleistungsnummer]
-//* extension[AnzahlSonderleistungen]
-* extension[PunkteLDFPauschale].valueDecimal = 1110
-* extension[KonstenmeldungARK].valueCoding = KostenmeldungARKCS#K

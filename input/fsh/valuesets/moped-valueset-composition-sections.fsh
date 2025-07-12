@@ -19,6 +19,9 @@ Description: "CodeSystem für die Moped Sections der Composition Ressource"
 * #LKFResp "LKFResponses"
 * #HAUPTV "Hauptversicherter"
 * #QResp "QuestionnaireResponses"
+* #ARKReq "ARK Requests"
+* #ARKResp "ARK Responses"
+* #ARKPay "ARK Status Updates"
 
 ValueSet: CompositionSectionsVS
 Title: "Moped Composition Sections ValueSet"

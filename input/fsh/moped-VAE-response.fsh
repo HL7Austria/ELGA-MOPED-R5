@@ -15,11 +15,12 @@ Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklä
 * request 1..1
 * insurer only Reference(SVOrganization)
 * insurer 1..1
-
+* outcome 1..1
+* outcome ^short = "VAE Bewilligung/Ablehnung"
 * decision from VAEStatusVS (required)
 * decision 1..1
-* . ^definition =  "\"VAEST - Status der Versichertenanspruchserklärung\""
-* . ^short =  "\"VAEST - Status der Versichertenanspruchserklärung\""
+* decision ^definition =  "\"VAEST - Status der Versichertenanspruchserklärung\""
+* decision ^short =  "\"VAEST - Status der Versichertenanspruchserklärung\""
 
 * preAuthPeriod ^definition = "Ist diese Zeitspanne angegeben so gibt es ein Fristende.
 Befristungen sind in folgenden Fällen vorgesehen:
@@ -31,10 +32,12 @@ Bei den ersten beiden Punkten wird von den Krankenversicherungsträgern das Fris
 Durch die Angabe eines Fristendes wird signalisiert, dass bei einem über das Fristende hinaus dau- ernden Aufenthalt eine Verlängerungsanzeige vorzulegen ist."
 * preAuthPeriod 1..1
 * preAuthPeriod.start 1..1
+* preAuthPeriod.start ^short = "VAE Beginndatum"
 * preAuthPeriod.end 0..1
-* extension contains Sonderklasse named Sonderklasse 1..1
+* preAuthPeriod.end ^short = "VAE Enddatum und Indikator, ob es ein Fristende gibt"
+* extension contains MopedSupportingInfoSonderklasse named MopedSupportingInfoSonderklasse 1..1
 * extension contains VerpflegskostenBeitragsbefreiung named VerpflegskostenBeitragsbefreiung 1..1
-* extension contains VortageanzahlAufKostenbeitrag named VortageanzahlAufKostenbeitrag 1..1
+* extension contains MopedSupportingInfoVortageanzahlAufKostenbeitrag named MopedSupportingInfoVortageanzahlAufKostenbeitrag 1..1
 
-
+* addItem.extension contains AddItemCategory named AddItemCategory 0..1
 
