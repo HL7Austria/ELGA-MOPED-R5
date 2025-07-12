@@ -34,3 +34,4 @@ Title: "MOPED Procedure"
 * code.coding from LKFLeistungskatalogVS (required)
 * code.coding 1..
 * code.coding.system = $LKFLeistungskatalog
+* bodySite from LKFSeitenlokalisationVS
