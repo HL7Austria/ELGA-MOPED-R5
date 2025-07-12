@@ -14,14 +14,8 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 * extension[AnzahlVerlegungen].valueUnsignedInt = 1
 * extension[AnzahlBeurlaubungen].valueUnsignedInt = 0
 * extension[Fondsrelevanz].valueCoding = FondsrelevanzCS#J
-* section[MopedEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
-* section[MopedEncounter].code.coding.code = #ENC
-* section[MopedEncounter].entry = Reference(PJ1EncounterAufnahme)
-* section[MopedEncounter].author =  Reference(OrganizationHerzJesuKrankenhaus)
 
-* section[TransferEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
-* section[TransferEncounter].code.coding.code = #TENC
-* section[TransferEncounter].entry = Reference(PJ1TransferEncounter1Aufnahme)
+* encounter = Reference(PJ1EncounterAufnahme)
 
 * section[zustaendigeSV].code.coding.system = Canonical(CompositionSectionsCS)
 * section[zustaendigeSV].code.coding.code = #SV
@@ -35,13 +29,10 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 * section[zustaendigesKH].code.coding.code = #KH
 * section[zustaendigesKH].entry = Reference(OrganizationHerzJesuKrankenhaus)
 
-* section[besuchteAbteilungen].code.coding.system = Canonical(CompositionSectionsCS)
-* section[besuchteAbteilungen].code.coding.code = #ABT
-* section[besuchteAbteilungen].entry = Reference(AbteilungHerzJesu1)
-* section[besuchteAbteilungen].author = Reference(OrganizationHerzJesuKrankenhaus)
-
-* section[Coverages].code.coding.system = Canonical(CompositionSectionsCS)
-* section[Coverages].code.coding.code = #COV
-* section[Coverages].entry = Reference(PJ1Coverage)
-* section[Coverages].author = Reference(OrganizationHerzJesuKrankenhaus)
+* section[Diagnosen].code.coding.system = Canonical(CompositionSectionsCS)
+* section[Diagnosen].code.coding.code = #DIAG
+* section[Diagnosen].author = Reference(OrganizationHerzJesuKrankenhaus)
+* section[Diagnosen].section[Aufnahmediagnosen].entry = Reference(PJ1Condition1)
+* section[Diagnosen].section[Aufnahmediagnosen].code.coding.code = $LKFdiagnoseTyp#A
+* section[Diagnosen].section[Aufnahmediagnosen].author = Reference(OrganizationHerzJesuKrankenhaus)
 
