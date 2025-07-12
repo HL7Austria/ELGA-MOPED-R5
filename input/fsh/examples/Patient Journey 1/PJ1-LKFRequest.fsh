@@ -11,7 +11,7 @@ Usage: #example
 * insurer = Reference(oegk-wien)
 * provider = Reference(OrganizationHerzJesuKrankenhaus)
 * encounter[MopedEncounter] = Reference(PJ1Encounter)
-* encounter[MopedTransferEncounter] = Reference(PJ1TransferEncounter1)
+* encounter[TransferEncounter] = Reference(PJ1TransferEncounter1)
 * diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG01.31
 
 * insurance.coverage = Reference(PJ1Coverage)
@@ -20,15 +20,21 @@ Usage: #example
 * procedure[+].extension[AbrechnungsRelevanz].valueCoding = AbrechnungsRelevanzCS#J
 * procedure[=].sequence = 1
 * procedure[=].procedureReference = Reference(PJ1Procedure1)
-* diagnosis[+].diagnosisReference = Reference(PJ1Condition1)
-* diagnosis[=].sequence = 1
-* diagnosis[=].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
+* diagnosis[Hauptdiagnose].diagnosisReference = Reference(PJ1Condition1)
+* diagnosis[Hauptdiagnose].sequence = 1
+* diagnosis[Hauptdiagnose].type.coding = $LKFdiagnoseTyp#H
+* diagnosis[Hauptdiagnose].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
 
 * item[+].sequence = 1
 * item[=].diagnosisSequence = 1
 * item[=].category = https://termgit.elga.gv.at/CodeSystem/lkf-diagnose-typ#H
 * item[+].sequence = 2
 * item[=].procedureSequence = 1
+
+* supportingInfo[Plausibilitaetskennzeichen].sequence = 1
+* supportingInfo[Plausibilitaetskennzeichen].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
+* supportingInfo[Plausibilitaetskennzeichen].code.coding = ClaimSupportingInformationTypesCS#PLAUS
+* supportingInfo[Plausibilitaetskennzeichen].valueString = "1234"
 
 
 * extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#D
@@ -41,7 +47,3 @@ Usage: #example
 * extension[LKFPunkte].extension[PunkteTotal].valueUnsignedInt = 1110
 * extension[LKFPunkte].extension[Leistungskomponente].valueUnsignedInt = 743
 * extension[LKFPunkte].extension[TageskomponenteKontaktpunkte].valueUnsignedInt = 367
-
-* extension[Fondsrelevanz].valueCoding = FondsrelevanzCS#J
-* extension[Plausibilitaetskennzeichen].valueString = "4"
-//* extension[SVAbrechnungsquartal] = 

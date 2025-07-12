@@ -4,36 +4,40 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 
 ## Voraussetzungen für den Aufruf
 
-* Account-Status: `SV verarbeitet`
+* MopedEncounter existiert und besitzt den Status *in-progress* oder *discharged* (wenn es bereits eine Entlassung Aviso gibt)
 
 ## Detaillierte Business-Logik
 
-1. Suche des MopedEncounter: Der MopedEncounter mit der jeweiligen *aufnahmezahl* lt. Operation-Parameter wird gesucht
-2. Update des MopedEncounters:
+1. Suche der Composition: Die Composition mit der jeweiligen *compositionID* lt. Operation-Parameter wird gesucht
+  * *Composition.extension:TageOhneKostenbeitrag* lt. Operation-Parameter *tageOhneKostenbeitrag* befüllen
+2. Update des MopedEncounters (Composition.encounter):
   * *MopedEncounter.actualPeriod.end* mit dem *zeitpunkt* lt. Operation-Parameter befüllen
-  * *MopedEncounter.status* mit `discharged`  befüllen
+  * *MopedEncounter.status* mit `discharged` oder `complete`  befüllen je nach Ausprägung von *aviso* (siehe Hinweis 1)
   * *MopedEncounter.admission.dischargeDisposition* mit *entlassungsart* lt. Operation-Parameter befüllen
-3. Suche des letzten MopedTransferEncounter: Mit *MopedTransferEncounter.partOf* einer Referenz auf den MopedEncounter aus Schritt 1 und den Status *in-progress*
-4. Update des letzten MopedTransferEncounter:
-  * *MopedTransferEncounter.status* mit `completed` befüllen gesetzt
-  * *MopedTransferEncounter.actualPeriod.end* mit *zeitpunkt* lt. Operation-Parameter befüllen
-4. Erstellung eines leeren *MopedLKFRequest*:
-  * *MopedLKFRequest.status* mit `draft` befüllen
-  * *MopedLKFRequest.patient* mit MopedAccount.subject befüllen
-5. Änderungen im Account:
-  * *MopedAccount.ClaimRef* mit der Referenz aus Schritt 4 befüllen
-  * *MopedAccount.WorkflowStatus* mit `Entlassungs Aviso` befüllen, oder, falls der *freigeben*-Operation-Parameter auf `true` gesetzt war und die Validierung erfolgreich war, wird *MopedAccount.WorkflowStatus* mit `Entlassung vollständig` befüllt.
-  * *MopedAccount.TageOhneKostenbeitrag* lt. gleichnamigen Opeartion-Parameter befüllen
+  * *MopedEncounter.zugewiesenAn* lt. Operation-Parameter *zugewiesenAn* befüllen
+  * *MopedEncounter.extension:Altersgruppe.extension:beiEntlassung* berechnen und befüllen (siehe Hinweis 2)
 
-## Validierung / Fehlerbehandlung
+## Validierung
+* Es muss überprüft werden, ob der Parameter *aufnahmezahl* mit dem Encounter.identifier:Aufnahmezahl der Composition aus Schritt 1 übereinstimmt.
 
-* Wenn der *freigeben*-Parameter auf *true* ist, muss eine Validierung aller Ressourcen (MopedEncounter, Account) erfolgreich sein, oder die Operation schlägt fehl.
-* Wenn der *freigeben*-Parameter auf *true* ist, muss Information zu den Tagen ohne Kostenbeitrag vorliegen (i.e. der Operation-Parameter *TageOhneKostenbeitrag* muss befüllt sein)
-* Wurden bei der Suche in Schritt 4 mehrere MopedTransferEncounter gefunden, liegen inkonsistente Daten vor und die Operation schlägt fehl.
+## Workflowstatus Tracking
+* *Composition.useContext:Workflow* wird um einen Eintrag "Entlassung Aviso" oder "Entlassung vollständig" erweitert je nach Wert des Parameters *aviso* und nur sofern der status nicht bereits existiert
 
 ## Weitere Hinweise
-
-* Hinweis 1: Wurde der Patient direkt aus der Intensivstation entlassen, so müsste auch eine Abgangsart im MopedTransferEncounter gesetzt werden. Dieser Spezialfall wurde noch nicht berücksichtigt.
+* Hinweis 1: *aviso* = false führt zum Encounter.status `discharged` und *aviso* = true führt zum Encounter.status `complete`
+* Hinweis 2: LKF 4.1.9 Altersgruppe bei Entlassung/Kontakt
+  * Vollendete Lebensjahre sind ausschlaggebend
+  * 0: 0
+  * 1-4: 1
+  * 5-9: 5
+  * 10-14: 10
+  * 15-19: 15
+  * 20-24: 20
+  * ... immer weiter so, die untere Grenze des Alters in 5er-Schritten
+  * 85-89: 85
+  * 90-95: 90
+  * 95 und älter: 95
+  Bei ambulanten Fällen mit dem Aufnahmedatum und bei stationären mit dem Entlassungsdatum berechnen
 
 ## Annahmen an das BeS
 * Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle entlassen werden können.

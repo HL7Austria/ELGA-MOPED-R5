@@ -9,8 +9,10 @@ Usage: #example
 * created = "2025-02-24"
 * patient = Reference(PJ2Patient)
 * request = Reference(PJ2VAERequest1)
+* insurer = Reference(oegk-oberoesterreich)
 * outcome = #complete
 * decision.coding = VAEStatusCS#00
+* extension[Sonderklasse].valueCoding = SonderklasseCS#A
 * preAuthPeriod.start = "2024-08-08"
 * preAuthPeriod.end = "2024-08-26"
 * extension[VerpflegskostenBeitragsbefreiung].valueCoding = VerpflegskostenBeitragsbefreiungCS#N

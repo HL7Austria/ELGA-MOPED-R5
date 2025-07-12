@@ -3,7 +3,7 @@ Parent: Composition
 Description: "MOPED Profil der Composition Ressource von der alle anderen Compositions ableiten."
 Title: "MOPED Composition"
 * subject only Reference(HL7ATCorePatient)
-* encounter only Reference(MopedEncounter)
+* encounter only Reference(MopedEncounterA or MopedEncounterS)
 * ^experimental = true
 
 * useContext 1..*
@@ -28,6 +28,8 @@ Title: "MOPED Composition"
 * extension contains AnzahlVerlegungen named AnzahlVerlegungen 1..1
 * extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 1..1
 * extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1
+* extension contains Fondsrelevanz named Fondsrelevanz 1..1
+* extension contains SVAbrechnungsquartal named SVAbrechnungsquartal 1..1
 
 * section 1..*
 * section.code from CompositionSectionsVS
@@ -38,7 +40,7 @@ Title: "MOPED Composition"
 * section[MopedEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
 * section[MopedEncounter].code.coding.code = #ENC
 * section[MopedEncounter].entry 1..
-* section[MopedEncounter].entry only Reference(MopedEncounter)
+* section[MopedEncounter].entry only Reference(MopedEncounterA or MopedEncounterS)
 * section[MopedEncounter].author only Reference(KHOrganization)
 * section contains TransferEncounter 1..1
 * section[TransferEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
@@ -139,3 +141,9 @@ Title: "MOPED Composition"
 * section[Hauptversicherter].entry 1..1
 * section[Hauptversicherter].entry only Reference(Hauptversicherter)
 * section[Hauptversicherter].author only Reference(KHOrganization)
+* section contains Frageboegen 0..1 
+* section[Frageboegen].code.coding.system = Canonical(CompositionSectionsCS)
+* section[Frageboegen].code.coding.code = #QResp
+* section[Frageboegen].entry 0..
+* section[Frageboegen].entry only Reference(MopedQuestionnaireResponse)
+* section[Frageboegen].author only Reference(KHOrganization)

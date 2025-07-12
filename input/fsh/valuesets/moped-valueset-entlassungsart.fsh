@@ -32,8 +32,37 @@ Description: "CodeSystem für die Entlassungsart des Patienten"
 * #LKF_8 "Sterbefall"
 * #LKF_9 "Sonstige Abgangsart"
 
+//TBD muss generell noch überarbeitet werden -> vorläufige zuordnung als Platzhalter, um in den Profile ENCS und ENCA verwendet werden zu können
+
 ValueSet: EntlassungsartVS
-Title: "Entlassungsart des Patienten"
+Title: "Entlassungsart des Patienten ambulant + stationär"
 Description: "ValueSet für die Entlassungsart des Patienten"
+* include codes from valueset EntlassungsartAVS
+* include codes from valueset EntlassungsartSVS
+
+ValueSet: EntlassungsartAVS
+Title: "Entlassungsart des Patienten ambulant"
+Description: "ValueSet für die ambulante Entlassungsart des Patienten"
 * ^experimental = true
-* include codes from system EntlassungsartCS
+* EntlassungsartCS#LKF_1
+* EntlassungsartCS#LKF_2
+* EntlassungsartCS#LKF_3
+* EntlassungsartCS#LKF_5
+* EntlassungsartCS#LKF_6
+* EntlassungsartCS#LKF_7
+* EntlassungsartCS#LKF_8
+* EntlassungsartCS#LKF_9
+
+ValueSet: EntlassungsartSVS
+Title: "Entlassungsart des Patienten stationär"
+Description: "ValueSet für die stationäre Entlassungsart des Patienten"
+* ^experimental = true
+* EntlassungsartCS#E
+* EntlassungsartCS#T
+* EntlassungsartCS#S
+* EntlassungsartCS#A
+* EntlassungsartCS#R
+* EntlassungsartCS#P
+* EntlassungsartCS#LKF_L
+* EntlassungsartCS#LKF_V
+* EntlassungsartCS#4
