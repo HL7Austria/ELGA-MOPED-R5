@@ -32,7 +32,7 @@ Usage: #definition
 * parameter[+]
   * name = #Fondsrelevanz
   * use = #in
-  * min = 0
+  * min = 1
   * max = "1"
   * documentation = "Mit Hilfe des *Fondsrelevanz* Parameters wird festgehalten, ob es sich bei dem Fall um einen relevanten Fall für den Fonds handelt."
   * type = #code
