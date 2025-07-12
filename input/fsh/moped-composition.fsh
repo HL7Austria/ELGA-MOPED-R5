@@ -69,7 +69,7 @@ Title: "MOPED Composition"
 * section contains Diagnosen 0..1 
 * section[Diagnosen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Diagnosen].code.coding.code = #DIAG
-* section[Diagnosen].entry 0..0 //Keine Diagnose ohne Kategorisierung
+* section[Diagnosen].entry 0..
 * section[Diagnosen].section ^slicing.discriminator[+].type = #value
 * section[Diagnosen].section ^slicing.discriminator[=].path = "code.coding.code"
 * section[Diagnosen].section ^slicing.rules = #open
