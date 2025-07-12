@@ -14,11 +14,8 @@ Description: """Bundle für die Input-Ressourcen bei Patienten-Aufnahme"""
   Encounter 1..1
 * entry[Encounter].resource only MopedEncounter
 * entry contains
-  Coverage 1..1
-* entry[Coverage].resource only MopedCoverage
+  Aufnahmediagnose 1..
+* entry[Aufnahmediagnose].resource only MopedCondition
 * entry contains
   Patient 1..1
 * entry[Patient].resource only HL7ATCorePatient
-* entry contains
-  Hauptversicherter 0..1
-* entry[Hauptversicherter].resource only Hauptversicherter
