@@ -3,7 +3,9 @@ Parent: Composition
 Description: "MOPED Profil der Composition Ressource von der alle anderen Compositions ableiten."
 Title: "MOPED Composition"
 * subject only Reference(HL7ATCorePatient)
+* subject 1..1
 * encounter only Reference(MopedEncounterA or MopedEncounterS)
+* encounter 1..1
 * ^experimental = true
 
 * useContext 1..*
@@ -25,24 +27,17 @@ Title: "MOPED Composition"
 
 * author only Reference(HL7ATCoreOrganization)
 
-* extension contains AnzahlVerlegungen named AnzahlVerlegungen 1..1
-* extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 1..1
+* extension contains AnzahlVerlegungen named AnzahlVerlegungen 0..1
+* extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 0..1
 * extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1
 * extension contains Fondsrelevanz named Fondsrelevanz 1..1
-* extension contains SVAbrechnungsquartal named SVAbrechnungsquartal 1..1
 
 * section 1..*
 * section.code from CompositionSectionsVS
 * section ^slicing.discriminator[+].type = #value
 * section ^slicing.discriminator[=].path = "code.coding.code"
 * section ^slicing.rules = #open
-* section contains MopedEncounter 1..1
-* section[MopedEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
-* section[MopedEncounter].code.coding.code = #ENC
-* section[MopedEncounter].entry 1..
-* section[MopedEncounter].entry only Reference(MopedEncounterA or MopedEncounterS)
-* section[MopedEncounter].author only Reference(KHOrganization)
-* section contains TransferEncounter 1..1
+* section contains TransferEncounter 0..1
 * section[TransferEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
 * section[TransferEncounter].code.coding.code = #TENC
 * section[TransferEncounter].entry 1..
@@ -62,7 +57,7 @@ Title: "MOPED Composition"
 * section[zustaendigesKH].code.coding.code = #KH
 * section[zustaendigesKH].entry 1..
 * section[zustaendigesKH].entry only Reference(KHOrganization)
-* section contains besuchteAbteilungen 1..1 
+* section contains besuchteAbteilungen 0..1 
 * section[besuchteAbteilungen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[besuchteAbteilungen].code.coding.code = #ABT
 * section[besuchteAbteilungen].entry 1..
@@ -71,7 +66,7 @@ Title: "MOPED Composition"
 * section contains Diagnosen 0..1 
 * section[Diagnosen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Diagnosen].code.coding.code = #DIAG
-* section[Diagnosen].entry 0..0 //Keine Diagnose ohne Kategorisierung
+* section[Diagnosen].entry 0..
 * section[Diagnosen].section ^slicing.discriminator[+].type = #value
 * section[Diagnosen].section ^slicing.discriminator[=].path = "code.coding.code"
 * section[Diagnosen].section ^slicing.rules = #open
@@ -129,6 +124,24 @@ Title: "MOPED Composition"
 * section[LKFResponses].entry 1..
 * section[LKFResponses].entry only Reference(MopedLKFResponse)
 * section[LKFResponses].author only Reference(LGFOrganization)
+* section contains ARKKostenInformation 0..1 
+* section[ARKKostenInformation].code.coding.system = Canonical(CompositionSectionsCS)
+* section[ARKKostenInformation].code.coding.code = #ARKReq
+* section[ARKKostenInformation].entry 1..
+* section[ARKKostenInformation].entry only Reference(MopedARKRequest)
+* section[ARKKostenInformation].author only Reference(KHOrganization)
+* section contains ARKRueckmeldung 0..1 
+* section[ARKRueckmeldung].code.coding.system = Canonical(CompositionSectionsCS)
+* section[ARKRueckmeldung].code.coding.code = #ARKResp
+* section[ARKRueckmeldung].entry 1..
+* section[ARKRueckmeldung].entry only Reference(MopedARKResponse)
+* section[ARKRueckmeldung].author only Reference(LGFOrganization)
+* section contains ARKStatusUpdate 0..1 
+* section[ARKStatusUpdate].code.coding.system = Canonical(CompositionSectionsCS)
+* section[ARKStatusUpdate].code.coding.code = #ARKPay
+* section[ARKStatusUpdate].entry 1..
+* section[ARKStatusUpdate].entry only Reference(MopedARKStatusUpdate)
+* section[ARKStatusUpdate].author only Reference(LGFOrganization)
 * section contains Observations 0..1 
 * section[Observations].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Observations].code.coding.code = #OBS

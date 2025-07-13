@@ -8,8 +8,6 @@ Usage: #example
 * status = http://hl7.org/fhir/fm-status#active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * patient = Reference(PJ2Patient)
-* extension[Sonderklasse].valueCoding = SonderklasseCS#A
-* extension[Verlaengerungstage].valueUnsignedInt = 0
 * insurer = Reference(oegk-oberoesterreich)
 * provider = Reference(OrganizationKrankenhausRied)
 * insurance[+].coverage = Reference(PJ2Coverage)
@@ -20,8 +18,16 @@ Usage: #example
 * accident.extension[DataAbsentReason].valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable 
 * encounter[MopedEncounter] = Reference(PJ2Encounter)
 * encounter[MopedTransferEncounter] = Reference(PJ2TransferEncounter1)
-* supportingInfo[VerdachtFremdverschulden].category = http://terminology.hl7.org/CodeSystem/claiminformationcategory#info
-* supportingInfo[VerdachtFremdverschulden].code.coding = ClaimSupportingInformationTypesCS#FREVER
+* supportingInfo[VerdachtFremdverschulden].category = ClaimSupportingInformationCategoryCS#FREVER
 * supportingInfo[VerdachtFremdverschulden].valueBoolean = false
 * supportingInfo[VerdachtFremdverschulden].sequence = 1
-
+* supportingInfo[Sonderklasse].sequence = 2
+* supportingInfo[Sonderklasse].timingPeriod.start = "2024-08-08T08:21:00+02:00"
+* supportingInfo[Sonderklasse].category = ClaimSupportingInformationCategoryCS#KLAS
+* supportingInfo[Sonderklasse].code = SonderklasseCS#A
+* supportingInfo[Verlaengerungstage].category = ClaimSupportingInformationCategoryCS#VERLAENG
+* supportingInfo[Verlaengerungstage].sequence = 3
+* supportingInfo[Verlaengerungstage].valueQuantity.value = 0
+* supportingInfo[Verlaengerungstage].valueQuantity.unit = "day"
+* supportingInfo[Verlaengerungstage].valueQuantity.code = #day
+* supportingInfo[Verlaengerungstage].valueQuantity.system = "http://unitsofmeasure.org"
