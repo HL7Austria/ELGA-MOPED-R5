@@ -52,6 +52,7 @@ To contribute to this project, please follow the steps below to ensure a smooth 
 
 # Helpful References
 
+
 - [FHIR Financial Module for more information about many related resources](https://www.hl7.org/fhir/financial-module.html)
 - [FSH School for testing fhir shorthand files directly online](https://fshonline.fshschool.org/)
 
