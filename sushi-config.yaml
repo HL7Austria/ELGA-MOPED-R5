@@ -86,19 +86,20 @@ pages:
     title: Akteure
   workflowmanagement.md:
     title: Workflowmanagement
+  moped_magic.md:
+    title: Moped Magic
   ka-org_mapping.md:
     title: Ka-Org Mapping
   lkf_mapping.md:
     title: LKF Mapping
     
-
-
 menu:
   Home: index.html
   Artifacts: artifacts.html
   Prozess (Entwurf): use_case_description.html
   Akteure: actors.html
   Workflowmanagement: workflowmanagement.html
+  Moped Magic: moped_magic.html
   LKF Mapping: lkf_mapping.html
   Ka-Org Mapping: ka-org_mapping.html
 
