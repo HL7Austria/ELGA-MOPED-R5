@@ -87,7 +87,7 @@ pages:
   workflowmanagement.md:
     title: Workflowmanagement
   moped_magic.md:
-    title: Moped Magic
+    title: Grundlegende Konzepte und Design-Entscheidungen
   ka-org_mapping.md:
     title: Ka-Org Mapping
   lkf_mapping.md:
@@ -99,7 +99,7 @@ menu:
   Prozess (Entwurf): use_case_description.html
   Akteure: actors.html
   Workflowmanagement: workflowmanagement.html
-  Moped Magic: moped_magic.html
+  Konzepte: moped_magic.html
   LKF Mapping: lkf_mapping.html
   Ka-Org Mapping: ka-org_mapping.html
 
