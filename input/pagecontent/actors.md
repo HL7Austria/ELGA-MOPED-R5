@@ -4,34 +4,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
     Übersicht über alle Akteure:
 </div>
-<pre class="mermaid">
-    graph LR
-    KH[<a href="#actor-KH">Krankenanstalt</a>]
-    SV[<a href="#actor-SV">Sozialversicherung</a>]
-    BMSGPK[<a href="#actor-BMSGPK">BMSGPK</a>]
-    LGF[<a href="#actor-LGF">Landesgesundheitsfonds</a>]
-    Moped[Moped] 
-
-    KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> $aufnehmen</a>| Moped 
-    KH -->|<a href="OperationDefinition-MOPED.VAERequest.Anfragen.html"> $anfragen</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Patient.Verlegen.html"> $verlegen</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Patient.Beurlauben.html"> $beurlauben</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> $entlassen</a>| Moped 
-    KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html">$erfassen</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped
-    Moped -->|<a href="StructureDefinition-MopedVAEResponse.html"> GET VAEResponse</a>| KH
-    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| KH
-
-    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| SV
-    Moped --->|<a href="StructureDefinition-MopedVAERequest.html"> GET VAERequest</a>| SV
-    SV --->|<a href="OperationDefinition-MOPED.VAEResponse.Beantworten.html"> $beantworten</a>| Moped
-
-    Moped --->|<a href="StructureDefinition-MopedLKFRequest.html"> GET Claim</a>| LGF
-    LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Freigeben.html"> $freigeben</a>| Moped
-    LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Auffordern.html"> $auffordern</a>| Moped
-
-    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| BMSGPK 
-</pre>  
+TBD
 
 ### Krankenanstalt {#actor-KH}
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
@@ -41,16 +14,16 @@
     graph LR
     KH[Krankenanstalt]
     Moped[<a href="#top">Moped</a>] 
-    KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> $aufnehmen</a>| Moped 
-    KH -->|<a href="OperationDefinition-MOPED.VAERequest.Anfragen.html"> $anfragen</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Patient.Verlegen.html"> $verlegen</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Patient.Beurlauben.html"> $beurlauben</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> $entlassen</a>| Moped 
-    KH -->|<a href="OperationDefinition-MOPED.Encounter.erfassen.html">$erfassen</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> $abrechnen</a>| Moped
+    KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> POST $aufnehmen</a>| Moped 
+    KH -->|<a href="TBD"> POST $update</a>| Moped
+    KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> POST $entlassen</a>| Moped
+    KH -->|<a href="TBD"> POST $anfragen</a>| Moped
+    KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> POST $abrechnen</a>| Moped
+    KH -->|<a href="TBD"> POST $stornieren</a>| Moped
     Moped -->|<a href="StructureDefinition-MopedVAEResponse.html"> GET VAEResponse</a>| KH
     Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| KH
-</pre>
+</pre>  
+<div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
 
 ### Sozialversicherung {#actor-SV}
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
@@ -60,9 +33,9 @@
     graph LR
     SV[Sozialversicherung]
     Moped[<a href="#top">Moped</a>] 
-    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| SV
-    Moped --->|<a href="StructureDefinition-MopedVAERequest.html"> GET VAERequest</a>| SV
-    SV --->|<a href="OperationDefinition-MOPED.VAEResponse.Beantworten.html"> $beantworten</a>| Moped
+    Moped --->|<a href="StructureDefinition-MopedVAERequest.html"> GET VAERequest?status=active</a>| SV
+    Moped --->|<a href="StructureDefinition-MopedARKRequest.html"> GET ARKRequest?status=active</a>| SV
+    SV --->|<a href="OperationDefinition-MOPED.VAEResponse.Beantworten.html"> POST $antworten</a>| Moped
 </pre>   
 
 ### Landesgesundheitsfonds {#actor-LGF}
@@ -74,8 +47,8 @@
     LGF[Landesgesundheitsfonds]
     Moped[<a href="#top">Moped</a>] 
     Moped --->|<a href="StructureDefinition-MopedLKFRequest.html"> GET Claim</a>| LGF
-    LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Freigeben.html"> $freigeben</a>| Moped
-    LGF --->|<a href="OperationDefinition-MOPED.ClaimResponse.Auffordern.html"> $auffordern</a>| Moped
+    LGF --->|<a href="TBD Bestätigen Operation"> POST $bestaetigen</a>| Moped
+    LGF --->|<a href="TBD ARK Melden"> POST $melden</a>| Moped
 </pre>
 
 ### Bundesministerium für Soziales, Gesundheit, Pflege und Konsumentenschutz {#actor-BMSGPK}
@@ -86,16 +59,6 @@
     graph LR
     BMSGPK[BMSGPK]
     Moped[<a href="#top">Moped</a>] 
-    Moped -->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| BMSGPK   
+    Moped --->|GET Composition?status=final| BMSGPK 
+    Moped --->|<a href="https://www.hl7.org/fhir/operation-measure-evaluate-measure.html"> POST Measure/$evaluate-measure</a>| BMSGPK
 </pre>
-
-### EMS
-<div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
-    TBD
-</div>
-
-### medizinische Register
-<div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
-    TBD
-</div>
-
