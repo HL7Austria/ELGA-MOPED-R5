@@ -171,11 +171,20 @@ Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Au
     Note over KH: $entlassen
     KH->>KH: Susi Sonnenschein wird entlassen
 
-    Note over KH,LGF: $abrechnen
-    KH->>LGF: Abrechnung aller Leistungen eingereicht
+    loop $abrechnen / $entscheiden (vorläufig)
+        Note over KH,LGF: $abrechnen
+        KH->>LGF: Abrechnung aller Leistungen eingereicht
 
-    Note over LGF: $entscheiden
-    LGF-->>KH: Alle Posten genehmigt (keine Änderungen)
+        Note over LGF: $entscheiden
+        LGF-->>KH: Alle Posten genehmigt (keine Änderungen)
+    end
+
+    %% Finale Abrechnung und Entscheidung
+    Note over KH,LGF: final $abrechnen
+    KH->>LGF: Finale Abrechnung nach Entlassung
+
+    Note over LGF: final $entscheiden
+    LGF-->>KH: Endgültige Entscheidung zur Abrechnung
 
     Note over Bund: GET Composition?status=final
     Bund->>KH: Zugriff auf finale Composition
@@ -184,13 +193,83 @@ Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Au
     LGF->>SV: Kosteninformation wird übermittelt
 
     SV-->>LGF: Empfangsbestätigung – Fall für Moped abgeschlossen
-
 </pre>
+
+<h4>Anwendungsfall 19: Interne Verlegung (Station -> Station)</h4>
+
+Patient wird innerhalb einer Krankenanstalt verlegt: 
+
+- Patient wird von Bett/Zimmer zu Bett/Zimmer verlegt, gleiche Station --> keine MOPED Relevanz 
+- Patient wird von Station zu Station verlegt, ein Primariat (Subcode gleich) ---> keine MOPED Relevanz 
+- Bei Verlegung mit Änderung des Funktions(sub)codes muss eine Änderung in MOPED erfolgen 
+ 
+Conclusio: Sobald sich der Funktions(sub)code, egal an welcher Stelle, ändert, kommt es zu einer Änderung in MOPED. Bei jeder Verlegung muss alles übermittelt werden, was in einer X02 enthalten wäre (Interne Verlegung in einer Krankenanstalt ist auch ein Wechsel).
+
+
+<pre class="mermaid">
+sequenceDiagram
+    participant KH as KH (Herz-Jesu KH)
+    participant MOPED as MOPED
+
+    %% Aufnahme
+    Note over KH: $aufnehmen
+    KH->>MOPED: POST Patient, Encounter, ... TransferEncounter mit Referenz auf Aufnahmeabteilung
+
+    %% Interne Verlegung
+    Note over KH: $update – interne Verlegung
+    KH->>MOPED: PUT alter TransferEncounter (finished, Enddatum) + POST neuer TransferEncounter (neue Abteilung)
+</pre>
+
+<h4>Anwendungsfall 20: Beurlaubung</h4>
+Eine PatientIn unterbricht ihren stationären Aufenthalt und kommt an einem späteren Tag wieder. Bezeichnung: Urlaub bzw. Abwesenheit 
+
+<pre class="mermaid">
+sequenceDiagram
+    participant KH as KH (Herz Jesu Krankenhaus)
+
+    Note over KH: $aufnehmen
+    KH->>KH: Patient:in wird am 2025-07-20 auf Abteilung „Innere Medizin“ aufgenommen (Encounter status: active)
+
+    loop Beurlaubungs-Zyklus
+        Note over KH: $update
+        KH->>KH: Patient:in am 2025-07-22 auf Urlaub → Encounter status: on-hold, Funktionscode 100000
+
+        Note over KH: $update
+        KH->>KH: Patient:in kehrt am 2025-07-24 zurück → Encounter status: active (Abteilung: „Innere Medizin“)
+    end
+    </pre>
+
+
+<h4>Anwendungsfall 24: Interne Verlegung (Station -> Station)</h4>
+Patient wird aus stationärem Aufenthalt entlassen, jedoch wird die ICD-10-Hauptdiagnose noch nicht dokumentiert, da die medizinische Dokumentation noch nicht abgeschlossen ist.  
+Die Dokumentation der codierten Hauptdiagnose erfolgt Tage/Wochen nach der Entlassung des Patienten.   
+ 
+Beispiele: 
+Pathologischer Befund bzw. Laborergebnisse liegen erst einige Zeit nach der Entlassung des Patienten vor 
+(Gewebeprobe wird analysiert und entscheidet über die endgültige Diagnose)  
+
+<pre class="mermaid">
+sequenceDiagram
+    participant KH as KH (Herz Jesu Krankenhaus)
+
+    Note over KH: $aufnehmen
+    KH->>KH: Patient:in wird aufgenommen (Encounter status: active)
+
+    Note over KH: $update
+    KH->>KH: Encounter-Status auf "discharged" gesetzt (noch ohne Hauptdiagnose aka "Entlassungs-Aviso")
+
+    Note over KH: $update
+    KH->>KH: Hauptdiagnose „Herzinsuffizienz“ ergänzt
+
+    Note over KH: $entlassen
+    KH->>KH: Encounter-Status final auf "completed" gesetzt
+</pre>
+
 
 <h4>Szenario: Versicherungswechsel</h4>
 TBD
 
-<h4>Szenario: Sebstzahler</h4>
+<h4>Szenario: Selbstzahler</h4>
 TBD
 
 <h4>Szenario: VAE Ablehnung</h4>

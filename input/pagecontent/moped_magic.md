@@ -2,6 +2,8 @@
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 </script>
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
+In diesem Bereich werden die grundlegenden Konzepte des Moped-Designs beschrieben.
+</div>
 
 ### Der Composition Ansatz: Fall-Kontext, Struktur, Integrität
 Moped basiert auf einer zentralen MasterComposition, die den strukturellen Rahmen (Aufbau, Kardinalitäten, Profile) für den gesamten Fall bildet.
@@ -32,17 +34,22 @@ Es können mehrere Composition-Ausprägungen gleichzeitig gültig sein, etwa wen
     Master --> Entscheiden
     Master --> Siegel
 </pre>
-</div>
+
 
 #### Optimistische Versionskontrolle der Composition
-In MOPED gilt bei allen fallbezogenen Operationen, die eine `Composition` referenzieren, das Prinzip der Optimistische Versionskontrolle. Jede Operation, die neue Informationen zum Fall ergänzt (z. B. `$update`, `$anfragen`, `$abrechnen`), erfordert die explizite Angabe der zugehörigen versionierten `Composition.id`. Dabei muss immer die vollständige, versionsspezifische ID der Composition mitgegeben werden, z. B.: `Composition/12345/_history/4`. Dies dient der Sicherstellung, dass der aufrufende Client mit dem aktuellsten Stand der Composition arbeitet. So wird verhindert, dass Daten auf veralteter Basis eingefügt oder verändert werden, wie es in verteilten Prozessen (z. B. SV, KH, LGF, Bund) passieren kann. Ist die angegebene Version nicht mehr die aktuellste, wird die Operation mit einem entsprechenden Fehler abgewiesen (i.e. `409 Conflict`). Der Client muss sich in diesem Fall die aktuelle Version der `Composition` abrufen, den Kontext prüfen und die Operation ggf. erneut durchführen. Damit ist der Moped-Datensatz robust gegenüber parallelen Zugriffen und gewährleistet die Konsistenz fallbezogener Informationen. Dieses Prinzip entspricht der gängigen Praxis in REST-Systemen (z. B. `PUT` mit `If-Match` in HTTP), bei der ebenfalls geprüft wird, ob der Client die aktuelle Version kennt, bevor Änderungen übernommen werden. Beispielablauf:
+In MOPED gilt bei allen fallbezogenen Operationen, die eine `Composition` referenzieren, das Prinzip der Optimistische Versionskontrolle. Jede Operation, die neue Informationen zum Fall ergänzt (z. B. `$update`, `$anfragen`, `$abrechnen`), erfordert die explizite Angabe der zugehörigen versionierten Composition ID. Dabei muss immer die vollständige, versionsspezifische ID der Composition angegeben werden, z. B.: `Composition/12345/_history/4`. Dies dient der Sicherstellung, dass der aufrufende Client mit dem aktuellsten Stand der Composition arbeitet. So wird verhindert, dass Daten auf veralteter Basis eingefügt oder verändert werden, wie es in verteilten Prozessen (z. B. SV, KH, LGF, Bund) passieren kann. Ist die angegebene Version nicht mehr die aktuellste, wird die Operation mit einem entsprechenden Fehler abgewiesen (i.e. `409 Conflict`). Der Client muss sich in diesem Fall die aktuelle Version der `Composition` abrufen, den Kontext prüfen und die Operation ggf. erneut durchführen. Damit ist der Moped-Datensatz robust gegenüber parallelen Zugriffen und gewährleistet die Konsistenz fallbezogener Informationen. Dieses Prinzip entspricht der gängigen Praxis in REST-Systemen (z. B. `PUT` mit `If-Match` in HTTP), bei der ebenfalls geprüft wird, ob der Client die aktuelle Version kennt, bevor Änderungen übernommen werden. Beispielablauf:
 
 1. Client SV lädt `Composition/12345/_history/4`
 2. Währenddessen wird Version 5 durch ein anderes System (Client KH) erzeugt (Hinweis: Dies löst in der Regel eine Notification aus, die den folgenden Konflikt bereits clientseitig vermeiden soll.)
 3. Der Client SV sendet eine VAE mit Bezug auf `Composition/12345/_history/4`
 4. ➜ Server lehnt ab: Version ist nicht mehr aktuell
 
-> Hinweis: Der Server prüft anhand der `Composition`-Referenz der Operation, ob es sich um die aktuellste Version handelt. Ist dies nicht der Fall, wird die Operation mit einem Fehler abgewiesen.
+> Hinweis: Der Server prüft anhand der versionierten Composition-Instanz in der URL, ob es sich um die aktuellste Version handelt. Ist dies nicht der Fall, wird die Operation mit einem Fehler abgewiesen.
+
+```http
+POST /Composition/123/_history/6/$abrechnen
+
+Ohne Version (z. B. /Composition/123) wird die Operation abgelehnt. Alle benutzerdefinierten fallbezogenen Operationen in MOPED werden ausschließlich auf Composition-Instanzebene ausgeführt und erwarten als URL-Form stets /Composition/{id}/_history/{version}/$operationName.
 
 ### Provenance in MOPED: Herkunft, Nachvollziehbarkeit, Transparenz
 Die Provenance-Ressource dient der dokumentierten Nachvollziehbarkeit von Änderungen an FHIR-Ressourcen. Sie beschreibt, wer eine Ressource wann, warum und in welchem Kontext erstellt oder verändert hat.
@@ -95,9 +102,7 @@ Die Vorteile dieses Ansatzes:
 - Inkonsistente Datenquellen werden ausgeschlossen
 - Die fachliche Verantwortung für Kontextinformationen bleibt bei MOPED
 
-> 🔒 Hinweis: Referenzielle Konsistenz
->
-> Um Widersprüche in sensiblen Referenzen (z. B. Patient, Author, Custodian) zu vermeiden, ergänzt MOPED diese kontextsensitiven Informationen ausschließlich serverseitig.
+> Hinweis: Um Widersprüche in sensiblen Referenzen (z. B. Patient, Author, Custodian) zu vermeiden, ergänzt MOPED diese kontextsensitiven Informationen ausschließlich serverseitig.
 > Angaben vom Client werden ignoriert oder durch bekannte Referenzwerte ersetzt.
 > Dies schützt vor unabsichtlicher Manipulation und sichert die Datenintegrität im gesamten Fallkontext.
 
@@ -106,7 +111,9 @@ Einige Referenzen sind nicht aus dem Fallkontext ableitbar, da sie entweder eine
 
 | Beispiel                          | Typ                                  | Erklärung                                |
 |-----------------------------------|---------------------------------------|------------------------------------------|
-| `Claim.item.detail.service`       | gezielte Auswahl                     | Nur bestimmte Leistungen werden abgerechnet |
+| `Claim.procedure.procedureReference`       | gezielte Auswahl                     | Nur bestimmte Leistungen werden abgerechnet |
 | `MopedTransferEncounter.serviceProvider` | Zielorganisation bei Verlegung     | Referenz via `Organization.identifier`   |
 
 MOPED prüft ggf. ihre Gültigkeit, übernimmt sie aber nicht selbst.
+
+

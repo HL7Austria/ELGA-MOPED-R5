@@ -4,31 +4,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
     Übersicht über alle Akteure:
 </div>
-<pre class="mermaid">
-    graph LR
-    KH[<a href="#actor-KH">Krankenanstalt</a>]
-    SV[<a href="#actor-SV">Sozialversicherung</a>]
-    BMSGPK[<a href="#actor-BMSGPK">BMSGPK</a>]
-    LGF[<a href="#actor-LGF">Landesgesundheitsfonds</a>]
-    Moped[Moped] 
-
-    KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> POST $aufnehmen</a>| Moped 
-    KH -->|<a href="TBD"> POST $update</a>| Moped
-    KH -->|<a href="TBD"> POST $anfragen</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> POST $entlassen</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> POST $abrechnen</a>| Moped
-    KH -->|<a href="TBD"> POST $stornieren</a>| Moped
-    Moped -->|<a href="StructureDefinition-MopedVAEResponse.html"> GET VAEResponse</a>| KH
-    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| KH
-    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| SV
-    Moped --->|<a href="StructureDefinition-MopedVAERequest.html"> GET VAERequest</a>| SV
-    SV --->|<a href="OperationDefinition-MOPED.VAEResponse.antworten.html"> $antworten</a>| Moped
-    Moped --->|<a href="StructureDefinition-MopedLKFRequest.html"> GET Claim</a>| LGF
-    LGF --->| $melden | Moped
-    LGF --->| $bestaetigen| Moped
-    Moped --->|GET Composition?status=final| BMSGPK 
-    Moped --->|<a href="https://www.hl7.org/fhir/operation-measure-evaluate-measure.html"> POST Measure/$evaluate-measure</a>| BMSGPK
-</pre>  
+TBD
 
 ### Krankenanstalt {#actor-KH}
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
@@ -46,7 +22,8 @@
     KH -->|<a href="TBD"> POST $stornieren</a>| Moped
     Moped -->|<a href="StructureDefinition-MopedVAEResponse.html"> GET VAEResponse</a>| KH
     Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| KH
-</pre>
+</pre>  
+<div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
 
 ### Sozialversicherung {#actor-SV}
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
@@ -85,14 +62,3 @@
     Moped --->|GET Composition?status=final| BMSGPK 
     Moped --->|<a href="https://www.hl7.org/fhir/operation-measure-evaluate-measure.html"> POST Measure/$evaluate-measure</a>| BMSGPK
 </pre>
-
-### EMS
-<div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
-    TBD
-</div>
-
-### medizinische Register
-<div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
-    TBD
-</div>
-
