@@ -28,3 +28,5 @@ Title: "MOPED Condition"
 * code.coding[ICD10].system = $ICD10AT
 * code.coding[HDG] from LKFHauptdiagnosegruppenVS (required)
 * code.coding[HDG].system = Canonical(LKFHauptdiagnosegruppenCS)
+* extension contains Diagnosetyp named Diagnosetyp 1..2
+//TBD Invariante, dass Haupt und Zusatzdiagnose gemeinsam bzw. 2x Haupt oder 2x Zusatz nicht möglich sind

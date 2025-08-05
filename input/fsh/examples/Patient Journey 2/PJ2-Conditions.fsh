@@ -13,6 +13,7 @@ Usage: #example
 * code.coding[HDG] = LKFHauptdiagnosegruppenCS#HDG15.03 "Frakturen der unteren Extremität/Becken, außer Vorfuß"
 * subject = Reference(PJ2Patient)
 * encounter = Reference(PJ2Encounter)
+* extension[Diagnosetyp].valueCodeableConcept = $LKFdiagnoseTyp#H 
 
 Instance: PJ2Condition2
 InstanceOf: MopedCondition
@@ -29,3 +30,4 @@ Usage: #example
 //Es gibt dazu keine HDG
 * subject = Reference(PJ2Patient)
 * encounter = Reference(PJ2Encounter)
+* extension[Diagnosetyp].valueCodeableConcept.coding = https://TBD.at/CodeSystem/LKFDiagnoseTypCS#A

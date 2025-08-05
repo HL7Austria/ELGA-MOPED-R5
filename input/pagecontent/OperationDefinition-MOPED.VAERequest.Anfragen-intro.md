@@ -4,7 +4,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
 
 ## Voraussetzungen für den Aufruf
 
-* MopedEncounter exisitert in der Composition und besitzt entweder den status *planned* oder *in-progress*
+* TBD
 
 ## Detaillierte Business-Logik
 
@@ -14,15 +14,12 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die Versichertenanspr
   * *MopedVAERequest.provider* mit *MopedComposition.section:zustaendigesKH* befüllen
   * *MopedVAERequest.insurer* mit *MopedComposition.section:zustaendigeSV* befüllen
   * *MopedVAERequest.encounter* mit *MopedComposition.encounter* befüllen
-
 2. Der MopedVAERequest wird in der Composition.section:VAERequests eingefügt
+3. Falls es bereits einen aktiven VAERequest gibt, und dieser nicht in Claim.related.claim referenziert wird (dies muss rekursiv für alle related claims überprüft werden) so muss dieser auf den status cancelled gesetzt werden.
 
 ## Workflowstatus Tracking
 * useContext:Workflow wird um einen Eintrag "VAE angefragt" ergänzt sofern dieser noch nicht existiert
 
-# Validierung
-* Es muss überprüft werden, ob der Parameter *aufnahmezahl* mit dem Encounter.identifier:Aufnahmezahl der Composition laut *compositionID* übereinstimmt.
-
 ## Annahmen an das BeS
-* Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur Kostenübernahmen für eigene Fälle angefragt werden können.
+* Es wurde vorab geprüft, ob das `system` des identifiers in Composition.encounter.identifer dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur Kostenübernahmen für eigene Fälle angefragt werden können.
 * *MopedVAERequest.provider* muss gleichzeitig die gleiche Organisation sein, die lt. Token die Operation aufgerufen hat.

@@ -13,3 +13,4 @@ Usage: #example
 * code.coding[HDG] = LKFHauptdiagnosegruppenCS#HDG01.31 "Sonstige Erkrankungen - Nervensystem"
 * subject = Reference(PJ1Patient)
 * encounter = Reference(PJ1Encounter)
+* extension[Diagnosetyp].valueCodeableConcept.coding = https://TBD.at/CodeSystem/LKFDiagnoseTypCS#A

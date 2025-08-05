@@ -1,6 +1,6 @@
 Instance: VersichertenanspruchserklärungAnfragen
 InstanceOf: OperationDefinition
-Title: "MOPED Versichertenanspruchserklärung $anfragen (POC)"
+Title: "MOPED Versichertenanspruchserklärung $anfragen"
 Description: "Die Versichertenanspruchserklärung $anfragen Operation wird aufgerufen, um die Versichertenanspruchserklärung-Anfrage an die SV anzustoßen. Diese Operation ist irrelevant für Selbstzahler (-> wenn es keine zuständige SV gibt darf die Operation $anfragen nicht ausgeführt werden)."
 Usage: #definition 
 
@@ -9,33 +9,19 @@ Usage: #definition
 * status = #draft
 * kind = #operation 
 * affectsState = true
-* resource = #Claim
+* resource = #Composition
 * system = false
-* type = true
-* instance = false
+* type = false
+* instance = true
 * code = #anfragen
 * parameter[+]
-  * name = #compositionID
+  * name = #Anfrage
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *compositionID* Parameter beinhaltet die technische ID (inklusive Version) der Composition des zu bearbeitenden Falls"
-  * type = #id
-* parameter[+]
-  * name = #aufnahmezahl
-  * use = #in 
-  * min = 1
-  * max = "1"
-  * documentation = "Der *aufnahmezahl* Parameter beinhaltet den eindeutigen Identifizierer für den relevanten Fall."
-  * type = #Identifier
-* parameter[+]
-  * name = #vae
-  * use = #in
-  * min = 1
-  * max = "*"
-  * documentation = "Der *vae* Parameter beinhaltet die Versichertenanspruchserklärung"
-  * type = #Claim
-  * targetProfile = Canonical(MopedVAERequest)
+  * documentation = "Der *Anfrage* Parameter beinhaltet ein Bundle mit den Informationen für die Versichertenanspruchserklärung"
+  * type = #Bundle
+  * targetProfile = Canonical(MopedAnfragenBundleKH)
 * parameter[+]
   * name = #return
   * use = #out

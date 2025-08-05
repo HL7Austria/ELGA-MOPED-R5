@@ -1,18 +1,16 @@
 ## Wer ruft diese Operation in welchem Zusammenhang auf?
 
-Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $auffordern Operation wird aufgerufen, wenn die Abrechnung eines Krankenhauses nicht freigegeben wird, sondern eine Korrektur der Abrechnung angefordert wird.
+Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $entscheiden Operation wird aufgerufen, wenn die Abrechnung eines Krankenhauses (inklusive Errors und Warnings) beantwortet und entweder bestätigt oder mit Korrekturaufforderunge abgelehnt wird. Die Operation kann außerdem dafür verwendet werden Kommunikation zum Fall einzubringen wie z.B. die Anforderung von Dokumenten. 
 
 ## Voraussetzungen für den Aufruf
 
-* Account-Status: `Vorläufige Meldung` oder `Endgültige Meldung`
+* Es existiert ein aktiver LKFRequest
 
 ## Detaillierte Business-Logik
 
-1. Die ClaimResponse wird lt. Regeln (siehe unten) validiert und eingespielt
-2. Falls Schritt 1 erfolgreich war, wird der ClaimResponse.encounter.account.workflowStatus (ClaimResponse aus Operation-Parameter; der Encounter vom Profil MopedEncounter) wird auf 
-   * `LGF Korrekturaufforderung` gesetzt, falls der vorherige Status `Vorläufige Meldung` war
-   * `Endgültige Korrekturaufforderung` gesetzt, falls der vorherige Status `Endgültige Meldung` war
-3. Alle Referenzen sollen versionsspezifisch aufgelöst werden.
+1. Die ClaimResponse, CommunicationRequest oder Communication wird lt. Profil validiert und eingespielt
+
+2. Falls eine ClaimResponse eingebracht wird und es bereits eine aktive LKFResponse in der Composition.section:LKFResponses gibt so wird der status auf *cancelled* gesetzt. Die neue LKFResponse wird in die Section eingefügt und ist ab jetzt die gültige LKFResponse.
 
 ## Validierung / Fehlerbehandlung
 
