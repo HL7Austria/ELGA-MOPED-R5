@@ -3,7 +3,7 @@ Parent: Encounter
 Description: "MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung"
 Title: "MOPED Encounter"
 
-
+* status from MopedEncounterStatusVS (required)
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"

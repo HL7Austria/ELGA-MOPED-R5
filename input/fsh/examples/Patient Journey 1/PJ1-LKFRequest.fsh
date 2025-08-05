@@ -28,9 +28,14 @@ Usage: #example
 * supportingInfo[Plausibilitaetskennzeichen].sequence = 1
 * supportingInfo[Plausibilitaetskennzeichen].category = ClaimSupportingInformationCategoryCS#PLAUS
 * supportingInfo[Plausibilitaetskennzeichen].valueString = "1234"
+* supportingInfo[EndgueltigeMeldung].sequence = 2
+* supportingInfo[EndgueltigeMeldung].category = ClaimSupportingInformationCategoryCS#ENDG
+* supportingInfo[EndgueltigeMeldung].valueBoolean = false
 
 
 * extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#D
+* extension[Fondsrelevanz].valueCoding = FondsrelevanzCS#J
+
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.value = 0
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].category.coding = MopedClaimItemCategoryCS#SCULK
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].sequence = 1

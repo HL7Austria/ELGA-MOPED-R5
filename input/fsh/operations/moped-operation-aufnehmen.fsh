@@ -9,8 +9,7 @@ Usage: #definition
 * status = #draft
 * kind = #operation
 * affectsState = true
-* resource = #Encounter
-* system = false
+* system = true
 * type = true
 * instance = false
 * code = #aufnehmen
@@ -20,25 +19,15 @@ Usage: #definition
   * min = 1
   * max = "1"
   * documentation = "Der *falldaten* Parameter beinhaltet die nötigen Elemente um die Details zum Fall zu beschreiben die bei Patientenaufnahme bekannt sind, inklusive Patient, Encounter und Aufnahmediagnose."
-  * type = #Resource
-  * targetProfile[+] = Canonical(MopedAufnahmeBundle)
-* parameter[+]
+  * type = #Bundle
+  * targetProfile[+] = Canonical(MopedAufnehmenBundleKH)
+/* parameter[+]
   * name = #freigeben
   * use = #in
   * min = 1
   * max = "1"
   * documentation = "Mit Hilfe des *freigeben* Parameters wird angegeben, ob es sich bei der Patienten-Aufnahme um eine geplante oder vollständige Aufnahme handelt."
-  * type = #boolean
-* parameter[+]
-  * name = #Fondsrelevanz
-  * use = #in
-  * min = 1
-  * max = "1"
-  * documentation = "Mit Hilfe des *Fondsrelevanz* Parameters wird festgehalten, ob es sich bei dem Fall um einen relevanten Fall für den Fonds handelt."
-  * type = #code
-  * binding[+]
-    * strength = #required
-    * valueSet = Canonical(FondsrelevanzVS)
+  * type = #boolean*/ //TBD confirm this is not needed anymore -> abgebildet durch update auf den Encounter.status
 * parameter[+]
   * name = #return
   * use = #out

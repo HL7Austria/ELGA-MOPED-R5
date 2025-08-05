@@ -6,7 +6,7 @@ Title: "MOPED Aufnahme Composition"
 * status = #partial
 * encounter 1..1
 * subject 1..1
-* section[Diagnosen].section[Aufnahmediagnosen].entry 1..
+* section[Diagnosen].entry 1..
 
 
 * obeys moped-nach-aufnahme-freigegeben-encounter-inprogress

@@ -13,7 +13,6 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 * author = Reference(OrganizationHerzJesuKrankenhaus)
 * extension[AnzahlVerlegungen].valueUnsignedInt = 1
 * extension[AnzahlBeurlaubungen].valueUnsignedInt = 0
-* extension[Fondsrelevanz].valueCoding = FondsrelevanzCS#J
 
 * encounter = Reference(PJ1EncounterAufnahme)
 
@@ -32,7 +31,5 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 * section[Diagnosen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Diagnosen].code.coding.code = #DIAG
 * section[Diagnosen].author = Reference(OrganizationHerzJesuKrankenhaus)
-* section[Diagnosen].section[Aufnahmediagnosen].entry = Reference(PJ1Condition1)
-* section[Diagnosen].section[Aufnahmediagnosen].code.coding.code = $LKFdiagnoseTyp#A
-* section[Diagnosen].section[Aufnahmediagnosen].author = Reference(OrganizationHerzJesuKrankenhaus)
+* section[Diagnosen].entry = Reference(PJ1Condition1)
 
