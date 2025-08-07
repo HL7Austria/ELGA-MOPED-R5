@@ -1,0 +1,6769 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "strokeunit-questionnaire",
+  "url": "http://example.org/Questionnaire/strokeunit-questionnaire",
+  "name": "StrokeUnitQuestionnaire",
+  "title": "Stroke Unit Registermeldung – Patientendaten",
+  "status": "active",
+  "description": "Fragen zur Registermeldung Stroke Unit – Abschnitt Patientendaten",
+  "item": [
+    {
+      "item": [
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 111
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 999
+            }
+          ],
+          "linkId": "2001",
+          "text": "Zentrum"
+        },
+        {
+          "type": "string",
+          "maxLength": 20,
+          "linkId": "2003",
+          "text": "Aufnahmezahl"
+        },
+        {
+          "item": [
+            {
+              "type": "string",
+              "linkId": "2060",
+              "text": "Bereichsspezifisches Personenkennzeichen Gesundheit (bPK GH)"
+            },
+            {
+              "type": "string",
+              "linkId": "2061",
+              "text": "Fremd-bPK amtliche Statistik (fremd-bPK AS)"
+            },
+            {
+              "type": "string",
+              "maxLength": 64,
+              "linkId": "2040",
+              "text": "Vorname",
+              "enableWhen": [
+                {
+                  "question": "2060",
+                  "operator": "exists",
+                  "answerBoolean": false
+                },
+                {
+                  "question": "2061",
+                  "operator": "exists",
+                  "answerBoolean": false
+                }
+              ],
+              "enableBehavior": "any",
+              "disabledDisplay": "hidden"
+            },
+            {
+              "type": "string",
+              "maxLength": 64,
+              "linkId": "2041",
+              "text": "Nachname",
+              "enableWhen": [
+                {
+                  "question": "2060",
+                  "operator": "exists",
+                  "answerBoolean": false
+                },
+                {
+                  "question": "2061",
+                  "operator": "exists",
+                  "answerBoolean": false
+                }
+              ],
+              "enableBehavior": "any"
+            },
+            {
+              "type": "date",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "1900-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+              "linkId": "2004",
+              "text": "Geburtsdatum"
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "2032",
+              "text": "Wohnort",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "im Inland"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "im Ausland"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueInteger": 1000
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueInteger": 9999
+                }
+              ],
+              "linkId": "2030",
+              "text": "Wohnpostleitzahl (wenn Wohnort Österreich)",
+              "enableWhen": [
+                {
+                  "question": "2032",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "1"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueInteger": 999
+                }
+              ],
+              "linkId": "2050",
+              "text": "Studienteilnahme",
+              "required": false
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-demographie",
+          "text": "Demographische Basisdaten"
+        },
+        {
+          "linkId": "gruppe-geschlecht",
+          "text": "Geschlecht",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "2005",
+              "text": "Geschlecht",
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Männlich"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Weiblich"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Divers"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "coding",
+              "linkId": "2006",
+              "text": "Akuter Schlaganfall",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "ja"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "0",
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Monitoring an der SU bei Hochrisikopatient:innen"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "linkId": "2007",
+              "text": "Falls kein akuter Schlaganfall",
+              "enableWhen": [
+                {
+                  "question": "2006",
+                  "operator": "!=",
+                  "answerCoding": {
+                    "code": "1"
+                  }
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Nicht-vaskuläre Erkrankung, kein klinisches Bild eines Schlaganfalls (TIA)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Monitoring nach vaskulärer Intervention"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Nicht-vaskuläre Erkrankung als Ursache für Schlaganfallbild (TIA)"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-akuter-schlaganfall",
+          "text": "Akuter Schlaganfall"
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-patientendaten",
+      "text": "Patientendaten"
+    },
+    {
+      "item": [
+        {
+          "type": "boolean",
+          "linkId": "3052",
+          "text": "Datum Ereignis bekannt"
+        },
+        {
+          "type": "date",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueDate": "2024-01-01"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueDate": "2026-01-01"
+            }
+          ],
+          "linkId": "3001",
+          "text": "Datum Ereignis",
+          "enableWhen": [
+            {
+              "question": "3052",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "3040",
+          "text": "Datum 'last seen well' bekannt"
+        },
+        {
+          "type": "date",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueDate": "2024-01-01"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueDate": "2026-01-01"
+            }
+          ],
+          "linkId": "3041",
+          "text": "Datum 'last seen well'",
+          "enableWhen": [
+            {
+              "question": "3040",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "3053",
+          "text": "Uhrzeit Ereignis bekannt",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "nein, im Schlaf"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "nein, nicht erhebbar"
+              }
+            }
+          ]
+        },
+        {
+          "type": "time",
+          "linkId": "3003",
+          "text": "Uhrzeit Ereignis",
+          "enableWhen": [
+            {
+              "question": "3053",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "3050",
+          "text": "Uhrzeit 'last seen well' bekannt",
+          "enableWhen": [
+            {
+              "question": "3053",
+              "operator": "=",
+              "answerCoding": {
+                "code": "2"
+              }
+            },
+            {
+              "question": "3053",
+              "operator": "=",
+              "answerCoding": {
+                "code": "3"
+              }
+            }
+          ],
+          "enableBehavior": "any"
+        },
+        {
+          "type": "time",
+          "linkId": "3051",
+          "text": "Uhrzeit 'last seen well'",
+          "enableWhen": [
+            {
+              "question": "3050",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "coding",
+              "linkId": "3005",
+              "text": "Ereignis aufgetreten",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Im Wachzustand"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Im Schlafzustand"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Unbekannt"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "date",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+              "linkId": "3006",
+              "text": "Datum Krankenhausaufnahme"
+            },
+            {
+              "type": "time",
+              "linkId": "3007",
+              "text": "Uhrzeit Krankenhausaufnahme"
+            },
+            {
+              "type": "date",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+              "linkId": "3008",
+              "text": "Datum Aufnahme Stroke Unit"
+            },
+            {
+              "type": "time",
+              "linkId": "3009",
+              "text": "Uhrzeit Aufnahme Stroke Unit"
+            },
+            {
+              "type": "boolean",
+              "linkId": "3012",
+              "text": "Prehospital-SCORE erhoben"
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueInteger": 40
+                }
+              ],
+              "linkId": "3013",
+              "text": "Prehospital-SCORE Wert",
+              "enableWhen": [
+                {
+                  "question": "3012",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "30541",
+              "text": "Zutransport",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Zutransport intern"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Zutransport extern"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-ereignis-aufgetreten",
+          "text": "Ereignis aufgetreten"
+        },
+        {
+          "item": [
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3010",
+              "text": "Zutransport extern",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Anderes Krankenhaus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Direkt"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "3011",
+              "text": "Art Zutransport – anderes Krankenhaus",
+              "enableWhen": [
+                {
+                  "question": "3010",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "1"
+                  }
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Rettung mit Notarzt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Rettung ohne Notarzt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Rettungshubschrauber"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "linkId": "3020",
+              "text": "Art Zutransport – direkt",
+              "enableWhen": [
+                {
+                  "question": "3010",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "2"
+                  }
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Rettung mit Notarzt mit Aviso"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Rettung ohne Notarzt mit Aviso"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Rettungshubschrauber"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "Privat"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "Anderer"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "6",
+                    "display": "Rettung mit Notarzt ohne Aviso"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "7",
+                    "display": "Rettung ohne Notarzt ohne Aviso"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "8",
+                    "display": "Rettung mit Notarzt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "9",
+                    "display": "Rettung ohne Notarzt"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "3021",
+              "text": "Welcher Zutransport (wenn 'Anderer')",
+              "type": "string",
+              "maxLength": 64,
+              "enableWhen": [
+                {
+                  "question": "3020",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "5"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-zutransport-extern",
+          "text": "Zutransport extern",
+          "enableWhen": [
+            {
+              "question": "30541",
+              "operator": "=",
+              "answerCoding": {
+                "code": "2"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "gruppe-zutransport-intern",
+          "text": "Zutransport intern",
+          "type": "group",
+          "enableWhen": [
+            {
+              "question": "30541",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1"
+              }
+            }
+          ],
+          "item": [
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "zutransport-intern-auswahl",
+              "text": "Zutransport intern",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "3055",
+                    "display": "Ambulanz"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3056",
+                    "display": "Andere Fachabteilung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3057",
+                    "display": "Direkt an die Stroke Unit"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3058",
+                    "display": "Notaufnahme"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3059",
+                    "display": "Eigene Fachabteilung"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3060",
+                    "display": "Schlaganfall im Krankenhaus"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-aufnahme-und-diagnostik",
+      "text": "Aufnahme und Diagnostik",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 42
+            }
+          ],
+          "linkId": "4020",
+          "text": "Gesamtsumme NIH - SS bei Aufnahme"
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-nih-aufnahme",
+      "text": "NIH Stroke Scale bei Aufnahme",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 5
+            }
+          ],
+          "linkId": "6001",
+          "text": "Rankinskala vor Insult"
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 5
+            }
+          ],
+          "linkId": "6002",
+          "text": "Rankinskala bei Aufnahme"
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-rankinskala-aufnahme",
+      "text": "Rankinskala bei Aufnahme",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "coding",
+          "linkId": "7001",
+          "text": "Syndrom",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Ischämie"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Primäre intrazerebrale Blutung"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Sinus-/Venenthrombose (SVT)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Subarachnoidalblutung (SAB)"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "coding",
+              "linkId": "7005",
+              "text": "Lokalisation Ischämie",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Linke Großhirnhemisphäre"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Rechte Großhirnhemisphäre"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Beide Großhirnhemisphären"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "Vorwiegend Hirnstamm"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "Vorwiegend Kleinhirn"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "6",
+                    "display": "Retina"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "7",
+                    "display": "Rückenmark"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-lokalisation-ischamie",
+          "text": "Lokalisation",
+          "enableWhen": [
+            {
+              "question": "7001",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "coding",
+              "linkId": "7010",
+              "text": "Klinisches Syndrom",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "LACS"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "TACS"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "PACS"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "POCS"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "Anderes"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "maxLength": 64,
+              "linkId": "7011",
+              "text": "Welches anderes klinisches Syndrom",
+              "enableWhen": [
+                {
+                  "question": "7010",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "5"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-klinisches-syndrom",
+          "text": "Klinisches Syndrom",
+          "enableWhen": [
+            {
+              "question": "7001",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "7015",
+              "text": "Seite primäre intrazerebrale Blutung",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Links"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Rechts"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Beidseits"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-lokalisation-icb",
+          "text": "Lokalisation",
+          "enableWhen": [
+            {
+              "question": "7001",
+              "operator": "=",
+              "answerCoding": {
+                "code": "2"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "boolean",
+              "linkId": "7022",
+              "text": "Stammganglien"
+            },
+            {
+              "type": "boolean",
+              "linkId": "7023",
+              "text": "Thalamus"
+            },
+            {
+              "type": "boolean",
+              "linkId": "7024",
+              "text": "Cerebellum"
+            },
+            {
+              "type": "boolean",
+              "linkId": "7025",
+              "text": "Lobär"
+            },
+            {
+              "type": "boolean",
+              "linkId": "7026",
+              "text": "Pons"
+            },
+            {
+              "type": "boolean",
+              "linkId": "7027",
+              "text": "IVH (intraventricular hemorrhage)"
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "7030",
+              "text": "Wenn IVH: Lokalisation",
+              "enableWhen": [
+                {
+                  "question": "7027",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Seitenventrikel"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "3. oder 4. Ventrikel"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueInteger": 3
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueInteger": 15
+                }
+              ],
+              "linkId": "7050",
+              "text": "GCS bei Aufnahme"
+            },
+            {
+              "type": "boolean",
+              "linkId": "7060",
+              "text": "ICB bei Aufnahme bestimmt"
+            },
+            {
+              "type": "decimal",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDecimal": 0
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDecimal": 500
+                }
+              ],
+              "linkId": "7061",
+              "text": "Volumen in ml",
+              "enableWhen": [
+                {
+                  "question": "7060",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueInteger": 12
+                }
+              ],
+              "linkId": "7072",
+              "text": "GRAEB Score",
+              "required": false
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-lokalisation-primaere-icb",
+          "text": "Lokalisation primäre intrazerebrale Blutung",
+          "enableWhen": [
+            {
+              "question": "7001",
+              "operator": "=",
+              "answerCoding": {
+                "code": "2"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-syndrom",
+      "text": "Syndrom",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "item": [
+            {
+              "type": "boolean",
+              "linkId": "8888",
+              "text": "Bildgebende Untersuchung durchgeführt"
+            },
+            {
+              "type": "boolean",
+              "linkId": "8000",
+              "text": "Bereits vor Krankenhausaufnahme durchgeführt",
+              "enableWhen": [
+                {
+                  "question": "8888",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "date",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+              "linkId": "8001",
+              "text": "Datum",
+              "enableWhen": [
+                {
+                  "question": "8000",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8003",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8004",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "enableBehavior": "any"
+            },
+            {
+              "type": "time",
+              "linkId": "8002",
+              "text": "Uhrzeit CCT",
+              "enableWhen": [
+                {
+                  "question": "8000",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8003",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8004",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "enableBehavior": "any"
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-erste-bildgebung",
+          "text": "Erste Bildgebung"
+        },
+        {
+          "item": [
+            {
+              "type": "boolean",
+              "linkId": "8003",
+              "text": "CCT durchgeführt"
+            },
+            {
+              "type": "boolean",
+              "linkId": "8004",
+              "text": "MRI durchgeführt"
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-bildgebung-verfahren",
+          "text": "Bildgebendes Verfahren",
+          "enableWhen": [
+            {
+              "question": "8888",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "boolean",
+              "linkId": "8889",
+              "text": "Untersuchung der hirnzuführenden Gefäße durchgeführt"
+            },
+            {
+              "type": "boolean",
+              "linkId": "8011",
+              "text": "Bereits vor Krankenhausaufnahme durchgeführt",
+              "enableWhen": [
+                {
+                  "question": "8889",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "date",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+              "linkId": "8009",
+              "text": "Datum",
+              "enableWhen": [
+                {
+                  "question": "8011",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8008",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8013",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8006",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "enableBehavior": "any"
+            },
+            {
+              "type": "time",
+              "linkId": "8010",
+              "text": "Uhrzeit",
+              "enableWhen": [
+                {
+                  "question": "8011",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8008",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8013",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "8006",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "enableBehavior": "any"
+            },
+            {
+              "type": "boolean",
+              "linkId": "8008",
+              "text": "Sonografie",
+              "enableWhen": [
+                {
+                  "question": "8889",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "linkId": "8013",
+              "text": "CTA",
+              "enableWhen": [
+                {
+                  "question": "8889",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "linkId": "8006",
+              "text": "MR-Angio",
+              "enableWhen": [
+                {
+                  "question": "8889",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "linkId": "8030",
+              "text": "Erste Untersuchung der Hirngefäße",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Sonografie"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "CTA"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "MR-Angio"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "DSA"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "keine"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "linkId": "8060",
+              "text": "Gefäßverschluss (Hauptstamm)"
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel",
+                  "valueString": "Sonstiger Verschluss (bitte angeben)"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "806X",
+              "text": "Lokalisation des Gefäßverschlusses",
+              "enableWhen": [
+                {
+                  "question": "8060",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "repeats": true,
+              "answerConstraint": "optionsOrString",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8061",
+                    "display": "M1-Verschluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8062",
+                    "display": "M2-Verschluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8063",
+                    "display": "T-Gabelverschluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8064",
+                    "display": "Distaler ACI-Verschluss, T-Gabel jedoch offen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8065",
+                    "display": "Basilaris-Verschluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8066",
+                    "display": "V4-Verschluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8067",
+                    "display": "A. c. posterior-Verschluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8071",
+                    "display": "A. c. anterior-Verschluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8072",
+                    "display": "Verschluss der proximalen ACI"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "system": "http://example.org/CodeSystem/vessel-occlusion",
+                    "code": "8073",
+                    "display": "Stenose der proximalen ACI (wenn >= 70 %)"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-gefäßdiagnostik-extrakraniell",
+          "text": "Erste Untersuchung der hirnzuführenden Gefäße (extrakraniell)"
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-diagnostik",
+      "text": "Diagnostik",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "8070",
+          "text": "Plättchenhemmer",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Mono"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Dual"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Nein"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "8075",
+          "text": "Vitamin K Antagonist",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "derzeit pausiert"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            }
+          ]
+        },
+        {
+          "type": "decimal",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueDecimal": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueDecimal": 9.9
+            }
+          ],
+          "linkId": "8076",
+          "text": "INR-Wert bei Aufnahme",
+          "enableWhen": [
+            {
+              "question": "8075",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "8080",
+          "text": "Apixaban",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "derzeit pausiert"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "8085",
+          "text": "Dabigatran",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "derzeit pausiert"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "8090",
+          "text": "Edoxaban",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "derzeit pausiert"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "8095",
+          "text": "Rivaroxaban",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "derzeit pausiert"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-vortherapie",
+      "text": "Vortherapie bei Aufnahme (Antithrombotische Therapie)",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "linkId": "9001",
+          "text": "Hypertonie",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9002",
+          "text": "Diabetes mellitus",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9003",
+          "text": "Vorinsult",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9004",
+          "text": "Herzinfarkt",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9005",
+          "text": "Hypercholesterinämie",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9015",
+          "text": "DLCN Score",
+          "type": "integer",
+          "required": false,
+          "enableWhen": [
+            {
+              "question": "9005",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1"
+              }
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 24
+            }
+          ]
+        },
+        {
+          "linkId": "9006",
+          "text": "Vorhofflimmern",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja bereits bekannt"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "ja De-Novo (EKG)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9009",
+          "text": "Nikotin",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9012",
+          "text": "Alkohol",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "9013",
+          "text": "Niereninsuffizienz",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-risikofaktoren",
+      "text": "Risikofaktoren und Begleiterkrankungen",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "linkId": "10001",
+          "text": "Lyse i.v.",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "extern durchgeführt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "10002",
+          "text": "Art der Thrombolyse",
+          "enableWhen": [
+            {
+              "question": "10001",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Alteplase"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Tenecteplase"
+              }
+            }
+          ]
+        },
+        {
+          "type": "date",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueDate": "2015-01-01"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueDate": "2026-01-01"
+            }
+          ],
+          "linkId": "10040",
+          "text": "Datum Lyse i.v.",
+          "enableWhen": [
+            {
+              "question": "10001",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1"
+              }
+            }
+          ]
+        },
+        {
+          "type": "time",
+          "linkId": "10041",
+          "text": "Uhrzeit Lyse i.v.",
+          "enableWhen": [
+            {
+              "question": "10001",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "10090",
+          "text": "Akute endovaskuläre Behandlung"
+        },
+        {
+          "linkId": "10005",
+          "text": "Thrombozytenaggregationshemmer",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Mono"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Dual"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Nein"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "10091",
+          "text": "Heparin",
+          "type": "coding",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Keines"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Low"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Medium"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "High"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "10092",
+          "text": "PTA/Stent der ACI",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "vorgesehen"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "10093",
+          "text": "CEA",
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "vorgesehen"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-therapie-ischämisch",
+      "text": "Therapie ischämischer Schlaganfall",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1"
+          }
+        },
+        {
+          "question": "7001",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "Ischämie"
+          }
+        }
+      ],
+      "enableBehavior": "all"
+    },
+    {
+      "item": [
+        {
+          "type": "boolean",
+          "linkId": "10060",
+          "text": "Externe Ventrikel-Drainage"
+        },
+        {
+          "linkId": "10061",
+          "text": "Lumbale Drainage",
+          "type": "boolean"
+        },
+        {
+          "linkId": "10062",
+          "text": "Intraventrikuläre Lyse",
+          "type": "boolean"
+        },
+        {
+          "linkId": "10063",
+          "text": "Operative Ausräumung",
+          "type": "boolean"
+        },
+        {
+          "type": "boolean",
+          "linkId": "10064",
+          "text": "Hypothermie"
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-therapie-icb",
+      "text": "Therapie intrazerebrale Blutung",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1"
+          }
+        },
+        {
+          "question": "7001",
+          "operator": "=",
+          "answerCoding": {
+            "code": "2"
+          }
+        }
+      ],
+      "enableBehavior": "all"
+    },
+    {
+      "item": [
+        {
+          "type": "boolean",
+          "linkId": "10014",
+          "text": "Nasogastrische Sonde"
+        },
+        {
+          "type": "boolean",
+          "linkId": "10017",
+          "text": "Op. Dekompression"
+        },
+        {
+          "type": "boolean",
+          "linkId": "10070",
+          "text": "Antagonisierung (N)OAK"
+        },
+        {
+          "type": "coding",
+          "linkId": "10071",
+          "text": "Falls Antagonisierung \"Ja\"",
+          "enableWhen": [
+            {
+              "question": "10070",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "PPSB"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "FFP"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Idarucizumab"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Anderes spezifisches Antidot"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "10080",
+          "text": "Physiotherapie",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Ja, Beginn innerhalb von 24h"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Ja, Beginn nach 24h"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Nein"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "10081",
+          "text": "Ergotherapie",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Ja, Beginn innerhalb von 24h"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Ja, Beginn nach 24h"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Nein"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "10082",
+          "text": "Logopädie",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Ja, Beginn innerhalb von 24h"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Ja, Beginn nach 24h"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Nein"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "10083",
+          "text": "Schlucktest (z.B. GUSS) durchgeführt"
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-therapie-icb-ischämisch",
+      "text": "Therapie ischämischer Schlaganfall oder intrazerebrale Blutung",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "ja"
+          }
+        },
+        {
+          "question": "7001",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "Ischämie"
+          }
+        }
+      ],
+      "enableBehavior": "any"
+    },
+    {
+      "item": [
+        {
+          "type": "boolean",
+          "linkId": "20050",
+          "text": "Zuweisung in anderes Zentrum"
+        },
+        {
+          "type": "coding",
+          "linkId": "20051",
+          "text": "Wenn ja, in welches Zentrum?",
+          "enableWhen": [
+            {
+              "question": "20050",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Klinikum Klagenfurt am Wörthersee"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Landesklinikum Wr. Neustadt"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "7",
+                "display": "Universitätsklinikum Tulln"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "8",
+                "display": "Universitätsklinikum St. Pölten"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "9",
+                "display": "Linz Kepler Universitätsklinikum Med Campus III"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "11",
+                "display": "Linz Kepler Universitätsklinikum Neuromed Campus"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "16",
+                "display": "Christian-Doppler-Klinik Salzburg"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "19",
+                "display": "Landeskrankenhaus Universitätsklinikum Graz"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "22",
+                "display": "Landeskrankenhaus Universitätskliniken Innsbruck"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "25",
+                "display": "Universtätsklinikum AKH Wien"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "26",
+                "display": "Krankenhaus der Barmherzigen Brüder Wien"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "29",
+                "display": "Wiener Gesundheitsverbund Klinik Landstraße"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "34",
+                "display": "Landeskrankenhaus Feldkirch"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "20048",
+          "text": "Dokumentierendes Zentrum",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "eigenes Zentrum"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "anderes Zentrum"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "20052",
+          "text": "Intervenierendes Zentrum",
+          "answerConstraint": "optionsOnly",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Klinikum Klagenfurt am Wörthersee"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Landesklinikum Wr. Neustadt"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "7",
+                "display": "Universitätsklinikum Tulln"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "8",
+                "display": "Universitätsklinikum St. Pölten"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "9",
+                "display": "Linz Kepler Universitätsklinikum Med Campus III"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "11",
+                "display": "Linz Kepler Universitätsklinikum Neuromed Campus"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "16",
+                "display": "Christian-Doppler-Klinik Salzburg"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "19",
+                "display": "Landeskrankenhaus Universitätsklinikum Graz"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "22",
+                "display": "Landeskrankenhaus Universitätskliniken Innsbruck"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "25",
+                "display": "Universtätsklinikum AKH Wien"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "26",
+                "display": "Krankenhaus der Barmherzigen Brüder Wien"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "29",
+                "display": "Wiener Gesundheitsverbund Klinik Landstraße"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "34",
+                "display": "Landeskrankenhaus Feldkirch"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-basisdaten-endovaskulär",
+      "text": "Basisdaten und Ausgangsbefund (endovaskuläres Protokoll)",
+      "enableWhen": [
+        {
+          "question": "10090",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "boolean",
+          "linkId": "20080",
+          "text": "IV Thrombolyse"
+        },
+        {
+          "type": "boolean",
+          "linkId": "20081",
+          "text": "IA Thrombolyse"
+        },
+        {
+          "type": "coding",
+          "linkId": "20104",
+          "text": "wenn IA-Thrombolyse, welches Trombolytikum",
+          "enableWhen": [
+            {
+              "question": "20081",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "rTPA"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "andere"
+              }
+            }
+          ]
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 999
+            }
+          ],
+          "linkId": "20105",
+          "text": "wenn rTPA: Gesamtdosis von IA rTPA in mg",
+          "enableWhen": [
+            {
+              "question": "20104",
+              "operator": "=",
+              "answerCoding": {
+                "code": "0",
+                "display": "rTPA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "20082",
+          "text": "Thrombektomie"
+        },
+        {
+          "type": "boolean",
+          "linkId": "20102",
+          "text": "ASPECT Score erfasst"
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 10
+            }
+          ],
+          "linkId": "200601",
+          "text": "ASPECT Score",
+          "enableWhen": [
+            {
+              "question": "20102",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "boolean",
+              "linkId": "20108",
+              "text": "ASS"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20109",
+              "text": "Clopidogrel"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20110",
+              "text": "GPIIb/IIIa Antagonisten"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20111",
+              "text": "Heparin"
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "20161",
+              "text": "Ballonkatheter",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "ja"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "0",
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "unbekannt"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "linkId": "20090",
+              "text": "Stentretriever",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "linkId": "20091",
+              "text": "Aspiration",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "date",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+              "linkId": "20175",
+              "text": "Datum Angiographiebeginn",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "linkId": "20176",
+              "text": "Uhrzeit Angiographiebeginn",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "date",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+              "linkId": "20177",
+              "text": "Datum Gefäßrekanalisation",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "time",
+              "linkId": "20178",
+              "text": "Uhrzeit Gefäßrekanalisation",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "drop-down",
+                        "display": "Drop down"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "201621",
+              "text": "Anzahl der Passagen",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "0",
+                    "display": "eins"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "zwei"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "drei"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "vier"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": ">=5"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "keine"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "check-box",
+                        "display": "Check-box"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "20128",
+              "text": "angiographischer Gefäßbefund",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "repeats": true,
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "7",
+                    "display": "bereits erfolgte, vollständige Rekanalisation"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "0",
+                    "display": "M1-Verschluß"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "M2-Verschluß"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "T-Gabelverschluß"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "distaler ACI-Verschluß, T-Gabel jedoch offen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "8",
+                    "display": "Verschluss der proximalen ACI"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "Basilaris-Verschluß"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "V4-Verschluß"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "6",
+                    "display": "andere"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "9",
+                    "display": "Stenose der proximalen ACI (wenn >=70%)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "10",
+                    "display": "A. c. posterior-Verschluss"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "11",
+                    "display": "A. c. anterior-Verschluss"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "maxLength": 64,
+              "linkId": "20129",
+              "text": "Wenn andere: Welcher",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "20128",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "6",
+                    "display": "andere, bitte spezifizieren"
+                  }
+                }
+              ],
+              "enableBehavior": "all"
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "20150",
+              "text": "Intubation für Angiographie",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "ja"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "0",
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "unbekannt"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "linkId": "20045",
+              "text": "Permanenter Stent",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "linkId": "20046",
+              "text": "Wenn permanenter Stent Ja:",
+              "enableWhen": [
+                {
+                  "question": "20045",
+                  "operator": "=",
+                  "answerBoolean": true
+                },
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "enableBehavior": "all",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Carotis Interna (extrakraniell)"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Intrakranielle Gefäße"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "andere extrakranielle Gefäße"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "linkId": "20179",
+              "text": "Initialer TICI-Score",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "0",
+                    "display": "Grad 0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Grad 1"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Grad 2a"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Grad 2b"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "Grad 3"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "6",
+                    "display": "unbekannt"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "linkId": "20133",
+              "text": "TICI-Score bei Angio-Ende",
+              "enableWhen": [
+                {
+                  "question": "20082",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "0",
+                    "display": "Grad 0"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Grad 1"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Grad 2a"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Grad 2b"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "Grad 3"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "6",
+                    "display": "unbekannt"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "group-sonstige-medikation",
+          "text": "Sonstige periproz. antiaggregatorische Medikation"
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-therapie-endovaskuläre",
+      "text": "Therapie, Intervention, Komplikationen (endovaskuläres Protokoll)",
+      "enableWhen": [
+        {
+          "question": "10090",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ],
+      "enableBehavior": "all"
+    },
+    {
+      "item": [
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "20135",
+          "text": "Prozedurale Komplikationen aufgetreten",
+          "required": false,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "20136",
+                "display": "periprozedurale Dissektion (nicht flussrelevant)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "20137",
+                "display": "periprozedurale Dissektion (flussrelevant)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "20138",
+                "display": "intrazerebrale Blutung (ICB)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "20139",
+                "display": "SAB"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "20140",
+                "display": "Thrombembolische Komplikationen"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "20141",
+                "display": "Reokklusion des Zielgefäßes"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "20142",
+                "display": "Komplikationen an Punktionsstelle, z.B. Pseudoaneurysma/OP-würdige Extravasation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "20143",
+                "display": "andere"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "maxLength": 64,
+          "linkId": "20180",
+          "text": "Welche andere Komplikationen ?",
+          "enableWhen": [
+            {
+              "question": "20135",
+              "operator": "=",
+              "answerCoding": {
+                "code": "20143",
+                "display": "andere"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "20187",
+          "text": "Zeitpunkt der ICB",
+          "enableWhen": [
+            {
+              "question": "20135",
+              "operator": "=",
+              "answerCoding": {
+                "code": "20138",
+                "display": "intrazerebrale Blutung (ICB)"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "innerhalb von 24 Stunden nach Intervention"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "später"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "20145",
+          "text": "ECASS-Klassifikation der ICB",
+          "enableWhen": [
+            {
+              "question": "20135",
+              "operator": "=",
+              "answerCoding": {
+                "code": "20138",
+                "display": "intrazerebrale Blutung (ICB)"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Haemorrhagic infarction 1 (HI I): small petechiae along the margins of the infarct"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Haemorrhagic infarction 2 (HI II): confluent petechiae within the infarcted area but no space-occupying effect"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "parenchymal haemorrhage 1 (PH I): blood clots in 30% or less of the infarcted area with some slight space-occupying effect"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Parenchymal haemorrhage 2 (PH II): blood clots in more than 30% of the infarcted area with substantial space-occupying effect"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "20146",
+          "text": "Besteht klinische Verschlechterung (um NIHSS >=4 Punkte) die auf ICB zu beziehen ist?",
+          "enableWhen": [
+            {
+              "question": "20135",
+              "operator": "=",
+              "answerCoding": {
+                "code": "20138",
+                "display": "intrazerebrale Blutung (ICB)"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "20144",
+          "text": "Patient an prozeduralen Kompliationen verstorben?",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-komplikationen-endovaskuläre",
+      "text": "Prozedurale Komplikationen (endovaskuläres Protokoll)",
+      "enableWhen": [
+        {
+          "question": "10090",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "boolean",
+          "linkId": "20222",
+          "text": "Postinterventionelle Bildgebung"
+        },
+        {
+          "type": "coding",
+          "linkId": "20223",
+          "text": "Bildgebendes Verfahren",
+          "enableWhen": [
+            {
+              "question": "20222",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "CT"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "MRI"
+              }
+            }
+          ]
+        },
+        {
+          "type": "date",
+          "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2024-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+          "linkId": "20220",
+          "text": "Datum postinterventionelle Bildgebung",
+          "enableWhen": [
+            {
+              "question": "20222",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "type": "time",
+          "linkId": "20221",
+          "text": "Uhrzeit postinterventionelle Bildgebung",
+          "enableWhen": [
+            {
+              "question": "20222",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "boolean",
+              "linkId": "20190",
+              "text": "<1/3 ACM"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20191",
+              "text": "1/3 - 2/3 ACM"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20192",
+              "text": "> 2/3 ACM"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20193",
+              "text": "Infarkt A. c. anterior"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20194",
+              "text": "Infarkt A. c. posterior"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20195",
+              "text": "Infarkt PICA"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20196",
+              "text": "Infarkt SCA"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20197",
+              "text": "hint. Zirkulation: kein Infarkt im Hirnstamm"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20198",
+              "text": "hint. Zirkulation: minimale Infarkte im Hirnstamm (Rami ad pontem)"
+            },
+            {
+              "type": "boolean",
+              "linkId": "20199",
+              "text": "hint. Zirkulation: ausgedehnte Infarkte im Hirnstamm"
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-infarktgröße-endovaskulär",
+          "text": "Finale Infarktgröße in der Bildgebung nach der Intervention",
+          "enableWhen": [
+            {
+              "question": "20222",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 99
+            }
+          ],
+          "linkId": "20185",
+          "text": "Gesamtsumme NIH-SS nach 24 Stunden"
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "20225",
+          "text": "mRS",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "0"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "1"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "2"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "3"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "4"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "5"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "6",
+                "display": "6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "date",
+          "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+          "linkId": "20163",
+          "text": "Wenn mRS 6 (Tod bei Entlassung), dann Todesdatum:",
+          "enableWhen": [
+            {
+              "question": "20225",
+              "operator": "=",
+              "answerCoding": {
+                "code": "6",
+                "display": "6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "20164",
+          "text": "Wenn mRS 6 (Tod bei Entlassung), dann Todesursache:",
+          "enableWhen": [
+            {
+              "question": "20225",
+              "operator": "=",
+              "answerCoding": {
+                "code": "6",
+                "display": "6"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "interventionsassoziiert zerebrovaskulär"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "interventionsassoziiert, nicht zerebrovaskulär"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "zerebrovaskulär, nicht interventionsassoziiert"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "andere Ursache"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "maxLength": 64,
+          "linkId": "20165",
+          "text": "Beschreibung Todesursache",
+          "enableWhen": [
+            {
+              "question": "20164",
+              "operator": "=",
+              "answerCoding": {
+                "code": "3",
+                "display": "andere Ursache"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-bildgebung-endovaskulär",
+      "text": "Postinterventionelle Bildgebung (endovaskuläres Protokoll)",
+      "enableWhen": [
+        {
+          "question": "10090",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "date",
+          "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+          "linkId": "11001",
+          "text": "Entlassungsdatum"
+        },
+        {
+          "type": "coding",
+          "linkId": "11002",
+          "text": "ICD 10 Diagnose",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "I60.- Subarachnodialblutung"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "I61.- Intrazerebrale Blutung"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "I63.- Hirninfarkt"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "11",
+                "display": "G45.-zerebrale transitorische ischämische Attacken oder verwandte Syndrome"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "coding",
+              "linkId": "11003",
+              "text": "Entlassungsart",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Nach Hause"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Neurolog. Akutbett"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Neurolog. Phase B"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "Neurolog. Phase C im Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "Neurolog. Phase C außer Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "6",
+                    "display": "Tagesklinik im Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "7",
+                    "display": "Tagesklinik außer Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "8",
+                    "display": "Neurolog. Phase D außer Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "9",
+                    "display": "Geriatrische Abteilung im Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "10",
+                    "display": "Geriatrische Abteilung außer Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "11",
+                    "display": "Neurochirurg. Abteilung im Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "12",
+                    "display": "Neurochirurg. Abteilung außer Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "14",
+                    "display": "Andere Fachabteilung im Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "15",
+                    "display": "Andere Fachabteilung außer Haus"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "16",
+                    "display": "Intensivstation"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "17",
+                    "display": "Pflegeheim"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "18",
+                    "display": "Altersheim"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "19",
+                    "display": "Verstorben"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "20",
+                    "display": "Palliatives Setting im Haus"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "linkId": "11004",
+              "text": "Todesursache",
+              "enableWhen": [
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "19",
+                    "display": "Verstorben"
+                  }
+                }
+              ],
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Hirnödem"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Reinisult"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Herzinfarkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "andere kardiale Ursachen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "Lungenembolie"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "6",
+                    "display": "Interkurrente andere Erkrankungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "7",
+                    "display": "Konsumierende andere Erkrankungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "8",
+                    "display": "andere"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "maxLength": 64,
+              "linkId": "11005",
+              "text": "Welche andere Todesursache",
+              "enableWhen": [
+                {
+                  "question": "11004",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "8",
+                    "display": "andere"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "19",
+                    "display": "Verstorben"
+                  }
+                }
+              ],
+              "enableBehavior": "all"
+            },
+            {
+              "type": "boolean",
+              "linkId": "11006",
+              "text": "Todesursache autoptisch gesichert",
+              "enableWhen": [
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "19",
+                    "display": "Verstorben"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueInteger": 42
+                }
+              ],
+              "linkId": "12020",
+              "text": "Gesamtsumme NIH - SS bei Entlassung",
+              "enableWhen": [
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "1",
+                    "display": "Nach Hause"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "2",
+                    "display": "Neurolog. Akutbett"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "3",
+                    "display": "Neurolog. Phase B"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "4",
+                    "display": "Neurolog. Phase C im Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "5",
+                    "display": "Neurolog. Phase C außer Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "6",
+                    "display": "Tagesklinik im Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "7",
+                    "display": "Tagesklinik außer Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "8",
+                    "display": "Neurolog. Phase D außer Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "9",
+                    "display": "Geriatrische Abteilung im Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "10",
+                    "display": "Geriatrische Abteilung außer Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "11",
+                    "display": "Neurochirurg. Abteilung im Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "12",
+                    "display": "Neurochirurg. Abteilung außer Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "14",
+                    "display": "Andere Fachabteilung im Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "15",
+                    "display": "Andere Fachabteilung außer Haus"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "16",
+                    "display": "Intensivstation"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "17",
+                    "display": "Pflegeheim"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "18",
+                    "display": "Altersheim"
+                  }
+                },
+                {
+                  "question": "11003",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "20",
+                    "display": "Palliatives Setting im Haus"
+                  }
+                }
+              ],
+              "enableBehavior": "any"
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-monitoring",
+          "text": "Monitoring"
+        },
+        {
+          "item": [
+            {
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueInteger": 0
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueInteger": 6
+                }
+              ],
+              "linkId": "14001",
+              "text": "Rankinskala bei der Entlassung"
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-entlassung-rankinskala",
+          "text": "RANKINSKALA bei Entlassung"
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-entlassung",
+      "text": "Entlassung",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "ja"
+          }
+        }
+      ],
+      "enableBehavior": "any"
+    },
+    {
+      "item": [
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "27024",
+          "text": "TTE",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "vorgesehen"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "27025",
+          "text": "TEE",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "vorgesehen"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "group-ergänzende-diagnostik",
+      "text": "Ergänzende Diagnostik",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "ja"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "boolean",
+          "linkId": "15015",
+          "text": "Komplikationen"
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "999359609780",
+          "text": "Welche",
+          "enableWhen": [
+            {
+              "question": "15015",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "15001",
+                "display": "Reinsult (neues Ereignis anderes Territorium)"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15014",
+                "display": "Progressive Stroke"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15002",
+                "display": "Klin. Relevante Einblutung"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15003",
+                "display": "Hirnödem"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15004",
+                "display": "Epil. Anfall"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15005",
+                "display": "Hydrocephalus"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15006",
+                "display": "Kardiale Arrythmien"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15007",
+                "display": "Herz-Kreislaufdekompensation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15008",
+                "display": "Pulmonalembolie"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15009",
+                "display": "Sepsis"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15010",
+                "display": "Harnwegsinfekt"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15011",
+                "display": "Pneumonie"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15012",
+                "display": "Extrazerebrale Blutung"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15013",
+                "display": "Tiefe Beinvenenthrombose"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15016",
+                "display": "Herzinfarkt"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15018",
+                "display": "Delir"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "15019",
+                "display": "Progression bei primärem ICH"
+              }
+            }
+          ]
+        },
+        {
+          "type": "date",
+          "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+          "linkId": "150181",
+          "text": "Datum Diagnose Delir",
+          "enableWhen": [
+            {
+              "question": "999359609780",
+              "operator": "=",
+              "answerCoding": {
+                "code": "15018",
+                "display": "Delir"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "150182",
+          "text": "Selbst-/Fremdgefährdung",
+          "enableWhen": [
+            {
+              "question": "999359609780",
+              "operator": "=",
+              "answerCoding": {
+                "code": "15018",
+                "display": "Delir"
+              }
+            }
+          ]
+        },
+        {
+          "type": "date",
+          "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+          "linkId": "15017",
+          "text": "Datum Einblutung",
+          "enableWhen": [
+            {
+              "question": "999359609780",
+              "operator": "=",
+              "answerCoding": {
+                "code": "15002",
+                "display": "Klin. Relevante Einblutung"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "group-komplikationen",
+      "text": "Komplikationen",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "ja"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "boolean",
+          "linkId": "16008",
+          "text": "Ischämie"
+        },
+        {
+          "type": "coding",
+          "linkId": "16004",
+          "text": "Art der Ischämie",
+          "enableWhen": [
+            {
+              "question": "16008",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "TIA"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Hirninfarkt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 7
+            }
+          ],
+          "linkId": "16035",
+          "text": "ABCD2 Score",
+          "enableWhen": [
+            {
+              "question": "16004",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1",
+                "display": "TIA"
+              }
+            }
+          ],
+          "required": false
+        },
+        {
+          "item": [
+            {
+              "type": "boolean",
+              "linkId": "16009",
+              "text": "Mikroangiopathie"
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "16010",
+              "text": "Thromboembolie aus kardialer Quelle (kardiogen-embolisch)",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "0",
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "wahrscheinlich"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "radio-button",
+                        "display": "Radio Button"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "16011",
+              "text": "Makroangiopathie",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "0",
+                    "display": "nein"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "wahrscheinlich"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "linkId": "16012",
+              "text": "Hämodynamisch"
+            },
+            {
+              "type": "boolean",
+              "linkId": "16013",
+              "text": "Koagulopathie"
+            },
+            {
+              "type": "boolean",
+              "linkId": "16014",
+              "text": "Arterielle Dissektion"
+            },
+            {
+              "type": "boolean",
+              "linkId": "16019",
+              "text": "ESUS"
+            },
+            {
+              "type": "boolean",
+              "linkId": "16018",
+              "text": "Ätiopathogenese derzeit unbekannt"
+            },
+            {
+              "type": "boolean",
+              "linkId": "16040",
+              "text": "Andere Ursache"
+            },
+            {
+              "type": "string",
+              "maxLength": 64,
+              "linkId": "16041",
+              "text": "Welche",
+              "enableWhen": [
+                {
+                  "question": "16040",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "boolean",
+              "linkId": "16005",
+              "text": "Intrazerebrale Blutung"
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-ursache-ischämie",
+          "text": "Ursache der Ischämie",
+          "enableWhen": [
+            {
+              "question": "16008",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "boolean",
+              "linkId": "16020",
+              "text": "Hypertonie"
+            },
+            {
+              "type": "boolean",
+              "linkId": "16021",
+              "text": "Gefäßmalformation"
+            },
+            {
+              "type": "boolean",
+              "linkId": "16022",
+              "text": "Amyloidangiopathie"
+            },
+            {
+              "type": "boolean",
+              "linkId": "16023",
+              "text": "Medikamentöse Ursache"
+            },
+            {
+              "type": "boolean",
+              "linkId": "16050",
+              "text": "Andere Ursache"
+            },
+            {
+              "type": "string",
+              "maxLength": 64,
+              "linkId": "16051",
+              "text": "Welche",
+              "enableWhen": [
+                {
+                  "question": "16050",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "gruppe-ursache-intrazerebralen-blutung",
+          "text": "Ursache der intrazerebralen Blutung",
+          "enableWhen": [
+            {
+              "question": "16005",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "16006",
+          "text": "Subarachnoidalblutung"
+        },
+        {
+          "type": "coding",
+          "linkId": "16030",
+          "text": "Falls Subarachnoidalblutung \"Ja\"",
+          "enableWhen": [
+            {
+              "question": "16006",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "aneurysmatisch"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "perimesencephal"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "konvexal"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "16007",
+          "text": "Hirnvenenthrombose"
+        }
+      ],
+      "type": "group",
+      "linkId": "group-klassifikation",
+      "text": "Klassifikation",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "ja"
+          }
+        }
+      ]
+    },
+    {
+      "item": [
+        {
+          "type": "boolean",
+          "linkId": "21000",
+          "text": "Follow up"
+        },
+        {
+          "type": "date",
+          "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+          "linkId": "21004",
+          "text": "Follow-up Datum",
+          "enableWhen": [
+            {
+              "question": "21000",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "21005",
+          "text": "Follow-up Typ",
+          "enableWhen": [
+            {
+              "question": "21000",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "telefonisch"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "persönlich"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "21006",
+          "text": "Follow-up mit",
+          "enableWhen": [
+            {
+              "question": "21000",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Patienten"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Patienten und Angehörigen / Pflegepersonal"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Angehörigen oder Pflegepersonal"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Hausarzt / Facharzt"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Krankenakte"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "linkId": "21010",
+          "text": "Patientenstatus",
+          "enableWhen": [
+            {
+              "question": "21000",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Lebend, kooperativ"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Verstorben"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Lebend, keine weiteren Daten erhältlich"
+              }
+            }
+          ]
+        },
+        {
+          "item": [
+            {
+              "type": "boolean",
+              "linkId": "21022",
+              "text": "Sterbedatum bekannt"
+            },
+            {
+              "type": "date",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+                  "valueDate": "2015-01-01"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+                  "valueDate": "2026-01-01"
+                }
+              ],
+              "linkId": "21020",
+              "text": "Sterbedatum",
+              "enableWhen": [
+                {
+                  "question": "21022",
+                  "operator": "=",
+                  "answerBoolean": true
+                }
+              ]
+            },
+            {
+              "type": "coding",
+              "linkId": "21030",
+              "text": "Todesursache",
+              "answerOption": [
+                {
+                  "valueCoding": {
+                    "code": "1",
+                    "display": "Hirnödem"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "2",
+                    "display": "Rezidivschlaganfall"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "3",
+                    "display": "Herzinfarkt"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "4",
+                    "display": "Andere kardiale Ursachen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "5",
+                    "display": "Lungenembolie"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "6",
+                    "display": "Interkurrente andere Erkrankungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "7",
+                    "display": "Konsumierende andere Erkrankungen"
+                  }
+                },
+                {
+                  "valueCoding": {
+                    "code": "8",
+                    "display": "Andere"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "maxLength": 64,
+              "linkId": "21031",
+              "text": "Welche andere Todesursache",
+              "enableWhen": [
+                {
+                  "question": "21030",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "8",
+                    "display": "Andere"
+                  }
+                }
+              ]
+            }
+          ],
+          "type": "group",
+          "linkId": "group-falls-verstorben",
+          "text": "Falls verstorben",
+          "enableWhen": [
+            {
+              "question": "21010",
+              "operator": "=",
+              "answerCoding": {
+                "code": "3",
+                "display": "Verstorben"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "group-followup",
+      "text": "Follow Up nach 3 Monaten",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "ja"
+          }
+        },
+        {
+          "question": "11003",
+          "operator": "!=",
+          "answerCoding": {
+            "code": "19",
+            "display": "Verstorben"
+          }
+        }
+      ],
+      "enableBehavior": "all"
+    },
+    {
+      "item": [
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "23005",
+          "text": "Rehabilitation",
+          "enableBehavior": "any",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Rehabilitation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Keine Rehabilitation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Keine Information"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "2300X",
+          "text": "Art der Rehabilitation",
+          "enableWhen": [
+            {
+              "question": "23005",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1",
+                "display": "Rehabilitation"
+              }
+            }
+          ],
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "23006",
+                "display": "Stationäre Rehabilitation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "23007",
+                "display": "Ambulante Rehabilitation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "23008",
+                "display": "Rehabilitation zu Hause"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "23010",
+          "text": "Wohnsituation",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Zuhause alleine"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Zuhause mit Verwandten / Bekannten"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Pensionistenheim"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Pflegeheim"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Krankenhaus"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "group-soziale-situation",
+      "text": "Soziale Situation",
+      "enableWhen": [
+        {
+          "question": "21010",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "Lebend, kooperativ"
+          }
+        },
+        {
+          "question": "21000",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "ja"
+          }
+        }
+      ],
+      "enableBehavior": "all"
+    },
+    {
+      "item": [
+        {
+          "type": "integer",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue",
+              "valueInteger": 100
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/minValue",
+              "valueInteger": 0
+            }
+          ],
+          "linkId": "24011",
+          "text": "Gesamtsumme Barthel-Index bei Follow Up",
+          "enableWhen": [
+            {
+              "question": "21010",
+              "operator": "=",
+              "answerCoding": {
+                "code": "1",
+                "display": "Lebend, kooperativ"
+              }
+            }
+          ],
+          "required": false
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-barthel",
+      "text": "BARTHEL-Index Follow Up",
+      "enableWhen": [
+        {
+          "question": "21010",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "Lebend, kooperativ"
+          }
+        },
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "ja"
+          }
+        }
+      ],
+      "enableBehavior": "all"
+    },
+    {
+      "item": [
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/maxValue"
+            }
+          ],
+          "linkId": "25001",
+          "text": "Rankinskala Follow Up",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Keine Einschränkung"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Trotz vorhandener Symptome keine nennenswerte Beeinträchtigung bei der Durchführung täglicher Verrichtungen"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Leichte Beeinträchtigung: nicht mehr möglich alle Aktivitäten wie vorher durchzuführen, kann sich jedoch ohne fremde Hilfe um die eigenen Angelegenheiten kümmern"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "3",
+                "display": "Geringe Beeinträchtigung: angewiesen auf etwas Hilfe, kann ohne Unterstützung gehen"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "4",
+                "display": "Deutliche Beeinträchtigung: kann nicht ohne Hilfe gehen und ist auf Hilfe anderer Personen bei Körperpflege angewiesen"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "5",
+                "display": "Schwere Beeinträchtigung: bettlägerig, inkontinent, auf permanente Pflege angewiesen"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "6",
+                "display": "Tod"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-rankin-skala",
+      "text": "RANKINSKALA bei Follow Up",
+      "enableWhen": [
+        {
+          "question": "2006",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "ja"
+          }
+        },
+        {
+          "question": "21010",
+          "operator": "!=",
+          "answerCoding": {
+            "code": "4",
+            "display": "Lebend, keine weiteren Daten erhältlich"
+          }
+        },
+        {
+          "question": "21000",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ],
+      "enableBehavior": "all"
+    },
+    {
+      "item": [
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26019",
+          "text": "Plättchenhemmer",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Mono"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Dual"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "Nein"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26020",
+          "text": "Vitamin K Antagonist",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26021",
+          "text": "Apixaban",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26022",
+          "text": "Dabigatran",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26023",
+          "text": "Edoxaban",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26024",
+          "text": "Rivaroxaban",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "linkId": "26005",
+          "text": "Andere"
+        },
+        {
+          "type": "string",
+          "maxLength": 64,
+          "linkId": "26025",
+          "text": "Welche andere Antithrombotica",
+          "enableWhen": [
+            {
+              "question": "26005",
+              "operator": "=",
+              "answerBoolean": true
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26032",
+          "text": "Regelmäßig Lipidsenker",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26033",
+          "text": "Regelmäßig Blutdruckkontrollen",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein "
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt "
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26034",
+          "text": "Regelmäßig Antihypertensiva",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26035",
+          "text": "Regelmäßig Antidiabetica",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26036",
+          "text": "Regelmäßig Antidepressiva",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26030",
+          "text": "PFO Verschluss",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26031",
+          "text": "Herzohrverschluss",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt "
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26037",
+          "text": "Vor dem Schlaganfall Raucher",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26038",
+          "text": "Seither abstinent (Rauchen)",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-sekundärprophylaxe",
+      "text": "Sekundärprophylaxe",
+      "enableWhen": [
+        {
+          "question": "21000",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "21010",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "Lebend, kooperativ"
+          }
+        }
+      ],
+      "enableBehavior": "all"
+    },
+    {
+      "item": [
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26040",
+          "text": "Ischämischer Reinsult",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26041",
+          "text": "Myokardinfarkt",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26042",
+          "text": "TIA",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        },
+        {
+          "type": "coding",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "radio-button",
+                    "display": "Radio Button"
+                  }
+                ]
+              }
+            }
+          ],
+          "linkId": "26043",
+          "text": "ICH",
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "ja"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "0",
+                "display": "nein"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "unbekannt"
+              }
+            }
+          ]
+        }
+      ],
+      "type": "group",
+      "linkId": "gruppe-rezidivereignisse",
+      "text": "Rezidivereignisse (nach Entlassung von der SU)",
+      "enableWhen": [
+        {
+          "question": "21000",
+          "operator": "=",
+          "answerBoolean": true
+        },
+        {
+          "question": "21010",
+          "operator": "=",
+          "answerCoding": {
+            "code": "1",
+            "display": "Lebend, kooperativ"
+          }
+        }
+      ],
+      "enableBehavior": "all"
+    }
+  ]
+}
