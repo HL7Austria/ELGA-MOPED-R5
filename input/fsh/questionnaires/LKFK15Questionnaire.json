@@ -1,0 +1,85 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K15 Questionnaire "
+      }
+    ]
+  },
+  "title": "K15 Questionnaire ",
+  "status": "active",
+  "description": "K15 Questionnaire - calculatory appendix – general cost areas",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K15"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "kostenbereichs-kennzahlenindex",
+      "text": "Kostenbereichs-Kennzahlenindex",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "K1",
+            "display": "Küche – Tablettsystem"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "K2",
+            "display": "Küche – Schöpfsystem"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "K3",
+            "display": "Küche – Cook and Chill"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "K9",
+            "display": "Seite 158 Handbuch zur Dokumentation – Anhang 1 (Aufbau und Inhalt der Datenmeldungen) 4.30 Satzart K15 – Kalkulatorischer Anhang – Allgemeine Kosten- bereiche Hinweis: Verweise auf das „Handbuch zur Dokumentation von Kostendaten in landesgesundheitsfondsfinanzierten Krankenanstalten“ erfolgen mit der Kurz- bezeichnung „KORE-Handbuch“. 4.30.1 Satzartenkennzeichen Das Datenfeld kennzeichnet die aktuelle Satzart und ist mit \"K15\" zu befüllen. 4.30.2 Jahr Das Berichtsjahr ist 4-stellig einzugeben (JJJJ). 4.30.3 Krankenanstaltennummer Dieses Datenfeld ist mit der jeweiligen Krankenanstaltennummer zu befüllen („Kxxx“). Die entsprechende Liste wird vom für das Gesundheitswesen zuständigen Bundesministerium zur Verfügung gestellt. 4.30.4 Kostenbereichs-Kennzahlenindex Es ist der Allgemeine Kostenbereich entsprechend folgender Tabelle anzugeben: Index Allgemeiner Kostenbereich K1 Küche – Tablettsystem K2 Küche – Schöpfsystem K3 Küche – Cook and Chill K9"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten",
+      "text": "Kosten"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "bezugsgröße",
+      "text": "Bezugsgröße"
+    }
+  ]
+}

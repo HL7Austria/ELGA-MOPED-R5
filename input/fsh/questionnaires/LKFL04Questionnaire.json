@@ -1,0 +1,48 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "L04 Questionnaire"
+      }
+    ]
+  },
+  "title": "L04 Questionnaire",
+  "status": "active",
+  "description": "L04 Questionnaire for Exclusions of Day-Clinic Medical Services",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "L04"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "string",
+      "maxLength": 10,
+      "linkId": "medizinische-leistung-code",
+      "text": "Medizinische Leistung – Code"
+    }
+  ]
+}

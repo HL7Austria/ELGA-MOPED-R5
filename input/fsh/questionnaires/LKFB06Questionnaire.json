@@ -1,0 +1,153 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "B06 Questionnaire"
+      }
+    ]
+  },
+  "title": "B06 Questionnaire",
+  "status": "active",
+  "description": "B06 Questionnaire for Subsidy Structure (ZS)",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "B06"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstalten-traegernummer",
+      "text": "Krankenanstalten-/Trägernummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "berichtstyp",
+      "text": "Berichtstyp",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "K",
+            "display": "KA-Ebene – Gesamtdarstellung/-bericht"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "G",
+            "display": "Trägerebene – krankenanstaltenübergreifender (gemeinsamer) Bereich"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "A",
+            "display": "Trägerebene – krankenanstaltenfremder Bereich"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "T",
+            "display": "Trägerebene – Gesamtdarstellung/-bericht (KA-übergeordnete Institution)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "coding",
+      "linkId": "finanzierungstraegerindex",
+      "text": "FinanzierungsträgerIndex",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "LF",
+            "display": "Landesgesundheitsfonds"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "LD",
+            "display": "Land"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "GM",
+            "display": "Gemeinde(n)"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "RT",
+            "display": "Rechtsträger"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "SO",
+            "display": "Sonstige"
+          }
+        }
+      ]
+    },
+    {
+      "type": "coding",
+      "linkId": "zuschussartindex",
+      "text": "ZuschussartIndex",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "Z01",
+            "display": "Zuschüsse zum Betriebsabgang"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "Z02",
+            "display": "Sonstige Betriebszuschüsse"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "Z03",
+            "display": "Betriebszuschüsse"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "Z04",
+            "display": "Investitionszuschüsse"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "Z05",
+            "display": "Zins- und Annuitätenzuschüsse"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "zuschuss",
+      "text": "Zuschuss"
+    }
+  ]
+}

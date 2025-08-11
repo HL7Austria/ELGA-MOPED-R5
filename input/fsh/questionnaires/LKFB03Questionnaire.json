@@ -1,0 +1,164 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "B03 Questionnaire"
+      }
+    ]
+  },
+  "title": "B03 Questionnaire ",
+  "status": "active",
+  "description": "B03 Questionnaire for Own Funds Allocation Calculation (EVR)",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "B03"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstalten-traegernummer",
+      "text": "Krankenanstalten-/Trägernummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "berichtstyp",
+      "text": "Berichtstyp",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "K",
+            "display": "KA-Ebene – Gesamtdarstellung/-bericht"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "G",
+            "display": "Trägerebene – krankenanstaltenübergreifender (gemeinsamer) Bereich"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "A",
+            "display": "Trägerebene – krankenanstaltenfremder Bereich"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "T",
+            "display": "Trägerebene – Gesamtdarstellung/-bericht (KA-übergeordnete Institution)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "coding",
+      "linkId": "evr-index",
+      "text": "EVRIndex",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "R01",
+            "display": "Eigenmittel i.w.S. + Mezzaninkapital"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R02",
+            "display": "Mezzaninkapital"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R03",
+            "display": "Eigenmittel i.w.S. "
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R04",
+            "display": "Investitionszuschüsse zum Anlagevermögen, verbraucht"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R05",
+            "display": "Investitionszuschüsse zum Anlagevermögen, nicht verbraucht"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R06",
+            "display": "Eigenmittel gem. §23 URG"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R07",
+            "display": "Unversteuerte Rücklagen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R08",
+            "display": "Eigenkapital "
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R09",
+            "display": "Kapitalrücklagen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R10",
+            "display": "Gewinnrücklagen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R11",
+            "display": "Bilanzgewinn/Bilanzverlust"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R12",
+            "display": "Nenn-Kapital (Grund-, Stammkapital)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "wert-berichtsjahr",
+      "text": "Wert Berichtsjahr"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "wert-vorjahr",
+      "text": "Wert Vorjahr"
+    }
+  ]
+}

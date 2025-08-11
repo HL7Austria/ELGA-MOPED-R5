@@ -1,0 +1,95 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "A01 Questionnaire"
+      }
+    ]
+  },
+  "title": "A01 Questionnaire für Antiinfectiva-Abrufe",
+  "status": "active",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "A01"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "integer",
+      "maxLength": 2,
+      "linkId": "monat",
+      "text": "Monat"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "integer",
+      "maxLength": 8,
+      "linkId": "bettenfuehrend-funktionscode",
+      "text": "Bettenführende bzw. nicht-bettenführende Hauptkostenstelle – Funktionscode"
+    },
+    {
+      "type": "string",
+      "maxLength": 2,
+      "linkId": "bezugsland",
+      "text": "Bezugsland"
+    },
+    {
+      "type": "string",
+      "maxLength": 10,
+      "linkId": "pharmazentralnummer",
+      "text": "Pharmazentralnummer"
+    },
+    {
+      "type": "string",
+      "maxLength": 100,
+      "linkId": "handelsname",
+      "text": "Handelsname"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "abgerufene-packungen",
+      "text": "Abgerufene Packungen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "menge-pro-packungseinheit",
+      "text": "Menge je Packungseinheit"
+    },
+    {
+      "type": "string",
+      "maxLength": 10,
+      "linkId": "packungseinheit",
+      "text": "Packungseinheit"
+    },
+    {
+      "type": "string",
+      "maxLength": 10,
+      "linkId": "atc-code",
+      "text": "ATC-Code"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K02 Questionnaire"
+      }
+    ]
+  },
+  "title": "K02 Questionnaire",
+  "status": "draft",
+  "description": "K02 Questionnaire for master data ",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K02"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "string",
+      "maxLength": 150,
+      "linkId": "krankenanstalt-bezeichnung",
+      "text": "Krankenanstalt – Bezeichnung"
+    },
+    {
+      "type": "string",
+      "maxLength": 50,
+      "linkId": "krankenanstalt-straße",
+      "text": "Krankenanstalt – Straße"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstalt-postleitzahl",
+      "text": "Krankenanstalt – Postleitzahl"
+    },
+    {
+      "type": "string",
+      "maxLength": 50,
+      "linkId": "krankenanstalt-ort",
+      "text": "Krankenanstalt – Ort"
+    },
+    {
+      "type": "string",
+      "maxLength": 20,
+      "linkId": "krankenanstalt-telefon",
+      "text": "Krankenanstalt – Telefon"
+    },
+    {
+      "type": "string",
+      "maxLength": 20,
+      "linkId": "krankenanstalt-fax",
+      "text": "Krankenanstalt – Fax"
+    },
+    {
+      "type": "string",
+      "maxLength": 100,
+      "linkId": "krankenanstalt-homepage",
+      "text": "Krankenanstalt – Homepage"
+    },
+    {
+      "type": "string",
+      "maxLength": 150,
+      "linkId": "rechtsträger-bezeichnung",
+      "text": "Rechtsträger – Bezeichnung"
+    },
+    {
+      "type": "string",
+      "maxLength": 50,
+      "linkId": "rechtsträger-straße",
+      "text": "Rechtsträger – Straße"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "rechtsträger-postleitzahl",
+      "text": "Rechtsträger – Postleitzahl"
+    },
+    {
+      "type": "string",
+      "maxLength": 50,
+      "linkId": "rechtsträger-ort",
+      "text": "Rechtsträger – Ort"
+    },
+    {
+      "type": "string",
+      "maxLength": 20,
+      "linkId": "rechtsträger-telefon",
+      "text": "Rechtsträger – Telefon"
+    },
+    {
+      "type": "string",
+      "maxLength": 20,
+      "linkId": "rechtsträger-fax",
+      "text": "Rechtsträger – Fax"
+    },
+    {
+      "type": "string",
+      "maxLength": 100,
+      "linkId": "rechtsträger-homepage",
+      "text": "Rechtsträger – Homepage"
+    },
+    {
+      "type": "string",
+      "maxLength": 100,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "NACHNAME/Vorname/Titel"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/regex",
+          "valueString": "^[A-ZÄÖÜ]+\\/[A-ZÄÖÜ][a-zäöüß]+\\/[A-Za-zÄÖÜäöüß\\.]+$"
+        }
+      ],
+      "linkId": "ärztliche-leitung",
+      "text": "Ärztliche Leitung",
+      "item": [
+        {
+          "linkId": "ärztliche-leitung_helpText",
+          "type": "display",
+          "text": "Bitte geben Sie den Namen im Format NACHNAME/Vorname/Titel ein, z. B. MÜLLER/Anna/Dr.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "maxLength": 100,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "NACHNAME/Vorname/Titel"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/regex",
+          "valueString": "^[A-ZÄÖÜ]+\\/[A-ZÄÖÜ][a-zäöüß]+\\/[A-Za-zÄÖÜäöüß\\.]+$"
+        }
+      ],
+      "linkId": "verwaltungsleitung",
+      "text": "Verwaltungsleitung",
+      "item": [
+        {
+          "linkId": "verwaltungsleitung_helpText",
+          "type": "display",
+          "text": "Bitte geben Sie den Namen im Format NACHNAME/Vorname/Titel ein, z. B. MÜLLER/Anna/Dr.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "maxLength": 100,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
+          "valueString": "NACHNAME/Vorname/Titel"
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/regex",
+          "valueString": "^[A-ZÄÖÜ]+\\/[A-ZÄÖÜ][a-zäöüß]+\\/[A-Za-zÄÖÜäöüß\\.]+$"
+        }
+      ],
+      "linkId": "pflegedienstleitung",
+      "text": "Pflegedienstleitung",
+      "item": [
+        {
+          "linkId": "pflegedienstleitung_helpText",
+          "type": "display",
+          "text": "Bitte geben Sie den Namen im Format NACHNAME/Vorname/Titel ein, z. B. MÜLLER/Anna/Dr.",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "help",
+                    "display": "Help-Button"
+                  }
+                ],
+                "text": "Help-Button"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K14 Questionnaire"
+      }
+    ]
+  },
+  "title": "K14 Questionnaire",
+  "status": "active",
+  "description": "K14 Questionnaire- Calculatory appendix – Calculatory fixed asset schedule",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K14"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "anlagenindex",
+      "text": "Anlagenindex",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "A",
+            "display": "Grundstücke (MLV-Nr. 91)"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "B",
+            "display": "Bauten (MLV-Nr. 92–99)"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "C",
+            "display": "Anlagen in Bau"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "anschaffungs-und-herstellungskosten",
+      "text": "Anschaffungs- und Herstellungskosten"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 10,
+      "linkId": "zugänge",
+      "text": "Zugänge"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 10,
+      "linkId": "abgänge",
+      "text": "Abgänge"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 10,
+      "linkId": "umbuchungen",
+      "text": "Umbuchungen"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 10,
+      "linkId": "kumulierte-abschreibungen",
+      "text": "Kumulierte Abschreibungen"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 10,
+      "linkId": "buchwerte-ende-berichtsjahres",
+      "text": "Buchwerte am Ende des Berichtsjahres"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 10,
+      "linkId": "buchwerte-vorjahr",
+      "text": "Buchwerte Vorjahr"
+    },
+    {
+      "type": "decimal",
+        "maxLength": 10,
+      "linkId": "abschreibungen-laufendes-berichtsjahr",
+      "text": "Abschreibungen laufendes Berichtsjahr"
+    }
+  ]
+}

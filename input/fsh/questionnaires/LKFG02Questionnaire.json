@@ -1,0 +1,169 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "G02 Questionnaire"
+      }
+    ]
+  },
+  "title": "G02 Questionnaire",
+  "status": "active",
+  "description": "G02 Questionnaire for Performance Data of Large Equipment",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "G02"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "string",
+      "maxLength": 4,
+      "linkId": "grosgeraet-positionsnummer",
+      "text": "Großgerät – Positionsnummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "grosgeraet-leistungsindex",
+      "text": "Großgerät – Leistungsindex",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "C50",
+            "display": "Computertomographie (CT) – Alle Leistungen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "M50",
+            "display": "Magnetresonanz-Tomographie (MR) – Alle Leistungen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "H51",
+            "display": "Coronarangiographie (COR)"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "H52",
+            "display": "Coronarangiographie - PTCA ein Gefäß"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "H53",
+            "display": "Coronarangiographie - PTCA mehr als ein Gefäß"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "H54",
+            "display": "Coronarangiographie - Stentimplantation"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "H55",
+            "display": "Coronarangiographie - Ablation"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "H56",
+            "display": "Coronarangiographie - Elektrophysiologie"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "H99",
+            "display": "Coronarangiographie - Sonstige Eingriffe bei strukturellen Herzerkrankungen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "S54",
+            "display": "Strahlentherapie - Bestrahlungstermine für strahlentherapeutische Leistungen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "S55",
+            "display": "Strahlentherapie - Bestrahlungstermine für radiochirurgische Leistungen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "S56",
+            "display": "Strahlentherapie - Bestrahlungstermine für intensitätsmodulierte Strahlentherapie (IMRT)"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "E51",
+            "display": "Emissions-Computertomographie (ECT) – Untersuchungen mit planarer Technik"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "E52",
+            "display": "Emissions-Computertomographie (ECT) – Untersuchungen mit Schichttechnik"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "P51",
+            "display": "Positronenemissions-Tomographie (PET) – Untersuchungen mit 18-FDG"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "P99",
+            "display": "Positronenemissions-Tomographie (PET) – Untersuchungen mit sonstigen Tracern"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "ambulante-frequenzen",
+      "text": "Ambulante Frequenzen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "stationaere-frequenzen",
+      "text": "Stationäre Frequenzen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "durchschnittliche-dauer-je-frequenz",
+      "text": "Durchschnittliche Dauer je Frequenz in Minuten"
+    }
+  ]
+}

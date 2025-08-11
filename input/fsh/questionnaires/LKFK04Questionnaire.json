@@ -1,0 +1,73 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K04 Questionnaire"
+      }
+    ]
+  },
+  "title": "K04 Questionnaire for KA-Statistik",
+  "status": "active",
+  "description": "This questionnaire is used to collect KA-Statistik data for K04 message reporting.",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K04"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "personalgruppenindex",
+      "text": "Personalgruppenindex",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "111",
+            "display": "Ärzte/Ärztinnen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "112",
+            "display": "Apotheker:innen, Chemiker:innen, Physiker:innen u.ä."
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "113",
+            "display": "Hebammen (inkl. Schüler:innen)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "personal-vollzeitäquivalente",
+      "text": "Personal – Vollzeitäquivalente"
+    }
+  ]
+}

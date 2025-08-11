@@ -1,0 +1,85 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K01 Questionnaire"
+      }
+    ]
+  },
+  "title": "K01 Questionnaire",
+  "status": "active",
+  "description": "K01 Questionnaire for cost center plan",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K01"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "integer",
+      "maxLength": 8,
+      "linkId": "funktionscode",
+      "text": "Funktionscode"
+    },
+    {
+      "type": "string",
+      "maxLength": 8,
+      "linkId": "interne-kostenstellennummer",
+      "text": "Interne Kostenstellennummer"
+    },
+    {
+      "type": "string",
+      "maxLength": 50,
+      "linkId": "interne-kostenstellenbezeichnung",
+      "text": "Interne Kostenstellenbezeichnung"
+    },
+    {
+      "type": "coding",
+      "linkId": "spezielle-organisationsform",
+      "text": "Spezielle Organisationsform",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "A",
+            "display": "Abteilung"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R",
+            "display": "Referenzzentrum – ohne Versorgungsstufengliederung"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "Z",
+            "display": "Referenzzentrum – höchste Versorgungsstufe"
+          }
+        }
+      ]
+    }
+  ]
+}

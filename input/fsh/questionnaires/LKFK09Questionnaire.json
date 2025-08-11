@@ -1,0 +1,234 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K09 Questionnaire"
+      }
+    ]
+  },
+  "title": "K09 Questionnaire",
+  "status": "active",
+  "description": "K09 Questionnaire for cost center statistics and cost statement (non-bed-bearing main cost center)",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K09"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "integer",
+      "maxLength": 8,
+      "linkId": "nicht-bettenführende-hauptkostenstelle–funktionscode",
+      "text": "Nicht-bettenführende Hauptkostenstelle – Funktionscode"
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "ambulante-betreuungsplätze",
+      "text": "Ambulante Betreuungsplätze"
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "ambulante-patient",
+      "text": "Ambulante Patienten/Patientinnen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 8,
+      "linkId": "frequenzen-ambulanten-patient",
+      "text": "Frequenzen an ambulanten Patienten/Patientinnen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 8,
+      "linkId": "frequenzen-stationären-patienten-andere-krankenhäuser",
+      "text": "Frequenzen an stationären Patienten/Patientinnen anderer Krankenhäuser"
+    },
+    {
+      "type": "integer",
+      "maxLength": 8,
+      "linkId": "frequenzen-stationären-patienten",
+      "text": "Frequenzen an stationären Patienten/Patientinnen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "nettogrundrissfläche",
+      "text": "Nettogrundrissfläche"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "ärzte-vollzeitäquivalente",
+      "text": "Ärzte/Ärztinnen – Vollzeitäquivalente (MLV 1-1)"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "apotheker-chemiker-physiker-vollzeitäquivalente",
+      "text": "Apotheker/innen, Chemiker/innen, Physiker/innen u.ä. – Vollzeitäquivalente (MLV 1-2)"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "hebammen-vollzeitäquivalente",
+      "text": "Hebammen – Vollzeitäquivalente (MLV 1-3)"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "weitere-gesundheitsberufe-vollzeitäquivalente",
+      "text": "Gehobener Dienst für Gesundheits- und Krankenpflege und weitere Gesundheitsberufe – Vollzeitäquivalente (MLV 1-4)"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "medizinisch-technische-dienste",
+      "text": "Gehobene medizinisch-technische Dienste, medizinisch-technischer Fachdienst und Masseure/ Masseurinnen – Vollzeitäquivalente (MLV 1-5)"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "sanitäter–vollzeitäquivalente",
+      "text": "Sanitäter, Pflegehilfe und MA – Vollzeitäquivalente (MLV 1-6)"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "verwaltungs-und-kanzleipersonal–vollzeitäquivalente",
+      "text": "Verwaltungs- und Kanzleipersonal – Vollzeitäquivalente (MLV 1-7)"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "betriebspersonal-vollzeitäquivalente",
+      "text": "Betriebspersonal – Vollzeitäquivalente (MLV 1-8)"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "sonstige-vollzeitäquivalente",
+      "text": "Sonstiges Personal – Vollzeitäquivalente (MLV 1-9)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "personalkosten",
+      "text": "Personalkosten (KOAGR01)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-med-güter",
+      "text": "Kosten für medizinische Gebrauchs- und Verbrauchsgüter (KOAGR02)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-nicht-med-güter",
+      "text": "Kosten für nicht-medizinische Gebrauchs- und Verbrauchsgüter (KOAGR03)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-med-fremdleistungen",
+      "text": "Kosten für medizinische Fremdleistungen (KOAGR04)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-nicht-med-fremdleistungen",
+      "text": "Kosten für nicht-medizinische Fremdleistungen (KOAGR05)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "energiekosten",
+      "text": "Energiekosten (KOAGR06)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "sonstige-kosten",
+      "text": "Abgaben, Beiträge, Gebühren und sonstige Kosten (KOAGR07)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kalkulatorische-anlagekapitalkosten",
+      "text": "Kalkulatorische Anlagekapitalkosten (KOAGR08)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-med-vor-und-entsorgung",
+      "text": "Kosten der vorwiegend medizinisch bedingten Ver- und Entsorgung (KOAGR11)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-nicht-med-vor-und-entsorgung",
+      "text": "Kosten der vorwiegend nicht-medizinisch bedingten Ver- und Entsorgung (KOAGR12)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-verwaltung",
+      "text": "Kosten der Verwaltung (KOAGR13)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "andere-sekundärkosten (KOAGR14)",
+      "text": "Andere Sekundärkosten (KOAGR14)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kostenminderungen",
+      "text": "Kostenminderungen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "summe-sum-innerbetrieblicher-leistungen",
+      "text": "Summe abgegebener innerbetrieblicher Leistungen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "unter-überdeckung",
+      "text": "Unter- oder Überdeckung"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "endkosten-kostenstelle",
+      "text": "Endkosten der Kostenstelle"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "B01 Questionnaire"
+      }
+    ]
+  },
+  "title": "B01 Questionnaire",
+  "status": "active",
+  "description": "B01 Questionnaire for General Information",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "B01"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstalten-traegernummer",
+      "text": "Krankenanstalten-/Trägernummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "berichtstyp",
+      "text": "Berichtstyp",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "K",
+            "display": "KA-Ebene – Gesamtdarstellung/-bericht"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "G",
+            "display": "Trägerebene – krankenanstaltenübergreifender (gemeinsamer) Bereich"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "A",
+            "display": "Trägerebene – krankenanstaltenfremder Bereich"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "T",
+            "display": "Trägerebene – Gesamtdarstellung/-bericht (KA-übergeordnete Institution)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "coding",
+      "linkId": "berechnungstyp",
+      "text": "Berechnungstyp",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "E",
+            "display": "Eigenständig"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "K",
+            "display": "Konsolidiert"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "S",
+            "display": "Summiert"
+          }
+        }
+      ]
+    },
+    {
+      "type": "coding",
+      "linkId": "zuordnungsart",
+      "text": "Zuordnungsart",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "D",
+            "display": "Direkt"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "G",
+            "display": "Geschlüsselt"
+          }
+        }
+      ]
+    }
+  ]
+}
