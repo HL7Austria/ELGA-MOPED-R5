@@ -34,7 +34,7 @@ Diese Status-Änderungen folgen den Definitionen des <a href="https://build.fhir
 
 <pre class="mermaid">
     stateDiagram-v2
-    [*] --> active : Ressource ist bereit für anderen Akteur
+    [*] --> active : Ressource wird eingebracht
 
     active --> cancelled : Stornierung durch KH
     active --> entered_in_error : Fehler erkannt
