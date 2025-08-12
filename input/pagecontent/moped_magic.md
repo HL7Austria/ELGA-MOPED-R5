@@ -46,10 +46,9 @@ In MOPED gilt bei allen fallbezogenen Operationen, die eine `Composition` refere
 
 > Hinweis: Der Server prüft anhand der versionierten Composition-Instanz in der URL, ob es sich um die aktuellste Version handelt. Ist dies nicht der Fall, wird die Operation mit einem Fehler abgewiesen.
 
-```http
-POST /Composition/123/_history/6/$abrechnen
+`http POST /Composition/123/_history/6/$abrechnen`
 
-Ohne Version (z. B. /Composition/123) wird die Operation abgelehnt. Alle benutzerdefinierten fallbezogenen Operationen in MOPED werden ausschließlich auf Composition-Instanzebene ausgeführt und erwarten als URL-Form stets /Composition/{id}/_history/{version}/$operationName.
+Ohne Version (z. B. lediglich mit /Composition/123) wird die Operation abgelehnt. Alle benutzerdefinierten fallbezogenen Operationen in MOPED werden ausschließlich auf Composition-Instanzebene ausgeführt und erwarten als URL-Form stets `Composition/{id}/_history/{version}/$operationName`.
 
 ### Provenance in MOPED: Herkunft, Nachvollziehbarkeit, Transparenz
 Die Provenance-Ressource dient der dokumentierten Nachvollziehbarkeit von Änderungen an FHIR-Ressourcen. Sie beschreibt, wer eine Ressource wann, warum und in welchem Kontext erstellt oder verändert hat.

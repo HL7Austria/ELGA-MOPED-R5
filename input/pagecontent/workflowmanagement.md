@@ -34,10 +34,7 @@ Diese Status-Änderungen folgen den Definitionen des <a href="https://build.fhir
 
 <pre class="mermaid">
     stateDiagram-v2
-    [*] --> draft : Ressource wird neu erstellt
-    draft --> active : Ressource ist bereit für anderen Akteur
-    draft --> cancelled : Erstellung abgebrochen
-    draft --> entered_in_error : Fehler erkannt
+    [*] --> active : Ressource ist bereit für anderen Akteur
 
     active --> cancelled : Stornierung durch KH
     active --> entered_in_error : Fehler erkannt
