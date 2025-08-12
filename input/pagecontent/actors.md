@@ -1,10 +1,6 @@
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 </script>
-<div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
-    Übersicht über alle Akteure:
-</div>
-TBD
 
 ### Krankenanstalt {#actor-KH}
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
@@ -13,17 +9,16 @@ TBD
 <pre class="mermaid">
     graph LR
     KH[Krankenanstalt]
-    Moped[<a href="#top">Moped</a>] 
-    KH --->|<a href="OperationDefinition-MOPED.Patient.Aufnehmen.html"> POST $aufnehmen</a>| Moped 
-    KH -->|<a href="TBD"> POST $update</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Patient.Entlassen.html"> POST $entlassen</a>| Moped
-    KH -->|<a href="TBD"> POST $anfragen</a>| Moped
-    KH -->|<a href="OperationDefinition-MOPED.Encounter.Abrechnen.html"> POST $abrechnen</a>| Moped
-    KH -->|<a href="TBD"> POST $stornieren</a>| Moped
-    Moped -->|<a href="StructureDefinition-MopedVAEResponse.html"> GET VAEResponse</a>| KH
-    Moped --->|<a href="StructureDefinition-MopedLKFResponse.html"> GET ClaimResponse</a>| KH
+    Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
+    KH --->|&lt;a href=&quot;OperationDefinition-MOPED.Patient.Aufnehmen.html&quot;&gt; POST $aufnehmen&lt;/a&gt;| Moped 
+    KH -->|&lt;a href=&quot;TBD&quot;&gt; POST $update&lt;/a&gt;| Moped
+    KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Patient.Entlassen.html&quot;&gt; POST $entlassen&lt;/a&gt;| Moped
+    KH -->|&lt;a href=&quot;TBD&quot;&gt; POST $anfragen&lt;/a&gt;| Moped
+    KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Encounter.Abrechnen.html&quot;&gt; POST $abrechnen&lt;/a&gt;| Moped
+    KH -->|&lt;a href=&quot;TBD&quot;&gt; POST $stornieren&lt;/a&gt;| Moped
+    Moped -->|&lt;a href=&quot;StructureDefinition-MopedVAEResponse.html&quot;&gt; GET VAEResponse&lt;/a&gt;| KH
+    Moped --->|&lt;a href=&quot;StructureDefinition-MopedLKFResponse.html&quot;&gt; GET ClaimResponse&lt;/a&gt;| KH
 </pre>  
-<div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
 
 ### Sozialversicherung {#actor-SV}
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
@@ -32,10 +27,10 @@ TBD
 <pre class="mermaid">
     graph LR
     SV[Sozialversicherung]
-    Moped[<a href="#top">Moped</a>] 
-    Moped --->|<a href="StructureDefinition-MopedVAERequest.html"> GET VAERequest?status=active</a>| SV
-    Moped --->|<a href="StructureDefinition-MopedARKRequest.html"> GET ARKRequest?status=active</a>| SV
-    SV --->|<a href="OperationDefinition-MOPED.VAEResponse.Beantworten.html"> POST $antworten</a>| Moped
+    Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
+    Moped --->|&lt;a href=&quot;StructureDefinition-MopedVAERequest.html&quot;&gt; GET VAERequest?status=active&lt;/a&gt;| SV
+    Moped --->|&lt;a href=&quot;StructureDefinition-MopedARKRequest.html&quot;&gt; GET ARKRequest?status=active&lt;/a&gt;| SV
+    SV --->|&lt;a href=&quot;OperationDefinition-MOPED.VAEResponse.Beantworten.html&quot;&gt; POST $antworten&lt;/a&gt;| Moped
 </pre>   
 
 ### Landesgesundheitsfonds {#actor-LGF}
@@ -45,10 +40,10 @@ TBD
 <pre class="mermaid">
     graph LR
     LGF[Landesgesundheitsfonds]
-    Moped[<a href="#top">Moped</a>] 
-    Moped --->|<a href="StructureDefinition-MopedLKFRequest.html"> GET Claim</a>| LGF
-    LGF --->|<a href="TBD Bestätigen Operation"> POST $bestaetigen</a>| Moped
-    LGF --->|<a href="TBD ARK Melden"> POST $melden</a>| Moped
+    Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
+    Moped --->|&lt;a href=&quot;StructureDefinition-MopedLKFRequest.html&quot;&gt; GET Claim&lt;/a&gt;| LGF
+    LGF --->|&lt;a href=&quot;TBD%20Bestätigen%20Operation&quot;&gt; POST $bestaetigen&lt;/a&gt;| Moped
+    LGF --->|&lt;a href=&quot;TBD%20ARK%20Melden&quot;&gt; POST $melden&lt;/a&gt;| Moped
 </pre>
 
 ### Bundesministerium für Soziales, Gesundheit, Pflege und Konsumentenschutz {#actor-BMSGPK}
@@ -58,7 +53,7 @@ TBD
 <pre class="mermaid">
     graph LR
     BMSGPK[BMSGPK]
-    Moped[<a href="#top">Moped</a>] 
+    Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
     Moped --->|GET Composition?status=final| BMSGPK 
-    Moped --->|<a href="https://www.hl7.org/fhir/operation-measure-evaluate-measure.html"> POST Measure/$evaluate-measure</a>| BMSGPK
+    Moped --->|&lt;a href=&quot;https://www.hl7.org/fhir/operation-measure-evaluate-measure.html&quot;&gt; POST Measure/$evaluate-measure&lt;/a&gt;| BMSGPK
 </pre>
