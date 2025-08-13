@@ -1,0 +1,74 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K06 Questionnaire"
+      }
+    ]
+  },
+  "title": "K06 Questionnaire for KA-Statistik",
+  "status": "active",
+  "description": "This questionnaire is used to collect KA-Statistik data for K06 message reporting",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K06"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "jahr",
+      "text": "Jahr",
+      "repeats": false
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "fachrichtungsindex",
+      "text": "Fachrichtungsindex",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "00",
+            "display": "Allgemeinmedizin"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "01",
+            "display": "Anästhesiologie und Intensivmedizin"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "02",
+            "display": "Augenheilkunde und Optometrie"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+       "maxLength": 6,
+      "linkId": "konsiliarärztinnen-kopfzahl",
+      "text": "Konsiliarärzte/-ärztinnen – Kopfzahl"
+    }
+  ]
+}

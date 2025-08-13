@@ -1,0 +1,67 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "L02 Questionnaire"
+      }
+    ]
+  },
+  "title": "L02 Questionnaire",
+  "status": "active",
+  "description": "L02 Questionnaire for Billing-Relevant Payers",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "L02"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "string",
+      "maxLength": 2,
+      "linkId": "kostentraeger-code",
+      "text": "Kostenträger – Code"
+    },
+    {
+      "type": "coding",
+      "linkId": "lgf-relevanz",
+      "text": "LGF – Relevanz",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "J",
+            "display": "Ja – LKF-relevant"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "N",
+            "display": "Nein – nicht LKF-relevant"
+          }
+        }
+      ]
+    }
+  ]
+}

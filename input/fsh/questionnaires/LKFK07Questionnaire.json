@@ -1,0 +1,115 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K07 Questionnaire"
+      }
+    ]
+  },
+  "title": "K07 Questionnaire for KA-Statistik",
+  "status": "active",
+  "description": "This questionnaire is used to collect KA-Statistik data for K07 message reporting.",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K07"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "index-nicht-ärztliche-gesundheitsberufe",
+      "text": "Index nicht-ärztliche Gesundheitsberufe",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "30",
+            "display": "Hebammen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "41",
+            "display": "Allgemeine Gesundheits- und Krankenpflege"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "42",
+            "display": "Kinder- und Jugendlichenpflege"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "personal-männlich – kopfzahl",
+      "text": "Personal männlich – Kopfzahl"
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "personal-weiblich-kopfzahl",
+      "text": "Personal weiblich – Kopfzahl"
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "kopfzahl-eu-ausländer",
+      "text": "Darunter EU-Ausländer/innen insgesamt – Kopfzahl"
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "kopfzahl-nicht-eu-ausländer",
+      "text": "Darunter Nicht-EU-Ausländer/innen insgesamt – Kopfzahl"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "personal-männlich-vollzeitäquivalente",
+      "text": "Personal männlich – Vollzeitäquivalente"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "personal-weiblich-vollzeitäquivalente",
+      "text": "Personal weiblich – Vollzeitäquivalente"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "vollzeitäquivalente-eu-ausländer",
+      "text": "Darunter EU-Ausländer/innen insgesamt – Vollzeitäquivalente"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "vollzeitäquivalente-eu-nicht-ausländer",
+      "text": "Darunter Nicht-EU-Ausländer/innen insgesamt – Vollzeitäquivalente"
+    }
+  ]
+}

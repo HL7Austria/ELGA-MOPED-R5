@@ -1,0 +1,97 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K12 Questionnaire"
+      }
+    ]
+  },
+  "title": "K12 Questionnaire",
+  "status": "active",
+  "description": "K12 Questionnaire- collective cost statement detail sheets",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K12"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "blattnummer",
+      "text": "Blattnummer",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "01/11",
+            "display": "Personalkosten (Kostenartennummer 111–119)"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "01/12",
+            "display": "Personalkosten (Kostenartennummer 121–129)"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "01/13",
+            "display": "Personalkosten (Kostenartennummer 131–139)"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 3,
+      "linkId": "mlv-nummer",
+      "text": "MLV-Nummer"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "aufwand-finanzbuchführung",
+      "text": "Aufwand gemäß Finanzbuchführung"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "neutraler-aufwand",
+      "text": "Neutraler Aufwand"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kalkulatorische-kosten",
+      "text": "Kalkulatorische Kosten"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten",
+      "text": "Kosten"
+    }
+  ]
+}

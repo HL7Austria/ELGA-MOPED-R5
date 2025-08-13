@@ -1,0 +1,73 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K13 Questionnaire"
+      }
+    ]
+  },
+  "title": "K13 Questionnaire ",
+  "status": "draft",
+  "description": "K13 Questionnaire - Calculation appendix - Cost reductions",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K13"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "index-kostenminderungsart",
+      "text": "Index Kostenminderungsart",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "A",
+            "display": "GSBG-Beihilfen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "B",
+            "display": "Klinischer Mehraufwand"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "C",
+            "display": "Kostenersätze für Schulen und Akademien"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kostenminderungen",
+      "text": "Kostenminderungen"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K16 Questionnaire "
+      }
+    ]
+  },
+  "title": "K16 Questionnaire",
+  "status": "active",
+  "description": "K16 Questionnaire -calculation appendix – selected costs",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K16"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "coding",
+      "linkId": "kostenindex",
+      "text": "Kostenindex",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "10",
+            "display": "Blut"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "20",
+            "display": "Chirurgisches Nahtmaterial"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "30",
+            "display": "Implantate und Prothesen (Summe)"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "31",
+            "display": "Implantate und Prothesen für Gefäß- und Herzchirurgie"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "32",
+            "display": "Implantate und Prothesen für Knochenchirurgie"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "33",
+            "display": "Implantate und Prothesen für Neurochirurgie"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "34",
+            "display": "Körperersatzteile, andere"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "35",
+            "display": "Implantate für HNO"
+          }
+        }
+      ]
+    },
+    {
+      "type": "decimal",
+      "linkId": "kosten",
+      "maxLength": 10,
+      "text": "Kosten"
+    }
+  ]
+}

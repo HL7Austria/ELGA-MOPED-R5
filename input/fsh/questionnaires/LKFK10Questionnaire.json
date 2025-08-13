@@ -1,0 +1,156 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "K10 Questionnaire"
+      }
+    ]
+  },
+  "title": "K10 Questionnaire ",
+  "status": "active",
+  "description": "K10 Questionnaire for cost center statistics and cost statement (secondary and auxiliary cost centers)",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "K10"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "integer",
+      "maxLength": 8,
+      "linkId": "neben-hilfskostenstelle-funktionscode",
+      "text": "Neben-/Hilfskostenstelle – Funktionscode"
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "nettogrundrissfläche",
+      "text": "Nettogrundrissfläche"
+    },
+    {
+      "type": "decimal",
+      "maxLength": 9,
+      "linkId": "personal-insgesamt",
+      "text": "Personal insgesamt-Vollzeitäquivalente"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "personalkosten",
+      "text": "Personalkosten (KOAGR01)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-med-güter",
+      "text": "Kosten für medizinische Gebrauchs- und Verbrauchsgüter (KOAGR02)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-nicht-med-güter",
+      "text": "Kosten für nicht-medizinische Gebrauchs- und Verbrauchsgüter (KOAGR03)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-med-fremdleistungen",
+      "text": "Kosten für medizinische Fremdleistungen (KOAGR04)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-nicht-med-fremdleistungen",
+      "text": "Kosten für nicht-medizinische Fremdleistungen (KOAGR05)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "energiekosten",
+      "text": "Energiekosten (KOAGR06)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "sonstige-kosten",
+      "text": "Abgaben, Beiträge, Gebühren und sonstige Kosten (KOAGR07)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kalkulatorische-anlagekapitalkosten",
+      "text": "Kalkulatorische Anlagekapitalkosten (KOAGR08)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-med-vor-und-entsorgung",
+      "text": "Kosten der vorwiegend medizinisch bedingten Ver- und Entsorgung (KOAGR11)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-nicht-med-vor-und-entsorgung",
+      "text": "Kosten der vorwiegend nicht-medizinisch bedingten Ver- und Entsorgung (KOAGR12)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kosten-verwaltung",
+      "text": "Kosten der Verwaltung (KOAGR13)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "andere-sekundärkosten (KOAGR14)",
+      "text": "Andere Sekundärkosten (KOAGR14)"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "kostenminderungen",
+      "text": "Kostenminderungen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "summe-sum-innerbetrieblicher-leistungen",
+      "text": "Summe abgegebener innerbetrieblicher Leistungen"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "unter-überdeckung",
+      "text": "Unter- oder Überdeckung"
+    },
+    {
+      "type": "integer",
+      "maxLength": 10,
+      "linkId": "endkosten-kostenstelle",
+      "text": "Endkosten der Kostenstelle"
+    }
+  ]
+}

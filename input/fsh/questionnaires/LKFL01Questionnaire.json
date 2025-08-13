@@ -1,0 +1,143 @@
+{
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/5.0/StructureDefinition/Questionnaire"
+    ],
+    "tag": [
+      {
+        "display": "L01 Questionnaire"
+      }
+    ]
+  },
+  "title": "L01 Questionnaire",
+  "status": "active",
+  "description": "L01 Questionnaire for Special Service Areas",
+  "item": [
+    {
+      "type": "string",
+      "maxLength": 3,
+      "linkId": "satzartenkennzeichen",
+      "text": "Satzartenkennzeichen",
+      "readOnly": true,
+      "initial": [
+        {
+          "valueString": "L01"
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "maxLength": 4,
+      "linkId": "jahr",
+      "text": "Jahr"
+    },
+    {
+      "type": "string",
+      "maxLength": 6,
+      "linkId": "krankenanstaltennummer",
+      "text": "Krankenanstaltennummer"
+    },
+    {
+      "type": "integer",
+      "maxLength": 8,
+      "linkId": "hauptkostenstelle-funktionscode",
+      "text": "Hauptkostenstelle – Funktionscode",
+      "enableWhen": [
+        {
+          "question": "leistungsbereich",
+          "operator": "!=",
+          "answerCoding": {
+            "code": "M",
+            "display": "Spezielle Leistungen"
+          }
+        }
+      ]
+    },
+    {
+      "type": "coding",
+      "linkId": "leistungsbereich",
+      "text": "Leistungsbereich",
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "I",
+            "display": "Intensivüberwachungs-/behandlungseinheiten (Erwachsene/Kinder)"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "G",
+            "display": "Akutgeriatrie/Remobilisation"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "L",
+            "display": "Palliativmedizinische Einrichtungen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "N",
+            "display": "Neurologische Akut-Nachbehandlung"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "J",
+            "display": "Kinder- und Jugendpsychiatrie"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "P",
+            "display": "Psychiatrie"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "S",
+            "display": "Stroke Unit"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "A",
+            "display": "Alkohol- und Drogenentwöhnung"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "M",
+            "display": "Spezielle Leistungen"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "R",
+            "display": "Remobilisation/Nachsorge"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "O",
+            "display": "Psychosomatik"
+          }
+        }
+      ]
+    },
+    {
+      "type": "string",
+      "maxLength": 2,
+      "linkId": "gruppe-stufe",
+      "text": "Gruppe/Stufe"
+    },
+    {
+      "type": "integer",
+      "maxLength": 6,
+      "linkId": "punkte",
+      "text": "Punkte"
+    }
+  ]
+}
