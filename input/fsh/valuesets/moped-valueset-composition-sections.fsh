@@ -22,6 +22,7 @@ Description: "CodeSystem für die Moped Sections der Composition Ressource"
 * #ARKReq "ARK Requests"
 * #ARKResp "ARK Responses"
 * #ARKPay "ARK Status Updates"
+* #Comm "Communication & Responses"
 
 ValueSet: CompositionSectionsVS
 Title: "Moped Composition Sections ValueSet"

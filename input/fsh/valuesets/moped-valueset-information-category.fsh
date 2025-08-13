@@ -12,6 +12,7 @@ Description: "Arten von zusätzlichen Informationen in der VAE"
 * #FREMDRE "Rechnungsnummer der zwischenstaatlichen Abrechnung"
 * #OEGKELBNR "Forderungsnummer der Österreichischen Gesundheitskasse"
 * #VTAGE "Vortageanzahl auf Kostenbeitrag"
+* #ENDG "Endgültige Meldung"
 
 ValueSet: ClaimSupportingInformationCategoryVS
 Title: "MOPED VAESupportingInformationCategory"
@@ -31,3 +32,4 @@ Title: "MOPED LKFSupportingInformationCategory"
 Description: "Arten von zusätzlichen Informationen im LKFRequest"
 * ^experimental = true
 * https://elga.moped.at/CodeSystem/ClaimSupportingInformationCategoryCS#PLAUS
+* https://elga.moped.at/CodeSystem/ClaimSupportingInformationCategoryCS#ENDG

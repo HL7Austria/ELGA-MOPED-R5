@@ -61,9 +61,14 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * supportingInfo[Plausibilitaetskennzeichen].value[x] only string //change to unsignedInt in R6
 //TBD: * supportingInfo[Plausibilitaetskennzeichen].value[x] //add regex pattern so it can only have numbers from 0-5
 
+* supportingInfo contains EndgueltigeMeldung 1..1 
+* supportingInfo[EndgueltigeMeldung] ^short = "Feld, welches angibt, ob es sich um die vorläufige oder endgültige Meldung handelt."
+* supportingInfo[EndgueltigeMeldung].category = ClaimSupportingInformationCategoryCS#ENDG
+* supportingInfo[EndgueltigeMeldung].value[x] only boolean
+
 * extension contains DiagnoseKnoten named DiagnoseKnoten 1..1
 * extension contains FehlerWarnung named FehlerWarnung 0..
-
+* extension contains Fondsrelevanz named Fondsrelevanz 1..1
 * item ^slicing.rules = #open
 * item ^slicing.ordered = false
 * item ^slicing.discriminator[+].type = #value

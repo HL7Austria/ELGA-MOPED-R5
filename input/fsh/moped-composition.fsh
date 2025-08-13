@@ -29,8 +29,7 @@ Title: "MOPED Composition"
 
 * extension contains AnzahlVerlegungen named AnzahlVerlegungen 0..1
 * extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 0..1
-* extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1
-* extension contains Fondsrelevanz named Fondsrelevanz 1..1
+
 
 * section 1..*
 * section.code from CompositionSectionsVS
@@ -67,27 +66,7 @@ Title: "MOPED Composition"
 * section[Diagnosen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Diagnosen].code.coding.code = #DIAG
 * section[Diagnosen].entry 0..
-* section[Diagnosen].section ^slicing.discriminator[+].type = #value
-* section[Diagnosen].section ^slicing.discriminator[=].path = "code.coding.code"
-* section[Diagnosen].section ^slicing.rules = #open
-* section[Diagnosen].section.code from LKFDiagnoseTypVS
-* section[Diagnosen].section contains Hauptdiagnosen 0.. and Zusatzdiagnosen 0.. and Aufnahmediagnosen 0..
-* section[Diagnosen].section[Hauptdiagnosen].code.coding.code = #H
-* section[Diagnosen].section[Hauptdiagnosen].entry 1..
-* section[Diagnosen].section[Hauptdiagnosen].entry only Reference(MopedCondition)
-* section[Diagnosen].section[Hauptdiagnosen].author only Reference(KHOrganization)
-* section[Diagnosen].section[Hauptdiagnosen].code.coding from LKFDiagnoseTypVS
-* section[Diagnosen].section[Zusatzdiagnosen].code.coding.code = #Z
-* section[Diagnosen].section[Zusatzdiagnosen].entry 1..
-* section[Diagnosen].section[Zusatzdiagnosen].entry only Reference(MopedCondition)
-* section[Diagnosen].section[Zusatzdiagnosen].author only Reference(KHOrganization)
-* section[Diagnosen].section[Zusatzdiagnosen].code.coding from LKFDiagnoseTypVS
-* section[Diagnosen].section[Aufnahmediagnosen].code.coding.code = #A
-* section[Diagnosen].section[Aufnahmediagnosen].entry 1..
-* section[Diagnosen].section[Aufnahmediagnosen].entry only Reference(MopedCondition)
-* section[Diagnosen].section[Aufnahmediagnosen].author only Reference(KHOrganization)
-* section[Diagnosen].section[Aufnahmediagnosen].code.coding from LKFDiagnoseTypVS
-
+* section[Diagnosen].entry only Reference(MopedCondition)
 * section contains Leistungen 0..1 
 * section[Leistungen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Leistungen].code.coding.code = #LEI
@@ -160,3 +139,9 @@ Title: "MOPED Composition"
 * section[Frageboegen].entry 0..
 * section[Frageboegen].entry only Reference(MopedQuestionnaireResponse)
 * section[Frageboegen].author only Reference(KHOrganization)
+* section contains Kommunikation 0..1 
+* section[Kommunikation].code.coding.system = Canonical(CompositionSectionsCS)
+* section[Kommunikation].code.coding.code = #Comm
+* section[Kommunikation].entry 0..
+//* section[Kommunikation].entry only Reference(MopedCommunication or MopedCommunicationResponse) //TBD Profile für die generische Kommunikation anlegen
+* section[Kommunikation].author only Reference(KHOrganization or SVOrganization or LGFOrganization)

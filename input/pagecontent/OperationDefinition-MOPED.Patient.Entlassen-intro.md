@@ -8,36 +8,8 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $entlassen Operat
 
 ## Detaillierte Business-Logik
 
-1. Suche der Composition: Die Composition mit der jeweiligen *compositionID* lt. Operation-Parameter wird gesucht
-  * *Composition.extension:TageOhneKostenbeitrag* lt. Operation-Parameter *tageOhneKostenbeitrag* befüllen
-2. Update des MopedEncounters (Composition.encounter):
-  * *MopedEncounter.actualPeriod.end* mit dem *zeitpunkt* lt. Operation-Parameter befüllen
-  * *MopedEncounter.status* mit `discharged` oder `complete`  befüllen je nach Ausprägung von *aviso* (siehe Hinweis 1)
-  * *MopedEncounter.admission.dischargeDisposition* mit *entlassungsart* lt. Operation-Parameter befüllen
-  * *MopedEncounter.zugewiesenAn* lt. Operation-Parameter *zugewiesenAn* befüllen
-  * *MopedEncounter.extension:Altersgruppe.extension:beiEntlassung* berechnen und befüllen (siehe Hinweis 2)
-
-## Validierung
-* Es muss überprüft werden, ob der Parameter *aufnahmezahl* mit dem Encounter.identifier:Aufnahmezahl der Composition aus Schritt 1 übereinstimmt.
-
-## Workflowstatus Tracking
-* *Composition.useContext:Workflow* wird um einen Eintrag "Entlassung Aviso" oder "Entlassung vollständig" erweitert je nach Wert des Parameters *aviso* und nur sofern der status nicht bereits existiert
-
-## Weitere Hinweise
-* Hinweis 1: *aviso* = false führt zum Encounter.status `discharged` und *aviso* = true führt zum Encounter.status `complete`
-* Hinweis 2: LKF 4.1.9 Altersgruppe bei Entlassung/Kontakt
-  * Vollendete Lebensjahre sind ausschlaggebend
-  * 0: 0
-  * 1-4: 1
-  * 5-9: 5
-  * 10-14: 10
-  * 15-19: 15
-  * 20-24: 20
-  * ... immer weiter so, die untere Grenze des Alters in 5er-Schritten
-  * 85-89: 85
-  * 90-95: 90
-  * 95 und älter: 95
-  Bei ambulanten Fällen mit dem Aufnahmedatum und bei stationären mit dem Entlassungsdatum berechnen
+1. Die Operation wird an $update delegiert und nach der dort definierten Logik ausgeführt.
 
 ## Annahmen an das BeS
-* Es wurde vorab geprüft, ob das `system` des Parameters `aufnahmezahl` dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle entlassen werden können.
+* Es wurde vorab geprüft, ob das `system` des identifiers in Composition.encounter.identifer dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle verändert werden können.
+
