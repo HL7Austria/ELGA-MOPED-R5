@@ -125,7 +125,7 @@ sequenceDiagram
     KH->>KH: Diagnose „Herzinsuffizienz“ und Leistung „EKG“ erfasst
 
     Note over KH: $entlassen
-    KH->>KH: Patientn wird entlassen
+    KH->>KH: Patient wird entlassen
 
     loop $abrechnen / $entscheiden (vorläufig)
         Note over KH,LGF: $abrechnen
@@ -184,7 +184,7 @@ sequenceDiagram
 
     loop Beurlaubungs-Zyklus
         Note over KH: $update
-        KH->>KH: Patient:in am 2025-07-22 auf Urlaub → Encounter status: on-hold, Funktionscode 100000
+        KH->>KH: Patient:in am 2025-07-22 auf Urlaub → Encounter status: on-hold, Verlegung Funktionscode 100000
 
         Note over KH: $update
         KH->>KH: Patient:in kehrt am 2025-07-24 zurück → Encounter status: active (Abteilung: „Innere Medizin“)
@@ -220,7 +220,7 @@ sequenceDiagram
 </pre>
 
 #### Anwendungsfall 27: Leistungsabrechnugn über SV
-Zusammenfassung: Es werden Kosten für amb. Besuche /Aufenthalte bzw. einzelne Leistungen durch unterschiedliche Kostenträger übernommen. Beispiele: Vorsorgeuntersuchung Coloskopie, Vorsorgeuntersuchung Brust-Krebs-Früherkennung bzw. Selbstzahlerleistungen (z.B.Tubensteri ohne medizinische Indikation im Rahmen einer Geburt) im Rahmen eines fonds-finanzierten Aufenthalts 
+Zusammenfassung: Es werden Kosten für ambulante Besuche /Aufenthalte bzw. einzelne Leistungen durch unterschiedliche Kostenträger übernommen. Beispiele: Vorsorgeuntersuchung Coloskopie, Vorsorgeuntersuchung Brust-Krebs-Früherkennung bzw. Selbstzahlerleistungen (z.B. Tubensterilisation ohne medizinische Indikation im Rahmen einer Geburt) im Rahmen eines fonds-finanzierten Aufenthalts 
 
 Umsetzung: Die Abrechnung mit der SV ist out of scope von Moped. Ansonsten ist der Anwendungsfall gleich wie Susi Sonnenschein. Es wird für jede Leistung / Diagnose festgehalten, ob diese für den LGF abrechnungsrelevant ist oder nicht.
 
