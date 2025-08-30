@@ -3,15 +3,6 @@ Parent: Condition
 Description: "MOPED Profil der Condition Ressource für die LDF-Abrechnung"
 Title: "MOPED Condition"
 
-* identifier ^slicing.rules = #open
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "type.coding.code"
-* identifier ^slicing.ordered = false
-* identifier contains MopedConditionIdentifier 1..1
-* identifier[MopedConditionIdentifier].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
-* identifier[MopedConditionIdentifier].type.coding.code = #RI (exactly)
-* identifier[MopedConditionIdentifier] ^short = "MOPED Identifier = Aufnahmezahl-ICD10Code"
-* identifier 1..
 * verificationStatus 0..1
 * clinicalStatus.extension contains DataAbsentReason named data-absent-reason 1..1 MS
 * clinicalStatus.extension[DataAbsentReason].valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-asked
