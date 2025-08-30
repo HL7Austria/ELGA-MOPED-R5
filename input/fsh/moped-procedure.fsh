@@ -4,7 +4,7 @@ Description: "MOPED Profil der Procedure Ressource für die LDF-Abrechnung"
 Title: "MOPED Procedure"
 
 * extension contains Leistungsanzahl named Leistungsanzahl 1..1
-* extension[Leistungsanzahl]^short = "Medizinische Leistung – Anzahl"
+* extension[Leistungsanzahl] ^short = "Medizinische Leistung – Anzahl"
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
 * subject only Reference(HL7ATCorePatient)
