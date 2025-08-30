@@ -1,0 +1,7 @@
+K01|2025|K999|11111100|1000|Innere Medizin � allgemein|F
+K01|2025|K999|12111100|1200|Innere Medizin � allgemein|A
+K01|2025|K999|16075000|1250|Erstversorgungseinheit (IM und Kardiologie)|
+K01|2025|K999|16111111|1299|Innere Medizin � allgemein|
+K01|2025|K999|16111112|1291|Innere Medizin � allgemein|
+K01|2025|K999|16211100|1300|Chirurgieambulanz|A
+K01|2025|K999|16518011|1300|Schlaflabor|A
