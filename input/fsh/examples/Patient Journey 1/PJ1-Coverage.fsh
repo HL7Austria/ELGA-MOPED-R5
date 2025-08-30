@@ -10,7 +10,7 @@ Usage: #example
 * kind = #insurance
 * beneficiary = Reference(PJ1Patient)
 * policyHolder = Reference(PJ1Patient)
-* insurer = Reference(oegk-wien)
+* insurer = Reference(SV11)
 * class[+].type.coding = http://terminology.hl7.org/CodeSystem/coverage-class#group
 * class[=].value.system = "http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs"
 * class[=].value.value = "01"

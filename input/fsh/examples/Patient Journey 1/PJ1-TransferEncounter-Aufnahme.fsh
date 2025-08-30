@@ -14,8 +14,8 @@ Usage: #example
 
 * type = MopedEncounterTypesCS#TENC
 
-* admission.extension[Altersgruppe].extension[beiZugang].valueCode = AltersgruppeCS#55
-//* admission.extension[Altersgruppe].extension[beiEntlassung].valueCode = AltersgruppeCS#55
+* admission.extension[Altersgruppe].extension[beiZugang].valueCodeableConcept.coding = AltersgruppeCS#55
+//* admission.extension[Altersgruppe].extension[beiEntlassung].valueCodeableConcept.coding = AltersgruppeCS#55
 * admission.extension[Altersgruppe].extension[neugeborenes].valueBoolean = false
 
 //* admission.dischargeDisposition = AbgangsartCS#1

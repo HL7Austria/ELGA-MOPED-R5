@@ -8,7 +8,7 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * patient = Reference(PJ2Patient)
 * created = "2025-02-24"
-* insurer = Reference(oegk-oberoesterreich)
+* insurer = Reference(SV14)
 * provider = Reference(OrganizationKrankenhausRied)
 * encounter[MopedEncounter] = Reference(PJ2Encounter)
 * encounter[TransferEncounter] = Reference(PJ2TransferEncounter1)

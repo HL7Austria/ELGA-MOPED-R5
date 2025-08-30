@@ -3,19 +3,19 @@ Extension:    Altersgruppe
 Id:           moped-ext-altersgruppe
 Title:        "Altersgruppe" 
 Description:  "In Gruppen eingeteilt, wobei vollendete Lebensjahre ausschlaggebend sind."
-Context: MopedTransferEncounter.admission
+Context: MopedTransferEncounter.admission, MopedEncounter
 * obeys moped-inv-Altersgruppe-1
 * extension contains
     beiZugang 0..1 MS and
     beiEntlassung 0..1 MS and
     neugeborenes 0..1 MS
 * extension[beiZugang].value[x] 0..1
-* extension[beiZugang].value[x] only code
+* extension[beiZugang].value[x] only CodeableConcept
 * extension[beiZugang].value[x] from AltersgruppeVS (required)
 * extension[neugeborenes].value[x] 0..1
 * extension[neugeborenes].value[x] only boolean
 * extension[beiEntlassung].value[x] 0..1
-* extension[beiEntlassung].value[x] only code
+* extension[beiEntlassung].value[x] only CodeableConcept
 * extension[beiEntlassung].value[x] from AltersgruppeVS (required)
 
 * insert DocumentExtension (

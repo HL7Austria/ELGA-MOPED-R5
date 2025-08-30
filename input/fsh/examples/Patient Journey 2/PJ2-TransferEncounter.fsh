@@ -10,8 +10,8 @@ Usage: #example
 * actualPeriod.end = "2024-08-08T11:22:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW
 * type = MopedEncounterTypesCS#TENC
-* admission.extension[Altersgruppe].extension[beiZugang].valueCode = AltersgruppeCS#35
-* admission.extension[Altersgruppe].extension[beiEntlassung].valueCode = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiZugang].valueCodeableConcept.coding = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiEntlassung].valueCodeableConcept.coding = AltersgruppeCS#35
 * admission.extension[Altersgruppe].extension[neugeborenes].valueBoolean = false
 * partOf = Reference(PJ2Encounter)
 
@@ -27,8 +27,8 @@ Usage: #example
 * actualPeriod.end = "2024-08-08T11:41:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW
 * type = MopedEncounterTypesCS#TENC
-* admission.extension[Altersgruppe].extension[beiZugang].valueCode = AltersgruppeCS#35
-* admission.extension[Altersgruppe].extension[beiEntlassung].valueCode = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiZugang].valueCodeableConcept.coding = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiEntlassung].valueCodeableConcept.coding = AltersgruppeCS#35
 * admission.extension[Altersgruppe].extension[neugeborenes].valueBoolean = false
 * admission.dischargeDisposition = AbgangsartCS#1
 * partOf = Reference(PJ2Encounter)
@@ -45,8 +45,8 @@ Usage: #example
 * actualPeriod.end = "2024-08-09T11:38:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW
 * type = MopedEncounterTypesCS#TENC
-* admission.extension[Altersgruppe].extension[beiZugang].valueCode = AltersgruppeCS#35
-* admission.extension[Altersgruppe].extension[beiEntlassung].valueCode = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiZugang].valueCodeableConcept.coding = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiEntlassung].valueCodeableConcept.coding = AltersgruppeCS#35
 * admission.extension[Altersgruppe].extension[neugeborenes].valueBoolean = false
 * admission.dischargeDisposition = AbgangsartCS#1
 * partOf = Reference(PJ2Encounter)
@@ -63,8 +63,8 @@ Usage: #example
 * actualPeriod.end = "2024-08-10T17:00:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW
 * type = MopedEncounterTypesCS#TENC
-* admission.extension[Altersgruppe].extension[beiZugang].valueCode = AltersgruppeCS#35
-* admission.extension[Altersgruppe].extension[beiEntlassung].valueCode = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiZugang].valueCodeableConcept.coding = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiEntlassung].valueCodeableConcept.coding = AltersgruppeCS#35
 * admission.extension[Altersgruppe].extension[neugeborenes].valueBoolean = false
 * admission.dischargeDisposition = AbgangsartCS#1
 * partOf = Reference(PJ2Encounter)
@@ -81,8 +81,8 @@ Usage: #example
 * actualPeriod.end = "2024-08-12T19:22:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW
 * type = MopedEncounterTypesCS#TENC
-* admission.extension[Altersgruppe].extension[beiZugang].valueCode = AltersgruppeCS#35
-* admission.extension[Altersgruppe].extension[beiEntlassung].valueCode = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiZugang].valueCodeableConcept.coding = AltersgruppeCS#35
+* admission.extension[Altersgruppe].extension[beiEntlassung].valueCodeableConcept.coding = AltersgruppeCS#35
 * admission.extension[Altersgruppe].extension[neugeborenes].valueBoolean = false
 * admission.dischargeDisposition = AbgangsartCS#1
 * partOf = Reference(PJ2Encounter)
