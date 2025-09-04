@@ -8,7 +8,7 @@ Usage: #example
 * meta.lastUpdated = "2024-07-12T00:00:00+00:00"
 * url = "https://elga.moped.at/Questionnaire/saps3-questionnaire"
 * version = "1.0"
-* id = "SAPS3Questionnaire"
+* id = "saps3-questionnaire"
 * name = "SAPS3Questionnaire"
 * title = "SAPS3 Questionnaire"
 * status = #active
