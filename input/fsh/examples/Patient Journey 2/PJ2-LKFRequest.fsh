@@ -29,14 +29,12 @@ Usage: #example
 * procedure[=].procedureReference = Reference(PJ2Procedure2)
 
 
-* diagnosis[Hauptdiagnose].diagnosisReference = Reference(PJ2Condition1)
-* diagnosis[Hauptdiagnose].sequence = 1
-* diagnosis[Hauptdiagnose].type.coding = $LKFdiagnoseTyp#H
-* diagnosis[Hauptdiagnose].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
-* diagnosis[Zusatzdiagnose].diagnosisReference = Reference(PJ2Condition2)
-* diagnosis[Zusatzdiagnose].sequence = 2
-* diagnosis[Zusatzdiagnose].type.coding = $LKFdiagnoseTyp#Z
-* diagnosis[Zusatzdiagnose].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
+* diagnosis[+].diagnosisReference = Reference(PJ2Condition1)
+* diagnosis[=].sequence = 1
+* diagnosis[=].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
+* diagnosis[+].diagnosisReference = Reference(PJ2Condition2)
+* diagnosis[=].sequence = 2
+* diagnosis[=].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
 
 * supportingInfo[Plausibilitaetskennzeichen].sequence = 1
 * supportingInfo[Plausibilitaetskennzeichen].category = ClaimSupportingInformationCategoryCS#PLAUS
