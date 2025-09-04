@@ -9,10 +9,6 @@ Title: "I12 QuestionnaireResponse für TISS-A-Daten"
 * questionnaire = Canonical(TISSAQuestionnaire)
 * authored = "2024-08-08"
 
-// Sazartenkennzeichen
-* item[+].linkId = "sazartenkennzeichen"
-* item[=].answer.valueString = "I12"
-
 // Krankenanstaltennummer/Leistungserbringer-ID
 * item[+].linkId = "krankenanstaltennummer-leistungserbringer-id"
 * item[=].answer.valueString = "K427"
