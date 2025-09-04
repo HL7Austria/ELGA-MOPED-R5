@@ -8,12 +8,6 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 * title = "I12 Questionnaire für TISS-A-Daten"
 * subjectType = #Patient
 
-// Sazartenkennzeichen
-* item[+].linkId = "sazartenkennzeichen"
-* item[=].text = "Sazartenkennzeichen"
-* item[=].type = #string
-* item[=].maxLength = 3
-
 // Krankenanstaltennummer/Leistungserbringer-ID
 * item[+].linkId = "krankenanstaltennummer-leistungserbringer-id"
 * item[=].text = "Krankenanstaltennummer/Leistungserbringer-ID"
