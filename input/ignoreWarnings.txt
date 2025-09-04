@@ -3,3 +3,25 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+#Experimental CodeSystem warnings:
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/ClaimSupportingInformationCategoryCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/FondsrelevanzCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/LKFAbrechnungsKnotenCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/SpezielleOrganisationsformCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/WorkflowStatusCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/AltersgruppeCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/BehandlungsartCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/Aufnahmeart2CS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/MopedEncounterTypesCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/AufnahmeartCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/EntlassungsartCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/AbgangsartCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/CompositionSectionsCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/AnwesenheitsartCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/UrsacheCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/LKFHauptdiagnosegruppenCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/VerpflegskostenBeitragsbefreiungCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/SonderklasseCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/AbrechnungsRelevanzCS|0.1.0
