@@ -1,0 +1,322 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "TISS42.1",
+  "questionnaire": "https://elga.moped.at/Questionnaire/tiss-a-questionnaire",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/Patient42"
+  },
+  "encounter": {
+    "reference": "Encounter/Encounter42"
+  },
+  "authored": "2025-08-30",
+  "author": {
+    "reference": "Organization/KHK999"
+  },
+  "item": [
+    {
+      "linkId": "krankenanstaltennummer-leistungserbringer-id",
+      "answer": [
+        {
+          "valueString": "K999"
+        }
+      ]
+    },
+    {
+      "linkId": "aufnahmezahl",
+      "answer": [
+        {
+          "valueString": "043"
+        }
+      ]
+    },
+    {
+      "linkId": "datensatz-id",
+      "answer": [
+        {
+          "valueString": "82ad92612238288c30b4590440ecb271690deb8e7c418c1f07b2eda4d87a6fe9"
+        }
+      ]
+    },
+    {
+      "linkId": "aufnahme-kontaktdatum",
+      "answer": [
+        {
+          "valueString": "20250101"
+        }
+      ]
+    },
+    {
+      "linkId": "bettenfuhrende-hauptkostenstelle-positionsnummer",
+      "answer": [
+        {
+          "valueString": "002"
+        }
+      ]
+    },
+    {
+      "linkId": "erhebungsdatum",
+      "answer": [
+        {
+          "valueString": "20250102"
+        }
+      ]
+    },
+    {
+      "linkId": "standard-monitoring",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "labor",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "medikamente",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "0"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "verbandswechsel",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "2"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "drainagenpflege",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "atmungsmodus",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "0"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "atemwegszugang",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "0"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "tubus-stomapflege",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "atemtherapie",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "medikamente-vasoaktiv",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "0"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "flussigkeitsersatz-massiv",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "katheter-arteriell",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "monitoring-hamodynamisch",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "0"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "katheter-zentralvenos",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "reanimation-kardiopulmonal",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "nierenersatztherapie",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "harnbilanzierung",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "diurese-aktiv",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "hirndruckmessung",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "behandlung-metabolischer-entgleisungen",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "ernahrung-enteral",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "ernahrung-parenteral",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "interventionen",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "0"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "diagnostik-therapie-ausserhalb-ibs",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "agitation-delirium",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "0"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "assist-kardial",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "assist-pulmonal",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "hypothermie-therapeutisch",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "lebersupport-extrakorporal",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    },
+    {
+      "linkId": "kontinuierliche-intravenose-antikonvulsive-therapie",
+      "answer": [
+        {
+          "valueBoolean": false
+        }
+      ]
+    }
+  ]
+}

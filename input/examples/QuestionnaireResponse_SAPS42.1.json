@@ -1,0 +1,473 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "SAPS42.1",
+  "questionnaire": "https://elga.moped.at/Questionnaire/saps3-questionnaire",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/Patient42"
+  },
+  "encounter": {
+    "reference": "Encounter/Encounter42"
+  },
+  "authored": "2025-08-30",
+  "author": {
+    "reference": "Organization/KHK999"
+  },
+  "item": [
+    {
+      "linkId": "saps3-set",
+      "item": [
+        {
+          "linkId": "saps3-02",
+          "answer": [
+            {
+              "valueString": "K999"
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-03",
+          "answer": [
+            {
+              "valueString": "043"
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-04",
+          "answer": [
+            {
+              "valueString": "82ad92612238288c30b4590440ecb271690deb8e7c418c1f07b2eda4d87a6fe9"
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-05",
+          "answer": [
+            {
+              "valueDate": "2025-01-01"
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-06",
+          "answer": [
+            {
+              "valueString": "002"
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-07",
+          "answer": [
+            {
+              "valueDate": "2025-01-02"
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-08",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-08a",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-09",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-10",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-11",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-12",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-13",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-14",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-15",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-16",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-17",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-18",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-19",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-20",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "1"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-24",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "0"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-25",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "1"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-26",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "6"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-27",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "5"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-28",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "4"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-30",
+          "item": [
+            {
+              "linkId": "saps3-30-1",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-2",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-3",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-4",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-5",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-6",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-7",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-8",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-9",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-10",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-11",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-12",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-13",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-14",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-15",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-16",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-17",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-18",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-19",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-20",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-30-21",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-32",
+          "answer": [
+            {
+              "valueBoolean": false
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-38",
+          "item": [
+            {
+              "linkId": "saps3-38-1",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-38-2",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            },
+            {
+              "linkId": "saps3-38-3",
+              "answer": [
+                {
+                  "valueBoolean": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "saps3-39",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "1"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

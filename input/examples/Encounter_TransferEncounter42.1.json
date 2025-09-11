@@ -1,0 +1,56 @@
+{
+  "resourceType": "Encounter",
+  "id": "TransferEncounter42.1",
+  "meta": {
+    "profile": [
+      "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
+    ]
+  },
+  "status": "completed",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "https://elga.moped.at/CodeSystem/MopedEncounterTypesCS",
+          "code": "TENC"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/Patient42"
+  },
+  "partOf": {
+    "reference": "Encounter/Encounter42"
+  },
+  "serviceProvider": {
+    "reference": "Organization/KHK999ABT11111100"
+  },
+  "actualPeriod": {
+    "start": "2025-01-01"
+  },
+  "admission": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "beiZugang",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/AltersgruppeCS",
+                  "code": "85"
+                }
+              ]
+            }
+          },
+          {
+            "url": "neugeborenes",
+            "valueBoolean": false
+          }
+        ],
+        "url": "https://elga.moped.at/StructureDefinition/moped-ext-altersgruppe"
+      }
+    ]
+  }
+}
