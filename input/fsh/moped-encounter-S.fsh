@@ -13,7 +13,7 @@ Title: "MOPED Encounter Stationär"
 
 * admission.dischargeDisposition from EntlassungsartSVS (required)
 
-* class[Behandlungsart].coding = BehandlungsartCS#S "Stationär"
+* class[Behandlungsart].coding = BehandlungsartCS#S
 * class[Aufnahmeart2] 1..1
 
 * admission.extension[aufnahmeart] 1..1
