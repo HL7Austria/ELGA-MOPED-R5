@@ -143,5 +143,5 @@ Title: "MOPED Composition"
 * section[Kommunikation].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Kommunikation].code.coding.code = #Comm
 * section[Kommunikation].entry 0..
-//* section[Kommunikation].entry only Reference(MopedCommunication or MopedCommunicationResponse) //TBD Profile für die generische Kommunikation anlegen
+* section[Kommunikation].entry only Reference(MopedCommunication)
 * section[Kommunikation].author only Reference(KHOrganization or SVOrganization or LGFOrganization)
