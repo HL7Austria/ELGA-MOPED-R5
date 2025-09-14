@@ -44,7 +44,7 @@ Description: """Bundle für die Input-Ressourcen beim Update von Informationen z
 * entry[Verlegungen].request.method ^short = "POST | PUT | DELETE"
 * entry contains
   Coverage 0..1
-* entry[Coverage].resource only MopedCoverage
+* entry[Coverage].resource only MopedCoverage or MopedCoverageSelbstzahler
 * entry[Coverage].request.method from HTTPVerbInsertUpdateDeleteVS //TBD -> wirklich alle Methoden bei Coverage möglich?
 * entry[Coverage].request.method ^short = "POST | PUT | DELETE"
 * entry contains
