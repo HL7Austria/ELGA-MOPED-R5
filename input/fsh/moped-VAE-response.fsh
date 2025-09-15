@@ -15,6 +15,8 @@ Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklä
 * request 1..1
 * insurer only Reference(SVOrganization)
 * insurer 1..1
+* requestor only Reference(KHOrganization)
+* requestor 1..1
 * outcome 1..1
 * outcome ^short = "VAE Bewilligung/Ablehnung"
 * decision from VAEStatusVS (required)
