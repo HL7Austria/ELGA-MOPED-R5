@@ -8,7 +8,7 @@ In diesem Bereich werden die grundlegenden Konzepte des Moped-Designs beschriebe
 ### Der Composition Ansatz: Fall-Kontext, Struktur, Integrität
 Moped basiert auf einer zentralen MasterComposition, die den strukturellen Rahmen (Aufbau, Kardinalitäten, Profile) für den gesamten Fall bildet.
 
-Je nach Fortschritt oder Teilprozess werden zusätzliche spezialisierte Compositions erzeugt. Diese enthalten spezifische Inhalte oder Validierungen, die nur in bestimmten Situationen erforderlich sind (z. B. Bei Entlassung muss das Entlassungsdatum befüllt sein, oder beim Abrechnen muss der Patient zumindest eine Abteilung besucht haben, und kann nie gleichzeitig auf mehreren Abteilungen gewesen sein).
+Je nach Fortschritt oder Teilprozess werden zusätzliche spezialisierte Compositions erzeugt. Diese enthalten spezifische Kardinalitäten und Validierungen, die nur in bestimmten Situationen erforderlich sind (z. B. Bei Entlassung muss das Entlassungsdatum befüllt sein, oder beim Abrechnen muss der Patient zumindest eine Abteilung besucht haben, und kann nie gleichzeitig auf mehreren Abteilungen gewesen sein).
 
 Es können mehrere Composition-Ausprägungen gleichzeitig gültig sein, etwa wenn Versicherungsprüfung und Entlassung parallel laufen. Die MasterComposition bleibt dabei immer gültig und dient als Referenz für alle Ableitungen.
 
@@ -115,13 +115,13 @@ Die Vorteile dieses Ansatzes:
 > Dies schützt vor unabsichtlicher Manipulation und sichert die Datenintegrität im gesamten Fallkontext.
 
 #### Clientseitige Referenzen
-Einige Referenzen sind nicht aus dem Fallkontext ableitbar, da sie entweder eine fachliche Auswahlentscheidung darstellen (z. B. bestimmte Leistungen für die Abrechnung) oder über logische Verknüpfungen referenziert werden (z. B. Ziel-Abteilung über den Funktionscode via `Organization.identifier`)
+Einige Referenzen sind nicht aus dem Fallkontext ableitbar, da sie entweder eine fachliche Auswahlentscheidung darstellen (z. B. Zuordnung der Abrechnungsrelevanz zu Leistungen) oder über logische Verknüpfungen referenziert werden (z. B. Ziel-Abteilung über den Funktionscode via `Organization.identifier`)
 
 | Beispiel                          | Typ                                  | Erklärung                                |
 |-----------------------------------|---------------------------------------|------------------------------------------|
-| `Claim.procedure.procedureReference`       | gezielte Auswahl                     | Nur bestimmte Leistungen werden abgerechnet |
+| `Claim.procedure.procedureReference`       | gezielte Auswahl                     | Die Abrechnungsrelevanz wird den Leistungen zugeordnet |
 | `MopedTransferEncounter.serviceProvider` | Zielorganisation bei Verlegung     | Referenz via `Organization.identifier`   |
 
-MOPED prüft ggf. ihre Gültigkeit, übernimmt sie aber nicht selbst.
+MOPED prüft ggf. ihre Gültigkeit, übernimmt das befüllen aber nicht selbst.
 
 

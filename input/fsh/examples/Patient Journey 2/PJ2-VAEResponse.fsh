@@ -10,6 +10,7 @@ Usage: #example
 * patient = Reference(PJ2Patient)
 * request = Reference(PJ2VAERequest1)
 * insurer = Reference(oegk-oberoesterreich)
+* requestor = Reference(OrganizationKrankenhausRied)
 * outcome = #complete
 * decision.coding = VAEStatusCS#00
 * preAuthPeriod.start = "2024-08-08"
