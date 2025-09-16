@@ -42,7 +42,7 @@ Diese Status-Änderungen folgen den Definitionen des <a href="https://build.fhir
 </pre>
 
 ### Anwendungsszenarien
-In diesem Abschnitt werden typische und exemplarische Abläufe im Rahmen des MOPED-Prozesses beschrieben. Die Anwendungsszenarien dienen der Veranschaulichung konkreter Nutzungsfälle auf Basis der in diesem Leitfaden definierten Rollen, Profilen und Operationen. Die Szenarien zeigen sowohl durchgängige End-to-End-Prozesse als auch fokussierte Teilprozesse. Jedes Beispiel illustriert, wie die in MOPED definierten Schnittstellen in realen Fällen eingesetzt werden können. Dabei wird besonderer Wert auf die fachliche Nachvollziehbarkeit sowie die technische Umsetzung (Ressourcen, Statusübergänge, Operations) gelegt.
+In diesem Abschnitt werden typische und exemplarische Abläufe im Rahmen des MOPED-Prozesses beschrieben. Die Anwendungsszenarien dienen der Veranschaulichung konkreter Anwendungsfälle auf Basis der in diesem Leitfaden definierten Rollen, Profilen und Operationen. Die Szenarien zeigen sowohl durchgängige End-to-End-Prozesse als auch fokussierte Teilprozesse. Jedes Beispiel illustriert, wie die in MOPED definierten Schnittstellen in realen Fällen eingesetzt werden können. Dabei wird besonderer Wert auf die fachliche Nachvollziehbarkeit sowie die technische Umsetzung (Ressourcen, Statusübergänge, Operations) gelegt.
 
 Ziel dieser Szenarien ist es ein gemeinsames Verständnis über typische Abläufe und deren Abbildung im FHIR-Moped-Kontext zu vermitteln.
 
@@ -87,7 +87,7 @@ Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Au
 
     %% Finale Abrechnung und Entscheidung
     Note over KH,LGF: final $abrechnen
-    KH->>LGF: Finale Abrechnung nach Entlassung
+    KH->>LGF: Finale Abrechnung
 
     Note over LGF: final $entscheiden
     LGF-->>KH: Endgültige Entscheidung zur Abrechnung
@@ -137,7 +137,7 @@ sequenceDiagram
 
     %% Finale Abrechnung und Entscheidung
     Note over KH,LGF: final $abrechnen
-    KH->>LGF: Finale Abrechnung nach Entlassung
+    KH->>LGF: Finale Abrechnung
 
     Note over LGF: final $entscheiden
     LGF-->>KH: Endgültige Entscheidung zur Abrechnung
@@ -180,14 +180,14 @@ sequenceDiagram
     participant KH as KH (Herz Jesu Krankenhaus)
 
     Note over KH: $aufnehmen
-    KH->>KH: Patient:in wird am 2025-07-20 auf Abteilung „Innere Medizin“ aufgenommen (Encounter status: active)
+    KH->>KH: Patient:in wird am 2025-07-20 auf Abteilung „Innere Medizin“ aufgenommen (Encounter status: in-progress)
 
     loop Beurlaubungs-Zyklus
         Note over KH: $update
         KH->>KH: Patient:in am 2025-07-22 auf Urlaub → Encounter status: on-hold, Verlegung Funktionscode 100000
 
         Note over KH: $update
-        KH->>KH: Patient:in kehrt am 2025-07-24 zurück → Encounter status: active (Abteilung: „Innere Medizin“)
+        KH->>KH: Patient:in kehrt am 2025-07-24 zurück → Encounter status: in-progress (Abteilung: „Innere Medizin“)
     end
     </pre>
 
@@ -207,7 +207,7 @@ sequenceDiagram
     participant KH as KH (Herz Jesu Krankenhaus)
 
     Note over KH: $aufnehmen
-    KH->>KH: Patient:in wird aufgenommen (Encounter status: active)
+    KH->>KH: Patient:in wird aufgenommen (Encounter status: in-progress)
 
     Note over KH: $update
     KH->>KH: Encounter-Status auf "discharged" gesetzt (noch ohne Hauptdiagnose aka "Entlassungs-Aviso")
