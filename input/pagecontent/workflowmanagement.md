@@ -1,105 +1,40 @@
-<div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
-   
-   <h3> Account-/Prozessstatus </h3>
-    <div>
-        <a style="border:none;" href="Account_Status.png" target="_blank">
-            <img src="Account_Status.png" width ="50%" />
-        </a>
-    </div>
-    <table>
-        <tr>
-            <td>Prozess Status</td>
-            <td>auslösender Stakeholder</td>
-            <td>Bedingung</td>
-            <td>Konsequenz</td>
-            <td>Benachrichtigung über Status</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Aufnahme in Arbeit</td>
-            <td>KH</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Aufnahme freigeben</td>
-            <td>KH</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>SV verarbeitet</td>
-            <td>SV</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Entlassung Aviso</td>
-            <td>KH</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Entlassung vollständig</td>
-            <td>KH</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Vorläufige Meldung</td>
-            <td>KH</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>LGF Korrekturaufforderung</td>
-            <td>LGF</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Vorläufige Freigabe</td>
-            <td>LGF</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Endgültige Meldung</td>
-            <td>KH</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Endgültige Freigabe</td>
-            <td>LGF</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-    <h3>Überblick der Statusänderungen der unterschiedlichen Ressourcen während des Prozesses</h3>
-    <div>
-        <a style="border:none;" href="Resource_Status_Overview.png" target="_blank">
-            <img src="Resource_Status_Overview.png" width ="100%" />
-        </a>
-    </div>
-</div>
+{% include styleheader.md %}
+
+### Überblick der Statusänderungen der unterschiedlichen Ressourcen während des Prozesses
+
+#### Status-Änderungen der Moped Composition
+<pre class="mermaid">
+    stateDiagram-v2
+    [*] --> partial : $aufnehmen (initiale Composition)
+    partial --> partial : $update, $anfragen, $antworten, $abrechnen, $entscheiden, etc.
+    partial --> final : Freigabe durch LGF
+    
+    partial --> entered_in_error : $stornieren
+</pre>
+
+#### Status-Änderungen des Moped Encounters
+<pre class="mermaid">
+    stateDiagram-v2
+    [*] --> in_progress : $aufnehmen
+    in_progress --> on_hold : Beurlaubung / temporäre Unterbrechung
+    on_hold --> in_progress : Rückkehr aus Beurlaubung
+
+    in_progress --> discharged : $update 
+    discharged --> completed : Hauptdiagnose dokumentiert und $entlassen
+
+    in_progress --> entered_in_error : $stornieren
+    on_hold --> entered_in_error : $stornieren
+    discharged --> entered_in_error : $stornieren
+</pre>
+
+#### Status-Änderungen der Financial Ressourcen (Claim, ClaimResponse)
+Diese Status-Änderungen folgen den Definitionen des <a href="https://build.fhir.org/financial-module.html#resource-status"> Resource Status Life-cycle</a> wie im FHIR Financial Modul dokumentiert. 
+
+<pre class="mermaid">
+    stateDiagram-v2
+    [*] --> active : Ressource wird eingebracht
+
+    active --> cancelled : Stornierung durch KH
+    active --> entered_in_error : Fehler erkannt
+    active --> [*] : Verarbeitet
+</pre>
