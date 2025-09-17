@@ -3,7 +3,7 @@ InstanceOf: SubscriptionTopic
 Title: "Subscription Topic VAE abgelehnt"
 Description: "SubscriptionTopic für das KH, um bei abgelehnten VAEs benachrichtigt zu werden."
 Usage: #example
-* url = "https://elga.moped.at/SubscriptionTopic/VAEabgelehnt"
+* url = "https://elga.moped.at/SubscriptionTopic/vaeAbgelehnt"
 * name = "VAEabgelehnt"
 * status = #active
 * resourceTrigger[+].resource = Canonical(MopedVAEResponse)
