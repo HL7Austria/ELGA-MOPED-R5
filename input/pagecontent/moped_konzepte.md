@@ -37,10 +37,6 @@ Es können mehrere Composition-Ausprägungen gleichzeitig gültig sein, etwa wen
 </pre>
 
 
-Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
-
-
-
 
 
 
