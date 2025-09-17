@@ -80,8 +80,6 @@ dependencies:
 pages:
   index.md:
     title: Home
-  use_case_description.md:
-    title: Anwendungsfallbeschreibung
   actors.md:
     title: Akteure
   workflowmanagement.md:
@@ -148,7 +146,7 @@ pages:
       title: ANWF 53 - Intensivaufenthalt
     AF54.md:
       title: ANWF 54 - Stammdatenänderung
-  moped_magic.md:
+  moped_konzepte.md:
     title: Grundlegende Konzepte und Design-Entscheidungen
   ka-org_mapping.md:
     title: Ka-Org Mapping
@@ -158,7 +156,6 @@ pages:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  Prozess (Entwurf): use_case_description.html
   Akteure: actors.html
   Anwendungsfälle:
     Überblick & Sunshine Case: anwendungsfaelle.html
@@ -193,7 +190,7 @@ menu:
     ANWF 53 - Intensivaufenthalt: AF53.html
     ANWF 54 - Stammdatenänderung: AF54.html
   Workflowmanagement: workflowmanagement.html
-  Konzepte: moped_magic.html
+  Konzepte: moped_konzepte.html
   LKF Mapping: lkf_mapping.html
   Ka-Org Mapping: ka-org_mapping.html
 
