@@ -10,7 +10,3 @@ Title: "MOPED Coverage für Selbstzahler"
 * beneficiary only Reference(HL7ATCorePatient)
 * beneficiary 1..1
 * insurer 0..0
-
-//Falls Hauptversicherter relevant:
-//* paymentBy.party only Reference(HL7ATCorePatient or Hauptversicherter)
-
