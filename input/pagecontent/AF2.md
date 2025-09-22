@@ -56,9 +56,8 @@ Der Patient wird stationär in das KH aufgenommen und ein Aufenthalt (Encounter)
     actor Bund as Bund 
     end
 
-
-    Note over KH: Patient wird aufgenommen
     KH ->> MP: $aufnehmen
+    Note over KH: Patient wird aufgenommen
 
 </pre>
 
