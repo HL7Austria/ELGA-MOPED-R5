@@ -16,7 +16,7 @@ Title: "MOPED Encounter"
 * identifier[Aufnahmezahl].system 1..1
 * identifier[DatensatzID].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[DatensatzID].type.coding.code = #ANON (exactly)
-* identifier[DatensatzID] ^short = "Datensatzid: SHA-256 verschlüsselte Aufnahmezahl"
+* identifier[DatensatzID] ^short = "Datensatz-ID: SHA-256 verschlüsselte Aufnahmezahl"
 
 * subject only Reference(HL7ATCorePatient)
 * subject 1..1
