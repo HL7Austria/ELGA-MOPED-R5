@@ -20,7 +20,7 @@ Expression: ""
 
 Invariant: moped-erfassen-stationaer-leistung-z-seitenlokalisation
 Severity: #error
-Description: "Bei allen stationären Fällen muss bei den Leistungen verpflichtend die Seitenlokalistion befüllt werden."
+Description: "Bei stationären Fällen muss bei Leistungen mit Leistungseinheit C verpflichtend die Seitenlokalistion befüllt werden."
 Expression: ""
 
 Invariant: moped-erfassen-entweder-funktionscode-oder-KANummer-extern
