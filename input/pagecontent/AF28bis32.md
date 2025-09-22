@@ -155,20 +155,21 @@ Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH
     actor Bund as Bund 
     end
     KH->>MP: Anfrage VAE <br/>POST VAERequest 1
-    Note over SV: Negative VAE
+    Note over KH: Anfrage auf Versicherungsanspruchserklärung 
     SV->>MP: VAEResponse 1<br/>(Status 03 'nicht leistungszuständig')
+    Note over SV: Negative VAE
     Note over MP: durch negative Response wird der <br/>VAERequest 1 automatisch gecancelled
     alt Erneute Anfrage bei gleichem<br/> Träger mit anderen Daten
+      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
       Note over KH: KH stellt modifizierte Anfrage an ÖGK
-      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
     else Patient hat noch einen Anspruch bei <br/>einem anderen SV Träger (z.B. SVS)
-      Note over KH: KH setzt die SVS als zuständige Versicherung
       KH->>MP: $update mit SVS referenziert in der neuen Coverage
-      Note over KH: KH stellt neue Anfrage an SVS
+      Note over KH: KH setzt die SVS als zuständige Versicherung
       KH->>MP: Anfrage VAE <br/>POST VAERequest 2
+      Note over KH: KH stellt neue Anfrage an SVS
     else  Patient wird zum Selbstzahler
-      Note over KH: KH meldet Patienten als Selbstzahler
-      KH->>MP: $update mit Selbstzahler Coverage 
+      KH->>MP: $update mit Selbstzahler Coverage
+      Note over KH: KH meldet Patienten als Selbstzahler 
     end
 </pre>
 
