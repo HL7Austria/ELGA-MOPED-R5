@@ -3,6 +3,7 @@ Parent: Procedure
 Description: "MOPED Profil der Procedure Ressource für die LDF-Abrechnung"
 Title: "MOPED Procedure"
 
+* extension contains Leistungsanzahl named Leistungsanzahl 1..1
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type.coding.code"
@@ -14,10 +15,18 @@ Title: "MOPED Procedure"
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
 * subject only Reference(HL7ATCorePatient)
-* performer.actor only Reference(MopedOrganizationAbteilung)
-* performer.onBehalfOf only Reference(HL7ATCoreOrganization)
+* subject 1..1
+//performer.actor kann entweder das Feld "Funktionscode/Fachgebiet leistungserbringend" oder "Krankenanstaltennummer leistungserbringend" darstellen je nach Profil.
+//performer.actor ist verpflichtend wenn der performer verwendet wird daher können wir es nicht auf actor und onBehalfOf aufteilen
+//"Krankenanstaltennummer leistungserbringend" wird nur befüllt falls es sich um eine extern erbrachte Leistung handelt
+* performer.actor only Reference(MopedOrganizationAbteilung or KHOrganization)
+* performer.actor ^short = "Referenz auf die Abteilung inkl. Funktionscode oder Referenz auf KA bei externen Leistungen"
+* performer.actor 1..1
+* performer 1..1
+* performer.onBehalfOf only Reference(KHOrganization)
+* performer.onBehalfOf ^short = "Referenz auf die Krankenanstalt, in der der Patient aufgenommen wurde."
 * performer.onBehalfOf 1..1
-* occurrence[x] 1..1
+* occurrenceDateTime 1..1
 * category.coding ^slicing.rules = #open
 * category.coding ^slicing.discriminator.type = #value
 * category.coding ^slicing.discriminator.path = "system"
@@ -29,3 +38,12 @@ Title: "MOPED Procedure"
 * code ^short = "Leistungskatalog BMSGPK"
 * code.coding from LKFLeistungskatalogVS (required)
 * code.coding.system = $LKFLeistungskatalog
+* code.coding 1..
+* bodySite from LKFSeitenlokalisationVS
+
+* obeys moped-externe-Leistung-KH
+
+Invariant: moped-externe-Leistung-KH
+Severity: #error
+Description: "Wird bei performer.actor eine KHOrganization angegeben so muss sich diese unterscheiden von der referenzierten Krankenanstalt in perfomer.onBehalfOf"
+Expression: ""
