@@ -3,6 +3,7 @@ Parent: Coverage
 Description: "MOPED Profil der Coverage Ressource für Versicherungen."
 Title: "MOPED Coverage"
 
+* kind = #insurance
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
