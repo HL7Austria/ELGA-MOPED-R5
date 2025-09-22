@@ -14,7 +14,12 @@ Title: "MOPED Procedure"
 //"Krankenanstaltennummer leistungserbringend" wird nur befüllt falls es sich um eine extern erbrachte Leistung handelt
 * performer.actor ^short = "Referenz auf die Abteilung mit Funktionscode/Fachgebiet leistungserbringend  oder die Krankenanstalt mit Krankenanstaltennummer leistungserbringend bei extern erbrachten Leistungen"
 * performer.actor only Reference(MopedOrganizationAbteilung or KHOrganization)
+* performer.actor ^short = "Referenz auf die Abteilung inkl. Funktionscode oder Referenz auf KA bei externen Leistungen"
+* performer.actor 1..1
 * performer 1..1
+* performer.onBehalfOf only Reference(KHOrganization)
+* performer.onBehalfOf ^short = "Referenz auf die Krankenanstalt, in der der Patient aufgenommen wurde."
+* performer.onBehalfOf 1..1
 * occurrenceDateTime 1..1
 * occurrenceDateTime ^short = "Medizinische Leistung Datum und Uhrzeit der Erbringung"
 * category.coding ^slicing.rules = #open
@@ -32,3 +37,10 @@ Title: "MOPED Procedure"
 * code.coding 1..
 * bodySite from LKFSeitenlokalisationVS
 * bodySite ^short = "Seitenlokalisation"
+
+* obeys moped-externe-Leistung-KH
+
+Invariant: moped-externe-Leistung-KH
+Severity: #error
+Description: "Wird bei performer.actor eine KHOrganization angegeben so muss sich diese unterscheiden von der referenzierten Krankenanstalt in perfomer.onBehalfOf"
+Expression: ""
