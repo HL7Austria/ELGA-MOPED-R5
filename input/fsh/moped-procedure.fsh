@@ -20,7 +20,12 @@ Title: "MOPED Procedure"
 //performer.actor ist verpflichtend wenn der performer verwendet wird daher können wir es nicht auf actor und onBehalfOf aufteilen
 //"Krankenanstaltennummer leistungserbringend" wird nur befüllt falls es sich um eine extern erbrachte Leistung handelt
 * performer.actor only Reference(MopedOrganizationAbteilung or KHOrganization)
+* performer.actor ^short = "Referenz auf die Abteilung inkl. Funktionscode oder Referenz auf KA bei externen Leistungen"
+* performer.actor 1..1
 * performer 1..1
+* performer.onBehalfOf only Reference(KHOrganization)
+* performer.onBehalfOf ^short = "Referenz auf die Krankenanstalt, in der der Patient aufgenommen wurde."
+* performer.onBehalfOf 1..1
 * occurrenceDateTime 1..1
 * category.coding ^slicing.rules = #open
 * category.coding ^slicing.discriminator.type = #value
@@ -35,3 +40,10 @@ Title: "MOPED Procedure"
 * code.coding.system = $LKFLeistungskatalog
 * code.coding 1..
 * bodySite from LKFSeitenlokalisationVS
+
+* obeys moped-externe-Leistung-KH
+
+Invariant: moped-externe-Leistung-KH
+Severity: #error
+Description: "Wird bei performer.actor eine KHOrganization angegeben so muss sich diese unterscheiden von der referenzierten Krankenanstalt in perfomer.onBehalfOf"
+Expression: ""
