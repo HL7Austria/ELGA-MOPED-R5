@@ -59,8 +59,8 @@ Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt m
     actor Bund as Bund 
     end
 
-    Note over KH: Patient wird entlassen und im gleichen Aufruf<br/> die Hauptdiagnose mitgeliefert
     KH->>MP: $entlassen
+    Note over KH: Patient wird entlassen und im gleichen Aufruf<br/> die Hauptdiagnose mitgeliefert
 </pre>
 
 ### Relevante Profile
@@ -131,17 +131,17 @@ Abgerechnet kann erst werden, wenn die Hauptdiagnose vorhanden ist, und somit de
     actor Bund as Bund 
     end
 
+    KH->>MP: $aufnehmen
     Note over KH: Patient:in wird aufgenommen<br/>(Encounter status: in-progress)
-    KH->>MP: $aufnehmen 
 
-    Note over KH: Encounter-Status auf "discharged" gesetzt<br/>(noch ohne Hauptdiagnose aka "Entlassungs-Aviso")
     KH->>MP: $update
+    Note over KH: Encounter-Status auf "discharged" gesetzt<br/>(noch ohne Hauptdiagnose aka "Entlassungs-Aviso")
 
-    Note over KH: Hauptdiagnose „Herzinsuffizienz“ ergänzt
     KH->>MP: $update 
+    Note over KH: Hauptdiagnose „Herzinsuffizienz“ ergänzt
 
-    Note over KH: Encounter-Status final auf "completed" gesetzt
     KH->>MP: $entlassen
+    Note over KH: Encounter-Status final auf "completed" gesetzt
 </pre>
 
 ### Relevante Profile

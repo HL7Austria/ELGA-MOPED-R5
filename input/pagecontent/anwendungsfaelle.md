@@ -97,52 +97,47 @@ Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Au
     box rgb(252, 179, 179) 
     actor Bund as Bund 
     end
-
-
-    Note over KH: Susi Sonnenschein wird aufgenommen
+    
     KH->> MP: $aufnehmen
+    Note over KH: Susi Sonnenschein wird aufgenommen
 
+    KH->>MP: $update
     Note over KH: ÖGK Wien als zuständige Versicherung gesetzt
-    KH->>MP: $update
 
-    Note over KH: Anfrage auf Versicherungsanspruchserklärung 
     KH->>MP: $anfragen
+    Note over KH: Anfrage auf Versicherungsanspruchserklärung 
 
-    Note over SV: Fallübernahme bestätigt (Status 00) 
     SV->>MP: $antworten (Status 00)
+    Note over SV: Fallübernahme bestätigt (Status 00) 
 
+    KH->>MP: $update
     Note over KH: Verlegung auf Abteilung Innere Medizin 
-    KH->>MP: $update
 
+    KH->>MP: $update
     Note over KH: Diagnose „Herzinsuffizienz“ und Leistung „EKG“ erfasst 
-    KH->>MP: $update
 
-    Note over KH: Susi Sonnenschein wird entlassen 
     KH->>MP: $entlassen
-
+    Note over KH: Susi Sonnenschein wird entlassen 
     loop $abrechnen / $entscheiden (vorläufig)
-        Note over KH: Abrechnung aller Leistungen eingereicht
         KH->>MP:$abrechnen 
-
-        Note over LGF: Alle Posten genehmigt (keine Änderungen)
+        Note over KH: Abrechnung aller Leistungen eingereicht
         LGF-->>MP: $entscheiden 
+        Note over LGF: Alle Posten genehmigt (keine Änderungen)
     end
 
     %% Finale Abrechnung und Entscheidung
-    Note over KH: Finale Abrechnung nach Entlassung
     KH->>MP: final $abrechnen 
+    Note over KH: Finale Abrechnung nach Entlassung
 
-    Note over LGF: Endgültige Entscheidung zur Abrechnung 
     LGF->>MP: final $entscheiden
+    Note over LGF: Endgültige Entscheidung zur Abrechnung 
+    Note over LGF: Kosteninformation wird übermittelt 
 
-    Note over Bund: Zugriff auf finale Composition 
     Bund->>MP: GET Composition?status=final
+    Note over Bund: Zugriff auf finale Composition 
 
-    Note over LGF:  Kosteninformation wird übermittelt 
-    LGF->>MP: $melden
-
-    Note over SV: Rückmeldung zur Kosteninformation
     SV->>MP: $antworten
+    Note over SV: Rückmeldung zur Kosteninformation
 
     Note over MP: Fall für Moped abgeschlossen
     
