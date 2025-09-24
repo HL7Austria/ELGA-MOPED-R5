@@ -40,7 +40,7 @@ Der Patient wird stationär in das KH aufgenommen und ein Aufenthalt (Encounter)
     ---
     sequenceDiagram
     autonumber
-    box rgb(245, 245, 188)
+    box rgb(245, 229, 153)
     actor KH as KH (Herz Jesu Krankenhaus)
     end
     box rgb(197, 247, 186)
