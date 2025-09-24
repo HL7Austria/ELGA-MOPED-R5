@@ -20,7 +20,7 @@ Die folgenden Anwendungsfälle werden beschrieben:
 - [ANWF 11 - Versicherungswechsel](AF11.html)
 - [ANWF 12,13,15,35-37 - Ausländerverrechnung und Regress](AF12.html)
 - [ANWF 14 - Selbstzahler](AF14.html)
-- [ANWF 17 - Zwischenbetriebliche Leistungserbringung](AF17.html)
+- [ANWF 17 - Zwischenbetriebliche Leistungserbringung ✅](AF17.html)
 - [ANWF 18 - Transfer](AF18.html)
 - [ANWF 19 - Interne Verlegung](AF19.html)
 - [ANWF 20 - Urlaub](AF20.html)
@@ -82,7 +82,7 @@ Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Au
     ---
     sequenceDiagram
     autonumber
-    box rgb(245, 245, 188)
+    box rgb(245, 229, 153)
     actor KH as KH (Herz Jesu Krankenhaus)
     end
     box rgb(197, 247, 186)
