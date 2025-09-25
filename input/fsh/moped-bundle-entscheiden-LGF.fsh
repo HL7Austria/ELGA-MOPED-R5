@@ -19,7 +19,7 @@ Description: """Bundle für die Input-Ressourcen beim Entscheiden (Bestätigen/A
 * entry[LKFResp].request.method ^short = "POST"
 * entry contains
   Communication 0..
-* entry[Communication].resource only CommunicationRequest
+* entry[Communication].resource only MopedCommunication
 * entry[Communication].request.method from HTTPVerbInsertOnlyVS
 * entry[Communication].request.method ^short = "POST"
 * entry contains

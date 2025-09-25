@@ -27,7 +27,7 @@ Description: """Bundle für die Input-Ressourcen beim Einbringen von Antworten d
 * entry[ARKStatusUpdate].request.method ^short = "POST"
 * entry contains
   Communication 0..
-* entry[Communication].resource only CommunicationRequest
+* entry[Communication].resource only MopedCommunication
 * entry[Communication].request.method from HTTPVerbInsertOnlyVS
 * entry[Communication].request.method ^short = "POST"
 * entry contains
