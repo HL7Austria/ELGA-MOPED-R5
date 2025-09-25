@@ -1,11 +1,10 @@
-Instance: oegk-wien
+Instance: SV11
 InstanceOf: SVOrganization
 Description: "Hackathon Stammdaten: ÖGK Wien"
 Usage: #example
-* meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"
+* meta.profile = "https://elga.moped.at/StructureDefinition/SVOrganization"
 * type = https://termgit.elga.gv.at/CodeSystem/elga-gtelvogdarollen#406 "Sozialversicherung"
 * name = "Österreichische Gesundheitskasse Wien"
-* alias = "11"
 * identifier[+].system = "http://svc.co.at/CodeSystem/ecard-svt-cs"
 * identifier[=].value = "11"
 * contact.address.line = "Wienerbergstraße 15-19, 1100 Wien"

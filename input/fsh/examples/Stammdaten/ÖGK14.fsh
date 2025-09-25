@@ -1,11 +1,10 @@
-Instance: oegk-oberoesterreich
+Instance: SV14
 InstanceOf: SVOrganization
 Description: "Hackathon Stammdaten: ÖGK Oberösterreich"
 Usage: #example
-* meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"
+* meta.profile = "https://elga.moped.at/StructureDefinition/SVOrganization"
 * type = https://termgit.elga.gv.at/CodeSystem/elga-gtelvogdarollen#406 "Sozialversicherung"
 * name = "Österreichische Gesundheitskasse Oberösterreich"
-* alias = "14"
 * identifier[+].system = "http://svc.co.at/CodeSystem/ecard-svt-cs"
 * identifier[=].value = "14"
 * contact.address.line = "Gruberstraße 77, 4021 Linz"

@@ -6,9 +6,9 @@ InstanceOf: Questionnaire
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2024-07-12T00:00:00+00:00"
-* url = "http://example.org/fhir/Questionnaire/SAPS3Questionnaire"
+* url = "https://elga.moped.at/Questionnaire/saps3-questionnaire"
 * version = "1.0"
-* id = "SAPS3Questionnaire"
+* id = "saps3-questionnaire"
 * name = "SAPS3Questionnaire"
 * title = "SAPS3 Questionnaire"
 * status = #active

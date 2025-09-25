@@ -8,7 +8,7 @@ Usage: #example
 * status = http://hl7.org/fhir/fm-status#active
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * patient = Reference(PJ1Patient)
-* insurer = Reference(oegk-wien)
+* insurer = Reference(SV11)
 * provider = Reference(OrganizationHerzJesuKrankenhaus)
 * insurance[+].coverage = Reference(PJ1Coverage)
 * insurance[=].sequence = 1

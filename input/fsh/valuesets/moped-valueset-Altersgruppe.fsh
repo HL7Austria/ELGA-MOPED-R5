@@ -22,6 +22,9 @@ Description: "CodeSystem für die Altersgruppe des Patienten"
 * #70 "70 bis 74 Jahre"
 * #75 "75 bis 79 Jahre"
 * #80 "80 bis 84 Jahre"
+* #85 "85 bis 89 Jahre"
+* #90 "90 bis 94 Jahre"
+* #95 "95 Jahre und älter"
 
 ValueSet: AltersgruppeVS
 Title: "Altersgruppe des Patienten"

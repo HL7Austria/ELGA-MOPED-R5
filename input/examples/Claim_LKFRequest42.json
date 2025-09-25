@@ -1,0 +1,244 @@
+{
+  "resourceType": "Claim",
+  "id": "LKFRequest42",
+  "meta": {
+    "profile": [
+      "https://elga.moped.at/StructureDefinition/MopedLKFRequest"
+    ]
+  },
+  "extension": [
+    {
+      "url": "https://elga.moped.at/StructureDefinition/moped-ext-diagnoseKnoten",
+      "valueCoding": {
+        "system": "https://elga.moped.at/CodeSystem/LKFAbrechnungsKnotenCS",
+        "code": "D"
+      }
+    },
+    {
+      "url": "https://elga.moped.at/StructureDefinition/moped-ext-fondsrelevanz",
+      "valueCoding": {
+        "system": "https://elga.moped.at/CodeSystem/FondsrelevanzCS",
+        "code": "J"
+      }
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+        "code": "institutional",
+        "display": "Institutional"
+      }
+    ]
+  },
+  "use": "claim",
+  "patient": {
+    "reference": "Patient/Patient42"
+  },
+  "created": "2025-08-30",
+  "insurer": {
+    "reference": "Organization/SV11"
+  },
+  "provider": {
+    "reference": "Organization/KHK999"
+  },
+  "encounter": [
+    {
+      "reference": "Encounter/Encounter42"
+    },
+    {
+      "reference": "Encounter/TransferEncounter42.1"
+    },
+    {
+      "reference": "Encounter/TransferEncounter42.2"
+    }
+  ],
+  "diagnosisRelatedGroup": {
+    "coding": [
+      {
+        "system": "https://elga.moped.at/ValueSet/LKFAbrechnungsGruppeVS",
+        "code": "HDG01.12"
+      }
+    ]
+  },
+  "supportingInfo": [
+    {
+      "sequence": 1,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/ClaimSupportingInformationCategoryCS",
+            "code": "PLAUS"
+          }
+        ]
+      },
+      "valueString": "2"
+    },
+    {
+      "sequence": 2,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/ClaimSupportingInformationCategoryCS",
+            "code": "ENDG"
+          }
+        ]
+      },
+      "valueBoolean": true
+    }
+  ],
+  "diagnosis": [
+    {
+      "sequence": 1,
+      "diagnosisReference": {
+        "reference": "Condition/Condition42.1"
+      },
+      "onAdmission": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission",
+            "code": "unknown"
+          }
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "sequence": 1,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+            "code": "LDFPLK"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 366.0,
+        "unit": "LKF Punkte"
+      }
+    },
+    {
+      "sequence": 2,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+            "code": "LDFPTK"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 2730.0,
+        "unit": "LKF Punkte"
+      }
+    },
+    {
+      "sequence": 3,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+            "code": "SCULK"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 0.0,
+        "unit": "LKF Punkte"
+      }
+    },
+    {
+      "sequence": 4,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+            "code": "SCUTK"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 0.0,
+        "unit": "LKF Punkte"
+      }
+    },
+    {
+      "sequence": 5,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+            "code": "BDZU"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 0.0,
+        "unit": "LKF Punkte"
+      }
+    },
+    {
+      "sequence": 6,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+            "code": "INTZU"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 2436.0,
+        "unit": "LKF Punkte"
+      }
+    },
+    {
+      "sequence": 7,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+            "code": "MELZU"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 0.0,
+        "unit": "LKF Punkte"
+      }
+    },
+    {
+      "sequence": 8,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+            "code": "SCSPEZ"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 0.0,
+        "unit": "LKF Punkte"
+      }
+    },
+    {
+      "sequence": 9,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+            "code": "SCGES"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 5532.0,
+        "unit": "LKF Punkte"
+      }
+    }
+  ]
+}

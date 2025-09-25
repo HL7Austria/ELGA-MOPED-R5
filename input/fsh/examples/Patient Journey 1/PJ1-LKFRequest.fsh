@@ -8,7 +8,7 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
 * patient = Reference(PJ1Patient)
 * created = "2024-10-31"
-* insurer = Reference(oegk-wien)
+* insurer = Reference(SV11)
 * provider = Reference(OrganizationHerzJesuKrankenhaus)
 * encounter[MopedEncounter] = Reference(PJ1Encounter)
 * encounter[TransferEncounter] = Reference(PJ1TransferEncounter1)
@@ -20,10 +20,9 @@ Usage: #example
 * procedure[+].extension[AbrechnungsRelevanz].valueCoding = AbrechnungsRelevanzCS#J
 * procedure[=].sequence = 1
 * procedure[=].procedureReference = Reference(PJ1Procedure1)
-* diagnosis[Hauptdiagnose].diagnosisReference = Reference(PJ1Condition1)
-* diagnosis[Hauptdiagnose].sequence = 1
-* diagnosis[Hauptdiagnose].type.coding = $LKFdiagnoseTyp#H
-* diagnosis[Hauptdiagnose].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
+* diagnosis[+].diagnosisReference = Reference(PJ1Condition1)
+* diagnosis[=].sequence = 1
+* diagnosis[=].onAdmission = http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission#unknown
 
 * supportingInfo[Plausibilitaetskennzeichen].sequence = 1
 * supportingInfo[Plausibilitaetskennzeichen].category = ClaimSupportingInformationCategoryCS#PLAUS

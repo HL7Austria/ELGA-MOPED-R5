@@ -77,7 +77,7 @@ Title: "MOPED Composition"
 * section[Coverages].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Coverages].code.coding.code = #COV
 * section[Coverages].entry 1..
-* section[Coverages].entry only Reference(MopedCoverage) //TODO Selbstzahlercoverage,...
+* section[Coverages].entry only Reference(MopedCoverage or MopedCoverageSelbstzahler)
 * section[Coverages].author only Reference(KHOrganization)
 * section contains VAERequests 0.. 
 * section[VAERequests].code.coding.system = Canonical(CompositionSectionsCS)

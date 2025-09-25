@@ -1,0 +1,2275 @@
+{
+  "resourceType": "Bundle",
+  "id": "Bundle42",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://elga.moped.at/Composition/Composition42",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Composition42",
+        "meta": {
+          "profile": [
+            "https://elga.moped.at/StructureDefinition/MopedComposition"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "102089-0",
+              "display": "FHIR resource patient medical record"
+            }
+          ]
+        },
+        "subject": [
+          {
+            "reference": "Patient/Patient42"
+          }
+        ],
+        "encounter": {
+          "reference": "Encounter/Encounter42"
+        },
+        "date": "2025-08-30",
+        "useContext": [
+          {
+            "code": {
+              "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",
+              "code": "workflow"
+            },
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/WorkflowStatusCS",
+                  "code": "Endgueltige-Freigabe",
+                  "display": "Endgültige Freigabe"
+                }
+              ]
+            }
+          }
+        ],
+        "author": [
+          {
+            "reference": "Organization/KHK999"
+          }
+        ],
+        "title": "LKF Testdaten Fall",
+        "section": [
+          {
+            "title": "Zuständiges KH",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/CompositionSectionsCS",
+                  "code": "KH"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Organization/KHK999"
+              }
+            ]
+          },
+          {
+            "title": "Zuständiger LGF",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/CompositionSectionsCS",
+                  "code": "LGF"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Organization/OrganizationLGF"
+              }
+            ]
+          },
+          {
+            "title": "Zuständige SV",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/CompositionSectionsCS",
+                  "code": "SV"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Organization/SV11"
+              }
+            ]
+          },
+          {
+            "title": "LKF Requests",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/CompositionSectionsCS",
+                  "code": "LKFReq"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Claim/LKFRequest42"
+              }
+            ]
+          },
+          {
+            "title": "Conditions",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/CompositionSectionsCS",
+                  "code": "DIAG"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Condition/Condition42.1"
+              }
+            ]
+          },
+          {
+            "title": "TransferEncounter",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedEncounterTypesCS",
+                  "code": "TENC"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Encounter/TransferEncounter42.1"
+              },
+              {
+                "reference": "Encounter/TransferEncounter42.2"
+              }
+            ]
+          },
+          {
+            "title": "QuestionnaireResponses",
+            "code": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/CompositionSectionsCS",
+                  "code": "QResp"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "QuestionnaireResponse/SAPS42.1"
+              },
+              {
+                "reference": "QuestionnaireResponse/TISS42.1"
+              },
+              {
+                "reference": "QuestionnaireResponse/TISS42.2"
+              },
+              {
+                "reference": "QuestionnaireResponse/TISS42.3"
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Composition/Composition42"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/Patient/Patient42",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient42",
+        "meta": {
+          "profile": [
+            "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-patient"
+          ]
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "code",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3",
+                      "code": "AUT"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "SS",
+                  "display": "Social Security Number"
+                }
+              ]
+            },
+            "system": "urn:oid:1.2.40.0.10.1.4.3.1",
+            "value": "123456",
+            "assigner": {
+              "display": "Dachverband der österreichischen Sozialversicherungsträger"
+            }
+          }
+        ],
+        "name": [
+          {
+            "family": "Patient42FamilienName",
+            "given": [
+              "Patient42"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1937-12-31"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/Patient42"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/Encounter/Encounter42",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Encounter42",
+        "meta": {
+          "profile": [
+            "https://elga.moped.at/StructureDefinition/MopedEncounter"
+          ]
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "beiEntlassung",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "https://elga.moped.at/CodeSystem/AltersgruppeCS",
+                      "code": "85"
+                    }
+                  ]
+                }
+              }
+            ],
+            "url": "https://elga.moped.at/StructureDefinition/moped-ext-altersgruppe"
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "VN"
+                }
+              ]
+            },
+            "system": "urn:oid:1.3.6.1.4.1.36124.5.999",
+            "value": "043"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "ANON"
+                }
+              ]
+            },
+            "system": "urn:oid:1.3.6.1.4.1.36124.5.999",
+            "value": "82ad92612238288c30b4590440ecb271690deb8e7c418c1f07b2eda4d87a6fe9"
+          }
+        ],
+        "status": "completed",
+        "class": [
+          {
+            "coding": [
+              {
+                "system": "https://elga.moped.at/CodeSystem/BehandlungsartCS",
+                "code": "S"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "https://elga.moped.at/CodeSystem/Aufnahmeart2CS",
+                "code": "P"
+              }
+            ]
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "https://elga.moped.at/CodeSystem/MopedEncounterTypesCS",
+                "code": "ENC"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/Patient42"
+        },
+        "serviceProvider": {
+          "reference": "Organization/KHK999"
+        },
+        "actualPeriod": {
+          "start": "2025-01-01T12:00:00+02:00",
+          "end": "2025-01-04T12:00:00+02:00"
+        },
+        "admission": {
+          "extension": [
+            {
+              "url": "https://elga.moped.at/StructureDefinition/moped-ext-aufnahmeart",
+              "valueCoding": {
+                "system": "https://elga.moped.at/CodeSystem/AufnahmeartCS",
+                "code": "A"
+              }
+            }
+          ],
+          "dischargeDisposition": {
+            "coding": [
+              {
+                "system": "https://elga.moped.at/CodeSystem/EntlassungsartCS",
+                "code": "E"
+              }
+            ]
+          }
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/Encounter42"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/Claim/LKFRequest42",
+      "resource": {
+        "resourceType": "Claim",
+        "id": "LKFRequest42",
+        "meta": {
+          "profile": [
+            "https://elga.moped.at/StructureDefinition/MopedLKFRequest"
+          ]
+        },
+        "extension": [
+          {
+            "url": "https://elga.moped.at/StructureDefinition/moped-ext-diagnoseKnoten",
+            "valueCoding": {
+              "system": "https://elga.moped.at/CodeSystem/LKFAbrechnungsKnotenCS",
+              "code": "D"
+            }
+          },
+          {
+            "url": "https://elga.moped.at/StructureDefinition/moped-ext-fondsrelevanz",
+            "valueCoding": {
+              "system": "https://elga.moped.at/CodeSystem/FondsrelevanzCS",
+              "code": "J"
+            }
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+              "code": "institutional",
+              "display": "Institutional"
+            }
+          ]
+        },
+        "use": "claim",
+        "patient": {
+          "reference": "Patient/Patient42"
+        },
+        "created": "2025-08-30",
+        "insurer": {
+          "reference": "Organization/SV11"
+        },
+        "provider": {
+          "reference": "Organization/KHK999"
+        },
+        "encounter": [
+          {
+            "reference": "Encounter/Encounter42"
+          },
+          {
+            "reference": "Encounter/TransferEncounter42.1"
+          },
+          {
+            "reference": "Encounter/TransferEncounter42.2"
+          }
+        ],
+        "diagnosisRelatedGroup": {
+          "coding": [
+            {
+              "system": "https://elga.moped.at/ValueSet/LKFAbrechnungsGruppeVS",
+              "code": "HDG01.12"
+            }
+          ]
+        },
+        "supportingInfo": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/ClaimSupportingInformationCategoryCS",
+                  "code": "PLAUS"
+                }
+              ]
+            },
+            "valueString": "2"
+          },
+          {
+            "sequence": 2,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/ClaimSupportingInformationCategoryCS",
+                  "code": "ENDG"
+                }
+              ]
+            },
+            "valueBoolean": true
+          }
+        ],
+        "diagnosis": [
+          {
+            "sequence": 1,
+            "diagnosisReference": {
+              "reference": "Condition/Condition42.1"
+            },
+            "onAdmission": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission",
+                  "code": "unknown"
+                }
+              ]
+            }
+          }
+        ],
+        "item": [
+          {
+            "sequence": 1,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+                  "code": "LDFPLK"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 366.0,
+              "unit": "LKF Punkte"
+            }
+          },
+          {
+            "sequence": 2,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+                  "code": "LDFPTK"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 2730.0,
+              "unit": "LKF Punkte"
+            }
+          },
+          {
+            "sequence": 3,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+                  "code": "SCULK"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 0.0,
+              "unit": "LKF Punkte"
+            }
+          },
+          {
+            "sequence": 4,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+                  "code": "SCUTK"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 0.0,
+              "unit": "LKF Punkte"
+            }
+          },
+          {
+            "sequence": 5,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+                  "code": "BDZU"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 0.0,
+              "unit": "LKF Punkte"
+            }
+          },
+          {
+            "sequence": 6,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+                  "code": "INTZU"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 2436.0,
+              "unit": "LKF Punkte"
+            }
+          },
+          {
+            "sequence": 7,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+                  "code": "MELZU"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 0.0,
+              "unit": "LKF Punkte"
+            }
+          },
+          {
+            "sequence": 8,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+                  "code": "SCSPEZ"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 0.0,
+              "unit": "LKF Punkte"
+            }
+          },
+          {
+            "sequence": 9,
+            "category": {
+              "coding": [
+                {
+                  "system": "https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS",
+                  "code": "SCGES"
+                }
+              ]
+            },
+            "quantity": {
+              "value": 5532.0,
+              "unit": "LKF Punkte"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Claim/LKFRequest42"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/Condition/Condition42.1",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "Condition42.1",
+        "meta": {
+          "profile": [
+            "https://elga.moped.at/StructureDefinition/MopedCondition"
+          ]
+        },
+        "extension": [
+          {
+            "url": "https://elga.moped.at/StructureDefinition/moped-ext-Diagnosetyp",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "https://termgit.elga.gv.at/CodeSystem/lkf-diagnose-typ",
+                  "code": "H"
+                }
+              ]
+            }
+          }
+        ],
+        "clinicalStatus": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "not-asked"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "https://termgit.elga.gv.at/CodeSystem/icd-10-bmsgpk-2025",
+              "code": "G40.0"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Patient42"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter42"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/Condition42.1"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/Encounter/TransferEncounter42.1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "TransferEncounter42.1",
+        "meta": {
+          "profile": [
+            "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
+          ]
+        },
+        "status": "completed",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "https://elga.moped.at/CodeSystem/MopedEncounterTypesCS",
+                "code": "TENC"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/Patient42"
+        },
+        "partOf": {
+          "reference": "Encounter/Encounter42"
+        },
+        "serviceProvider": {
+          "reference": "Organization/KHK999ABT11111100"
+        },
+        "actualPeriod": {
+          "start": "2025-01-01"
+        },
+        "admission": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "beiZugang",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "https://elga.moped.at/CodeSystem/AltersgruppeCS",
+                        "code": "85"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "neugeborenes",
+                  "valueBoolean": false
+                }
+              ],
+              "url": "https://elga.moped.at/StructureDefinition/moped-ext-altersgruppe"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/TransferEncounter42.1"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/Encounter/TransferEncounter42.2",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "TransferEncounter42.2",
+        "meta": {
+          "profile": [
+            "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
+          ]
+        },
+        "status": "completed",
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "https://elga.moped.at/CodeSystem/MopedEncounterTypesCS",
+                "code": "TENC"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/Patient42"
+        },
+        "partOf": {
+          "reference": "Encounter/Encounter42"
+        },
+        "serviceProvider": {
+          "reference": "Organization/KHK999ABT12118102"
+        },
+        "actualPeriod": {
+          "start": "2025-01-02T00:00:00+02:00",
+          "end": "2025-01-04T00:00:00+02:00"
+        },
+        "admission": {
+          "extension": [
+            {
+              "extension": [
+                {
+                  "url": "beiZugang",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "https://elga.moped.at/CodeSystem/AltersgruppeCS",
+                        "code": "85"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "url": "neugeborenes",
+                  "valueBoolean": false
+                }
+              ],
+              "url": "https://elga.moped.at/StructureDefinition/moped-ext-altersgruppe"
+            }
+          ],
+          "dischargeDisposition": {
+            "coding": [
+              {
+                "system": "https://elga.moped.at/CodeSystem/AbgangsartCS",
+                "code": "1"
+              }
+            ]
+          }
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/TransferEncounter42.2"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/QuestionnaireResponse/SAPS42.1",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "SAPS42.1",
+        "questionnaire": "https://elga.moped.at/Questionnaire/saps3-questionnaire",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/Patient42"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter42"
+        },
+        "authored": "2025-08-30",
+        "author": {
+          "reference": "Organization/KHK999"
+        },
+        "item": [
+          {
+            "linkId": "saps3-set",
+            "item": [
+              {
+                "linkId": "saps3-02",
+                "answer": [
+                  {
+                    "valueString": "K999"
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-03",
+                "answer": [
+                  {
+                    "valueString": "043"
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-04",
+                "answer": [
+                  {
+                    "valueString": "82ad92612238288c30b4590440ecb271690deb8e7c418c1f07b2eda4d87a6fe9"
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-05",
+                "answer": [
+                  {
+                    "valueDate": "2025-01-01"
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-06",
+                "answer": [
+                  {
+                    "valueString": "002"
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-07",
+                "answer": [
+                  {
+                    "valueDate": "2025-01-02"
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-08",
+                "answer": [
+                  {
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-08a",
+                "answer": [
+                  {
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-09",
+                "answer": [
+                  {
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-10",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-11",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-12",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-13",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-14",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-15",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-16",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-17",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-18",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-19",
+                "answer": [
+                  {
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-20",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-24",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-25",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-26",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "6"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-27",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "5"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-28",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-30",
+                "item": [
+                  {
+                    "linkId": "saps3-30-1",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-2",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-3",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-4",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-5",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-6",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-7",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-8",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-9",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-10",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-11",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-12",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-13",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-14",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-15",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-16",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-17",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-18",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-19",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-20",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-30-21",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-32",
+                "answer": [
+                  {
+                    "valueBoolean": false
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-38",
+                "item": [
+                  {
+                    "linkId": "saps3-38-1",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-38-2",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  },
+                  {
+                    "linkId": "saps3-38-3",
+                    "answer": [
+                      {
+                        "valueBoolean": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "linkId": "saps3-39",
+                "answer": [
+                  {
+                    "valueCoding": {
+                      "code": "1"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "QuestionnaireResponse/SAPS42.1"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/QuestionnaireResponse/TISS42.1",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "TISS42.1",
+        "questionnaire": "https://elga.moped.at/Questionnaire/tiss-a-questionnaire",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/Patient42"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter42"
+        },
+        "authored": "2025-08-30",
+        "author": {
+          "reference": "Organization/KHK999"
+        },
+        "item": [
+          {
+            "linkId": "krankenanstaltennummer-leistungserbringer-id",
+            "answer": [
+              {
+                "valueString": "K999"
+              }
+            ]
+          },
+          {
+            "linkId": "aufnahmezahl",
+            "answer": [
+              {
+                "valueString": "043"
+              }
+            ]
+          },
+          {
+            "linkId": "datensatz-id",
+            "answer": [
+              {
+                "valueString": "82ad92612238288c30b4590440ecb271690deb8e7c418c1f07b2eda4d87a6fe9"
+              }
+            ]
+          },
+          {
+            "linkId": "aufnahme-kontaktdatum",
+            "answer": [
+              {
+                "valueString": "20250101"
+              }
+            ]
+          },
+          {
+            "linkId": "bettenfuhrende-hauptkostenstelle-positionsnummer",
+            "answer": [
+              {
+                "valueString": "002"
+              }
+            ]
+          },
+          {
+            "linkId": "erhebungsdatum",
+            "answer": [
+              {
+                "valueString": "20250102"
+              }
+            ]
+          },
+          {
+            "linkId": "standard-monitoring",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "labor",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "medikamente",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "verbandswechsel",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "2"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "drainagenpflege",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "atmungsmodus",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "atemwegszugang",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "tubus-stomapflege",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "atemtherapie",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "medikamente-vasoaktiv",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "flussigkeitsersatz-massiv",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "katheter-arteriell",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "monitoring-hamodynamisch",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "katheter-zentralvenos",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "reanimation-kardiopulmonal",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "nierenersatztherapie",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "harnbilanzierung",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "diurese-aktiv",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "hirndruckmessung",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "behandlung-metabolischer-entgleisungen",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "ernahrung-enteral",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "ernahrung-parenteral",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "interventionen",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "diagnostik-therapie-ausserhalb-ibs",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "agitation-delirium",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "assist-kardial",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "assist-pulmonal",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "hypothermie-therapeutisch",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "lebersupport-extrakorporal",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "kontinuierliche-intravenose-antikonvulsive-therapie",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "QuestionnaireResponse/TISS42.1"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/QuestionnaireResponse/TISS42.2",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "TISS42.2",
+        "questionnaire": "https://elga.moped.at/Questionnaire/tiss-a-questionnaire",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/Patient42"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter42"
+        },
+        "authored": "2025-08-30",
+        "author": {
+          "reference": "Organization/KHK999"
+        },
+        "item": [
+          {
+            "linkId": "krankenanstaltennummer-leistungserbringer-id",
+            "answer": [
+              {
+                "valueString": "K999"
+              }
+            ]
+          },
+          {
+            "linkId": "aufnahmezahl",
+            "answer": [
+              {
+                "valueString": "043"
+              }
+            ]
+          },
+          {
+            "linkId": "datensatz-id",
+            "answer": [
+              {
+                "valueString": "82ad92612238288c30b4590440ecb271690deb8e7c418c1f07b2eda4d87a6fe9"
+              }
+            ]
+          },
+          {
+            "linkId": "aufnahme-kontaktdatum",
+            "answer": [
+              {
+                "valueString": "20250101"
+              }
+            ]
+          },
+          {
+            "linkId": "bettenfuhrende-hauptkostenstelle-positionsnummer",
+            "answer": [
+              {
+                "valueString": "002"
+              }
+            ]
+          },
+          {
+            "linkId": "erhebungsdatum",
+            "answer": [
+              {
+                "valueString": "20250103"
+              }
+            ]
+          },
+          {
+            "linkId": "standard-monitoring",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "labor",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "medikamente",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "verbandswechsel",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "2"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "drainagenpflege",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "atmungsmodus",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "atemwegszugang",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "tubus-stomapflege",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "atemtherapie",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "medikamente-vasoaktiv",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "flussigkeitsersatz-massiv",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "katheter-arteriell",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "monitoring-hamodynamisch",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "katheter-zentralvenos",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "reanimation-kardiopulmonal",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "nierenersatztherapie",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "harnbilanzierung",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "diurese-aktiv",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "hirndruckmessung",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "behandlung-metabolischer-entgleisungen",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "ernahrung-enteral",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "ernahrung-parenteral",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "interventionen",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "diagnostik-therapie-ausserhalb-ibs",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "agitation-delirium",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "assist-kardial",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "assist-pulmonal",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "hypothermie-therapeutisch",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "lebersupport-extrakorporal",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "kontinuierliche-intravenose-antikonvulsive-therapie",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "QuestionnaireResponse/TISS42.2"
+      }
+    },
+    {
+      "fullUrl": "https://elga.moped.at/QuestionnaireResponse/TISS42.3",
+      "resource": {
+        "resourceType": "QuestionnaireResponse",
+        "id": "TISS42.3",
+        "questionnaire": "https://elga.moped.at/Questionnaire/tiss-a-questionnaire",
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/Patient42"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter42"
+        },
+        "authored": "2025-08-30",
+        "author": {
+          "reference": "Organization/KHK999"
+        },
+        "item": [
+          {
+            "linkId": "krankenanstaltennummer-leistungserbringer-id",
+            "answer": [
+              {
+                "valueString": "K999"
+              }
+            ]
+          },
+          {
+            "linkId": "aufnahmezahl",
+            "answer": [
+              {
+                "valueString": "043"
+              }
+            ]
+          },
+          {
+            "linkId": "datensatz-id",
+            "answer": [
+              {
+                "valueString": "82ad92612238288c30b4590440ecb271690deb8e7c418c1f07b2eda4d87a6fe9"
+              }
+            ]
+          },
+          {
+            "linkId": "aufnahme-kontaktdatum",
+            "answer": [
+              {
+                "valueString": "20250101"
+              }
+            ]
+          },
+          {
+            "linkId": "bettenfuhrende-hauptkostenstelle-positionsnummer",
+            "answer": [
+              {
+                "valueString": "002"
+              }
+            ]
+          },
+          {
+            "linkId": "erhebungsdatum",
+            "answer": [
+              {
+                "valueString": "20250104"
+              }
+            ]
+          },
+          {
+            "linkId": "standard-monitoring",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "labor",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "medikamente",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "verbandswechsel",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "2"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "drainagenpflege",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "atmungsmodus",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "atemwegszugang",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "tubus-stomapflege",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "atemtherapie",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "medikamente-vasoaktiv",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "flussigkeitsersatz-massiv",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "katheter-arteriell",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "monitoring-hamodynamisch",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "katheter-zentralvenos",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "reanimation-kardiopulmonal",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "nierenersatztherapie",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "harnbilanzierung",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "diurese-aktiv",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "hirndruckmessung",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "behandlung-metabolischer-entgleisungen",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "ernahrung-enteral",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "ernahrung-parenteral",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "interventionen",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "diagnostik-therapie-ausserhalb-ibs",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "agitation-delirium",
+            "answer": [
+              {
+                "valueCoding": {
+                  "code": "0"
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "assist-kardial",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "assist-pulmonal",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "hypothermie-therapeutisch",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "lebersupport-extrakorporal",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "linkId": "kontinuierliche-intravenose-antikonvulsive-therapie",
+            "answer": [
+              {
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "QuestionnaireResponse/TISS42.3"
+      }
+    }
+  ]
+}

@@ -3,7 +3,7 @@ InstanceOf: KHOrganization
 Description: "Hackathon Stammdaten: KH Herz Jesu"
 Usage: #example
 * type = https://termgit.elga.gv.at/CodeSystem/elga-gtelvogdarollen#300 "Allgemeine Krankenanstalt"
-* meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"
+* meta.profile = "https://elga.moped.at/StructureDefinition/KHOrganization"
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:oid:1.3.6.1.4.1.36124.5.914"
 * identifier[+].system = "urn:oid:1.2.40.0.34.4.10"

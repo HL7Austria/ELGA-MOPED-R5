@@ -11,6 +11,7 @@ Title: "MOPED TransferEncounter"
 * actualPeriod.start 1..1
 
 * type = MopedEncounterTypesCS#TENC
+* type 1..
 * admission.extension contains Altersgruppe named Altersgruppe 1..1 MS
 * admission.extension[Altersgruppe].extension[beiZugang].value[x] 1..1
 * admission.extension[Altersgruppe].extension[beiZugang] 1..1

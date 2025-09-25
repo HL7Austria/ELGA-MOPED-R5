@@ -9,7 +9,7 @@ Usage: #example
 * created = "2025-02-18"
 * patient = Reference(PJ1Patient)
 * request = Reference(PJ1VAERequest1)
-* insurer = Reference(oegk-wien)
+* insurer = Reference(SV11)
 * requestor = Reference(OrganizationHerzJesuKrankenhaus)
 * outcome = #complete
 * decision.coding = VAEStatusCS#00

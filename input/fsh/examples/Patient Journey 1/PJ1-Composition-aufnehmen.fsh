@@ -18,7 +18,7 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 
 * section[zustaendigeSV].code.coding.system = Canonical(CompositionSectionsCS)
 * section[zustaendigeSV].code.coding.code = #SV
-* section[zustaendigeSV].entry = Reference(oegk-wien)
+* section[zustaendigeSV].entry = Reference(SV11)
 
 * section[zustaendigerLGF].code.coding.system = Canonical(CompositionSectionsCS)
 * section[zustaendigerLGF].code.coding.code = #LGF

@@ -35,23 +35,9 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
 * encounter[TransferEncounter] only Reference(MopedTransferEncounter)
 
-* diagnosis ^slicing.rules = #open
-* diagnosis ^slicing.ordered = true
-* diagnosis ^slicing.discriminator[+].type = #value
-* diagnosis ^slicing.discriminator[=].path = "type.coding"
-* diagnosis contains Hauptdiagnose 1.. and Zusatzdiagnose 0..
-* diagnosis[Hauptdiagnose].type.coding from LKFDiagnoseTypVS (required)
-* diagnosis[Hauptdiagnose].type.coding = $LKFdiagnoseTyp#H
-* diagnosis[Hauptdiagnose].type ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
-* diagnosis[Hauptdiagnose].diagnosis[x] 1..1
-* diagnosis[Hauptdiagnose].diagnosis[x] only Reference(MopedCondition)
-* diagnosis[Hauptdiagnose].onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
-* diagnosis[Zusatzdiagnose].type.coding from LKFDiagnoseTypVS (required)
-* diagnosis[Zusatzdiagnose].type.coding = $LKFdiagnoseTyp#Z
-* diagnosis[Zusatzdiagnose].type ^binding.description = "Code für den Typ der LKF Diagnose, der angibt ob es sich um eine Haupt- oder Nebendiagnose handelt"
-* diagnosis[Zusatzdiagnose].diagnosis[x] 1..1
-* diagnosis[Zusatzdiagnose].diagnosis[x] only Reference(MopedCondition)
-* diagnosis[Zusatzdiagnose].onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
+* diagnosis.diagnosis[x] 1..1
+* diagnosis.diagnosis[x] only Reference(MopedCondition)
+* diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
 
 * supportingInfo ^slicing.rules = #open
 * supportingInfo ^slicing.discriminator.type = #value
