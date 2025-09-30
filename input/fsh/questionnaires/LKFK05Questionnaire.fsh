@@ -1,15 +1,11 @@
 // K05 Questionnaire for KA-Statistik (Personal des ärztlichen Dienstes)
 
-Instance: KAStatistikK05Questionnaire
+Instance: LKFK05Questionnaire
 InstanceOf: Questionnaire
-Title: "Satzart K05 – KA-Statistik (Personal des ärztlichen Dienstes)"
-* id = "ka-statistik-k05"
-* name = "K05 Questionnaire"
+Usage: #example
+* title = "LKF K05 Questionnaire"
 * status = #active
-* title = "K05 Questionnaire for KA-Statistik"
-* description = "This questionnaire is used to collect KA-Statistik data for K05 message reporting."
-* subjectType = #Patient
-
+* description = "K05 Questionnaire - KA-Statistik (Personal des ärztlichen Dienstes)"
 // Sazartenkennzeichen
 * item[0].linkId = "sazartenkennzeichen"
 * item[0].text = "Sazartenkennzeichen"
