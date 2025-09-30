@@ -1,9 +1,8 @@
 // I12 Questionnaire for TISS-A-Daten
 
-Instance: TISSAQuestionnaire
+Instance: LKFTISSAQuestionnaire
 InstanceOf: Questionnaire
 Title: "I12 Questionnaire für TISS-A-Daten"
-* id = "tiss-a-questionnaire"
 * status = #active
 * title = "I12 Questionnaire für TISS-A-Daten"
 * subjectType = #Patient

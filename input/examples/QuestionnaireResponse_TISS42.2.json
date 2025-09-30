@@ -1,7 +1,7 @@
 {
   "resourceType": "QuestionnaireResponse",
   "id": "TISS42.2",
-  "questionnaire": "https://elga.moped.at/Questionnaire/tiss-a-questionnaire",
+  "questionnaire": "https://elga.moped.at/Questionnaire/LKFTISSAQuestionnaire",
   "status": "completed",
   "subject": {
     "reference": "Patient/Patient42"

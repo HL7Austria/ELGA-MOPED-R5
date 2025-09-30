@@ -1,14 +1,12 @@
 Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
 Alias: $unitsofmeasure = http://unitsofmeasure.org
 
-Instance: saps3-questionnaire
+Instance: LKFSAPS3Questionnaire
 InstanceOf: Questionnaire
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2024-07-12T00:00:00+00:00"
-* url = "https://elga.moped.at/Questionnaire/saps3-questionnaire"
 * version = "1.0"
-* id = "saps3-questionnaire"
 * name = "SAPS3Questionnaire"
 * title = "SAPS3 Questionnaire"
 * status = #active
