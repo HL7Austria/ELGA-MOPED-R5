@@ -104,21 +104,21 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Kostenträger (leistungszuständig)</td>
         <td>KOST</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>zu klären, ob noch notwendig</td>
+        <td>SVOrganization</td>
+        <td>Organization</td>
+        <td>Organization.identifer</td>
+        <td>Composition.section:zustaendigeSV.entry</td>
+        <td>Slice mit dem System http://svc.co.at/CodeSystem/ecard-svt-cs</td>
     </tr>
     <tr>
         <td>zuständiger Versicherungsträger</td>
         <td>VSTR</td>
         <td>KH</td>
-        <td>SVOrganization</td>
-        <td>Organization</td>
-        <td>Organization.identifier: ?</td>
-        <td>Composition.section:zustaendigeSV</td>
-        <td>der slice muss erst noch in der HL7ATCoreOrganization ergänzt werden</td>
+        <td>?</td>
+        <td>?</td>
+        <td>?</td>
+        <td>?</td>
+        <td>noch inhaltlich abzuklären: ggf. über den Träger des KH definiert</td>
     </tr>
     <tr>
         <td>Aufnahme-/Ereignisdatum JJJJMMTT</td>
@@ -144,11 +144,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Kommentarsatz</td>
         <td>KOMM</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunication</td>
+        <td>Communication?</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>bei Kommentaren der SV muss die Communication.extension:MBDSRelevanz = false sein</td>
     </tr>
     <tr>
         <td>Versicherungsnummer des Hauptversicherten</td>
@@ -274,11 +274,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Fehlercode</td>
         <td>FECO</td>
         <td>SV</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunicationRequest</td>
+        <td>CommunicationRequest</td>
+        <td>CommunicationRequest.payload.contentCodeableConcept</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>generischer Kommunikationsprozess in Moped ist in Arbeit :)</td>
     </tr>
     <tr>
         <td>Datensatz-ID-Referenz</td>
@@ -384,7 +384,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>zu klären, ob noch notwendig</td>
+        <td>noch inhaltlich abzuklären: ggf. über den Träger des KH definiert</td>
     </tr>
     <tr>
         <td>zuständiger Versicherungsträger</td>
@@ -420,11 +420,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Kommentarsatz</td>
         <td>KOMM</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunication</td>
+        <td>Communication?</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>bei Kommentaren der SV muss die Communication.extension:MBDSRelevanz = false sein</td>
     </tr>
     <tr>
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
@@ -460,11 +460,11 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Fehlercode</td>
         <td>FECO</td>
         <td>SV</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunicationRequest</td>
+        <td>CommunicationRequest</td>
+        <td>CommunicationRequest.payload.contentCodeableConcept</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>generischer Kommunikationsprozess in Moped ist in Arbeit :)</td>
     </tr>
     <tr>
         <td>Datensatz-ID Referenz</td>
@@ -648,7 +648,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -658,7 +658,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -678,7 +678,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -688,7 +688,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -708,7 +708,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -718,7 +718,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -766,8 +766,8 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Überweisende Stelle, Vertragspartnernummer</td>
         <td>USVPNR</td>
         <td>KH</td>
-        <td>Organization?</td>
-        <td>Organization</td>
+        <td>MopedEncounter</td>
+        <td>Encounter</td>
         <td>Encounter.admission.origin.resolve().identifier:VPNR</td>
         <td>Composition.encounter</td>
         <td>/</td>
@@ -776,49 +776,69 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Überweisende Stelle, Name</td>
         <td>USNA</td>
         <td>KH</td>
-        <td>Organization?</td>
-        <td>Organization</td>
+        <td>MopedEncounter</td>
+        <td>Encounter</td>
         <td>Encounter.admission.origin.resolve().name</td>
         <td>Composition.encounter</td>
-        <td>/</td>
+        <td>Überlegung, ob diese Organization 'contained' wird im Encounter</td>
     </tr>
     <tr>
         <td>Länderkennzeichen der überweisenden Stelle</td>
         <td>USLKZ</td>
         <td>KH</td>
-        <td>Organization?</td>
-        <td>Organization</td>
+        <td>MopedEncounter</td>
+        <td>Encounter</td>
         <td>Encounter.admission.origin.resolve().contact.address.country</td>
         <td>Composition.encounter</td>
-        <td>/</td>
+        <td>Überlegung, ob diese Organization 'contained' wird im Encounter</td>
     </tr>
     <tr>
         <td>Überweisende Stelle, Postleitzahl</td>
         <td>USPLZL</td>
         <td>KH</td>
-        <td>Organization?</td>
-        <td>Organization</td>
+        <td>MopedEncounter</td>
+        <td>Encounter</td>
         <td>Encounter.admission.origin.resolve().contact.address.postalCode</td>
         <td>Composition.encounter</td>
-        <td>/</td>
+        <td>Überlegung, ob diese Organization 'contained' wird im Encounter</td>
     </tr>
     <tr>
         <td>Überweisende Stelle, Ort</td>
         <td>USORT</td>
         <td>KH</td>
-        <td>Organization?</td>
-        <td>Organization</td>
+        <td>MopedEncounter</td>
+        <td>Encounter</td>
         <td>Encounter.admission.origin.resolve().contact.address.city</td>
+        <td>Composition.encounter</td>
+        <td>Überlegung, ob diese Organization 'contained' wird im Encounter</td>
+    </tr>
+    <tr>
+        <td>Ereignis-/Unfalldatum JJJJMMTT (initiales Aufnahmedatum)</td>
+        <td>ERDAT</td>
+        <td>KH</td>
+        <td>MopedEncounter</td>
+        <td>Encounter</td>
+        <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter</td>
         <td>/</td>
     </tr>
     <tr>
-        <td>Ereignis-/Unfalldatum JJJJMMTT</td>
+        <td>Ereignis-/Unfalldatum JJJJMMTT (echtes Unfalldatum)</td>
         <td>ERDAT</td>
         <td>KH</td>
         <td>VAERequest</td>
         <td>Claim</td>
         <td>Claim.accident.date</td>
+        <td>Composition.section:VAERequests.entry</td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>Ereignis-/Unfalldatum JJJJMMTT (Verlängerungsdatum)</td>
+        <td>ERDAT</td>
+        <td>KH</td>
+        <td>VAERequest</td>
+        <td>Claim</td>
+        <td>Claim.?</td>
         <td>Composition.section:VAERequests.entry</td>
         <td>/</td>
     </tr>
@@ -830,7 +850,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Claim</td>
         <td>Claim.supportingInfo:Veraengerungstage</td>
         <td>Composition.section:VAERequests.entry</td>
-        <td>/</td>
+        <td>Nicht das Unfalldatum sondern das VAE Verlängerungsdatum; Modellierung der Verlängerung ist in Arbeit</td>
     </tr>
     <tr>
         <td>VDAS-ID, Ergebnis der Abfrage</td>
@@ -990,7 +1010,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -1000,7 +1020,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -1020,7 +1040,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -1030,7 +1050,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>KH</td>
         <td>MopedCondition</td>
         <td>Condition</td>
-        <td>?</td>
+        <td>Condition.code</td>
         <td>Composition.section:Diagnosen</td>
         <td>/</td>
     </tr>
@@ -1038,10 +1058,10 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Fremdverschulden</td>
         <td>FREVER</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>VAERequest</td>
+        <td>Claim</td>
+        <td>VAERequest.supportingInfo:VerdachtFremdverschulden.value</td>
+        <td>Composition.section:VAERequests</td>
         <td>/</td>
     </tr>
     <tr>
@@ -1072,7 +1092,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation?</td>
         <td>?</td>
         <td>?</td>
-        <td>/</td>
+        <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
         <td>Anzahl der Lebendgeburten, männliche Kinder</td>
@@ -1082,7 +1102,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation?</td>
         <td>?</td>
         <td>?</td>
-        <td>/</td>
+        <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
         <td>Anzahl der Lebendgeburten, weibliche Kinder</td>
@@ -1092,7 +1112,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation?</td>
         <td>?</td>
         <td>?</td>
-        <td>/</td>
+        <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
         <td>Anzahl der Totgeburten</td>
@@ -1102,7 +1122,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation?</td>
         <td>?</td>
         <td>?</td>
-        <td>/</td>
+        <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
         <td>Art der Entbindung</td>
@@ -1112,7 +1132,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Observation?</td>
         <td>?</td>
         <td>?</td>
-        <td>/</td>
+        <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
         <td>Entlassungsschlüssel</td>
@@ -1529,42 +1549,42 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
     <tr>
         <td>Kommentartext</td>
         <td>TEXT1</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>SV/KH</td>
+        <td>MopedCommunication</td>
+        <td>Communication?</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>bei Kommentaren der SV muss die Communication.extension:MBDSRelevanz = false sein</td>
     </tr>
     <tr>
         <td>Kommentartext</td>
         <td>TEXT2</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>SV/KH</td>
+        <td>MopedCommunication</td>
+        <td>Communication?</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>bei Kommentaren der SV muss die Communication.extension:MBDSRelevanz = false sein</td>
     </tr>
     <tr>
         <td>Kommentartext</td>
         <td>TEXT3</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>SV/KH</td>
+        <td>MopedCommunication</td>
+        <td>Communication?</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>bei Kommentaren der SV muss die Communication.extension:MBDSRelevanz = false sein</td>
     </tr>
     <tr>
         <td>Kommentartext</td>
         <td>TEXT4</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>SV/KH</td>
+        <td>MopedCommunication</td>
+        <td>Communication?</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>bei Kommentaren der SV muss die Communication.extension:MBDSRelevanz = false sein</td>
     </tr>
 </table>
 </div>
@@ -2044,39 +2064,39 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Staatenschlüssel</td>
         <td>ESTAAT</td>
         <td></td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>MopedEKVKOrganization</td>
+        <td>Organization</td>
+        <td>Coverage.insurer.resolve().contact.address.country</td>
+        <td>Composition.section:Coverages</td>
         <td>/</td>
     </tr>
     <tr>
         <td>Instituionscode des zuständen Trägers</td>
         <td>EIC</td>
         <td></td>
-        <td>eigene Organization ?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>MopedEKVKOrganization</td>
+        <td>Organization</td>
+        <td>Coverage.insurer.resolve().identifier:Institutionscode</td>
+        <td>Composition.section:Coverages</td>
         <td>/</td>
     </tr>
     <tr>
         <td>Akronym des zuständigen Trägers</td>
         <td>EAKRO</td>
         <td></td>
-        <td>eigene Organization ?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
+        <td>MopedEKVKOrganization</td>
+        <td>Organization</td>
+        <td>Coverage.insurer.resolve().alias</td>
+        <td>Composition.section:Coverages</td>
         <td>/</td>
     </tr>
     <tr>
         <td>Kartennummer</td>
         <td>EKANR</td>
         <td></td>
-        <td>EKVKCoverage</td>
+        <td>EKVKCoverage/BilateralCoverage</td>
         <td>Coverage</td>
-        <td>Coverage.identifier</td>
+        <td>Coverage.subscriberId</td>
         <td>Composition.section:Coverages</td>
         <td>/</td>
     </tr>
@@ -2084,7 +2104,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Endedatum des Anspruches JJJJMMTT</td>
         <td>EAEND</td>
         <td></td>
-        <td>EKVKCoverage</td>
+        <td>EKVKCoverage/BilateralCoverage</td>
         <td>Coverage</td>
         <td>Coverage.period.end</td>
         <td>Composition.section:Coverages</td>
@@ -2094,19 +2114,19 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Art der Anspruchsbescheinigung</td>
         <td>EFORM</td>
         <td></td>
-        <td>EKVKCoverage</td>
+        <td>EKVKCoverage/BilateralCoverage</td>
         <td>Coverage</td>
         <td>?</td>
         <td>Composition.section:Coverages</td>
-        <td>/</td>
+        <td>wird mit Terminologen abgeklärt</td>
     </tr>
     <tr>
         <td>Beginndatum des Anspruches JJJJMMTT</td>
         <td>EABEG</td>
         <td></td>
-        <td>EKVKCoverage</td>
+        <td>EKVKCoverage/BilateralCoverage</td>
         <td>Coverage</td>
-        <td>Coverage.period.end</td>
+        <td>Coverage.period.start</td>
         <td>Composition.section:Coverages</td>
         <td>/</td>
     </tr>
@@ -2118,7 +2138,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Patient</td>
         <td>Patient.address.city</td>
         <td>Composition.subject</td>
-        <td></td>
+        <td>/</td>
     </tr>
 </table>
 </div>

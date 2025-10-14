@@ -262,9 +262,9 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>KH</td>
         <td>SVOrganization</td>
         <td>Organization</td>
-        <td>Organization.identifer:?</td>
+        <td>Organization.identifer</td>
         <td>Composition.section:zustaendigeSV.entry</td>
-        <td>/</td>
+        <td>Slice mit dem System http://svc.co.at/CodeSystem/ecard-svt-cs</td>
     </tr>
     <tr>
         <td>Fondsrelevanz</td>
@@ -291,7 +291,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>zu klären, ob noch notwendig</td>
+        <td>noch inhaltlich abzuklären: ggf. über den Träger des KH definiert</td>
     </tr>
     <tr>
         <td>Abrechnungsquartal der Sozialversicherung</td>
@@ -369,7 +369,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>?</td>
         <td>?</td>
         <td>?</td>
-        <td>fortlaufende Nummer; wird bei jeder Verlegung & Urlaub erhöht</td>
+        <td>ggf. über FHIR ID des TransferEncounters lösbar; Details sind noch abzuklären</td>
     </tr>
     <tr>
         <td>Hauptkostenstelle – Funktionscode/Fachgebiet</td>
@@ -441,7 +441,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Encounter</td>
         <td>?</td>
         <td>Composition.section:TransferEncounter</td>
-        <td>/</td>
+        <td>wird in AG Moped geklärt</td>
     </tr>
     <tr>
         <td>Hauptkostenstelle – Pflegerischer Funktionscode</td>
@@ -450,7 +450,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Encounter</td>
         <td>?</td>
         <td>Composition.section:TransferEncounter</td>
-        <td>/</td>
+        <td>wird in AG Moped geklärt</td>
     </tr>
     <tr>
         <td>Neugeborenes</td>
@@ -578,10 +578,10 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>Aufnahmezahl – funktionscodebezogen</td>
         <td>KH</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>?</td>
+        <td>?</td>
+        <td>?</td>
+        <td>?</td>
         <td>/</td>
     </tr>
 </table>
@@ -705,7 +705,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>Procedure.performer.actor</td>
         <td>Composition.section:Leistungen.entry</td>
-        <td>/</td>
+        <td>Referenz auf eine Abteilung</td>
     </tr>
     <tr>
         <td>Krankenanstaltennummer leistungserbringend</td>
@@ -714,7 +714,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Procedure</td>
         <td>Procedure.performer.actor</td>
         <td>Composition.section:Leistungen.entry</td>
-        <td>/</td>
+        <td>Referenz auf eine Krankenanstalt</td>
     </tr>
     <tr>
         <td>Aufnahmezahl – funktionscodebezogen</td>
@@ -951,7 +951,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim?</td>
         <td>?</td>
         <td>Composition.section:LKFRequests</td>
-        <td>/</td>
+        <td>Error/Warning Prozess in Arbeit</td>
     </tr>
     <tr>
         <td>Error/Warning – Code</td>
@@ -960,7 +960,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim?</td>
         <td>?</td>
         <td>Composition.section:LKFRequests</td>
-        <td>/</td>
+        <td>Error/Warning Prozess in Arbeit</td>
     </tr>
     <tr>
         <td>Error/Warning – Kommentar</td>
@@ -969,7 +969,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
         <td>Claim?</td>
         <td>?</td>
         <td>Composition.section:LKFRequests</td>
-        <td>/</td>
+        <td>Error/Warning Prozess in Arbeit</td>
     </tr>
 </table>
 </div>
@@ -1034,56 +1034,56 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>Kommentar 1</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunication</td>
+        <td>Communication</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>Kommentare die MBDS relevant sind und als X07 exportiert werden sollen enthalten in der Communication.extension:MBDSRelevanz den Wert true</td>
     </tr>
     <tr>
         <td>Kommentar 2</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunication</td>
+        <td>Communication</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>Kommentare die MBDS relevant sind und als X07 exportiert werden sollen enthalten in der Communication.extension:MBDSRelevanz den Wert true</td>
     </tr>
     <tr>
         <td>Kommentar 3</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunication</td>
+        <td>Communication</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>Kommentare die MBDS relevant sind und als X07 exportiert werden sollen enthalten in der Communication.extension:MBDSRelevanz den Wert true</td>
     </tr>
     <tr>
         <td>Kommentar 4</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunication</td>
+        <td>Communication</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>Kommentare die MBDS relevant sind und als X07 exportiert werden sollen enthalten in der Communication.extension:MBDSRelevanz den Wert true</td>
     </tr>
     <tr>
         <td>Kommentar 5</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunication</td>
+        <td>Communication</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>Kommentare die MBDS relevant sind und als X07 exportiert werden sollen enthalten in der Communication.extension:MBDSRelevanz den Wert true</td>
     </tr>
     <tr>
         <td>Kommentar 6</td>
         <td>KH</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>?</td>
-        <td>/</td>
+        <td>MopedCommunication</td>
+        <td>Communication</td>
+        <td>Communication.note.text</td>
+        <td>Composition.section:Kommunikation</td>
+        <td>Kommentare die MBDS relevant sind und als X07 exportiert werden sollen enthalten in der Communication.extension:MBDSRelevanz den Wert true</td>
     </tr>
 </table>
 </div>
