@@ -1,0 +1,12 @@
+{
+  "name" : "hl7.at.fhir.elga.moped.template",
+  "type" : "fhir.template",
+  "license" : "CC0-1.0",
+  "description" : "MOPED Template",
+  "author" : "https://elga.gv.at",
+  "base" : "hl7.at.fhir.template",
+  "dependencies" : {
+    "hl7.at.fhir.template" : "current"
+  },
+  "version" : "0.1.0"
+}
