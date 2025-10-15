@@ -115,8 +115,12 @@ Der Transferencounter entspricht nicht wie beim stationären Fall der Verlegung/
 </pre>
 
 ### Relevante Profile
-- [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [$aufnehmen Bundle](StructureDefinition-MopedAufnehmenBundleKH.html)
 - [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
+- [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
+- [$abrechnen Bundle](StructureDefinition-MopedAbrechnenBundleKH.html)
+- [$entscheiden Bundle](StructureDefinition-MopedEntscheidenLGFBundle.html)
 - [Ambulanter Encounter](StructureDefinition-MopedEncounterA.html)
 - [Ambulanter Transferencounter](StructureDefinition-MopedTransferEncounterA.html)
 
