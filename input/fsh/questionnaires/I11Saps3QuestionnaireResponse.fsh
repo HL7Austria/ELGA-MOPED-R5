@@ -1,8 +1,7 @@
 Instance: Test2SAPS3QuestionnaireResponse1
 InstanceOf: QuestionnaireResponse
 Usage: #example
-* id = "Test2SAPS3QuestionnaireResponse1"
-* questionnaire = Canonical(saps3-questionnaire)
+* questionnaire = Canonical(LKFSAPS3Questionnaire)
 * status = #completed
 * subject = Reference(PJ1Patient) 
 * authored = "2024-09-16T19:39:58.676Z"

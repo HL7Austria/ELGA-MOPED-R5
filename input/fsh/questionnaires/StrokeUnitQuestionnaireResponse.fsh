@@ -172,7 +172,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Datum"
 * item[=].item[=].item[=].answer.valueDate = "2025-04-06"
 * item[=].item[=].item[+].linkId = "8002"
-* item[=].item[=].item[=].text = "Uhrzeit"
+* item[=].item[=].item[=].text = "Uhrzeit CCT"
 * item[=].item[=].item[=].answer.valueTime = "10:15:00"
 * item[=].item[+].linkId = "gruppe-bildgebung-verfahren"
 * item[=].item[=].text = "Bildgebendes Verfahren"

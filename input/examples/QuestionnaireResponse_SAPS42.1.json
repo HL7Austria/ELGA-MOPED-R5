@@ -1,7 +1,7 @@
 {
   "resourceType": "QuestionnaireResponse",
   "id": "SAPS42.1",
-  "questionnaire": "https://elga.moped.at/Questionnaire/saps3-questionnaire",
+  "questionnaire": "https://elga.moped.at/Questionnaire/LKFSAPS3Questionnaire",
   "status": "completed",
   "subject": {
     "reference": "Patient/Patient42"

@@ -3,10 +3,9 @@
 Instance: TISSAQuestionnaireResponse
 InstanceOf: QuestionnaireResponse
 Title: "I12 QuestionnaireResponse für TISS-A-Daten"
-* id = "tiss-a-questionnaireresponse"
 * status = #completed
 * subject = Reference(PJ1Patient)
-* questionnaire = Canonical(TISSAQuestionnaire)
+* questionnaire = Canonical(LKFTISSAQuestionnaire)
 * authored = "2024-08-08"
 
 // Krankenanstaltennummer/Leistungserbringer-ID

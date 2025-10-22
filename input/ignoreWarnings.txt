@@ -25,3 +25,6 @@ Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/LKFHauptdi
 Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/VerpflegskostenBeitragsbefreiungCS|0.1.0
 Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/SonderklasseCS|0.1.0
 Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/AbrechnungsRelevanzCS|0.1.0
+
+#Questionnaire answerOption codes to be defined in the future
+A code with no system has no defined meaning, and it cannot be validated. A system should be provided
