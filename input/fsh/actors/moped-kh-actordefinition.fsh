@@ -5,4 +5,5 @@ Description: "Moped ActorDefnition für KHs in Österreich"
 Usage: #definition
 * status = #draft
 * type = #system
+* name = "KHActor"
 * extension[ActorProfile].valueCanonical = Canonical(KHOrganization)
