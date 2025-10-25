@@ -5,19 +5,14 @@ Title: "MOPED Condition"
 
 * verificationStatus 0..1
 * verificationStatus ^short = "LKF: Diagnose - Art"
-* insert ShallPopulateIfKnownObligation(verificationStatus)
-* insert ObligationActor(verificationStatus, MopedKHActor)
-* clinicalStatus.extension contains DataAbsentReason named data-absent-reason 1..1
-* clinicalStatus.extension[DataAbsentReason].valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-asked
-* insert ShallPopulateIfKnownObligation(clinicalStatus)
-* insert ObligationActor(clinicalStatus, MopedKHActor)
-//TBD insert Invariant to require either the clinicalStatus.coding or clinicalStatus.extension[DataAbsentReason]
+* insert ShallPopulateObligation(verificationStatus, MopedKHActor)
+* insert ShallPopulateObligation(clinicalStatus, MopedKHActor)
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
-* insert MopedPopulatedFieldObligation(encounter)
+* insert MopedHandleObligation(encounter)
 * subject only Reference(HL7ATCorePatient)
 * subject 1..1
-* insert MopedPopulatedFieldObligation(subject)
+* insert MopedHandleObligation(subject)
 * code 1..1
 * code.coding ^slicing.rules = #open
 * code.coding ^slicing.discriminator.type = #value
@@ -29,10 +24,8 @@ Title: "MOPED Condition"
 * code.coding[ICD10] ^short = "LKF: Diagnose – Code; KaOrg: HDIAG/ZDIAG - Hauptdiagnose/Zusatzdiagnose"
 * code.coding[HDG] from LKFHauptdiagnosegruppenVS (required)
 * code.coding[HDG].system = Canonical(LKFHauptdiagnosegruppenCS)
-* insert ShallPopulateObligation(code)
-* insert ObligationActor(code, MopedKHActor)
+* insert ShallPopulateObligation(code, MopedKHActor)
 * extension contains Diagnosetyp named Diagnosetyp 1..2
-* extension[Diagnosetyp] ^short = "LKF: Diagnosetyp"
-* insert ShallPopulateObligation(extension[Diagnosetyp])
-* insert ObligationActor(extension[Diagnosetyp], MopedKHActor)
+* extension[Diagnosetyp] ^short = "LKF: Diagnosetyp; KaOrg: Hauptdiagnose oder Zusatzdiagnose"
+* insert ShallPopulateObligation(extension[Diagnosetyp], MopedKHActor)
 //TBD Invariante, dass Haupt und Zusatzdiagnose gemeinsam bzw. 2x Haupt oder 2x Zusatz nicht möglich sind
