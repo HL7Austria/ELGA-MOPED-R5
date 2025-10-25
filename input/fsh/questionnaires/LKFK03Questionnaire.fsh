@@ -1,15 +1,11 @@
 // K03 Questionnaire for KA-Statistik (Ressourcen und Inanspruchnahme)
 
-Instance: KAStatistikK03Questionnaire
+Instance: LKFK03Questionnaire
 InstanceOf: Questionnaire
-Title: "Satzart K03 – KA-Statistik (Ressourcen und Inanspruchnahme)"
-* id = "ka-statistik-k03"
-* name = "K03 Questionnaire"
+Usage: #example
+* title = "LKF K03 Questionnaire"
 * status = #active
-* title = "K03 Questionnaire for KA-Statistik"
-* description = "This questionnaire is used to collect KA-Statistik data for K03 message reporting."
-* subjectType = #Patient
-
+* description = "K03 Questionnaire - KA-Statistik (Ressourcen und Inanspruchnahme)"
 // Sazartenkennzeichen
 * item[0].linkId = "sazartenkennzeichen"
 * item[0].text = "Sazartenkennzeichen"

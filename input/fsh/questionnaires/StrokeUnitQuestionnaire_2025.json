@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "strokeunit-questionnaire",
+  "id": "strokeunit-questionnaire-2025",
   "url": "http://example.org/Questionnaire/strokeunit-questionnaire",
   "name": "StrokeUnitQuestionnaire",
   "title": "Stroke Unit Registermeldung – Patientendaten",

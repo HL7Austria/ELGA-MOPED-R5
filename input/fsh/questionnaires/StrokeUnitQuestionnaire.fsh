@@ -733,7 +733,6 @@ Usage: #example
         * question = "8004"
         * operator = #=
         * answerBoolean = true
-
     * item[+]
       * linkId = "8002"
       * text = "Uhrzeit CCT"
