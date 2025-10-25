@@ -6,4 +6,4 @@ Usage: #definition
 * status = #draft
 * type = #system
 * name = "LGFActor"
-* extension[ActorProfile].valueCanonical = Canonical(LGFOrganization)
+* reference = Canonical(LGFOrganization)
