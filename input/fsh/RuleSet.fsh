@@ -2,24 +2,14 @@ RuleSet: DocumentExtension(path, short, definition)
 * extension[{path}] ^short = {short}
 * extension[{path}] ^definition = {definition}
 
-RuleSet: MopedPopulatedFieldObligation(path)
-* {path} ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/obligation"
-* {path} ^extension[=].extension[+].url = "code"
-* {path} ^extension[=].extension[=].valueCode = #SHALL:process
-* {path} ^extension[=].extension[+].url = "actor"
-* {path} ^extension[=].extension[=].valueCanonical =  Canonical(MopedActor)
+RuleSet: MopedHandleObligation(path)
+* {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[code].valueCode = #SHALL:handle
+* {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[actor].valueCanonical =  Canonical(MopedActor)
 
-RuleSet: ShallPopulateIfKnownObligation(path)
-* {path} ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/obligation"
-* {path} ^extension[=].extension[+].url = "code"
-* {path} ^extension[=].extension[=].valueCode = #SHALL:populate-if-known
-
-RuleSet: ShallPopulateObligation(path)
-* {path} ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/obligation"
-* {path} ^extension[=].extension[+].url = "code"
-* {path} ^extension[=].extension[=].valueCode = #SHALL:populate
+RuleSet: ShallPopulateObligation(path, actor)
+* {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[code].valueCode = #SHALL:populate
+* {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[actor][+].valueCanonical =  Canonical({actor})
 
 RuleSet: ObligationActor(path, actor)
-* {path} ^extension[=].extension[+].url = "actor"
-* {path} ^extension[=].extension[=].valueCanonical =  Canonical({actor})
+* {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation].extension[actor].valueCanonical =  Canonical({actor})
  
