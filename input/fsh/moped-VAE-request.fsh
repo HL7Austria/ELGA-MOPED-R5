@@ -4,6 +4,7 @@ Parent: Claim
 Title : "MOPED VAERequest"
 Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung VAE."
 * insert MopedHandleObligation(status)
+* insert ShallPopulateObligation(status, MopedKHActor)
 //* extension contains Verlaengerungstage named Verlaengerungstage 0..1
 * accident.type from VerdachtArbeitsSchuelerunfallVS
 * accident.type 1..1

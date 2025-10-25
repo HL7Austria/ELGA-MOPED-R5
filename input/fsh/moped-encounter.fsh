@@ -34,7 +34,7 @@ Title: "MOPED Encounter"
 * actualPeriod ^short = "LKF: Aufnahme- und Entlassungsdatum"
 * actualPeriod 1..1
 * actualPeriod.start 1..1
-* actualPeriod.start ^short = "LKF: Aufnahme-/Kontaktdatum + Aufnahme-/Kontaktuhrzeit; KaOrg: Aufnahme-/Ereignisdatum bzw. Ereignis-/Unfalldatum (initiales Aufnahmedatum)"
+* actualPeriod.start ^short = "LKF: Aufnahme-/Kontaktdatum + Aufnahme-/Kontaktuhrzeit; KaOrg: Aufnahme-/Ereignisdatum bzw. Ereignis-/Unfalldatum (initiales Aufnahmedatum) bzw. Behandlungsdatum"
 * actualPeriod.end ^short = "LKF: Entlassungsdatum + Entlassungsuhrzeit; KaOrg: Entlassungsdatum"
 * insert ShallPopulateObligation(actualPeriod, MopedKHActor)
 
@@ -68,14 +68,14 @@ Title: "MOPED Encounter"
 * insert ShallPopulateObligation(reason[Ursache], MopedKHActor)
 
 
-* admission.dischargeDisposition ^short = "LKF: Entlassungs-/Abgangsart; KaOrg: Entlassungsschlüssel"
+* admission.dischargeDisposition ^short = "LKF: Entlassungs-/Abgangsart; KaOrg: Entlassungsschlüssel/K09 Entlassungsart"
 * insert ShallPopulateObligation(admission.dischargeDisposition, MopedKHActor)
 * admission.origin ^short = "LKF: Zugewiesen von – Krankenanstaltennummer; KaOrg: Überweisende Stelle"
 * insert ShallPopulateObligation(admission.origin, MopedKHActor)
 * admission.destination ^short = "LKF: Zugewiesen an – Krankenanstaltennummer"
 * insert ShallPopulateObligation(admission.destination, MopedKHActor)
 * admission.extension contains Aufnahmeart named aufnahmeart 0..1
-* admission.extension[Aufnahmeart] ^short = "LKF: Aufnahme-/Zugangsart 1; KaOrg: Ereignisart"
+* admission.extension[Aufnahmeart] ^short = "LKF: Aufnahme-/Zugangsart 1; KaOrg: Ereignisart/K09 Aufnahmeart"
 * insert ShallPopulateObligation(admission.extension[Aufnahmeart], MopedKHActor)
 * admission.extension contains EncModeOfArrival named Transportart 0..1
 * admission.extension[Transportart].valueCoding from TransportartVS

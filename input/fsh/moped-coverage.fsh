@@ -3,6 +3,7 @@ Parent: Coverage
 Description: "MOPED Profil der Coverage Ressource für Versicherungen."
 Title: "MOPED Coverage"
 * insert ShallPopulateObligation(status, MopedKHActor)
+* insert MopedHandleObligation(status)
 * kind = #insurance
 * insert ShallPopulateObligation(kind, MopedKHActor)
 * identifier ^slicing.rules = #open

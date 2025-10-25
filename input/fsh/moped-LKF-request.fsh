@@ -50,7 +50,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * diagnosis.diagnosis[x] 1..1
 * diagnosis.diagnosis[x] only Reference(MopedCondition)
 * insert ShallPopulateObligation(diagnosis.diagnosis[x], MopedKHActor)
-* diagnosis.onAdmission ^definition =  "Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
+* diagnosis.onAdmission ^definition =  "LKF: Diagnose – im stationären Aufenthalt erworben; Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
 * insert ShallPopulateObligation(diagnosis.onAdmission, MopedKHActor)
 
 * supportingInfo ^slicing.rules = #open
