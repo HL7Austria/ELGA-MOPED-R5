@@ -7,7 +7,7 @@ on:
   push:
     branches: [ main, POC-IG ]
   pull_request:
-    branches: [ main, POC-IG, 600-obligations-f\u00FCr-alle-Moped-relevanten-Felder-einf\u00FCgen ]
+    branches: [ main, POC-IG]
 
 jobs:
   build:
