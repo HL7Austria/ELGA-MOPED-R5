@@ -4,7 +4,7 @@ RuleSet: DocumentExtension(path, short, definition)
 
 RuleSet: MopedHandleObligation(path)
 * {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:handle
-* {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical =  Canonical(MopedActor)
+* {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical =  Canonical(MopedDeviceActor)
 
 RuleSet: ShallPopulateObligation(path, actor)
 * {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:populate

@@ -1,8 +1,8 @@
-Instance: MopedActor
+Instance: MopedDeviceActor
 InstanceOf: ActorDefinition
-Title: "Moped Actor"
+Title: "Moped Device Actor"
 Description: "Moped ActorDefnition für Moped selbst"
 Usage: #definition
 * status = #draft
 * type = #system
-* name = "MopedActor"
+* name = "MopedDeviceActor"
