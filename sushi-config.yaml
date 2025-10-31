@@ -80,10 +80,20 @@ dependencies:
 pages:
   index.md:
     title: Home
+  scope_and_content.md:
+    title: Umfang und Inhalt
+  background.md:
+    title: Hintergrund
+  challenges.md:
+    title: Herausforderungen
+  moped_konzepte.md:
+    title: Grundlegende Konzepte und Design-Entscheidungen
   actors.md:
     title: Akteure
   workflowmanagement.md:
     title: Workflowmanagement
+  obligations.md:
+    title: Obligations
   anwendungsfaelle.md:
     title: Überblick & Sunshine Case
     AF1.md:
@@ -146,8 +156,6 @@ pages:
       title: ANWF 53 - Intensivaufenthalt
     AF54.md:
       title: ANWF 54 - Stammdatenänderung
-  moped_konzepte.md:
-    title: Grundlegende Konzepte und Design-Entscheidungen
   mappings.md:
     title: Mappings
     ka-org_mapping.md:
@@ -158,11 +166,28 @@ pages:
       title: LKF Jahresmeldung
     stammdaten_mapping.md:
       title: Stammdaten
+  authors.md:
+    title: Mitwirkende
+  downloads.md:
+    title: Downloads
+  dependencies.md:
+    title: Dependencies
+  known_issues.md:
+    title: Known Issues
+  
     
 menu:
   Home: index.html
-  Artifacts: artifacts.html
-  Akteure: actors.html
+  Table of Contents: toc.html
+  Einleitung:
+    Umfang und Inhalt: scope_and_content.html
+    Hintergrund: background.html
+    Herausforderungen: challenges.html
+  Funktionales:
+    Designentscheidungen: moped_konzepte.html
+    Akteure: actors.html
+    Workflowmanagement: workflowmanagement.html
+    Obligations: obligations.html
   Anwendungsfälle:
     Überblick & Sunshine Case: anwendungsfaelle.html
     ANWF 1 - Planaufnahme 🔄: AF1.html
@@ -195,8 +220,6 @@ menu:
     ANWF 51-52 - Asylierung 🔄: AF51u52.html
     ANWF 53 - Intensivaufenthalt 🔄: AF53.html
     ANWF 54 - Stammdatenänderung 🔄: AF54.html
-  Workflowmanagement: workflowmanagement.html
-  Konzepte: moped_konzepte.html
   Questionnaires:
     MBDS - TISS-A: Questionnaire-LKFTISSAQuestionnaire.html
     MBDS - SAPS3: Questionnaire-LKFSAPS3Questionnaire.html
@@ -235,6 +258,14 @@ menu:
     LKF Jahresmeldung: jahresmeldungen_mapping.html
     Ka-Org Mapping: ka-org_mapping.html
     Stammdaten: stammdaten_mapping.html
+  Artifacts: artifacts.html
+  About:
+    Mitwirkende: authors.html
+    Downloads:  downloads.html
+    Dependencies: dependencies.html
+    Known Issues: known_issues.html
+
+
 
 
   
