@@ -178,8 +178,8 @@ Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das z
     <td>Die SV möchte benachrichtigt werden, wenn ein neuer VAERequest für sie bereitgestellt wurde.</td>
     <td>VAERequest</td>
     <td>create</td>
-    <td>SV</td>
     <td>KH</td>
+    <td>SV</td>
     <td>/</td>
     <td>/</td>
     <td>/</td>
@@ -189,8 +189,8 @@ Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das z
     <td>Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde.</td>
     <td>VAEResponse</td>
     <td>create</td>
-    <td>KH</td>
     <td>SV</td>
+    <td>KH</td>
     <td>Negative VAE</td>
     <td>VAEResponse.decision</td>
     <td>!= #00 AND != #19</td>
