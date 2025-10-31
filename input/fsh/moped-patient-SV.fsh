@@ -1,5 +1,5 @@
 Profile: MopedPatientSV
-Parent: HL7ATCorePatient
+Parent: MopedPatient
 Title : "MOPED Patient SV"
 Description: "MOPED Profil der Patient Ressource aus der Sicht der Rolle: SV"
 

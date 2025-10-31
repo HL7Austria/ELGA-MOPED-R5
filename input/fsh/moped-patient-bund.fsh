@@ -1,5 +1,5 @@
 Profile: MopedPatientBund
-Parent: HL7ATCorePatient
+Parent: MopedPatient
 Title: "MOPED Patient Bund"
 Description: "MOPED Profil der Patient Ressource aus der Sicht der Rolle: Bund"
 
