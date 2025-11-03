@@ -20,15 +20,15 @@ Context: MopedTransferEncounter.admission, MopedEncounter
 
 * insert DocumentExtension (
     beiZugang,
-    "Altersgruppe bei Zugang",
+    "Altersgruppe bei Zugang/Kontakt",
     "Nach dem Alter in Gruppen eingeteilt\, wobei vollendete Lebensjahre ausschlaggebend sind.")
 * insert DocumentExtension (
     beiEntlassung, 
-    "Altersgruppe bei Entlassung",
+    "Altersgruppe bei Entlassung/Kontakt",
     "Nach dem Alter in Gruppen eingeteilt\, wobei vollendete Lebensjahre ausschlaggebend sind.")
 * insert DocumentExtension (
     neugeborenes, 
-    "neugeborenes",
+    "Neugeborenes",
     "Ein Patient wird als Neugeborenes bezeichnet\, wenn das Alter zum Zugangszeitpunkt auf die Abteilung <28 Tage ist.")
 
 Invariant:    moped-inv-Altersgruppe-1
