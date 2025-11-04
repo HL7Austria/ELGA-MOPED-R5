@@ -11,7 +11,7 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * use = #claim
 * insert ShallPopulateObligation(use, MopedLGFActor)
 
-* patient only Reference(HL7ATCorePatient)
+* patient only Reference(MopedPatient)
 * insert MopedHandleObligation(patient)
 * request only Reference(MopedLKFRequest)
 * request 1..1

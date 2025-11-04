@@ -19,7 +19,7 @@ Description: """Bundle für die Input-Ressourcen beim Update von Informationen z
 * entry[Aufenthalt].request.method ^short = "PUT"
 * entry contains
   Patient 0..1
-* entry[Patient].resource only HL7ATCorePatient
+* entry[Patient].resource only MopedPatient
 * entry[Patient].request.method from HTTPVerbUpdateOnlyVS
 * entry[Patient].request.method ^short = "PUT"
 * entry contains

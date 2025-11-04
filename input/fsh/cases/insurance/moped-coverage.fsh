@@ -18,9 +18,9 @@ Title: "MOPED Coverage"
 * insurer only Reference(SVOrganization)
 * insurer 1..1
 * insert ShallPopulateObligation(insurer, MopedKHActor)
-* policyHolder only Reference(HL7ATCorePatient or Hauptversicherter)
+* policyHolder only Reference(MopedPatient or Hauptversicherter)
 * insert ShallPopulateObligation(policyHolder, MopedKHActor)
-* beneficiary only Reference(HL7ATCorePatient)
+* beneficiary only Reference(MopedPatient)
 * insert MopedHandleObligation(beneficiary)
 * class ^slicing.discriminator.type = #value
 * class ^slicing.discriminator.path = "type.coding"

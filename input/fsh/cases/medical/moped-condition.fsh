@@ -10,7 +10,7 @@ Title: "MOPED Condition"
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
 * insert MopedHandleObligation(encounter)
-* subject only Reference(HL7ATCorePatient)
+* subject only Reference(MopedPatient)
 * subject 1..1
 * insert MopedHandleObligation(subject)
 * code 1..1

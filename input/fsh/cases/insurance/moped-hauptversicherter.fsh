@@ -30,7 +30,7 @@ Description: "MOPED Profil der Person Ressource für den Hauptversicherten"
 * identifier[socialSecurityNumber].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger" (exactly)
 * insert ShallPopulateObligation(identifier[socialSecurityNumber], MopedKHActor)
 
-* patient only Reference(HL7ATCorePatient)
+* patient only Reference(MopedPatient)
 * insert MopedHandleObligation(patient)
 * address only HL7ATCoreAddress
 * insert ShallPopulateObligation(address, MopedKHActor)

@@ -5,7 +5,7 @@ Title: "MOPED LKFRequest"
 Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfrage."
 * insert ShallPopulateObligation(status, MopedKHActor)
 * insert MopedHandleObligation(status)
-* patient only Reference(HL7ATCorePatient)
+* patient only Reference(MopedPatient)
 * patient 1..1
 * insert MopedHandleObligation(patient)
 * use = http://hl7.org/fhir/claim-use#claim

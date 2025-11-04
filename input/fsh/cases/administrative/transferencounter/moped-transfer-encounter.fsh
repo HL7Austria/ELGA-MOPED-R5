@@ -5,7 +5,7 @@ Title: "MOPED TransferEncounter"
 
 * insert ShallPopulateObligation(status, MopedKHActor)
 * insert MopedHandleObligation(status)
-* subject only Reference(HL7ATCorePatient)
+* subject only Reference(MopedPatient)
 * subject 1..1
 * insert MopedHandleObligation(subject)
 * serviceProvider only Reference(MopedOrganizationAbteilung)

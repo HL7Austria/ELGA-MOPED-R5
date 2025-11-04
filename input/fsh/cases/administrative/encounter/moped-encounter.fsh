@@ -23,7 +23,7 @@ Title: "MOPED Encounter"
 * identifier[DatensatzID] ^short = "LKF: Datensatz-ID: SHA-256 verschlüsselte Aufnahmezahl"
 * insert ShallPopulateObligation(identifier[DatensatzID], MopedKHActor)
 
-* subject only Reference(HL7ATCorePatient)
+* subject only Reference(MopedPatient)
 * subject 1..1
 * insert MopedHandleObligation(subject)
 

@@ -9,7 +9,7 @@ Title: "MOPED Procedure"
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
 * insert MopedHandleObligation(encounter)
-* subject only Reference(HL7ATCorePatient)
+* subject only Reference(MopedPatient)
 * subject 1..1
 * insert MopedHandleObligation(subject)
 //performer.actor kann entweder das Feld "Funktionscode/Fachgebiet leistungserbringend" oder "Krankenanstaltennummer leistungserbringend" darstellen je nach Profil.
