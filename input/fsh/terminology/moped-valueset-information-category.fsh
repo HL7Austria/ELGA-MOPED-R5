@@ -13,6 +13,7 @@ Description: "Arten von zusätzlichen Informationen in der VAE"
 * #OEGKELBNR "Forderungsnummer der Österreichischen Gesundheitskasse"
 * #VTAGE "Vortageanzahl auf Kostenbeitrag"
 * #ENDG "Endgültige Meldung"
+* #DEVX "XDok Device"
 
 ValueSet: ClaimSupportingInformationCategoryVS
 Title: "MOPED VAESupportingInformationCategory"
