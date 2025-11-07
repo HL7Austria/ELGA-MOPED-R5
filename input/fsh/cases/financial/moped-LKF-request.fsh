@@ -70,6 +70,12 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * supportingInfo[EndgueltigeMeldung].value[x] only boolean
 * insert ShallPopulateObligation(supportingInfo[EndgueltigeMeldung], MopedKHActor)
 
+* supportingInfo contains XDokDevice 1..1 
+* supportingInfo[XDokDevice] ^short = "Feld, welches die XDok Version angibt die zum Scoring verwendet wurde."
+* supportingInfo[XDokDevice].category = ClaimSupportingInformationCategoryCS#DEVX
+* supportingInfo[XDokDevice].value[x] only Reference(MopedDeviceXDok)
+* insert ShallPopulateObligation(supportingInfo[XDokDevice], MopedKHActor)
+
 * extension contains DiagnoseKnoten named DiagnoseKnoten 1..1
 * extension[DiagnoseKnoten] ^short = "LKF: Abrechnung – Knoten"
 * insert ShallPopulateObligation(extension[DiagnoseKnoten], MopedKHActor)

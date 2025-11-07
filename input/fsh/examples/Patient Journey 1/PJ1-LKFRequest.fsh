@@ -30,7 +30,9 @@ Usage: #example
 * supportingInfo[EndgueltigeMeldung].sequence = 2
 * supportingInfo[EndgueltigeMeldung].category = ClaimSupportingInformationCategoryCS#ENDG
 * supportingInfo[EndgueltigeMeldung].valueBoolean = false
-
+* supportingInfo[XDokDevice].sequence = 3
+* supportingInfo[XDokDevice].category = ClaimSupportingInformationCategoryCS#DEVX
+* supportingInfo[XDokDevice].valueReference = Reference(XDokExampleDevice)
 
 * extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#D
 * extension[Fondsrelevanz].valueCoding = FondsrelevanzCS#J

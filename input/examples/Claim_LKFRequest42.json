@@ -86,6 +86,20 @@
         ]
       },
       "valueBoolean": true
+    },
+    {
+      "sequence": 3,
+      "category": {
+        "coding": [
+          {
+            "system": "https://elga.moped.at/CodeSystem/ClaimSupportingInformationCategoryCS",
+            "code": "DEVX"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference" : "Device/XDokExampleDevice"
+      }
     }
   ],
   "diagnosis": [
