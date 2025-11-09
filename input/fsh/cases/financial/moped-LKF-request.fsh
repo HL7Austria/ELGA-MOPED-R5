@@ -29,9 +29,21 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * provider only Reference(KHOrganization)
 * provider 1..1
 * insert MopedHandleObligation(provider)
-* related.claim only Reference(MopedLKFRequest)
-* related.claim 1..1
-* insert ShallPopulateObligation(related.claim, MopedKHActor)
+* related ^slicing.rules = #open
+* related ^slicing.ordered = false
+* related ^slicing.discriminator[+].type = #profile
+* related ^slicing.discriminator[=].path = "claim.resolve()"
+* related contains zugehoerigeVAE 0.. and vorherigerLKFRequest 0..
+* related[zugehoerigeVAE].claim only Reference(MopedVAERequest)
+* insert MopedHandleObligation(related[zugehoerigeVAE].claim)
+* related[zugehoerigeVAE].relationship = http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#associated
+* related[zugehoerigeVAE].relationship 1..1
+* insert MopedHandleObligation(related[zugehoerigeVAE].relationship)
+* related[vorherigerLKFRequest].claim only Reference(MopedLKFRequest)
+* insert ShallPopulateObligation(related[vorherigerLKFRequest].claim, MopedKHActor)
+* related[vorherigerLKFRequest].relationship = http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior
+* related[vorherigerLKFRequest].relationship 1..1
+* insert ShallPopulateObligation(related[vorherigerLKFRequest].relationship, MopedKHActor)
 * insurance.coverage only Reference(MopedCoverage)
 * insurance.coverage 1..1
 * insert MopedHandleObligation(insurance.coverage)
