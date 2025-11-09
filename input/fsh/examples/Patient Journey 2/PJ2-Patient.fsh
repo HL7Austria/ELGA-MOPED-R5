@@ -1,5 +1,5 @@
 Instance: PJ2Patient
-InstanceOf: HL7ATCorePatient
+InstanceOf: MopedPatient
 Description: "Hackathon Patient Journey 2 Beispiel: Patient"
 Usage: #example
 * meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-patient"

@@ -12,7 +12,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * insert ShallPopulateObligation(accident.type, MopedKHActor)
 * accident.date ^short = "KaOrg: Ereignis-/Unfalldatum (echtes Unfalldatum)"
 * insert ShallPopulateObligation(accident.date, MopedKHActor)
-* patient only Reference(HL7ATCorePatient)
+* patient only Reference(MopedPatient)
 * patient 1..1
 * insert MopedHandleObligation(patient)
 * use = http://hl7.org/fhir/claim-use#preauthorization

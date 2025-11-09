@@ -125,7 +125,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>Geburtsdatum</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject</td>
@@ -143,7 +143,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>Geschlecht</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.gender.extension:AdministrativeGender</td>
         <td>Composition.subject</td>
@@ -152,7 +152,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>Staatsbürgerschaft</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.extension:citizenship.extension:code</td>
         <td>Composition.subject</td>
@@ -161,7 +161,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>Wohnsitz – Staat</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
         <td>Composition.subject</td>
@@ -170,7 +170,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>Wohnsitz – Postleitzahl</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
         <td>Composition.subject</td>
@@ -179,7 +179,7 @@ Diese Seite enthält das Mapping der Meldungen des MBDS Datensatzes (X01-X07, I1
     <tr>
         <td>Wohnsitz – Gemeindecode</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.extension:municipalityCode</td>
         <td>Composition.subject</td>

@@ -6,7 +6,7 @@ Title: "MOPED Composition"
 * insert ShallPopulateObligation(type, MopedDeviceActor)
 * insert ShallPopulateObligation(date, MopedDeviceActor)
 * insert ShallPopulateObligation(title, MopedDeviceActor)
-* subject only Reference(HL7ATCorePatient)
+* subject only Reference(MopedPatient)
 * subject 1..1
 * insert ShallPopulateObligation(subject, MopedDeviceActor)
 * encounter only Reference(MopedEncounterA or MopedEncounterS)

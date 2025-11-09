@@ -154,7 +154,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Versicherungsnummer des Hauptversicherten</td>
         <td>VSNR</td>
         <td>KH</td>
-        <td>HL7ATCorePatient/Hauptversicherter</td>
+        <td>MopedPatient/Hauptversicherter</td>
         <td>Patient/RelatedPerson</td>
         <td>Patient/RelatedPerson.identifier:socialSecurityNumber</td>
         <td>Composition.subject/Composition.section:Hauptversicherter.entry</td>
@@ -164,7 +164,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Zuname des Hauptversicherten</td>
         <td>ZUNA</td>
         <td>KH</td>
-        <td>HL7ATCorePatient/Hauptversicherter</td>
+        <td>MopedPatient/Hauptversicherter</td>
         <td>Patient/RelatedPerson</td>
         <td>Patient/RelatedPerson.name.family</td>
         <td>Composition.subject/Composition.section:Hauptversicherter.entry</td>
@@ -174,7 +174,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Vorname des Hauptversicherten</td>
         <td>VONA</td>
         <td>KH</td>
-        <td>HL7ATCorePatient/Hauptversicherter</td>
+        <td>MopedPatient/Hauptversicherter</td>
         <td>Patient/RelatedPerson</td>
         <td>Patient/RelatedPerson.name.given</td>
         <td>Composition.subject/Composition.section:Hauptversicherter.entry</td>
@@ -184,7 +184,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Geschlecht des Hauptversicherten</td>
         <td>GESCHL</td>
         <td>KH</td>
-        <td>HL7ATCorePatient/Hauptversicherter</td>
+        <td>MopedPatient/Hauptversicherter</td>
         <td>Patient/RelatedPerson</td>
         <td>Patient/RelatedPerson.gender</td>
         <td>Composition.subject/Composition.section:Hauptversicherter.entry</td>
@@ -194,7 +194,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>GEBDAT</td>
         <td>KH</td>
-        <td>HL7ATCorePatient/Hauptversicherter</td>
+        <td>MopedPatient/Hauptversicherter</td>
         <td>Patient/RelatedPerson</td>
         <td>Patient/RelatedPerson.birthDate</td>
         <td>Composition.subject/Composition.section:Hauptversicherter.entry</td>
@@ -224,7 +224,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Versicherungsnummer des Mitversicherten</td>
         <td>AVSNR</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.identifier:socialSecurityNumber</td>
         <td>Composition.subject</td>
@@ -234,7 +234,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Zuname de Mitversicherten</td>
         <td>AZUNA</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.name.family</td>
         <td>Composition.subject</td>
@@ -244,7 +244,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Vorname de Mitversicherten</td>
         <td>AVONA</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.name.given</td>
         <td>Composition.subject</td>
@@ -254,7 +254,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Geschlecht des Mitversicherten</td>
         <td>AGESCHL</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject</td>
@@ -264,7 +264,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Geburtsdatum des Mitversicherten JJJJMMTT</td>
         <td>AGEBDAT</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject</td>
@@ -430,7 +430,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Geburtsdatum des Hauptversicherten JJJJMMTT</td>
         <td>GEBDAT</td>
         <td>KH</td>
-        <td>HL7ATCorePatient/Hauptversicherter</td>
+        <td>MopedPatient/Hauptversicherter</td>
         <td>Patient/RelatedPerson</td>
         <td>Patient/RelatedPerson.birthDate</td>
         <td>Composition.subject/Composition.section:Hauptversicherter.entry</td>
@@ -450,7 +450,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Geburtsdatum des Mitversicherten JJJJMMTT</td>
         <td>GEBDATA</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject</td>
@@ -576,7 +576,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Staatsbürgerschaftsschlüssel</td>
         <td>STAAT</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.extension:citizenship</td>
         <td>Composition.subject</td>
@@ -586,7 +586,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Wohandresse des Patienten, Straße</td>
         <td>PASTR</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.line</td>
         <td>Composition.subject</td>
@@ -596,7 +596,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Wohnadresse des Patienten, Länderkennzeichen</td>
         <td>PALKZ</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
         <td>Composition.subject</td>
@@ -606,7 +606,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Wohnadresse des Patienten, Postleitzahl</td>
         <td>PAPLZL</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
         <td>Composition.subject</td>
@@ -616,7 +616,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Wohnadresse des Patienten, Ort</td>
         <td>PAORT</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.city</td>
         <td>Composition.subject</td>
@@ -1214,7 +1214,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Staatsbürgerschaft</td>
         <td>STAATB</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.extension:citizenship</td>
         <td>Composition.subject</td>
@@ -1224,7 +1224,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Hauptwohnsitz Staat</td>
         <td>STAATW</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
         <td>Composition.subject</td>
@@ -1234,7 +1234,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Hauptwohnsitz Postleitzahl</td>
         <td>PLZLW</td>
         <td>KH</td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
         <td>Composition.subject</td>
@@ -2014,7 +2014,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>EWR-Versicherungsnummer des Patienten</td>
         <td>EVSNR</td>
         <td></td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patientidentifier:socialSecurityNumber</td>
         <td>Composition.subject</td>
@@ -2024,7 +2024,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Zuname</td>
         <td>EZUNA</td>
         <td></td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.name.family</td>
         <td>Composition.subject</td>
@@ -2034,7 +2034,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Vorname</td>
         <td>EVONA</td>
         <td></td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.name.given</td>
         <td>Composition.subject</td>
@@ -2044,7 +2044,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Geschlecht</td>
         <td>EGESL</td>
         <td></td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject</td>
@@ -2054,7 +2054,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Geburtsdatum JJJJMMTT</td>
         <td>EGEBD</td>
         <td></td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject</td>
@@ -2134,7 +2134,7 @@ Diese Seite enthält das Mapping der Meldungen des Ka-Org Systems zu FHIR. Die D
         <td>Bei EFORM " ANFO mit der Wohnort-Stadt des Patienten</td>
         <td>ESTADT</td>
         <td></td>
-        <td>HL7ATCorePatient</td>
+        <td>MopedPatient</td>
         <td>Patient</td>
         <td>Patient.address.city</td>
         <td>Composition.subject</td>

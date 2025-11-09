@@ -4,7 +4,7 @@ Description: "MOPED Profil für QuestionnaireResponses die im Kontext von Moped 
 Title: "Moped QuestionnaireResponse"
 
 * questionnaire 1..1
-* subject only Reference(HL7ATCorePatient)
+* subject only Reference(MopedPatient)
 * subject 1..1
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
