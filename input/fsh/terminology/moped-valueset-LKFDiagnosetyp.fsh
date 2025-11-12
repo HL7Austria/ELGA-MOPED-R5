@@ -3,4 +3,4 @@ Title: "LKF Diagnosetyp ValueSet"
 Description: "LKF Diganosetyp"
 * ^experimental = true
 * include codes from system $LKFdiagnoseTyp
-* https://TBD.at/CodeSystem/LKFDiagnoseTypCS#A 
+* http://snomed.info/sct#52870002 "Aufnahmediagnose"
