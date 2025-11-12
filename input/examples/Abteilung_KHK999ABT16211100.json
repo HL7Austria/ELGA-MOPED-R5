@@ -20,7 +20,7 @@
         {
           "url": "SpezielleOrganisationsform",
           "valueCoding": {
-            "system": "https://elga.moped.at/CodeSystem/SpezielleOrganisationsformCS",
+            "system": "https://elga.moped.at/CodeSystem/SpezielleOrganisationsformenCS",
             "code": "A"
           }
         },

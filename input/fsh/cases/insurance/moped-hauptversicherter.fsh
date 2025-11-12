@@ -5,8 +5,8 @@ Parent: RelatedPerson
 Title: "MOPED Hauptversicherter"
 Description: "MOPED Profil der Person Ressource für den Hauptversicherten"
 
-* name.family ^short = "KaOrg: Zuname des Patienten"
-* name.given ^short = "KaOrg: Vorname des Patienten"
+* name.family ^short = "KaOrg: Zuname des Hauptversicherten"
+* name.given ^short = "KaOrg: Vorname des Hauptversicherten"
 * insert ShallPopulateObligation(name, MopedKHActor)
 * gender ^short = "KaOrg: Geschlecht des Hauptversicherten"
 * insert ShallPopulateObligation(gender, MopedKHActor)
@@ -34,8 +34,3 @@ Description: "MOPED Profil der Person Ressource für den Hauptversicherten"
 * insert MopedHandleObligation(patient)
 * address only HL7ATCoreAddress
 * insert ShallPopulateObligation(address, MopedKHActor)
-
-
-* relationship from MopedRelatedPersonRelationshipTypeVS (required)
-* relationship.coding.code = http://terminology.hl7.org/CodeSystem/v3-RoleCode#SELF (exactly)
-* insert ShallPopulateObligation(relationship, MopedKHActor)

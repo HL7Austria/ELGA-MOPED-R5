@@ -9,7 +9,7 @@ Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/ClaimSuppo
 Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/MopedClaimItemCategoryCS|0.1.0
 Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/FondsrelevanzCS|0.1.0
 Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/LKFAbrechnungsKnotenCS|0.1.0
-Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/SpezielleOrganisationsformCS|0.1.0
+Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/SpezielleOrganisationsformenCS|0.1.0
 Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/WorkflowStatusCS|0.1.0
 Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/AltersgruppeCS|0.1.0
 Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/BehandlungsartCS|0.1.0
