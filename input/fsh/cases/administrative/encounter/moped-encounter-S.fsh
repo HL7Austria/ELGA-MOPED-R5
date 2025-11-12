@@ -6,10 +6,10 @@ Title: "MOPED Encounter Stationär"
 //Invariante für die .actualPeriod.end
 
 * admission.origin only Reference(Organization)
-* admission.origin ^short = "Zugewiesen von – Krankenanstaltennummer"
+* admission.origin ^short = "LKF: Zugewiesen von – Krankenanstaltennummer"
 * admission.destination only Reference(Organization)
 //Invariante für zwingend sofern ein Transfer vorliegt bei "Zuweisung von/an"
-* admission.destination ^short = "Zugewiesen an – Krankenanstaltennummer"
+* admission.destination ^short = "LKF: Zugewiesen an – Krankenanstaltennummer"
 
 * admission.dischargeDisposition from EntlassungsartSVS (required)
 

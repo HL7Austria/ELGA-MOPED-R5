@@ -3,7 +3,7 @@ Profile: MopedVAEResponse
 Parent: ClaimResponse
 Title: "MOPED VAEResponse"
 Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklärung VAE."
-
+* insert ShallPopulateObligation(created, MopedSVActor)
 * status = #active
 * insert ShallPopulateObligation(status, MopedSVActor)
 * insert MopedHandleObligation(status)
