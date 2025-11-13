@@ -20,11 +20,11 @@ Für Stakeholder und FHIR-Anfänger dient der Inhalt als **verständliche Einfü
 Bitte beachten:  
 - Teile des IG (z. B. Berechtigungskonzepte, detaillierte Invarianten, Fehlerbehandlung) befinden sich noch in Ausarbeitung. Siehe [Known Issues](known_issues.html) für mehr Details.
 - Versionierungen einzelner Ressourcen und Profile können sich im Laufe des Projekts ändern.  
-- Rückmeldungen zu Unklarheiten oder Verbesserungsvorschläge sind ausdrücklich erwünscht und unterstützen die Weiterentwicklung des Implementation Guides.
+- Rückmeldungen zu Unklarheiten oder Verbesserungsvorschläge sind ausdrücklich erwünscht und unterstützen die Weiterentwicklung des Implementation Guides. Die Kontaktmöglichkeiten finden sich [hier](https://fhir.hl7.at/r5-ELGA-MOPED-637-IG-Home-erweitern/authors.html#kontaktaufnahme-und-feedback).
 
-### Bedienungsanleitung für den Moped Implementation Guide
+### Bedienungsanleitung für den MOPED Implementation Guide
 
-Diese Bedienungsanleitung unterstützt Moped-Interessierte dabei, sich im MOPED Implementation Guide zurechtzufinden und die enthaltenen Informationen gezielt zu nutzen. Sie richtet sich sowohl an **FHIR-Anfänger und Stakeholder**, die ein grundlegendes Verständnis des Projekts und seiner Datenstrukturen und Konzepte gewinnen möchten, als auch an **FHIR-Implementierer, Serverhersteller und technische Partner**, die die Spezifikationen praktisch umsetzen werden.
+Diese Bedienungsanleitung unterstützt MOPED-Interessierte dabei, sich im MOPED Implementation Guide zurechtzufinden und die enthaltenen Informationen gezielt zu nutzen. Sie richtet sich sowohl an **FHIR-Anfänger und Stakeholder**, die ein grundlegendes Verständnis des Projekts und seiner Datenstrukturen und Konzepte gewinnen möchten, als auch an **FHIR-Implementierer, Serverhersteller und technische Partner**, die die Spezifikationen praktisch umsetzen werden.
 
 Der MOPED Implementation Guide bildet die technische und fachliche Grundlage für eine einheitliche Datennkommunikation im österreichischen Gesundheitswesen im administrativen Bereich. Er beschreibt, wie durch die Verwendung des internationalen HL7 FHIR Standards die Datenflüsse zu Aufnahme, Verlegung, Entlassung, Leistungsabrechnung und Verwaltungsinformationen strukturiert, standardisiert und sicher abgewickelt werden können.
 
@@ -38,11 +38,11 @@ Für Einsteiger empfiehlt es sich, mit **„Wichtige Begriffe & Konzepte“** zu
 
 Dieser Abschnitt schafft die fachliche und technische Grundlage, um den MOPED Implementation Guide besser zu verstehen. Er erklärt zentrale Begriffe aus dem MOPED-Umfeld und führt schrittweise in die wichtigsten FHIR-Konzepte ein.
 
-#### Generelle Begriffe im Moped Umfeld
+#### Generelle Begriffe im MOPED Umfeld
 
 Hier wird beschrieben, wie bestimmte Begriffe innerhalb des MOPED-Kontexts verwendet werden. Manche dieser Begriffe haben in ihren jeweiligen Domänen bereits standardisierte Bedeutungen, die sich – je nach organisatorischem und technischem Umfeld – unterscheiden können. Um Missverständnisse zu vermeiden, werden hier einige zentrale Definitionen für MOPED erläutert.
 
-<h4 class="no-number">(Moped) Fall</h4>
+<h4 class="no-number">(MOPED) Fall</h4>
 
 Der MOPED-Fall unterscheidet sich vom Fallbegriff in der Krankenhausdomäne bzw. vom medizinischen Fall.  
 In MOPED beschreibt der Fall den **patientenbezogenen administrativen Prozess von Aufnahme bis Abrechnung** – alle Daten, die zu diesem Ablauf gehören, werden als gemeinsame Einheit betrachtet.  
@@ -77,7 +77,7 @@ MOPED definiert auf Basis dieser Ressourcen eigene Profile, mit denen der öster
 
 Ein FHIR-Profil ist eine **Spezialisierung einer Ressource**. Es beschreibt genau, **welche Felder verpflichtend, optional oder ausgeschlossen sind** und **welche Terminologien zulässig** sind.  
 Im MOPED-Kontext legen Profile fest, welche Felder für österreichische Anforderungen erforderlich sind.  
-Weitere Informationen finden sich im Abschnitt *Wie liest man ein Moped Profil*.
+Weitere Informationen finden sich im Abschnitt *Wie liest man ein MOPED Profil*.
 
 
 <h4 class="no-number">Operations</h4>
@@ -111,10 +111,10 @@ Questionnaires werden eingesetzt, wenn komplexe Meldungen in strukturierter, abe
 MOPED nutzt Questionnaires z. B. für LKF-Jahresmeldungen, Registermeldungen und zur Intensivdokumentation. 
 
 
-### Wie liest man ein Moped Profil?
+### Wie liest man ein MOPED Profil?
 Dieser Abschnitt beschreibt, wie Profile im MOPED Implementation Guide strukturiert sind und wie sie gelesen und verstanden werden können. Profile sind die wichtigste Grundlage für Implementierungen, da sie festlegen, wie die FHIR-Ressourcen im MOPED-Kontext genutzt werden. Sie geben vor, welche Felder verpflichtend, optional oder ausgeschlossen sind, welche Terminologien verwendet werden dürfen und welche Prüfregeln gelten.
 
-#### FHIR Profile im Moped Kontext
+#### FHIR Profile im MOPED Kontext
 Ein FHIR-Profil ist eine Spezialisierung einer internationalen FHIR-Basisressource. Es legt fest, wie eine Ressource in einem bestimmten Anwendungskontext (z. B. MOPED) verwendet wird. Im MOPED Implementation Guide werden Profile genutzt, um nationale und organisatorische Anforderungen abzubilden, die über den internationalen FHIR-Standard hinausgehen.
 FHIR-Profile spezifizieren die Nutzung einer Basisressource. Sie geben vor:
 - welche Elemente verpflichtend sind (cardinality),
@@ -130,7 +130,7 @@ Im MOPED-Kontext sind diese Profile der verbindliche Referenzpunkt für alle Dat
 - **Differential View:** Zeigt nur die Abweichungen gegenüber der zugrundeliegenden Basisressource (z. B. zusätzliche Felder, geänderte Kardinalitäten, entfernte Elemente). Diese Ansicht ist besonders nützlich für technische Implementierer.
 
 #### Obligations
-Obligations sind extensions, welche bestimmte Bedingungen für bestimmte Aktueure festlegen. In Moped wird unter anderem die Obligation mit dem code *SHALL:populate* verwendet um anzuzeigen, welcher Akteur das jeweilige Feld befüllen muss. Felder, welche wiederum eine Obligation mit dem code *SHALL:handle* und dem Aktuer Moped beinhalten sind Felder die von Moped im Laufe des Prozess verändert oder automatisiert befüllt werden können. Hierbei handelt es sich hauptsächlich um das Befüllen von Referenzen oder das Ändern des Status von Ressourcen. Obligations werden in den Profilen durch ein rotes O gekennzeichnet.
+Obligations sind extensions, welche bestimmte Bedingungen für bestimmte Aktueure festlegen. In MOPED wird unter anderem die Obligation mit dem code *SHALL:populate* verwendet um anzuzeigen, welcher Akteur das jeweilige Feld befüllen muss. Felder, welche wiederum eine Obligation mit dem code *SHALL:handle* und dem Akteur MOPED beinhalten sind Felder die von MOPED im Laufe des Prozess verändert oder automatisiert befüllt werden können. Hierbei handelt es sich hauptsächlich um das Befüllen von Referenzen oder das Ändern des Status von Ressourcen. Obligations werden in den Profilen durch ein rotes O gekennzeichnet.
 
 ### Was sind FHIR Operations und welche Informationen beinhalten diese?
 Dieser Abschnitt erläutert, wie FHIR Operations im MOPED-Kontext verwendet werden, um komplexe Geschäftsprozesse abzubilden.  
@@ -140,7 +140,7 @@ MOPED nutzt Operations, um den administrativen Austausch zwischen Krankenanstalt
 
 Jede Operation ist im Implementation Guide im Detail dokumentiert und beschreibt Zweck, Eingabeparameter, Outputparameter, Berechtigungen und Vorbedingungen.
 
-#### FHIR Operations im Moped Kontext
+#### FHIR Operations im MOPED Kontext
 Typische Bestandteile einer Operation sind:
 - Der aufrufende Akteur
 - Ein oder mehrere Eingabeparameter (Input Parameters)

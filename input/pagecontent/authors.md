@@ -13,7 +13,7 @@ Für Fragen, Anmerkungen oder technische Rückmeldungen zum MOPED Implementation
 
 - Projektleiter Moped: Robert Bauchinger (OÖG) *Robert.Bauchinger@ooeg.at*
 
-- Teilprojektleiter Fach/Technik: Sebastian Wöß (ELGA GmbH) *Sebastian.Woess@elga.gv.at*
+- Stellvertretender Projektleiter: Sebastian Wöß (ELGA GmbH) *Sebastian.Woess@elga.gv.at*
 
 
 

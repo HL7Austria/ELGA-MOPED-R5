@@ -85,11 +85,13 @@ Für MBDS und KaOrg Felder ist außerdem der Feldname in der jeweiligen Beschrei
 
 Unter *Artifacts* sind alle FHIR-basierten Bausteine des Implementation Guides zusammengefasst.  
 Hier finden sich:
-- **Definitionen der MOPED-Profile** (StructureDefinitions)
-- **Operations**
-- **Extensions**
-- **Terminologien** (CodeSystems, ValueSets)
-- **Beispielinstanzen**
+- **Definitionen der MOPED-Profile** ([Structures: Resource Profiles](https://fhir.hl7.at/r5-ELGA-MOPED-637-IG-Home-erweitern/artifacts.html#structures-resource-profiles))
+- **Operations** ([Behavior: Operation Definitions](https://fhir.hl7.at/r5-ELGA-MOPED-637-IG-Home-erweitern/artifacts.html#behavior-operation-definitions))
+- **Extensions** ([Structures: Extension Definitions](https://fhir.hl7.at/r5-ELGA-MOPED-637-IG-Home-erweitern/artifacts.html#structures-extension-definitions))
+- **Terminologien** ([Code Systems](https://fhir.hl7.at/r5-ELGA-MOPED-637-IG-Home-erweitern/artifacts.html#terminology-code-systems), [Value Sets](https://fhir.hl7.at/r5-ELGA-MOPED-637-IG-Home-erweitern/artifacts.html#terminology-value-sets))
+- **Beispielinstanzen** ([Example: Example Instances](https://fhir.hl7.at/r5-ELGA-MOPED-637-IG-Home-erweitern/artifacts.html#example-example-instances))
+- **Akteurdefinitionen für die Obligations** ([Requirements: Actor Definitions](https://fhir.hl7.at/r5-ELGA-MOPED-637-IG-Home-erweitern/artifacts.html#requirements-actor-definitions))
+
 
 Jedes Artefakt kann direkt im Browser betrachtet und bei Bedarf als FHIR-konforme JSON- oder XML-Datei heruntergeladen werden.  
 Für Implementierer:innen ist dieser Abschnitt der zentrale Einstiegspunkt, wenn konkrete Strukturen, Felder oder Logiken nachvollzogen werden sollen.  
