@@ -6,8 +6,11 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * status = #active
 * insert ShallPopulateObligation(status, MopedLGFActor)
 * insert MopedHandleObligation(status)
-* type.coding = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type from MopedClaimTypeVS
+* type.coding = MopedClaimTypeCS#LKFRESP (exactly)
 * insert ShallPopulateObligation(type, MopedLGFActor)
+* subType from KostenmeldungARKVS
+* insert ShallPopulateObligation(subType, MopedLGFActor)
 * use = #claim
 * insert ShallPopulateObligation(use, MopedLGFActor)
 

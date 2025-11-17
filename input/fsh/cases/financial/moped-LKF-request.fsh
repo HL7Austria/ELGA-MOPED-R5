@@ -10,8 +10,11 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * insert MopedHandleObligation(patient)
 * use = http://hl7.org/fhir/claim-use#claim
 * insert ShallPopulateObligation(use, MopedKHActor)
-* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type from MopedClaimTypeVS
+* type.coding = MopedClaimTypeCS#LKFREQ (exactly)
 * insert ShallPopulateObligation(type, MopedKHActor)
+* subType from MopedLKFRequestSubTypeVS
+* insert ShallPopulateObligation(subType, MopedKHActor)
 * procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 0..1
 * insert ShallPopulateObligation(procedure.extension[AbrechnungsRelevanz], MopedKHActor)
 * procedure.procedure[x] 1..

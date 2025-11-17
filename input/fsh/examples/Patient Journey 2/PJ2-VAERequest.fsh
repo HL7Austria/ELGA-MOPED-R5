@@ -6,7 +6,7 @@ Usage: #example
 * use = http://hl7.org/fhir/claim-use#preauthorization
 * created = "2025-02-17"
 * status = http://hl7.org/fhir/fm-status#active
-* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type.coding = MopedClaimTypeCS#VAEREQ
 * patient = Reference(PJ2Patient)
 * insurer = Reference(SV14)
 * provider = Reference(OrganizationKrankenhausRied)

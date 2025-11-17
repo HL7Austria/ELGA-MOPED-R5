@@ -9,7 +9,7 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Rückmeldung der
 * insert MopedHandleObligation(patient)
 * use = http://hl7.org/fhir/claim-use#claim
 * insert ShallPopulateObligation(use, MopedSVActor)
-* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type.coding = MopedClaimTypeCS#ARKRESP (exactly)
 * insert ShallPopulateObligation(type, MopedSVActor)
 * subType from KostenmeldungARKVS (required)
 * subType 1..1
