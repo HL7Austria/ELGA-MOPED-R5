@@ -7,7 +7,8 @@ Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklä
 * status = #active
 * insert ShallPopulateObligation(status, MopedSVActor)
 * insert MopedHandleObligation(status)
-* type.coding = MopedClaimTypeCS#VAERESP
+* type from MopedClaimTypeVS
+* type.coding = MopedClaimTypeCS#VAERESP (exactly)
 * insert ShallPopulateObligation(type, MopedSVActor)
 * use = #preauthorization
 * insert ShallPopulateObligation(use, MopedSVActor)

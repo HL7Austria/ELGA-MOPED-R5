@@ -8,7 +8,15 @@ Description: "CodeSystem für die Arten der Claims/ClaimResponses"
 * #ARKREQ "ARK Request"
 * #ARKRESP "ARK Response"
 
-
+ValueSet: MopedClaimTypeVS
+Title: "Claim Type ValueSet"
+Description: "ValueSet für die Arten der Claims/ClaimResponses"
+* MopedClaimTypeCS#VAEREQ "VAE Request"
+* MopedClaimTypeCS#VAERESP "VAE Response"
+* MopedClaimTypeCS#LKFREQ "LKF Request"
+* MopedClaimTypeCS#LKFRESP "LKF Response"
+* MopedClaimTypeCS#ARKREQ "ARK Request"
+* MopedClaimTypeCS#ARKRESP "ARK Response"
 
 CodeSystem: MopedClaimSubTypeCS
 Title: "Claim Subtype CodeSystem"
@@ -28,21 +36,21 @@ Description: "CodeSystem für die Arten der Claims/ClaimResponses"
 ValueSet: KostenmeldungARKVS
 Title: "Kostenmeldung für (A/R/K)"
 Description: "ValueSet für die Art der Kostenmeldung"
-* https://elga.moped.at/CodeSystem/MopedClaimSubTypeCS#A
-* https://elga.moped.at/CodeSystem/MopedClaimSubTypeCS#R
-* https://elga.moped.at/CodeSystem/MopedClaimSubTypeCS#K
+* MopedClaimSubTypeCS#A
+* MopedClaimSubTypeCS#R
+* MopedClaimSubTypeCS#K
 
 ValueSet: MopedVAERequestSubTypeVS
 Title: "VAE Claim Subtype ValueSet"
 Description: "ValueSet für die Art der Claims"
 * ^experimental = true
-* https://elga.moped.at/CodeSystem/MopedClaimSubTypeCS#VAE
-* https://elga.moped.at/CodeSystem/MopedClaimSubTypeCS#VAEV
+* MopedClaimSubTypeCS#VAE
+* MopedClaimSubTypeCS#VAEV
 
 ValueSet: MopedLKFRequestSubTypeVS
 Title: "LKF ClaimResponse Subtype ValueSet"
 Description: "ValueSet für die Art der ClaimResponses"
 * ^experimental = true
-* https://elga.moped.at/CodeSystem/MopedClaimSubTypeCS#LKFENDG 
-* https://elga.moped.at/CodeSystem/MopedClaimSubTypeCS#LKFVORL
+* MopedClaimSubTypeCS#LKFENDG 
+* MopedClaimSubTypeCS#LKFVORL
 

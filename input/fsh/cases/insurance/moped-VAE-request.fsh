@@ -17,7 +17,8 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * insert MopedHandleObligation(patient)
 * use = http://hl7.org/fhir/claim-use#preauthorization
 * insert ShallPopulateObligation(use, MopedKHActor)
-* type.coding = MopedClaimTypeCS#VAEREQ
+* type from MopedClaimTypeVS
+* type.coding = MopedClaimTypeCS#VAEREQ (exactly)
 * insert ShallPopulateObligation(type, MopedKHActor)
 * subType from MopedVAERequestSubTypeVS (required)
 * insert ShallPopulateObligation(subType, MopedKHActor)
