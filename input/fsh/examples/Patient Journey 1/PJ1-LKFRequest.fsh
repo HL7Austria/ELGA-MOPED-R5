@@ -6,6 +6,7 @@ Usage: #example
 * status = #active
 * use = http://hl7.org/fhir/claim-use#claim
 * type.coding = MopedClaimTypeCS#LKFREQ
+* subType.coding = MopedClaimSubTypeCS#LKFREQVORL
 * patient = Reference(PJ1Patient)
 * created = "2024-10-31"
 * insurer = Reference(SV11)

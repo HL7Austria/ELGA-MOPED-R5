@@ -21,6 +21,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * type.coding = MopedClaimTypeCS#VAEREQ (exactly)
 * insert ShallPopulateObligation(type, MopedKHActor)
 * subType from MopedVAERequestSubTypeVS (required)
+* subType 1..1
 * insert ShallPopulateObligation(subType, MopedKHActor)
 * insurer only Reference(SVOrganization)
 * insurer 1..1

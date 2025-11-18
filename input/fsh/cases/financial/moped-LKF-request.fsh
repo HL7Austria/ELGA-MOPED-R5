@@ -14,6 +14,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * type.coding = MopedClaimTypeCS#LKFREQ (exactly)
 * insert ShallPopulateObligation(type, MopedKHActor)
 * subType from MopedLKFRequestSubTypeVS
+* subType 1..1
 * insert ShallPopulateObligation(subType, MopedKHActor)
 * procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 0..1
 * insert ShallPopulateObligation(procedure.extension[AbrechnungsRelevanz], MopedKHActor)

@@ -27,10 +27,10 @@ Description: "CodeSystem für die Arten der Claims/ClaimResponses"
 * #A "Ausländerverrechnung"
 * #R "Regressangelegenheiten"
 * #K "Kosteninformation"
-* #VAE "initiale VAE"
+* #VAEI "initiale VAE"
 * #VAEV "VAE Verlängerung"
-* #LKFENDG "LKF Endgültige Meldung"
-* #LKFVORL "LKF Vorläufige Meldung"
+* #LKFREQENDG "LKF Endgültige Meldung"
+* #LKFREQVORL "LKF Vorläufige Meldung"
 
 
 ValueSet: KostenmeldungARKVS
@@ -44,13 +44,13 @@ ValueSet: MopedVAERequestSubTypeVS
 Title: "VAE Claim Subtype ValueSet"
 Description: "ValueSet für die Art der Claims"
 * ^experimental = true
-* MopedClaimSubTypeCS#VAE
+* MopedClaimSubTypeCS#VAEI
 * MopedClaimSubTypeCS#VAEV
 
 ValueSet: MopedLKFRequestSubTypeVS
 Title: "LKF ClaimResponse Subtype ValueSet"
 Description: "ValueSet für die Art der ClaimResponses"
 * ^experimental = true
-* MopedClaimSubTypeCS#LKFENDG 
-* MopedClaimSubTypeCS#LKFVORL
+* MopedClaimSubTypeCS#LKFREQENDG 
+* MopedClaimSubTypeCS#LKFREQVORL
 

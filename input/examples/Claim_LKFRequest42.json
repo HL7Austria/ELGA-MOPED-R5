@@ -31,6 +31,14 @@
       }
     ]
   },
+  "subType": {
+    "coding": [
+      {
+        "system": "https://elga.moped.at/CodeSystem/MopedClaimSubTypeCS",
+        "code": "LKFREQVORL"
+      }
+    ]
+  },
   "use": "claim",
   "patient": {
     "reference": "Patient/Patient42"
