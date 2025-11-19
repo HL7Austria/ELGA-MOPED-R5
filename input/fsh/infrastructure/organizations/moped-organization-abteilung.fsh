@@ -3,7 +3,7 @@ Parent: Organization
 Description: "MOPED Profil für Abteilungen innerhalb einer Krankenanstalt."
 Title: "MOPED Organization Abteilung"
 
-* partOf only Reference(HL7ATCoreOrganization)
+* partOf only Reference(KHOrganization)
 * partOf ^short = "Krankenanstalt zu welcher die Abteilung gehört"
 * type = http://terminology.hl7.org/CodeSystem/organization-type#dept (exactly)
 * identifier ^slicing.rules = #open

@@ -31,7 +31,7 @@ Title: "MOPED Composition"
 * useContext[AuthorizedUser].value[x] only Reference(HL7ATCoreOrganization)
 */
 
-* author only Reference(HL7ATCoreOrganization)
+* author only Reference(KHOrganization)
 * insert ShallPopulateObligation(author, MopedDeviceActor)
 * extension contains AnzahlVerlegungen named AnzahlVerlegungen 0..1
 * insert ShallPopulateObligation(extension[AnzahlVerlegungen], MopedDeviceActor)

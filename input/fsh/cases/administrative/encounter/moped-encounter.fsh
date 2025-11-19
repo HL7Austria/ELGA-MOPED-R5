@@ -15,7 +15,7 @@ Title: "MOPED Encounter"
 * identifier[Aufnahmezahl] ^short = "LKF: Aufnahmezahl"
 * identifier[Aufnahmezahl].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[Aufnahmezahl].type.coding.code = #VN (exactly)
-* identifier[Aufnahmezahl].assigner only Reference(HL7ATCoreOrganization)
+* identifier[Aufnahmezahl].assigner only Reference(KHOrganization)
 * identifier[Aufnahmezahl].system 1..1
 * insert ShallPopulateObligation(identifier[Aufnahmezahl], MopedKHActor)
 * identifier[DatensatzID].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
@@ -27,7 +27,7 @@ Title: "MOPED Encounter"
 * subject 1..1
 * insert MopedHandleObligation(subject)
 
-* serviceProvider only Reference(HL7ATCoreOrganization)
+* serviceProvider only Reference(KHOrganization)
 * serviceProvider 1..1
 * serviceProvider ^short = "LKF: Krankenanstaltennummer/Leistungserbringer-Stammdaten-ID"
 * insert MopedHandleObligation(serviceProvider)

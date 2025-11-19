@@ -12,7 +12,7 @@ Title: "MOPED Coverage"
 * identifier ^slicing.ordered = false
 * identifier contains VDASID 0..1
 * identifier[VDASID].system = $VdasIdSystem
-* identifier[VDASID].assigner only Reference(HL7ATCoreOrganization)
+* identifier[VDASID].assigner only Reference(KHOrganization)
 * identifier[VDASID] ^short = "KaOrg: VDAS-ID, Ergebnis der Abfrage"
 * insert ShallPopulateObligation(identifier[VDASID], MopedKHActor)
 * insurer only Reference(SVOrganization)
