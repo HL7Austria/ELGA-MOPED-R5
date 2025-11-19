@@ -6,6 +6,7 @@ Title: "MOPED Entlassung vollständig Composition"
 * status = #partial
 * encounter 1..1
 * section[TransferEncounter].entry 1..
+* section[besuchteAbteilungen].entry 1..
 
 //Invarianten:
 // alle TENC abgeschlossen
