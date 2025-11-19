@@ -46,8 +46,7 @@ Title: "MOPED Composition"
 //* insert ShallPopulateObligation(section)
 //* insert ObligationActor(section, MopedDeviceActor)
 * section contains TransferEncounter 0..1
-* section[TransferEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
-* section[TransferEncounter].code.coding.code = #TENC
+* section[TransferEncounter].code.coding = MopedEncounterTypesCS#TENC
 * section[TransferEncounter].entry 1..
 * section[TransferEncounter].entry only Reference(MopedTransferEncounterI or MopedTransferEncounterA or MopedTransferEncounterS)
 * insert ShallPopulateObligation(section[TransferEncounter], MopedDeviceActor)
@@ -98,43 +97,37 @@ Title: "MOPED Composition"
 * section[Coverages].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[Coverages], MopedDeviceActor)
 * section contains VAERequests 0.. 
-* section[VAERequests].code.coding.system = Canonical(CompositionSectionsCS)
-* section[VAERequests].code.coding.code = #VAEReq
+* section[VAERequests].code.coding = MopedClaimTypeCS#VAEREQ
 * section[VAERequests].entry 1..
 * section[VAERequests].entry only Reference(MopedVAERequest)
 * section[VAERequests].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[VAERequests], MopedDeviceActor)
 * section contains VAEResponses 0.. 
-* section[VAEResponses].code.coding.system = Canonical(CompositionSectionsCS)
-* section[VAEResponses].code.coding.code = #VAEResp
+* section[VAEResponses].code.coding = MopedClaimTypeCS#VAERESP
 * section[VAEResponses].entry 1..
 * section[VAEResponses].entry only Reference(MopedVAEResponse)
 * section[VAEResponses].author only Reference(SVOrganization)
 * insert ShallPopulateObligation(section[VAEResponses], MopedDeviceActor)
 * section contains LKFRequests 0..1 
-* section[LKFRequests].code.coding.system = Canonical(CompositionSectionsCS)
-* section[LKFRequests].code.coding.code = #LKFReq
+* section[LKFRequests].code.coding = MopedClaimTypeCS#LKFREQ
 * section[LKFRequests].entry 1..
 * section[LKFRequests].entry only Reference(MopedLKFRequest)
 * section[LKFRequests].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[LKFRequests], MopedDeviceActor)
 * section contains LKFResponses 0..1 
-* section[LKFResponses].code.coding.system = Canonical(CompositionSectionsCS)
-* section[LKFResponses].code.coding.code = #LKFResp
+* section[LKFResponses].code.coding = MopedClaimTypeCS#LKFRESP
 * section[LKFResponses].entry 1..
 * section[LKFResponses].entry only Reference(MopedLKFResponse)
 * section[LKFResponses].author only Reference(LGFOrganization)
 * insert ShallPopulateObligation(section[LKFResponses], MopedDeviceActor)
 * section contains ARKKostenInformation 0..1 
-* section[ARKKostenInformation].code.coding.system = Canonical(CompositionSectionsCS)
-* section[ARKKostenInformation].code.coding.code = #ARKReq
+* section[ARKKostenInformation].code.coding = MopedClaimTypeCS#ARKREQ
 * section[ARKKostenInformation].entry 1..
 * section[ARKKostenInformation].entry only Reference(MopedARKRequest)
 * section[ARKKostenInformation].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[ARKKostenInformation], MopedDeviceActor)
 * section contains ARKRueckmeldung 0..1 
-* section[ARKRueckmeldung].code.coding.system = Canonical(CompositionSectionsCS)
-* section[ARKRueckmeldung].code.coding.code = #ARKResp
+* section[ARKRueckmeldung].code.coding = MopedClaimTypeCS#ARKRESP
 * section[ARKRueckmeldung].entry 1..
 * section[ARKRueckmeldung].entry only Reference(MopedARKResponse)
 * section[ARKRueckmeldung].author only Reference(LGFOrganization)
@@ -162,14 +155,14 @@ Title: "MOPED Composition"
 * insert ShallPopulateObligation(section[Hauptversicherter], MopedDeviceActor)
 * section contains Frageboegen 0..1 
 * section[Frageboegen].code.coding.system = Canonical(CompositionSectionsCS)
-* section[Frageboegen].code.coding.code = #QResp
+* section[Frageboegen].code.coding.code = #QRESP
 * section[Frageboegen].entry 0..
 * section[Frageboegen].entry only Reference(MopedQuestionnaireResponse)
 * section[Frageboegen].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[Frageboegen], MopedDeviceActor)
 * section contains Kommunikation 0..1 
 * section[Kommunikation].code.coding.system = Canonical(CompositionSectionsCS)
-* section[Kommunikation].code.coding.code = #Comm
+* section[Kommunikation].code.coding.code = #COMM
 * section[Kommunikation].entry 0..
 //* section[Kommunikation].entry only Reference(MopedCommunication or MopedCommunicationResponse) //TBD Profile für die generische Kommunikation anlegen
 * section[Kommunikation].author only Reference(KHOrganization or SVOrganization or LGFOrganization)
