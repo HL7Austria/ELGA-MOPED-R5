@@ -166,12 +166,16 @@ pages:
       title: LKF Jahresmeldung
     stammdaten_mapping.md:
       title: Stammdaten
+  imprint.md:
+    title: Impressum
   authors.md:
     title: Mitwirkende
   downloads.md:
     title: Downloads
   dependencies.md:
     title: Dependencies
+  copyright.md:
+    title: Copyright
   known_issues.md:
     title: Known Issues
   
@@ -260,9 +264,11 @@ menu:
     Stammdaten: stammdaten_mapping.html
   Artifacts: artifacts.html
   About:
+    Impressum: imprint.html
     Mitwirkende: authors.html
     Downloads:  downloads.html
     Dependencies: dependencies.html
+    Copyright: copyright.html
     Known Issues: known_issues.html
 
 
