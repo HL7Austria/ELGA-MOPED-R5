@@ -2,11 +2,11 @@
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
     Im MOPED-Kontext spielt eine Krankenanstalt (KH) eine zentrale Rolle als Initiator zahlreicher Prozesse und als Meldestelle für vielfältige Daten. Diese umfassen unter anderem die Patientenaufnahme, die Abfrage des Versicherungsstatus und -anspruchs, die Erfassung von Versorgungsdaten während der Patientenbehandlung, die Entlassung sowie die Initiierung der Leistungsabrechnung.
 </div>
-<pre class="mermaid">
+
+<div class="mermaid">
     graph LR
     KH[Krankenanstalt]
     Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
-    KH --->|&lt;a href=&quot;OperationDefinition-MOPED.Patient.Aufnehmen.html&quot;&gt; POST $aufnehmen&lt;/a&gt;| Moped 
     KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Daten.Update.html&quot;&gt; POST $update&lt;/a&gt;| Moped
     KH -->|&lt;a href=&quot;OperationDefinition-MOPED.VAERequest.Anfragen.html&quot;&gt; POST $anfragen&lt;/a&gt;| Moped
     KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Patient.Entlassen.html&quot;&gt; POST $entlassen&lt;/a&gt;| Moped
@@ -15,6 +15,8 @@
     Moped -->|&lt;a href=&quot;StructureDefinition-MopedVAEResponse.html&quot;&gt; GET VAEResponse&lt;/a&gt;| KH
     Moped --->|&lt;a href=&quot;StructureDefinition-MopedLKFResponse.html&quot;&gt; GET ClaimResponse&lt;/a&gt;| KH
 </pre>  
+    KH --->|"`&lt;a href=&quot;https://fhir.hl7.at/r5-ELGA-MOPED-main/OperationDefinition-MOPED.Patient.Aufnehmen.html&quot;&gt; POST $aufnehmen&lt;/a&gt;`"| Moped 
+</div>  
 
 ### Sozialversicherung {#actor-SV}
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
