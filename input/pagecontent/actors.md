@@ -7,6 +7,7 @@
     graph LR
     KH[Krankenanstalt]
     Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
+    KH --->|"`&lt;a href=&quot;https://fhir.hl7.at/r5-ELGA-MOPED-main/OperationDefinition-MOPED.Patient.Aufnehmen.html&quot;&gt; POST $aufnehmen&lt;/a&gt;`"| Moped 
     KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Daten.Update.html&quot;&gt; POST $update&lt;/a&gt;| Moped
     KH -->|&lt;a href=&quot;OperationDefinition-MOPED.VAERequest.Anfragen.html&quot;&gt; POST $anfragen&lt;/a&gt;| Moped
     KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Patient.Entlassen.html&quot;&gt; POST $entlassen&lt;/a&gt;| Moped
@@ -14,8 +15,7 @@
     KH -->|&lt;a href=&quot;TBD&quot;&gt; POST $stornieren&lt;/a&gt;| Moped
     Moped -->|&lt;a href=&quot;StructureDefinition-MopedVAEResponse.html&quot;&gt; GET VAEResponse&lt;/a&gt;| KH
     Moped --->|&lt;a href=&quot;StructureDefinition-MopedLKFResponse.html&quot;&gt; GET ClaimResponse&lt;/a&gt;| KH
-</pre>  
-    KH --->|"`&lt;a href=&quot;https://fhir.hl7.at/r5-ELGA-MOPED-main/OperationDefinition-MOPED.Patient.Aufnehmen.html&quot;&gt; POST $aufnehmen&lt;/a&gt;`"| Moped 
+    
 </div>  
 
 ### Sozialversicherung {#actor-SV}
