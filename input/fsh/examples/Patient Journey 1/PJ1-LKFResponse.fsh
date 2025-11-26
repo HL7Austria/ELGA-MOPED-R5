@@ -9,7 +9,7 @@ Usage: #example
 * patient = Reference(PJ1Patient)
 * created = "2024-10-31"
 * request = Reference(PJ1LKFRequest1)
-
+* requestor = Reference(OrganizationHerzJesuKrankenhaus)
 * outcome = #complete
 * diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG01.31
 * decision = http://hl7.org/fhir/claim-decision#approved
