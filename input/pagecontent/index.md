@@ -7,7 +7,7 @@ Das MOPED-Projekt („Moderne Patient:innenabrechnung und Datenkommunikation on 
 
 Durch den Einsatz des HL7 FHIR Standards werden die Daten zu Patientenbewegungen (Aufnahme, Verlegung, Entlassung) und zur Versicherungs- sowie Leistungsabrechnung strukturiert und sicher erfasst. MOPED unterstützt damit eine einheitliche Datenkommunikation und verbessert die Effizienz und Datenqualität im Gesundheitssystem. Zu den zentralen Zielen gehört die Konzeption einer Lösungsarchitektur, die auf der Nutzung standardisierter Schnittstellen innerhalb der österreichischen Gesundheitstelematikinfrastruktur basiert und langfristig eine nahtlose Integration zukünftiger Anforderungen ermöglicht.
 
-Das Projekt ist eine Kooperation zwischen den Krankenanstaltenträgern, dem Landesgesundheitsfonds (LGF), dem Bund und den Sozialversicherungsträgern (SV), während die technische Ausarbeitung von der ELGA GmbH mit Unterstützung der FH OÖ Campus Hagenberg und unter Beteiligung von HL7 Austria durchgeführt wird. Diese Institutionen arbeiten gemeinsam daran, den Implementation Guide kontinuierlich zu erweitern und sicherzustellen, dass alle technischen, rechtlichen und organisatorischen Anforderungen erfüllt werden.
+Das Projekt ist eine Kooperation zwischen den Krankenanstaltenträgern, den Landesgesundheitsfonds (LGF), dem Bund und den Sozialversicherungsträgern (SV), während die technische Ausarbeitung von der ELGA GmbH mit Unterstützung der FH OÖ Campus Hagenberg und unter Beteiligung von HL7 Austria durchgeführt wird. Diese Institutionen arbeiten gemeinsam daran, den Implementation Guide kontinuierlich zu erweitern und sicherzustellen, dass alle technischen, rechtlichen und organisatorischen Anforderungen erfüllt werden.
 
 ### Disclaimer
 
@@ -130,7 +130,7 @@ Im MOPED-Kontext sind diese Profile der verbindliche Referenzpunkt für alle Dat
 - **Differential View:** Zeigt nur die Abweichungen gegenüber der zugrundeliegenden Basisressource (z. B. zusätzliche Felder, geänderte Kardinalitäten, entfernte Elemente). Diese Ansicht ist besonders nützlich für technische Implementierer.
 
 #### Obligations
-Obligations sind extensions, welche bestimmte Bedingungen für bestimmte Aktueure festlegen. In MOPED wird unter anderem die Obligation mit dem code *SHALL:populate* verwendet um anzuzeigen, welcher Akteur das jeweilige Feld befüllen muss. Felder, welche wiederum eine Obligation mit dem code *SHALL:handle* und dem Akteur MOPED beinhalten sind Felder die von MOPED im Laufe des Prozess verändert oder automatisiert befüllt werden können. Hierbei handelt es sich hauptsächlich um das Befüllen von Referenzen oder das Ändern des Status von Ressourcen. Obligations werden in den Profilen durch ein rotes O gekennzeichnet.
+Mittels Obligations werden in HL7 FHIR funktionale Eigenschaften spezifiziert, die definierte Akteure gegenüber den durch Profile festgelegten Datenelementen einhalten müssen (SHALL), können (MAY) oder sollten (SHOULD). In MOPED wird unter anderem die Obligation mit dem code *SHALL:populate* verwendet um anzuzeigen, welcher Akteur das jeweilige Feld befüllen muss. Felder, welche wiederum eine Obligation mit dem code *SHALL:handle* und dem Akteur MOPED beinhalten sind Felder die von MOPED im Laufe des Prozess verändert oder automatisiert befüllt werden können. Hierbei handelt es sich hauptsächlich um das Befüllen von Referenzen oder das Ändern des Status von Ressourcen. Obligations werden in den Profilen durch ein rotes O gekennzeichnet.
 
 ### Was sind FHIR Operations und welche Informationen beinhalten diese?
 Dieser Abschnitt erläutert, wie FHIR Operations im MOPED-Kontext verwendet werden, um komplexe Geschäftsprozesse abzubilden.  
@@ -155,6 +155,8 @@ FHIR Operations folgen der Syntax:
 - *URL: [base]/[Resource]/$validate*
 
 - *URL: [base]/[Resource]/[id]/$validate*
+
+In MOPED wird stark auf Operations gesetzt um die Datenintegrität zwischen den einzelnen Ressourcen sicherzustellen.
 
 ### Aufbau des Implementation Guide
 Der Aufbau des IG ist im Detail im Abschnitt [Umfang und Inhalt](scope_and_content.html) beschrieben.

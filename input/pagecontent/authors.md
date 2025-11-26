@@ -1,6 +1,6 @@
-### Authoren
+### Autoren
 - **Entwicklung des Implementation Guide:**  
-    ELGA GmbH – Abteilung Standardisierung und Usability 
+    ELGA GmbH – Abteilung Standards und Usability 
 
 ### Mitwirkende
 - **Arbeitsgruppe Moped:**  

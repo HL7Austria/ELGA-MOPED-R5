@@ -1,10 +1,10 @@
 Hier befinden sich Links der Materialien des Moped IG zum Download.
 
-<h3 class="no-number">Gesamter IG</h3>
+### Gesamter IG
 
 Der gesamte Implementation Guide kann [hier](full-ig.zip) heruntergeladen werden.
 
-<h3 class="no-number">NPM Package und Definitionen</h3>
+### NPM Package und Definitionen
 
 Die folgende Datei enthält alle ValueSets, Profile, Extensions, Seiten und URLs, die im Rahmen dieses Implementation Guides definiert wurden:
 
@@ -16,7 +16,7 @@ Zusätzlich gibt es formatspezifische Dateien der Definitionen:
 - [JSON](definitions.json.zip)
 - [TTL](definitions.ttl.zip)
 
-<h3 class="no-number">Beispielinstanzen</h3>
+### Beispielinstanzen
 
 Alle in diesem Implementation Guide verwendeten Beispiele stehen hier zum Download bereit:
 
