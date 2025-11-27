@@ -7,7 +7,7 @@
     graph LR
     KH[Krankenanstalt]
     Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
-    KH --->|"`&lt;a href=&quot;https://fhir.hl7.at/r5-ELGA-MOPED-main/OperationDefinition-MOPED.Patient.Aufnehmen.html&quot;&gt; POST $aufnehmen&lt;/a&gt;`"| Moped 
+    KH --->|&lt;a href=&quot;https://fhir.hl7.at/r5-ELGA-MOPED-main/OperationDefinition-MOPED.Patient.Aufnehmen.html&quot;&gt; POST $aufnehmen&lt;/a&gt;| Moped 
     KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Daten.Update.html&quot;&gt; POST $update&lt;/a&gt;| Moped
     KH -->|&lt;a href=&quot;OperationDefinition-MOPED.VAERequest.Anfragen.html&quot;&gt; POST $anfragen&lt;/a&gt;| Moped
     KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Patient.Entlassen.html&quot;&gt; POST $entlassen&lt;/a&gt;| Moped
