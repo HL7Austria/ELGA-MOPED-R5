@@ -16,3 +16,5 @@ Invariant: moped-anfragen-TBD
 Severity: #error
 Description: "TBD"
 Expression: ""
+
+//eine Verlängerung kann es nur dann geben, wenn die vorherige Response befristet war also ein preAuthPeriod.end hat

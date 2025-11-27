@@ -2,7 +2,7 @@
 
 
 ## Anwendungsfall 28: Positive VAE inkl. Verlängerung
-In Arbeit :)
+
 ### Betroffene Akteure
 
 | Akteur            |  |
@@ -14,6 +14,15 @@ In Arbeit :)
 
 ### Betroffene Behandlungsarten
 
+#### Positive VAE
+
+| Behandlungsart|  |
+|-----------|----:|
+| Ambulant  |  ✅ |
+| Stationär |  ✅ |
+
+#### Verlängerung der VAE
+
 | Behandlungsart|  |
 |-----------|----:|
 | Ambulant  |  ❌ |
@@ -21,10 +30,25 @@ In Arbeit :)
 
 
 ### Beschreibung
+Aufgrund der eingelangten VAE (Versichertenanspruchserklärung) Anfrage erfolgt seitens der SV die positive VAE Rückmeldung. Die positive Entscheidung wird in der Rückmeldung durch "00" (stationär) oder "19" (ambulant) ausgedrückt. 
+
+#### Ambulant
+Zukünftig gibt es anstatt einer Quartalszusage pro [Moped Fall](TBD-LINK-BEGRIFFSDEFINITION) eine Anfrage und eine Rückmeldung.
+
+#### Stationär
+Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt es eine Befristung, so wird ein Enddatum angegeben. Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum so muss das KH um eine Verlängerung ansuchen. In der Verlängerung wird das Enddatum als Verlängerungsdatum angegeben und zusätzlich auf die initiale Anfrage verwiesen. Die positive VAE für den ursprünglichen Zeitraum bleibt weiterhin gültig (außer sie wird aus anderen Gründen nachträglich storniert -> siehe [Anwendungsfall 32:  VAE doch negativ](AF28bis32.html#anwendungsfall-32-vae-doch-negativ-nach-vorheriger-positiver-vae)). Die VAE kann nach Ablauf der Frist der letzten positiven VAE immer wieder verlängert werden solange sich der Patient immer noch in Behandlung befindet. Gibt es kein Fristende so kann die VAE auch nicht verlängert werden.
 
 ### Beispiel
 
+#### Beispiel 1: ambulant
+
+#### Beispiel 2: stationär ohne Fristende
+
+#### Beispiel 3: stationär mit Fristende und Verlängerung
+
+
 ### Technische Hinweise
+Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Profilen mit unterschiedlichen Subtypen. In der Verlängerung muss verpflichtend die initiale VAE verlinkt werden.
 
 
 ### Ablauf 
@@ -56,15 +80,34 @@ In Arbeit :)
     actor Bund as Bund 
     end
 
+    KH->>MP: POST VAERequest 1
+    Note over KH: Anfrage VAE <br/>(ab 1.09.2025)
+    SV->>MP: POST VAEResponse 1
+    Note over SV: Bestätigung VAE <br/>(01.09.2025-16.09.2025)
+
+    KH->>MP: POST VAERequest 2
+    Note over KH: Anfrage Verlängerung<br/>mit Claim.related.claim zu VAERequest 1 und <br/> Claim.related.relationship = 'Verlängerung'<br/>(16.09.2025-21.09.2025 = Verlängerungstage)
+    Note over MP: Moped behält die gültige Übernahme (VAEResponse 1)
+
+    SV->>MP: POST VAEResponse 2
+    Note over SV: Bestätigung Verlängerung<br/>(16.09.2025-21.09.2025)
+    Note over MP: Moped behält die gültigen Übernahmen für beide Zeiträume<br/>(VAEResponse 1 & VAEResponse 2)
+
 </pre>
 
 ### Relevante Profile
+- [Coverage](StructureDefinition-MopedCoverage.html)
+- [VAERequestInitial](StructureDefinition-MopedVAERequestInitial.html)
+- [VAERequestVerlaengerung](StructureDefinition-MopedVAERequestVerlaengerung.html)
+- [VAEResponse](StructureDefinition-MopedVAEResponse.html)
+- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
+- [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
 
 ### Relevante Invarianten
+- Es kann zu keinem Zeitpunkt zwei aktive initiale VAEs an den selben Träger geben.
 
 ### Mögliche Notifications
-
-#### SubscriptionTopic: X 
 
 #### Tabellarische Übersicht
 

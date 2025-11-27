@@ -3,6 +3,8 @@ Profile: MopedVAERequest
 Parent: Claim
 Title : "MOPED VAERequest"
 Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung VAE."
+* billablePeriod.start 1..1
+* insert ShallPopulateObligation(billablePeriod.start, MopedKHActor)
 * insert MopedHandleObligation(status)
 * insert ShallPopulateObligation(status, MopedKHActor)
 //* extension contains Verlaengerungstage named Verlaengerungstage 0..1
@@ -25,7 +27,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * insert ShallPopulateObligation(subType, MopedKHActor)
 * insurer only Reference(SVOrganization)
 * insurer 1..1
-* insert MopedHandleObligation(insurer)
+* insert ShallPopulateObligation(insurer, MopedKHActor) //wegen Fallsplitting
 * provider only Reference(KHOrganization)
 * provider 1..1
 * insert MopedHandleObligation(provider)
@@ -37,8 +39,8 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
-* encounter ^slicing.discriminator[+].type = #profile
-* encounter ^slicing.discriminator[=].path = "resolve()"
+* encounter ^slicing.discriminator[+].type = #value
+* encounter ^slicing.discriminator[=].path = "resolve().type"
 * encounter contains MopedEncounter 1..1 and TransferEncounter 0..
 * encounter[MopedEncounter] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
 * encounter[MopedEncounter] only Reference(MopedEncounter)
