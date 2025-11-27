@@ -164,7 +164,7 @@ Title: "MOPED Composition"
 * section[Frageboegen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Frageboegen].code.coding.code = #QResp
 * section[Frageboegen].entry 0..
-* section[Frageboegen].entry only Reference(MopedQuestionnaireResponse)
+* section[Frageboegen].entry only Reference(MopedQuestionnaireResponseFallbezogen)
 * section[Frageboegen].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[Frageboegen], MopedDeviceActor)
 * section contains Kommunikation 0..1 

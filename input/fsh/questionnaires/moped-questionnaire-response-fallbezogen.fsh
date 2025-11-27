@@ -1,6 +1,6 @@
-Profile: MopedQuestionnaireResponse
+Profile: MopedQuestionnaireResponseFallbezogen
 Parent: QuestionnaireResponse
-Description: "MOPED Profil für QuestionnaireResponses die im Kontext von Moped erhoben werden"
+Description: "MOPED Profil für QuestionnaireResponses die im Kontext von Moped mit Fallbezug erhoben werden"
 Title: "Moped QuestionnaireResponse"
 
 * questionnaire 1..1
