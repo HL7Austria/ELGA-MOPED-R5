@@ -13,13 +13,18 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * insert ShallPopulateObligation(subType, MopedLGFActor)
 * use = #claim
 * insert ShallPopulateObligation(use, MopedLGFActor)
-
 * patient only Reference(MopedPatient)
 * insert MopedHandleObligation(patient)
 * request only Reference(MopedLKFRequest)
 * request 1..1
-* insert ShallPopulateObligation(type, MopedLGFActor) //oder moped?
+* insert ShallPopulateObligation(request, MopedLGFActor) //oder moped?
+* requestor only Reference(KHOrganization)
+* requestor 1..1
+* insert MopedHandleObligation(requestor)
+* outcome 1..1
+* outcome ^short = "LKF Bewilligung/Ablehnung"
+* insert ShallPopulateObligation(outcome, MopedLGFActor)
 * decision 1..1
-* insert ShallPopulateObligation(type, MopedLGFActor)
-
+* insert ShallPopulateObligation(decision, MopedLGFActor)
+* insert ShallPopulateObligation(created, MopedLGFActor)
 * addItem.extension contains AddItemCategory named AddItemCategory 0..1

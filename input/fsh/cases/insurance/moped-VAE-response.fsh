@@ -3,7 +3,7 @@ Profile: MopedVAEResponse
 Parent: ClaimResponse
 Title: "MOPED VAEResponse"
 Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklärung VAE."
-
+* insert ShallPopulateObligation(created, MopedSVActor)
 * status = #active
 * insert ShallPopulateObligation(status, MopedSVActor)
 * insert MopedHandleObligation(status)
@@ -15,7 +15,7 @@ Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklä
 * patient only Reference(MopedPatient)
 * patient 1..1
 * insert MopedHandleObligation(patient) 
-* request only Reference(MopedVAERequest)
+* request only Reference(MopedVAERequestInitial or MopedVAERequestVerlaengerung)
 * request 1..1
 * insert ShallPopulateObligation(request, MopedSVActor)
 //Kann hier angenommen werden, dass es nur einen offenen request in der Composition gibt und dass das sicher der ist, der hier beantwortet werden soll?

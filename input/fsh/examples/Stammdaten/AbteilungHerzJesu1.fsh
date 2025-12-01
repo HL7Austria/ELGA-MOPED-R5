@@ -9,7 +9,7 @@ Usage: #example
 * extension[=].extension[+].url = "InterneKostenstellenbezeichnung"
 * extension[=].extension[=].valueString = "Schlaflabor (Interne)"
 * extension[=].extension[+].url = "SpezielleOrganisationsform"
-* extension[=].extension[=].valueCoding = SpezielleOrganisationsformCS#A
+* extension[=].extension[=].valueCoding = SpezielleOrganisationsformenCS#A
 * extension[=].extension[+].url = "KostenstellenJahr"
 * extension[=].extension[=].valueDate = "2024"
 * identifier[+].value = "131180"

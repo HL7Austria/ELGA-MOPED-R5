@@ -1,6 +1,3 @@
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-</script>
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
 In diesem Bereich werden die grundlegenden Konzepte des Moped-Designs beschrieben.
 </div>
@@ -120,4 +117,5 @@ Einige Referenzen sind nicht aus dem Fallkontext ableitbar, da sie entweder eine
 
 MOPED prüft ggf. ihre Gültigkeit, übernimmt das befüllen aber nicht selbst.
 
-
+### Subscriptions & Notifications
+Ereignisbasierte Benachrichtigungen werden durch Moped anhand des Message Broker Patterns umgesetzt. Das Message Broker Pattern ist ein Entwurfsmuster, das in verteilten Softwaresystemen verwendet wird, um die Kommunikation zwischen verschiedenen Komponenten oder Diensten zu organisieren und zu optimieren. Es dient als Vermittler, der Nachrichten (Informationen oder Datenpakete) von einem Sender (Producer) entgegennimmt und an einen oder mehrere Empfänger (Consumer) weiterleitet. Ein zentraler Vorteil dieses Patterns liegt darin, dass die Sender und Empfänger nicht direkt miteinander kommunizieren müssen und somit entkoppelt werden. Dies fördert eine bessere Skalierbarkeit und Flexibilität im System, da Komponenten unabhängig voneinander aktualisiert, hinzugefügt oder entfernt werden können. Inhalt, Struktur und Format der Benachrichtigungen folgen hierbei dem FHIR Subscriptions Framework.

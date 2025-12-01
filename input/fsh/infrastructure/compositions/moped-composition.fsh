@@ -101,7 +101,7 @@ Title: "MOPED Composition"
 * section[VAERequests].code.coding.system = Canonical(MopedClaimTypeCS)
 * section[VAERequests].code.coding.code = #VAEREQ
 * section[VAERequests].entry 1..
-* section[VAERequests].entry only Reference(MopedVAERequest)
+* section[VAERequests].entry only Reference(MopedVAERequestInitial or MopedVAERequestVerlaengerung)
 * section[VAERequests].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[VAERequests], MopedDeviceActor)
 * section contains VAEResponses 0.. 

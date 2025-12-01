@@ -8,8 +8,8 @@ Description: "Arten von Moped Encounter"
 * #ENC "Moped Encounter"
 * #TENC "Moped Transfer Encounter"
 * #ENC-BUND "Moped Encounter Bund"
-* #ENC-LGF "Moped Encounter Bund"
-* #ENC-SV "Moped Encounter Bund"
+* #ENC-LGF "Moped Encounter LGF"
+* #ENC-SV "Moped Encounter SV"
 
 ValueSet: MopedEncounterTypesVS
 Title: "Arten von Moped Encounter"
