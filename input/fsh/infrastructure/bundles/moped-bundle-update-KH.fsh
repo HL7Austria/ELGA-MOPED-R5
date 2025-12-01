@@ -59,7 +59,7 @@ Description: """Bundle für die Input-Ressourcen beim Update von Informationen z
 * entry[UeberweisendeOrganization].request.method ^short = "POST | PUT | DELETE"
 * entry contains
   Frageboegen 0..
-* entry[Frageboegen].resource only MopedQuestionnaireResponse
+* entry[Frageboegen].resource only MopedQuestionnaireResponseFallbezogen
 * entry[Frageboegen].request.method from HTTPVerbInsertUpdateDeleteVS
 * entry[Frageboegen].request.method ^short = "POST | PUT | DELETE"
 * entry contains
