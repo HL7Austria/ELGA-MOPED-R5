@@ -5,7 +5,8 @@ Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedLKFRequest"
 * status = #active
 * use = http://hl7.org/fhir/claim-use#claim
-* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type.coding = MopedClaimTypeCS#LKFREQ
+* subType.coding = MopedClaimSubTypeCS#LKFREQVORL
 * patient = Reference(PJ1Patient)
 * created = "2024-10-31"
 * insurer = Reference(SV11)

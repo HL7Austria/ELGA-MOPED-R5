@@ -4,7 +4,6 @@ Description: "CodeSystem für die Moped Sections der Composition Ressource"
 * ^status = #active
 * ^experimental = true
 * ^caseSensitive = true
-
 * #SV "Zuständige SV"
 * #LGF "Zuständiger LGF"
 * #KH "Zuständiges KH"
@@ -13,16 +12,10 @@ Description: "CodeSystem für die Moped Sections der Composition Ressource"
 * #DIAG "Diagnosen (Conditions)"
 * #LEI "Leistungen (Procedures)"
 * #OBS "Observations"
-* #VAEReq "VAERequests"
-* #VAEResp "VAEResponses"
-* #LKFReq "LKFRequests"
-* #LKFResp "LKFResponses"
 * #HAUPTV "Hauptversicherter"
-* #QResp "QuestionnaireResponses"
-* #ARKReq "ARK Requests"
-* #ARKResp "ARK Responses"
-* #ARKPay "ARK Status Updates"
-* #Comm "Communication & Responses"
+* #QRESP "QuestionnaireResponses"
+* #ARKPAY "ARK Status Updates"
+* #COMM "Communication & Responses"
 
 ValueSet: CompositionSectionsVS
 Title: "Moped Composition Sections ValueSet"
@@ -31,4 +24,9 @@ Description: "ValueSet für die Moped Sections der Composition Ressource"
 * include codes from system CompositionSectionsCS
 * https://elga.moped.at/CodeSystem/MopedEncounterTypesCS#ENC 
 * https://elga.moped.at/CodeSystem/MopedEncounterTypesCS#TENC
-
+* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#ARKREQ
+* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#ARKRESP
+* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#VAEREQ
+* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#VAERESP
+* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#LKFREQ
+* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#LKFRESP

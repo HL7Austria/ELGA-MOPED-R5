@@ -26,9 +26,16 @@
   "type": {
     "coding": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
-        "code": "institutional",
-        "display": "Institutional"
+        "system": "https://elga.moped.at/CodeSystem/MopedClaimTypeCS",
+        "code": "LKFREQ"
+      }
+    ]
+  },
+  "subType": {
+    "coding": [
+      {
+        "system": "https://elga.moped.at/CodeSystem/MopedClaimSubTypeCS",
+        "code": "LKFREQVORL"
       }
     ]
   },

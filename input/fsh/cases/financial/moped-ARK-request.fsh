@@ -10,7 +10,8 @@ Description: "MOPED Profil der Claim Ressource für die Kostenmeldung für Ausl�
 * insert MopedHandleObligation(patient)
 * use = http://hl7.org/fhir/claim-use#claim
 * insert ShallPopulateObligation(use, MopedLGFActor)
-* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type from MopedClaimTypeVS
+* type.coding = MopedClaimTypeCS#ARKREQ
 * insert ShallPopulateObligation(type, MopedLGFActor)
 * subType from KostenmeldungARKVS (required)
 * subType 1..1

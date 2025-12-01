@@ -4,7 +4,7 @@ Description: "Hackathon Patient Journey 1 Beispiel: LKFResponse 1"
 Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedLKFResponse"
 * status = #active
-* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type.coding = MopedClaimTypeCS#LKFRESP
 * use = http://hl7.org/fhir/claim-use#claim
 * patient = Reference(PJ1Patient)
 * created = "2024-10-31"

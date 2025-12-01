@@ -4,7 +4,7 @@ Description: "Hackathon Patient Journey 2 Beispiel: VAEResponse 1"
 Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedVAEResponse"
 * status = #active
-* type.coding = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type.coding = MopedClaimTypeCS#VAERESP
 * use = #preauthorization
 * created = "2025-02-24"
 * patient = Reference(PJ2Patient)
