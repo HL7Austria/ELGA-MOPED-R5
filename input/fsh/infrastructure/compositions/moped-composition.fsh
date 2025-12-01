@@ -127,7 +127,7 @@ Title: "MOPED Composition"
 * insert ShallPopulateObligation(section[LKFResponses], MopedDeviceActor)
 * section contains ARKKostenInformation 0..1 
 * section[ARKKostenInformation].code.coding.system = Canonical(MopedClaimTypeCS)
-* section[ARKKostenInformation].code.coding.code = MopedClaimTypeCS#ARKREQ
+* section[ARKKostenInformation].code.coding.code = #ARKREQ
 * section[ARKKostenInformation].entry 1..
 * section[ARKKostenInformation].entry only Reference(MopedARKRequest)
 * section[ARKKostenInformation].author only Reference(KHOrganization)
