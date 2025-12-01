@@ -7,7 +7,7 @@ Usage: #example
 * created = "2025-02-17"
 * status = http://hl7.org/fhir/fm-status#active
 * type.coding = MopedClaimTypeCS#VAEREQ
-* subType.coding = MopedClaimSubTypeCS#VAEI
+* subType.coding = MopedClaimSubTypeCS#VAEREQI
 * patient = Reference(PJ1Patient)
 * insurer = Reference(SV11)
 * provider = Reference(OrganizationHerzJesuKrankenhaus)
