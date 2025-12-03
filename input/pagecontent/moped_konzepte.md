@@ -11,17 +11,17 @@ Es können mehrere Composition-Ausprägungen gleichzeitig gültig sein, etwa wen
 
 <pre class="mermaid">
     graph TD
-    Master[&lt;a href=&quot;StructureDefinition-MopedMasterComposition.html&quot;&gt;MasterComposition&lt;/a&gt;]
+    Master[MasterComposition]
 
     subgraph Spezialisierungen
-        Aufnahme[&lt;a href=&quot;StructureDefinition-MopedAufnahmeComposition.html&quot;&gt;AufnahmeComposition&lt;/a&gt;<br/><sub><i>Patient & Encounter vorhanden</i></sub>]
-        Anfrage[&lt;a href=&quot;StructureDefinition-MopedAnfragenComposition.html&quot;&gt;AnfrageComposition&lt;/a&gt;<br/><sub><i>Versicherer vorhanden</i></sub>]
-        Antwort[&lt;a href=&quot;StructureDefinition-MopedBeantwortenComposition.html&quot;&gt;AntwortComposition&lt;/a&gt;<br/><sub><i></i></sub>]
-        Entlassungsaviso[&lt;a href=&quot;StructureDefinition-MopedEntlassenAvisoComposition.html&quot;&gt;EntlassungsAvisoComposition&lt;/a&gt;<br/><sub><i>Entlassungsdatum vorhanden</i></sub>]
-        Entlassung[&lt;a href=&quot;StructureDefinition-MopedEntlassenAvisoComposition.html&quot;&gt;EntlassungVollstaendigComposition&lt;/a&gt;<br/><sub><i>Entlassungsdatum und Hauptdiagnose vorhanden</i></sub>]
-        Abrechnung[AbrechnungsComposition&lt;a href=&quot;TBD&quot;&gt;<br/><sub><i>Patient Entlassen, Diagnosen und Leistungen erfasst</i></sub>]
-        Entscheiden[EntscheidenComposition<br/><sub><i></i></sub>]
-        Siegel[SiegelComposition<br/><sub><i>Composition.status=final</i></sub>]
+        Aufnahme[AufnahmeComposition<br/>Patient & Encounter vorhanden]
+        Anfrage[AnfrageComposition<br/>Versicherer vorhanden]
+        Antwort[AntwortComposition<br/>VAEResponse vorhanden]
+        Entlassungsaviso[EntlassungsAvisoComposition<br/>Entlassungsdatum vorhanden]
+        Entlassung[EntlassungVollstaendigComposition<br/>Entlassungsdatum und Hauptdiagnose vorhanden]
+        Abrechnung[AbrechnungsComposition<br/>Patient Entlassen, Diagnosen und Leistungen erfasst]
+        Entscheiden[EntscheidenComposition<br/>]
+        Siegel[SiegelComposition<br/>Composition.status=final]
     end
 
     Master --> Aufnahme
