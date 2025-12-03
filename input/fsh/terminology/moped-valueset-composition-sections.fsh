@@ -22,11 +22,11 @@ Title: "Moped Composition Sections ValueSet"
 Description: "ValueSet für die Moped Sections der Composition Ressource"
 * ^experimental = true
 * include codes from system CompositionSectionsCS
-* https://elga.moped.at/CodeSystem/MopedEncounterTypesCS#ENC 
-* https://elga.moped.at/CodeSystem/MopedEncounterTypesCS#TENC
-* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#ARKREQ
-* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#ARKRESP
-* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#VAEREQ
-* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#VAERESP
-* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#LKFREQ
-* https://elga.moped.at/CodeSystem/MopedClaimTypeCS#LKFRESP
+* MopedEncounterTypesCS#ENC 
+* MopedEncounterTypesCS#TENC
+* MopedClaimTypeCS#ARKREQ
+* MopedClaimTypeCS#ARKRESP
+* MopedClaimTypeCS#VAEREQ
+* MopedClaimTypeCS#VAERESP
+* MopedClaimTypeCS#LKFREQ
+* MopedClaimTypeCS#LKFRESP

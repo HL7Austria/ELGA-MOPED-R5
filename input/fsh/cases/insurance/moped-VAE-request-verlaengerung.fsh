@@ -2,7 +2,7 @@ Profile: MopedVAERequestVerlaengerung
 Parent: MopedVAERequest
 Title : "MOPED VAERequest für die Verlängerung der VAE"
 Description: "MOPED Profil für die Verlängerung der Versichertenanspruchserklärung (VAE)"
-* subType = MopedClaimSubTypeCS#VAEV
+* subType = MopedClaimSubTypeCS#VAEREQV
 * insert ShallPopulateObligation(subType, MopedKHActor)
 * related ^slicing.rules = #open
 * related ^slicing.discriminator.type = #value
