@@ -10,7 +10,7 @@ Title: "MOPED TransferEncounter Ambulant"
 * identifier contains AufnahmezahlFunktionscodebezogen 0..1
 * identifier[AufnahmezahlFunktionscodebezogen].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[AufnahmezahlFunktionscodebezogen].type.coding.code = #VN (exactly)
-* identifier[AufnahmezahlFunktionscodebezogen].assigner only Reference(HL7ATCoreOrganization)
+* identifier[AufnahmezahlFunktionscodebezogen].assigner only Reference(MopedOrganizationAbteilung)
 * identifier[AufnahmezahlFunktionscodebezogen].system 1..1
 
 //TBD actualPeriod.start Uhrzeit verpflichtend machen
