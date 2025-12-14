@@ -237,7 +237,7 @@ def create_mapping_markdown(excel_path: str, LKF: bool = True) -> None:
     
     """
     kind = "LKF" if LKF else "KaOrg"
-    output_md_path = f"input/pagecontent/{kind.lower()}_mapping.md"
+    output_md_path = f"input/pagecontent/{'lkf' if LKF else 'ka-org'}_mapping.md"
     
     # Configure based on kind
     if LKF:
