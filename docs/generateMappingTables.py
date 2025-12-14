@@ -464,7 +464,7 @@ def lkf_mapping() -> Dict[str, List[MappingEntry]]:
     for k, v in qr_filtered.items():
         lkf_sd.setdefault(k, []).extend(v)
     
-    print(f"QR-Mappings gefiltert: {len(lkf_qr)} → {len(qr_filtered)} (nur I11/I12)")
+    #print(f"QR-Mappings gefiltert: {len(lkf_qr)} → {len(qr_filtered)} (nur I11/I12)")
     return lkf_sd
 
 def kaOrg_mapping() -> Dict[str, List[MappingEntry]]:
