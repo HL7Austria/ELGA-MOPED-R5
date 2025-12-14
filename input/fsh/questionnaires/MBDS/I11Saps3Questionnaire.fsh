@@ -18,43 +18,43 @@ Usage: #example
 * item[0].type = #group
 
 * item[0].item[+].linkId = "saps3-02"
-* item[0].item[=].text = "Krankenanstaltennummer/Leistungserbringer-ID"
+* item[0].item[=].text = "LKF: Krankenanstaltennummer"
 * item[0].item[=].type = #string
 
 * item[0].item[+].linkId = "saps3-03"
-* item[0].item[=].text = "Aufnahmezahl"
+* item[0].item[=].text = "LKF: Aufnahmezahl"
 * item[0].item[=].type = #string
 
 * item[0].item[+].linkId = "saps3-04"
-* item[0].item[=].text = "Datensatz-ID"
+* item[0].item[=].text = "LKF: Datensatz-ID"
 * item[0].item[=].type = #string
 
 * item[0].item[+].linkId = "saps3-05"
-* item[0].item[=].text = "Aufnahme-/Kontaktdatum"
+* item[0].item[=].text = "LKF: Aufnahme-/Kontaktdatum"
 * item[0].item[=].type = #date
 
 * item[0].item[+].linkId = "saps3-06"
-* item[0].item[=].text = "Bettenführende Hauptkostenstelle – Positionsnummer"
+* item[0].item[=].text = "LKF: Bettenführende Hauptkostenstelle – Positionsnummer"
 * item[0].item[=].type = #string
 
 * item[0].item[+].linkId = "saps3-07"
-* item[0].item[=].text = "Erhebungsdatum"
+* item[0].item[=].text = "LKF: Erhebungsdatum"
 * item[0].item[=].type = #date
 
 * item[0].item[+].linkId = "saps3-08"
-* item[0].item[=].text = "Akute Infektion bei Aufnahme - Nosokomiale Infektion"
+* item[0].item[=].text = "LKF: Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Nosokomiale Infektion"
 * item[0].item[=].type = #boolean
 
 * item[0].item[+].linkId = "saps3-08a"
-* item[0].item[=].text = "Akute Infektion bei Aufnahme - Respiratorische Infektion"
+* item[0].item[=].text = "LKF: Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Respiratorische Infektion"
 * item[0].item[=].type = #boolean
 
 * item[0].item[+].linkId = "saps3-09"
-* item[0].item[=].text = "Aufnahmegrund: Anderer, nicht klassifiziert"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Anderer, nicht klassifiziert"
 * item[0].item[=].type = #boolean
 
 * item[0].item[+].linkId = "saps3-10"
-* item[0].item[=].text = "Aufnahmegrund: Basispflege und Observanz"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Basispflege und Observanz"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Basispflege und Observanz/nicht erhoben"
@@ -67,7 +67,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-11"
-* item[0].item[=].text = "Aufnahmegrund: Gastrointestinal"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Gastrointestinal"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Gastrointestinal/nicht erhoben"
@@ -81,7 +81,7 @@ Usage: #example
 * item[0].item[=].answerOption[4].valueCoding.display = "Andere"
 
 * item[0].item[+].linkId = "saps3-12"
-* item[0].item[=].text = "Aufnahmegrund: Hämatologisch"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Hämatologisch"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Hämatologisch/nicht erhoben"
@@ -94,7 +94,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-13"
-* item[0].item[=].text = "Aufnahmegrund: Kardiovaskulär"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Kardiovaskulär"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Kardiovaskulär/nicht erhoben"
@@ -125,7 +125,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-14"
-* item[0].item[=].text = "Aufnahmegrund: Leber"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Leber"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Leber/nicht erhoben"
@@ -136,7 +136,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-15"
-* item[0].item[=].text = "Aufnahmegrund: Metabolisch"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Metabolisch"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Metabolisch/nicht erhoben"
@@ -151,7 +151,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-16"
-* item[0].item[=].text = "Aufnahmegrund: Neurologisch"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Neurologisch"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Neurologisch/nicht erhoben"
@@ -168,7 +168,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-17"
-* item[0].item[=].text = "Aufnahmegrund: Renal"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Renal"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Renal/nicht erhoben"
@@ -183,7 +183,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-18"
-* item[0].item[=].text = "Aufnahmegrund: Respiratorisch"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Respiratorisch"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Kein Aufnahmegrund: Respiratorisch/nicht erhoben"
@@ -196,11 +196,11 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-19"
-* item[0].item[=].text = "Aufnahmegrund: Schweres Trauma"
+* item[0].item[=].text = "LKF: Aufnahmegrund: Schweres Trauma"
 * item[0].item[=].type = #boolean
 
 * item[0].item[+].linkId = "saps3-20"
-* item[0].item[=].text = "Aufnahmetyp"
+* item[0].item[=].text = "LKF: Aufnahmetyp"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Geplant: Patient:innen, deren Aufnahme zumindest 12 Stunden im Voraus geplant wurde"
@@ -209,7 +209,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-21"
-* item[0].item[=].text = "Blutbild: Leukozyten (Minimum)"
+* item[0].item[=].text = "LKF: Blutbild: Leukozyten (Minimum)"
 * item[0].item[=].type = #decimal
 * item[0].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[0].item[=].extension[0].valueCoding.code = #G/L
@@ -217,11 +217,11 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-22"
-* item[0].item[=].text = "Blutbild: pH-Wert"
+* item[0].item[=].text = "LKF: Blutbild: pH-Wert"
 * item[0].item[=].type = #decimal
 
 * item[0].item[+].linkId = "saps3-23"
-* item[0].item[=].text = "Blutbild: Thrombozyten (Minimum)"
+* item[0].item[=].text = "LKF: Blutbild: Thrombozyten (Minimum)"
 * item[0].item[=].type = #decimal
 * item[0].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[0].item[=].extension[0].valueCoding.code = #G/L
@@ -229,7 +229,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-24"
-* item[0].item[=].text = "Chirurgie – Eingriff"
+* item[0].item[=].text = "LKF: Chirurgie – Eingriff"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #0
 * item[0].item[=].answerOption[0].valueCoding.display = "Keine Chirurgie – Eingriff/nicht erhoben"
@@ -320,7 +320,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-25"
-* item[0].item[=].text = "Chirurgischer Status"
+* item[0].item[=].text = "LKF: Chirurgischer Status"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Elektive Chirurgie: Patient:innen, welche einem chirurgischen Eingriff unterzogen wurden (vor der Aufnahme auf die Intensivstation) welcher länger als 24 Stunden voraus geplant wurde"
@@ -331,7 +331,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-26"
-* item[0].item[=].text = "Glasgow Coma Scale: motorische Reaktion"
+* item[0].item[=].text = "LKF: Glasgow Coma Scale: motorische Reaktion"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Keine Antwort"
@@ -348,7 +348,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-27"
-* item[0].item[=].text = "Glasgow Coma Scale: verbale Reaktion"
+* item[0].item[=].text = "LKF: Glasgow Coma Scale: verbale Reaktion"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Keine Antwort"
@@ -363,7 +363,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-28"
-* item[0].item[=].text = "Glasgow Coma Scale: visuelle Reaktion"
+* item[0].item[=].text = "LKF: Glasgow Coma Scale: visuelle Reaktion"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Keine Antwort"
@@ -376,7 +376,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-29"
-* item[0].item[=].text = "Herzfrequenz (Maximum)"
+* item[0].item[=].text = "LKF: Herzfrequenz (Maximum)"
 * item[0].item[=].type = #integer
 * item[0].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[0].item[=].extension[0].valueCoding.code = #Schläge/min
@@ -384,70 +384,70 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-30"
-* item[0].item[=].text = "Koexistierende Erkrankungen"
+* item[0].item[=].text = "LKF: Koexistierende Erkrankungen"
 * item[0].item[=].type = #group
 * item[0].item[=].item[+].linkId = "saps3-30-1"
-* item[0].item[=].item[=].text = "Hämatologische Erkrankung: Lymphom, akute Leukämie oder Multiples Myelom"
+* item[0].item[=].item[=].text = "LKF: Hämatologische Erkrankung: Lymphom, akute Leukämie oder Multiples Myelom"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-2"
-* item[0].item[=].item[=].text = "HIV-positiv (kein AIDS): Positive HIV-Serologie, aber keine AIDS-Kriterien nach den CDC/WHO-Definitionen; CD4-Zellen sind, sofern gemessen, > 200"
+* item[0].item[=].item[=].text = "LKF: HIV-positiv (kein AIDS): Positive HIV-Serologie, aber keine AIDS-Kriterien nach den CDC/WHO-Definitionen; CD4-Zellen sind, sofern gemessen, > 200"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-3"
-* item[0].item[=].item[=].text = "AIDS: Patient:innen, welche die CDC/WHO-Definitionen für AIDS erfüllen, wie HIV-positive Patient:innen mit klinischen Komplikationen wie Pneumocystis carinii Pneumonie, Kaposi-Sarkom, Lymphom, Tuberkulose oder Toxoplasmose, oder CD4-Zellen sind, sofern gemessen, < 200"
+* item[0].item[=].item[=].text = "LKF: AIDS: Patient:innen, welche die CDC/WHO-Definitionen für AIDS erfüllen, wie HIV-positive Patient:innen mit klinischen Komplikationen wie Pneumocystis carinii Pneumonie, Kaposi-Sarkom, Lymphom, Tuberkulose oder Toxoplasmose, oder CD4-Zellen sind, sofern gemessen, < 200"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-4"
-* item[0].item[=].item[=].text = "Metastasierendes Malignom: Neoplasma mit Metastasen, bestätigt durch radiologische (z.B. CT), chirurgische oder andere Methoden"
+* item[0].item[=].item[=].text = "LKF: Metastasierendes Malignom: Neoplasma mit Metastasen, bestätigt durch radiologische (z.B. CT), chirurgische oder andere Methoden"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-5"
-* item[0].item[=].item[=].text = "Malignom, nicht metastasierend: Neoplasma ohne Metastasen, bestätigt durch radiologische (z.B. CT), chirurgische oder andere Methoden"
+* item[0].item[=].item[=].text = "LKF: Malignom, nicht metastasierend: Neoplasma ohne Metastasen, bestätigt durch radiologische (z.B. CT), chirurgische oder andere Methoden"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-6"
-* item[0].item[=].item[=].text = "Leberzirrhose: Dokumentiert durch Biopsie oder klinischen Symptomen portaler Hypertension, Präsenz ösophagealer oder gastrischer Varizen (bestätigt durch Endoskopie oder Chirurgie) oder der Demonstration eines retrograden Flusses in der Vena lienalis, Episoden hepatischer Enzephalopathie oder einer Anamnese von Varizenblutungen"
+* item[0].item[=].item[=].text = "LKF: Leberzirrhose: Dokumentiert durch Biopsie oder klinischen Symptomen portaler Hypertension, Präsenz ösophagealer oder gastrischer Varizen (bestätigt durch Endoskopie oder Chirurgie) oder der Demonstration eines retrograden Flusses in der Vena lienalis, Episoden hepatischer Enzephalopathie oder einer Anamnese von Varizenblutungen"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-7"
-* item[0].item[=].item[=].text = "Herzinsuffizienz NYHA II: Müdigkeit, Dyspnoe oder Angina pectoris, welche mit normaler Betätigung einhergehen"
+* item[0].item[=].item[=].text = "LKF: Herzinsuffizienz NYHA II: Müdigkeit, Dyspnoe oder Angina pectoris, welche mit normaler Betätigung einhergehen"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-8"
-* item[0].item[=].item[=].text = "Herzinsuffizienz NYHA III: Müdigkeit, Dyspnoe oder Angina pectoris, welche bereits bei mittelschwerer Betätigung auftreten"
+* item[0].item[=].item[=].text = "LKF: Herzinsuffizienz NYHA III: Müdigkeit, Dyspnoe oder Angina pectoris, welche bereits bei mittelschwerer Betätigung auftreten"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-9"
-* item[0].item[=].item[=].text = "Herzinsuffizienz NYHA IV: Müdigkeit, Dyspnoe oder Angina pectoris, welche mit leichter Betätigung einhergehen. Diese Patient:innen können nur geringe Wegstrecken zu Fuß zurücklegen oder andere Tätigkeiten alleine durchführen."
+* item[0].item[=].item[=].text = "LKF: Herzinsuffizienz NYHA IV: Müdigkeit, Dyspnoe oder Angina pectoris, welche mit leichter Betätigung einhergehen. Diese Patient:innen können nur geringe Wegstrecken zu Fuß zurücklegen oder andere Tätigkeiten alleine durchführen."
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-10"
-* item[0].item[=].item[=].text = "Chronische respiratorische Insuffizienz: Permanente Atemnot bei leichter Aktivität aufgrund pulmonaler Erkrankungen (chronisch restriktiver oder obstruktiver Natur). Funktionell sind diese Patient:innen unfähig, alleine Stiegen zu steigen, zu arbeiten oder den Haushalt zu verrichten. Sollte auch dokumentiert werden, wenn eines der folgenden Symptome vorliegt: chronische Hypoxie, Hyperkapnie, sekundäre Polyzythämie oder pulmonale Hypertonension mit systolischem Druck > 40 mmHg) oder Respirator-Abhängigkeit."
+* item[0].item[=].item[=].text = "LKF: Chronische respiratorische Insuffizienz: Permanente Atemnot bei leichter Aktivität aufgrund pulmonaler Erkrankungen (chronisch restriktiver oder obstruktiver Natur). Funktionell sind diese Patient:innen unfähig, alleine Stiegen zu steigen, zu arbeiten oder den Haushalt zu verrichten. Sollte auch dokumentiert werden, wenn eines der folgenden Symptome vorliegt: chronische Hypoxie, Hyperkapnie, sekundäre Polyzythämie oder pulmonale Hypertonension mit systolischem Druck > 40 mmHg) oder Respirator-Abhängigkeit."
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-11"
-* item[0].item[=].item[=].text = "Chronische renale Insuffizienz: Chronische renale Therapie (Hämodialyse oder Peritonealdialyse) bei irreversiblen renalen Erkrankungen oder Anamnese einer chronischen renalen Insuffizienz"
+* item[0].item[=].item[=].text = "LKF: Chronische renale Insuffizienz: Chronische renale Therapie (Hämodialyse oder Peritonealdialyse) bei irreversiblen renalen Erkrankungen oder Anamnese einer chronischen renalen Insuffizienz"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-12"
-* item[0].item[=].item[=].text = "Alkoholismus: Alkoholeinfuhr von mehr als 80 g pro Tag über einen Zeitraum von mindestens 6 Monaten vor der Aufnahme, welche klinische Symptome verursacht wie: Logorrhoe, Enzephalopathie, andere neurologische Erkrankungen, schlechter Ernährungszustand oder Leberzirrhose"
+* item[0].item[=].item[=].text = "LKF: Alkoholismus: Alkoholeinfuhr von mehr als 80 g pro Tag über einen Zeitraum von mindestens 6 Monaten vor der Aufnahme, welche klinische Symptome verursacht wie: Logorrhoe, Enzephalopathie, andere neurologische Erkrankungen, schlechter Ernährungszustand oder Leberzirrhose"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-13"
-* item[0].item[=].item[=].text = "Drogensucht: Drogenabhängigkeit aufgrund intravenöser Drogeneinnahme (Kokain, Opiate und Derivate) für mindestens 6 Monate vor der Aufnahme. Patient:innen im Methadonprogramm ohne andere Drogenkonsumation fallen nicht darunter."
+* item[0].item[=].item[=].text = "LKF: Drogensucht: Drogenabhängigkeit aufgrund intravenöser Drogeneinnahme (Kokain, Opiate und Derivate) für mindestens 6 Monate vor der Aufnahme. Patient:innen im Methadonprogramm ohne andere Drogenkonsumation fallen nicht darunter."
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-14"
-* item[0].item[=].item[=].text = "Immunsuppression, andere: Der:die Patient:in weist eine Erkrankung auf, welche genügend fortgeschritten ist, um die Infektionsresistenz zu unterdrücken: Schwere Mangelernährung, angeborene Defektzustände des humoralen oder zellulären Systems. Exkludiert AIDS oder HIV-Infektion, metastasiernde oder hämatologische Neoplasien, Chemotherapie, Radiotherapie und Steroidbehandlung."
+* item[0].item[=].item[=].text = "LKF: Immunsuppression, andere: Der:die Patient:in weist eine Erkrankung auf, welche genügend fortgeschritten ist, um die Infektionsresistenz zu unterdrücken: Schwere Mangelernährung, angeborene Defektzustände des humoralen oder zellulären Systems. Exkludiert AIDS oder HIV-Infektion, metastasiernde oder hämatologische Neoplasien, Chemotherapie, Radiotherapie und Steroidbehandlung."
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-15"
-* item[0].item[=].item[=].text = "Insulinpflichtiger Diabetes mellitus: Patient:innen, welche tägliche Insulingaben (Injektionen) benötigen"
+* item[0].item[=].item[=].text = "LKF: Insulinpflichtiger Diabetes mellitus: Patient:innen, welche tägliche Insulingaben (Injektionen) benötigen"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-16"
-* item[0].item[=].item[=].text = "Nicht-insulinpflichtiger Diabetes mellitus: Patient:innen mit diagnostiziertem Diabetes mellitus, welcher durch diätetische Maßnahmen und/oder Medikamente kontrolliert werden kann. Diese Patient:innen benötigen nicht regelmäßig Insulin."
+* item[0].item[=].item[=].text = "LKF: Nicht-insulinpflichtiger Diabetes mellitus: Patient:innen mit diagnostiziertem Diabetes mellitus, welcher durch diätetische Maßnahmen und/oder Medikamente kontrolliert werden kann. Diese Patient:innen benötigen nicht regelmäßig Insulin."
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-17"
-* item[0].item[=].item[=].text = "Steroide Behandlung: Tägliche Gabe von >= 0,3mg/kg KG Prednisolon oder äquivalente Dosierungen anderer Kortikoide mindestens 6 Monate vor der Aufnahme. Topische Steroide oder Steroide per Inhalationen gehören nicht dazu."
+* item[0].item[=].item[=].text = "LKF: Steroide Behandlung: Tägliche Gabe von >= 0,3mg/kg KG Prednisolon oder äquivalente Dosierungen anderer Kortikoide mindestens 6 Monate vor der Aufnahme. Topische Steroide oder Steroide per Inhalationen gehören nicht dazu."
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-18"
-* item[0].item[=].item[=].text = "Bestrahlung: Strahlentherapie während der letzten 6 Monate vor der Aufnahme. Exkludiert Strahlentherapie für nicht-invasive Tumoren, enterale oder parenterale Radioisotop-Therapie, radioaktive Implantate, Therapie zur Verhinderung heterotopischer Knochenformationen."
+* item[0].item[=].item[=].text = "LKF: Bestrahlung: Strahlentherapie während der letzten 6 Monate vor der Aufnahme. Exkludiert Strahlentherapie für nicht-invasive Tumoren, enterale oder parenterale Radioisotop-Therapie, radioaktive Implantate, Therapie zur Verhinderung heterotopischer Knochenformationen."
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-19"
-* item[0].item[=].item[=].text = "Chemotherapie: Chemotherapie in den 6 Monaten vor der Aufnahme, inkludiert immunsuppressierende Therapie für Malignome, Rheumatoide Arthritis oder entzündliche Darmerkrankungen (außer reine Behandlung mit Steroiden)."
+* item[0].item[=].item[=].text = "LKF: Chemotherapie: Chemotherapie in den 6 Monaten vor der Aufnahme, inkludiert immunsuppressierende Therapie für Malignome, Rheumatoide Arthritis oder entzündliche Darmerkrankungen (außer reine Behandlung mit Steroiden)."
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-20"
-* item[0].item[=].item[=].text = "COPD: Chronisch obstruktive pulmonale Erkrankungen aufgrund chronischer Bronchitis und/oder Emphysem"
+* item[0].item[=].item[=].text = "LKF: COPD: Chronisch obstruktive pulmonale Erkrankungen aufgrund chronischer Bronchitis und/oder Emphysem"
 * item[0].item[=].item[=].type = #boolean
 * item[0].item[=].item[+].linkId = "saps3-30-21"
-* item[0].item[=].item[=].text = "Arterielle Hypertonension: Anamnese eines systolischen Blutdrucks >= 160 mmHg und/oder eines diastolischen Blutdrucks >= 95 mmHg, behandelt oder unbehandelt"
+* item[0].item[=].item[=].text = "LKF: Arterielle Hypertonension: Anamnese eines systolischen Blutdrucks >= 160 mmHg und/oder eines diastolischen Blutdrucks >= 95 mmHg, behandelt oder unbehandelt"
 * item[0].item[=].item[=].type = #boolean
 
 
@@ -455,7 +455,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-31"
-* item[0].item[=].text = "Körpertemperatur (Maximum)"
+* item[0].item[=].text = "LKF: Körpertemperatur (Maximum)"
 * item[0].item[=].type = #decimal
 * item[0].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[0].item[=].extension[0].valueCoding.code = #°Celsius
@@ -463,11 +463,11 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-32"
-* item[0].item[=].text = "Mechanische Beatmung"
+* item[0].item[=].text = "LKF: Mechanische Beatmung"
 * item[0].item[=].type = #boolean
 
 * item[0].item[+].linkId = "saps3-33"
-* item[0].item[=].text = "Sauerstoff-Partialdruck arteriell (PaO2)"
+* item[0].item[=].text = "LKF: Sauerstoff-Partialdruck arteriell (PaO2)"
 * item[0].item[=].type = #decimal
 * item[0].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[0].item[=].extension[0].valueCoding.code = #mmHG
@@ -475,7 +475,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-34"
-* item[0].item[=].text = "Sauerstoffkonzentration inspiratorisch (FiO2)"
+* item[0].item[=].text = "LKF: Sauerstoffkonzentration inspiratorisch (FiO2)"
 * item[0].item[=].type = #decimal
 * item[0].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[0].item[=].extension[0].valueCoding.code = #%
@@ -483,7 +483,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-35"
-* item[0].item[=].text = "Serum: Bilirubin (Maximum)"
+* item[0].item[=].text = "LKF: Serum: Bilirubin (Maximum)"
 * item[0].item[=].type = #decimal
 * item[0].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[0].item[=].extension[0].valueCoding.code = #mg/dL
@@ -491,7 +491,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-36"
-* item[0].item[=].text = "Serum: Kreatinin (Maximum)"
+* item[0].item[=].text = "LKF: Serum: Kreatinin (Maximum)"
 * item[0].item[=].type = #decimal
 * item[0].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[0].item[=].extension[0].valueCoding.code = #mg/dL
@@ -499,7 +499,7 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-37"
-* item[0].item[=].text = "Systolischer Blutdruck (Minimum)"
+* item[0].item[=].text = "LKF: Systolischer Blutdruck (Minimum)"
 * item[0].item[=].type = #decimal
 * item[0].item[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
 * item[0].item[=].extension[0].valueCoding.code = #mmHg
@@ -507,21 +507,21 @@ Usage: #example
 
 
 * item[0].item[+].linkId = "saps3-38"
-* item[0].item[=].text = "Therapeutische Maßnahmen (vor IBS)"
+* item[0].item[=].text = "LKF: Therapeutische Maßnahmen (vor IBS)"
 * item[0].item[=].type = #group
 * item[0].item[=].item[0].linkId = "saps3-38-1"
-* item[0].item[=].item[0].text = "CPR: Herzstillstand mit kardiopulmonaler Reanimation vor der Aufnahme auf die Intensivstation. Die Reanimation muss enthalten: Thoraxkompressionen, Herzmassage oder Defibrillation."
+* item[0].item[=].item[0].text = "LKF: CPR: Herzstillstand mit kardiopulmonaler Reanimation vor der Aufnahme auf die Intensivstation. Die Reanimation muss enthalten: Thoraxkompressionen, Herzmassage oder Defibrillation."
 * item[0].item[=].item[0].type = #boolean
 * item[0].item[=].item[1].linkId = "saps3-38-2"
-* item[0].item[=].item[1].text = "Vasoaktive Medikamente: Kontinuierlicher Einsatz von Vasopressoren, um den Blutdruck aufrechtzuerhalten (Adrenalin, Noradrenalin, Dobutamin in jeder Dosierung, Dopamin >5 μg/kgKG/ min), für mindestens eine Stunde"
+* item[0].item[=].item[1].text = "LKF: Vasoaktive Medikamente: Kontinuierlicher Einsatz von Vasopressoren, um den Blutdruck aufrechtzuerhalten (Adrenalin, Noradrenalin, Dobutamin in jeder Dosierung, Dopamin >5 μg/kgKG/ min), für mindestens eine Stunde"
 * item[0].item[=].item[1].type = #boolean
 * item[0].item[=].item[2].linkId = "saps3-38-3"
-* item[0].item[=].item[2].text = "Mechanische Beatmung: Invasive oder nicht-invasive Beatmung. Nicht inkludiert ist die alleinige Sauerstoffgabe über eine Venturi-Maske oder Nasenbrille."
+* item[0].item[=].item[2].text = "LKF: Mechanische Beatmung: Invasive oder nicht-invasive Beatmung. Nicht inkludiert ist die alleinige Sauerstoffgabe über eine Venturi-Maske oder Nasenbrille."
 * item[0].item[=].item[2].type = #boolean
 
 
 * item[0].item[+].linkId = "saps3-39"
-* item[0].item[=].text = "Zutransferierung"
+* item[0].item[=].text = "LKF: Zutransferierung"
 * item[0].item[=].type = #coding
 * item[0].item[=].answerOption[0].valueCoding.code = #1
 * item[0].item[=].answerOption[0].valueCoding.display = "Bettenstation: Der:die Patient:in wurde von einer Normalstation entweder derselben oder einer anderen Krankenanstalt zurtransferiert."

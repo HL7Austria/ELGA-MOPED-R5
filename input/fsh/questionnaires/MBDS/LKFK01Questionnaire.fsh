@@ -7,7 +7,7 @@ Usage: #example
 * item[0].type = #string
 * item[=].maxLength = 3
 * item[=].linkId = "satzartenkennzeichen"
-* item[=].text = "Satzartenkennzeichen"
+* item[=].text = "LKF: Satzartenkennzeichen"
 * item[=].readOnly = true
 * item[=].initial.valueString = "K01"
 * item[+].type = #integer
@@ -17,22 +17,22 @@ Usage: #example
 * item[+].type = #string
 * item[=].maxLength = 6
 * item[=].linkId = "krankenanstaltennummer"
-* item[=].text = "Krankenanstaltennummer"
+* item[=].text = "LKF: Krankenanstaltennummer"
 * item[+].type = #integer
 * item[=].maxLength = 8
 * item[=].linkId = "funktionscode"
-* item[=].text = "Funktionscode"
+* item[=].text = "LKF: Funktionscode"
 * item[+].type = #string
 * item[=].maxLength = 8
 * item[=].linkId = "interne-kostenstellennummer"
-* item[=].text = "Interne Kostenstellennummer"
+* item[=].text = "LKF: Interne Kostenstellennummer"
 * item[+].type = #string
 * item[=].maxLength = 50
 * item[=].linkId = "interne-kostenstellenbezeichnung"
-* item[=].text = "Interne Kostenstellenbezeichnung"
+* item[=].text = "LKF: Interne Kostenstellenbezeichnung"
 * item[+].type = #coding
 * item[=].linkId = "spezielle-organisationsform"
-* item[=].text = "Spezielle Organisationsform"
+* item[=].text = "LKF: Spezielle Organisationsform"
 * item[=].answerOption[0].valueCoding = #A "Abteilung"
 * item[=].answerOption[+].valueCoding = #R "Referenzzentrum – ohne Versorgungsstufengliederung"
 * item[=].answerOption[+].valueCoding = #Z "Referenzzentrum – höchste Versorgungsstufe"

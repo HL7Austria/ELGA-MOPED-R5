@@ -8,54 +8,54 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 * subjectType = #Patient
 
 // Krankenanstaltennummer/Leistungserbringer-ID
-* item[+].linkId = "krankenanstaltennummer-leistungserbringer-id"
-* item[=].text = "Krankenanstaltennummer/Leistungserbringer-ID"
+* item[+].linkId = "krankenanstaltennummer"
+* item[=].text = "LKF: Krankenanstaltennummer"
 * item[=].type = #string
 * item[=].maxLength = 20
 
 // Aufnahmezahl
 * item[+].linkId = "aufnahmezahl"
-* item[=].text = "Aufnahmezahl"
+* item[=].text = "LKF: Aufnahmezahl"
 * item[=].type = #string
 * item[=].maxLength = 12
 
 // Datensatz-ID
 * item[+].linkId = "datensatz-id"
-* item[=].text = "Datensatz-ID"
+* item[=].text = "LKF: Datensatz-ID"
 * item[=].type = #string
 * item[=].maxLength = 64
 
 // Aufnahme-/Kontaktdatum
 * item[+].linkId = "aufnahme-kontaktdatum"
-* item[=].text = "Aufnahme-/Kontaktdatum"
+* item[=].text = "LKF: Aufnahme-/Kontaktdatum"
 * item[=].type = #string
 * item[=].maxLength = 8
 
 // Bettenführende Hauptkostenstelle – Positionsnummer
 * item[+].linkId = "bettenfuhrende-hauptkostenstelle-positionsnummer"
-* item[=].text = "Bettenführende Hauptkostenstelle – Positionsnummer"
+* item[=].text = "LKF: Bettenführende Hauptkostenstelle – Positionsnummer"
 * item[=].type = #string
 * item[=].maxLength = 3
 
 // Erhebungsdatum
 * item[+].linkId = "erhebungsdatum"
-* item[=].text = "Erhebungsdatum"
+* item[=].text = "LKF: Erhebungsdatum"
 * item[=].type = #string
 * item[=].maxLength = 8
 
 // Standard-Monitoring
 * item[+].linkId = "standard-monitoring"
-* item[=].text = "Standard-Monitoring"
+* item[=].text = "LKF: Standard-Monitoring"
 * item[=].type = #boolean
 
 // Labor
 * item[+].linkId = "labor"
-* item[=].text = "Labor"
+* item[=].text = "LKF: Labor"
 * item[=].type = #boolean
 
 // Medikamente
 * item[+].linkId = "medikamente"
-* item[=].text = "Medikamente"
+* item[=].text = "LKF: Medikamente"
 * item[=].type = #coding
 * item[=].answerOption[0].valueCoding.code = #0
 * item[=].answerOption[0].valueCoding.display = "Keine Medikamente/nicht erhoben"
@@ -67,7 +67,7 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 
 // Verbandswechsel
 * item[+].linkId = "verbandswechsel"
-* item[=].text = "Verbandswechsel"
+* item[=].text = "LKF: Verbandswechsel"
 * item[=].type = #coding
 * item[=].answerOption[+].valueCoding.code = #0
 * item[=].answerOption[=].valueCoding.display = "Kein Verbandswechsel/nicht erhoben"
@@ -82,12 +82,12 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 
 // Drainagenpflege
 * item[+].linkId = "drainagenpflege"
-* item[=].text = "Drainagenpflege"
+* item[=].text = "LKF: Drainagenpflege"
 * item[=].type = #boolean
 
 // Atmungsmodus
 * item[+].linkId = "atmungsmodus"
-* item[=].text = "Atmungsmodus"
+* item[=].text = "LKF: Atmungsmodus"
 * item[=].type = #coding
 * item[=].answerOption[+].valueCoding.code = #0
 * item[=].answerOption[=].valueCoding.display = "Spontanatmung/nicht erhoben"
@@ -106,7 +106,7 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 
 // Atemwegszugang
 * item[+].linkId = "atemwegszugang"
-* item[=].text = "Atemwegszugang"
+* item[=].text = "LKF: Atemwegszugang"
 * item[=].type = #coding
 * item[=].answerOption[+].valueCoding.code = #0
 * item[=].answerOption[=].valueCoding.display = "Keine Atemwegszugang/nicht erhoben"
@@ -123,17 +123,17 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 
 // Tubus-/Stomapflege
 * item[+].linkId = "tubus-stomapflege"
-* item[=].text = "Tubus-/Stomapflege"
+* item[=].text = "LKF: Tubus-/Stomapflege"
 * item[=].type = #boolean
 
 // Atemtherapie
 * item[+].linkId = "atemtherapie"
-* item[=].text = "Atemtherapie"
+* item[=].text = "LKF: Atemtherapie"
 * item[=].type = #boolean
 
 // Medikamente vasoaktiv
 * item[+].linkId = "medikamente-vasoaktiv"
-* item[=].text = "Medikamente vasoaktiv"
+* item[=].text = "LKF: Medikamente vasoaktiv"
 * item[=].type = #coding
 * item[=].answerOption[0].valueCoding.code = #0
 * item[=].answerOption[0].valueCoding.display = "Keine Medikamente vasoaktiv/nicht erhoben"
@@ -144,17 +144,17 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 
 // Flüssigkeitsersatz massiv
 * item[+].linkId = "flussigkeitsersatz-massiv"
-* item[=].text = "Flüssigkeitsersatz massiv"
+* item[=].text = "LKF: Flüssigkeitsersatz massiv"
 * item[=].type = #boolean
 
 // Katheter arteriell
 * item[+].linkId = "katheter-arteriell"
-* item[=].text = "Katheter arteriell"
+* item[=].text = "LKF: Katheter arteriell"
 * item[=].type = #boolean
 
 // Monitoring hämodynamisch
 * item[+].linkId = "monitoring-hamodynamisch"
-* item[=].text = "Monitoring hämodynamisch"
+* item[=].text = "LKF: Monitoring hämodynamisch"
 * item[=].type = #coding
 * item[=].answerOption[0].valueCoding.code = #0
 * item[=].answerOption[0].valueCoding.display = "Kein Monitoring hämodynamisch/nicht erhoben"
@@ -171,52 +171,52 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 
 // Katheter zentralvenös
 * item[+].linkId = "katheter-zentralvenos"
-* item[=].text = "Katheter zentralvenös"
+* item[=].text = "LKF: Katheter zentralvenös"
 * item[=].type = #boolean
 
 // Reanimation kardiopulmonal
 * item[+].linkId = "reanimation-kardiopulmonal"
-* item[=].text = "Reanimation kardiopulmonal"
+* item[=].text = "LKF: Reanimation kardiopulmonal"
 * item[=].type = #boolean
 
 // Nierenersatztherapie
 * item[+].linkId = "nierenersatztherapie"
-* item[=].text = "Nierenersatztherapie"
+* item[=].text = "LKF: Nierenersatztherapie"
 * item[=].type = #boolean
 
 // Harnbilanzierung
 * item[+].linkId = "harnbilanzierung"
-* item[=].text = "Harnbilanzierung"
+* item[=].text = "LKF: Harnbilanzierung"
 * item[=].type = #boolean
 
 // Diurese aktiv
 * item[+].linkId = "diurese-aktiv"
-* item[=].text = "Diurese aktiv"
+* item[=].text = "LKF: Diurese aktiv"
 * item[=].type = #boolean
 
 // Hirndruckmessung
 * item[+].linkId = "hirndruckmessung"
-* item[=].text = "Hirndruckmessung"
+* item[=].text = "LKF: Hirndruckmessung"
 * item[=].type = #boolean
 
 // Behandlung metabolischer Entgleisungen
 * item[+].linkId = "behandlung-metabolischer-entgleisungen"
-* item[=].text = "Behandlung metabolischer Entgleisungen"
+* item[=].text = "LKF: Behandlung metabolischer Entgleisungen"
 * item[=].type = #boolean
 
 // Ernährung enteral
 * item[+].linkId = "ernahrung-enteral"
-* item[=].text = "Ernährung enteral"
+* item[=].text = "LKF: Ernährung enteral"
 * item[=].type = #boolean
 
 // Ernährung parenteral
 * item[+].linkId = "ernahrung-parenteral"
-* item[=].text = "Ernährung parenteral"
+* item[=].text = "LKF: Ernährung parenteral"
 * item[=].type = #boolean
 
 // Interventionen
 * item[+].linkId = "interventionen"
-* item[=].text = "Interventionen"
+* item[=].text = "LKF: Interventionen"
 * item[=].type = #coding
 * item[=].answerOption[0].valueCoding.code = #0
 * item[=].answerOption[0].valueCoding.display = "Keine Intervention einfach/nicht erhoben"
@@ -227,12 +227,12 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 
 // Diagnostik und Therapie außerhalb der IBS
 * item[+].linkId = "diagnostik-therapie-ausserhalb-ibs"
-* item[=].text = "Diagnostik und Therapie außerhalb der IBS"
+* item[=].text = "LKF: Diagnostik und Therapie außerhalb der IBS"
 * item[=].type = #boolean
 
 // Agitation und Delirium
 * item[+].linkId = "agitation-delirium"
-* item[=].text = "Agitation und Delirium"
+* item[=].text = "LKF: Agitation und Delirium"
 * item[=].type = #coding
 * item[=].answerOption[0].valueCoding.code = #0
 * item[=].answerOption[0].valueCoding.display = "Keine Agitation/Delirium/nicht erhoben"
@@ -253,25 +253,25 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 
 // Assist kardial
 * item[+].linkId = "assist-kardial"
-* item[=].text = "Assist kardial"
+* item[=].text = "LKF: Assist kardial"
 * item[=].type = #boolean
 
 // Assist pulmonal
 * item[+].linkId = "assist-pulmonal"
-* item[=].text = "Assist pulmonal"
+* item[=].text = "LKF: Assist pulmonal"
 * item[=].type = #boolean
 
 // Hypothermie therapeutisch
 * item[+].linkId = "hypothermie-therapeutisch"
-* item[=].text = "Hypothermie therapeutisch"
+* item[=].text = "LKF: Hypothermie therapeutisch"
 * item[=].type = #boolean
 
 // Lebersupport extrakorporal
 * item[+].linkId = "lebersupport-extrakorporal"
-* item[=].text = "Lebersupport extrakorporal"
+* item[=].text = "LKF: Lebersupport extrakorporal"
 * item[=].type = #boolean
 
 // Kontinuierliche intravenöse antikonvulsive Therapie
 * item[+].linkId = "kontinuierliche-intravenose-antikonvulsive-therapie"
-* item[=].text = "Kontinuierliche intravenöse antikonvulsive Therapie"
+* item[=].text = "LKF: Kontinuierliche intravenöse antikonvulsive Therapie"
 * item[=].type = #boolean
