@@ -3,6 +3,7 @@ Profile: MopedLKFRequest
 Parent: Claim
 Title: "MOPED LKFRequest"
 Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfrage."
+* insert MappingHeaderEinfuegen()
 * insert ShallPopulateObligation(created, MopedKHActor)
 * insert ShallPopulateObligation(status, MopedKHActor)
 * insert MopedHandleObligation(status)
@@ -18,13 +19,16 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * subType 1..1
 * insert ShallPopulateObligation(subType, MopedKHActor)
 * procedure.extension contains AbrechnungsRelevanz named AbrechnungsRelevanz 0..1
+* procedure.extension[AbrechnungsRelevanz] ^short = "LKF: Medizinische Leistung – Abrechnungsrelevanz"
+* insert legacyMapping(procedure.extension[AbrechnungsRelevanz], LKF, [[Medizinische Leistung – Abrechnungsrelevanz]])
 * insert ShallPopulateObligation(procedure.extension[AbrechnungsRelevanz], MopedKHActor)
 * procedure.procedure[x] 1..
 * procedure.procedure[x] only Reference(MopedProcedure)
 * insert ShallPopulateObligation(procedure.procedure[x], MopedKHActor)
 
 * diagnosisRelatedGroup from LKFAbrechnungsGruppeVS (required)
-* diagnosisRelatedGroup ^short =  "LKF: Abrechnung - Gruppe"
+* diagnosisRelatedGroup ^short =  "LKF: Abrechnung – Gruppe"
+* insert legacyMapping(diagnosisRelatedGroup, LKF, [[Abrechnung – Gruppe]])
 * diagnosisRelatedGroup 1..1
 * insert ShallPopulateObligation(diagnosisRelatedGroup, MopedKHActor)
 
@@ -67,7 +71,8 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * diagnosis.diagnosis[x] 1..1
 * diagnosis.diagnosis[x] only Reference(MopedCondition)
 * insert ShallPopulateObligation(diagnosis.diagnosis[x], MopedKHActor)
-* diagnosis.onAdmission ^definition =  "LKF: Diagnose – im stationären Aufenthalt erworben; Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
+* diagnosis.onAdmission ^short =  "LKF: Diagnose – im stationären Aufenthalt erworben; Gibt an ob die Diagnose bereits bei Aufnahme in den stationären Aufenthalt vorhanden war"
+* insert legacyMapping(diagnosis.onAdmission, LKF, [[Diagnose – im stationären Aufenthalt erworben]])
 * insert ShallPopulateObligation(diagnosis.onAdmission, MopedKHActor)
 
 * supportingInfo ^slicing.rules = #open
@@ -75,9 +80,11 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.ordered = false
 * supportingInfo contains Plausibilitaetskennzeichen 1..1 
-* supportingInfo[Plausibilitaetskennzeichen] ^short = "Plausibilitätskennzeichen - Dieses Datenfeld enthält eine Kennzeichnung als Ergebnis der vom Gesundheitsministerium vorgegebenen Plausibilitätsprüfung."
+* supportingInfo[Plausibilitaetskennzeichen] ^short = "LKF: Plausibilitätskennzeichen; Dieses Datenfeld enthält eine Kennzeichnung als Ergebnis der vom Gesundheitsministerium vorgegebenen Plausibilitätsprüfung."
 * supportingInfo[Plausibilitaetskennzeichen].category = ClaimSupportingInformationCategoryCS#PLAUS
 * supportingInfo[Plausibilitaetskennzeichen].value[x] only string //change to unsignedInt in R6
+* insert legacyMapping(supportingInfo[Plausibilitaetskennzeichen].value[x], LKF, [[Plausibilitätskennzeichen]])
+* insert ShallPopulateObligation(supportingInfo[Plausibilitaetskennzeichen].value[x], MopedKHActor)
 //TBD: * supportingInfo[Plausibilitaetskennzeichen].value[x] //add regex pattern so it can only have numbers from 0-5
 * insert ShallPopulateObligation(supportingInfo[Plausibilitaetskennzeichen], MopedKHActor)
 
@@ -95,10 +102,13 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 
 * extension contains DiagnoseKnoten named DiagnoseKnoten 1..1
 * extension[DiagnoseKnoten] ^short = "LKF: Abrechnung – Knoten"
+* insert legacyMapping(extension[DiagnoseKnoten], LKF, [[Abrechnung – Knoten]])
 * insert ShallPopulateObligation(extension[DiagnoseKnoten], MopedKHActor)
 * extension contains FehlerWarnung named FehlerWarnung 0..
 * insert ShallPopulateObligation(extension[FehlerWarnung], MopedKHActor)
 * extension contains Fondsrelevanz named Fondsrelevanz 1..1
+* extension[DiagnoseKnoten] ^short = "LKF: Fondsrelevanz"
+* insert legacyMapping(extension[Fondsrelevanz], LKF, [[Fondsrelevanz]])
 * insert ShallPopulateObligation(extension[Fondsrelevanz], MopedKHActor)
 * item ^slicing.rules = #open
 * item ^slicing.ordered = false
@@ -113,82 +123,101 @@ and ZusatzpunkteIntensiv 0..1
 and ZusatzpunkteMehrfachleistungen 0..1
 and PunkteSpeziellerBereicheTageweise 0..1
 and Gesamtpunkte 1..1
-* item[Leistungskomponente] ^short = "LKF: Leistungskomponente/Leistungspunkte"
 * item[Leistungskomponente].category from MopedClaimItemCategoryVS (required)
 * item[Leistungskomponente].category.coding = MopedClaimItemCategoryCS#LDFPLK
+* insert ShallPopulateObligation(item[Leistungskomponente].category.coding, MopedKHActor)
 * item[Leistungskomponente].quantity 1..1
 * item[Leistungskomponente].quantity.unit = "LKF Punkte"
-* item[Leistungskomponente].quantity ^short = "Punkteanzahl"
-* insert ShallPopulateObligation(item[Leistungskomponente], MopedKHActor)
+* insert ShallPopulateObligation(item[Leistungskomponente].quantity.unit, MopedKHActor)
+* item[Leistungskomponente].quantity.value 1..1
+* item[Leistungskomponente].quantity.value ^short = "LKF: Leistungskomponente/Leistungspunkte"
+* insert legacyMapping(item[Leistungskomponente].quantity.value, LKF, [[Leistungskomponente/Leistungspunkte]])
+* insert ShallPopulateObligation(item[Leistungskomponente].quantity.value, MopedKHActor)
 
-* item[Tageskomponente] ^short = "LKF: Tageskomponente/Kontaktpunkte"
 * item[Tageskomponente].category.coding from MopedClaimItemCategoryVS (required)
 * item[Tageskomponente].category.coding = MopedClaimItemCategoryCS#LDFPTK
+* insert ShallPopulateObligation(item[Tageskomponente].category.coding, MopedKHActor)
 * item[Tageskomponente].quantity 1..1
-* item[Tageskomponente].quantity.value 1..1
 * item[Tageskomponente].quantity.unit = "LKF Punkte"
-* item[Tageskomponente].quantity ^short = "Punkteanzahl"
-* insert ShallPopulateObligation(item[Tageskomponente], MopedKHActor)
+* insert ShallPopulateObligation(item[Tageskomponente].quantity.unit, MopedKHActor)
+* item[Tageskomponente].quantity.value 1..1
+* item[Tageskomponente].quantity.value ^short = "LKF: Tageskomponente/Kontaktpunkte"
+* insert legacyMapping(item[Tageskomponente].quantity.value, LKF, [[Tageskomponente/Kontaktpunkte]])
+* insert ShallPopulateObligation(item[Tageskomponente].quantity.value, MopedKHActor)
 
-* item[PunkteBelagsdauerausreisserUntenLeistungskomponente] ^short = "LKF: Punkte Belagsdauerausreißer nach unten – Leistungskomponente"
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].category.coding from MopedClaimItemCategoryVS (required)
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].category.coding = MopedClaimItemCategoryCS#SCULK
+* insert ShallPopulateObligation(item[PunkteBelagsdauerausreisserUntenLeistungskomponente].category.coding, MopedKHActor)
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity 1..1
-* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.value 1..1
 * item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.unit = "LKF Punkte"
-* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity ^short = "Punkteanzahl"
-* insert ShallPopulateObligation(item[PunkteBelagsdauerausreisserUntenLeistungskomponente], MopedKHActor)
+* insert ShallPopulateObligation(item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.unit, MopedKHActor)
+* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.value 1..1
+* item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.value ^short = "LKF: Punkte Belagsdauerausreißer nach unten – Leistungskomponente"
+* insert legacyMapping(item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.value, LKF, [[Punkte Belagsdauerausreißer nach unten – Leistungskomponente]])
+* insert ShallPopulateObligation(item[PunkteBelagsdauerausreisserUntenLeistungskomponente].quantity.value, MopedKHActor)
 
-* item[PunkteBelagsdauerausreisserUntenTageskomponente] ^short = "LKF: Punkte Belagsdauerausreißer nach unten – Tageskomponente"
 * item[PunkteBelagsdauerausreisserUntenTageskomponente].category.coding from MopedClaimItemCategoryVS (required)
 * item[PunkteBelagsdauerausreisserUntenTageskomponente].category.coding = MopedClaimItemCategoryCS#SCUTK
+* insert ShallPopulateObligation(item[PunkteBelagsdauerausreisserUntenTageskomponente].category.coding, MopedKHActor)
 * item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity 1..1
-* item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.value 1..1
 * item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.unit = "LKF Punkte"
-* item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity ^short = "Punkteanzahl"
-* insert ShallPopulateObligation(item[PunkteBelagsdauerausreisserUntenTageskomponente], MopedKHActor)
+* insert ShallPopulateObligation(item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.unit, MopedKHActor)
+* item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.value 1..1
+* item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.value ^short = "LKF: Punkte Belagsdauerausreißer nach unten – Tageskomponente"
+* insert legacyMapping(item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.value, LKF, [[Punkte Belagsdauerausreißer nach unten – Tageskomponente]])
+* insert ShallPopulateObligation(item[PunkteBelagsdauerausreisserUntenTageskomponente].quantity.value, MopedKHActor)
 
-* item[ZusatzpunkteBelagsdauerausreisserNachOben] ^short = "LKF: Zusatzpunkte Belagsdauerausreißer nach oben"
 * item[ZusatzpunkteBelagsdauerausreisserNachOben].category.coding from MopedClaimItemCategoryVS (required)
 * item[ZusatzpunkteBelagsdauerausreisserNachOben].category.coding = MopedClaimItemCategoryCS#BDZU
+* insert ShallPopulateObligation(item[ZusatzpunkteBelagsdauerausreisserNachOben].category.coding, MopedKHActor)
 * item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity 1..1
-* item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.value 1..1
 * item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.unit = "LKF Punkte"
-* item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity ^short = "Punkteanzahl"
-* insert ShallPopulateObligation(item[ZusatzpunkteBelagsdauerausreisserNachOben], MopedKHActor)
+* insert ShallPopulateObligation(item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.unit, MopedKHActor)
+* item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.value 1..1
+* item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.value ^short = "LKF: Zusatzpunkte Belagsdauerausreißer nach oben"
+* insert legacyMapping(item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.value, LKF, [[Zusatzpunkte Belagsdauerausreißer nach oben]])
+* insert ShallPopulateObligation(item[ZusatzpunkteBelagsdauerausreisserNachOben].quantity.value, MopedKHActor)
 
-* item[ZusatzpunkteIntensiv] ^short = "LKF: Zusatzpunkte Intensiv"
 * item[ZusatzpunkteIntensiv].category.coding from MopedClaimItemCategoryVS (required)
 * item[ZusatzpunkteIntensiv].category.coding = MopedClaimItemCategoryCS#INTZU
+* insert ShallPopulateObligation(item[ZusatzpunkteIntensiv].category.coding, MopedKHActor)
 * item[ZusatzpunkteIntensiv].quantity 1..1
-* item[ZusatzpunkteIntensiv].quantity.value 1..1
 * item[ZusatzpunkteIntensiv].quantity.unit = "LKF Punkte"
-* item[ZusatzpunkteIntensiv].quantity ^short = "Punkteanzahl"
-* insert ShallPopulateObligation(item[ZusatzpunkteIntensiv], MopedKHActor)
+* insert ShallPopulateObligation(item[ZusatzpunkteIntensiv].quantity.unit, MopedKHActor)
+* item[ZusatzpunkteIntensiv].quantity.value 1..1
+* item[ZusatzpunkteIntensiv].quantity.value ^short = "LKF: Zusatzpunkte Intensiv"
+* insert legacyMapping(item[ZusatzpunkteIntensiv].quantity.value, LKF, [[Zusatzpunkte Intensiv]])
+* insert ShallPopulateObligation(item[ZusatzpunkteIntensiv].quantity.value, MopedKHActor)
 
-* item[ZusatzpunkteMehrfachleistungen] ^short = "LKF: Zusatzpunkte Mehrfachleistungen"
 * item[ZusatzpunkteMehrfachleistungen].category.coding from MopedClaimItemCategoryVS (required)
 * item[ZusatzpunkteMehrfachleistungen].category.coding = MopedClaimItemCategoryCS#MELZU
+* insert ShallPopulateObligation(item[ZusatzpunkteMehrfachleistungen].category.coding, MopedKHActor)
 * item[ZusatzpunkteMehrfachleistungen].quantity 1..1
-* item[ZusatzpunkteMehrfachleistungen].quantity.value 1..1
 * item[ZusatzpunkteMehrfachleistungen].quantity.unit = "LKF Punkte"
-* item[ZusatzpunkteMehrfachleistungen].quantity ^short = "Punkteanzahl"
-* insert ShallPopulateObligation(item[ZusatzpunkteMehrfachleistungen], MopedKHActor)
+* insert ShallPopulateObligation(item[ZusatzpunkteMehrfachleistungen].quantity.unit, MopedKHActor)
+* item[ZusatzpunkteMehrfachleistungen].quantity.value 1..1
+* item[ZusatzpunkteMehrfachleistungen].quantity.value ^short = "LKF: Zusatzpunkte Mehrfachleistungen"
+* insert legacyMapping(item[ZusatzpunkteMehrfachleistungen].quantity.value, LKF, [[Zusatzpunkte Mehrfachleistungen]])
+* insert ShallPopulateObligation(item[ZusatzpunkteMehrfachleistungen].quantity.value, MopedKHActor)
 
-* item[PunkteSpeziellerBereicheTageweise] ^short = "LKF: Punkte spezieller Bereiche (tageweise)"
 * item[PunkteSpeziellerBereicheTageweise].category.coding from MopedClaimItemCategoryVS (required)
 * item[PunkteSpeziellerBereicheTageweise].category.coding = MopedClaimItemCategoryCS#SCSPEZ
+* insert ShallPopulateObligation(item[PunkteSpeziellerBereicheTageweise].category.coding, MopedKHActor)
 * item[PunkteSpeziellerBereicheTageweise].quantity 1..1
-* item[PunkteSpeziellerBereicheTageweise].quantity.value 1..1
 * item[PunkteSpeziellerBereicheTageweise].quantity.unit = "LKF Punkte"
-* item[PunkteSpeziellerBereicheTageweise].quantity ^short = "Punkteanzahl"
-* insert ShallPopulateObligation(item[PunkteSpeziellerBereicheTageweise], MopedKHActor)
+* insert ShallPopulateObligation(item[PunkteSpeziellerBereicheTageweise].quantity.unit, MopedKHActor)
+* item[PunkteSpeziellerBereicheTageweise].quantity.value 1..1
+* item[PunkteSpeziellerBereicheTageweise].quantity.value ^short = "LKF: Punkte spezieller Bereiche (tageweise)"
+* insert legacyMapping(item[PunkteSpeziellerBereicheTageweise].quantity.value, LKF, [[Punkte spezieller Bereiche (tageweise)]])
+* insert ShallPopulateObligation(item[PunkteSpeziellerBereicheTageweise].quantity.value, MopedKHActor)
 
-* item[Gesamtpunkte] ^short = "LKF: Punkte total"
 * item[Gesamtpunkte].category.coding from MopedClaimItemCategoryVS (required)
 * item[Gesamtpunkte].category.coding = MopedClaimItemCategoryCS#SCGES
+* insert ShallPopulateObligation(item[Gesamtpunkte].category.coding, MopedKHActor)
 * item[Gesamtpunkte].quantity 1..1
-* item[Gesamtpunkte].quantity.value 1..1
 * item[Gesamtpunkte].quantity.unit = "LKF Punkte"
-* item[Gesamtpunkte].quantity ^short = "Punkteanzahl"
-* insert ShallPopulateObligation(item[Gesamtpunkte], MopedKHActor)
+* insert ShallPopulateObligation(item[Gesamtpunkte].quantity.unit, MopedKHActor)
+* item[Gesamtpunkte].quantity.value 1..1
+* item[Gesamtpunkte].quantity.value ^short = "LKF: Punkte total"
+* insert legacyMapping(item[Gesamtpunkte].quantity.value, LKF, [[Punkte total]])
+* insert ShallPopulateObligation(item[Gesamtpunkte].quantity.value, MopedKHActor)
