@@ -8,10 +8,28 @@ Title: "MOPED TransferEncounter"
 * subject only Reference(MopedPatient)
 * subject 1..1
 * insert MopedHandleObligation(subject)
-* serviceProvider only Reference(MopedOrganizationAbteilung)
-* serviceProvider 1..1
-* serviceProvider ^short = "LKF: Hauptkostenstelle – Funktionscode/Fachgebiet; KaOrg: Funktionscode der Abteilung lt. LKF + Funktionssubcode der Abteilung lt. LKF bzw. Abteilung - Funktionscode der Ambulanz + Abteilung - Subcode"
-* insert ShallPopulateObligation(serviceProvider, MopedKHActor)
+* serviceType ^slicing.rules = #open
+* serviceType ^slicing.discriminator.type = #profile
+//change to #value and resolve.type once bug is fixed
+* serviceType ^slicing.discriminator.path = "reference.resolve()"
+* serviceType ^slicing.ordered = false
+* serviceType contains MopedServiceType 1..1
+* serviceType[MopedServiceType] ^short = "LKF: Hauptkostenstelle – Funktionscode/Fachgebiet; KaOrg: Funktionscode der Abteilung lt. LKF; KaOrg: Funktionssubcode der Abteilung lt. LKF; KaOrg: Abteilung - Funktionscode der Ambulanz; KaOrg: Abteilung - Subcode"
+* serviceType[MopedServiceType] only CodeableReference(MopedKHOrganisationseinheit)
+* insert ShallPopulateObligation(serviceType[MopedServiceType], MopedKHActor)
+* participant ^slicing.rules = #open
+* participant ^slicing.discriminator.type = #value
+* participant ^slicing.discriminator.path = "type"
+* participant ^slicing.ordered = false
+* participant contains FachlichZustaendigeOrganisationseinheit 0..1 and PflegerischZustaendigeOrganisationseinheit 0..1
+* participant[FachlichZustaendigeOrganisationseinheit] ^short = "LKF: Hauptkostenstelle – Fachlicher Funktionscode"
+* participant[FachlichZustaendigeOrganisationseinheit].actor only Reference(MopedKHOrganisationseinheit)
+* participant[FachlichZustaendigeOrganisationseinheit].type = MopedEncounterParticipantTypesCS#fachlich
+* insert ShallPopulateObligation(participant[FachlichZustaendigeOrganisationseinheit], MopedKHActor)
+* participant[PflegerischZustaendigeOrganisationseinheit] ^short = "LKF: Hauptkostenstelle – Pflegerischer Funktionscode"
+* participant[PflegerischZustaendigeOrganisationseinheit].actor only Reference(MopedKHOrganisationseinheit)
+* participant[PflegerischZustaendigeOrganisationseinheit].type = MopedEncounterParticipantTypesCS#pflegerisch
+* insert ShallPopulateObligation(participant[PflegerischZustaendigeOrganisationseinheit], MopedKHActor)
 
 * actualPeriod ^short = "LKF: Zugangs- und Abgangsdatum"
 * actualPeriod.start 1..1

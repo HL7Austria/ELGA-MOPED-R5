@@ -28,3 +28,6 @@ Reference to experimental CodeSystem https://elga.moped.at/CodeSystem/Abrechnung
 
 #Questionnaire answerOption codes to be defined in the future
 A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+
+#https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Obligations.20extension.20does.20not.20meet.20slice
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)

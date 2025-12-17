@@ -74,7 +74,7 @@ Title: "MOPED Composition"
 * section[besuchteAbteilungen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[besuchteAbteilungen].code.coding.code = #ABT
 * section[besuchteAbteilungen].entry 1..
-* section[besuchteAbteilungen].entry only Reference(MopedOrganizationAbteilung)
+* section[besuchteAbteilungen].entry only Reference(MopedKHOrganisationseinheit)
 * section[besuchteAbteilungen].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[besuchteAbteilungen], MopedDeviceActor)
 * section contains Diagnosen 0..1 

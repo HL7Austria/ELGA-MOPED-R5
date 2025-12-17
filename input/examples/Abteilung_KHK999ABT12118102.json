@@ -1,9 +1,9 @@
 {
-  "resourceType": "Organization",
+  "resourceType": "HealthcareService",
   "id": "KHK999ABT12118102",
   "meta": {
     "profile": [
-      "https://elga.moped.at/StructureDefinition/MopedOrganizationAbteilung"
+      "https://elga.moped.at/StructureDefinition/MopedKHOrganisationseinheit"
     ]
   },
   "extension": [
@@ -46,13 +46,18 @@
     {
       "coding": [
         {
-          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-          "code": "dept"
+          "system": "http://terminology.hl7.org/CodeSystem/service-type",
+          "code": "361"
         }
       ]
     }
   ],
-  "partOf": {
+  "providedBy": {
     "reference": "Organization/KHK999"
-  }
+  },
+  "location" : [
+    {
+      "reference" : "Location/LocationKHK999"
+    }
+  ]
 }

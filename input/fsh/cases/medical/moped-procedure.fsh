@@ -16,7 +16,7 @@ Title: "MOPED Procedure"
 //performer.actor ist verpflichtend wenn der performer verwendet wird daher können wir es nicht auf actor und onBehalfOf aufteilen
 //"Krankenanstaltennummer leistungserbringend" wird nur befüllt falls es sich um eine extern erbrachte Leistung handelt
 * performer.actor ^short = "LKF: Referenz auf die Abteilung mit Funktionscode/Fachgebiet leistungserbringend oder die Krankenanstalt mit Krankenanstaltennummer leistungserbringend bei extern erbrachten Leistungen"
-* performer.actor only Reference(MopedOrganizationAbteilung or KHOrganization)
+* performer.actor only Reference(MopedKHOrganisationseinheit or KHOrganization)
 * performer.actor 1..1
 * insert ShallPopulateObligation(performer.actor, MopedKHActor)
 * performer 1..1
