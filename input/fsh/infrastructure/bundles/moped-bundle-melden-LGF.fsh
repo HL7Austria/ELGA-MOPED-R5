@@ -9,8 +9,6 @@ Description: """Bundle für die Input-Ressourcen beim Melden von Informationen""
 * entry 1..1
 * entry ^slicing.discriminator[+].type = #type
 * entry ^slicing.discriminator[=].path = "resource"
-* entry ^slicing.discriminator[+].type = #profile
-* entry ^slicing.discriminator[=].path = "resource.resolve()"
 * entry ^slicing.rules = #closed
 * entry contains
   ARKReq 1..1

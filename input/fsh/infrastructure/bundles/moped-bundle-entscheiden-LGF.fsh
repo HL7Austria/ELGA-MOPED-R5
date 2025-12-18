@@ -9,8 +9,6 @@ Description: """Bundle für die Input-Ressourcen beim Entscheiden (Bestätigen/A
 * entry 1..*
 * entry ^slicing.discriminator[+].type = #type
 * entry ^slicing.discriminator[=].path = "resource"
-* entry ^slicing.discriminator[+].type = #profile
-* entry ^slicing.discriminator[=].path = "resource.resolve()"
 * entry ^slicing.rules = #closed
 * entry contains
   LKFResp 0..
@@ -19,7 +17,7 @@ Description: """Bundle für die Input-Ressourcen beim Entscheiden (Bestätigen/A
 * entry[LKFResp].request.method ^short = "POST"
 * entry contains
   Communication 0..
-* entry[Communication].resource only CommunicationRequest
+* entry[Communication].resource only Communication
 * entry[Communication].request.method from HTTPVerbInsertOnlyVS
 * entry[Communication].request.method ^short = "POST"
 * entry contains
