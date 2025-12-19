@@ -11,8 +11,8 @@ Description: """Bundle für die Input-Ressourcen beim Melden von Informationen""
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
-  ARKReq 1..1
-* entry[ARKReq].resource only MopedARKRequest
-* entry[ARKReq].request.method from HTTPVerbInsertOnlyVS
-* entry[ARKReq].request.method ^short = "POST"
+  ARKKostenInformation 1..1
+* entry[ARKKostenInformation].resource only MopedARKRequest
+* entry[ARKKostenInformation].request.method from HTTPVerbInsertOnlyVS
+* entry[ARKKostenInformation].request.method ^short = "POST"
 

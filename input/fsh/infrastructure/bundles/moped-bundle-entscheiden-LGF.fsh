@@ -11,10 +11,10 @@ Description: """Bundle für die Input-Ressourcen beim Entscheiden (Bestätigen/A
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
-  LKFResp 0..
-* entry[LKFResp].resource only MopedLKFResponse
-* entry[LKFResp].request.method from HTTPVerbInsertOnlyVS //insert only -> wenn eine LKFResponse nachträglich verändert werden soll wird eine neue Response eingebracht und von Moped automatisch die alte in den status canceled gesetzt
-* entry[LKFResp].request.method ^short = "POST"
+  LKFResponses 0..
+* entry[LKFResponses].resource only MopedLKFResponse
+* entry[LKFResponses].request.method from HTTPVerbInsertOnlyVS //insert only -> wenn eine LKFResponse nachträglich verändert werden soll wird eine neue Response eingebracht und von Moped automatisch die alte in den status canceled gesetzt
+* entry[LKFResponses].request.method ^short = "POST"
 * entry contains
   Communication 0..
 * entry[Communication].resource only Communication

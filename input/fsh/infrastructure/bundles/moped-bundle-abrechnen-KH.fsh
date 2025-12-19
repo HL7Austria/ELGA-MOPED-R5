@@ -11,7 +11,7 @@ Description: """Bundle für die Input-Ressourcen beim Abrechnen (KH)"""
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
-  LKFReq 1..1
-* entry[LKFReq].resource only MopedLKFRequest
-* entry[LKFReq].request.method from HTTPVerbInsertOnlyVS
-* entry[LKFReq].request.method ^short = "POST"
+  LKFRequests 1..1
+* entry[LKFRequests].resource only MopedLKFRequest
+* entry[LKFRequests].request.method from HTTPVerbInsertOnlyVS
+* entry[LKFRequests].request.method ^short = "POST"
