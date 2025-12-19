@@ -5,6 +5,7 @@ Description: "MOPED Profil für die initiale Anfrage der Versichertenanspruchser
 * subType = MopedClaimSubTypeCS#VAEREQI
 * insert ShallPopulateObligation(subType, MopedKHActor)
 * related.claim 0..
-* billablePeriod.start ^short = "VAE Beginndatum"
+* billablePeriod.start ^short = "KaOrg: VAE Beginndatum"
+* insert legacyMapping(billablePeriod.start, KaOrg, [[VAE Beginndatum]])
 * insert ShallPopulateObligation(billablePeriod.start, MopedKHActor)
 

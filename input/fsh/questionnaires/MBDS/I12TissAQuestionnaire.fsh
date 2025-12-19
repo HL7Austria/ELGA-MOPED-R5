@@ -8,8 +8,8 @@ Title: "I12 Questionnaire für TISS-A-Daten"
 * subjectType = #Patient
 
 // Krankenanstaltennummer/Leistungserbringer-ID
-* item[+].linkId = "krankenanstaltennummer-leistungserbringer-id"
-* item[=].text = "Krankenanstaltennummer/Leistungserbringer-ID"
+* item[+].linkId = "krankenanstaltennummer"
+* item[=].text = "Krankenanstaltennummer"
 * item[=].type = #string
 * item[=].maxLength = 20
 

@@ -18,7 +18,7 @@ Usage: #example
 * item[0].type = #group
 
 * item[0].item[+].linkId = "saps3-02"
-* item[0].item[=].text = "Krankenanstaltennummer/Leistungserbringer-ID"
+* item[0].item[=].text = "Krankenanstaltennummer"
 * item[0].item[=].type = #string
 
 * item[0].item[+].linkId = "saps3-03"
@@ -42,11 +42,11 @@ Usage: #example
 * item[0].item[=].type = #date
 
 * item[0].item[+].linkId = "saps3-08"
-* item[0].item[=].text = "Akute Infektion bei Aufnahme - Nosokomiale Infektion"
+* item[0].item[=].text = "Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Nosokomiale Infektion"
 * item[0].item[=].type = #boolean
 
 * item[0].item[+].linkId = "saps3-08a"
-* item[0].item[=].text = "Akute Infektion bei Aufnahme - Respiratorische Infektion"
+* item[0].item[=].text = "Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Respiratorische Infektion"
 * item[0].item[=].type = #boolean
 
 * item[0].item[+].linkId = "saps3-09"

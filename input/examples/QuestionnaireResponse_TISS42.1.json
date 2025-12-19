@@ -15,7 +15,7 @@
   },
   "item": [
     {
-      "linkId": "krankenanstaltennummer-leistungserbringer-id",
+      "linkId": "krankenanstaltennummer",
       "answer": [
         {
           "valueString": "K999"

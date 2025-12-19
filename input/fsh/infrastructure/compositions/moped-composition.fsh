@@ -2,6 +2,10 @@ Profile: MopedComposition
 Parent: Composition
 Description: "MOPED Profil der Composition Ressource von der alle anderen Compositions ableiten."
 Title: "MOPED Composition"
+* insert MappingHeaderEinfuegen()
+* id ^short = "KaOrg: Datensatz-ID"
+* insert legacyMapping(id, KaOrg, Datensatz-ID)
+* insert ShallPopulateObligation(id, MopedDeviceActor)
 * insert ShallPopulateObligation(status, MopedDeviceActor)
 * insert ShallPopulateObligation(type, MopedDeviceActor)
 * insert ShallPopulateObligation(date, MopedDeviceActor)
@@ -32,11 +36,16 @@ Title: "MOPED Composition"
 */
 
 * author only Reference(KHOrganization)
+* insert legacyMapping(author, LKF, [[Krankenanstaltennummer/Leistungserbringer-Stammdaten-ID]])
+* insert legacyMapping(author, LKF, [[Krankenanstaltennummer]])
+* insert legacyMapping(author, KaOrg, [[Krankenanstaltennummer des Bundesministeriums]])
+* insert legacyMapping(author, KaOrg, [[Vertragspartnernummer der Krankenanstalt]])
 * insert ShallPopulateObligation(author, MopedDeviceActor)
 * extension contains AnzahlVerlegungen named AnzahlVerlegungen 0..1
 * insert ShallPopulateObligation(extension[AnzahlVerlegungen], MopedDeviceActor)
 * extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 0..1
 * extension[AnzahlBeurlaubungen] ^short = "KaOrg: Fallnummer"
+* insert legacyMapping(extension[AnzahlBeurlaubungen], KaOrg, Fallnummer)
 * insert ShallPopulateObligation(extension[AnzahlBeurlaubungen], MopedDeviceActor)
 * section 1..*
 * section.code from CompositionSectionsVS
@@ -52,7 +61,10 @@ Title: "MOPED Composition"
 * section[TransferEncounter].entry only Reference(MopedTransferEncounterI or MopedTransferEncounterA or MopedTransferEncounterS)
 * insert ShallPopulateObligation(section[TransferEncounter], MopedDeviceActor)
 * section contains zustaendigeSV 0..1
-* section[zustaendigeSV] ^short = "KaOrg: Kostenträger (leistungszuständig)"
+* section[zustaendigeSV] ^short = "LKF: Leistungszuständiger Kostenträger – Code; KaOrg: Kostenträger (leistungszuständig)"
+* insert legacyMapping(section[zustaendigeSV].entry, LKF, [[Leistungszuständiger Kostenträger – Code]])
+* insert legacyMapping(section[zustaendigeSV].entry, KaOrg, [[Kostenträger (leistungszuständig)]])
+* insert ShallPopulateObligation(section[zustaendigeSV].entry, MopedDeviceActor)
 * section[zustaendigeSV].code.coding.system = Canonical(CompositionSectionsCS)
 * section[zustaendigeSV].code.coding.code = #SV
 * section[zustaendigeSV].entry 1..
