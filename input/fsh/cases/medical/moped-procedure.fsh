@@ -2,9 +2,10 @@ Profile: MopedProcedure
 Parent: Procedure
 Description: "MOPED Profil der Procedure Ressource für die LDF-Abrechnung"
 Title: "MOPED Procedure"
-
+* insert MappingHeaderEinfuegen()
 * extension contains Leistungsanzahl named Leistungsanzahl 1..1
 * extension[Leistungsanzahl] ^short = "LKF: Medizinische Leistung – Anzahl"
+* insert legacyMapping(extension[Leistungsanzahl], LKF, [[Medizinische Leistung – Anzahl]])
 * insert ShallPopulateObligation(extension[Leistungsanzahl], MopedKHActor)
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
@@ -15,9 +16,11 @@ Title: "MOPED Procedure"
 //performer.actor kann entweder das Feld "Funktionscode/Fachgebiet leistungserbringend" oder "Krankenanstaltennummer leistungserbringend" darstellen je nach Profil.
 //performer.actor ist verpflichtend wenn der performer verwendet wird daher können wir es nicht auf actor und onBehalfOf aufteilen
 //"Krankenanstaltennummer leistungserbringend" wird nur befüllt falls es sich um eine extern erbrachte Leistung handelt
-* performer.actor ^short = "LKF: Referenz auf die Abteilung mit Funktionscode/Fachgebiet leistungserbringend oder die Krankenanstalt mit Krankenanstaltennummer leistungserbringend bei extern erbrachten Leistungen"
+* performer.actor ^short = "LKF: Funktionscode/Fachgebiet leistungserbringend; LKF: Krankenanstaltennummer leistungserbringend; Referenz auf die Abteilung mit Funktionscode/Fachgebiet leistungserbringend oder die Krankenanstalt mit Krankenanstaltennummer leistungserbringend bei extern erbrachten Leistungen"
 * performer.actor only Reference(MopedKHOrganisationseinheit or KHOrganization)
 * performer.actor 1..1
+* insert legacyMapping(performer.actor, LKF, [[Funktionscode/Fachgebiet leistungserbringend]])
+* insert legacyMapping(performer.actor, LKF, [[Krankenanstaltennummer leistungserbringend]])
 * insert ShallPopulateObligation(performer.actor, MopedKHActor)
 * performer 1..1
 * performer.onBehalfOf only Reference(KHOrganization)
@@ -25,7 +28,9 @@ Title: "MOPED Procedure"
 * performer.onBehalfOf 1..1
 * insert MopedHandleObligation(performer.onBehalfOf)
 * occurrenceDateTime 1..1
-* occurrenceDateTime ^short = "LKF: Medizinische Leistung Datum und Uhrzeit der Erbringung"
+* occurrenceDateTime ^short = "LKF: Medizinische Leistung – Datum der Erbringung;  LKF: Medizinische Leistung – Uhrzeit der Erbringung"
+* insert legacyMapping(occurrenceDateTime, LKF, [[Medizinische Leistung – Datum der Erbringung]])
+* insert legacyMapping(occurrenceDateTime, LKF, [[Medizinische Leistung – Uhrzeit der Erbringung]])
 * insert ShallPopulateObligation(occurrenceDateTime, MopedKHActor)
 * category.coding ^slicing.rules = #open
 * category.coding ^slicing.discriminator.type = #value
@@ -37,12 +42,14 @@ Title: "MOPED Procedure"
 * category.coding[MELGruppe].system = Canonical(LKFmedizinischeEinzelleistungenCS)
 * code 1..1
 * code ^short = "LKF: Medizinische Leistung – Code"
+* insert legacyMapping(code, LKF, [[Medizinische Leistung – Code]])
 * code.coding from LKFLeistungskatalogVS (required)
 * code.coding.system = $LKFLeistungskatalog
 * code.coding 1..
 * insert ShallPopulateObligation(code, MopedKHActor)
 * bodySite from LKFSeitenlokalisationVS
 * bodySite ^short = "LKF: Medizinische Leistung – Seitenlokalisation "
+* insert legacyMapping(bodySite, LKF, [[Medizinische Leistung – Seitenlokalisation]])
 * insert ShallPopulateObligation(bodySite, MopedKHActor)
 
 * obeys moped-externe-Leistung-KH

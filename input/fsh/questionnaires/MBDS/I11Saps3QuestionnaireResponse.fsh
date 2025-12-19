@@ -1,14 +1,16 @@
 Instance: Test2SAPS3QuestionnaireResponse1
-InstanceOf: QuestionnaireResponse
+InstanceOf: MopedQuestionnaireResponseFallbezogen
 Usage: #example
 * questionnaire = Canonical(LKFSAPS3Questionnaire)
 * status = #completed
 * subject = Reference(PJ1Patient) 
 * authored = "2024-09-16T19:39:58.676Z"
+* encounter = Reference(PJ1Encounter)
+* author = Reference(OrganizationHerzJesuKrankenhaus)
 * item.linkId = "saps3-set"
 * item.text = "SAPS3 Data Set"
 * item.item[0].linkId = "saps3-02"
-* item.item[=].text = "Krankenanstaltennummer/Leistungserbringer-ID"
+* item.item[=].text = "Krankenanstaltennummer"
 * item.item[=].answer.valueString = "K427"
 * item.item[+].linkId = "saps3-03"
 * item.item[=].text = "Aufnahmezahl"
@@ -26,10 +28,10 @@ Usage: #example
 * item.item[=].text = "Erhebungsdatum"
 * item.item[=].answer.valueDate = "2024-08-08"
 * item.item[+].linkId = "saps3-08"
-* item.item[=].text = "Akute Infektion bei Aufnahme - Nosokomiale Infektion"
+* item.item[=].text = "Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Nosokomiale Infektion"
 * item.item[=].answer.valueBoolean = false
 * item.item[+].linkId = "saps3-08a"
-* item.item[=].text = "Akute Infektion bei Aufnahme - Respiratorische Infektion"
+* item.item[=].text = "Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Respiratorische Infektion"
 * item.item[=].answer.valueBoolean = false
 * item.item[+].linkId = "saps3-09"
 * item.item[=].text = "Aufnahmegrund: Anderer, nicht klassifiziert"

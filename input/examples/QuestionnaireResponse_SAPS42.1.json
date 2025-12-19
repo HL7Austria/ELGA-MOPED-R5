@@ -19,7 +19,7 @@
       "item": [
         {
           "linkId": "saps3-02",
-          "text" : "Krankenanstaltennummer/Leistungserbringer-ID",
+          "text" : "Krankenanstaltennummer",
           "answer": [
             {
               "valueString": "K999"
@@ -73,7 +73,7 @@
         },
         {
           "linkId": "saps3-08",
-          "text" : "Akute Infektion bei Aufnahme - Nosokomiale Infektion",
+          "text" : "Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Nosokomiale Infektion",
           "answer": [
             {
               "valueBoolean": false
@@ -82,7 +82,7 @@
         },
         {
           "linkId": "saps3-08a",
-          "text" : "Akute Infektion bei Aufnahme - Respiratorische Infektion",
+          "text" : "Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Respiratorische Infektion",
           "answer": [
             {
               "valueBoolean": false

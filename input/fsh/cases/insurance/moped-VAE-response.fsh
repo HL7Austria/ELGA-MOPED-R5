@@ -3,13 +3,15 @@ Profile: MopedVAEResponse
 Parent: ClaimResponse
 Title: "MOPED VAEResponse"
 Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklärung VAE."
+* insert MappingHeaderEinfuegen()
 * insert ShallPopulateObligation(created, MopedSVActor)
 * status = #active
 * insert ShallPopulateObligation(status, MopedSVActor)
 * insert MopedHandleObligation(status)
 * type from MopedClaimTypeVS
+* type.coding 1..
 * type.coding = MopedClaimTypeCS#VAERESP (exactly)
-* insert ShallPopulateObligation(type, MopedSVActor)
+* insert ShallPopulateObligation(type.coding, MopedSVActor)
 * use = #preauthorization
 * insert ShallPopulateObligation(use, MopedSVActor)
 * patient only Reference(MopedPatient)
@@ -32,6 +34,7 @@ Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklä
 * decision 1..1
 * decision ^definition =  "\"VAEST - Status der Versichertenanspruchserklärung\""
 * decision ^short =  "KaOrg: Status der VAE"
+* insert legacyMapping(decision, KaOrg, [[Status der VAE]])
 * insert ShallPopulateObligation(decision, MopedSVActor)
 * preAuthPeriod ^definition = "Ist diese Zeitspanne angegeben so gibt es ein Fristende.
 Befristungen sind in folgenden Fällen vorgesehen:
@@ -41,20 +44,27 @@ schen Hauskrankenpflege
 - Bei unsicherer, versicherungsrechtlicher Entwicklung
 Bei den ersten beiden Punkten wird von den Krankenversicherungsträgern das Fristende individuell gesetzt. Beim dritten Punkt wird im Regelfall eine generelle Tagesbeschränkung erfolgen, weil die Versichertenanspruchserklärung in die Zukunft gerichtet ist und der Krankenversicherungsträger seine Zuständigkeit von vornherein nur für einen bestimmten Zeitraum annehmen kann (Ausleis- tungssituation gem. § 122 ASVG).
 Durch die Angabe eines Fristendes wird signalisiert, dass bei einem über das Fristende hinaus dau- ernden Aufenthalt eine Verlängerungsanzeige vorzulegen ist."
-* insert ShallPopulateObligation(preAuthPeriod, MopedSVActor)
 * preAuthPeriod 1..1
 * preAuthPeriod.start 1..1
 * preAuthPeriod.start ^short = "KaOrg: VAE Beginndatum"
+* insert legacyMapping(preAuthPeriod.start, KaOrg, [[VAE Beginndatum]])
+* insert ShallPopulateObligation(preAuthPeriod.start, MopedSVActor)
 * preAuthPeriod.end 0..1
-* preAuthPeriod.end ^short = "KaOrg: Fristende + VAE Endedatum; VAE Enddatum und Indikator, ob es ein Fristende gibt"
+* preAuthPeriod.end ^short = "KaOrg: Fristende; KaOrg: VAE Endedatum; VAE Enddatum und Indikator, ob es ein Fristende gibt"
+* insert legacyMapping(preAuthPeriod.end, KaOrg, [[Fristende]])
+* insert legacyMapping(preAuthPeriod.end, KaOrg, [[VAE Endedatum]])
+* insert ShallPopulateObligation(preAuthPeriod.end, MopedSVActor)
 * extension contains MopedSupportingInfoSonderklasse named MopedSupportingInfoSonderklasse 1..1
 * extension[MopedSupportingInfoSonderklasse] ^short = "KaOrg: Allgemeine Gebührenklasse/Sonderklasse"
+* insert legacyMapping(extension[MopedSupportingInfoSonderklasse], KaOrg, [[Allgemeine Gebührenklasse/Sonderklasse]])
 * insert ShallPopulateObligation(extension[MopedSupportingInfoSonderklasse], MopedSVActor)
 * extension contains VerpflegskostenBeitragsbefreiung named VerpflegskostenBeitragsbefreiung 1..1
 * extension[VerpflegskostenBeitragsbefreiung] ^short = "KaOrg: Verpflegskosten-Beitragsbefreiung"
+* insert legacyMapping(extension[VerpflegskostenBeitragsbefreiung], KaOrg, [[Verpflegskosten-Beitragsbefreiung]])
 * insert ShallPopulateObligation(extension[VerpflegskostenBeitragsbefreiung], MopedSVActor)
 * extension contains MopedSupportingInfoVortageanzahlAufKostenbeitrag named MopedSupportingInfoVortageanzahlAufKostenbeitrag 1..1
 * extension[MopedSupportingInfoVortageanzahlAufKostenbeitrag] ^short = "KaOrg: Vortageanzahl auf Kostenbeitrag"
+* insert legacyMapping(extension[MopedSupportingInfoVortageanzahlAufKostenbeitrag], KaOrg, [[Vortageanzahl auf Kostenbeitrag]])
 * insert ShallPopulateObligation(extension[MopedSupportingInfoVortageanzahlAufKostenbeitrag], MopedSVActor)
 * addItem.extension contains AddItemCategory named AddItemCategory 0..1
 * insert ShallPopulateObligation(addItem.extension[AddItemCategory], MopedSVActor)

@@ -3,6 +3,7 @@ Profile: MopedVAERequest
 Parent: Claim
 Title : "MOPED VAERequest"
 Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung VAE."
+* insert MappingHeaderEinfuegen()
 * billablePeriod.start 1..1
 * insert ShallPopulateObligation(billablePeriod.start, MopedKHActor)
 * insert MopedHandleObligation(status)
@@ -11,8 +12,10 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * accident.type from VerdachtArbeitsSchuelerunfallVS
 * accident.type 1..1
 * accident.type ^short = "KaOrg: Verdacht auf Arbeits-/Schülerunfall"
+* insert legacyMapping(accident.type, KaOrg, [[Verdacht auf Arbeits-/Schülerunfall]])
 * insert ShallPopulateObligation(accident.type, MopedKHActor)
 * accident.date ^short = "KaOrg: Ereignis-/Unfalldatum (echtes Unfalldatum)"
+* insert legacyMapping(accident.date, KaOrg, [[Ereignis-/Unfalldatum (echtes Unfalldatum)]])
 * insert ShallPopulateObligation(accident.date, MopedKHActor)
 * patient only Reference(MopedPatient)
 * patient 1..1
@@ -61,26 +64,39 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * supportingInfo contains Sonderklasse 0.. and VerdachtFremdverschulden 1..1 and Verlaengerungstage 0..1
 * supportingInfo[Sonderklasse] ^short = "KaOrg: Allgemeine Gebührenklasse/Sonderklasse"
 * supportingInfo[Sonderklasse].category = ClaimSupportingInformationCategoryCS#KLAS
+* insert ShallPopulateObligation(supportingInfo[Sonderklasse].category, MopedKHActor)
 * supportingInfo[Sonderklasse].code from SonderklasseVS
 * supportingInfo[Sonderklasse].code 1..1
 * supportingInfo[Sonderklasse].code ^short = "KaOrg: Verlegung Klasse"
+* insert legacyMapping(supportingInfo[Sonderklasse].code, KaOrg, [[Allgemeine Gebührenklasse/Sonderklasse]])
+* insert legacyMapping(supportingInfo[Sonderklasse].code, KaOrg, [[Verlegung Klasse]])
+* insert ShallPopulateObligation(supportingInfo[Sonderklasse].code, MopedKHActor)
 * supportingInfo[Sonderklasse].timingPeriod 1..1
-* supportingInfo[Sonderklasse].timingPeriod ^short = "KaOrg: Aufnahme-, Verlegungsdatum"
+* supportingInfo[Sonderklasse].timingPeriod ^short = "KaOrg: Aufnahme-/Verlegungsdatum"
+* insert legacyMapping(supportingInfo[Sonderklasse].timingPeriod, KaOrg, [[Aufnahme-/Verlegungsdatum]])
+* insert ShallPopulateObligation(supportingInfo[Sonderklasse].timingPeriod, MopedKHActor)
 * insert ShallPopulateObligation(supportingInfo[Sonderklasse], MopedKHActor)
 
-* supportingInfo[VerdachtFremdverschulden] ^short = "KaOrg: Fremdversschluden"
 * supportingInfo[VerdachtFremdverschulden].category = ClaimSupportingInformationCategoryCS#FREVER
+* insert ShallPopulateObligation(supportingInfo[VerdachtFremdverschulden].category, MopedKHActor)
 * supportingInfo[VerdachtFremdverschulden].value[x] only boolean
 * supportingInfo[VerdachtFremdverschulden].valueBoolean 1..1
-* insert ShallPopulateObligation(supportingInfo[VerdachtFremdverschulden], MopedKHActor)
+* supportingInfo[VerdachtFremdverschulden].valueBoolean ^short = "KaOrg: Fremdverschulden"
+* insert legacyMapping(supportingInfo[VerdachtFremdverschulden].valueBoolean, KaOrg, [[Fremdverschulden]])
+* insert ShallPopulateObligation(supportingInfo[VerdachtFremdverschulden].valueBoolean, MopedKHActor)
 
-* supportingInfo[Verlaengerungstage] ^short = "KaOrg: Anzahl der Verlängerungstage"
 * supportingInfo[Verlaengerungstage].category = ClaimSupportingInformationCategoryCS#VERLAENG
+* insert ShallPopulateObligation(supportingInfo[Verlaengerungstage].category, MopedKHActor)
 * supportingInfo[Verlaengerungstage].valueQuantity.value 1..1 //change to unsignedInt in R6
-* supportingInfo[Verlaengerungstage].valueQuantity.value ^short = "Verlängerungstage"
+* supportingInfo[Verlaengerungstage].valueQuantity.value ^short = "KaOrg: Anzahl der Verlängerungstage"
+* insert legacyMapping(supportingInfo[Verlaengerungstage].valueQuantity.value, KaOrg, [[Anzahl der Verlängerungstage]])
+* insert ShallPopulateObligation(supportingInfo[Verlaengerungstage].valueQuantity.value, MopedKHActor)
 * supportingInfo[Verlaengerungstage].valueQuantity.unit = "day"
+* insert ShallPopulateObligation(supportingInfo[Verlaengerungstage].valueQuantity.unit, MopedKHActor)
 * supportingInfo[Verlaengerungstage].valueQuantity.code = #day
+* insert ShallPopulateObligation(supportingInfo[Verlaengerungstage].valueQuantity.code, MopedKHActor)
 * supportingInfo[Verlaengerungstage].valueQuantity.system = "http://unitsofmeasure.org"
+* insert ShallPopulateObligation(supportingInfo[Verlaengerungstage].valueQuantity.system, MopedKHActor)
 * insert ShallPopulateObligation(supportingInfo[Verlaengerungstage], MopedKHActor)
 
 //Invariante: Wenn die Verlängerungstage befüllt sind muss auch der vorherige VAERequest (related.claim) befüllt sein

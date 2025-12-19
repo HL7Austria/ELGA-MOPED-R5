@@ -17,8 +17,10 @@ Description: "MOPED Profil f체r die Verl채ngerung der Versichertenanspruchserkl�
 * related[VerlaengerteVAE].relationship = http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior
 * related[VerlaengerteVAE].claim only Reference(MopedVAERequestVerlaengerung)
 * insert ShallPopulateObligation(related[VerlaengerteVAE], MopedKHActor)
-* billablePeriod.start ^short = "KaOrg: Ereignis-/Unfalldatum JJJJMMTT (Verl채ngerungsdatum)"
+* billablePeriod.start ^short = "KaOrg: Ereignis-/Unfalldatum (Verl채ngerungsdatum)"
+* insert legacyMapping(billablePeriod.start, KaOrg, [[Ereignis-/Unfalldatum (Verl채ngerungsdatum)]])
 * insert ShallPopulateObligation(billablePeriod.start, MopedKHActor)
 * billablePeriod.end 1..1
 * billablePeriod.end ^short = "KaOrg: Anzahl der Verl채ngerungstage"
+* insert legacyMapping(billablePeriod.end, KaOrg, [[Anzahl der Verl채ngerungstage]])
 * insert ShallPopulateObligation(billablePeriod.end, MopedKHActor)

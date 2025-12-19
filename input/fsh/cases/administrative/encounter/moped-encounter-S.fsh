@@ -19,6 +19,7 @@ Title: "MOPED Encounter Stationär"
 * admission.extension[aufnahmeart] 1..1
 * extension contains TageOhneKostenbeitrag named TageOhneKostenbeitrag 0..1
 * extension[TageOhneKostenbeitrag] ^short = "KaOrg: Anzahl der Tage, für welche kein Kostenbeitrag seitens der Krankenanstalt eingehoben wurde"
+* insert legacyMapping(extension[TageOhneKostenbeitrag], KaOrg, Anzahl der Tage für welche kein Kostenbeitrag seitens der Krankenanstalt eingehoben wurde)
 * insert ShallPopulateObligation(extension[TageOhneKostenbeitrag], MopedKHActor)
 
 

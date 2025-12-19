@@ -64,7 +64,8 @@ dependencies:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
-# parameters:
+parameters:
+  suppress-mappings: ["http://hl7.org/fhir/workflow","http://hl7.org/fhir/fivews","http://hl7.org/v3","http://hl7.org/v2","http://www.cda-adc.ca/en/services/cdanet/", "http://www.pharmacists.ca/","http://hl7.org/fhir/interface","http://hl7.org/v3/cda","http://hl7.org/fhir/documentreference","http://snomed.info/conceptdomain","http://snomed.org/attributebinding","http://loinc.org","https://wiki.hl7.at/index.php?title=ILF:Allgemeiner_Implementierungsleitfaden_(Version_3)"]
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 #
@@ -227,11 +228,11 @@ menu:
   Questionnaires:
     MBDS - TISS-A: Questionnaire-LKFTISSAQuestionnaire.html
     MBDS - SAPS3: Questionnaire-LKFSAPS3Questionnaire.html
-    LKF Jahresmeldung - L01: Questionnaire-LKFL01Questionnaire.html
+    MBDS - Monatsmeldung - L01: Questionnaire-LKFL01Questionnaire.html
+    MBDS - Monatsmeldung - K01: Questionnaire-LKFK01Questionnaire.html
     LKF Jahresmeldung - L02: Questionnaire-LKFL02Questionnaire.html
     LKF Jahresmeldung - L03: Questionnaire-LKFL03Questionnaire.html
     LKF Jahresmeldung - L04: Questionnaire-LKFL04Questionnaire.html
-    LKF Jahresmeldung - K01: Questionnaire-LKFK01Questionnaire.html
     LKF Jahresmeldung - K02: Questionnaire-LKFK02Questionnaire.html
     LKF Jahresmeldung - K03: Questionnaire-LKFK03Questionnaire.html
     LKF Jahresmeldung - K04: Questionnaire-LKFK04Questionnaire.html
