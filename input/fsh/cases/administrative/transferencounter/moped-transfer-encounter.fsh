@@ -17,13 +17,13 @@ Title: "MOPED TransferEncounter"
 * serviceType contains MopedServiceType 1..1
 * serviceType[MopedServiceType] ^short = "LKF: Hauptkostenstelle – Funktionscode/Fachgebiet; KaOrg: Funktionscode der Abteilung lt. LKF; KaOrg: Funktionssubcode der Abteilung lt. LKF; KaOrg: Abteilung - Funktionscode der Ambulanz; KaOrg: Abteilung - Funktionssubcode der Ambulanz"
 * serviceType[MopedServiceType] only CodeableReference(MopedKHOrganisationseinheit)
-* insert legacyMapping(serviceType[MopedServiceType], LKF, [[Hauptkostenstelle – Funktionscode/Fachgebiet]])
-* insert legacyMapping(serviceType[MopedServiceType], KaOrg, [[Funktionscode der Abteilung lt. LKF]])
-* insert legacyMapping(serviceType[MopedServiceType], KaOrg, [[Funktionssubcode der Abteilung lt. LKF]])
-* insert legacyMapping(serviceType[MopedServiceType], KaOrg, [[Abteilung - Funktionscode der Ambulanz]])
-* insert legacyMapping(serviceType[MopedServiceType], KaOrg, [[Abteilung - Subcode]])
-* insert legacyMapping(serviceType[MopedServiceType], KaOrg, [[Abteilung - Funktionssubcode der Ambulanz]])
-* insert ShallPopulateObligation(serviceType[MopedServiceType], MopedKHActor)
+* insert legacyMapping(serviceType[MopedServiceType].reference, LKF, [[Hauptkostenstelle – Funktionscode/Fachgebiet]])
+* insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Funktionscode der Abteilung lt. LKF]])
+* insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Funktionssubcode der Abteilung lt. LKF]])
+* insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Abteilung - Funktionscode der Ambulanz]])
+* insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Abteilung - Subcode]])
+* insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Abteilung - Funktionssubcode der Ambulanz]])
+* insert ShallPopulateObligation(serviceType[MopedServiceType].reference, MopedKHActor)
 * participant ^slicing.rules = #open
 * participant ^slicing.discriminator.type = #value
 * participant ^slicing.discriminator.path = "type"
@@ -32,11 +32,13 @@ Title: "MOPED TransferEncounter"
 * participant[FachlichZustaendigeOrganisationseinheit] ^short = "LKF: Hauptkostenstelle – Fachlicher Funktionscode"
 * participant[FachlichZustaendigeOrganisationseinheit].actor only Reference(MopedKHOrganisationseinheit)
 * participant[FachlichZustaendigeOrganisationseinheit].type = MopedEncounterParticipantTypesCS#fachlich
-* insert ShallPopulateObligation(participant[FachlichZustaendigeOrganisationseinheit], MopedKHActor)
+* insert legacyMapping(participant[FachlichZustaendigeOrganisationseinheit].actor, LKF, [[Hauptkostenstelle – Fachlicher Funktionscode]])
+* insert ShallPopulateObligation(participant[FachlichZustaendigeOrganisationseinheit].actor, MopedKHActor)
 * participant[PflegerischZustaendigeOrganisationseinheit] ^short = "LKF: Hauptkostenstelle – Pflegerischer Funktionscode"
 * participant[PflegerischZustaendigeOrganisationseinheit].actor only Reference(MopedKHOrganisationseinheit)
 * participant[PflegerischZustaendigeOrganisationseinheit].type = MopedEncounterParticipantTypesCS#pflegerisch
-* insert ShallPopulateObligation(participant[PflegerischZustaendigeOrganisationseinheit], MopedKHActor)
+* insert legacyMapping(participant[PflegerischZustaendigeOrganisationseinheit].actor, LKF, [[Hauptkostenstelle – Pflegerischer Funktionscode]])
+* insert ShallPopulateObligation(participant[PflegerischZustaendigeOrganisationseinheit].actor, MopedKHActor)
 
 * actualPeriod ^short = "LKF: Zugangs- und Abgangsdatum"
 * actualPeriod.start 1..1
