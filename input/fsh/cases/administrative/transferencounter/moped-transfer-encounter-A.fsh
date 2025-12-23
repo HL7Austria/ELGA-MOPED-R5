@@ -11,7 +11,8 @@ Title: "MOPED TransferEncounter Ambulant"
 * insert ShallPopulateObligation(identifier[AufnahmezahlFunktionscodebezogen], MopedKHActor)
 * identifier[AufnahmezahlFunktionscodebezogen].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
 * identifier[AufnahmezahlFunktionscodebezogen].type.coding.code = #VN (exactly)
-* identifier[AufnahmezahlFunktionscodebezogen].assigner only Reference(MopedOrganizationAbteilung)
+//* identifier[AufnahmezahlFunktionscodebezogen].assigner only Reference(MopedKHOrganisationseinheit)
+//TBD HealthcareService cannot be assigner anymore
 * identifier[AufnahmezahlFunktionscodebezogen].system 1..1
 * insert legacyMapping(identifier[AufnahmezahlFunktionscodebezogen].value, LKF, [[Aufnahmezahl – funktionscodebezogen]])
 * insert ShallPopulateObligation(identifier[AufnahmezahlFunktionscodebezogen].value, MopedKHActor)
