@@ -11,15 +11,15 @@ Description: """Bundle für die Input-Ressourcen beim Einbringen von Antworten d
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
-  VAEResp 0..
-* entry[VAEResp].resource only MopedVAEResponse
-* entry[VAEResp].request.method from HTTPVerbInsertOnlyVS //insert only -> wenn eine VAE nachträglich abgelehnt werden soll wird eine neue eingebracht und von Moped automatisch die alte in den status canceled gesetzt
-* entry[VAEResp].request.method ^short = "POST"
+  VAEResponses 0..
+* entry[VAEResponses].resource only MopedVAEResponse
+* entry[VAEResponses].request.method from HTTPVerbInsertOnlyVS //insert only -> wenn eine VAE nachträglich abgelehnt werden soll wird eine neue eingebracht und von Moped automatisch die alte in den status canceled gesetzt
+* entry[VAEResponses].request.method ^short = "POST"
 * entry contains
-  ARKResp 0..
-* entry[ARKResp].resource only MopedARKResponse
-* entry[ARKResp].request.method from HTTPVerbInsertOnlyVS
-* entry[ARKResp].request.method ^short = "POST"
+  ARKRueckmeldung 0..
+* entry[ARKRueckmeldung].resource only MopedARKResponse
+* entry[ARKRueckmeldung].request.method from HTTPVerbInsertOnlyVS
+* entry[ARKRueckmeldung].request.method ^short = "POST"
 * entry contains
   ARKStatusUpdate 0..
 * entry[ARKStatusUpdate].resource only MopedARKStatusUpdate

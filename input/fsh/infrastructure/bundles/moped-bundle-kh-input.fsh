@@ -33,20 +33,20 @@ Description: """Bundle für die Input-Ressourcen beim Update von Informationen z
 * entry[Leistungen].request.method from HTTPVerbInsertUpdateDeleteVS
 * entry[Leistungen].request.method ^short = "POST | PUT | DELETE"
 * entry contains
-  Observations 0..
-* entry[Observations].resource only Observation //TBD Moped Observation Profile
-* entry[Observations].request.method from HTTPVerbInsertUpdateDeleteVS
-* entry[Observations].request.method ^short = "POST | PUT | DELETE"
+  Entbindung 0..
+* entry[Entbindung].resource only Observation //TBD Moped Observation Profile
+* entry[Entbindung].request.method from HTTPVerbInsertUpdateDeleteVS
+* entry[Entbindung].request.method ^short = "POST | PUT | DELETE"
 * entry contains
-  Verlegungen 0..
-* entry[Verlegungen].resource only MopedTransferEncounter
-* entry[Verlegungen].request.method from HTTPVerbInsertUpdateDeleteVS
-* entry[Verlegungen].request.method ^short = "POST | PUT | DELETE"
+  Bewegungen 0..
+* entry[Bewegungen].resource only MopedTransferEncounter
+* entry[Bewegungen].request.method from HTTPVerbInsertUpdateDeleteVS
+* entry[Bewegungen].request.method ^short = "POST | PUT | DELETE"
 * entry contains
-  Coverage 0..1
-* entry[Coverage].resource only MopedCoverage or MopedCoverageSelbstzahler
-* entry[Coverage].request.method from HTTPVerbInsertUpdateDeleteVS //TBD -> wirklich alle Methoden bei Coverage möglich?
-* entry[Coverage].request.method ^short = "POST | PUT | DELETE"
+  Versichertenanspruch 0..1
+* entry[Versichertenanspruch].resource only MopedCoverage or MopedCoverageSelbstzahler
+* entry[Versichertenanspruch].request.method from HTTPVerbInsertUpdateDeleteVS //TBD -> wirklich alle Methoden bei Coverage möglich?
+* entry[Versichertenanspruch].request.method ^short = "POST | PUT | DELETE"
 * entry contains
   Hauptversicherter 0..1
 * entry[Hauptversicherter].resource only Hauptversicherter

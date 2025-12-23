@@ -54,12 +54,12 @@ Title: "MOPED Composition"
 * section ^slicing.rules = #open
 //* insert ShallPopulateObligation(section)
 //* insert ObligationActor(section, MopedDeviceActor)
-* section contains TransferEncounter 0..1
-* section[TransferEncounter].code.coding.system = Canonical(MopedEncounterTypesCS)
-* section[TransferEncounter].code.coding.code = #TENC
-* section[TransferEncounter].entry 1..
-* section[TransferEncounter].entry only Reference(MopedTransferEncounterI or MopedTransferEncounterA or MopedTransferEncounterS)
-* insert ShallPopulateObligation(section[TransferEncounter], MopedDeviceActor)
+* section contains Bewegungen 0..1
+* section[Bewegungen].code.coding.system = Canonical(MopedEncounterTypesCS)
+* section[Bewegungen].code.coding.code = #TENC
+* section[Bewegungen].entry 1..
+* section[Bewegungen].entry only Reference(MopedTransferEncounterI or MopedTransferEncounterA or MopedTransferEncounterS)
+* insert ShallPopulateObligation(section[Bewegungen], MopedDeviceActor)
 * section contains zustaendigeSV 0..1
 * section[zustaendigeSV] ^short = "LKF: Leistungszuständiger Kostenträger – Code; KaOrg: Kostenträger (leistungszuständig)"
 * insert legacyMapping(section[zustaendigeSV].entry, LKF, [[Leistungszuständiger Kostenträger – Code]])
@@ -102,13 +102,13 @@ Title: "MOPED Composition"
 * section[Leistungen].entry only Reference(MopedProcedure)
 * section[Leistungen].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[Leistungen], MopedDeviceActor)
-* section contains Coverages 0..1 
-* section[Coverages].code.coding.system = Canonical(CompositionSectionsCS)
-* section[Coverages].code.coding.code = #COV
-* section[Coverages].entry 1..
-* section[Coverages].entry only Reference(MopedCoverage or MopedCoverageSelbstzahler)
-* section[Coverages].author only Reference(KHOrganization)
-* insert ShallPopulateObligation(section[Coverages], MopedDeviceActor)
+* section contains Versichertenanspruch 0..1 
+* section[Versichertenanspruch].code.coding.system = Canonical(CompositionSectionsCS)
+* section[Versichertenanspruch].code.coding.code = #COV
+* section[Versichertenanspruch].entry 1..
+* section[Versichertenanspruch].entry only Reference(MopedCoverage or MopedCoverageSelbstzahler)
+* section[Versichertenanspruch].author only Reference(KHOrganization)
+* insert ShallPopulateObligation(section[Versichertenanspruch], MopedDeviceActor)
 * section contains VAERequests 0.. 
 * section[VAERequests].code.coding.system = Canonical(MopedClaimTypeCS)
 * section[VAERequests].code.coding.code = #VAEREQ
@@ -158,13 +158,13 @@ Title: "MOPED Composition"
 * section[ARKStatusUpdate].entry only Reference(MopedARKStatusUpdate)
 * section[ARKStatusUpdate].author only Reference(LGFOrganization)
 * insert ShallPopulateObligation(section[ARKStatusUpdate], MopedDeviceActor)
-* section contains Observations 0..1 
-* section[Observations].code.coding.system = Canonical(CompositionSectionsCS)
-* section[Observations].code.coding.code = #OBS
-* section[Observations].entry 1..
-* section[Observations].entry only Reference(Observation)
-* section[Observations].author only Reference(KHOrganization)
-* insert ShallPopulateObligation(section[Observations], MopedDeviceActor)
+* section contains Entbindung 0..1 
+* section[Entbindung].code.coding.system = Canonical(CompositionSectionsCS)
+* section[Entbindung].code.coding.code = #OBS
+* section[Entbindung].entry 1..
+* section[Entbindung].entry only Reference(Observation)
+* section[Entbindung].author only Reference(KHOrganization)
+* insert ShallPopulateObligation(section[Entbindung], MopedDeviceActor)
 * section contains Hauptversicherter 0..1 
 * section[Hauptversicherter].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Hauptversicherter].code.coding.code = #HAUPTV

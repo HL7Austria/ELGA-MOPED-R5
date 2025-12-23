@@ -5,7 +5,7 @@ Title: "MOPED Entlassung Aviso Composition"
 * ^experimental = true
 * status = #partial
 * encounter 1..1
-* section[TransferEncounter].entry 1..
+* section[Bewegungen].entry 1..
 * section[besuchteAbteilungen].entry 1..
 
 //Invarianten:
