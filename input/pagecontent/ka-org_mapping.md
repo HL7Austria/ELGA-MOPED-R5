@@ -726,7 +726,7 @@ verfügbar.
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
-        <td>Encounter.reason:Ursache.value</td>
+        <td>Encounter.reason:Ursache.use.coding.code; Encounter.reason:Ursache.value</td>
         <td>Composition.encounter.resolve()</td>
         <td>/</td>
     </tr>
@@ -1058,7 +1058,7 @@ verfügbar.
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
-        <td>Encounter.reason:Ursache.value</td>
+        <td>Encounter.reason:Ursache.use.coding.code; Encounter.reason:Ursache.value</td>
         <td>Composition.encounter.resolve()</td>
         <td>/</td>
     </tr>
