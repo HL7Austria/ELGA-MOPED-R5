@@ -12,6 +12,7 @@
     KH -->|POST $entlassen| Moped
     KH -->|POST $abrechnen| Moped
     KH -->|POST $stornieren| Moped
+    KH -->|POST $einspielen| Moped
     Moped -->|GET VAEResponse| KH
     Moped --->|GET ClaimResponse| KH
 </pre>  
