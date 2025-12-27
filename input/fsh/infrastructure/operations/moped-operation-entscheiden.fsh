@@ -1,6 +1,6 @@
 Instance: MopedAbrechnungEntscheiden
 InstanceOf: OperationDefinition
-Title: "MOPED ClaimResponse $entscheiden "
+Title: "MOPED ClaimResponse $entscheiden"
 Description: "Die $entscheiden Operation wird aufgerufen, wenn eine Abrechnung beantwortet wird und freigegeben wird."
 Usage: #definition
 

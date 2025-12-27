@@ -11,7 +11,7 @@ Description: """Bundle für die Input-Ressourcen beim Anfragen (KH)"""
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #closed
 * entry contains
-  VAEReq 1..1
-* entry[VAEReq].resource only MopedVAERequestVerlaengerung or MopedVAERequestInitial
-* entry[VAEReq].request.method from HTTPVerbInsertOnlyVS
-* entry[VAEReq].request.method ^short = "POST"
+  VAERequests 1..1
+* entry[VAERequests].resource only MopedVAERequestVerlaengerung or MopedVAERequestInitial
+* entry[VAERequests].request.method from HTTPVerbInsertOnlyVS
+* entry[VAERequests].request.method ^short = "POST"
