@@ -28,38 +28,8 @@ Der Patient wird stationär aufgenommen und die Aufnahme wird so früh wie mögl
 Der Patient wird stationär in das KH aufgenommen und ein Aufenthalt (Encounter) wird angelegt. In diesem Zuge wird auch gleich die Station auf die er aufgenommen wird (TransferEncounter) und die Aufnahmediagnose mit übermittelt. Die zuständige Versicherung kann in Form einer Coverage direkt zur Verfügung gestellt werden, sofern diese bereits bekannt ist. Dies ist aber bei der Aufnahme nicht verpflichtend und kann später durch $update eingebracht werden.
 
 ### Ablauf 
-<pre class="mermaid">
-    ---
-    config:
-      theme: 'base'
-      themeVariables:
-        primaryColor: '#dbdbdb'         
-        actorBorder: '#666'
-        noteBkgColor: '#f4f4f4'
-        noteBorderColor: '#555'
-    ---
-    sequenceDiagram
-    autonumber
-    box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
-    end
-    box rgb(197, 247, 186)
-    participant MP as Moped
-    end
-    box rgb(186, 196, 247)
-    actor SV as SV (ÖGK Wien)
-    end
-    box rgb(247, 208, 186)
-    actor LGF as LGF (Landesgesundheitsfonds Wien)
-    end
-    box rgb(252, 179, 179) 
-    actor Bund as Bund 
-    end
 
-    KH ->> MP: $aufnehmen
-    Note over KH: Patient wird aufgenommen
-
-</pre>
+<div>{% include AF2.svg %}</div>
 
 ### Relevante Profile
 - [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)
