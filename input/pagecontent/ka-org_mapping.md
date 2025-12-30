@@ -246,7 +246,7 @@ verfügbar.
         <td>MopedCoverage</td>
         <td>Coverage</td>
         <td>Coverage.class:Versichertenkategorien.value</td>
-        <td>Composition.section:Coverages.entry.resolve()</td>
+        <td>Composition.section:Versichertenanspruch.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -674,7 +674,7 @@ verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -687,7 +687,7 @@ verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -1077,7 +1077,7 @@ verfügbar.
         <td>MopedCoverage</td>
         <td>Coverage</td>
         <td>Coverage.identifier:VDASID</td>
-        <td>Composition.section:Coverages.entry.resolve()</td>
+        <td>Composition.section:Versichertenanspruch.entry.resolve()</td>
         <td>/</td>
     </tr>
 </table>
@@ -2138,7 +2138,7 @@ dann nicht zwingend</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -2151,7 +2151,7 @@ dann nicht zwingend</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>

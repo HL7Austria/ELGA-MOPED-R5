@@ -499,7 +499,7 @@ diesem Link</a> verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>Funktions- und subcode sind in zwei Felder aufgeteilt</td>
     </tr>
     <tr>
@@ -512,7 +512,7 @@ diesem Link</a> verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -526,7 +526,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -539,7 +539,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.subjectStatus</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -553,7 +553,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -567,7 +567,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -581,7 +581,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.admission.dischargeDisposition</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -595,7 +595,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.participant:FachlichZustaendigeOrganisationseinheit.actor.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>wird in AG Moped geklärt</td>
     </tr>
     <tr>
@@ -609,7 +609,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.participant:PflegerischZustaendigeOrganisationseinheit.actor.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>wird in AG Moped geklärt</td>
     </tr>
     <tr>
@@ -622,7 +622,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:Altersgruppe.extension:neugeborenes.value[x]</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -635,7 +635,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:Altersgruppe.extension:beiZugang.value[x]</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -648,7 +648,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>MopedTransferEncounterA</td>
         <td>Encounter</td>
         <td>Encounter.identifier:AufnahmezahlFunktionscodebezogen.value</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
 </table>
@@ -799,7 +799,7 @@ Diagnosen zu befüllen</td>
         <td>MopedTransferEncounterA</td>
         <td>Encounter</td>
         <td>Encounter.identifier:AufnahmezahlFunktionscodebezogen.value</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
 </table>
@@ -1000,7 +1000,7 @@ Diagnosen zu befüllen</td>
         <td>MopedTransferEncounterA</td>
         <td>Encounter</td>
         <td>Encounter.identifier:AufnahmezahlFunktionscodebezogen.value</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
 </table>
