@@ -12,6 +12,7 @@ Die Operation wird vom Akteur Sozialversicherung (SV) aufgerufen. Die $antworten
 2. Alte Requests canceln
 - Beim Einbringen einer VAEREsponse:
   - Falls es eine aktive VAEResponse in der Composition.section:VAEResponses gibt so wird der status auf *cancelled* gesetzt. Die neue VAEResponse wird in die Section eingefügt und ist ab jetzt die gültige VAEResponse.
+  *Außnahme: wenn die einzubringende VAEResponse auf eine MopedVAERequestVerlaengerung verweist und der Zeitraum der Response ein anderer ist, als bei der bereits aktiven Response dann wird die aktive VAEResponse nicht gecancelled.*
 - Beim Einbringen einer ARKResponse:
   - Falls es eine aktive ARKResponse in der Composition.section:ARKResponses gibt so wird der status auf *cancelled* gesetzt. Die neue ARKResponse wird in die Section eingefügt und ist ab jetzt die gültige ARKResponse.
 - ARKStatusUpdates, Communications und CommunicationResponses werden in die jeweiligen Sections eingefügt.

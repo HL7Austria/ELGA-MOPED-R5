@@ -52,48 +52,8 @@ Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Pro
 
 
 ### Ablauf 
-<pre class="mermaid">
-    ---
-    config:
-      theme: 'base'
-      themeVariables:
-        primaryColor: '#dbdbdb'         
-        actorBorder: '#666'
-        noteBkgColor: '#f4f4f4'
-        noteBorderColor: '#555'
-    ---
-    sequenceDiagram
-    autonumber
-    box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
-    end
-    box rgb(197, 247, 186)
-    participant MP as Moped
-    end
-    box rgb(186, 196, 247)
-    actor SV as SV (ÖGK Wien)
-    end
-    box rgb(247, 208, 186)
-    actor LGF as LGF (Landesgesundheitsfonds Wien)
-    end
-    box rgb(252, 179, 179) 
-    actor Bund as Bund 
-    end
 
-    KH->>MP: POST VAERequest 1
-    Note over KH: Anfrage VAE <br/>(ab 1.09.2025)
-    SV->>MP: POST VAEResponse 1
-    Note over SV: Bestätigung VAE <br/>(01.09.2025-16.09.2025)
-
-    KH->>MP: POST VAERequest 2
-    Note over KH: Anfrage Verlängerung<br/>mit Claim.related.claim zu VAERequest 1 und <br/> Claim.related.relationship = 'Verlängerung'<br/>(16.09.2025-21.09.2025 = Verlängerungstage)
-    Note over MP: Moped behält die gültige Übernahme (VAEResponse 1)
-
-    SV->>MP: POST VAEResponse 2
-    Note over SV: Bestätigung Verlängerung<br/>(16.09.2025-21.09.2025)
-    Note over MP: Moped behält die gültigen Übernahmen für beide Zeiträume<br/>(VAEResponse 1 & VAEResponse 2)
-
-</pre>
+<div>{% include AF28.svg %}</div>
 
 ### Relevante Profile
 - [Coverage](StructureDefinition-MopedCoverage.html)
@@ -170,51 +130,8 @@ Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH
 - Kommentare zum jeweiligen VAE Ablehnungsgrund können in ClaimResponse.processNote.text festgehalten werden.
 
 ### Ablauf 
-<pre class="mermaid">
-    ---
-    config:
-      theme: 'base'
-      themeVariables:
-        primaryColor: '#dbdbdb'         
-        actorBorder: '#666'
-        noteBkgColor: '#f4f4f4'
-        noteBorderColor: '#555'
-    ---
-    sequenceDiagram
-    autonumber
-    box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
-    end
-    box rgb(197, 247, 186)
-    participant MP as Moped
-    end
-    box rgb(186, 196, 247)
-    actor SV as SV (ÖGK Wien)
-    end
-    box rgb(247, 208, 186)
-    actor LGF as LGF (Landesgesundheitsfonds Wien)
-    end
-    box rgb(252, 179, 179) 
-    actor Bund as Bund 
-    end
-    KH->>MP: Anfrage VAE <br/>POST VAERequest 1
-    Note over KH: Anfrage auf Versicherungsanspruchserklärung 
-    SV->>MP: VAEResponse 1<br/>(Status 03 'nicht leistungszuständig')
-    Note over SV: Negative VAE
-    Note over MP: durch negative Response wird der <br/>VAERequest 1 automatisch gecancelled
-    alt Erneute Anfrage bei gleichem<br/> Träger mit anderen Daten
-      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
-      Note over KH: KH stellt modifizierte Anfrage an ÖGK
-    else Patient hat noch einen Anspruch bei <br/>einem anderen SV Träger (z.B. SVS)
-      KH->>MP: $update mit SVS referenziert in der neuen Coverage
-      Note over KH: KH setzt die SVS als zuständige Versicherung
-      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
-      Note over KH: KH stellt neue Anfrage an SVS
-    else  Patient wird zum Selbstzahler
-      KH->>MP: $update mit Selbstzahler Coverage
-      Note over KH: KH meldet Patienten als Selbstzahler 
-    end
-</pre>
+
+<div>{% include AF29.svg %}</div>
 
 ### Relevante Profile
 - [Coverage](StructureDefinition-MopedCoverage.html) oder [Selbstzahler Coverage](StructureDefinition-MopedCoverageSelbstzahler.html)
@@ -222,7 +139,7 @@ Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH
 - [VAEResponse](StructureDefinition-MopedVAEResponse.html)
 - [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
 - [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
-
+- [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
 ### Relevante Invarianten
 
 ### Mögliche Notifications
@@ -366,16 +283,15 @@ In Arbeit :)
 
 
 ## Anwendungsfall 31: VAE doch positiv (nach vorheriger negativer VAE)
-In Arbeit :)
 
 ### Betroffene Akteure
 
 | Akteur            |  |
 |-------------------|--------------:|
 | KH (Krankenhaus)  |      ✅    |
-| LGF (Landesgesundheitsfonds) |  ✅  |
+| LGF (Landesgesundheitsfonds) |  ❌  |
 | SV (Sozialversicherung)      |  ✅  |
-| Bund            |  ✅  |
+| Bund            |  ❌  |
 
 ### Betroffene Behandlungsarten
 
@@ -386,50 +302,27 @@ In Arbeit :)
 
 
 ### Beschreibung
+Aufgrund einer Verwaltungsentscheidung wird eine bereits übermittelte, negative Versichertenanspruchserklärung widerrufen und es erfolgt eine positive Versichertenanspruchserklärung an die jeweilige Krankenanstalt. Die Entscheidung kann seitens SV jederzeit getroffen werden.
 
 ### Beispiel
+SV gibt zuerst eine VAEResponse mit *03 - nicht leistungszuständig* ab. Nach einer Verwaltungsentscheidung wird eine VAEResponse mit *00 - genehmigt* abgegeben.
 
 ### Technische Hinweise
-
+Moped cancelt automatisch die alten VAEResponse beim Einbringen der neuen VAEREsponse.
 
 ### Ablauf 
-<pre class="mermaid">
-    ---
-    config:
-      theme: 'base'
-      themeVariables:
-        primaryColor: '#dbdbdb'         
-        actorBorder: '#666'
-        noteBkgColor: '#f4f4f4'
-        noteBorderColor: '#555'
-    ---
-    sequenceDiagram
-    autonumber
-    box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
-    end
-    box rgb(197, 247, 186)
-    participant MP as MP
-    end
-    box rgb(186, 196, 247)
-    actor SV as SV (ÖGK Wien)
-    end
-    box rgb(247, 208, 186)
-    actor LGF as LGF (Landesgesundheitsfonds Wien)
-    end
-    box rgb(252, 179, 179) 
-    actor Bund as Bund 
-    end
 
-</pre>
+<div>{% include AF31.svg %}</div>
 
 ### Relevante Profile
+- [VAERequest](StructureDefinition-MopedVAERequest.html)
+- [VAEResponse](StructureDefinition-MopedVAEResponse.html)
+- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
 
 ### Relevante Invarianten
 
 ### Mögliche Notifications
-
-#### SubscriptionTopic: X 
 
 #### Tabellarische Übersicht
 
@@ -460,7 +353,6 @@ In Arbeit :)
 
 
 ## Anwendungsfall 32: VAE doch negativ (nach vorheriger positiver VAE)
-In Arbeit :)
 
 ### Betroffene Akteure
 
@@ -480,50 +372,26 @@ In Arbeit :)
 
 
 ### Beschreibung
+Aufgrund einer Verwaltungsentscheidung wird eine bereits übermittelte, positive Versichertenanspruchserklärung widerrufen und es erfolgt eine negative Versichertenanspruchserklärung an die jeweilige Krankenanstalt. In der VAE wird im Datenfeld “VAEST” der jeweilige Ablehnungsgrund angeführt. Die Entscheidung kann seitens SV jederzeit getroffen werden.
 
 ### Beispiel
 
 ### Technische Hinweise
-
+- Der Ablauf gleicht nach der Abgabe der negativen VAE dem aus [Anwendungsfall 29](#anwendungsfall-29-negative-vae).
+- Die negative VAEResponse cancelt automatisch die vorherige positive.
 
 ### Ablauf 
-<pre class="mermaid">
-    ---
-    config:
-      theme: 'base'
-      themeVariables:
-        primaryColor: '#dbdbdb'         
-        actorBorder: '#666'
-        noteBkgColor: '#f4f4f4'
-        noteBorderColor: '#555'
-    ---
-    sequenceDiagram
-    autonumber
-    box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
-    end
-    box rgb(197, 247, 186)
-    participant MP as Moped
-    end
-    box rgb(186, 196, 247)
-    actor SV as SV (ÖGK Wien)
-    end
-    box rgb(247, 208, 186)
-    actor LGF as LGF (Landesgesundheitsfonds Wien)
-    end
-    box rgb(252, 179, 179) 
-    actor Bund as Bund 
-    end
-
-</pre>
+<div>{% include AF32.svg %}</div>
 
 ### Relevante Profile
-
+- [VAERequest](StructureDefinition-MopedVAERequest.html)
+- [VAEResponse](StructureDefinition-MopedVAEResponse.html)
+- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
+- [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
 ### Relevante Invarianten
 
 ### Mögliche Notifications
-
-#### SubscriptionTopic: X 
 
 #### Tabellarische Übersicht
 
