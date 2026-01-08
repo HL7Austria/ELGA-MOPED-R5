@@ -31,37 +31,8 @@ Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt m
 
 
 ### Ablauf 
-<pre class="mermaid">
- ---
-    config:
-      theme: 'base'
-      themeVariables:
-        primaryColor: '#dbdbdb'         
-        actorBorder: '#666'
-        noteBkgColor: '#f4f4f4'
-        noteBorderColor: '#555'
-    ---
-    sequenceDiagram
-    autonumber
-    box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
-    end
-    box rgb(197, 247, 186)
-    participant MP as Moped
-    end
-    box rgb(186, 196, 247)
-    actor SV as SV (ÖGK Wien)
-    end
-    box rgb(247, 208, 186)
-    actor LGF as LGF (Landesgesundheitsfonds Wien)
-    end
-    box rgb(252, 179, 179) 
-    actor Bund as Bund 
-    end
 
-    KH->>MP: $entlassen
-    Note over KH: Patient wird entlassen und im gleichen Aufruf<br/> die Hauptdiagnose mitgeliefert
-</pre>
+<div>{% include AF23.svg %}</div>
 
 ### Relevante Profile
 - [$entlassen Bundle](StructureDefinition-MopedEntlassenBundle.html)
@@ -103,46 +74,8 @@ Pathologischer Befund bzw. Laborergebnisse liegen erst einige Zeit nach der Entl
 Abgerechnet kann erst werden, wenn die Hauptdiagnose vorhanden ist, und somit der Encounter.status auf "completed" gesetzt wurde.
 
 ### Ablauf 
-<pre class="mermaid">
----
-    config:
-      theme: 'base'
-      themeVariables:
-        primaryColor: '#dbdbdb'         
-        actorBorder: '#666'
-        noteBkgColor: '#f4f4f4'
-        noteBorderColor: '#555'
-    ---
-    sequenceDiagram
-    autonumber
-    box rgb(245, 245, 188)
-    actor KH as KH (Herz Jesu Krankenhaus)
-    end
-    box rgb(197, 247, 186)
-    participant MP as Moped
-    end
-    box rgb(186, 196, 247)
-    actor SV as SV (ÖGK Wien)
-    end
-    box rgb(247, 208, 186)
-    actor LGF as LGF (Landesgesundheitsfonds Wien)
-    end
-    box rgb(252, 179, 179) 
-    actor Bund as Bund 
-    end
 
-    KH->>MP: $aufnehmen
-    Note over KH: Patient:in wird aufgenommen<br/>(Encounter status: in-progress)
-
-    KH->>MP: $update
-    Note over KH: Encounter-Status auf "discharged" gesetzt<br/>(noch ohne Hauptdiagnose aka "Entlassungs-Aviso")
-
-    KH->>MP: $update 
-    Note over KH: Hauptdiagnose „Herzinsuffizienz“ ergänzt
-
-    KH->>MP: $entlassen
-    Note over KH: Encounter-Status final auf "completed" gesetzt
-</pre>
+<div>{% include AF24-25.svg %}</div>
 
 ### Relevante Profile
 - Entlassung aviso: [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
