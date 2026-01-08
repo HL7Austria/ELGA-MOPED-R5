@@ -18,10 +18,6 @@ Usage: #example
 * extension[VerpflegskostenBeitragsbefreiung].extension[Befreiung].valueCoding = VerpflegskostenBeitragsbefreiungCS#N
 * extension[VerpflegskostenBeitragsbefreiung].extension[Zeitraum].valuePeriod.start = "2024-02-22"
 * extension[VerpflegskostenBeitragsbefreiung].extension[Zeitraum].valuePeriod.end = "2024-08-21"
-* extension[MopedSupportingInfoSonderklasse].extension[category].valueCodeableConcept = ClaimSupportingInformationCategoryCS#KLAS
-* extension[MopedSupportingInfoSonderklasse].extension[code].valueCodeableConcept = SonderklasseCS#A
-* extension[MopedSupportingInfoSonderklasse].extension[sequence].valuePositiveInt = 2
-* extension[MopedSupportingInfoSonderklasse].extension[timing].valuePeriod.start = "2024-02-22T19:33:00+02:00"
 * extension[MopedSupportingInfoVortageanzahlAufKostenbeitrag].extension[category].valueCodeableConcept = ClaimSupportingInformationCategoryCS#VTAGE
 * extension[MopedSupportingInfoVortageanzahlAufKostenbeitrag].extension[value].valueQuantity.value = 2
 * extension[MopedSupportingInfoVortageanzahlAufKostenbeitrag].extension[sequence].valuePositiveInt = 4

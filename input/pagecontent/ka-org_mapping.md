@@ -543,11 +543,11 @@ verfügbar.
     <tr>
         <td>Allgemeine Gebührenklasse/Sonderklasse</td>
         <td>KLAS</td>
-        <td>MopedKHActor; MopedSVActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung; MopedVAEResponse</td>
-        <td>Claim; ClaimResponse</td>
-        <td>Claim.supportingInfo:Sonderklasse.code; ClaimResponse.extension:MopedSupportingInfoSonderklasse</td>
-        <td>Composition.section:VAERequests.entry.resolve(); Composition.section:VAEResponses.entry.resolve()</td>
+        <td>MopedKHActor</td>
+        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>Claim</td>
+        <td>Claim.supportingInfo:Sonderklasse.code</td>
+        <td>Composition.section:VAERequests.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -879,11 +879,11 @@ verfügbar.
     <tr>
         <td>Allgemeine Gebührenklasse/Sonderklasse</td>
         <td>KLAS</td>
-        <td>MopedKHActor; MopedSVActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung; MopedVAEResponse</td>
-        <td>Claim; ClaimResponse</td>
-        <td>Claim.supportingInfo:Sonderklasse.code; ClaimResponse.extension:MopedSupportingInfoSonderklasse</td>
-        <td>Composition.section:VAERequests.entry.resolve(); Composition.section:VAEResponses.entry.resolve()</td>
+        <td>MopedKHActor</td>
+        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>Claim</td>
+        <td>Claim.supportingInfo:Sonderklasse.code</td>
+        <td>Composition.section:VAERequests.entry.resolve()</td>
         <td>wird in R6 von einer extension zu einem normalen supportingInfo slice</td>
     </tr>
     <tr>
