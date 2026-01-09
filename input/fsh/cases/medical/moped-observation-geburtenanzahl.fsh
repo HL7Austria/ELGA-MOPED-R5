@@ -9,7 +9,7 @@ Title: "MOPED Observation Geburtenanzahl"
 * code 1..1
 * insert ShallPopulateObligation(code, MopedKHActor)
 * valueQuantity 1..1
-* valueQuantity.value ^short = "KaOrg: Anzahl der Geburten"
+* valueQuantity.value ^short = "KaOrg: Anzahl der Lebendgeburten, Anzahl der Totgeburten"
 * valueQuantity.value 1..1
 * valueQuantity.value ^mapping[+].identity = "KaOrg"
 * valueQuantity.value ^mapping[=].map = "Anzahl der Lebendgeburten, Anzahl der Totgeburten"
