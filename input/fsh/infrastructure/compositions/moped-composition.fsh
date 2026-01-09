@@ -162,7 +162,7 @@ Title: "MOPED Composition"
 * section[Entbindung].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Entbindung].code.coding.code = #OBS
 * section[Entbindung].entry 1..
-* section[Entbindung].entry only Reference(MopedObservationLebendgeburten or MopedObservationTotgeburten) //TBD Moped Observation Profile
+* section[Entbindung].entry only Reference(MopedObservationGeburtenanzahl) //TBD Moped Observation Profile
 * section[Entbindung].author only Reference(KHOrganization)
 * insert ShallPopulateObligation(section[Entbindung], MopedDeviceActor)
 * section contains Hauptversicherter 0..1 

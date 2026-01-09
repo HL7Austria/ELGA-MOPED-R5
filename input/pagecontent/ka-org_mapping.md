@@ -1066,7 +1066,7 @@ verfügbar.
         <td>Entbindungsdatum</td>
         <td>ENTBDAT</td>
         <td>MopedKHActor</td>
-        <td>MopedObservationLebendgeburten; MopedObservationTotgeburten</td>
+        <td>MopedObservationGeburtenanzahl</td>
         <td>Observation</td>
         <td>Observation.effective[x]:effectiveDateTime</td>
         <td>Composition.section:Entbindung.entry.resolve()</td>
@@ -1096,7 +1096,7 @@ verfügbar.
         <td>Anzahl der Totgeburten</td>
         <td>ENTT</td>
         <td>MopedKHActor</td>
-        <td>MopedObservationTotgeburten</td>
+        <td>MopedObservationGeburtenanzahl</td>
         <td>Observation</td>
         <td>Observation.value[x]:valueQuantity.value</td>
         <td>Composition.section:Entbindung.entry.resolve()</td>

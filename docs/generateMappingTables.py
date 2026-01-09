@@ -103,9 +103,7 @@ COMPOSITION_PATHS_BY_PROFILE: Dict[str, str] = {
     "MopedTransferEncounterA": "Composition.section:Bewegungen.entry.resolve()",
     "MopedTransferEncounterS": "Composition.section:Bewegungen.entry.resolve()",
     "MopedPatient": "Composition.subject.resolve()",
-    "MopedObservationTotgeburten": "Composition.section:Entbindung.entry.resolve()",
-    "MopedObservationLebendgeburten": "Composition.section:Entbindung.entry.resolve()"
-
+    "MopedObservationGeburtenanzahl": "Composition.section:Entbindung.entry.resolve()"
 }
 
 UNUSED_FIELD_COMMENTS = [
