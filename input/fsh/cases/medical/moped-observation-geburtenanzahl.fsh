@@ -1,17 +1,18 @@
-Profile: MopedObservationLebendgeburten
+Profile: MopedObservationGeburtenanzahl
 Parent: Observation
-Description: "MOPED Profil der Observation Ressource für die Anzahl der Lebendgeburten"
-Title: "MOPED Observation Lebendgeburten"
+Description: "MOPED Profil der Observation Ressource für die Anzahl der Geburten"
+Title: "MOPED Observation Geburtenanzahl"
 
 * status 1..1
 * insert ShallPopulateObligation(status, MopedKHActor)
-* code = http://loinc.org#11636-8 "[#] Births.live"
+* code from GeburtenanzahlVS (required)
 * code 1..1
 * insert ShallPopulateObligation(code, MopedKHActor)
 * valueQuantity 1..1
-* valueQuantity.value ^short = "KaOrg: Anzahl der Lebendgeburten"
+* valueQuantity.value ^short = "KaOrg: Anzahl der Geburten"
 * valueQuantity.value 1..1
-* insert legacyMapping(valueQuantity.value, KaOrg, Anzahl der Lebendgeburten)
+* valueQuantity.value ^mapping[+].identity = "KaOrg"
+* valueQuantity.value ^mapping[=].map = "Anzahl der Lebendgeburten, Anzahl der Totgeburten"
 * insert ShallPopulateObligation(valueQuantity.value, MopedKHActor)
 
 * effectiveDateTime 1..1
