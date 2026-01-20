@@ -3,7 +3,7 @@ Parent: Bundle
 Title: "MOPED Entscheiden Bundle LGF"
 Description: """Bundle für die Input-Ressourcen beim Entscheiden (Bestätigen/Ablehnen) von Punkten/Erorrs/Warnings"""
 
-* implicitRules 0..0
+
 
 * type = #transaction
 * entry 1..*

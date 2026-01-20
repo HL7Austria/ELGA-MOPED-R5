@@ -3,7 +3,7 @@ Parent: Bundle
 Title: "MOPED Antworten Bundle SV"
 Description: """Bundle für die Input-Ressourcen beim Einbringen von Antworten der SV"""
 
-* implicitRules 0..0
+
 
 * type = #transaction
 * entry 1..*

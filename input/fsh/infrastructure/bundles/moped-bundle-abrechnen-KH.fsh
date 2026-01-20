@@ -3,7 +3,7 @@ Parent: Bundle
 Title: "MOPED Abrechnen Bundle KH"
 Description: """Bundle für die Input-Ressourcen beim Abrechnen (KH)"""
 
-* implicitRules 0..0
+
 
 * type = #transaction
 * entry 1..1
