@@ -13,9 +13,6 @@
   "author": {
     "reference": "Organization/KHK999"
   },
-  "item": [
-    {
-      "linkId": "saps3-set",
       "item": [
         {
           "linkId": "saps3-02",
@@ -537,6 +534,4 @@
           ]
         }
       ]
-    }
-  ]
 }

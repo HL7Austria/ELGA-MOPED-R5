@@ -31,8 +31,5 @@ Usage: #example
 * admission.extension.url = "http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival"
 * admission.extension.valueCode = TransportartCS#
 
-* extension.url = "https://elga.moped.at/StructureDefinition/moped-ext-unfalldatum"
-* extension.valueDate = ""
-
 * admission.destination = Reference()
 */
