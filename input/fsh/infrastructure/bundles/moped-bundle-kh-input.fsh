@@ -3,7 +3,7 @@ Parent: Bundle
 Title: "MOPED Input Bundle KH"
 Description: """Bundle für die Input-Ressourcen beim Update von Informationen zu einem Fall"""
 
-* implicitRules 0..0
+
 
 * type = #transaction
 * entry 1..*
