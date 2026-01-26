@@ -47,6 +47,7 @@ Title: "MOPED Procedure"
 * code.coding.system = $LKFLeistungskatalog
 * code.coding 1..
 * insert ShallPopulateObligation(code, MopedKHActor)
+* bodySite 0..1
 * bodySite from LKFSeitenlokalisationVS
 * bodySite ^short = "LKF: Medizinische Leistung – Seitenlokalisation "
 * insert legacyMapping(bodySite, LKF, [[Medizinische Leistung – Seitenlokalisation]])
