@@ -86,8 +86,8 @@ COMPOSITION_PATHS_BY_PROFILE: Dict[str, str] = {
     "MopedOrganizationAbteilung": "Composition.section:besuchteAbteilungen.entry.resolve()",
     "MopedCondition": "Composition.section:Diagnosen.entry.resolve()",
     "MopedProcedure": "Composition.section:Leistungen.entry.resolve()",
-    "MopedCoverage": "Composition.section:Coverages.entry.resolve()",
-    "MopedCoverageSelbstzahler": "Composition.section:Coverages.entry.resolve()",
+    "MopedCoverage": "Composition.section:Versichertenanspruch.entry.resolve()",
+    "MopedCoverageSelbstzahler": "Composition.section:Versichertenanspruch.entry.resolve()",
     "MopedVAERequest": "Composition.section:VAERequests.entry.resolve()",
     "MopedVAERequestVerlaengerung": "Composition.section:VAERequests.entry.resolve()",
     "MopedVAERequestInitial": "Composition.section:VAERequests.entry.resolve()",
@@ -97,13 +97,13 @@ COMPOSITION_PATHS_BY_PROFILE: Dict[str, str] = {
     "MopedARKRequest": "Composition.section:ARKKostenInformation.entry.resolve()",
     "MopedARKResponse": "Composition.section:ARKRueckmeldung.entry.resolve()",
     "MopedARKStatusUpdate": "Composition.section:ARKStatusUpdate.entry.resolve()",
-    "Observation": "Composition.section:Observations.entry.resolve()",
     "Hauptversicherter": "Composition.section:Hauptversicherter.entry.resolve()",
     "MopedQuestionnaireResponse": "Composition.section:Frageboegen.entry.resolve()",
-    "MopedTransferEncounterI": "Composition.section:TransferEncounter.entry.resolve()",
-    "MopedTransferEncounterA": "Composition.section:TransferEncounter.entry.resolve()",
-    "MopedTransferEncounterS": "Composition.section:TransferEncounter.entry.resolve()",
-    "MopedPatient": "Composition.subject.resolve()"
+    "MopedTransferEncounterI": "Composition.section:Bewegungen.entry.resolve()",
+    "MopedTransferEncounterA": "Composition.section:Bewegungen.entry.resolve()",
+    "MopedTransferEncounterS": "Composition.section:Bewegungen.entry.resolve()",
+    "MopedPatient": "Composition.subject.resolve()",
+    "MopedObservationGeburtenanzahl": "Composition.section:Entbindung.entry.resolve()"
 }
 
 UNUSED_FIELD_COMMENTS = [
