@@ -54,11 +54,7 @@ Durch die Angabe eines Fristendes wird signalisiert, dass bei einem über das Fr
 * insert legacyMapping(preAuthPeriod.end, KaOrg, [[Fristende]])
 * insert legacyMapping(preAuthPeriod.end, KaOrg, [[VAE Endedatum]])
 * insert ShallPopulateObligation(preAuthPeriod.end, MopedSVActor)
-* extension contains MopedSupportingInfoSonderklasse named MopedSupportingInfoSonderklasse 1..1
-* extension[MopedSupportingInfoSonderklasse] ^short = "KaOrg: Allgemeine Gebührenklasse/Sonderklasse"
-* insert legacyMapping(extension[MopedSupportingInfoSonderklasse], KaOrg, [[Allgemeine Gebührenklasse/Sonderklasse]])
-* insert ShallPopulateObligation(extension[MopedSupportingInfoSonderklasse], MopedSVActor)
-* extension contains VerpflegskostenBeitragsbefreiung named VerpflegskostenBeitragsbefreiung 1..1
+* extension contains VerpflegskostenBeitragsbefreiung named VerpflegskostenBeitragsbefreiung 1..
 * extension[VerpflegskostenBeitragsbefreiung] ^short = "KaOrg: Verpflegskosten-Beitragsbefreiung"
 * insert legacyMapping(extension[VerpflegskostenBeitragsbefreiung], KaOrg, [[Verpflegskosten-Beitragsbefreiung]])
 * insert ShallPopulateObligation(extension[VerpflegskostenBeitragsbefreiung], MopedSVActor)
