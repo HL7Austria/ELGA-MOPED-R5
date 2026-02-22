@@ -21,9 +21,9 @@ Usage: #example
 * item[+].type = #coding
 * item[=].linkId = "index-kostenminderungsart"
 * item[=].text = "Index Kostenminderungsart"
-* item[=].answerOption[0].valueCoding = #A "GSBG-Beihilfen"
-* item[=].answerOption[+].valueCoding = #B "Klinischer Mehraufwand"
-* item[=].answerOption[+].valueCoding = #C "Kostenersätze für Schulen und Akademien"
+* item[=].answerOption[0].valueCoding = $LKFSystem#A "GSBG-Beihilfen"
+* item[=].answerOption[+].valueCoding = $LKFSystem#B "Klinischer Mehraufwand"
+* item[=].answerOption[+].valueCoding = $LKFSystem#C "Kostenersätze für Schulen und Akademien"
 * item[+].type = #integer
 * item[=].maxLength = 10
 * item[=].linkId = "kostenminderungen"

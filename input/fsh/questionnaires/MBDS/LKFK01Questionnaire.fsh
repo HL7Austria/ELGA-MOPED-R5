@@ -33,6 +33,6 @@ Usage: #example
 * item[+].type = #coding
 * item[=].linkId = "spezielle-organisationsform"
 * item[=].text = "Spezielle Organisationsform"
-* item[=].answerOption[0].valueCoding = #A "Abteilung"
-* item[=].answerOption[+].valueCoding = #R "Referenzzentrum – ohne Versorgungsstufengliederung"
-* item[=].answerOption[+].valueCoding = #Z "Referenzzentrum – höchste Versorgungsstufe"
+* item[=].answerOption[0].valueCoding = $LKFSystem#A "Abteilung"
+* item[=].answerOption[+].valueCoding = $LKFSystem#R "Referenzzentrum – ohne Versorgungsstufengliederung"
+* item[=].answerOption[+].valueCoding = $LKFSystem#Z "Referenzzentrum – höchste Versorgungsstufe"

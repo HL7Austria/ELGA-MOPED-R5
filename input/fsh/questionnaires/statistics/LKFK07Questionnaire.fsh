@@ -21,9 +21,9 @@ Usage: #example
 * item[+].type = #coding
 * item[=].linkId = "index-nicht-ärztliche-gesundheitsberufe"
 * item[=].text = "Index nicht-ärztliche Gesundheitsberufe"
-* item[=].answerOption[0].valueCoding = #30 "Hebammen"
-* item[=].answerOption[+].valueCoding = #41 "Allgemeine Gesundheits- und Krankenpflege"
-* item[=].answerOption[+].valueCoding = #42 "Kinder- und Jugendlichenpflege"
+* item[=].answerOption[0].valueCoding = $LKFSystem#30 "Hebammen"
+* item[=].answerOption[+].valueCoding = $LKFSystem#41 "Allgemeine Gesundheits- und Krankenpflege"
+* item[=].answerOption[+].valueCoding = $LKFSystem#42 "Kinder- und Jugendlichenpflege"
 * item[+].type = #integer
 * item[=].maxLength = 6
 * item[=].linkId = "personal-männlich – kopfzahl"

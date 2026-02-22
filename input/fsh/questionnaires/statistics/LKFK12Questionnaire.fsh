@@ -21,9 +21,9 @@ Usage: #example
 * item[+].type = #coding
 * item[=].linkId = "blattnummer"
 * item[=].text = "Blattnummer"
-* item[=].answerOption[0].valueCoding = #01/11 "Personalkosten (Kostenartennummer 111–119)"
-* item[=].answerOption[+].valueCoding = #01/12 "Personalkosten (Kostenartennummer 121–129)"
-* item[=].answerOption[+].valueCoding = #01/13 "Personalkosten (Kostenartennummer 131–139)"
+* item[=].answerOption[0].valueCoding = $LKFSystem#01/11 "Personalkosten (Kostenartennummer 111–119)"
+* item[=].answerOption[+].valueCoding = $LKFSystem#01/12 "Personalkosten (Kostenartennummer 121–129)"
+* item[=].answerOption[+].valueCoding = $LKFSystem#01/13 "Personalkosten (Kostenartennummer 131–139)"
 * item[+].type = #integer
 * item[=].maxLength = 3
 * item[=].linkId = "mlv-nummer"

@@ -21,9 +21,9 @@ Usage: #example
 * item[+].type = #coding
 * item[=].linkId = "anlagenindex"
 * item[=].text = "Anlagenindex"
-* item[=].answerOption[0].valueCoding = #A "Grundstücke (MLV-Nr. 91)"
-* item[=].answerOption[+].valueCoding = #B "Bauten (MLV-Nr. 92–99)"
-* item[=].answerOption[+].valueCoding = #C "Anlagen in Bau"
+* item[=].answerOption[0].valueCoding = $LKFSystem#A "Grundstücke (MLV-Nr. 91)"
+* item[=].answerOption[+].valueCoding = $LKFSystem#B "Bauten (MLV-Nr. 92–99)"
+* item[=].answerOption[+].valueCoding = $LKFSystem#C "Anlagen in Bau"
 * item[+].type = #integer
 * item[=].maxLength = 10
 * item[=].linkId = "anschaffungs-und-herstellungskosten"

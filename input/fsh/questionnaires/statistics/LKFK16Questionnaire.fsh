@@ -21,14 +21,14 @@ Usage: #example
 * item[+].type = #coding
 * item[=].linkId = "kostenindex"
 * item[=].text = "Kostenindex"
-* item[=].answerOption[0].valueCoding = #10 "Blut"
-* item[=].answerOption[+].valueCoding = #20 "Chirurgisches Nahtmaterial"
-* item[=].answerOption[+].valueCoding = #30 "Implantate und Prothesen (Summe)"
-* item[=].answerOption[+].valueCoding = #31 "Implantate und Prothesen für Gefäß- und Herzchirurgie"
-* item[=].answerOption[+].valueCoding = #32 "Implantate und Prothesen für Knochenchirurgie"
-* item[=].answerOption[+].valueCoding = #33 "Implantate und Prothesen für Neurochirurgie"
-* item[=].answerOption[+].valueCoding = #34 "Körperersatzteile, andere"
-* item[=].answerOption[+].valueCoding = #35 "Implantate für HNO"
+* item[=].answerOption[0].valueCoding = $LKFSystem#10 "Blut"
+* item[=].answerOption[+].valueCoding = $LKFSystem#20 "Chirurgisches Nahtmaterial"
+* item[=].answerOption[+].valueCoding = $LKFSystem#30 "Implantate und Prothesen (Summe)"
+* item[=].answerOption[+].valueCoding = $LKFSystem#31 "Implantate und Prothesen für Gefäß- und Herzchirurgie"
+* item[=].answerOption[+].valueCoding = $LKFSystem#32 "Implantate und Prothesen für Knochenchirurgie"
+* item[=].answerOption[+].valueCoding = $LKFSystem#33 "Implantate und Prothesen für Neurochirurgie"
+* item[=].answerOption[+].valueCoding = $LKFSystem#34 "Körperersatzteile, andere"
+* item[=].answerOption[+].valueCoding = $LKFSystem#35 "Implantate für HNO"
 * item[+].type = #decimal
 * item[=].linkId = "kosten"
 * item[=].maxLength = 10
