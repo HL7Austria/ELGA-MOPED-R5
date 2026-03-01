@@ -25,5 +25,5 @@ Usage: #example
 * item[+].type = #coding
 * item[=].linkId = "lgf-relevanz"
 * item[=].text = "LGF – Relevanz"
-* item[=].answerOption[0].valueCoding = #J "Ja – LKF-relevant"
-* item[=].answerOption[+].valueCoding = #N "Nein – nicht LKF-relevant"
+* item[=].answerOption[0].valueCoding = $LKFSystem#J "Ja – LKF-relevant"
+* item[=].answerOption[+].valueCoding = $LKFSystem#N "Nein – nicht LKF-relevant"
