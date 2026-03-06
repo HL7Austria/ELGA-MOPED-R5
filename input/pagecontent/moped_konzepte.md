@@ -52,6 +52,8 @@ In MOPED gilt bei allen fallbezogenen Operationen, die eine `Composition` refere
 
 Ohne Version (z. B. lediglich mit /Composition/123) wird die Operation abgelehnt. Alle benutzerdefinierten fallbezogenen Operationen in MOPED werden ausschließlich auf Composition-Instanzebene ausgeführt und erwarten als URL-Form stets `Composition/{id}/_history/{version}/$operationName`.
 
+Die Pflicht zur Angabe einer versionierten Composition-Referenz gilt in MOPED nur für schreibende bzw. fallverändernde Operationen, bei denen Konflikte durch parallele Änderungen vermieden werden müssen. Für einen normalen lesenden Zugriff muss der Client die aktuellste Versionsnummer hingegen nicht kennen: Ein FHIR-read mittels GET [base]/Composition/{id} liefert immer den aktuellen Stand der Ressource. Nur wenn ausdrücklich eine bestimmte historische Version benötigt wird, wird ein versionierter Zugriff (vread) über GET [base]/Composition/{id}/_history/{vid} verwendet.
+
 ### Provenance in MOPED: Herkunft, Nachvollziehbarkeit, Transparenz
 Die Provenance-Ressource dient der dokumentierten Nachvollziehbarkeit von Änderungen an FHIR-Ressourcen. Sie beschreibt, wer eine Ressource wann, warum und in welchem Kontext erstellt oder verändert hat.
 
