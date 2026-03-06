@@ -6,6 +6,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 
 * Es darf keinen aktiven, unbeantworteten VAE Request geben (Versicherungsstatus muss geklärt sein).
 * Es darf keinen aktiven endgültigen (Claim.supportingInfo:endgueltigeMeldung) LKF Request geben ohne negative LKFResponse (siehe Hinweis 1).
+* Wenn es sich um einen Aufenthalt auf einer Intensivstation handelt (siehe Hinweis 2), dann muss die Intensivdokumentation (Questionnaires TISS und SAPS) zum Zeitpunkt der Abrechnung bereits vorhanden sein.
 
 ## Detaillierte Business-Logik
 
@@ -23,6 +24,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $abrechnen Operat
 
 ## Weitere Hinweise
 1. Ein aktiver endgültiger LKFRequest ohne negative LKFResponse würde bedeuten, dass es bereits eine endgültige Meldung gibt (bereits bestätigt oder noch in Bearbeitung) -> $abrechnen kann dann nur mehr nach Korrekturaufforderung inklusive ClaimResponse mit Ablehnung erneut aufgerufen werden. Dadurch wird sichergestellt, dass das KH nach einer endgültigen Meldung nur mehr nach Aufforderung des LGF Änderungen durchführen kann
+2. Ein Intensivaufenthalt kann automatisch erkannt werden, wenn die 4. & 5. Stelle des Funktionscodes der Abteilung gleich '81' ist
 
 ## Annahmen an das BeS
 * Es wurde vorab geprüft, ob das `system` des identifiers in Composition.encounter.identifer dem GDA entspricht, der die Operation aufruft. Somit ist sichergestellt, dass nur eigene Fälle verändert werden können.
