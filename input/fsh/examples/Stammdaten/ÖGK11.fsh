@@ -7,6 +7,8 @@ Usage: #example
 * name = "Österreichische Gesundheitskasse Wien"
 * identifier[+].system = "http://svc.co.at/CodeSystem/ecard-svt-cs"
 * identifier[=].value = "11"
+* identifier[+].system = "http://example.org/lsvt-code"
+* identifier[=].value = "L1"
 * contact.address.line = "Wienerbergstraße 15-19, 1100 Wien"
 * contact.address.line.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
 * contact.address.line.extension[=].valueString = "Wienerbergstraße"
