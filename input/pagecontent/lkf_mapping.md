@@ -354,7 +354,7 @@ diesem Link</a> verfügbar.
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
-        <td>Encounter.serviceProvider.resolve()</td>
+        <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:TransferEncounter.entry.resolve()</td>
         <td>Funktions- und subcode sind in zwei Felder aufgeteilt</td>
     </tr>
@@ -414,20 +414,20 @@ diesem Link</a> verfügbar.
     </tr>
     <tr>
         <td>Hauptkostenstelle – Fachlicher Funktionscode</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MopedKHActor</td>
+        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>Encounter</td>
+        <td>Encounter.participant:FachlichZustaendigeOrganisationseinheit.actor.resolve()</td>
+        <td>Composition.section:TransferEncounter.entry.resolve()</td>
         <td>wird in AG Moped geklärt</td>
     </tr>
     <tr>
         <td>Hauptkostenstelle – Pflegerischer Funktionscode</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MopedKHActor</td>
+        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>Encounter</td>
+        <td>Encounter.participant:PflegerischZustaendigeOrganisationseinheit.actor.resolve()</td>
+        <td>Composition.section:TransferEncounter.entry.resolve()</td>
         <td>wird in AG Moped geklärt</td>
     </tr>
     <tr>

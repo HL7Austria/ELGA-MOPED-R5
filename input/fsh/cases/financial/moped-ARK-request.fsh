@@ -41,8 +41,8 @@ Description: "MOPED Profil der Claim Ressource für die Kostenmeldung für Ausl�
 
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
-* encounter ^slicing.discriminator[+].type = #profile
-* encounter ^slicing.discriminator[=].path = "resolve()"
+* encounter ^slicing.discriminator[+].type = #value
+* encounter ^slicing.discriminator[=].path = "resolve().type"
 * encounter contains MopedEncounter 1..1 /*and TransferEncounter 0..*/
 * encounter[MopedEncounter] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
 * encounter[MopedEncounter] only Reference(MopedEncounter)

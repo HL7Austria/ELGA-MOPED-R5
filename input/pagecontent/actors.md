@@ -12,6 +12,7 @@
     KH -->|POST $entlassen| Moped
     KH -->|POST $abrechnen| Moped
     KH -->|POST $stornieren| Moped
+    KH -->|POST $einmelden| Moped
     Moped -->|GET VAEResponse| KH
     Moped --->|GET ClaimResponse| KH
 </pre>  
@@ -38,6 +39,7 @@
     LGF[Landesgesundheitsfonds]
     Moped[Moped] 
     Moped --->|GET Claim| LGF
+    Moped --->|GET QuestionnaireResponse| LGF
     LGF --->|POST $entscheiden| Moped
     LGF --->|POST $melden| Moped
 </pre>
@@ -52,4 +54,16 @@
     Moped[Moped] 
     Moped --->|GET Composition?status=final| BMSGPK 
     Moped --->|POST Measure/$evaluate-measure| BMSGPK
+</pre>
+
+### Medizinische Register (z.B. Stroke‐Unit‐Register, Krebsregister,...)
+
+Im Moped Kontext werden von den Krankenanstalten ausgewählte Meldungen an medizinische Register über Moped in Form von QuestionnaireResponses zur Verfügung gestellt. Die versionierten Questionnaires (Formulare) werden vom jeweiligen Register über einen noch zu definierenden Prozess/Infrastruktur für Questionnaires zur Verfügung gestellt. Die Krankenanstalt befüllt diese und speichert sie mit dem jeweiligen Fall in Moped ab. Die automatische Vorbefüllung von bereits in Moped zum Fall vorhandenen Informationen ($populate) ist angedacht. Das Register greift dabei ausschließlich lesend und nur auf die für es vorgesehenen QuestionnaireResponses in MOPED zu.
+<pre class="mermaid">
+    graph LR
+    Register[Register]
+    Moped[Moped] 
+    KH[Krankenanstalt]
+    KH --->|POST $update<br/>einer fallbezogenen QuestionnaireResponse| Moped 
+    Moped --->|GET QuestionnaireResponse| Register
 </pre>

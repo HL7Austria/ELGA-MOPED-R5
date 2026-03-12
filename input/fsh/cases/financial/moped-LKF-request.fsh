@@ -40,8 +40,8 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * insert MopedHandleObligation(provider)
 * related ^slicing.rules = #open
 * related ^slicing.ordered = false
-* related ^slicing.discriminator[+].type = #profile
-* related ^slicing.discriminator[=].path = "claim.resolve()"
+* related ^slicing.discriminator[+].type = #value
+* related ^slicing.discriminator[=].path = "claim.resolve().type"
 * related contains zugehoerigeVAE 0.. and vorherigerLKFRequest 0..
 * related[zugehoerigeVAE].claim only Reference(MopedVAERequest)
 * insert MopedHandleObligation(related[zugehoerigeVAE].claim)
@@ -58,8 +58,8 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * insert MopedHandleObligation(insurance.coverage)
 * encounter ^slicing.rules = #open
 * encounter ^slicing.ordered = false
-* encounter ^slicing.discriminator[+].type = #profile
-* encounter ^slicing.discriminator[=].path = "resolve()"
+* encounter ^slicing.discriminator[+].type = #value
+* encounter ^slicing.discriminator[=].path = "resolve().type"
 * encounter contains MopedEncounter 1..1 and TransferEncounter 1..
 * encounter[MopedEncounter] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
 * encounter[MopedEncounter] only Reference(MopedEncounter)

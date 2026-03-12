@@ -102,7 +102,7 @@
       "code": {
         "coding": [
           {
-            "system": "https://elga.moped.at/CodeSystem/CompositionSectionsCS",
+            "system": "https://elga.moped.at/CodeSystem/MopedClaimTypeCS",
             "code": "LKFREQ"
           }
         ]

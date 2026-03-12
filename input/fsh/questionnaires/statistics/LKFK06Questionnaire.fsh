@@ -22,9 +22,9 @@ Usage: #example
 * item[+].type = #coding
 * item[=].linkId = "fachrichtungsindex"
 * item[=].text = "Fachrichtungsindex"
-* item[=].answerOption[0].valueCoding = #00 "Allgemeinmedizin"
-* item[=].answerOption[+].valueCoding = #01 "Anästhesiologie und Intensivmedizin"
-* item[=].answerOption[+].valueCoding = #02 "Augenheilkunde und Optometrie"
+* item[=].answerOption[0].valueCoding = $LKFSystem#00 "Allgemeinmedizin"
+* item[=].answerOption[+].valueCoding = $LKFSystem#01 "Anästhesiologie und Intensivmedizin"
+* item[=].answerOption[+].valueCoding = $LKFSystem#02 "Augenheilkunde und Optometrie"
 * item[+].type = #integer
 * item[=].maxLength = 6
 * item[=].linkId = "konsiliarärztinnen-kopfzahl"

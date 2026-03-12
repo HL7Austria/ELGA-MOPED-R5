@@ -21,9 +21,9 @@ Usage: #example
 * item[+].type = #coding
 * item[=].linkId = "personalgruppenindex"
 * item[=].text = "Personalgruppenindex"
-* item[=].answerOption[0].valueCoding = #111 "Ärzte/Ärztinnen"
-* item[=].answerOption[+].valueCoding = #112 "Apotheker:innen, Chemiker:innen, Physiker:innen u.ä."
-* item[=].answerOption[+].valueCoding = #113 "Hebammen (inkl. Schüler:innen)"
+* item[=].answerOption[0].valueCoding = $LKFSystem#111 "Ärzte/Ärztinnen"
+* item[=].answerOption[+].valueCoding = $LKFSystem#112 "Apotheker:innen, Chemiker:innen, Physiker:innen u.ä."
+* item[=].answerOption[+].valueCoding = $LKFSystem#113 "Hebammen (inkl. Schüler:innen)"
 * item[+].type = #decimal
 * item[=].maxLength = 9
 * item[=].linkId = "personal-vollzeitäquivalente"

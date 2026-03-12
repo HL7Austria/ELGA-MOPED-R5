@@ -114,11 +114,6 @@ Title: "MOPED Encounter"
 * insert legacyMapping(admission.extension[Transportart], LKF, Transportart)
 * insert ShallPopulateObligation(admission.extension[Transportart], MopedKHActor)
 
-* extension contains Unfalldatum named Unfalldatum 0..1
-* extension[Unfalldatum] ^short = "KaOrg: Ereignis-/Unfalldatum (echtes Unfalldatum)"
-* insert legacyMapping(extension[Unfalldatum], KaOrg, [[Ereignis-/Unfalldatum (echtes Unfalldatum)]])
-* insert ShallPopulateObligation(extension[Unfalldatum], MopedKHActor)
-
 //Invariante: verpflichtend bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5
 * extension contains Altersgruppe named Altersgruppe 0..1
 * extension[Altersgruppe] ^short = "LKF: Altersgruppe bei Entlassung/Kontakt"

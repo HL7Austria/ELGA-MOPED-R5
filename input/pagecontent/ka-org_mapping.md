@@ -526,7 +526,7 @@ verfügbar.
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
-        <td>Encounter.serviceProvider.resolve()</td>
+        <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:TransferEncounter.entry.resolve()</td>
         <td>/</td>
     </tr>
@@ -536,7 +536,7 @@ verfügbar.
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
-        <td>Encounter.serviceProvider.resolve()</td>
+        <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:TransferEncounter.entry.resolve()</td>
         <td>/</td>
     </tr>
@@ -804,10 +804,10 @@ verfügbar.
         <td>Ereignis-/Unfalldatum (echtes Unfalldatum)</td>
         <td>ERDAT</td>
         <td>MopedKHActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterEntlassungS; MopedEncounterS; MopedEncounterSV; MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
-        <td>Claim; Encounter</td>
-        <td>Claim.accident.date; Encounter.extension:Unfalldatum</td>
-        <td>Composition.encounter.resolve(); Composition.section:VAERequests.entry.resolve()</td>
+        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>Claim</td>
+        <td>Claim.accident.date</td>
+        <td>Composition.section:VAERequests.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -1596,7 +1596,7 @@ verfügbar.
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
-        <td>Encounter.serviceProvider.resolve()</td>
+        <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:TransferEncounter.entry.resolve()</td>
         <td>/</td>
     </tr>
@@ -1606,7 +1606,7 @@ verfügbar.
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
-        <td>Encounter.serviceProvider.resolve()</td>
+        <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:TransferEncounter.entry.resolve()</td>
         <td>/</td>
     </tr>
