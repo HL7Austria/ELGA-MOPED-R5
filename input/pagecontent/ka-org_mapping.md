@@ -195,7 +195,7 @@ verfügbar.
         <td>MopedCoverage</td>
         <td>Coverage</td>
         <td>Coverage.class:Versichertenkategorien.value</td>
-        <td>Composition.section:Coverages.entry.resolve()</td>
+        <td>Composition.section:Versichertenanspruch.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -527,7 +527,7 @@ verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -537,7 +537,7 @@ verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -837,7 +837,7 @@ verfügbar.
         <td>MopedCoverage</td>
         <td>Coverage</td>
         <td>Coverage.identifier:VDASID</td>
-        <td>Composition.section:Coverages.entry.resolve()</td>
+        <td>Composition.section:Versichertenanspruch.entry.resolve()</td>
         <td>/</td>
     </tr>
 </table>
@@ -1065,11 +1065,11 @@ verfügbar.
     <tr>
         <td>Entbindungsdatum</td>
         <td>ENTBDAT</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MopedKHActor</td>
+        <td>MopedObservationGeburtenanzahl</td>
+        <td>Observation</td>
+        <td>Observation.effective[x]:effectiveDateTime</td>
+        <td>Composition.section:Entbindung.entry.resolve()</td>
         <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
@@ -1095,11 +1095,11 @@ verfügbar.
     <tr>
         <td>Anzahl der Totgeburten</td>
         <td>ENTT</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MopedKHActor</td>
+        <td>MopedObservationGeburtenanzahl</td>
+        <td>Observation</td>
+        <td>Observation.value[x]:valueQuantity.value</td>
+        <td>Composition.section:Entbindung.entry.resolve()</td>
         <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
@@ -1597,7 +1597,7 @@ verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -1607,7 +1607,7 @@ verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
