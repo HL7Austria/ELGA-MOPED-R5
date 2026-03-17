@@ -31,6 +31,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -46,11 +49,17 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>VPNR</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -61,6 +70,9 @@ verfügbar.
     <tr>
         <td>Aufnahmezahl</td>
         <td>AUFZL</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -71,6 +83,9 @@ verfügbar.
     <tr>
         <td>Fallnummer</td>
         <td>FANU</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -81,6 +96,9 @@ verfügbar.
     <tr>
         <td>Kostenträger (leistungszuständig)</td>
         <td>KOST</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -91,6 +109,9 @@ verfügbar.
     <tr>
         <td>zuständiger Versicherungsträger</td>
         <td>VSTR</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -101,6 +122,9 @@ verfügbar.
     <tr>
         <td>Aufnahme-/Ereignisdatum</td>
         <td>AUFN</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -111,6 +135,9 @@ verfügbar.
     <tr>
         <td>Entlassungsdatum</td>
         <td>ENTL</td>
+        <td>O[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: Unterschied ambulant vs. stationär?</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -121,6 +148,9 @@ verfügbar.
     <tr>
         <td>Kommentarsatz</td>
         <td>KOMM</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td></td>
         <td></td>
         <td></td>
@@ -131,6 +161,9 @@ verfügbar.
     <tr>
         <td>Versicherungsnummer des Hauptversicherten</td>
         <td>VSNR</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
@@ -141,6 +174,9 @@ verfügbar.
     <tr>
         <td>Zuname des Hauptversicherten</td>
         <td>ZUNA</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
@@ -151,6 +187,9 @@ verfügbar.
     <tr>
         <td>Vorname des Hauptversicherten</td>
         <td>VONA</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
@@ -161,6 +200,9 @@ verfügbar.
     <tr>
         <td>Geschlecht des Hauptversicherten</td>
         <td>GESCHL</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
@@ -171,6 +213,9 @@ verfügbar.
     <tr>
         <td>Geburtsdatum des Hauptversicherten</td>
         <td>GEBDAT</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
@@ -181,6 +226,9 @@ verfügbar.
     <tr>
         <td>Datensatz-ID</td>
         <td>DSID</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -191,6 +239,9 @@ verfügbar.
     <tr>
         <td>Versichertengruppe/Kategorie</td>
         <td>VGR</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedCoverage</td>
         <td>Coverage</td>
@@ -201,6 +252,9 @@ verfügbar.
     <tr>
         <td>Versicherungsnummer des Mitversicherten</td>
         <td>AVSNR</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -211,6 +265,9 @@ verfügbar.
     <tr>
         <td>Zuname des Mitversicherten</td>
         <td>AZUNA</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -221,6 +278,9 @@ verfügbar.
     <tr>
         <td>Vorname des Mitversicherten</td>
         <td>AVONA</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -231,6 +291,9 @@ verfügbar.
     <tr>
         <td>Geschlecht des Mitversicherten</td>
         <td>AGESCHL</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -241,6 +304,9 @@ verfügbar.
     <tr>
         <td>Geburtsdatum des Mitversicherten</td>
         <td>AGEBDAT</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -251,6 +317,9 @@ verfügbar.
     <tr>
         <td>Fehlercode</td>
         <td>FECO</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td></td>
         <td></td>
         <td></td>
@@ -263,6 +332,9 @@ verfügbar.
         <td>DSIDR</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>/</td>
+        <td>/</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -271,6 +343,9 @@ verfügbar.
     <tr>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>BKANR</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -283,6 +358,9 @@ verfügbar.
         <td>DVERS-ID</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>/</td>
+        <td>/</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -291,6 +369,9 @@ verfügbar.
     <tr>
         <td>Datensatzversion Satzart-Teil</td>
         <td>DVERS-SA</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -307,6 +388,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -322,11 +406,17 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
         <td>in neuer Architektur nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>Vertragspartnernummer der Krankenanstalt</td>
         <td>VPNR</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -337,6 +427,9 @@ verfügbar.
     <tr>
         <td>Aufnahmezahl</td>
         <td>AUFZL</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -347,6 +440,9 @@ verfügbar.
     <tr>
         <td>Fallnummer</td>
         <td>FANU</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -357,6 +453,9 @@ verfügbar.
     <tr>
         <td>Kostenträger (leistungszuständig)</td>
         <td>KOST</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -367,6 +466,9 @@ verfügbar.
     <tr>
         <td>zuständiger Versicherungsträger</td>
         <td>VSTR</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -377,6 +479,9 @@ verfügbar.
     <tr>
         <td>Aufnahme-/Ereignisdatum</td>
         <td>AUFN</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -387,6 +492,9 @@ verfügbar.
     <tr>
         <td>Entlassungsdatum</td>
         <td>ENTL</td>
+        <td>O[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: Unterschied ambulant vs. stationär?</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -397,6 +505,9 @@ verfügbar.
     <tr>
         <td>Kommentarsatz</td>
         <td>KOMM</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td></td>
         <td></td>
         <td></td>
@@ -407,6 +518,9 @@ verfügbar.
     <tr>
         <td>Geburtsdatum des Hauptversicherten</td>
         <td>GEBDAT</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
@@ -417,6 +531,9 @@ verfügbar.
     <tr>
         <td>Datensatz-ID</td>
         <td>DSID</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -427,6 +544,9 @@ verfügbar.
     <tr>
         <td>Geburtsdatum des Mitversicherten</td>
         <td>GEBDATA</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>optional (Unterschied zu E.1); TBD: klären warum der Patient nicht verpflichtend ist, aber der Hauptversicherte schon (nicht immer der Patient)</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -437,6 +557,9 @@ verfügbar.
     <tr>
         <td>Fehlercode</td>
         <td>FECO</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td></td>
         <td></td>
         <td></td>
@@ -449,6 +572,9 @@ verfügbar.
         <td>DSIDR</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>/</td>
+        <td>/</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -457,6 +583,9 @@ verfügbar.
     <tr>
         <td>Krankenanstaltennummer des Bundesministeriums</td>
         <td>BKANR</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedDeviceActor</td>
         <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
         <td>Composition</td>
@@ -469,6 +598,9 @@ verfügbar.
         <td>DVERS-ID</td>
         <td>/</td>
         <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
+        <td>/</td>
+        <td>/</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -477,6 +609,9 @@ verfügbar.
     <tr>
         <td>Datensatzversion Satzart-Teil, Versionsnummer vom Satzart-Teil</td>
         <td>DVERS-SA</td>
+        <td>/</td>
+        <td>/</td>
+        <td>in neuer Architektur nicht mehr notwendig</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -493,6 +628,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -509,10 +647,16 @@ verfügbar.
         <td>siehe E1</td>
         <td>siehe E1</td>
         <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
     </tr>
     <tr>
         <td>Ereignisart</td>
         <td>EREIG</td>
+        <td>X</td>
+        <td>X</td>
+        <td></td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -523,6 +667,9 @@ verfügbar.
     <tr>
         <td>Funktionscode der Abteilung lt. LKF</td>
         <td>FKRA</td>
+        <td>X</td>
+        <td>X</td>
+        <td></td>
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
@@ -533,6 +680,9 @@ verfügbar.
     <tr>
         <td>Funktionssubcode der Abteilung lt. LKF</td>
         <td>FKRASU</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
@@ -543,6 +693,9 @@ verfügbar.
     <tr>
         <td>Allgemeine Gebührenklasse/Sonderklasse</td>
         <td>KLAS</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKHActor; MopedSVActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung; MopedVAEResponse</td>
         <td>Claim; ClaimResponse</td>
@@ -553,6 +706,9 @@ verfügbar.
     <tr>
         <td>Staatsbürgerschaftsschlüssel</td>
         <td>STAAT</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -563,6 +719,9 @@ verfügbar.
     <tr>
         <td>Wohandresse des Patienten - Straße</td>
         <td>PASTR</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -573,6 +732,9 @@ verfügbar.
     <tr>
         <td>Wohnadresse des Patienten - Länderkennzeichen</td>
         <td>PALKZ</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -583,6 +745,9 @@ verfügbar.
     <tr>
         <td>Wohnadresse des Patienten - Postleitzahl</td>
         <td>PAPLZL</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -593,6 +758,9 @@ verfügbar.
     <tr>
         <td>Wohnadresse des Patienten - Ort</td>
         <td>PAORT</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -603,6 +771,9 @@ verfügbar.
     <tr>
         <td>Verdacht auf Arbeits-/Schülerunfall</td>
         <td>VERDAU</td>
+        <td>X</td>
+        <td>X</td>
+        <td></td>
         <td>MopedKHActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -613,6 +784,9 @@ verfügbar.
     <tr>
         <td>Diganose 1 - ICD10 BMSGPK Schlüssel</td>
         <td>DIAG1</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -623,6 +797,9 @@ verfügbar.
     <tr>
         <td>Diagnose 1 - Untergliederung 1</td>
         <td>DIAG1U1</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -633,6 +810,9 @@ verfügbar.
     <tr>
         <td>Diagnose 1 - Untergliederung 2</td>
         <td>DIAG1U2</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -643,6 +823,9 @@ verfügbar.
     <tr>
         <td>Diganose 2 - ICD10 BMSGPK Schlüssel</td>
         <td>DIAG2</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -653,6 +836,9 @@ verfügbar.
     <tr>
         <td>Diagnose 2 - Untergliederung 1</td>
         <td>DIAG2U1</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -663,6 +849,9 @@ verfügbar.
     <tr>
         <td>Diagnose 2 - Untergliederung 2</td>
         <td>DIAG2U2</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -673,6 +862,9 @@ verfügbar.
     <tr>
         <td>Diganose 3 - ICD10 BMSGPK Schlüssel</td>
         <td>DIAG3</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -683,6 +875,9 @@ verfügbar.
     <tr>
         <td>Diagnose 3 - Untergliederung 1</td>
         <td>DIAG3U1</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -693,6 +888,9 @@ verfügbar.
     <tr>
         <td>Diagnose 3 - Untergliederung 2</td>
         <td>DIAG3U2</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -703,6 +901,9 @@ verfügbar.
     <tr>
         <td>Fremdverschulden</td>
         <td>FREVER</td>
+        <td>X</td>
+        <td>X</td>
+        <td></td>
         <td>MopedKHActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -713,6 +914,9 @@ verfügbar.
     <tr>
         <td>Diagnose im Klartext - kann bei Codierung entfallen</td>
         <td>DIAG</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td></td>
         <td></td>
         <td></td>
@@ -723,6 +927,9 @@ verfügbar.
     <tr>
         <td>Ursache der Behandlung</td>
         <td>URS</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>wird bei Kur-/Rehabilitationsaufenthalten mit „99“ befüllt; Kur/Reha relevant?</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -733,6 +940,9 @@ verfügbar.
     <tr>
         <td>Entbindungstag</td>
         <td>ENTBDAT</td>
+        <td></td>
+        <td></td>
+        <td>/</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -743,6 +953,9 @@ verfügbar.
     <tr>
         <td>Überweisende Stelle - Vertragspartnernummer</td>
         <td>USVPNR</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -753,6 +966,9 @@ verfügbar.
     <tr>
         <td>Überweisende Stelle - Name</td>
         <td>USNA</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -763,6 +979,9 @@ verfügbar.
     <tr>
         <td>Länderkennzeichen der überweisenden Stelle</td>
         <td>USLKZ</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -773,6 +992,9 @@ verfügbar.
     <tr>
         <td>Überweisende Stelle - Postleitzahl</td>
         <td>USPLZL</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -783,6 +1005,9 @@ verfügbar.
     <tr>
         <td>Überweisende Stelle - Ort</td>
         <td>USORT</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -793,6 +1018,9 @@ verfügbar.
     <tr>
         <td>Ereignis-/Unfalldatum (initiales Aufnahmedatum)</td>
         <td>ERDAT</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>*bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -803,6 +1031,9 @@ verfügbar.
     <tr>
         <td>Ereignis-/Unfalldatum (echtes Unfalldatum)</td>
         <td>ERDAT</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>*bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5</td>
         <td>MopedKHActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -813,6 +1044,9 @@ verfügbar.
     <tr>
         <td>Ereignis-/Unfalldatum (Verlängerungsdatum)</td>
         <td>ERDAT</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>*bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5</td>
         <td>MopedKHActor, MopedKHActor, MopedKHActor</td>
         <td>MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -823,6 +1057,9 @@ verfügbar.
     <tr>
         <td>Anzahl der Verlängerungstage</td>
         <td>VTAG</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -833,6 +1070,9 @@ verfügbar.
     <tr>
         <td>VDAS-ID - Ergebnis der Abfrage</td>
         <td>VDAS</td>
+        <td>O</td>
+        <td>O</td>
+        <td>optional</td>
         <td>MopedKHActor</td>
         <td>MopedCoverage</td>
         <td>Coverage</td>
@@ -849,6 +1089,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -865,10 +1108,16 @@ verfügbar.
         <td>siehe E1</td>
         <td>siehe E1</td>
         <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
     </tr>
     <tr>
         <td>Ereignisart</td>
         <td>EREIG</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -879,6 +1128,9 @@ verfügbar.
     <tr>
         <td>Allgemeine Gebührenklasse/Sonderklasse</td>
         <td>KLAS</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor; MopedSVActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung; MopedVAEResponse</td>
         <td>Claim; ClaimResponse</td>
@@ -889,6 +1141,9 @@ verfügbar.
     <tr>
         <td>VAE Beginndatum</td>
         <td>DAT-VON</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor, MopedKHActor, MopedKHActor; MopedSVActor</td>
         <td>MopedVAERequestInitial; MopedVAEResponse</td>
         <td>Claim; ClaimResponse</td>
@@ -899,6 +1154,9 @@ verfügbar.
     <tr>
         <td>VAE Endedatum</td>
         <td>DATBIS</td>
+        <td>O</td>
+        <td>O</td>
+        <td>/</td>
         <td>MopedSVActor</td>
         <td>MopedVAEResponse</td>
         <td>ClaimResponse</td>
@@ -909,6 +1167,9 @@ verfügbar.
     <tr>
         <td>Fristende</td>
         <td>ENDE</td>
+        <td>O[TBD]*</td>
+        <td>O[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedSVActor</td>
         <td>MopedVAEResponse</td>
         <td>ClaimResponse</td>
@@ -919,6 +1180,9 @@ verfügbar.
     <tr>
         <td>Status der VAE</td>
         <td>VAEST</td>
+        <td>X</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedSVActor</td>
         <td>MopedVAEResponse</td>
         <td>ClaimResponse</td>
@@ -929,6 +1193,9 @@ verfügbar.
     <tr>
         <td>Verpflegskosten-Beitragsbefreiung</td>
         <td>VKBEFR</td>
+        <td>/[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedSVActor</td>
         <td>MopedVAEResponse</td>
         <td>ClaimResponse</td>
@@ -939,6 +1206,9 @@ verfügbar.
     <tr>
         <td>Vortageanzahl auf Kostenbeitrag</td>
         <td>VTAGE</td>
+        <td>/[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedSVActor</td>
         <td>MopedVAEResponse</td>
         <td>ClaimResponse</td>
@@ -955,6 +1225,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -971,10 +1244,29 @@ verfügbar.
         <td>siehe E1</td>
         <td>siehe E1</td>
         <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
+    </tr>
+    <tr>
+        <td>Entlassungsschlüssel</td>
+        <td>ENTS</td>
+        <td>/</td>
+        <td>X</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>Encounter</td>
+        <td>Encounter.admission.dischargeDisposition</td>
+        <td>Composition.encounter.resolve()</td>
+        <td>/</td>
     </tr>
     <tr>
         <td>Hauptdiagnose ICD 10 BMSGPK Schlüssel</td>
         <td>HDIAG</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -985,6 +1277,9 @@ verfügbar.
     <tr>
         <td>Hauptdiagnose Untergliederung 1</td>
         <td>HDIAGU1</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -995,6 +1290,9 @@ verfügbar.
     <tr>
         <td>Hauptdiagnose Untergliederung 2</td>
         <td>HDIAGU2</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -1005,6 +1303,9 @@ verfügbar.
     <tr>
         <td>Zusatzdiagnose 1 - ICD 10 BMSGPK Schlüssel</td>
         <td>ZDIAG1</td>
+        <td>/</td>
+        <td>O</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -1015,6 +1316,9 @@ verfügbar.
     <tr>
         <td>Zusatzdiagnose 1 - Untergliederung 1</td>
         <td>ZDIAGU1</td>
+        <td>/</td>
+        <td>O</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -1025,6 +1329,9 @@ verfügbar.
     <tr>
         <td>Zusatzdiagnose 1 - Untergliederung 2</td>
         <td>ZDIAGU2</td>
+        <td>/</td>
+        <td>O</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -1033,18 +1340,11 @@ verfügbar.
         <td>/</td>
     </tr>
     <tr>
-        <td>Fremdverschulden</td>
-        <td>FREVER</td>
-        <td>MopedKHActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
-        <td>Claim</td>
-        <td>Claim.supportingInfo:VerdachtFremdverschulden.value[x]</td>
-        <td>Composition.section:VAERequests.entry.resolve()</td>
-        <td>/</td>
-    </tr>
-    <tr>
         <td>Hauptdiagnose im Klartext - entfällt bei Codierung</td>
         <td>DAIG</td>
+        <td>/</td>
+        <td>O</td>
+        <td>/</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -1053,8 +1353,24 @@ verfügbar.
         <td>in neuer Architektur nicht mehr notwendig; (nur Aufnahmediagnosen im Klartext möglich - alle anderen Diagnosen werden codiert)</td>
     </tr>
     <tr>
+        <td>Fremdverschulden</td>
+        <td>FREVER</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>MopedKHActor</td>
+        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>Claim</td>
+        <td>Claim.supportingInfo:VerdachtFremdverschulden.value[x]</td>
+        <td>Composition.section:VAERequests.entry.resolve()</td>
+        <td>/</td>
+    </tr>
+    <tr>
         <td>Ursache der Behandlung</td>
         <td>URS</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -1065,6 +1381,9 @@ verfügbar.
     <tr>
         <td>Entbindungsdatum</td>
         <td>ENTBDAT</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1075,6 +1394,9 @@ verfügbar.
     <tr>
         <td>Anzahl der Lebendgeburten - männliche Kinder</td>
         <td>ENTGM</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1085,6 +1407,9 @@ verfügbar.
     <tr>
         <td>Anzahl der Lebendgeburten - weibliche Kinder</td>
         <td>ENTGW</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1095,6 +1420,9 @@ verfügbar.
     <tr>
         <td>Anzahl der Totgeburten</td>
         <td>ENTT</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1105,6 +1433,9 @@ verfügbar.
     <tr>
         <td>Art der Entbindung</td>
         <td>ENTBART</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1113,18 +1444,11 @@ verfügbar.
         <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
-        <td>Entlassungsschlüssel</td>
-        <td>ENTS</td>
-        <td>MopedKHActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
-        <td>Encounter</td>
-        <td>Encounter.admission.dischargeDisposition</td>
-        <td>Composition.encounter.resolve()</td>
-        <td>/</td>
-    </tr>
-    <tr>
         <td>Aufnahme-/Verlegungsdatum</td>
         <td>AVDAT</td>
+        <td>/</td>
+        <td>O</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -1135,6 +1459,9 @@ verfügbar.
     <tr>
         <td>Verlegung Klasse</td>
         <td>VKLA</td>
+        <td>/</td>
+        <td>O</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -1145,6 +1472,9 @@ verfügbar.
     <tr>
         <td>Avisio-Info</td>
         <td>AI</td>
+        <td>/</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor, MopedDeviceActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -1155,6 +1485,9 @@ verfügbar.
     <tr>
         <td>Anzahl der Tage für welche kein Kostenbeitrag seitens der Krankenanstalt eingehoben wurde</td>
         <td>KABEFR</td>
+        <td>/</td>
+        <td>O</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedEncounterAufnahmeS; MopedEncounterEntlassungS; MopedEncounterS</td>
         <td>Encounter</td>
@@ -1171,6 +1504,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -1187,66 +1523,9 @@ verfügbar.
         <td>siehe E1.1</td>
         <td>siehe E1.1</td>
         <td>siehe E1.1</td>
-    </tr>
-    <tr>
-        <td>Staatsbürgerschaft</td>
-        <td>STAATB</td>
-        <td>MopedKHActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
-        <td>Patient</td>
-        <td>Patient.extension:citizenship</td>
-        <td>Composition.subject.resolve()</td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>Hauptwohnsitz Staat</td>
-        <td>STAATW</td>
-        <td>MopedKHActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
-        <td>Patient</td>
-        <td>Patient.address.country</td>
-        <td>Composition.subject.resolve()</td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>Hauptwohnsitz Postleitzahl</td>
-        <td>PLZLW</td>
-        <td>MopedKHActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
-        <td>Patient</td>
-        <td>Patient.address.postalCode</td>
-        <td>Composition.subject.resolve()</td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>Aufnahmeart</td>
-        <td>AUFART</td>
-        <td>MopedKHActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
-        <td>Encounter</td>
-        <td>Encounter.admission.extension:aufnahmeart</td>
-        <td>Composition.encounter.resolve()</td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>Entlassungsart</td>
-        <td>ENTLART</td>
-        <td>MopedKHActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
-        <td>Encounter</td>
-        <td>Encounter.admission.dischargeDisposition</td>
-        <td>Composition.encounter.resolve()</td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>Entbindungsheimpflegekennzeichen</td>
-        <td>EBH</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt</td>
+        <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
     </tr>
     <tr>
         <td>Urlaubstage im Verrechnungszeitraum</td>
@@ -1254,9 +1533,12 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
     </tr>
     <tr>
         <td>Sonderleistungsnummer</td>
@@ -1264,9 +1546,12 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
     </tr>
     <tr>
         <td>Anzahl Sonderleistung</td>
@@ -1274,9 +1559,25 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Entbindungsheimpflegekennzeichen</td>
+        <td>EBH</td>
         <td>/</td>
         <td>/</td>
-        <td>laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt</td>
+        <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
     </tr>
     <tr>
         <td>Ablehnungsgrund für Leistungserbringung stationär</td>
@@ -1284,9 +1585,12 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
     </tr>
     <tr>
         <td>Qualifier</td>
@@ -1294,13 +1598,32 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Krankenanstaltennummer</td>
+        <td>BKANR</td>
         <td>/</td>
         <td>/</td>
-        <td>laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt</td>
+        <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
     </tr>
     <tr>
         <td>Kostenmeldung für (A/R/K)</td>
         <td>KOANF</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1309,8 +1632,141 @@ verfügbar.
         <td>/</td>
     </tr>
     <tr>
+        <td>Aufnahmezahl</td>
+        <td>AUFZ</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>Encounter</td>
+        <td>Encounter.identifier:Aufnahmezahl.value</td>
+        <td>Composition.encounter.resolve()</td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Geburtsdatum</td>
+        <td>GEBDAT</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Patient</td>
+        <td>Patient.birthDate</td>
+        <td>Composition.subject.resolve()</td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Geschlecht</td>
+        <td>GESL</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Patient</td>
+        <td>Patient.gender</td>
+        <td>Composition.subject.resolve()</td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Staatsbürgerschaft</td>
+        <td>STAATB</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Patient</td>
+        <td>Patient.extension:citizenship</td>
+        <td>Composition.subject.resolve()</td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Hauptwohnsitz Staat</td>
+        <td>STAATW</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Patient</td>
+        <td>Patient.address.country</td>
+        <td>Composition.subject.resolve()</td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Hauptwohnsitz Postleitzahl</td>
+        <td>PLZLW</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Patient</td>
+        <td>Patient.address.postalCode</td>
+        <td>Composition.subject.resolve()</td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Aufnahmeart</td>
+        <td>AUFART</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
+        <td>Encounter</td>
+        <td>Encounter.admission.extension:aufnahmeart</td>
+        <td>Composition.encounter.resolve()</td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Entlassungsart</td>
+        <td>ENTLART</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>Encounter</td>
+        <td>Encounter.admission.dischargeDisposition</td>
+        <td>Composition.encounter.resolve()</td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Entlassungsdatum</td>
+        <td>ENT DAT</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>MopedKHActor</td>
+        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>Encounter</td>
+        <td>Encounter.actualPeriod.end</td>
+        <td>Composition.encounter.resolve()</td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
+        <td>Kostenträger</td>
+        <td>KOST</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
+    </tr>
+    <tr>
         <td>LDF-Gruppe Teil1</td>
         <td>LDFGRP</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1321,6 +1777,9 @@ verfügbar.
     <tr>
         <td>LDF-Gruppe Teil2</td>
         <td>LDFKNT</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1331,6 +1790,9 @@ verfügbar.
     <tr>
         <td>Punkte LDF-Pauschale</td>
         <td>LDFPP</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1341,6 +1803,9 @@ verfügbar.
     <tr>
         <td>Punkte Verweildauerausreißer unten</td>
         <td>VDU</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1351,6 +1816,9 @@ verfügbar.
     <tr>
         <td>Zusatzpunkte Verweildauerausreißer oben</td>
         <td>VDO</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1361,6 +1829,9 @@ verfügbar.
     <tr>
         <td>Zusatzpunkte Intensiv</td>
         <td>ZUINT</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1371,6 +1842,9 @@ verfügbar.
     <tr>
         <td>Zusatzpunkte Mehrleistungen</td>
         <td>ZUMEHR</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1381,6 +1855,9 @@ verfügbar.
     <tr>
         <td>Punkte spezieller Bereich</td>
         <td>PSPEZ</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1391,6 +1868,9 @@ verfügbar.
     <tr>
         <td>Punkte total</td>
         <td>PTOT</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1401,6 +1881,9 @@ verfügbar.
     <tr>
         <td>LDF-Punktewert Netto</td>
         <td>LDFFAK</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1411,6 +1894,9 @@ verfügbar.
     <tr>
         <td>LDF-Betrag Netto</td>
         <td>LDFBET</td>
+        <td>/</td>
+        <td>X</td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -1421,6 +1907,9 @@ verfügbar.
     <tr>
         <td>Patientenanteil für Angehörige (tägl. Satz) netto</td>
         <td>VERSATZ</td>
+        <td>/</td>
+        <td>O*</td>
+        <td>*zwingend wenn bekannt</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1431,6 +1920,9 @@ verfügbar.
     <tr>
         <td>Patientenanteil netto</td>
         <td>VERPA</td>
+        <td>/</td>
+        <td>O*</td>
+        <td>*zwingend wenn bekannt</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1441,6 +1933,9 @@ verfügbar.
     <tr>
         <td>Beihilfenäquivalent</td>
         <td>BEIH</td>
+        <td>/</td>
+        <td>O*</td>
+        <td>*zwingend wenn bekannt</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1451,6 +1946,9 @@ verfügbar.
     <tr>
         <td>Forderungsbetrag für Ausländerverrechnung</td>
         <td>FORDAV</td>
+        <td>/</td>
+        <td>O*</td>
+        <td>*zwingend wenn bekannt</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1461,6 +1959,9 @@ verfügbar.
     <tr>
         <td>Forderungsbetrag für den Regress</td>
         <td>FORDRG</td>
+        <td>/</td>
+        <td>O*</td>
+        <td>*zwingend wenn bekannt</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1474,9 +1975,12 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
     </tr>
     <tr>
         <td>RENR</td>
@@ -1484,9 +1988,12 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
     </tr>
 </table>
 </div>
@@ -1497,6 +2004,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -1513,10 +2023,16 @@ verfügbar.
         <td>siehe E1</td>
         <td>siehe E1</td>
         <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
     </tr>
     <tr>
         <td>Zeilennummer</td>
         <td>ZEILNR</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -1527,6 +2043,9 @@ verfügbar.
     <tr>
         <td>Kommentartext</td>
         <td>TEXT1</td>
+        <td>O</td>
+        <td>O</td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1537,6 +2056,9 @@ verfügbar.
     <tr>
         <td>Kommentartext</td>
         <td>TEXT2</td>
+        <td>O</td>
+        <td>O</td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1547,6 +2069,9 @@ verfügbar.
     <tr>
         <td>Kommentartext</td>
         <td>TEXT3</td>
+        <td>O</td>
+        <td>O</td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1557,6 +2082,9 @@ verfügbar.
     <tr>
         <td>Kommentartext</td>
         <td>TEXT4</td>
+        <td>O</td>
+        <td>O</td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1573,6 +2101,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -1589,10 +2120,16 @@ verfügbar.
         <td>siehe E1.1</td>
         <td>siehe E1.1</td>
         <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
     </tr>
     <tr>
         <td>Abteilung - Funktionscode der Ambulanz</td>
         <td>FKRA</td>
+        <td>X</td>
+        <td>/</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
@@ -1603,6 +2140,9 @@ verfügbar.
     <tr>
         <td>Abteilung - Subcode</td>
         <td>FKRASU</td>
+        <td>X</td>
+        <td>/</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
@@ -1613,6 +2153,9 @@ verfügbar.
     <tr>
         <td>Behandlungsdatum</td>
         <td>BDAT</td>
+        <td>X</td>
+        <td>/</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -1621,18 +2164,11 @@ verfügbar.
         <td>/</td>
     </tr>
     <tr>
-        <td>Kostenmeldung für A/R/K</td>
-        <td>KOANF</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>/</td>
-    </tr>
-    <tr>
         <td>LDF-Gruppe 1</td>
         <td>LDFGRP</td>
+        <td>X*</td>
+        <td>/</td>
+        <td>Kardinalität LKF</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1643,66 +2179,9 @@ verfügbar.
     <tr>
         <td>LDF-Gruppe 2</td>
         <td>LDFKNR</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>X*</td>
         <td>/</td>
-    </tr>
-    <tr>
-        <td>Punkte Total</td>
-        <td>PTOT</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>LDF-Punktewert netto</td>
-        <td>LDFFAK</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>LDF-Betrag Netto</td>
-        <td>LDFBET</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>Beihilfenäquivalent</td>
-        <td>BEIH</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>Forderungsbetrag für Ausländerverrechnung</td>
-        <td>FORDAV</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>/</td>
-    </tr>
-    <tr>
-        <td>Forderungsbetrag für den Regress</td>
-        <td>FORDRG</td>
+        <td>Kardinalität LKF</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1713,6 +2192,9 @@ verfügbar.
     <tr>
         <td>Leistungspunkte</td>
         <td>ABTFC_LP</td>
+        <td>X*</td>
+        <td>/</td>
+        <td>Kardinalität LKF</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1723,6 +2205,100 @@ verfügbar.
     <tr>
         <td>Kontaktpunkte</td>
         <td>ABTFC_KP</td>
+        <td>X*</td>
+        <td>/</td>
+        <td>Kardinalität LKF</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>Punkte Total</td>
+        <td>PTOT</td>
+        <td>X</td>
+        <td>/</td>
+        <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>LDF-Punktewert netto</td>
+        <td>LDFFAK</td>
+        <td>X</td>
+        <td>/</td>
+        <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>LDF-Betrag Netto</td>
+        <td>LDFBET</td>
+        <td>X</td>
+        <td>/</td>
+        <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>Beihilfenäquivalent</td>
+        <td>BEIH</td>
+        <td>X</td>
+        <td>/</td>
+        <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>Forderungsbetrag für Ausländerverrechnung</td>
+        <td>FORDAV</td>
+        <td>O</td>
+        <td>/</td>
+        <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>Forderungsbetrag für den Regress</td>
+        <td>FORDRG</td>
+        <td>O</td>
+        <td>/</td>
+        <td>/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>/</td>
+    </tr>
+    <tr>
+        <td>Kostenmeldung für A/R/K</td>
+        <td>KOANF</td>
+        <td>X</td>
+        <td>/</td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1739,6 +2315,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -1749,6 +2328,9 @@ verfügbar.
     <tr>
         <td>IDTEIL Landesfonds</td>
         <td></td>
+        <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -1764,11 +2346,17 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
         <td>diese Meldung ist in Moped in dieser Form nicht mehr notwendig</td>
     </tr>
     <tr>
         <td>Kostenmeldung für</td>
         <td>KOANF</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
@@ -1785,6 +2373,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -1801,10 +2392,16 @@ verfügbar.
         <td>siehe E1.1</td>
         <td>siehe E1.1</td>
         <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
+        <td>siehe E1.1</td>
     </tr>
     <tr>
         <td>Kostenmeldung</td>
         <td>KOANF</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1815,6 +2412,9 @@ verfügbar.
     <tr>
         <td>Zahlungskennzeichen Regress</td>
         <td>ZKZ</td>
+        <td>Z</td>
+        <td>Z</td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1825,6 +2425,9 @@ verfügbar.
     <tr>
         <td>LDF-Betrag Netto</td>
         <td>LDFBET</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1835,6 +2438,9 @@ verfügbar.
     <tr>
         <td>Patientenanteil für Angehörige</td>
         <td>VERSATZ</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1845,6 +2451,9 @@ verfügbar.
     <tr>
         <td>Patientenanteil</td>
         <td>VERPA</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1855,6 +2464,9 @@ verfügbar.
     <tr>
         <td>Betrag Ausländerverrechnung</td>
         <td>BETRAV</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1865,6 +2477,9 @@ verfügbar.
     <tr>
         <td>Betrag Regress</td>
         <td>BETRRG</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1878,13 +2493,19 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
     </tr>
     <tr>
         <td>Abrechnungsart Ausländerverrechnung</td>
         <td>ART</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1895,6 +2516,9 @@ verfügbar.
     <tr>
         <td>Prozentsatz der Zahlung</td>
         <td>PROZ</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1905,6 +2529,9 @@ verfügbar.
     <tr>
         <td>Betreuungsschein bei Ausländerverrechnung</td>
         <td>SCHEIN</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1915,6 +2542,9 @@ verfügbar.
     <tr>
         <td>Landescode</td>
         <td>LAND</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1925,6 +2555,9 @@ verfügbar.
     <tr>
         <td>Grund, warum keine Zahlung erfolgte</td>
         <td>GRUND</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1935,6 +2568,9 @@ verfügbar.
     <tr>
         <td>Rechnungsnummer der zwischenstaatlichen Abrechnung</td>
         <td>FREMDRE</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1945,6 +2581,9 @@ verfügbar.
     <tr>
         <td>Forderungsnummer der ÖGK</td>
         <td>ELBNR</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1955,6 +2594,9 @@ verfügbar.
     <tr>
         <td>Bezeichnung des ausländischen SV-Trägers</td>
         <td>ASVT</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1971,6 +2613,9 @@ verfügbar.
     <tr>
         <th>Feld</th>
         <th>Abkürzung</th>
+        <th>Ambulant</th>
+        <th>Stationär</th>
+        <th>Notiz zur Kardinalität</th>
         <th>befüllt von</th>
         <th>Profile</th>
         <th>FHIR Ressource</th>
@@ -1987,10 +2632,16 @@ verfügbar.
         <td>siehe E1</td>
         <td>siehe E1</td>
         <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
+        <td>siehe E1</td>
     </tr>
     <tr>
         <td>EWR-Versicherungsnummer des Patienten</td>
         <td>EVSNR</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2001,6 +2652,9 @@ verfügbar.
     <tr>
         <td>Zuname</td>
         <td>EZUNA</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -2011,6 +2665,9 @@ verfügbar.
     <tr>
         <td>Vorname</td>
         <td>EVONA</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -2021,6 +2678,9 @@ verfügbar.
     <tr>
         <td>Geschlecht</td>
         <td>EGESL</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -2031,6 +2691,9 @@ verfügbar.
     <tr>
         <td>Geburtsdatum</td>
         <td>EGEBD</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -2041,6 +2704,9 @@ verfügbar.
     <tr>
         <td>Staatenschlüssel</td>
         <td>ESTAAT</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -2051,6 +2717,9 @@ verfügbar.
     <tr>
         <td>Instituionscode des zuständen Trägers</td>
         <td>EIC</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2061,6 +2730,9 @@ verfügbar.
     <tr>
         <td>Akronym des zuständigen Trägers</td>
         <td>EAKRO</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2071,16 +2743,22 @@ verfügbar.
     <tr>
         <td>Kartennummer</td>
         <td>EKANR</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
         <td></td>
-        <td>/</td>
+        <td></td>
     </tr>
     <tr>
         <td>Endedatum des Anspruches</td>
         <td>EAEND</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2091,6 +2769,9 @@ verfügbar.
     <tr>
         <td>Art der Anspruchsbescheinigung</td>
         <td>EFORM</td>
+        <td>X</td>
+        <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -2101,6 +2782,9 @@ verfügbar.
     <tr>
         <td>Beginndatum des Anspruches</td>
         <td>EABEG</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2111,6 +2795,9 @@ verfügbar.
     <tr>
         <td>Bei EFORM " ANFO mit der Wohnort-Stadt des Patienten</td>
         <td>ESTADT</td>
+        <td>X[TBD]*</td>
+        <td>X[TBD]*</td>
+        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td></td>
         <td></td>
         <td></td>
