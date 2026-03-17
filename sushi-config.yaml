@@ -64,7 +64,8 @@ dependencies:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
-# parameters:
+parameters:
+  suppress-mappings: ["http://hl7.org/fhir/workflow","http://hl7.org/fhir/fivews","http://hl7.org/v3","http://hl7.org/v2","http://www.cda-adc.ca/en/services/cdanet/", "http://www.pharmacists.ca/","http://hl7.org/fhir/interface","http://hl7.org/v3/cda","http://hl7.org/fhir/documentreference","http://snomed.info/conceptdomain","http://snomed.org/attributebinding","http://loinc.org","https://wiki.hl7.at/index.php?title=ILF:Allgemeiner_Implementierungsleitfaden_(Version_3)"]
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 #
@@ -80,10 +81,20 @@ dependencies:
 pages:
   index.md:
     title: Home
+  scope_and_content.md:
+    title: Umfang und Inhalt
+  background.md:
+    title: Hintergrund
+  challenges.md:
+    title: Herausforderungen
+  moped_konzepte.md:
+    title: Grundlegende Konzepte und Design-Entscheidungen
   actors.md:
     title: Akteure
   workflowmanagement.md:
     title: Workflowmanagement
+  obligations.md:
+    title: Obligations
   anwendungsfaelle.md:
     title: Überblick & Sunshine Case
     AF1.md:
@@ -146,17 +157,42 @@ pages:
       title: ANWF 53 - Intensivaufenthalt
     AF54.md:
       title: ANWF 54 - Stammdatenänderung
-  moped_konzepte.md:
-    title: Grundlegende Konzepte und Design-Entscheidungen
-  ka-org_mapping.md:
-    title: Ka-Org Mapping
-  lkf_mapping.md:
-    title: LKF Mapping
+  mappings.md:
+    title: Mappings
+    ka-org_mapping.md:
+      title: Ka-Org Mapping
+    lkf_mapping.md:
+      title: MBDS Mapping
+    jahresmeldungen_mapping.md:
+      title: LKF Jahresmeldung
+    stammdaten_mapping.md:
+      title: Stammdaten
+  imprint.md:
+    title: Impressum
+  authors.md:
+    title: Mitwirkende
+  downloads.md:
+    title: Downloads
+  dependencies.md:
+    title: Dependencies
+  copyright.md:
+    title: Copyright
+  known_issues.md:
+    title: Known Issues
+  
     
 menu:
   Home: index.html
-  Artifacts: artifacts.html
-  Akteure: actors.html
+  Table of Contents: toc.html
+  Einleitung:
+    Umfang und Inhalt: scope_and_content.html
+    Hintergrund: background.html
+    Herausforderungen: challenges.html
+  Funktionales:
+    Designentscheidungen: moped_konzepte.html
+    Akteure: actors.html
+    Workflowmanagement: workflowmanagement.html
+    Obligations: obligations.html
   Anwendungsfälle:
     Überblick & Sunshine Case: anwendungsfaelle.html
     ANWF 1 - Planaufnahme 🔄: AF1.html
@@ -166,7 +202,7 @@ menu:
     ANWF 6 - Mehrmalige Aufnahme an einem Tag 🔄: AF6.html
     ANWF 7 - Behandlungsabbruch 🔄: AF7.html
     ANWF 8,9,47 - Stammdatenabgleich 🔄: AF8u9u47.html
-    ANWF 10 - Klassenwechsel 🔄: AF10.html
+    ANWF 10 - Klassenwechsel ✅: AF10.html
     ANWF 11 - Versicherungswechsel 🔄: AF11.html
     ANWF 12,13,15,35-37 - Ausländerverrechnung und Regress 🔄: AF12.html
     ANWF 14 - Selbstzahler ✅: AF14.html
@@ -189,10 +225,54 @@ menu:
     ANWF 51-52 - Asylierung 🔄: AF51u52.html
     ANWF 53 - Intensivaufenthalt 🔄: AF53.html
     ANWF 54 - Stammdatenänderung 🔄: AF54.html
-  Workflowmanagement: workflowmanagement.html
-  Konzepte: moped_konzepte.html
-  LKF Mapping: lkf_mapping.html
-  Ka-Org Mapping: ka-org_mapping.html
+  Questionnaires:
+    MBDS - TISS-A: Questionnaire-LKFTISSAQuestionnaire.html
+    MBDS - SAPS3: Questionnaire-LKFSAPS3Questionnaire.html
+    MBDS - Monatsmeldung - L01: Questionnaire-LKFL01Questionnaire.html
+    MBDS - Monatsmeldung - K01: Questionnaire-LKFK01Questionnaire.html
+    LKF Jahresmeldung - L02: Questionnaire-LKFL02Questionnaire.html
+    LKF Jahresmeldung - L03: Questionnaire-LKFL03Questionnaire.html
+    LKF Jahresmeldung - L04: Questionnaire-LKFL04Questionnaire.html
+    LKF Jahresmeldung - K02: Questionnaire-LKFK02Questionnaire.html
+    LKF Jahresmeldung - K03: Questionnaire-LKFK03Questionnaire.html
+    LKF Jahresmeldung - K04: Questionnaire-LKFK04Questionnaire.html
+    LKF Jahresmeldung - K05: Questionnaire-LKFK05Questionnaire.html
+    LKF Jahresmeldung - K06: Questionnaire-LKFK06Questionnaire.html
+    LKF Jahresmeldung - K07: Questionnaire-LKFK07Questionnaire.html
+    LKF Jahresmeldung - K08: Questionnaire-LKFK08Questionnaire.html
+    LKF Jahresmeldung - K09: Questionnaire-LKFK09Questionnaire.html
+    LKF Jahresmeldung - K10: Questionnaire-LKFK10Questionnaire.html
+    LKF Jahresmeldung - K11: Questionnaire-LKFK11Questionnaire.html
+    LKF Jahresmeldung - K12: Questionnaire-LKFK12Questionnaire.html
+    LKF Jahresmeldung - K13: Questionnaire-LKFK13Questionnaire.html
+    LKF Jahresmeldung - K14: Questionnaire-LKFK14Questionnaire.html
+    LKF Jahresmeldung - K15: Questionnaire-LKFK15Questionnaire.html
+    LKF Jahresmeldung - K16: Questionnaire-LKFK16Questionnaire.html
+    LKF Jahresmeldung - G01: Questionnaire-LKFG01Questionnaire.html
+    LKF Jahresmeldung - G02: Questionnaire-LKFG02Questionnaire.html
+    LKF Jahresmeldung - B01: Questionnaire-LKFB01Questionnaire.html
+    LKF Jahresmeldung - B02: Questionnaire-LKFB02Questionnaire.html
+    LKF Jahresmeldung - B03: Questionnaire-LKFB03Questionnaire.html
+    LKF Jahresmeldung - B04: Questionnaire-LKFB04Questionnaire.html
+    LKF Jahresmeldung - B05: Questionnaire-LKFB05Questionnaire.html
+    LKF Jahresmeldung - B06: Questionnaire-LKFB06Questionnaire.html
+    LKF Jahresmeldung - A01: Questionnaire-LKFA01Questionnaire.html
+    Register - Strokeunit: Questionnaire-StrokeUnitQuestionnaire2025.html
+  Mappings:
+    MBDS Mapping: lkf_mapping.html
+    LKF Jahresmeldung: jahresmeldungen_mapping.html
+    Ka-Org Mapping: ka-org_mapping.html
+    Stammdaten: stammdaten_mapping.html
+  Artifacts: artifacts.html
+  About:
+    Impressum: imprint.html
+    Mitwirkende: authors.html
+    Downloads:  downloads.html
+    Dependencies: dependencies.html
+    Copyright: copyright.html
+    Known Issues: known_issues.html
+
+
 
 
   

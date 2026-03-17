@@ -5,7 +5,8 @@ Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedLKFRequest"
 * status = #active
 * use = http://hl7.org/fhir/claim-use#claim
-* type = http://terminology.hl7.org/CodeSystem/claim-type#institutional
+* type.coding = MopedClaimTypeCS#LKFREQ
+* subType.coding = MopedClaimSubTypeCS#LKFREQVORL
 * patient = Reference(PJ2Patient)
 * created = "2025-02-24"
 * insurer = Reference(SV14)
@@ -42,6 +43,9 @@ Usage: #example
 * supportingInfo[EndgueltigeMeldung].sequence = 2
 * supportingInfo[EndgueltigeMeldung].category = ClaimSupportingInformationCategoryCS#ENDG
 * supportingInfo[EndgueltigeMeldung].valueBoolean = false
+* supportingInfo[XDokDevice].sequence = 3
+* supportingInfo[XDokDevice].category = ClaimSupportingInformationCategoryCS#DEVX
+* supportingInfo[XDokDevice].valueReference = Reference(XDokExampleDevice)
 
 * extension[DiagnoseKnoten].valueCoding = LKFAbrechnungsKnotenCS#C
 * extension[Fondsrelevanz].valueCoding = FondsrelevanzCS#J

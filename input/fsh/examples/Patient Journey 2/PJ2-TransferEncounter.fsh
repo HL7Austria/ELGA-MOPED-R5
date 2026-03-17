@@ -5,7 +5,7 @@ Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
 * status = #completed
 * subject = Reference(PJ2Patient)
-* serviceProvider = Reference(AbteilungKHRied1)
+* serviceType = Reference(AbteilungKHRied1)
 * actualPeriod.start = "2024-08-08T08:21:00+02:00"
 * actualPeriod.end = "2024-08-08T11:22:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW
@@ -22,7 +22,7 @@ Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
 * status = #completed
 * subject = Reference(PJ2Patient)
-* serviceProvider = Reference(AbteilungKHRied2)
+* serviceType = Reference(AbteilungKHRied2)
 * actualPeriod.start = "2024-08-08T11:22:00+02:00"
 * actualPeriod.end = "2024-08-08T11:41:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW
@@ -40,7 +40,7 @@ Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
 * status = #completed
 * subject = Reference(PJ2Patient)
-* serviceProvider = Reference(AbteilungKHRied3)
+* serviceType = Reference(AbteilungKHRied3)
 * actualPeriod.start = "2024-08-08T11:41:00+02:00"
 * actualPeriod.end = "2024-08-09T11:38:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW
@@ -58,7 +58,7 @@ Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
 * status = #completed
 * subject = Reference(PJ2Patient)
-* serviceProvider = Reference(AbteilungKHRied4)
+* serviceType = Reference(AbteilungKHRied4)
 * actualPeriod.start = "2024-08-09T11:38:00+02:00"
 * actualPeriod.end = "2024-08-10T17:00:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW
@@ -76,7 +76,7 @@ Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
 * status = #completed
 * subject = Reference(PJ2Patient)
-* serviceProvider = Reference(AbteilungKHRied3)
+* serviceType = Reference(AbteilungKHRied3)
 * actualPeriod.start = "2024-08-10T17:00:00+02:00"
 * actualPeriod.end = "2024-08-12T19:22:00+02:00"
 * subjectStatus.coding = AnwesenheitsartCS#ANW

@@ -1,7 +1,3 @@
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-</script>
-
 ### Krankenanstalt {#actor-KH}
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
     Im MOPED-Kontext spielt eine Krankenanstalt (KH) eine zentrale Rolle als Initiator zahlreicher Prozesse und als Meldestelle für vielfältige Daten. Diese umfassen unter anderem die Patientenaufnahme, die Abfrage des Versicherungsstatus und -anspruchs, die Erfassung von Versorgungsdaten während der Patientenbehandlung, die Entlassung sowie die Initiierung der Leistungsabrechnung.
@@ -9,15 +5,16 @@
 <pre class="mermaid">
     graph LR
     KH[Krankenanstalt]
-    Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
-    KH --->|&lt;a href=&quot;OperationDefinition-MOPED.Patient.Aufnehmen.html&quot;&gt; POST $aufnehmen&lt;/a&gt;| Moped 
-    KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Daten.Update.html&quot;&gt; POST $update&lt;/a&gt;| Moped
-    KH -->|&lt;a href=&quot;OperationDefinition-MOPED.VAERequest.Anfragen.html&quot;&gt; POST $anfragen&lt;/a&gt;| Moped
-    KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Patient.Entlassen.html&quot;&gt; POST $entlassen&lt;/a&gt;| Moped
-    KH -->|&lt;a href=&quot;OperationDefinition-MOPED.Encounter.Abrechnen.html&quot;&gt; POST $abrechnen&lt;/a&gt;| Moped
-    KH -->|&lt;a href=&quot;TBD&quot;&gt; POST $stornieren&lt;/a&gt;| Moped
-    Moped -->|&lt;a href=&quot;StructureDefinition-MopedVAEResponse.html&quot;&gt; GET VAEResponse&lt;/a&gt;| KH
-    Moped --->|&lt;a href=&quot;StructureDefinition-MopedLKFResponse.html&quot;&gt; GET ClaimResponse&lt;/a&gt;| KH
+    Moped[Moped] 
+    KH --->|POST $aufnehmen| Moped 
+    KH -->|POST $update| Moped
+    KH -->|POST $anfragen| Moped
+    KH -->|POST $entlassen| Moped
+    KH -->|POST $abrechnen| Moped
+    KH -->|POST $stornieren| Moped
+    KH -->|POST $einmelden| Moped
+    Moped -->|GET VAEResponse| KH
+    Moped --->|GET ClaimResponse| KH
 </pre>  
 
 ### Sozialversicherung {#actor-SV}
@@ -27,10 +24,10 @@
 <pre class="mermaid">
     graph LR
     SV[Sozialversicherung]
-    Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
-    Moped --->|&lt;a href=&quot;StructureDefinition-MopedVAERequest.html&quot;&gt; GET VAERequest?status=active&lt;/a&gt;| SV
-    Moped --->|&lt;a href=&quot;StructureDefinition-MopedARKRequest.html&quot;&gt; GET ARKRequest?status=active&lt;/a&gt;| SV
-    SV --->|&lt;a href=&quot;OperationDefinition-MOPED.Auf.Request.Antworten.html&quot;&gt; POST $antworten&lt;/a&gt;| Moped
+    Moped[Moped] 
+    Moped --->|GET VAERequest?status=active| SV
+    Moped --->|GET ARKRequest?status=active| SV
+    SV --->|POST $antworten| Moped
 </pre>   
 
 ### Landesgesundheitsfonds {#actor-LGF}
@@ -40,10 +37,11 @@
 <pre class="mermaid">
     graph LR
     LGF[Landesgesundheitsfonds]
-    Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
-    Moped --->|&lt;a href=&quot;StructureDefinition-MopedLKFRequest.html&quot;&gt; GET Claim&lt;/a&gt;| LGF
-    LGF --->|&lt;a href=&quot;OperationDefinition-MOPED.ClaimResponse.Entscheiden.html&quot;&gt; POST $entscheiden&lt;/a&gt;| Moped
-    LGF --->|&lt;a href=&quot;OperationDefinition-MOPED.Claim.Melden.html&quot;&gt; POST $melden&lt;/a&gt;| Moped
+    Moped[Moped] 
+    Moped --->|GET Claim| LGF
+    Moped --->|GET QuestionnaireResponse| LGF
+    LGF --->|POST $entscheiden| Moped
+    LGF --->|POST $melden| Moped
 </pre>
 
 ### Bundesministerium für Soziales, Gesundheit, Pflege und Konsumentenschutz {#actor-BMSGPK}
@@ -53,7 +51,19 @@
 <pre class="mermaid">
     graph LR
     BMSGPK[BMSGPK]
-    Moped[&lt;a href=&quot;#top&quot;&gt;Moped&lt;/a&gt;] 
+    Moped[Moped] 
     Moped --->|GET Composition?status=final| BMSGPK 
-    Moped --->|&lt;a href=&quot;https://www.hl7.org/fhir/operation-measure-evaluate-measure.html&quot;&gt; POST Measure/$evaluate-measure&lt;/a&gt;| BMSGPK
+    Moped --->|POST Measure/$evaluate-measure| BMSGPK
+</pre>
+
+### Medizinische Register (z.B. Stroke‐Unit‐Register, Krebsregister,...)
+
+Im Moped Kontext werden von den Krankenanstalten ausgewählte Meldungen an medizinische Register über Moped in Form von QuestionnaireResponses zur Verfügung gestellt. Die versionierten Questionnaires (Formulare) werden vom jeweiligen Register über einen noch zu definierenden Prozess/Infrastruktur für Questionnaires zur Verfügung gestellt. Die Krankenanstalt befüllt diese und speichert sie mit dem jeweiligen Fall in Moped ab. Die automatische Vorbefüllung von bereits in Moped zum Fall vorhandenen Informationen ($populate) ist angedacht. Das Register greift dabei ausschließlich lesend und nur auf die für es vorgesehenen QuestionnaireResponses in MOPED zu.
+<pre class="mermaid">
+    graph LR
+    Register[Register]
+    Moped[Moped] 
+    KH[Krankenanstalt]
+    KH --->|POST $update<br/>einer fallbezogenen QuestionnaireResponse| Moped 
+    Moped --->|GET QuestionnaireResponse| Register
 </pre>

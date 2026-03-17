@@ -5,7 +5,7 @@ Usage: #example
 * meta.profile = "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
 * status = #in-progress
 * subject = Reference(PJ1Patient)
-* serviceProvider = Reference(AbteilungHerzJesu1)
+* serviceType = Reference(AbteilungHerzJesu1)
 
 * actualPeriod.start = "2024-02-22T19:33:00+02:00"
 //* actualPeriod.end = "2024-02-23T07:38:00+02:00"

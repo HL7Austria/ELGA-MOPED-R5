@@ -1,7 +1,7 @@
 {
   "resourceType": "QuestionnaireResponse",
   "id": "SAPS42.1",
-  "questionnaire": "https://elga.moped.at/Questionnaire/saps3-questionnaire",
+  "questionnaire": "https://elga.moped.at/Questionnaire/LKFSAPS3Questionnaire",
   "status": "completed",
   "subject": {
     "reference": "Patient/Patient42"
@@ -13,13 +13,10 @@
   "author": {
     "reference": "Organization/KHK999"
   },
-  "item": [
-    {
-      "linkId": "saps3-set",
       "item": [
         {
           "linkId": "saps3-02",
-          "text" : "Krankenanstaltennummer/Leistungserbringer-ID",
+          "text" : "Krankenanstaltennummer",
           "answer": [
             {
               "valueString": "K999"
@@ -73,7 +70,7 @@
         },
         {
           "linkId": "saps3-08",
-          "text" : "Akute Infektion bei Aufnahme - Nosokomiale Infektion",
+          "text" : "Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Nosokomiale Infektion",
           "answer": [
             {
               "valueBoolean": false
@@ -82,7 +79,7 @@
         },
         {
           "linkId": "saps3-08a",
-          "text" : "Akute Infektion bei Aufnahme - Respiratorische Infektion",
+          "text" : "Akute Infektion bei Aufnahme; Akute Infektion bei Aufnahme - Respiratorische Infektion",
           "answer": [
             {
               "valueBoolean": false
@@ -537,6 +534,4 @@
           ]
         }
       ]
-    }
-  ]
 }

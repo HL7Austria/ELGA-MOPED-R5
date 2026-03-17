@@ -1,0 +1,66 @@
+@startuml
+skinparam borderColor #000000
+skinparam backgroundColor #f5f5f5
+skinparam shadowing false
+skinparam roundCorner 10
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 14
+skinparam defaultFontColor #000000
+
+skinparam note {
+  BackgroundColor #e0e5f0-#d1d9e6
+  BorderColor #8b95a5
+  BorderThickness 1
+  RoundCorner 8
+  Padding 6
+  FontColor #111827
+  Shadowing true
+}
+
+skinparam HyperlinkColor #0000EE
+skinparam HyperlinkUnderline false
+
+skinparam sequence {
+  ParticipantBorderColor #555555
+  ParticipantBackgroundColor #ffffff
+  ParticipantFontColor #000000
+  ParticipantFontSize 14
+  ParticipantPadding 20
+  ArrowColor #111827
+  ArrowThickness 2
+  ArrowFontColor #000000
+  ArrowFontSize 13
+  GroupBorderColor #111827
+  GroupBackgroundColor #f3f4f6
+  GroupBorderThickness 1
+}
+
+skinparam BoxPadding 20
+skinparam BoxBorderColor #555555
+
+box "\n  KH (Herz Jesu Krankenhaus)  " #f5e599
+  actor KH as "KH"
+end box
+
+box "\n       Moped       " #c5f7ba
+  participant MP as "Moped"
+end box
+
+box "\n    SV (ÖGK,...)    " #bac4f7
+  actor SV as "SV (ÖGK)"
+end box
+
+box "\n LGF (Landesgesundheitsfonds)  " #f7d0ba
+  actor LGF as "LGF (Landesgesundheitsfonds)"
+end box
+
+box "\n        Bund        " #fcb3b3
+  actor Bund as "Bund"
+end box
+
+autonumber
+
+KH ->> MP: $aufnehmen
+Note over KH: Patient wird aufgenommen
+
+@enduml

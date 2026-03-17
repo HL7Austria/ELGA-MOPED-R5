@@ -23,9 +23,13 @@
   "partOf": {
     "reference": "Encounter/Encounter42"
   },
-  "serviceProvider": {
-    "reference": "Organization/KHK999ABT12118102"
-  },
+  "serviceType" : [
+    {
+      "reference" : {
+        "reference" : "HealthcareService/KHK999ABT12118102"
+      }
+    }
+  ],
   "actualPeriod": {
     "start": "2025-01-02T00:00:00+02:00",
     "end": "2025-01-04T00:00:00+02:00"

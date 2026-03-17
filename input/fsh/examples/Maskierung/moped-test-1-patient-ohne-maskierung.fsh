@@ -1,7 +1,7 @@
 Alias: $iso-3166-1-alpha-3 = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3
 
 Instance: Test1PatientOhneMaskierung
-InstanceOf: HL7ATCorePatient
+InstanceOf: MopedPatient
 Description: "Maskierung Beispiel Patient"
 Usage: #example
 * meta.profile = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-patient"

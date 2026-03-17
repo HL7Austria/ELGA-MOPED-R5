@@ -1,6 +1,3 @@
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-</script>
 <div xmlns="http://www.w3.org/1999/xhtml" class="container"> 
 In diesem Bereich werden die grundlegenden Konzepte des Moped-Designs beschrieben.
 </div>
@@ -14,17 +11,17 @@ Es können mehrere Composition-Ausprägungen gleichzeitig gültig sein, etwa wen
 
 <pre class="mermaid">
     graph TD
-    Master[&lt;a href=&quot;StructureDefinition-MopedMasterComposition.html&quot;&gt;MasterComposition&lt;/a&gt;]
+    Master[MasterComposition]
 
     subgraph Spezialisierungen
-        Aufnahme[&lt;a href=&quot;StructureDefinition-MopedAufnahmeComposition.html&quot;&gt;AufnahmeComposition&lt;/a&gt;<br/><sub><i>Patient & Encounter vorhanden</i></sub>]
-        Anfrage[&lt;a href=&quot;StructureDefinition-MopedAnfragenComposition.html&quot;&gt;AnfrageComposition&lt;/a&gt;<br/><sub><i>Versicherer vorhanden</i></sub>]
-        Antwort[&lt;a href=&quot;StructureDefinition-MopedBeantwortenComposition.html&quot;&gt;AntwortComposition&lt;/a&gt;<br/><sub><i></i></sub>]
-        Entlassungsaviso[&lt;a href=&quot;StructureDefinition-MopedEntlassenAvisoComposition.html&quot;&gt;EntlassungsAvisoComposition&lt;/a&gt;<br/><sub><i>Entlassungsdatum vorhanden</i></sub>]
-        Entlassung[&lt;a href=&quot;StructureDefinition-MopedEntlassenAvisoComposition.html&quot;&gt;EntlassungVollstaendigComposition&lt;/a&gt;<br/><sub><i>Entlassungsdatum und Hauptdiagnose vorhanden</i></sub>]
-        Abrechnung[AbrechnungsComposition&lt;a href=&quot;TBD&quot;&gt;<br/><sub><i>Patient Entlassen, Diagnosen und Leistungen erfasst</i></sub>]
-        Entscheiden[EntscheidenComposition<br/><sub><i></i></sub>]
-        Siegel[SiegelComposition<br/><sub><i>Composition.status=final</i></sub>]
+        Aufnahme[AufnahmeComposition<br/>Patient & Encounter vorhanden]
+        Anfrage[AnfrageComposition<br/>Versicherer vorhanden]
+        Antwort[AntwortComposition<br/>VAEResponse vorhanden]
+        Entlassungsaviso[EntlassungsAvisoComposition<br/>Entlassungsdatum vorhanden]
+        Entlassung[EntlassungVollstaendigComposition<br/>Entlassungsdatum und Hauptdiagnose vorhanden]
+        Abrechnung[AbrechnungsComposition<br/>Patient Entlassen, Diagnosen und Leistungen erfasst]
+        Entscheiden[EntscheidenComposition<br/>]
+        Siegel[SiegelComposition<br/>Composition.status=final]
     end
 
     Master --> Aufnahme
@@ -54,6 +51,8 @@ In MOPED gilt bei allen fallbezogenen Operationen, die eine `Composition` refere
 `http POST /Composition/123/_history/6/$abrechnen`
 
 Ohne Version (z. B. lediglich mit /Composition/123) wird die Operation abgelehnt. Alle benutzerdefinierten fallbezogenen Operationen in MOPED werden ausschließlich auf Composition-Instanzebene ausgeführt und erwarten als URL-Form stets `Composition/{id}/_history/{version}/$operationName`.
+
+Die Pflicht zur Angabe einer versionierten Composition-Referenz gilt in MOPED nur für schreibende bzw. fallverändernde Operationen, bei denen Konflikte durch parallele Änderungen vermieden werden müssen. Für einen normalen lesenden Zugriff muss der Client die aktuellste Versionsnummer hingegen nicht kennen: Ein FHIR-read mittels GET [base]/Composition/{id} liefert immer den aktuellen Stand der Ressource. Nur wenn ausdrücklich eine bestimmte historische Version benötigt wird, wird ein versionierter Zugriff (vread) über GET [base]/Composition/{id}/_history/{vid} verwendet.
 
 ### Provenance in MOPED: Herkunft, Nachvollziehbarkeit, Transparenz
 Die Provenance-Ressource dient der dokumentierten Nachvollziehbarkeit von Änderungen an FHIR-Ressourcen. Sie beschreibt, wer eine Ressource wann, warum und in welchem Kontext erstellt oder verändert hat.
@@ -120,4 +119,5 @@ Einige Referenzen sind nicht aus dem Fallkontext ableitbar, da sie entweder eine
 
 MOPED prüft ggf. ihre Gültigkeit, übernimmt das befüllen aber nicht selbst.
 
-
+### Subscriptions & Notifications
+Ereignisbasierte Benachrichtigungen werden durch Moped anhand des Message Broker Patterns umgesetzt. Das Message Broker Pattern ist ein Entwurfsmuster, das in verteilten Softwaresystemen verwendet wird, um die Kommunikation zwischen verschiedenen Komponenten oder Diensten zu organisieren und zu optimieren. Es dient als Vermittler, der Nachrichten (Informationen oder Datenpakete) von einem Sender (Producer) entgegennimmt und an einen oder mehrere Empfänger (Consumer) weiterleitet. Ein zentraler Vorteil dieses Patterns liegt darin, dass die Sender und Empfänger nicht direkt miteinander kommunizieren müssen und somit entkoppelt werden. Dies fördert eine bessere Skalierbarkeit und Flexibilität im System, da Komponenten unabhängig voneinander aktualisiert, hinzugefügt oder entfernt werden können. Inhalt, Struktur und Format der Benachrichtigungen folgen hierbei dem FHIR Subscriptions Framework.
