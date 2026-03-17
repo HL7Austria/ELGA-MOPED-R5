@@ -1,6 +1,6 @@
 Profile: MopedTransferEncounterA
 Parent: MopedTransferEncounter
-Description: "MOPED Profil der Encounter Ressource für ambulante Verlegungen"
+Description: "MOPED Profil der Encounter Ressource für ambulante Kontakte/Bewegungen"
 Title: "MOPED TransferEncounter Ambulant"
 
 * identifier ^slicing.rules = #open
