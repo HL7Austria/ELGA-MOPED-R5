@@ -135,9 +135,9 @@ verfügbar.
     <tr>
         <td>Entlassungsdatum</td>
         <td>ENTL</td>
-        <td>O[TBD]*</td>
-        <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: Unterschied ambulant vs. stationär?</td>
+        <td>O</td>
+        <td>X</td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -656,7 +656,7 @@ verfügbar.
         <td>EREIG</td>
         <td>X</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -669,7 +669,7 @@ verfügbar.
         <td>FKRA</td>
         <td>X</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
@@ -696,11 +696,11 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
-        <td>MopedKHActor; MopedSVActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung; MopedVAEResponse</td>
-        <td>Claim; ClaimResponse</td>
-        <td>Claim.supportingInfo:Sonderklasse.code; ClaimResponse.extension:MopedSupportingInfoSonderklasse</td>
-        <td>Composition.section:VAERequests.entry.resolve(); Composition.section:VAEResponses.entry.resolve()</td>
+        <td>MopedKHActor</td>
+        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>Claim</td>
+        <td>Claim.supportingInfo:Sonderklasse.code</td>
+        <td>Composition.section:VAERequests.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -773,7 +773,7 @@ verfügbar.
         <td>VERDAU</td>
         <td>X</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -903,7 +903,7 @@ verfügbar.
         <td>FREVER</td>
         <td>X</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -940,15 +940,15 @@ verfügbar.
     <tr>
         <td>Entbindungstag</td>
         <td>ENTBDAT</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
         <td></td>
         <td></td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>/</td>
-        <td>erst in K05 relevant</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>nicht mehr Tel der KaOrg (Stand 2026)</td>
     </tr>
     <tr>
         <td>Überweisende Stelle - Vertragspartnernummer</td>
@@ -1131,11 +1131,11 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor; MopedSVActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung; MopedVAEResponse</td>
-        <td>Claim; ClaimResponse</td>
-        <td>Claim.supportingInfo:Sonderklasse.code; ClaimResponse.extension:MopedSupportingInfoSonderklasse</td>
-        <td>Composition.section:VAERequests.entry.resolve(); Composition.section:VAEResponses.entry.resolve()</td>
+        <td>MopedKHActor</td>
+        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>Claim</td>
+        <td>Claim.supportingInfo:Sonderklasse.code</td>
+        <td>Composition.section:VAERequests.entry.resolve()</td>
         <td>wird in R6 von einer extension zu einem normalen supportingInfo slice</td>
     </tr>
     <tr>
@@ -1143,7 +1143,8 @@ verfügbar.
         <td>DAT-VON</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*zwingend wenn zutreffend; TBD: Wenn Rückmeldung „in Bearbeitung“ (VAEST = 18 oder 98)
+dann nicht zwingend</td>
         <td>MopedKHActor, MopedKHActor, MopedKHActor; MopedSVActor</td>
         <td>MopedVAERequestInitial; MopedVAEResponse</td>
         <td>Claim; ClaimResponse</td>
@@ -1169,7 +1170,8 @@ verfügbar.
         <td>ENDE</td>
         <td>O[TBD]*</td>
         <td>O[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*zwingend wenn zutreffend; TBD: Wenn Rückmeldung „in Bearbeitung“ (VAEST = 18 oder 98)
+dann nicht zwingend</td>
         <td>MopedSVActor</td>
         <td>MopedVAEResponse</td>
         <td>ClaimResponse</td>
@@ -1195,7 +1197,8 @@ verfügbar.
         <td>VKBEFR</td>
         <td>/[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*zwingend wenn zutreffend; TBD: Wenn Rückmeldung „in Bearbeitung“ (VAEST = 18 oder 98)
+dann nicht zwingend</td>
         <td>MopedSVActor</td>
         <td>MopedVAEResponse</td>
         <td>ClaimResponse</td>
@@ -1208,7 +1211,8 @@ verfügbar.
         <td>VTAGE</td>
         <td>/[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*zwingend wenn zutreffend; TBD: Wenn Rückmeldung „in Bearbeitung“ (VAEST = 18 oder 98)
+dann nicht zwingend</td>
         <td>MopedSVActor</td>
         <td>MopedVAEResponse</td>
         <td>ClaimResponse</td>
@@ -1266,7 +1270,7 @@ verfügbar.
         <td>HDIAG</td>
         <td>/</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*in Zukunft immer codiert notwendig?</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -1279,7 +1283,7 @@ verfügbar.
         <td>HDIAGU1</td>
         <td>/</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*in Zukunft immer codiert notwendig?</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -1292,7 +1296,7 @@ verfügbar.
         <td>HDIAGU2</td>
         <td>/</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*in Zukunft immer codiert notwendig?</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -1356,8 +1360,8 @@ verfügbar.
         <td>Fremdverschulden</td>
         <td>FREVER</td>
         <td>/</td>
-        <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>X*</td>
+        <td>in K01 bereits zwingend daher für K05 nicht mehr optional notwendig</td>
         <td>MopedKHActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
@@ -1369,8 +1373,8 @@ verfügbar.
         <td>Ursache der Behandlung</td>
         <td>URS</td>
         <td>/</td>
-        <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>X*</td>
+        <td>in K01 bereits zwingend daher für K05 nicht mehr optional notwendig</td>
         <td>MopedKHActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
@@ -1766,7 +1770,7 @@ verfügbar.
         <td>LDFGRP</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1779,7 +1783,7 @@ verfügbar.
         <td>LDFKNT</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1792,7 +1796,7 @@ verfügbar.
         <td>LDFPP</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1805,7 +1809,7 @@ verfügbar.
         <td>VDU</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1818,7 +1822,7 @@ verfügbar.
         <td>VDO</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1831,7 +1835,7 @@ verfügbar.
         <td>ZUINT</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1844,7 +1848,7 @@ verfügbar.
         <td>ZUMEHR</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1857,7 +1861,7 @@ verfügbar.
         <td>PSPEZ</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1870,7 +1874,7 @@ verfügbar.
         <td>PTOT</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1883,7 +1887,7 @@ verfügbar.
         <td>LDFFAK</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -1896,7 +1900,7 @@ verfügbar.
         <td>LDFBET</td>
         <td>/</td>
         <td>X</td>
-        <td></td>
+        <td>/</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2412,8 +2416,8 @@ verfügbar.
     <tr>
         <td>Zahlungskennzeichen Regress</td>
         <td>ZKZ</td>
-        <td>Z</td>
-        <td>Z</td>
+        <td>X</td>
+        <td>X</td>
         <td>/</td>
         <td></td>
         <td></td>

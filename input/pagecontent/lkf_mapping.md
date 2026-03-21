@@ -534,7 +534,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>X</td>
         <td>/</td>
         <td></td>
-        <td></td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
@@ -617,7 +617,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>/</td>
         <td>X</td>
         <td></td>
-        <td></td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
@@ -630,7 +630,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>X</td>
         <td>X</td>
         <td></td>
-        <td></td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
@@ -740,7 +740,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>X</td>
         <td>X</td>
         <td></td>
-        <td></td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
@@ -753,7 +753,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>X</td>
         <td>X</td>
         <td></td>
-        <td></td>
+        <td>/</td>
         <td>MopedKHActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
