@@ -1,7 +1,7 @@
 
-## Anwendungsfall: Standardablauf im Sunshine Case
+### Standardablauf stationärer Fall
 
-### Betroffene Akteure
+#### Betroffene Akteure
 
 | Akteur            | | 
 |-------------------|--------------:|
@@ -10,7 +10,7 @@
 | SV (Sozialversicherung)      |  ✅  |
 | Bund         |  ✅  |
 
-### Betroffene Behandlungsarten
+#### Betroffene Behandlungsarten
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -18,36 +18,36 @@
 | Stationär |  ✅ |
 
 
-### Beschreibung: Susi Sonnenschein
+#### Beschreibung: Susi Sonnenschein
 Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Aufenthalts wird sie verlegt, der zuständige Versicherer wird festgelegt und angefragt und Diagnosen sowie Leistungen werden dokumentiert. Nach Entlassung erfolgt die Abrechnung und Freigabe der Fallakte zur Einsicht durch den Bund sowie die Meldung der Kosteninformation an die SV.
 
-### Beispiel
+#### Beispiel
 
-### Technische Hinweise
+#### Technische Hinweise
 
-### Vorbedingung
+#### Vorbedingung
 
 
-### Ablauf 
+#### Ablauf 
 <div>{% include AFStationaer.svg %}</div>
 
 
-### Relevante Profile
+#### Relevante Profile
 - [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)
 - [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
 - TBD
 
-### Relevante Invarianten
+#### Relevante Invarianten
 
-### Mögliche Notifications
+#### Mögliche Notifications
 
-#### SubscriptionTopic: neue VAE wurde angefragt
+##### SubscriptionTopic: neue VAE wurde angefragt
 Die SV möchte benachrichtigt werden, wenn ein neuer VAERequest für sie bereitgestellt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-neueVAE.html) definiert.
 
-#### SubscriptionTopic: VAE wurde abgelehnt
+##### SubscriptionTopic: VAE wurde abgelehnt
 Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-VAEabgelehnt.json.html) definiert.
 
-#### Tabellarische Übersicht
+##### Tabellarische Übersicht
 
 <table class="notification-table">
   <tr>

@@ -1,9 +1,9 @@
 {% include styleheader.md %}
 
-## Anwendungsfall 3: Ambulanter Fall
+### Standardablauf ambulanter Fall
 In Arbeit :)
 
-### Betroffene Akteure
+#### Betroffene Akteure
 
 | Akteur            |  |
 |-------------------|--------------:|
@@ -12,7 +12,7 @@ In Arbeit :)
 | SV (Sozialversicherung)      |  ✅ / ❌  |
 | Bund            |  ✅ / ❌  |
 
-### Betroffene Behandlungsarten
+#### Betroffene Behandlungsarten
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -20,26 +20,27 @@ In Arbeit :)
 | Stationär |  ✅/❌ |
 
 
-### Beschreibung
+#### Beschreibung
 
-### Beispiel
+#### Beispiel
 
-### Technische Hinweise
+#### Vorbedingung
 
-### Vorbedingung
+#### Nachbedingung
 
+#### Ablauf 
 
-### Ablauf 
+#### Technische Hinweise
 
-### Relevante Profile
+#### Relevante Profile
 
-### Relevante Invarianten
+#### Relevante Invarianten
 
-### Mögliche Notifications
+#### Mögliche Notifications
 
-#### SubscriptionTopic: X 
+##### SubscriptionTopic: X 
 
-#### Tabellarische Übersicht
+##### Tabellarische Übersicht
 
 <table class="table-responsive">
   <tr>
