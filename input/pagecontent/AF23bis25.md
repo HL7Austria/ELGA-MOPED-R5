@@ -29,6 +29,7 @@ Der Patient wird entlassen und es ist bereits die codierte ICD-10 Hauptdiagnose 
 ### Technische Hinweise
 Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt mit discharged).
 
+### Vorbedingung
 
 ### Ablauf 
 
@@ -72,6 +73,8 @@ Pathologischer Befund bzw. Laborergebnisse liegen erst einige Zeit nach der Entl
 
 ### Technische Hinweise
 Abgerechnet kann erst werden, wenn die Hauptdiagnose vorhanden ist, und somit der Encounter.status auf "completed" gesetzt wurde.
+
+### Vorbedingung
 
 ### Ablauf 
 

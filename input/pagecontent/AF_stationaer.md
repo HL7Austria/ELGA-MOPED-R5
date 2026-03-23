@@ -1,46 +1,3 @@
-{% include styleheader.md %}
-## Anwendungsfälle
-In diesem Abschnitt werden typische und exemplarische Abläufe im Rahmen des MOPED-Prozesses beschrieben. Die Anwendungsszenarien dienen der Veranschaulichung konkreter Anwendungsfälle auf Basis der in diesem Leitfaden definierten Rollen, Profile und Operationen. Die Szenarien zeigen sowohl durchgängige End-to-End-Prozesse als auch fokussierte Teilprozesse. Jedes Beispiel illustriert, wie die in MOPED definierten Schnittstellen in realen Fällen eingesetzt werden können. Dabei wird besonderer Wert auf die fachliche Nachvollziehbarkeit sowie die technische Umsetzung (Ressourcen, Statusübergänge, Operations) gelegt.
-
-Ziel dieser Szenarien ist es ein gemeinsames Verständnis über typische Abläufe und deren Abbildung im FHIR-Moped-Kontext zu vermitteln.
-
-### Liste der Anwendungsfälle
-
-Die folgenden Anwendungsfälle werden beschrieben:
-
-- [Überblick & Sunshine Case ✅](anwendungsfaelle.html)
-- [ANWF 1 - Planaufnahme 🔄](AF1.html)
-- [ANWF 2 - Stationäre Aufnahme ✅](AF2.html) 
-- [ANWF 3 - Ambulante Aufnahme 🔄](AF3.html)
-- [ANWF 4,5 - Fallartwechsel 🔄](AF4u5.html)
-- [ANWF 6 - Mehrmalige Aufnahme an einem Tag 🔄](AF6.html)
-- [ANWF 7 - Behandlungsabbruch 🔄](AF7.html)
-- [ANWF 8,9,47 - Stammdatenabgleich 🔄](AF8u9u47.html)
-- [ANWF 10 - Klassenwechsel ✅](AF10.html)
-- [ANWF 11 - Versicherungswechsel 🔄](AF11.html)
-- [ANWF 12,13,15,35-37 - Ausländerverrechnung und Regress 🔄](AF12.html)
-- [ANWF 14 - Selbstzahler ✅](AF14.html)
-- [ANWF 17 - Zwischenbetriebliche Leistungserbringung ✅](AF17.html)
-- [ANWF 18 - Transfer 🔄](AF18.html)
-- [ANWF 19 - Interne Verlegung ✅](AF19.html)
-- [ANWF 20 - Urlaub ✅](AF20.html)
-- [ANWF 21,22 - Neugeborene 🔄](AF21u22.html)
-- [ANWF 23-25 - Entlassung & Hauptdiagnose ✅](AF23bis25.html)
-- [ANWF 26 - Überlieger 🔄](AF26.html)
-- [ANWF 27 - Leistungen ohne Abrechnungsrelevanz ✅](AF27.html)
-- [ANWF 28-32 - SV Kostenübernahmevariationen 🔄](AF28bis32.html)
-- [ANWF 33-34 - Kostenmeldungen? 🔄](AF33u34.html)
-- [ANWF 38-44 - LKF Daten 🔄](AF38bis44.html)
-- [ANWF 45 - Jahresmeldung 🔄](AF45.html)
-- [ANWF 46 - VDAS Rückmeldung (Patient verstorben) 🔄](AF46.html)
-- [ANWF 48 - Mehrere aktive Fälle in MOPED 🔄](AF48.html)
-- [ANWF 49 - Aufrollung nach Speicherfrist 🔄](AF49.html)
-- [ANWF 50 - Urgenz 🔄](AF50.html)
-- [ANWF 51-52 - Asylierung 🔄](AF51u52.html)
-- [ANWF 53 - Intensivaufenthalt 🔄](AF53.html)
-- [ANWF 54 - Stammdatenänderung 🔄](AF54.html)
-
-
 
 ## Anwendungsfall: Standardablauf im Sunshine Case
 
@@ -67,6 +24,8 @@ Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Au
 ### Beispiel
 
 ### Technische Hinweise
+
+### Vorbedingung
 
 
 ### Ablauf 
@@ -125,5 +84,3 @@ Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das z
     <td>!= #00 AND != #19</td>
   </tr>
 </table>
-
-

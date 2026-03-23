@@ -50,6 +50,7 @@ Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt e
 ### Technische Hinweise
 Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Profilen mit unterschiedlichen Subtypen. In der Verlängerung muss verpflichtend die initiale VAE verlinkt werden.
 
+### Vorbedingung
 
 ### Ablauf 
 <pre class="mermaid">
@@ -168,6 +169,8 @@ Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH
 ### Technische Hinweise
 - VAERequest und Response werden in FHIR durch Profile der Claim Ressource abgebildet.
 - Kommentare zum jeweiligen VAE Ablehnungsgrund können in ClaimResponse.processNote.text festgehalten werden.
+
+### Vorbedingung
 
 ### Ablauf 
 <pre class="mermaid">
@@ -297,6 +300,8 @@ In Arbeit :)
 
 ### Technische Hinweise
 
+### Vorbedingung
+
 
 ### Ablauf 
 <pre class="mermaid">
@@ -391,6 +396,8 @@ In Arbeit :)
 
 ### Technische Hinweise
 
+### Vorbedingung
+
 
 ### Ablauf 
 <pre class="mermaid">
@@ -484,6 +491,8 @@ In Arbeit :)
 ### Beispiel
 
 ### Technische Hinweise
+
+### Vorbedingung
 
 
 ### Ablauf 
