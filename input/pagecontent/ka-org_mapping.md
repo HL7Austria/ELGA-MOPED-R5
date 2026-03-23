@@ -2645,7 +2645,7 @@ dann nicht zwingend</td>
         <td>EVSNR</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2658,7 +2658,7 @@ dann nicht zwingend</td>
         <td>EZUNA</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -2671,7 +2671,7 @@ dann nicht zwingend</td>
         <td>EVONA</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -2684,7 +2684,7 @@ dann nicht zwingend</td>
         <td>EGESL</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -2697,7 +2697,7 @@ dann nicht zwingend</td>
         <td>EGEBD</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKHActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
@@ -2709,7 +2709,7 @@ dann nicht zwingend</td>
         <td>Staatenschlüssel</td>
         <td>ESTAAT</td>
         <td>X</td>
-        <td></td>
+        <td>X</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2719,11 +2719,13 @@ dann nicht zwingend</td>
         <td>/</td>
     </tr>
     <tr>
-        <td>Instituionscode des zuständen Trägers</td>
+        <td>Institutionscode des zuständen Trägers</td>
         <td>EIC</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Wenn EFORM mit „ANFO“ belegt ist, ist entweder EIC oder
+EAKRO zwingend zu belegen (Belegung beider Felder
+ebenso möglich).</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2736,7 +2738,9 @@ dann nicht zwingend</td>
         <td>EAKRO</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Wenn EFORM mit „ANFO“ belegt ist, ist entweder EIC oder
+EAKRO zwingend zu belegen (Belegung beider Felder
+ebenso möglich).</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2749,7 +2753,7 @@ dann nicht zwingend</td>
         <td>EKANR</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Wenn EFORM EKVK ist</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2762,7 +2766,7 @@ dann nicht zwingend</td>
         <td>EAEND</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2774,7 +2778,7 @@ dann nicht zwingend</td>
         <td>Art der Anspruchsbescheinigung</td>
         <td>EFORM</td>
         <td>X</td>
-        <td></td>
+        <td>X</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2788,7 +2792,7 @@ dann nicht zwingend</td>
         <td>EABEG</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>*Nicht zu befüllen wenn EFORM mit „ANFO“ belegt ist.</td>
         <td></td>
         <td></td>
         <td></td>
@@ -2801,7 +2805,7 @@ dann nicht zwingend</td>
         <td>ESTADT</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
+        <td>* Wenn EFORM mit "ANFO" belegt ist</td>
         <td></td>
         <td></td>
         <td></td>

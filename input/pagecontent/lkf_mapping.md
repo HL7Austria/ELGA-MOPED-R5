@@ -966,8 +966,8 @@ Diagnosen zu befüllen</td>
     </tr>
     <tr>
         <td>Funktionscode/Fachgebiet leistungserbringend</td>
-        <td>X[Inv.]*</td>
-        <td>X[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
         <td></td>
         <td>*Für alle Leistungen außer externe zu befüllen</td>
         <td>MopedKHActor</td>
@@ -979,8 +979,8 @@ Diagnosen zu befüllen</td>
     </tr>
     <tr>
         <td>Krankenanstaltennummer leistungserbringend</td>
-        <td>X[Inv.]*</td>
-        <td>X[Inv.]*</td>
+        <td>O[Inv.]*</td>
+        <td>O[Inv.]*</td>
         <td></td>
         <td>*Nur befüllt falls extern erbrachte Leistung</td>
         <td>MopedKHActor</td>
