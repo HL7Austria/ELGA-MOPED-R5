@@ -61,7 +61,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * supportingInfo ^slicing.discriminator.path = "category"
 * supportingInfo ^slicing.ordered = false
 * supportingInfo.code.coding from VAESupportingInformationCategoryVS
-* supportingInfo contains Sonderklasse 0.. and VerdachtFremdverschulden 1..1 and Verlaengerungstage 0..1
+* supportingInfo contains Sonderklasse 1.. and VerdachtFremdverschulden 1..1 and Verlaengerungstage 0..1
 * supportingInfo[Sonderklasse] ^short = "KaOrg: Allgemeine Gebührenklasse/Sonderklasse"
 * supportingInfo[Sonderklasse].category = ClaimSupportingInformationCategoryCS#KLAS
 * insert ShallPopulateObligation(supportingInfo[Sonderklasse].category, MopedKHActor)
