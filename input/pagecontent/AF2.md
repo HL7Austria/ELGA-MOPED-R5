@@ -1,8 +1,8 @@
 {% include styleheader.md %}
 
-## Anwendungsfall 2: stationäre Aufnahme
+### Anwendungsfall 2: stationäre Aufnahme
 
-### Betroffene Akteure
+#### Betroffene Akteure
 
 | Akteur            |  |
 |-------------------|--------------:|
@@ -11,7 +11,7 @@
 | SV (Sozialversicherung)      |  ✅ |
 | Bund            |  ✅ |
 
-### Betroffene Behandlungsarten
+#### Betroffene Behandlungsarten
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -19,19 +19,25 @@
 | Stationär |  ✅ |
 
 
-### Beschreibung
+#### Beschreibung
 Der Patient wird stationär aufgenommen und die Aufnahme wird so früh wie möglich in Moped bereitgestellt.
 
-### Beispiel
+#### Beispiel
 
-### Technische Hinweise
-Der Patient wird stationär in das KH aufgenommen und ein Aufenthalt (Encounter) wird angelegt. In diesem Zuge wird auch gleich die Station auf die er aufgenommen wird (TransferEncounter) und die Aufnahmediagnose mit übermittelt. Die zuständige Versicherung kann in Form einer Coverage direkt zur Verfügung gestellt werden, sofern diese bereits bekannt ist. Dies ist aber bei der Aufnahme nicht verpflichtend und kann später durch $update eingebracht werden.
 
-### Ablauf 
+#### Vorbedingung
+
+#### Nachbedingung
+
+#### Ablauf 
 
 <div>{% include AF2.svg %}</div>
 
-### Relevante Profile
+#### Technische Hinweise
+Der Patient wird stationär in das KH aufgenommen und ein Aufenthalt (Encounter) wird angelegt. In diesem Zuge wird auch gleich die Station auf die er aufgenommen wird (TransferEncounter) und die Aufnahmediagnose mit übermittelt. Die zuständige Versicherung kann in Form einer Coverage direkt zur Verfügung gestellt werden, sofern diese bereits bekannt ist. Dies ist aber bei der Aufnahme nicht verpflichtend und kann später durch $update eingebracht werden.
+
+
+#### Relevante Profile
 - [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)
 - [Patientenressource](TBD)
 - [Encounter Stationär](StructureDefinition-MopedEncounterS.html)
@@ -39,13 +45,13 @@ Der Patient wird stationär in das KH aufgenommen und ein Aufenthalt (Encounter)
 - [Aufnahmediagnose](StructureDefinition-MopedCondition.html)
 - optional: [Coverage](StructureDefinition-MopedCoverage.html) oder [Selbstzahler Coverage](TBD)
 
-### Relevante Invarianten
+#### Relevante Invarianten
 
-### Mögliche Notifications
+#### Mögliche Notifications
 
-#### SubscriptionTopic: X 
+##### SubscriptionTopic: X 
 
-#### Tabellarische Übersicht
+##### Tabellarische Übersicht
 
 <table class="table-responsive">
   <tr>
