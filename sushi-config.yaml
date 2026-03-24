@@ -110,7 +110,7 @@ pages:
   AF_moped_fall_abrechnung.md:
     title: Moped Fall - Abrechnung
   AF_moped_fall_ablehnung_genehmigung.md:
-    title: Moped Fall - Ablehnung/Genehmigung
+    title: Moped Fall - Genehmigung/Ablehnung
   AF_moped_fall_kostenmeldung.md:
     title: Moped Fall - Kostenmeldung
   AF_moped_fall_jahres_quartals_meldung.md:
@@ -167,7 +167,7 @@ menu:
     Moped Fall - Entlassung: AF_moped_fall_entlassung.html
     Moped Fall - Versichertenanspruchserklärung: AF_moped_fall_vae.html
     Moped Fall - Abrechnung: AF_moped_fall_abrechnung.html
-    Moped Fall - Ablehnung/Genehmigung: AF_moped_fall_ablehnung_genehmigung.html
+    Moped Fall - Genehmigung/Ablehnung: AF_moped_fall_ablehnung_genehmigung.html
     Moped Fall - Kostenmeldung: AF_moped_fall_kostenmeldung.html
     Moped Fall - Jahres-/Quartalsmeldung: AF_moped_fall_jahres_quartals_meldung.html
     Moped Fall - Prozessübergreifend: AF_moped_fall_prozessuebergreifend.html
