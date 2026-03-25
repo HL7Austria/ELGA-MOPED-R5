@@ -38,11 +38,11 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n       Moped       " #c5f7ba
+box "\n                                   Moped                                   " #c5f7ba
   participant MP as "Moped"
 end box
 
-box "\n        SV         " #bac4f7
+box "\n                                      SV                                       " #bac4f7
   actor SV as "SV"
 end box
 

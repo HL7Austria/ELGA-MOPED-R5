@@ -38,13 +38,15 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n       KH (Herz-Jesu Krankenhaus)       " #f5e599
+box "\n                                   Moped                                   " #c5f7ba
+  participant MP as "Moped"
+end box
+
+box "\n                     KH (Herz-Jesu Krankenhaus)                     " #f5e599
   actor KH as "KH (Herz-Jesu Krankenhaus)"
 end box
 
-box "\n           Moped           " #c5f7ba
-  participant MP as "Moped"
-end box
+
 
 
 autonumber
