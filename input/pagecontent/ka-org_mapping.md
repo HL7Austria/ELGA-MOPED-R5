@@ -531,6 +531,7 @@ verfügbar.
         <td>/</td>
     </tr>
     <tr>
+        <td>Funktionssubcode der Abteilung lt. LKF</td>
         <td>FKRASU</td>
         <td>MopedKHActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
