@@ -44,3 +44,5 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 #### Aufnahme - Neugeborenes
 
 #### Aufnahme - Durch Überweisung
+
+#### Aufnahme - Durch Transfer
