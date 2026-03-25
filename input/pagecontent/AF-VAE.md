@@ -29,12 +29,6 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 - [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
 - [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
 
-### Organisatorische Hinweise
-#### Keine Quartalszusage für ambulante Fälle
-Zukünftig gibt es anstatt einer Quartalszusage pro [Moped Fall](TBD-LINK-BEGRIFFSDEFINITION) je eine Anfrage und eine Rückmeldung.
-
-#### Fristende und Verlängerung für stationäre Fälle
-Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt es eine Befristung, so wird ein Enddatum angegeben. Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum so muss das KH um eine Verlängerung ansuchen. In der Verlängerung wird das Enddatum als Verlängerungsdatum angegeben und zusätzlich auf die initiale Anfrage verwiesen. Die positive VAE für den ursprünglichen Zeitraum bleibt weiterhin gültig (außer sie wird aus anderen Gründen nachträglich storniert). Die VAE kann nach Ablauf der Frist der letzten positiven VAE immer wieder verlängert werden solange sich der Patient immer noch in Behandlung befindet. Gibt es kein Fristende so kann die VAE auch nicht verlängert werden.
 
 ### Ablauf - Beispiele und mit Kontext
 
@@ -100,7 +94,7 @@ TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird
 <div>{% include antworten-in-arbeit-bewilligt.svg %}</div>
 
 #### Anfrage für Verlängerung
-Eine zuvor zugesagte VAE mit Fristende wird angefragt um Verlängerung.
+Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum (Fristende) der bereits bewilligten VAE so muss das KH um eine Verlängerung ansuchen. Gibt es keine bewilligte VAE mit Fristende so kann die VAE auch nicht verlängert werden.
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -123,6 +117,7 @@ Die Verlängerungs-Anfrage wird entweder genehmigt oder abgelehnt.
 - VAERequest und Response werden in FHIR durch Profile der Claim Ressource abgebildet.
 - Kommentare zum jeweiligen VAE Ablehnungsgrund können in ClaimResponse.processNote.text festgehalten werden.
 - Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Profilen mit unterschiedlichen Subtypen. In der Verlängerung muss verpflichtend die initiale VAE verlinkt werden.
+- In der Anfrage zur VAE-Verlängerung wird das Enddatum als Verlängerungsdatum angegeben und zusätzlich auf die initiale Anfrage verwiesen. Die positive VAE für den ursprünglichen Zeitraum bleibt weiterhin gültig (außer sie wird aus anderen Gründen nachträglich storniert). Die VAE kann nach Ablauf der Frist der letzten positiven VAE immer wieder verlängert werden solange sich der Patient immer noch in Behandlung befindet.
 
 #### Relevante Invarianten
 - Es kann zu keinem Zeitpunkt zwei aktive initiale VAEs an den selben Träger geben.
