@@ -49,17 +49,20 @@ end box
 
 autonumber
 
+autonumber
+
 note right of MP
 Zustand:
 - Kein existierender Moped Fall mit dieser Aufnahmezahl
 end note
 
 KH ->> MP: $aufnehmen
-Note over KH: Aufnahme-Bundle wird gesendet\n-Patient mit identifizierendem Profil\n   -Kein bPK\n   -Klarname\n   -Geburtsdatum\n   -Adresse\n-alle weiteren Aufnahme-Ressourcen
+Note over KH: Aufnahme-Bundle wird gesendet\n-Selbstzahlerinformation als Coverage\n-kein Hauptversicherter\n-alle weiteren Aufnahme-Ressourcen
 
 note right of MP
 Zustand:
 - Moped Fall angelegt
+- Aufnahme- und Selbstzahlerinformation vollständig
 end note
 
 @enduml

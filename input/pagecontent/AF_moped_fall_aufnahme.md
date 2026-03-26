@@ -66,6 +66,17 @@ Sind die Versicherungsdetails bereits bei der Aufnahme bekannt, können diese di
 
 <div>{% include aufnehmen-versicherungsdetails.svg %}</div>
 
+#### Aufnahme - Selbstzahler
+##### Beschreibung
+Ist bereits bei der Aufnahme bekannt, dass der Patient ein Selbstzahler ist, kann diese Information direkt in $aufnehmen eingebracht werden. Hinweis: auch die Markierung eines Falls als "Selbstzahler" wird in diesem Sinn als Versicherungsdetails verstanden.
+
+| Behandlungsart|  |
+|-----------|----:|
+| Ambulant  |  ✅ |
+| Stationär |  ✅ |
+
+<div>{% include aufnehmen-selbstzahler.svg %}</div>
+
 #### Aufnahme - Versicherungsdetails noch nicht bekannt
 ##### Beschreibung
 Die Versicherungsdetails sind bei der Aufnahme optional. Wenn sie erst nach Ausführen von $aufnehmen bekannt sind, können sie mit Hilfe von einem anschließenden $update nachgereicht werden. Hinweis: auch die Markierung eines Falls als "Selbstzahler" wird in diesem Sinn als Versicherungsdetails verstanden.
@@ -76,11 +87,12 @@ Die Versicherungsdetails sind bei der Aufnahme optional. Wenn sie erst nach Ausf
 | Stationär |  ✅ |
 
 <div>{% include aufnehmen-keine-versicherungsdetails.svg %}</div>
-<div>{% include update-versicherungsdetails-nachmelden %}</div>
+<div>{% include update-versicherungsdetails-nachmelden.svg %}</div>
 
 #### Aufnahme - Neugeborenes
 ##### Beschreibung
 TBD - ein Neugeborenes hat oft noch kein bPK und keine Versicherungsdaten. Hat es bereits einen fixen Vornamen (ich denke, da hat man mehrere Tage Zeit)
+
 | Behandlungsart|  |
 |-----------|----:|
 | Ambulant  |  ✅ |
@@ -97,6 +109,8 @@ Kommt ein Patient durch eine Überweisung in das Krankenhaus, so muss der Überw
 | Stationär |  ✅ |
 
 TBD: wird die überweisende Organization auch für ambulante Fälle mitgegeben?
+
+<div>{% include aufnehmen-ueberweisung.svg %}</div>
 
 
 #### Aufnahme - Durch Transfer
