@@ -15,11 +15,10 @@ Title: "MOPED Procedure"
 * insert MopedHandleObligation(subject)
 //performer.actor kann entweder das Feld "Funktionscode/Fachgebiet leistungserbringend" oder "Krankenanstaltennummer leistungserbringend" darstellen je nach Profil.
 //performer.actor ist verpflichtend wenn der performer verwendet wird daher können wir es nicht auf actor und onBehalfOf aufteilen
-//performer.actor ist aber nicht befüllbar, wenn die Leistung unabhängig von der leistungserbringenden Abteilung bzw. unabhängig von der Verlegung innerhalb dieser KA abgerechnet wird (betrifft die Leistungen spezieller Leistungsbereiche L01)
 //"Krankenanstaltennummer leistungserbringend" wird nur befüllt falls es sich um eine extern erbrachte Leistung handelt
 * performer.actor ^short = "LKF: Funktionscode/Fachgebiet leistungserbringend; LKF: Krankenanstaltennummer leistungserbringend; Referenz auf die Abteilung mit Funktionscode/Fachgebiet leistungserbringend oder die Krankenanstalt mit Krankenanstaltennummer leistungserbringend bei extern erbrachten Leistungen"
 * performer.actor only Reference(MopedKHOrganisationseinheit or KHOrganization)
-* performer.actor 0..1
+* performer.actor 1..1
 * insert legacyMapping(performer.actor, LKF, [[Funktionscode/Fachgebiet leistungserbringend]])
 * insert legacyMapping(performer.actor, LKF, [[Krankenanstaltennummer leistungserbringend]])
 * insert ShallPopulateObligation(performer.actor, MopedKHActor)
