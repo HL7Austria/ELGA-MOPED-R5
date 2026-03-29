@@ -12,10 +12,8 @@ Usage: #example
 * extension[=].extension[=].valueCoding = SpezielleOrganisationsformenCS#A
 * extension[=].extension[+].url = "KostenstellenJahr"
 * extension[=].extension[=].valueDate = "2024"
-* identifier[+].value = "131180"
+* identifier[+].value = "13118000"
 * identifier[=].system = "http://example.org/lkf-system/funktionscode"
-* identifier[+].value = "00"
-* identifier[=].system = "http://example.org/lkf-system/funktionssubcode"
 * providedBy = Reference(Organization/OrganizationHerzJesuKrankenhaus)
 * type = http://terminology.hl7.org/CodeSystem/service-type#361
 * category = http://terminology.hl7.org/CodeSystem/service-category#35
