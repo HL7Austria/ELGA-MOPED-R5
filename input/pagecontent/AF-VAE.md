@@ -13,24 +13,14 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 | SV (Sozialversicherung)      |  ✅  |
 | Bund            |  ❌  |
 
-### Ablauf 
+### Ablauf - generisch
 #### VAE Anfrage (generisch)
 <div>{% include anfragen.svg %}</div>
 
 #### VAE Antwort (generisch)
 <div>{% include antworten.svg %}</div>
 
-### Relevante Profile
-- [Coverage](StructureDefinition-MopedCoverage.html)
-- [VAERequestInitial](StructureDefinition-MopedVAERequestInitial.html)
-- [VAERequestVerlaengerung](StructureDefinition-MopedVAERequestVerlaengerung.html)
-- [VAEResponse](StructureDefinition-MopedVAEResponse.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
-- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
-- [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
-
-
-### Ablauf - Beispiele und mit Kontext
+### Ablauf - Beispiele zur Anwendung
 
 #### Positive VAE
 
@@ -73,7 +63,7 @@ Aufgrund der eingelangten Aufnahme-/Ereignisanzeige erfolgt seitens SV eine nega
 
 #### VAE in Arbeit
 ##### Beschreibung
-TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird. Der Eingang der VAE wird bestätigt, eine Zu- oder Absage kann zu dem Zeitpunkt allerdings nicht gegeneb werden und der Status wird auf "in Arbeit" gesetzt.
+TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird. Der Eingang der VAE wird bestätigt, eine Zu- oder Absage kann zu dem Zeitpunkt allerdings nicht gegeben werden und der Status wird auf "in Arbeit" gesetzt.
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -112,6 +102,31 @@ Die Verlängerungs-Anfrage wird entweder genehmigt oder abgelehnt.
 | Stationär |  ✅ |
 
 <div>{% include antworten-verlaengerung.svg %}</div>
+
+#### VAE doch positiv
+TBD
+
+| Behandlungsart|  |
+|-----------|----:|
+| Ambulant  |  ✅ |
+| Stationär |  ✅ |
+
+#### VAE doch negativ
+TBD
+
+| Behandlungsart|  |
+|-----------|----:|
+| Ambulant  |  ✅ |
+| Stationär |  ✅ |
+
+### Relevante Profile
+- [Coverage](StructureDefinition-MopedCoverage.html)
+- [VAERequestInitial](StructureDefinition-MopedVAERequestInitial.html)
+- [VAERequestVerlaengerung](StructureDefinition-MopedVAERequestVerlaengerung.html)
+- [VAEResponse](StructureDefinition-MopedVAEResponse.html)
+- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
+- [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
 
 ### Technische Hinweise
 - VAERequest und Response werden in FHIR durch Profile der Claim Ressource abgebildet.
