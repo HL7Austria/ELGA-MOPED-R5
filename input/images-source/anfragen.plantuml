@@ -71,7 +71,6 @@ end note
 KH ->> MP: $anfragen (POST VAERequest)
 note over KH
 VAE-Anfrage wird gesendet
-- Claim.subType = #VAEREQV "VAE Verlängerung"
 end note
 
 note right of MP #b2bfc2
