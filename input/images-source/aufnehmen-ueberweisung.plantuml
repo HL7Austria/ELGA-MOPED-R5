@@ -51,15 +51,21 @@ autonumber
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-- Kein existierender Moped Fall mit dieser Aufnahmezahl
+- Kein existierender Moped Fall mit
+  dieser Schlüsselkombination
 end note
 
-KH ->> MP: $aufnehmen
-Note over KH: Aufnahme-Bundle wird gesendet\n-Überweisende Organisation als Organization\n-alle weiteren Aufnahme-Ressourcen
+KH ->> MP: POST $aufnehmen
 
-note right of MP
+note over KH
+Aufnahme-Bundle wird gesendet
+- Überweisender GDA als Organization
+- alle weiteren Aufnahme-Ressourcen
+end note
+
+note right of MP #b2bfc2
 Zustand:
 - Moped Fall angelegt
 end note

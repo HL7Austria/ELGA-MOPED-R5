@@ -49,15 +49,24 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-- Kein existierender Moped Fall mit dieser Aufnahmezahl
+- Kein existierender Moped Fall mit
+  dieser Schlüsselkombination
 end note
 
-KH ->> MP: $aufnehmen
-Note over KH: Aufnahme-Bundle wird gesendet\n-Patient mit identifizierendem Profil\n   -Kein bPK\n   -Klarname\n   -Geburtsdatum\n   -Adresse\n-alle weiteren Aufnahme-Ressourcen
+KH ->> MP: POST $aufnehmen
 
-note right of MP
+note over KH
+Aufnahme-Bundle wird gesendet
+- Patient mit identifizierendem Profil
+  - Kein bPK
+  - Klarname
+  - Adresse
+- alle weiteren Aufnahme-Ressourcen
+end note
+
+note right of MP #b2bfc2
 Zustand:
 - Moped Fall angelegt
 end note

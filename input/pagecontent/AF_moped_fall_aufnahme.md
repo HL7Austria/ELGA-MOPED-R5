@@ -1,7 +1,5 @@
 {% include styleheader.md %}
 
-
-## Moped Fall - Aufnahme
 Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Moped-Plattform im Teilprozess "Aufnahme". Zunächst werden die allgemeinen Interaktionsmöglichkeiten dargestellt, anschließend werden diese durch Beispiele konkretisiert und im Kontext einer spezifischen Anwendung dargestellt.
 
 ### Betroffene Akteure
@@ -13,25 +11,11 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 | SV (Sozialversicherung)      |  ❌  |
 | Bund            |  ❌  |
 
-### Ablauf 
+### Ablauf - generisch
 #### Aufnahme (generisch)
 <div>{% include aufnehmen.svg %}</div>
 
-### Relevante Profile
-- [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)
-- [Patientenressource](TBD)
-- [Encounter Stationär](StructureDefinition-MopedEncounterS.html)
-- [Encounter Ambulant](TBD)
-- [TransferEncounter Stationär](StructureDefinition-MopedTransferEncounterS.html)
-- [TransferEncounter Ambulant](TBD)
-- [TransferEncounter Intensiv](TBD)
-- [Aufnahmediagnose](StructureDefinition-MopedCondition.html)
-- optional: [Coverage](StructureDefinition-MopedCoverage.html) oder [Selbstzahler Coverage](TBD)
-- optional: [RelatedPerson Hauptversicherter](TBD)
-- optional: [Überweisende Organization](TBD)
-
-
-### Ablauf - Beispiele und mit Kontext
+### Ablauf - Beispiele zur Anwendung
 
 #### Aufnahme - bPK des Patienten bekannt
 ##### Beschreibung
@@ -101,7 +85,7 @@ TBD - ein Neugeborenes hat oft noch kein bPK und keine Versicherungsdaten. Hat e
 
 #### Aufnahme - Durch Überweisung
 ##### Beschreibung
-Kommt ein Patient durch eine Überweisung in das Krankenhaus, so muss der Überweiser als mit angegeben werden. GDAs aus Österreich sind in Moped als Stammdaten hinterlegt und können referenziert werden. Für ausländische GDAs muss eine neue Organization-Ressource mit den Details angelegt werden.
+Kommt ein Patient durch eine Überweisung in das Krankenhaus, so muss der Überweiser mit angegeben werden. GDAs aus Österreich sind in Moped als Stammdaten hinterlegt und können referenziert werden. Für ausländische GDAs muss eine neue Organization-Ressource mit den Details mitgeliefert werden.
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -119,7 +103,24 @@ TBD: bei Transfer muss ein bestimmtes Flag gesetzt werden
 
 | Behandlungsart|  |
 |-----------|----:|
-| Ambulant  | ❓ |
+| Ambulant  | ❌ |
 | Stationär |  ✅ |
 
-TBD: ist Transfer auch für ambulante Fälle relevant?
+<div>{% include aufnehmen-transfer.svg %}</div>
+
+
+### Relevante Profile
+- [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [Patientenressource](TBD)
+- [Encounter Stationär](StructureDefinition-MopedEncounterS.html)
+- [Encounter Ambulant](TBD)
+- [TransferEncounter Stationär](StructureDefinition-MopedTransferEncounterS.html)
+- [TransferEncounter Ambulant](TBD)
+- [TransferEncounter Intensiv](TBD)
+- [Aufnahmediagnose](StructureDefinition-MopedCondition.html)
+- optional: [Coverage](StructureDefinition-MopedCoverage.html) oder [Selbstzahler Coverage](TBD)
+- optional: [RelatedPerson Hauptversicherter](TBD)
+- optional: [Überweisende Organization](TBD)
+
+### Technische Hinweise
+TBD: Begriffsdefinition Schlüsselkombination

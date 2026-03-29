@@ -51,15 +51,21 @@ autonumber
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-- Kein existierender Moped Fall mit dieser Aufnahmezahl
+- Kein existierender Moped Fall mit
+  dieser Schlüsselkombination
 end note
 
-KH ->> MP: $aufnehmen
-Note over KH: Aufnahme-Bundle wird gesendet\n-Selbstzahlerinformation als Coverage\n-kein Hauptversicherter\n-alle weiteren Aufnahme-Ressourcen
+KH ->> MP: POST $aufnehmen
+note over KH
+Aufnahme-Bundle wird gesendet
+- Selbstzahlerinformation als Coverage
+- kein Hauptversicherter
+- alle weiteren Aufnahme-Ressourcen
+end note
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
 - Moped Fall angelegt
 - Aufnahme- und Selbstzahlerinformation vollständig

@@ -49,15 +49,20 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
 - Moped Fall angelegt
 end note
 
-KH ->> MP: $update
-Note over KH: Update-Bundle wird gesendet\n-Versichertenanspruch (Coverage)\n-ggf. Hauptversicherter (RelatedPerson)
+KH ->> MP: POST $update
 
-note right of MP
+note over KH
+Update-Bundle wird gesendet
+- Versichertenanspruch (Coverage)
+- ggf. Hauptversicherter (RelatedPerson)
+end note
+
+note right of MP #b2bfc2
 Zustand:
 - Aufnahme- und Versicherungsdaten vollständig
 end note

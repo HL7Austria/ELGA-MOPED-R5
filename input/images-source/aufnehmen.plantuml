@@ -60,15 +60,25 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-- Kein existierender Moped Fall mit dieser Aufnahmezahl
+- Kein existierender Moped Fall mit
+  dieser Schlüsselkombination
 end note
 
-KH ->> MP: $aufnehmen
-Note over KH: Aufnahme-Bundle wird gesendet\n- Patient\n- Encounter\n- TransferEncounter (aufnehmende Station)\n- Aufnahmediagnose\n- ggf. Verischerungsdaten inkl. Hauptversicherter\n- ggf. überweisend Organisation
+KH ->> MP: POST $aufnehmen
 
-note right of MP
+note over KH
+Aufnahme-Bundle wird gesendet
+- Patient
+- Encounter
+- TransferEncounter (aufnehmende Station)
+- Aufnahmediagnose
+- ggf. Verischerungsdaten inkl. Hauptversicherter
+- ggf. überweisend Organisation
+end note
+
+note right of MP #b2bfc2
 Zustand:
 - Moped Fall angelegt
 end note

@@ -51,17 +51,18 @@ autonumber
 
 note right of MP #b2bfc2
 Zustand:
-- Kein existierender Moped Fall mit
+- Kein existierender Moped Fall mit 
   dieser Schlüsselkombination
 end note
 
 KH ->> MP: POST $aufnehmen
+
 note over KH
 Aufnahme-Bundle wird gesendet
-- Patient mit bPK Profil (vbPK-GH, vbPK-AS, vbPK-SV)
-  - Kein Name
-  - Keine Adresse
-- alle weiteren Aufnahme-Ressourcen
+- Encounter.admission.extension:aufnahmeart = #T "Transfer von einem 
+  anderen Krankenhaus in den allgemein stationären Bereich 
+  inkl. Intensiveinheiten"
+- alle weiteren Aufnahme-Ressource
 end note
 
 note right of MP #b2bfc2
