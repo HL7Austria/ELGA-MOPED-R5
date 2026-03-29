@@ -59,4 +59,146 @@ width: 100%;}
   z-index: 4;
 }
 
+.tabs {
+  position: relative;
+  min-height: 210px;
+  clear: both;
+  margin: 35px 0 25px;
+  background: #ffffff;
+}
+
+.tab {
+  float: left;
+}
+
+.tab label {
+  background: #eeeeee;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  margin-left: -1px;
+  position: relative;
+  left: 1px;
+  top: -29px;
+  -webkit-transition: background-color .17s linear;
+  transition: background-color .17s linear;
+}
+
+.tab input[id^="tab-"] {
+  display: none;
+}
+
+.content-in-tab {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  -webkit-transition: opacity .6s linear;
+  transition: opacity .6s linear;
+  opacity: 0;
+}
+
+[type=radio]:checked ~ label {
+  background: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  z-index: 2;
+}
+
+[type=radio]:checked ~ label ~ .content-in-tab {
+  z-index: 1;
+  opacity: 1;
+}
+
+pre.json,
+pre.xml {
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  resize: none;
+}
+
+/* NEW utility classes for request panels */
+.request-panel {
+  background: #f8f9fa;
+  padding: 1.2rem;
+  margin: 0.5rem 0;
+  border-radius: 0 4px 4px 0;
+  border-left: 4px solid #007bff; /* default blue */
+}
+
+.request-panel--success {
+  border-left-color: #28a745; /* green variant */
+}
+
+.request-meta {
+  font-size: 0.9em;
+  color: #666666;
+  margin-top: 0.5rem;
+}
+
+.request-code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+  font-size: 0.95em;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.request-method-post {
+  color: #d63384;
+  font-weight: bold;
+}
+
+.request-method-get {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.request-url {
+  background: #e7f3ff;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  color: #0066cc;
+}
+
+.request-header {
+  background: #f1f3f4;
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+}
+
+
+.tab label.request-tab {
+  --tab-height: 120px;
+}
+
+.tab label.body-tab {
+  --tab-height: 450px;
+}
+
+.tabs:has(.tab label.request-tab:checked) {
+  min-height: 120px;
+}
+
+.tabs:has(.tab label.body-tab:checked) {
+  min-height: 450px;
+}
+
+.content-in-tab:has(.request-panel) {
+  padding: 8px 12px;
+}
+
+.content-in-tab:has(pre) {
+  padding: 15px;
+}
+
+
 </style>
