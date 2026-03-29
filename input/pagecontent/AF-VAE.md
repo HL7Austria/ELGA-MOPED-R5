@@ -24,7 +24,6 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 #### Positive VAE
 
-##### Beschreibung
 Aufgrund der eingelangten VAE (Versichertenanspruchserklärung) Anfrage erfolgt seitens der SV die positive VAE Rückmeldung. Die positive Entscheidung wird in der Rückmeldung durch "00" (stationär) oder "19" (ambulant) ausgedrückt. 
 
 | Behandlungsart|  |
@@ -35,7 +34,7 @@ Aufgrund der eingelangten VAE (Versichertenanspruchserklärung) Anfrage erfolgt 
 <div>{% include antworten-positiv.svg %}</div>
 
 #### Positive VAE mit Fristende
-##### Beschreibung
+
 Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt es eine Befristung, so wird ein Enddatum angegeben. 
 
 | Behandlungsart|  |
@@ -46,8 +45,9 @@ Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt e
 <div>{% include antworten-positiv-zeitraum.svg %}</div>
 
 #### Negative VAE
-##### Beschreibung
+
 Aufgrund der eingelangten Aufnahme-/Ereignisanzeige erfolgt seitens SV eine negative Versichertenanspruchserklärung. Bei einer negativen Versichertenanspruchserklärung wird der jeweilige Ablehnungsgrund (Code) angeführt. Das KH prüft regelmäßig, ob es Ablehnungen der VAE seitens der SV gibt. Diese Fälle müssen bearbeitet werden. Im schlimmsten Fall muss der Patient die Rechnung als Selbstzahler selbst bezahlen. Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH behoben werden können, so dass eine positive VAE durch die SV nach erneuter Anfrage in Folge möglich ist.
+
 ###### Beispiel
 - Patient wurde anstelle von selbstversichert als mitversichert gemeldet und umgekehrt (nach Richtigstellung dann positive VAE möglich) 
 - Versicherung nicht festgestellt, weil nicht versichert 
@@ -62,7 +62,7 @@ Aufgrund der eingelangten Aufnahme-/Ereignisanzeige erfolgt seitens SV eine nega
 <div>{% include antworten-negativ.svg %}</div>
 
 #### VAE in Arbeit
-##### Beschreibung
+
 TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird. Der Eingang der VAE wird bestätigt, eine Zu- oder Absage kann zu dem Zeitpunkt allerdings nicht gegeben werden und der Status wird auf "in Arbeit" gesetzt.
 
 | Behandlungsart|  |
@@ -73,7 +73,7 @@ TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird
 <div>{% include antworten-in-arbeit.svg %}</div>
 
 #### VAE in Arbeit wird später bewilligt
-##### Beschreibung
+
 TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird. Eine bereits zuvor eingegangene und mit "in Arbeit" beantwortete VAE wird positiv entschieden.
 
 | Behandlungsart|  |
@@ -84,6 +84,7 @@ TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird
 <div>{% include antworten-in-arbeit-bewilligt.svg %}</div>
 
 #### Anfrage für Verlängerung
+
 Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum (Fristende) der bereits bewilligten VAE so muss das KH um eine Verlängerung ansuchen. Gibt es keine bewilligte VAE mit Fristende so kann die VAE auch nicht verlängert werden.
 
 | Behandlungsart|  |
@@ -94,6 +95,7 @@ Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum (Fri
 <div>{% include anfragen-verlaengerung.svg %}</div>
 
 #### Antwort auf Verlängerung
+
 Die Verlängerungs-Anfrage wird entweder genehmigt oder abgelehnt.
 
 | Behandlungsart|  |
@@ -104,6 +106,7 @@ Die Verlängerungs-Anfrage wird entweder genehmigt oder abgelehnt.
 <div>{% include antworten-verlaengerung.svg %}</div>
 
 #### VAE doch positiv
+
 TBD
 
 | Behandlungsart|  |
@@ -112,6 +115,7 @@ TBD
 | Stationär |  ✅ |
 
 #### VAE doch negativ
+
 TBD
 
 | Behandlungsart|  |
