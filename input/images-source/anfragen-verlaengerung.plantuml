@@ -51,14 +51,21 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-VAE bewilligt 
-Zeitraum: 01.09.2026-16.09.2026
+- VAE bewilligt 
+  Zeitraum: 01.09.2026-16.09.2026
 end note
 
 KH ->> MP: $anfragen (POST VAERequest)
-Note over KH: Zusätzliche VAE Anfrage wird \ngesendet mit Claim.related.claim \nzu erstem VAERequest und \nClaim.related.relationship = 'Verlängerung' \n(16.09.2025-21.09.2025 = Verlängerungstage)
+
+note over KH
+Zusätzliche VAE Anfrage wird gesendet
+- Claim.subType = #VAEREQV "VAE Verlängerung"
+- Claim.related.claim -> Referenz auf den initialen VAERequest 
+- Claim.related.relationship = #prior
+- Claim.billablePeriod = (2025-09-16 bis 2026-09-21 = Verlängerungstage)
+end note
 
 note right of MP
 Moped behält die ursprüngliche Anfrage
@@ -67,7 +74,7 @@ eine zusätzliche Anfrage über die
 Verlängerungstage ab
 end note
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
 - Unbeantwortete VAE Anfrage UND
 - VAE bewilligt (für Zeitraum)

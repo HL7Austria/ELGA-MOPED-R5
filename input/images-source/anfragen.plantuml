@@ -61,20 +61,23 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-Aufnahme- und 
-Versicherungsdaten 
-vollständig
+- Aufnahme- und 
+  Versicherungsdaten 
+  vollständig
 end note
 
 KH ->> MP: $anfragen (POST VAERequest)
-Note over KH: VAE-Anfrage wird gestellt
+note over KH
+VAE-Anfrage wird gesendet
+- Claim.subType = #VAEREQV "VAE Verlängerung"
+end note
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
 - Unbeantwortete VAE 
-Anfrage
+  Anfrage
 end note
 
 @enduml

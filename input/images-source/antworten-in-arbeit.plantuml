@@ -48,17 +48,20 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-Unbeantwortete VAE Anfrage
+- Unbeantwortete VAE Anfrage
 end note
 
 SV ->> MP: $antworten (POST VAEResponse)
-Note over SV: VAE Antwort wird\ngesendet mit dem Feld \nClaim.decision='98 in Bearbeitung'
+note over SV
+VAE Antwort wird gesendet
+- ClaimResponse.decision = #98 "in Bearbeitung"
+end note
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-VAE in Arbeit
+- VAE in Arbeit
 end note
 
 @enduml

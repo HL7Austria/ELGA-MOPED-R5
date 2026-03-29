@@ -48,17 +48,20 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-VAE in Arbeit
+- VAE in Arbeit
 end note
 
 SV ->> MP: $antworten (PUT VAEResponse)
-Note over SV: vorhandene VAE Antwort wird\nupgedatet mit dem Feld \nClaim.decision='00 bewilligt'
+note over SV
+Vorhandene VAE Antwort wird aktualisiert
+- ClaimResponse.decision = #00 "bewilligt"
+end note
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-VAE bewilligt
+- VAE bewilligt
 end note
 
 @enduml

@@ -48,7 +48,7 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
 - VAE bewilligt (befristet bis 16.09.2026)
 - Unbeantwortete VAE Anfrage
@@ -57,7 +57,13 @@ Zustand:
 end note
 
 SV ->> MP: $antworten (POST VAEResponse)
-Note over SV: VAE Antwort wird\ngesendet mit dem Feld \nClaim.decision='00 bewilligt'\nund ClaimResponse.preAuthPeriod.start='16.09.2026'\nund ClaimResponse.preAuthPeriod.end='21.09.2026'
+
+note over SV
+VAE Antwort wird gesendet
+- ClaimResponse.decision= #00 "bewilligt"
+- ClaimResponse.preAuthPeriod.start = "2026-09-16"
+- ClaimResponse.preAuthPeriod.end = "2026-09-21"
+end note
 
 note right of MP
 Moped behält die gültigen 
@@ -65,9 +71,9 @@ Moped behält die gültigen
 end note
 
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-VAE bewilligt 
+- VAE bewilligt 
 end note
 
 @enduml

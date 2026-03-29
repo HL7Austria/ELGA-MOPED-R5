@@ -48,14 +48,18 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-Unbeantwortete VAE Anfrage
+- Unbeantwortete VAE
+  Anfrage
 end note
 
 SV ->> MP: $antworten (POST VAEResponse)
-Note over SV: VAE Antwort wird gesendet mit \ndem Feld Claim.decision\n'03 nicht leistungszuständig'
 
+note over SV
+VAE Antwort wird gesendet
+- ClaimResponse.decision = #03 "nicht leistungszuständig"
+end note
 
 MP -> MP: ★✦★✦★✦★✦
 activate MP
@@ -67,9 +71,9 @@ der VAERequest automatisch
 gecancelled (Claim.status=cancelled)
 end note
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-VAE abgelehnt
+- VAE abgelehnt
 end note
 
 @enduml

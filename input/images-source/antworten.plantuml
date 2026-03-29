@@ -61,18 +61,20 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
 - Unbeantwortete VAE Anfrage
 - VAE in Arbeit
 end note
 
 SV ->> MP: $antworten (POST VAEResponse)
-Note over SV: VAE-Antwort wird gesendet
+note over SV
+VAE Antwort wird gesendet
+end note
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-- VAE bewilligt
+- VAE bewilligt (ggf. mit Zeitraum)
 - VAE abgelehnt
 - VAE in Arbeit
 end note

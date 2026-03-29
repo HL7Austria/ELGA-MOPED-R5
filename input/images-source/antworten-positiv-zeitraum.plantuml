@@ -49,18 +49,24 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-Unbeantwortete VAE Anfrage
+- Unbeantwortete VAE
+  Anfrage
 end note
 
 SV ->> MP: $antworten (POST VAEResponse)
-Note over SV: VAE Antwort wird\ngesendet mit dem Feld \nClaim.decision='00 bewilligt' und \nClaimResponse.preAuthPeriod.end='16.09.2026'
 
-note right of MP
+note over SV
+VAE Antwort wird gesendet
+- ClaimResponse.decision = #00 "bewilligt"
+- ClaimResponse.preAuthPeriod.end = "2026-09-16"
+end note
+
+note right of MP #b2bfc2
 Zustand:
-VAE bewilligt 
-Zeitraum: bis 16.09.2026
+- VAE bewilligt 
+  Zeitraum: bis 16.09.2026
 end note
 
 @enduml

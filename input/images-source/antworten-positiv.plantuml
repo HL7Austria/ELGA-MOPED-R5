@@ -48,17 +48,22 @@ end box
 
 autonumber
 
-note right of MP
+note right of MP #b2bfc2
 Zustand:
-Unbeantwortete VAE Anfrage
+- Unbeantwortete VAE
+  Anfrage
 end note
 
 SV ->> MP: $antworten (POST VAEResponse)
-Note over SV: VAE Antwort wird\ngesendet mit dem Feld \nClaim.decision='00 bewilligt'
 
-note right of MP
+note over SV
+VAE Antwort wird gesendet
+- ClaimResponse.decision = #00 "bewilligt"
+end note
+
+note right of MP #b2bfc2
 Zustand:
-VAE bewilligt
+- VAE bewilligt
 end note
 
 @enduml
