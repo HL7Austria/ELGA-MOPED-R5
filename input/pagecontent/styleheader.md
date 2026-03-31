@@ -114,25 +114,26 @@ width: 100%;}
 
 pre.json,
 pre.xml {
-  height: 100%;
+  max-height: 100%;
+  height: auto;
   width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  resize: none;
+  resize: vertical;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
-/* NEW utility classes for request panels */
 .request-panel {
   background: #f8f9fa;
   padding: 1.2rem;
   margin: 0.5rem 0;
   border-radius: 0 4px 4px 0;
-  border-left: 4px solid #007bff; /* default blue */
+  border-left: 4px solid #007bff;
 }
 
 .request-panel--success {
-  border-left-color: #28a745; /* green variant */
+  border-left-color: #28a745;
 }
 
 .request-meta {
@@ -180,16 +181,17 @@ pre.xml {
   --tab-height: 120px;
 }
 
+.tabs:has(input[id^="tab-request-"]:checked) {
+  min-height: 140px;
+}
+
+.tabs:has(input[id^="tab-body-"]:checked) {
+  min-height: 520px;
+}
+
+
 .tab label.body-tab {
-  --tab-height: 450px;
-}
-
-.tabs:has(.tab label.request-tab:checked) {
-  min-height: 120px;
-}
-
-.tabs:has(.tab label.body-tab:checked) {
-  min-height: 450px;
+  --tab-height: 500px; 
 }
 
 .content-in-tab:has(.request-panel) {
@@ -197,7 +199,9 @@ pre.xml {
 }
 
 .content-in-tab:has(pre) {
-  padding: 15px;
+  padding: 10px;
+  overflow: auto;  
+  max-height: calc(100vh - 120px); 
 }
 
 
