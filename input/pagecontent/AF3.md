@@ -1,6 +1,6 @@
 {% include styleheader.md %}
 
-### Anwendungsfall 3: Ambulante Aufnahme
+### Standardablauf Moped-Fall Ambulant
 
 #### Betroffene Akteure
 
@@ -25,7 +25,7 @@ Ein Patient kommt in die Ambulanz und wird behandelt. Ambulanter Besuch (LKF Beh
 #### Beispiel
 Ein Patient kommt mit einem gebrochenen Arm in das KH, wird dort behandelt (Röntgen, Gips, etc.) und kann nach ein paar Stunden wieder nach Hause gehen.
 
-Behandlungen auf unterschiedlichen Funktionscodes).
+
 
 #### Ablauf 
 {% include AF3.svg %}
@@ -44,7 +44,7 @@ Ob die Tagesklammer verwendet wird oder nicht liegt im Ermessen des jeweiligen K
     - KA-Nummer
 
 ##### Transferencounter Stationär vs. Ambulant
-Der Transferencounter entspricht nicht wie beim stationären Fall der Verlegung/Aufnahme auf eine andere Station sondern einem Kontakt oder einer Bewegung (entspricht einer 
+Der Transferencounter entspricht nicht wie beim stationären Fall der Verlegung/Aufnahme auf eine andere Station sondern einem Kontakt oder einer Bewegung (entspricht einer Behandlungen auf unterschiedlichen Funktionscodes).
 
 #### Relevante Profile
 - [$aufnehmen Bundle](StructureDefinition-MopedAufnehmenBundleKH.html)
