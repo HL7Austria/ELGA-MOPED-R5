@@ -1,13 +1,13 @@
 
 Diese Seite beschreibt die technische Umsetzung der in MOPED abgebildeten Prozesse rund um die Abwicklung eines MOPED-Falls – von der Aufnahme über die Versorgung bis hin zu Abrechnung und Meldung. Ziel ist es, die Abläufe transparent und nachvollziehbar darzustellen sowie aufzuzeigen, wie einzelne Teilprozesse modular zusammengesetzt werden können, um unterschiedliche Szenarien des MOPED-Falls abzubilden.
 
-Die Übersichtsgrafik unten veranschaulicht den generellen Ablauf eines MOPED-Falls. Darauf aufbauend werden die spezifischen Anwendungsfälle im stationären, ambulanten und selbstzahlenden Bereich im Standardablauf erläutert. Jeder dieser Standardabläufe wird in weiterer Folge in klar definierte Teilprozesse zerlegt, die mit ihren jeweiligen Vor- und Nachbedingungen beschrieben sind.
+Die Übersichtsgrafik unten veranschaulicht den generellen Ablauf eines MOPED-Falls. Darauf aufbauend werden die spezifischen Prozesse im stationären, ambulanten und selbstzahlenden Bereich im Standardablauf erläutert. Jeder dieser Standardabläufe wird in weiterer Folge in klar definierte Teilprozesse zerlegt, die mit ihren jeweiligen Vor- und Nachbedingungen beschrieben sind.
 
 Dieses Vorgehen erlaubt eine flexible Modellierung realer Prozessvarianten: Die Teilprozesse können – je nach Fallkonstellation – „puzzleartig“ miteinander kombiniert werden. So wird ersichtlich, an welchen Stellen innerhalb des Gesamtprozesses bestimmte Abläufe greifen und welche Abhängigkeiten zwischen ihnen bestehen.
 
 [![overview](MOPED_Fall_Ueberblick.svg){: style="width: 60%"}](MOPED_Fall_Ueberblick.svg)
 
-Die folgenden Anwendungsfälle in ihrem Standardablauf werden im Detail beschrieben:
+Die folgenden Prozesse in ihrem Standardablauf werden im Detail beschrieben:
 - [Moped Fall Stationär](AF_moped_fall_ueberblick.html#anwendungsfall-standardablauf-im-sunshine-case)
 - [Moped Fall Ambulant](AF_moped_fall_ueberblick.html#anwendungsfall-3-ambulanter-fall)
 - [Moped Fall Selbstzahler](AF_moped_fall_ueberblick.html#anwendungsfall-14-selbstzahler)

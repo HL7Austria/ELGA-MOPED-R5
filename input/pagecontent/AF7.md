@@ -1,7 +1,7 @@
 {% include styleheader.md %}
 In Arbeit :)
 
-### Anwendungsfall 7: Behandlungsabbruch vor erbrachter Leistung
+### Teilprozess 7: Behandlungsabbruch vor erbrachter Leistung
 
 #### Betroffene Akteure
 

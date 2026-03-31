@@ -1,6 +1,6 @@
 {% include styleheader.md %}
 
-### Anwendungsfall 6: Abgeschlossene ambulante Behandlung und stationäre Aufnahme am gleichen Tag innerhalb eines KHs
+### Teilprozess 6: Abgeschlossene ambulante Behandlung und stationäre Aufnahme am gleichen Tag innerhalb eines KHs
 In Arbeit :)
 
 #### Betroffene Akteure

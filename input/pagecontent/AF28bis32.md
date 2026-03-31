@@ -1,7 +1,7 @@
 {% include styleheader.md %}
 
 
-### Anwendungsfall 28: Positive VAE inkl. Verlängerung
+### Teilprozess 28: Positive VAE inkl. Verlängerung
 
 #### Betroffene Akteure
 
@@ -36,7 +36,7 @@ Aufgrund der eingelangten VAE (Versichertenanspruchserklärung) Anfrage erfolgt 
 Zukünftig gibt es anstatt einer Quartalszusage pro [Moped Fall](TBD-LINK-BEGRIFFSDEFINITION) eine Anfrage und eine Rückmeldung.
 
 ##### Stationär
-Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt es eine Befristung, so wird ein Enddatum angegeben. Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum so muss das KH um eine Verlängerung ansuchen. In der Verlängerung wird das Enddatum als Verlängerungsdatum angegeben und zusätzlich auf die initiale Anfrage verwiesen. Die positive VAE für den ursprünglichen Zeitraum bleibt weiterhin gültig (außer sie wird aus anderen Gründen nachträglich storniert -> siehe [Anwendungsfall 32:  VAE doch negativ](AF28bis32.html#anwendungsfall-32-vae-doch-negativ-nach-vorheriger-positiver-vae)). Die VAE kann nach Ablauf der Frist der letzten positiven VAE immer wieder verlängert werden solange sich der Patient immer noch in Behandlung befindet. Gibt es kein Fristende so kann die VAE auch nicht verlängert werden.
+Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt es eine Befristung, so wird ein Enddatum angegeben. Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum so muss das KH um eine Verlängerung ansuchen. In der Verlängerung wird das Enddatum als Verlängerungsdatum angegeben und zusätzlich auf die initiale Anfrage verwiesen. Die positive VAE für den ursprünglichen Zeitraum bleibt weiterhin gültig (außer sie wird aus anderen Gründen nachträglich storniert -> siehe [Teilprozess 32:  VAE doch negativ](AF28bis32.html#anwendungsfall-32-vae-doch-negativ-nach-vorheriger-positiver-vae)). Die VAE kann nach Ablauf der Frist der letzten positiven VAE immer wieder verlängert werden solange sich der Patient immer noch in Behandlung befindet. Gibt es kein Fristende so kann die VAE auch nicht verlängert werden.
 
 #### Beispiel
 
@@ -140,7 +140,7 @@ Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Pro
   </tr>
 </table>
 
-### Anwendungsfall 29: Negative VAE
+### Teilprozess 29: Negative VAE
 
 #### Betroffene Akteure
 
@@ -280,7 +280,7 @@ Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das z
   </tr>
 </table>
 
-### Anwendungsfall 30: VAE mit Status in Bearbeitung
+### Teilprozess 30: VAE mit Status in Bearbeitung
 In Arbeit :)
 
 #### Betroffene Akteure
@@ -379,7 +379,7 @@ In Arbeit :)
 </table>
 
 
-### Anwendungsfall 31: VAE doch positiv (nach vorheriger negativer VAE)
+### Teilprozess 31: VAE doch positiv (nach vorheriger negativer VAE)
 In Arbeit :)
 
 #### Betroffene Akteure
@@ -477,7 +477,7 @@ In Arbeit :)
 </table>
 
 
-### Anwendungsfall 32: VAE doch negativ (nach vorheriger positiver VAE)
+### Teilprozess 32: VAE doch negativ (nach vorheriger positiver VAE)
 In Arbeit :)
 
 #### Betroffene Akteure

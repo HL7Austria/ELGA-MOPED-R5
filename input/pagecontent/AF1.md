@@ -1,6 +1,6 @@
 {% include styleheader.md %}
 
-### Anwendungsfall 1: Planaufnahme
+### Teilprozess 1: Planaufnahme
 In Arbeit :)
 
 #### Betroffene Akteure

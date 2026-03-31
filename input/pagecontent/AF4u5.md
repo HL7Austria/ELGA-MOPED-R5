@@ -1,6 +1,6 @@
 {% include styleheader.md %}
 
-### Anwendungsfall 4: Fallartwechsel Ambulant -> Stationär
+### Teilprozess 4: Fallartwechsel Ambulant -> Stationär
 In Arbeit :)
 
 #### Betroffene Akteure
@@ -68,7 +68,7 @@ In Arbeit :)
 </table>
 
 
-### Anwendungsfall 5: Fallartwechsel Stationär -> Ambulant
+### Teilprozess 5: Fallartwechsel Stationär -> Ambulant
 In Arbeit :)
 
 #### Betroffene Akteure

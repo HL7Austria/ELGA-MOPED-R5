@@ -1,6 +1,6 @@
 {% include styleheader.md %}
 
-### Anwendungsfall 23: Entlassung mit Hauptdiagnose
+### Teilprozess 23: Entlassung mit Hauptdiagnose
 
 #### Betroffene Akteure
 
@@ -21,7 +21,7 @@
 
 
 #### Beschreibung:
-Der Patient wird entlassen und es ist bereits die codierte ICD-10 Hauptdiagnose bekannt. In diesem Fall wird wie bei Susi Sonnenschein in [Anwendungsfall 1](AF1.html) der Patient entlassen und die Diagnose direkt bei $entlassen mit eingefügt. 
+Der Patient wird entlassen und es ist bereits die codierte ICD-10 Hauptdiagnose bekannt. In diesem Fall wird wie bei Susi Sonnenschein in [Teilprozess 1](AF1.html) der Patient entlassen und die Diagnose direkt bei $entlassen mit eingefügt. 
 
 #### Beispiel
 - Der Patient war zur Entbindung im KH und die Hauptdiagnose ist somit bereits bei der Entlassung vorhanden.
@@ -46,7 +46,7 @@ Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt m
 #### Mögliche Notifications
 
 
-### Anwendungsfall 24 und 25: Entlassung ohne Hauptdiagnose
+### Teilprozess 24 und 25: Entlassung ohne Hauptdiagnose
 
 #### Betroffene Akteure
 

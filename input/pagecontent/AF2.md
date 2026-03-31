@@ -1,6 +1,6 @@
 {% include styleheader.md %}
 
-### Anwendungsfall 2: stationäre Aufnahme
+### Teilprozess 2: stationäre Aufnahme
 
 #### Betroffene Akteure
 
