@@ -157,6 +157,8 @@ pages:
       title: ANWF 53 - Intensivaufenthalt
     AF54.md:
       title: ANWF 54 - Stammdatenänderung
+    AF_moped_fall_patientenversorung.md:
+      title: Patientenversorgung
   mappings.md:
     title: Mappings
     ka-org_mapping.md:
