@@ -34,9 +34,9 @@ Ein Patient kommt mit einem gebrochenen Arm in das KH, wird dort behandelt (Rön
 #### Technische Hinweise
 ##### Tagesklammer vs. Aufteilung:
 Ob die Tagesklammer verwendet wird oder nicht liegt im Ermessen des jeweiligen KH und muss auf Seite des KIS geregelt werden. In Moped werden dann entweder ein Datensatz mit allen Leistungen und Diagnosen des jeweiligen Tages oder mehrere Datensätze mit den aufgeteilten Leistungen und Diagnosen eingemeldet. Dabei ist zu beachten:
-- Bei der Nutzung der Tagesklammer gibt es in Moped pro Tag nur eine Composition und eine zugehörige VAE -> $aufnehmen wird nur ein mal ausgeführt.
+- Bei der Nutzung der Tagesklammer gibt es in den meisten Fällen in Moped pro Tag nur eine Composition und eine zugehörige VAE -> $aufnehmen wird nur ein mal ausgeführt.
 - Wird die Tagesklammer nicht genutzt so ist es möglich mehrere gültige Compositions für den gleichen Tag und Patienten in Moped zu haben. Hierbei wird $aufnehmen mehrmals ausgeführt (Für jede X01 ein mal). Pro Composition gibt es dann jeweils eine VAE.
-- Pro X01 gibt es zukünftig eine VAE. Bei Nutzung der Tagesklammer muss das KIS intern die VAE auf mehrere Aufnahmezahlen aufteilen.  
+- Pro Composition gibt es zukünftig eine VAE. Bei Nutzung der Tagesklammer muss das KIS intern die VAE auf mehrere Aufnahmezahlen aufteilen.  
 - Die Tagesklammer impliziert immer mehrere Aufnahmezahlen pro Patient, Tag und KA.
 - Die Anzahl der Ausführungen von $aufnehmen entspricht der Anzahl der Anzahl der erstellten Compositions (und soll mit der Anzahl der X01 Datensätze übereinstimmen). Unterschiedliche Compositions müssen sich in zumindest einem der folgenden Datenfelder unterscheiden: 
     - Aufnahmezahl
