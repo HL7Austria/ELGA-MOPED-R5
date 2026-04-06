@@ -60,7 +60,7 @@ end box
 
 
 KH->> MP:<b>1</b> [[OperationDefinition-MOPED.Patient.Aufnehmen.html $aufnehmen]]
-Note over KH: Patientin Amanda Ambulant wird%n() in die Unfallambulanz aufgenommen %n()und die ÖGK Wien als zuständige%n() Versicherung gesetzt
+Note over KH: Patientin Amanda Ambulant kommt%n() in die Unfallambulanz und die ÖGK Wien%n()wird als zuständige Versicherung gesetzt
 KH->>MP:<b>2</b> [[OperationDefinition-MOPED.VAERequest.Anfragen.html $anfragen]]
 Note over KH: Anfrage auf Versicherungsanspruchserklärung
 SV->>MP:<b>3a</b> GET Claim?status=active&use=preauthorization%n()&_has:ClaimResponse:request:status:not=active
