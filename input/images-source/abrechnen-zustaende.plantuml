@@ -1,0 +1,27 @@
+@startuml
+
+state "Keine Abrechnung" as A
+state "Unbeantwortet vorläufig" as B
+state "Genehmigt vorläufig" as C
+state "Abgelehnt vorläufig" as D
+state "Unbeantwortet endgültig" as E
+state "Genehmigt endgültig" as F
+state "Abgelehnt endgültig" as G
+
+[*] --> A
+A --> B : $abrechnen
+A --> E : $abrechnen
+B --> C : $genehmigen
+B --> D : $ablehnen
+D --> B : $abrechnen
+C --> B : $abrechnen
+B --> B : $abrechnen
+B --> E : $abrechnen
+C --> E : $abrechnen
+D --> E : $abrechnen
+E --> F : $genehmigen
+E --> G : $ablehnen
+G --> E : $abrechnen
+F --> [*]
+
+@enduml

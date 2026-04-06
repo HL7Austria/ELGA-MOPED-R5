@@ -95,6 +95,8 @@ pages:
     title: Workflowmanagement
   obligations.md:
     title: Obligations
+  AF_moped_fall_abrechnung.md:
+    title: Moped Fall - Abrechnung
   anwendungsfaelle.md:
     title: Überblick & Sunshine Case
     AF1.md:
@@ -194,6 +196,7 @@ menu:
     Workflowmanagement: workflowmanagement.html
     Obligations: obligations.html
   Anwendungsfälle:
+    Moped Fall - Abrechnung: AF_moped_fall_abrechnung.html
     Überblick & Sunshine Case: anwendungsfaelle.html
     ANWF 1 - Planaufnahme 🔄: AF1.html
     ANWF 2 - Stationäre Aufnahme ✅: AF2.html
