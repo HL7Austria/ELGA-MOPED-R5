@@ -101,6 +101,8 @@ pages:
     title: Moped Fall - Überblick
   AF_moped_fall_aufnahme.md:
     title: Moped Fall - Aufnahme
+    AF_moped_fall_administration.md:
+    title: Moped Fall - Administration
   AF_moped_fall_patientenversorgung.md:
     title: Moped Fall - Patientversorgung
   AF_moped_fall_entlassung.md:
@@ -115,6 +117,8 @@ pages:
     title: Moped Fall - Kostenmeldung
   AF_moped_fall_jahres_quartals_meldung.md:
     title: Moped Fall - Jahres-/Quartalsmeldung
+  AF_moped_fall_kommunikation.md:
+    title: Moped Fall - Kommunikation
   AF_moped_fall_prozessuebergreifend.md:
     title: Moped Fall - Prozessübergreifend
   AF_lkf_jahresstatistikmeldung.md:
