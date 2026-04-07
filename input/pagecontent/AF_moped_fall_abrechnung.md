@@ -66,6 +66,19 @@ Vorsorgeuntersuchung Coloskopie, Vorsorgeuntersuchung Brust-Krebs-Früherkennung
 <div>{% include abrechnen-leitsung-ohne-abrechnungsrelevanz.svg %}</div>
 
 
+#### Abrechnung - Änderung von Leistungen oder Diagnosen für Abrechnung
+##### Beschreibung
+Leistungen, Diagnosen oder andere abrechnungsrelevante Informationen müssen im Moped-Fall geändert oder hinzugefügt werden. Dadurch wird die vorherige Abrechnung ungültig und muss neu eingebracht werden.
+##### Beispiele
+
+
+| Behandlungsart|  |
+|-----------|----:|
+| Ambulant  |  ✅ |
+| Stationär |  ✅ |
+
+<div>{% include update-aenderung-nach-abrechnung.svg %}</div>
+<div>{% include abrechnen-nach-aenderung.svg %}</div>
 
 ### Relevante Profile
 - [$abrechnen Bundle](StructureDefinition-MopedAbrechnenBundleKH.html)
