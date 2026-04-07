@@ -71,9 +71,9 @@ activate MP
 deactivate MP
 
 note over MP
-durch den neuen LKFRequest wird 
-der vorherige LKFRequest automatisch 
-gecancelled falls es einen gibt
+durch den neuen LKFRequest wird der
+vorherige LKFRequest (falls einer existiert)
+automatisch gecancelled
 end note
 
 note over MP #c5f7ba
