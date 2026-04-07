@@ -1,7 +1,5 @@
 {% include styleheader.md %}
 
-
-## Moped Fall - Versichertenanspruchserklärung
 Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Moped-Plattform im Teilprozess „Versichertenanspruchserklärung“. Zunächst werden die allgemeinen Interaktionsmöglichkeiten dargestellt, anschließend werden diese durch Beispiele konkretisiert und im Kontext einer spezifischen Anwendung dargestellt.
 
 ### Betroffene Akteure
