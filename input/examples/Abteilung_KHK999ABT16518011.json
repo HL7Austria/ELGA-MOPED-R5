@@ -35,11 +35,7 @@
   "identifier": [
     {
       "system": "http://example.org/lkf-system/funktionscode",
-      "value": "165180"
-    },
-    {
-      "system": "http://example.org/lkf-system/funktionssubcode",
-      "value": "11"
+      "value": "16518011"
     }
   ],
   "type": [
