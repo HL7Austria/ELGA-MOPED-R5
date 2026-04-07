@@ -95,70 +95,34 @@ pages:
     title: Workflowmanagement
   obligations.md:
     title: Obligations
+  AF_moped_plattform_ueberblick.md:
+    title: Moped Plattform - Überblick
+  AF_moped_fall_ueberblick.md:
+    title: Moped Fall - Überblick
+  AF_moped_fall_aufnahme.md:
+    title: Moped Fall - Aufnahme
+  AF_moped_fall_patientenversorgung.md:
+    title: Moped Fall - Patientversorgung
+  AF_moped_fall_entlassung.md:
+    title: Moped Fall - Entlassung
+  AF_moped_fall_vae.md:
+    title: Moped Fall - Versichertenanspruchserklärung
   AF_moped_fall_abrechnung.md:
     title: Moped Fall - Abrechnung
-  anwendungsfaelle.md:
-    title: Überblick & Sunshine Case
-    AF1.md:
-      title: ANWF 1 - Planaufnahme
-    AF2.md:
-      title: ANWF 2 - Stationäre Aufnahme
-    AF3.md:
-      title: ANWF 3 - Ambulante Aufnahme
-    AF4u5.md:
-      title: ANWF 4,5 - Fallartwechsel
-    AF6.md:
-      title: ANWF 6 - Mehrmalige Aufnahme an einem Tag
-    AF7.md:
-      title: ANWF 7 - Behandlungsabbruch
-    AF8u9u47.md:
-      title: ANWF 8,9,47 - Stammdatenabgleich
-    AF10.md:
-      title: ANWF 10 - Klassenwechsel
-    AF11.md:
-      title: ANWF 11 - Versicherungswechsel
-    AF12.md:
-      title: ANWF 12,13,15,35-37 - Ausländerverrechnung und Regress
-    AF14.md:
-      title: ANWF 14 - Selbstzahler
-    AF17.md:
-      title: ANWF 17 - Zwischenbetriebliche Leistungserbringung
-    AF18.md:
-      title: ANWF 18 - Transfer
-    AF19.md:
-      title: ANWF 19 - Interne Verlegung
-    AF20.md:
-      title: ANWF 20 - Urlaub
-    AF21u22.md:
-      title: ANWF 21,22 - Neugeborene
-    AF23bis25.md:
-      title: ANWF 23-25 - Entlassung & Hauptdiagnose
-    AF26.md:
-      title: ANWF 26 - Überlieger
-    AF27.md:
-      title: ANWF 27 - Leistungen ohne Abrechnungsrelevanz
-    AF28bis32.md:
-      title: ANWF 28-32 - SV Kostenübernahmevariationen
-    AF33u34.md:
-      title: ANWF 33-34 - Kostenmeldungen?
-    AF38bis44.md:
-      title: ANWF 38-44 - LKF Daten
-    AF45.md:
-      title: ANWF 45 - Jahresmeldung
-    AF46.md:
-      title: ANWF 46 - VDAS Rückmeldung (Patient verstorben)
-    AF48.md:
-      title: ANWF 48 - Mehrere aktive Fälle in MOPED
-    AF49.md:
-      title: ANWF 49 - Aufrollung nach Speicherfrist
-    AF50.md:
-      title: ANWF 50 - Urgenz
-    AF51u52.md:
-      title: ANWF 51-52 - Asylierung
-    AF53.md:
-      title: ANWF 53 - Intensivaufenthalt
-    AF54.md:
-      title: ANWF 54 - Stammdatenänderung
+  AF_moped_fall_ablehnung_genehmigung.md:
+    title: Moped Fall - Genehmigung/Ablehnung
+  AF_moped_fall_kostenmeldung.md:
+    title: Moped Fall - Kostenmeldung
+  AF_moped_fall_jahres_quartals_meldung.md:
+    title: Moped Fall - Jahres-/Quartalsmeldung
+  AF_moped_fall_prozessuebergreifend.md:
+    title: Moped Fall - Prozessübergreifend
+  AF_lkf_jahresstatistikmeldung.md:
+    title: LKF Jahresstatistikmeldung
+  AF_medizinische_register.md:
+    title: Medizinische Register
+  AF_ems.md:
+    title: EMS
   mappings.md:
     title: Mappings
     ka-org_mapping.md:
@@ -196,38 +160,20 @@ menu:
     Workflowmanagement: workflowmanagement.html
     Obligations: obligations.html
   Anwendungsfälle:
+    Moped Plattform - Überblick: AF_moped_plattform_ueberblick.html
+    Moped Fall - Überblick: AF_moped_fall_ueberblick.html
+    Moped Fall - Aufnahme: AF_moped_fall_aufnahme.html
+    Moped Fall - Patientversorgung: AF_moped_fall_patientenversorgung.html
+    Moped Fall - Entlassung: AF_moped_fall_entlassung.html
+    Moped Fall - Versichertenanspruchserklärung: AF_moped_fall_vae.html
     Moped Fall - Abrechnung: AF_moped_fall_abrechnung.html
-    Überblick & Sunshine Case: anwendungsfaelle.html
-    ANWF 1 - Planaufnahme 🔄: AF1.html
-    ANWF 2 - Stationäre Aufnahme ✅: AF2.html
-    ANWF 3 - Ambulante Aufnahme 🔄: AF3.html
-    ANWF 4,5 - Fallartwechsel 🔄: AF4u5.html
-    ANWF 6 - Mehrmalige Aufnahme an einem Tag 🔄: AF6.html
-    ANWF 7 - Behandlungsabbruch 🔄: AF7.html
-    ANWF 8,9,47 - Stammdatenabgleich 🔄: AF8u9u47.html
-    ANWF 10 - Klassenwechsel ✅: AF10.html
-    ANWF 11 - Versicherungswechsel 🔄: AF11.html
-    ANWF 12,13,15,35-37 - Ausländerverrechnung und Regress 🔄: AF12.html
-    ANWF 14 - Selbstzahler ✅: AF14.html
-    ANWF 17 - Zwischenbetriebliche Leistungserbringung ✅: AF17.html
-    ANWF 18 - Transfer 🔄: AF18.html
-    ANWF 19 - Interne Verlegung ✅: AF19.html
-    ANWF 20 - Urlaub ✅: AF20.html
-    ANWF 21,22 - Neugeborene 🔄: AF21u22.html
-    ANWF 23-25 - Entlassung & Hauptdiagnose ✅: AF23bis25.html
-    ANWF 26 - Überlieger 🔄: AF26.html
-    ANWF 27 - Leistungen ohne Abrechnungsrelevanz ✅: AF27.html
-    ANWF 28-32 - SV Kostenübernahmevariationen 🔄: AF28bis32.html
-    ANWF 33-34 - Kostenmeldungen? 🔄: AF33u34.html
-    ANWF 38-44 - LKF Daten 🔄: AF38bis44.html
-    ANWF 45 - Jahresmeldung 🔄: AF45.html
-    ANWF 46 - VDAS Rückmeldung (Patient verstorben) 🔄: AF46.html
-    ANWF 48 - Mehrere aktive Fälle in MOPED 🔄: AF48.html
-    ANWF 49 - Aufrollung nach Speicherfrist 🔄: AF49.html
-    ANWF 50 - Urgenz 🔄: AF50.html
-    ANWF 51-52 - Asylierung 🔄: AF51u52.html
-    ANWF 53 - Intensivaufenthalt 🔄: AF53.html
-    ANWF 54 - Stammdatenänderung 🔄: AF54.html
+    Moped Fall - Genehmigung/Ablehnung: AF_moped_fall_ablehnung_genehmigung.html
+    Moped Fall - Kostenmeldung: AF_moped_fall_kostenmeldung.html
+    Moped Fall - Jahres-/Quartalsmeldung: AF_moped_fall_jahres_quartals_meldung.html
+    Moped Fall - Prozessübergreifend: AF_moped_fall_prozessuebergreifend.html
+    LKF Jahresstatistikmeldung: AF_lkf_jahresstatistikmeldung.html
+    Medizinische Register: AF_medizinische_register.html
+    EMS: AF_ems.html
   Questionnaires:
     MBDS - TISS-A: Questionnaire-LKFTISSAQuestionnaire.html
     MBDS - SAPS3: Questionnaire-LKFSAPS3Questionnaire.html
