@@ -1,7 +1,7 @@
 {% include styleheader.md %}
+### Teilprozess 6: Abgeschlossene ambulante Behandlung und stationäre Aufnahme am gleichen Tag innerhalb eines KHs
 In Arbeit :)
 
-## Anwendungsfall X: TBD
 
 ### Betroffene Akteure
 
