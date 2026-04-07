@@ -1,6 +1,6 @@
 {% include styleheader.md %}
 
-## Anwendungsfall 23: Entlassung mit Hauptdiagnose
+## Teilprozess 23: Entlassung mit Hauptdiagnose
 
 ### Betroffene Akteure
 
@@ -43,7 +43,7 @@ Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt m
 ### Mögliche Notifications
 
 
-## Anwendungsfall 24 und 25: Entlassung ohne Hauptdiagnose
+## Teilprozess 24 und 25: Entlassung ohne Hauptdiagnose
 
 ### Betroffene Akteure
 

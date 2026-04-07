@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generiert durch Microsoft Visio, SVG Export MOPED EMS Überblick.svg Zeichenblatt-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="11.5439in" height="4.02616in"
+		viewBox="0 0 831.159 289.884" xml:space="preserve" color-interpolation-filters="sRGB" class="st13">
+	<v:documentProperties v:langID="3079" v:metric="true" v:viewMarkup="false"/>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#fcebdd;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:#000000;font-family:Calibri;font-size:1.5em;font-weight:bold}
+		.st3 {visibility:visible}
+		.st4 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22}
+		.st5 {fill:#fee599;stroke:#c7c8c8;stroke-width:0.25}
+		.st6 {fill:#000000;font-family:Calibri;font-size:1.99999em}
+		.st7 {marker-end:url(#mrkr13-18);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st8 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.28409090909091}
+		.st9 {fill:#f2f2f2;stroke:#0070c0;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st10 {fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st11 {fill:#c00000;stroke:#c7c8c8;stroke-width:0.25}
+		.st12 {fill:#000000;font-family:Calibri;font-size:1.16666em}
+		.st13 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend13">
+			<path d="M 3 1 L 0 0 L 3 -1 L 3 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr13-18" class="st8" v:arrowType="13" v:arrowSize="2" v:setback="10.56" refX="-10.56" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend13" transform="scale(-3.52,-3.52) "/>
+		</marker>
+	</defs>
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2"/>
+		</filter>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>Zeichenblatt-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
+				v:shadowOffsetY="-8.50394"/>
+		<v:layer v:name="Verbinder" v:index="0"/>
+		<g id="shape36-1" v:mID="36" v:groupContext="shape" transform="translate(59.9026,-45.1624)">
+			<title>Tabelle.36</title>
+			<desc>TBD</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="92.126" cy="254.451" width="184.26" height="70.8661"/>
+			<ellipse cx="92.126" cy="254.451" rx="92.126" ry="35.4331" class="st1"/>
+			<text x="76.95" y="259.85" class="st2" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>TBD</text>		</g>
+		<g id="shape37-4" v:mID="37" v:groupContext="shape" transform="translate(307.934,-45.1624)">
+			<title>Tabelle.37</title>
+			<desc>TBD</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="92.126" cy="254.451" width="184.26" height="70.8661"/>
+			<ellipse cx="92.126" cy="254.451" rx="92.126" ry="35.4331" class="st1"/>
+			<text x="76.95" y="259.85" class="st2" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>TBD</text>		</g>
+		<g id="shape38-7" v:mID="38" v:groupContext="shape" transform="translate(118.013,-142.958)">
+			<title>Rechteck.1517</title>
+			<desc>KH</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="34.0157" cy="264.372" width="68.04" height="51.0236"/>
+			<g id="shadow38-8" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st3">
+				<rect x="0" y="238.86" width="68.0315" height="51.0236" class="st4"/>
+			</g>
+			<rect x="0" y="238.86" width="68.0315" height="51.0236" class="st5"/>
+			<text x="20.3" y="271.57" class="st6" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KH</text>		</g>
+		<g id="shape39-13" v:mID="39" v:groupContext="shape" v:layerMember="0" transform="translate(244.155,-73.5089)">
+			<title>Dynamischer Verbinder.1518</title>
+			<path d="M0 282.8 L53.22 282.8" class="st7"/>
+		</g>
+		<g id="shape40-19" v:mID="40" v:groupContext="shape" transform="translate(0.375,-255.493)">
+			<title>Tabelle.40</title>
+			<desc>EMS</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="84.9066" cy="272.876" width="169.82" height="34.0157"/>
+			<rect x="0" y="255.868" width="169.813" height="34.0157" class="st9"/>
+			<text x="63.27" y="280.08" class="st6" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>EMS</text>		</g>
+		<g id="shape41-22" v:mID="41" v:groupContext="shape" transform="translate(0.375,-0.375)">
+			<title>Tabelle.41</title>
+			<rect x="0" y="34.7657" width="830.409" height="255.118" class="st10"/>
+		</g>
+		<g id="shape42-24" v:mID="42" v:groupContext="shape" transform="translate(363.21,-142.958)">
+			<title>Rechteck.7</title>
+			<desc>BMSGPK</desc>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="34.0157" cy="264.372" width="68.04" height="51.0236"/>
+			<g id="shadow42-25" v:groupContext="shadow" v:shadowOffsetX="0.345598" v:shadowOffsetY="-1.97279" v:shadowType="1"
+					transform="matrix(1,0,0,1,0.345598,1.97279)" class="st3">
+				<rect x="0" y="238.86" width="68.0315" height="51.0236" class="st4"/>
+			</g>
+			<rect x="0" y="238.86" width="68.0315" height="51.0236" class="st11"/>
+			<text x="9.34" y="268.57" class="st12" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>BMSGPK</text>		</g>
+	</g>
+</svg>
