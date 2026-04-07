@@ -79,7 +79,7 @@ loop [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] / [[Opera
     KH->>MP:<b>7</b> [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] 
     Note over KH: Abrechnung aller Leistungen eingereicht
     LGF->>MP:<b>8a</b> GET Claim?status=active&use=claim%n()&_has:ClaimResponse:request:status:not=active
-    Note over LGF: offene Abrechnungen abfragen%n()und intern bearbeiten
+    Note over LGF: unbeantwortete Abrechnungen abfragen%n()und intern bearbeiten
     LGF->>MP:<b>8b</b> [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]]
     Note over LGF: Alle Posten genehmigt%n()(keine Änderungen)
 end
@@ -88,7 +88,7 @@ Note over KH: aktuellen Stand des Falls abfragen%n()(inkl. bestätigte Abrechnun
 KH->>MP:<b>9b</b>  final [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] 
 Note over KH: Finale Abrechnung seitens des KH
 LGF->>MP:<b>10a</b> GET Claim?status=active&use=claim&endgueltig=true%n()&_has:ClaimResponse:request:status:not=active
-Note over LGF: offene Abrechnungen abfragen%n()und intern bearbeiten
+Note over LGF: unbeantwortete Abrechnungen abfragen%n()und intern bearbeiten
 LGF->>MP:<b>10b</b> final [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]]
 Note over LGF: Endgültige Entscheidung %n()zur Abrechnung 
 Note over LGF: Kosteninformationen werden %n()im Datensatz ergänzt 

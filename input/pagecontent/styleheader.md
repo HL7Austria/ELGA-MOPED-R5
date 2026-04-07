@@ -204,5 +204,17 @@ pre.xml {
   max-height: calc(100vh - 120px); 
 }
 
+.diagram {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 1407px;
+}
 
 </style>

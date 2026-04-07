@@ -1,6 +1,6 @@
 {% include styleheader.md %}
 
-### Standardablauf Moped-Fall Ambulant
+### Standardablauf Moped-Fall ambulant
 
 #### Betroffene Akteure
 
@@ -25,11 +25,12 @@ Ein Patient kommt in die Ambulanz und wird behandelt. Ambulanter Besuch (LKF Beh
 #### Beispiel
 Ein Patient kommt mit einem gebrochenen Arm in das KH, wird dort behandelt (Röntgen, Gips, etc.) und kann nach ein paar Stunden wieder nach Hause gehen.
 
-
+#### Vorbedingung
+Es existiert kein Fall mit der selben Kombination aus Aufnahmezahl, KA-Nr und Aufnahmedatum.
 
 #### Ablauf 
-{% include AF3.svg %}
-{% include AF3-Ablauf.md %}
+<div class="diagram">{% include standardablauf-ambulant.svg %}</div>
+<div>{% include AF_standardablauf_ambulant_requests.md %}</div>
 
 #### Technische Hinweise
 ##### Tagesklammer vs. Aufteilung:

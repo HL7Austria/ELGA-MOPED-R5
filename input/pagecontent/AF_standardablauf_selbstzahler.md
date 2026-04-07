@@ -2,7 +2,7 @@
 
 ### Standardablauf Moped-Fall Selbstzahler
 
-### Betroffene Akteure
+#### Betroffene Akteure
 
 | Akteur            |  |
 |-------------------|--------------:|
@@ -11,7 +11,7 @@
 | SV (Sozialversicherung)      |  ❌  |
 | Bund            |  ✅  |
 
-### Betroffene Behandlungsarten
+#### Betroffene Behandlungsarten
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -20,25 +20,24 @@
 
 
 
-### Beschreibung: Selbstzahler
+#### Beschreibung: Selbstzahler
 Vorgehensweise für Patienten, die nicht über die Sozialversicherungsschiene gemeldet werden, da sie Selbstzahler sind, jedoch im LKF aufscheinen.  
  
-### Beispiel
+#### Beispiel
 Nicht-EU Ausländer (z.B. US -Bürger), Patienten die über die Sozialhilfe oder Justizanstalten abgerechnet werden  
 
-### Technische Hinweise
+#### Vorbedingung
+Es existiert kein Fall mit der selben Kombination aus Aufnahmezahl, KA-Nr und Aufnahmedatum.
+
+#### Ablauf
+
+<div class="diagram">{% include standardablauf-selbstzahler.svg %}</div>
+<div>{% include AF_standardablauf_selbstzahler_requests.md %}</div>
+
+#### Technische Hinweise
 Die Composition Section zustaendigeSV bleibt in diesem Fall leer, was Auswirkungen auf die Berechtigungen und den weiteren Ablauf hat. Die Operation $melden ist z.B. in diesem Fall nicht erlaubt und würde fehlschlagen.
 
-
-### Ablauf
-
-<div>{% include AF14.svg %}</div>
-
-### Relevante Profile
+#### Relevante Profile
 - Selbstzahler Coverage (TBD Link)
 
-### Relevante Invarianten
 
-### Mögliche Notifications
-
-Keine relevanten Notifications für diesen Standardablauf identifiziert.
