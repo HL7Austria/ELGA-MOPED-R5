@@ -32,6 +32,9 @@ Eine Übersicht aller Teilprozesse findet sich [hier](#liste-der-teilprozesse).
 - [ANWF 2 - Stationäre Aufnahme ✅](AF_moped_fall_aufnahme.html#anwendungsfall-2-stationäre-aufnahme)
 - [ANWF 18 - Transfer 🔄](AF_moped_fall_aufnahme.html#anwendungsfall-18-transfer)
 
+#### Moped Fall - Administration: 
+TBD
+
 #### Moped Fall - Patientversorgung:
 - [ANWF 7 - Behandlungsabbruch 🔄](AF_moped_fall_patientenversorgung.html#anwendungsfall-7-behandlungsabbruch-vor-erbrachter-leistung)
 - [ANWF 17 - Zwischenbetriebliche Leistungserbringung ✅](AF_moped_fall_patientenversorgung.html#anwendungsfall-17-zwischenbetriebliche-leistungserbringung)
@@ -66,6 +69,9 @@ Eine Übersicht aller Teilprozesse findet sich [hier](#liste-der-teilprozesse).
 #### Moped Fall - Jahres-/Quartalsmeldung: 
 - [ANWF 42 - Quartalsmeldung 🔄](AF_moped_fall_jahres_quartals_meldung.html#anwendungsfall-42-quartalsmäßige-bereitstellung-der-lkf-daten)
 - [ANWF 44 - Jahresmeldung 🔄](AF_moped_fall_jahres_quartals_meldung.html#anwendungsfall-42-jährliche-bereitstellung-der-lkf-daten)
+
+#### Moped Fall - Kommunikation: 
+TBD
 
 #### Moped Fall - Prozessübergreifend: 
 - [ANWF 4,5 - Fallartwechsel 🔄](AF_moped_fall_prozessuebergreifend.html#anwendungsfall-4-fallartwechsel-ambulant---stationär)
