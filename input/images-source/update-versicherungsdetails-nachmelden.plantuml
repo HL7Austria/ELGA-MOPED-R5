@@ -49,7 +49,7 @@ end box
 
 autonumber
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - Moped Fall angelegt
 end note
@@ -62,7 +62,7 @@ Update-Bundle wird gesendet
 - ggf. Hauptversicherter (RelatedPerson)
 end note
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - Aufnahme- und Versicherungsdaten vollständig
 end note
