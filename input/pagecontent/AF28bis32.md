@@ -1,7 +1,7 @@
 {% include styleheader.md %}
 
 
-## Anwendungsfall 28: Positive VAE inkl. Verlängerung
+## Teilprozess 28: Positive VAE inkl. Verlängerung
 
 ### Betroffene Akteure
 
@@ -136,7 +136,7 @@ Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Pro
   </tr>
 </table>
 
-## Anwendungsfall 29: Negative VAE
+## Teilprozess 29: Negative VAE
 
 ### Betroffene Akteure
 
@@ -271,7 +271,7 @@ Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das z
   </tr>
 </table>
 
-## Anwendungsfall 30: VAE mit Status in Bearbeitung
+## Teilprozess 30: VAE mit Status in Bearbeitung
 In Arbeit :)
 
 ### Betroffene Akteure
@@ -365,7 +365,7 @@ In Arbeit :)
 </table>
 
 
-## Anwendungsfall 31: VAE doch positiv (nach vorheriger negativer VAE)
+## Teilprozess 31: VAE doch positiv (nach vorheriger negativer VAE)
 In Arbeit :)
 
 ### Betroffene Akteure
@@ -459,7 +459,7 @@ In Arbeit :)
 </table>
 
 
-## Anwendungsfall 32: VAE doch negativ (nach vorheriger positiver VAE)
+## Teilprozess 32: VAE doch negativ (nach vorheriger positiver VAE)
 In Arbeit :)
 
 ### Betroffene Akteure
