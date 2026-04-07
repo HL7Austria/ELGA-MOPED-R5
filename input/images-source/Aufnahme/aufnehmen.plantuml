@@ -71,8 +71,8 @@ KH ->> MP: POST $aufnehmen
 note over KH
 Aufnahme-Bundle wird gesendet
 - Patient
-- Encounter
-- TransferEncounter (aufnehmende Station)
+- Aufenthalt (Encounter)
+- Aufnehmende Station (TransferEncounter)
 - Aufnahmediagnose
 - ggf. Verischerungsdaten inkl. Hauptversicherter
 - ggf. überweisend Organisation

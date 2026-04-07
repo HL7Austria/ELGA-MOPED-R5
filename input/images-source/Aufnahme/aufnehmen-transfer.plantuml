@@ -58,10 +58,8 @@ end note
 KH ->> MP: POST $aufnehmen
 
 note over KH
-Aufnahme-Bundle wird gesendet
-- Encounter.admission.extension:aufnahmeart = #T "Transfer von einem 
-  anderen Krankenhaus in den allgemein stationären Bereich 
-  inkl. Intensiveinheiten"
+Aufnahme-Bundle wird gesendet mit
+- Aufnahmedaten mit Aufnahmeart "Transfer"
 - alle weiteren Aufnahme-Ressource
 end note
 
