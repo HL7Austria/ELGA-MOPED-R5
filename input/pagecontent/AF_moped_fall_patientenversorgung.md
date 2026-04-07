@@ -1,6 +1,6 @@
 {% include styleheader.md %}
 
-Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Moped-Plattform im Teilprozess "Patientenversorung". Zunächst werden die allgemeinen Interaktionsmöglichkeiten dargestellt, anschließend werden diese durch Beispiele konkretisiert und im Kontext einer spezifischen Anwendung dargestellt.
+Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Moped-Plattform im Teilprozess "Patientenversorgung". Zunächst werden die allgemeinen Interaktionsmöglichkeiten dargestellt, anschließend werden diese durch Beispiele konkretisiert und im Kontext einer spezifischen Anwendung dargestellt.
 
 ### Betroffene Akteure
 
@@ -13,7 +13,7 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 ### Ablauf - generisch
 #### Patientenversorgung (generisch)
-<div>{% include Patientenversorung-update-generisch.svg %}</div>
+<div>{% include Patientenversorgung-update-generisch.svg %}</div>
 <div>{% include Patientenversorgung-einmelden-generisch.svg %}</div>
 
 ### Ablauf - Beispiele zur Anwendung
@@ -35,7 +35,7 @@ Ein Patient wird auf eine Organisationseinheit verlegt bzw. kommt in eine Ambula
 ##### Beschreibung
 Eine zuvor eingebrachte Verlegung / Kontakt wird aktualisiert.
 
-<div>{% include Patientenversorung-update-aktualisierte-verlegung.svg %}</div>
+<div>{% include Patientenversorgung-update-aktualisierte-verlegung.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -47,7 +47,7 @@ Eine zuvor eingebrachte Verlegung / Kontakt wird aktualisiert.
 ##### Beschreibung
 Die Aufnahmediagnose war zum Zeitpunkt der administrativen Aufnahme noch unbekannt und wird nachgereicht. 
 
-<div>{% include Patientenversorung-update-aktualisierte-aufnahmediagnose.svg %}</div>
+<div>{% include Patientenversorgung-update-aktualisierte-aufnahmediagnose.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -61,7 +61,7 @@ TBD: ist eine Aufnahmediagnose für ambulant relevant?
 ##### Beschreibung
 Eine neue Leistung wird erfasst die im Zuge der Patientenversorgung erbracht wurde.
 
-<div>{% include Patientenversorung-update-neue-leistung.svg %}</div>
+<div>{% include Patientenversorgung-update-neue-leistung.svg %}</div>
 
 
 | Behandlungsart|  |
@@ -74,7 +74,7 @@ Eine neue Leistung wird erfasst die im Zuge der Patientenversorgung erbracht wur
 ##### Beschreibung
 Während der Patientenbehandlung wird eine Diagnose gestellt. Diese kann entweder eine Zusatz- oder Hauptdiagnose sein. In manchen Fällen ist sie auch gleichzeitig die Aufnahmediagnose.
 
-<div>{% include Patientenversorung-update-neue-diagnose.svg %}</div>
+<div>{% include Patientenversorgung-update-neue-diagnose.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -86,7 +86,7 @@ Während der Patientenbehandlung wird eine Diagnose gestellt. Diese kann entwede
 ##### Beschreibung
 Manche Details zum Aufenthalt können verwendert werden. Als unveränderbar gelten jedenfalls die Bestandteile der Schlüsselkombination eines Moped-Falls. 
 
-<div>{% include Patientenversorung-update-aktualisierter-fall.svg %}</div>
+<div>{% include Patientenversorgung-update-aktualisierter-fall.svg %}</div>
 
 
 | Behandlungsart|  |
