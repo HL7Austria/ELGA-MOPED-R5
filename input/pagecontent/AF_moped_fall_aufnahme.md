@@ -99,7 +99,7 @@ TBD: wird die überweisende Organization auch für ambulante Fälle mitgegeben?
 
 #### Aufnahme - Durch Transfer
 ##### Beschreibung
-TBD: bei Transfer muss ein bestimmtes Flag gesetzt werden
+TBD: Es muss die richtige Aufnahmeart vergeben werden und die überweisende Organization befüllt
 
 | Behandlungsart|  |
 |-----------|----:|
