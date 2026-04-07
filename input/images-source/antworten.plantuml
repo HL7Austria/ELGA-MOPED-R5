@@ -39,7 +39,7 @@ skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
 
-box "\n.         KH           " #c0c0c0
+box "\n         KH           " #c0c0c0
   actor KH as "KH"
 end box
 
@@ -61,7 +61,7 @@ end box
 
 autonumber
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - Unbeantwortete VAE Anfrage
 - VAE in Arbeit
@@ -72,7 +72,7 @@ note over SV
 VAE Antwort wird gesendet
 end note
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - VAE bewilligt (ggf. mit Zeitraum)
 - VAE abgelehnt

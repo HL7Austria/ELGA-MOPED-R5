@@ -48,7 +48,7 @@ end box
 
 autonumber
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - Unbeantwortete VAE
   Anfrage
@@ -61,7 +61,7 @@ VAE Antwort wird gesendet
 - ClaimResponse.decision = #00 "bewilligt"
 end note
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - VAE bewilligt
 end note

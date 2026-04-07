@@ -48,7 +48,7 @@ end box
 
 autonumber
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - Unbeantwortete VAE
   Anfrage
@@ -71,7 +71,7 @@ der VAERequest automatisch
 gecancelled (Claim.status=cancelled)
 end note
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - VAE abgelehnt
 end note

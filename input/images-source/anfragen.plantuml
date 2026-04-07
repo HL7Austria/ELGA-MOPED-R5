@@ -39,7 +39,7 @@ skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
 
-box "\n.         KH           " #f5e599
+box "\n         KH           " #f5e599
   actor KH as "KH"
 end box
 
@@ -61,7 +61,7 @@ end box
 
 autonumber
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - Aufnahme- und 
   Versicherungsdaten 
@@ -73,7 +73,7 @@ note over KH
 VAE-Anfrage wird gesendet
 end note
 
-note right of MP #b2bfc2
+note right of MP #c5f7ba
 Zustand:
 - Unbeantwortete VAE 
   Anfrage
