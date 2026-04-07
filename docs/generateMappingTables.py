@@ -24,13 +24,31 @@ def get_stats() -> Dict[str, Dict[str, int]]:
     }
 
 LKF_COLUMN_TITLES = [
-    "Feld", "befüllt von", "Profile", "FHIR Ressource",
-    "Pfad von der Ressource aus", "Pfad von der Composition aus", "Anmerkungen"
+    "Feld",
+    "Ambulant",
+    "Stationär",
+    "Intensiv",
+    "Notiz zur Kardinalität",
+    "befüllt von",
+    "Profile",
+    "FHIR Ressource",
+    "Pfad von der Ressource aus",
+    "Pfad von der Composition aus",
+    "Anmerkungen",
 ]
 
 KAORG_COLUMN_TITLES = [
-    "Feld", "Abkürzung", "befüllt von", "Profile", "FHIR Ressource",
-    "Pfad von der Ressource aus", "Pfad von der Composition aus", "Anmerkungen"
+    "Feld",
+    "Abkürzung",
+    "Ambulant",
+    "Stationär",
+    "Notiz zur Kardinalität",
+    "befüllt von",
+    "Profile",
+    "FHIR Ressource",
+    "Pfad von der Ressource aus",
+    "Pfad von der Composition aus",
+    "Anmerkungen",
 ]
 
 LKF_SHEET_NAMES = ["X01", "X02", "X03", "X04", "X05", "X06", "X07"]
@@ -178,7 +196,7 @@ def generate_markdown_for_sheet(
     mask_unused = df["Anmerkungen"].astype(str).str.contains(
         "|".join(UNUSED_FIELD_COMMENTS), case=False, na=False, regex=True
     )
-    cols_to_slash = [c for c in column_titles if c not in ("Feld", "Anmerkungen", "Abkürzung")]
+    cols_to_slash = [c for c in column_titles if c not in ("Feld", "Anmerkungen", "Abkürzung", "Ambulant", "Stationär", "Intensiv", "Notiz zur Kardinalität")]
     df.loc[mask_unused, cols_to_slash] = "/"
     
     mask_e1 = df["Anmerkungen"].astype(str).str.contains(

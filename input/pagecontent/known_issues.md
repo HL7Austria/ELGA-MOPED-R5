@@ -4,7 +4,7 @@ Die folgenden Punkte sind derzeit noch nicht im Implementation Guide enthalten w
 - Umfängliche Beschreibung des Berechtigungskonzeptes
 - Detaillierte Voraussetzungen für den Aufruf der einzelnen Operations
 - Die konkreten Invarianten jedes Profils
-- Die restlichen Anwendungsfälle
+- Die restlichen Teilprozesse
 - Beschreibung von Notifications/Subscriptions
 - Error Handling
 - ...

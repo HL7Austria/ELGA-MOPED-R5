@@ -4,6 +4,7 @@ In diesem Abschnitt werden typische und exemplarische Abläufe im Rahmen des MOP
 
 Ziel dieser Szenarien ist es ein gemeinsames Verständnis über typische Abläufe und deren Abbildung im FHIR-Moped-Kontext zu vermitteln.
 
+[![overview](MOPED_Plattform_Ueberblick.svg){: style="width: 60%"}](MOPED_Plattform_Ueberblick.svg)
 
 ### Überblick der Moped Plattform Datenströme
 

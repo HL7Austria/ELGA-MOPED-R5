@@ -1,9 +1,9 @@
 {% include styleheader.md %}
-
-### Anwendungsfall 6: Abgeschlossene ambulante Behandlung und stationäre Aufnahme am gleichen Tag innerhalb eines KHs
+### Teilprozess 6: Abgeschlossene ambulante Behandlung und stationäre Aufnahme am gleichen Tag innerhalb eines KHs
 In Arbeit :)
 
-#### Betroffene Akteure
+
+### Betroffene Akteure
 
 | Akteur            |  |
 |-------------------|--------------:|
@@ -12,35 +12,61 @@ In Arbeit :)
 | SV (Sozialversicherung)      |  ✅ / ❌  |
 | Bund            |  ✅ / ❌  |
 
-#### Betroffene Behandlungsarten
+### Betroffene Behandlungsarten
 
 | Behandlungsart|  |
 |-----------|----:|
-| Ambulant  |  ✅/❌ |
-| Stationär |  ✅/❌ |
+| Ambulant  |  ❌ |
+| Stationär |  ✅ |
 
 
-#### Beschreibung
+### Beschreibung
 
-#### Beispiel
+### Beispiel
 
-#### Vorbedingung
+### Technische Hinweise
 
-#### Nachbedingung
 
-#### Ablauf 
+### Ablauf 
+<pre class="mermaid">
+    ---
+    config:
+      theme: 'base'
+      themeVariables:
+        primaryColor: '#dbdbdb'         
+        actorBorder: '#666'
+        noteBkgColor: '#f4f4f4'
+        noteBorderColor: '#555'
+    ---
+    sequenceDiagram
+    autonumber
+    box rgb(245, 229, 153)
+    actor KH as KH (Herz Jesu Krankenhaus)
+    end
+    box rgb(197, 247, 186)
+    participant MP as Moped
+    end
+    box rgb(186, 196, 247)
+    actor SV as SV (ÖGK Wien)
+    end
+    box rgb(247, 208, 186)
+    actor LGF as LGF (Landesgesundheitsfonds Wien)
+    end
+    box rgb(252, 179, 179) 
+    actor Bund as Bund 
+    end
 
-#### Technische Hinweise
+</pre>
 
-#### Relevante Profile
+### Relevante Profile
 
-#### Relevante Invarianten
+### Relevante Invarianten
 
-#### Mögliche Notifications
+### Mögliche Notifications
 
-##### SubscriptionTopic: X 
+#### SubscriptionTopic: X 
 
-##### Tabellarische Übersicht
+#### Tabellarische Übersicht
 
 <table class="table-responsive">
   <tr>
