@@ -97,7 +97,7 @@ pages:
     title: Obligations
   anwendungsfaelle.md:
     title: Überblick & Sunshine Case
-    AF-VAE.md:
+    AF_moped_fall_vae.md:
       title: Moped Fall - Versichertenanspruchserklärung
     AF1.md:
       title: ANWF 1 - Planaufnahme
