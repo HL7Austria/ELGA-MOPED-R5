@@ -58,9 +58,9 @@ end note
 SV ->> MP: $antworten (POST VAEResponse)
 
 note over SV
-VAE Antwort wird gesendet
-- ClaimResponse.decision = #00 "bewilligt"
-- ClaimResponse.preAuthPeriod.end = "2026-09-16"
+VAE Antwort wird gesendet mit
+- Entscheidung "bewilligt"
+- End-Datum 16.09.2026
 end note
 
 note right of MP #c5f7ba

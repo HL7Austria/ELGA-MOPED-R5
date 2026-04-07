@@ -55,8 +55,8 @@ end note
 
 SV ->> MP: $antworten (PUT VAEResponse)
 note over SV
-Vorhandene VAE Antwort wird aktualisiert
-- ClaimResponse.decision = #00 "bewilligt"
+Vorhandene VAE Antwort wird aktualisiert mit
+- Entscheidung "bewilligt"
 end note
 
 note right of MP #c5f7ba

@@ -55,8 +55,8 @@ end note
 
 SV ->> MP: $antworten (POST VAEResponse)
 note over SV
-VAE Antwort wird gesendet
-- ClaimResponse.decision = #98 "in Bearbeitung"
+VAE Antwort wird gesendet mit
+- Entscheidung "in Bearbeitung"
 end note
 
 note right of MP #c5f7ba

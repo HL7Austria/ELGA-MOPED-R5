@@ -57,8 +57,8 @@ end note
 SV ->> MP: $antworten (POST VAEResponse)
 
 note over SV
-VAE Antwort wird gesendet
-- ClaimResponse.decision = #00 "bewilligt"
+VAE Antwort wird gesendet mit
+- Entscheidung "bewilligt"
 end note
 
 note right of MP #c5f7ba
