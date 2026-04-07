@@ -18,9 +18,24 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 ### Ablauf - Beispiele zur Anwendung
 
-#### Verlegung (stationär) bzw. Kontakt (ambulant)
+#### Neue Verlegung (stationär) bzw. Kontakt (ambulant)
 ##### Beschreibung
-TBD 
+Ein Patient wird auf eine Organisationseinheit verlegt bzw. kommt in eine Ambulanz. Ein Patient kann nicht auf mehreren Organisationseinheiten / in mehreren Ambulanzen gleichzeitig behandelt werden.
+
+<div>{% include Patientenversorung-update-neue-verlegung.svg %}</div>
+
+| Behandlungsart|  |
+|-----------|----:|
+| Ambulant  |  ✅ |
+| Stationär |  ✅ |
+
+### Ablauf - Beispiele zur Anwendung
+
+#### Aktualisierte Verlegung (stationär) bzw. Kontakt (ambulant)
+##### Beschreibung
+Eine zuvor eingebrachte Verlegung / Kontakt wird aktualisiert.
+
+<div>{% include Patientenversorung-update-aktualisierte-verlegung.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -30,11 +45,13 @@ TBD
 
 #### Aufnahmediagnose nachreichen
 ##### Beschreibung
-TBD
+Die Aufnahmediagnose war zum Zeitpunkt der administrativen Aufnahme noch unbekannt und wird nachgereicht. 
+
+<div>{% include Patientenversorung-update-aktualisierte-aufnahmediagnose.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
-| Ambulant  |  ✅ |
+| Ambulant  |  ❓ |
 | Stationär |  ✅ |
 
 TBD: ist eine Aufnahmediagnose für ambulant relevant?
@@ -42,7 +59,9 @@ TBD: ist eine Aufnahmediagnose für ambulant relevant?
 
 #### Erbrachte Leistung senden
 ##### Beschreibung
-TBD
+Eine neue Leistung wird erfasst die im Zuge der Patientenversorgung erbracht wurde.
+
+<div>{% include Patientenversorung-update-neue-leistung.svg %}</div>
 
 
 | Behandlungsart|  |
@@ -53,7 +72,9 @@ TBD
 
 #### Gestellte Diagnose senden
 ##### Beschreibung
-TBD
+Während der Patientenbehandlung wird eine Diagnose gestellt. Diese kann entweder eine Zusatz- oder Hauptdiagnose sein. In manchen Fällen ist sie auch gleichzeitig die Aufnahmediagnose.
+
+<div>{% include Patientenversorung-update-neue-diagnose.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -63,7 +84,10 @@ TBD
 
 #### Veränderung von Falldetails
 ##### Beschreibung
-TBD
+Manche Details zum Aufenthalt können verwendert werden. Als unveränderbar gelten jedenfalls die Bestandteile der Schlüsselkombination eines Moped-Falls. 
+
+<div>{% include Patientenversorung-update-aktualisierter-fall.svg %}</div>
+
 
 | Behandlungsart|  |
 |-----------|----:|

@@ -38,47 +38,32 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n.         KH           " #f5e599
-  actor KH as "KH"
-end box
-
-box "\n              Moped              " #c5f7ba
+box "\n                                   Moped                                   " #c5f7ba
   participant MP as "Moped"
 end box
 
-box "\n         SV           " #c0c0c0
-  actor SV as "SV"
+box "\n                     KH (Herz-Jesu Krankenhaus)                     " #f5e599
+  actor KH as "KH (Herz-Jesu Krankenhaus)"
 end box
 
-box "\n LGF (Landesgesundheitsfonds)  " #c0c0c0
-  actor LGF as "LGF (Landesgesundheitsfonds)"
-end box
-
-box "\n           Bund           " #c0c0c0
-  actor Bund as "Bund"
-end box
 
 autonumber
 
 note right of MP #c5f7ba
 Zustand:
-- Moped Fall angelegt ✓
-- Aufnahmedaten vollständig ✓ · x
+- Moped Fall angelegt
 end note
 
-KH ->> MP: POST $einmelden
+KH ->> MP: $update (POST Condition)
 
 note over KH
-Einmelden-Bundle sendet die Intensivdokumentation oder eine Registermeldung:
-- TISS-A
-- SAPS3
-- Stroke-Unit Registermeldung
+Condition wird gesendet mit
+- Typ: Aufnahmediagnose
 end note
 
 note right of MP #c5f7ba
 Zustand:
-- Moped Fall angelegt ✓
-- Aufnahmedaten vollständig ✓ · x
+- Aufnahmedaten vollständig
 end note
 
 @enduml
