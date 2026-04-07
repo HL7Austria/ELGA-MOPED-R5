@@ -47,7 +47,7 @@ Eine zuvor eingebrachte Verlegung / Kontakt wird aktualisiert.
 ##### Beschreibung
 Die Aufnahmediagnose war zum Zeitpunkt der administrativen Aufnahme noch unbekannt und wird nachgereicht. 
 
-<div>{% include Patientenversorgung-update-aktualisierte-aufnahmediagnose.svg %}</div>
+<div>{% include Patientenversorgung-update-neue-aufnahmediagnose.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
