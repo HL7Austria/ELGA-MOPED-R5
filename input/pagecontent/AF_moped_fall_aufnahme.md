@@ -123,4 +123,4 @@ TBD: Es muss die richtige Aufnahmeart vergeben werden und die überweisende Orga
 - optional: [Überweisende Organization](TBD)
 
 ### Technische Hinweise
-TBD: Begriffsdefinition Schlüsselkombination
+
