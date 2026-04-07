@@ -22,7 +22,7 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 ##### Beschreibung
 Ein Patient wird auf eine Organisationseinheit verlegt bzw. kommt in eine Ambulanz. Ein Patient kann nicht auf mehreren Organisationseinheiten / in mehreren Ambulanzen gleichzeitig behandelt werden.
 
-<div>{% include Patientenversorung-update-neue-verlegung.svg %}</div>
+<div>{% include Patientenversorgung-update-neue-verlegung.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
