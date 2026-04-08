@@ -26,7 +26,7 @@ Ein Patient kommt in die Ambulanz und wird behandelt. Ambulanter Besuch (LKF Beh
 Ein Patient kommt mit einem gebrochenen Arm in das KH, wird dort behandelt (Röntgen, Gips, etc.) und kann nach ein paar Stunden wieder nach Hause gehen.
 
 #### Vorbedingung
-Es existiert kein Fall mit der selben Kombination aus Aufnahmezahl, KA-Nr und Aufnahmedatum.
+Es existiert kein Fall mit der selben Schlüsselkombination.
 
 #### Ablauf 
 <div class="diagram">{% include standardablauf-ambulant.svg %}</div>

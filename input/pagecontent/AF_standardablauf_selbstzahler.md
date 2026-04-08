@@ -27,7 +27,7 @@ Vorgehensweise für Patienten, die nicht über die Sozialversicherungsschiene ge
 Nicht-EU Ausländer (z.B. US -Bürger), Patienten die über die Sozialhilfe oder Justizanstalten abgerechnet werden  
 
 #### Vorbedingung
-Es existiert kein Fall mit der selben Kombination aus Aufnahmezahl, KA-Nr und Aufnahmedatum.
+Es existiert kein Fall mit der selben Schlüsselkombination.
 
 #### Ablauf
 

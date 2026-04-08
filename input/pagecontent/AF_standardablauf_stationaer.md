@@ -25,7 +25,7 @@ Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Au
 
 
 #### Vorbedingung
-Es existiert kein Fall mit der selben Kombination aus Aufnahmezahl, KA-Nr und Aufnahmedatum.
+Es existiert kein Fall mit der selben Schlüsselkombination.
 
 #### Ablauf 
 <div class="diagram">{% include standardablauf-stationaer.svg %}</div>
