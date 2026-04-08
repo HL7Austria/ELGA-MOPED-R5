@@ -46,6 +46,7 @@ box "\n                                   Moped                                 
   participant MP as "Moped"
 end box
 
+
 autonumber
 
 note right of MP #c5f7ba
@@ -53,16 +54,16 @@ Zustand:
 - Moped Fall angelegt
 end note
 
-KH ->> MP: $update (POST Condition)
+KH ->> MP: $einmelden (POST Questionnaire)
 
 note over KH
-Condition wird gesendet mit
-- Typ: Aufnahmediagnose
+Stroke Unit Questionnaire wird gesendet
 end note
+
 
 note right of MP #c5f7ba
 Zustand:
-- Aufnahmedaten vollständig
+- unverändert
 end note
 
 @enduml
