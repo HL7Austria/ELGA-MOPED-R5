@@ -29,8 +29,6 @@ Ein Patient wird auf eine Organisationseinheit verlegt bzw. kommt in eine Ambula
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-### Ablauf - Beispiele zur Anwendung
-
 #### Aktualisierte Verlegung (stationär) bzw. Kontakt (ambulant)
 ##### Beschreibung
 Eine zuvor eingebrachte Verlegung / Kontakt wird aktualisiert.
