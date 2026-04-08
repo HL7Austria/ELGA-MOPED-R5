@@ -14,23 +14,24 @@
 
 | Behandlungsart|  |
 |-----------|----:|
-| Ambulant  |  ✅ |
+| Ambulant  |  ❌ |
 | Stationär |  ✅ |
 
 
 #### Beschreibung: Susi Sonnenschein
-Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Aufenthalts wird sie verlegt, der zuständige Versicherer wird festgelegt und angefragt und Diagnosen sowie Leistungen werden dokumentiert. Nach Entlassung erfolgt die Abrechnung und Freigabe der Fallakte zur Einsicht durch den Bund sowie die Meldung der Kosteninformation an die SV.
+Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Aufenthalts wird sie verlegt, der zuständige Versicherer wird festgelegt und angefragt und Diagnosen sowie Leistungen werden dokumentiert. Nach Entlassung erfolgt die Abrechnung und Freigabe des Moped-Falls zur Einsicht durch den Bund sowie die Meldung der Kosteninformation an die SV.
 
 #### Beispiel
 
-#### Technische Hinweise
 
 #### Vorbedingung
-
+Es existiert kein Fall mit der selben Schlüsselkombination.
 
 #### Ablauf 
-<div>{% include AFStationaer.svg %}</div>
+<div class="diagram">{% include standardablauf-stationaer.svg %}</div>
+<div>{% include AF_standardablauf_stationaer_requests.md %}</div>
 
+#### Technische Hinweise
 
 #### Relevante Profile
 - [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)

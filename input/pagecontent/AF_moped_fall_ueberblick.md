@@ -8,9 +8,9 @@ Dieses Vorgehen erlaubt eine flexible Modellierung realer Prozessvarianten: Die 
 [![overview](MOPED_Fall_Ueberblick.svg){: style="width: 60%"}](MOPED_Fall_Ueberblick.svg)
 
 Die folgenden Prozesse in ihrem Standardablauf werden im Detail beschrieben:
-- [Moped Fall Stationär](AF_moped_fall_ueberblick.html#anwendungsfall-standardablauf-im-sunshine-case)
-- [Moped Fall Ambulant](AF_moped_fall_ueberblick.html#anwendungsfall-3-ambulanter-fall)
-- [Moped Fall Selbstzahler](AF_moped_fall_ueberblick.html#anwendungsfall-14-selbstzahler)
+- [Moped Fall Stationär](AF_moped_fall_ueberblick.html#standardablauf-moped-fall-stationär)
+- [Moped Fall Ambulant](AF_moped_fall_ueberblick.html#standardablauf-moped-fall-ambulant)
+- [Moped Fall Selbstzahler](AF_moped_fall_ueberblick.html#standardablauf-moped-fall-selbstzahler)
 
 
 Die einzelnen Schritte dieser Standardabläufe sowie mögliche Abweichungen werden als „puzzleartig“ zusammensetzbare Teilprozesse beschrieben – jeweils mit ihren jeweiligen Vor- und Nachbedingungen. Dadurch wird nachvollziehbar, an welchen Stellen innerhalb des Gesamtprozesses die einzelnen Teilprozesse zur Anwendung kommen können.
@@ -18,11 +18,11 @@ Die einzelnen Schritte dieser Standardabläufe sowie mögliche Abweichungen werd
 Eine Übersicht aller Teilprozesse findet sich [hier](#liste-der-teilprozesse).
 
 
-{%include AF_stationaer.md %}
+{%include AF_standardablauf_stationaer.md %}
 
-{% include AF3.md %}
+{%include AF_standardablauf_ambulant.md %}
 
-{% include AF14.md %}
+{%include AF_standardablauf_selbstzahler.md %}
 
 
 ### Liste der Teilprozesse:
