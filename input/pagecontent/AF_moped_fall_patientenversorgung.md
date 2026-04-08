@@ -55,7 +55,7 @@ Die Aufnahmediagnose war zum Zeitpunkt der administrativen Aufnahme noch unbekan
 TBD: ist eine Aufnahmediagnose für ambulant relevant?
 
 
-#### Erbrachte Leistung senden
+#### Erbrachte Leistung einbringen
 ##### Beschreibung
 Eine neue Leistung wird erfasst die im Zuge der Patientenversorgung erbracht wurde.
 
@@ -68,7 +68,7 @@ Eine neue Leistung wird erfasst die im Zuge der Patientenversorgung erbracht wur
 | Stationär |  ✅ |
 
 
-#### Gestellte Diagnose senden
+#### Gestellte Diagnose einbringen
 ##### Beschreibung
 Während der Patientenbehandlung wird eine Diagnose gestellt. Diese kann entweder eine Zusatz- oder Hauptdiagnose sein. In manchen Fällen ist sie auch gleichzeitig die Aufnahmediagnose.
 
@@ -118,9 +118,8 @@ TBD: gibt es einen Teil der Registermeldung die bei ambulanter Nachbehandlung ei
 
 ### Relevante Profile
 - [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
-- [$update Bundle](StructureDefinition-MopedDatenUpdate.html)
-- [SAPS3 Questionnaire](StructureDefinition-LKFSAPS3Questionnaire.html)
-- [TISS-A Questionnaire](StructureDefinition-LKFTISSAQuestionnaire.html)
+- [SAPS3 Questionnaire](Questionnaire-LKFSAPS3Questionnaire.html)
+- [TISS-A Questionnaire](Questionnaire-LKFTISSAQuestionnaire.html)
 
 ### Technische Hinweise
 
