@@ -86,17 +86,6 @@ Manche Details zum Aufenthalt können verwendert werden. Als unveränderbar gelt
 
 <div>{% include Patientenversorgung-update-aktualisierter-fall.svg %}</div>
 
-
-| Behandlungsart|  |
-|-----------|----:|
-| Ambulant  |  ✅ |
-| Stationär |  ✅ |
-
-
-#### Veränderung von Patientendetails
-##### Beschreibung
-TBD
-
 | Behandlungsart|  |
 |-----------|----:|
 | Ambulant  |  ✅ |
@@ -118,6 +107,8 @@ Der Aufenthalt auf Intensivstationen (identifiziert durch bestimmte Funktionscod
 #### Einbringen der Stroke-Unit Registermeldung
 ##### Beschreibung
 TBD: gibt es einen Teil der Registermeldung die bei ambulanter Nachbehandlung eingebracht wird?
+
+<div>{% include Patientenversorgung-einmelden-strokeunit.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
