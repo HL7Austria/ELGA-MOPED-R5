@@ -3,7 +3,9 @@ Parent: MopedTransferEncounterS
 Description: "MOPED Profil der Encounter Ressource für die Verlegung auf Intensivstationen"
 Title: "MOPED TransferEncounter Intensiv"
 
-//TBD actualPeriod.start Uhrzeit verpflichtend machen
+//TBD: ggf. Regex von datetime damit Uhrzeit auch vorhanden ist und nicht nur Datum
+* actualPeriod 1..1
+* actualPeriod.start 1..1
 
 * obeys moped-TENC-status-entweder-in-progress-oder-completed
 * obeys moped-verlegen-intensiv-verpflichtendes-abgangsdatum
