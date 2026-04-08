@@ -74,8 +74,8 @@ Aufnahme-Bundle wird gesendet
 - Aufenthalt (Encounter)
 - Aufnehmende Station (TransferEncounter)
 - Aufnahmediagnose
-- ggf. Verischerungsdaten inkl. Hauptversicherter
-- ggf. überweisend Organisation
+- ggf. Versicherungsdaten inkl. Hauptversicherter
+- ggf. überweisende Organisation
 end note
 
 note right of MP #c5f7ba
