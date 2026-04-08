@@ -104,22 +104,24 @@ TBD
 
 #### Einbringen der Intensivdokumentation
 ##### Beschreibung
-TBD
+Der Aufenthalt auf Intensivstationen (identifiziert durch bestimmte Funktionscodes) erfordert eine Einmeldung der Intensivdokumentation. 
+
+<div>{% include Patientenversorgung-einmelden-intensiv.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
-| Ambulant  | ❓ |
+| Ambulant  | ❌ |
 | Stationär |  ✅ |
 
 
 
 #### Einbringen der Stroke-Unit Registermeldung
 ##### Beschreibung
-TBD:
+TBD: gibt es einen Teil der Registermeldung die bei ambulanter Nachbehandlung eingebracht wird?
 
 | Behandlungsart|  |
 |-----------|----:|
-| Ambulant  | ❌ |
+| Ambulant  | ❓ |
 | Stationär |  ✅ |
 
 
