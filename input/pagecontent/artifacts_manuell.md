@@ -151,8 +151,8 @@ Questionnaires für die Modellierung von Intensivdokumentation
 
 | | |
 | :--- | :--- |
-| [I12 Questionnaire für TISS-A-Daten](Questionnaire-LKFTISSAQuestionnaire.md) |  |
-| [SAPS3 Questionnaire](Questionnaire-LKFSAPS3Questionnaire.md) | A questionnaire for collecting SAPS3 data |
+| [I12 Questionnaire für TISS-A-Daten](Questionnaire-LKFTISSAQuestionnaire.md) | TISS-A Questionnaire |
+| [SAPS3 Questionnaire](Questionnaire-LKFSAPS3Questionnaire.md) | SAPS3 Questionnaire |
 
 
 ### Questionnaires: Registermeldungen
