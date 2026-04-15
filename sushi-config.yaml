@@ -149,6 +149,8 @@ pages:
     title: Copyright
   known_issues.md:
     title: Known Issues
+  artifacts_manuell.md:
+    title: Artifacts Summary
   
     
 menu:
@@ -218,7 +220,7 @@ menu:
     LKF Jahresmeldung: jahresmeldungen_mapping.html
     Ka-Org Mapping: ka-org_mapping.html
     Stammdaten: stammdaten_mapping.html
-  Artifacts: artifacts.html
+  Artifacts: artifacts_manuell.html
   About:
     Impressum: imprint.html
     Mitwirkende: authors.html
@@ -314,6 +316,73 @@ menu:
 #     resources:
 #     - StructureDefinition/bark-control
 #     - StructureDefinition/bee-sting
+groups:
+  VerordnungKA:
+    name: Verordnungsrelevant - Datenfelder für die KA
+    description: Verordnungsrelevante Ressourcenprofile für den Akteuer KA
+  VerordnungBund:
+    name: Verordnungsrelevant - Datenfelder für den Bund
+    description: Verordnungsrelevante Ressourcenprofile für den Akteuer Bund
+    resources: 
+    - StructureDefinition/MopedEncounterBund
+  VerordnungLGF:
+    name: Verordnungsrelevant - Datenfelder für den LGF
+    description: Verordnungsrelevante Ressourcenprofile für den Akteuer LGF
+    resources: 
+    - StructureDefinition/MopedEncounterLGF
+  VerordnungSV:
+    name: Verordnungsrelevant - Datenfelder für die SV
+    description: Verordnungsrelevante Ressourcenprofile für den Akteuer SV
+    resources:
+    - StructureDefinition/MopedEncounterSV
+  QuestionnairesIntensiv:
+    name: Fallbezogene Questionnaires für die Intensivdokumentation
+    description: Questionnaires für die Modellierung von Intensivdokumentation
+    resources:
+    - Questionnaire/LKFSAPS3Questionnaire
+    - Questionnaire/LKFTISSAQuestionnaire
+  QuestionnairesJahresstatistikmeldung:
+    name: Questionnaires - Jahresstatistikmeldung/Monatsstatistikmeldung
+    description: Jahresstatistikmeldungen von der Krankenanstalt für den LGF und Bund.
+    resources:
+    - Questionnaire/LKFA01Questionnaire
+    - Questionnaire/LKFB01Questionnaire
+    - Questionnaire/LKFB02Questionnaire
+    - Questionnaire/LKFB03Questionnaire
+    - Questionnaire/LKFB04Questionnaire
+    - Questionnaire/LKFB05Questionnaire
+    - Questionnaire/LKFB06Questionnaire
+    - Questionnaire/LKFG01Questionnaire
+    - Questionnaire/LKFG02Questionnaire
+    - Questionnaire/LKFK01Questionnaire
+    - Questionnaire/LKFK02Questionnaire
+    - Questionnaire/LKFK03Questionnaire
+    - Questionnaire/LKFK04Questionnaire
+    - Questionnaire/LKFK05Questionnaire
+    - Questionnaire/LKFK06Questionnaire
+    - Questionnaire/LKFK07Questionnaire
+    - Questionnaire/LKFK09Questionnaire
+    - Questionnaire/LKFK09Questionnaire
+    - Questionnaire/LKFK10Questionnaire
+    - Questionnaire/LKFK11Questionnaire
+    - Questionnaire/LKFK12Questionnaire
+    - Questionnaire/LKFK13Questionnaire
+    - Questionnaire/LKFK14Questionnaire
+    - Questionnaire/LKFK15Questionnaire
+    - Questionnaire/LKFK16Questionnaire
+    - Questionnaire/LKFL01Questionnaire
+    - Questionnaire/LKFL02Questionnaire
+    - Questionnaire/LKFL03Questionnaire
+    - Questionnaire/LKFL04Questionnaire
+
+  QuestionnairesRegistermeldungen:
+    name: Questionnaires - Registermeldungen
+    description: Questionnaires zur Definition von Registermeldungen in Moped.
+    resources:
+    - Questionnaire/StrokeUnitQuestionnaire2025
+    - Questionnaire/register-questionnaire
+
+
 #
 #
 # The ImplementationGuide resource defines several other properties
