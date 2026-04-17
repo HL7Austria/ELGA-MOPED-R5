@@ -33,9 +33,9 @@ Title: "MOPED Coverage"
 * class contains
     Versichertenkategorien 0..1
 * class[Versichertenkategorien].type from $SVCVersichertenkategorien (required)
-* class[Versichertenkategorien].type.coding = http://terminology.hl7.org/CodeSystem/coverage-class#group
+* class[Versichertenkategorien].type.coding = $CoverageClass#group
 * class[Versichertenkategorien] ^short = "KaOrg: Versichertengruppe/Kategorie"
 * insert legacyMapping(class[Versichertenkategorien].value, KaOrg, [[Versichertengruppe/Kategorie]])
 * insert ShallPopulateObligation(class[Versichertenkategorien].value, MopedKHActor)
-* class[Versichertenkategorien].value.system = "http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs"
+* class[Versichertenkategorien].value.system = $SVCVersichertenkategorien
 * insert ShallPopulateObligation(class[Versichertenkategorien], MopedKHActor)

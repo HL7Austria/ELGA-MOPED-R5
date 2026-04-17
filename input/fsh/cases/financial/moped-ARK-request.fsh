@@ -8,7 +8,7 @@ Description: "MOPED Profil der Claim Ressource für die Kostenmeldung für Ausl�
 * patient only Reference(MopedPatient)
 * patient 1..1
 * insert MopedHandleObligation(patient)
-* use = http://hl7.org/fhir/claim-use#claim
+* use = $ClaimUse#claim
 * insert ShallPopulateObligation(use, MopedLGFActor)
 * type from MopedClaimTypeVS
 * type.coding = MopedClaimTypeCS#ARKREQ
@@ -35,7 +35,7 @@ Description: "MOPED Profil der Claim Ressource für die Kostenmeldung für Ausl�
 * related.claim only Reference(MopedLKFRequest)
 * related.claim 1..
 * insert ShallPopulateObligation(related.claim, MopedLGFActor)
-* related.relationship = http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#associated
+* related.relationship = $RelatedClaimRelationshipType#associated
 * insert ShallPopulateObligation(related.relationship, MopedLGFActor)
 //Coverage hier relevant?
 
