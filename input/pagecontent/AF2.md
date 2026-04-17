@@ -29,7 +29,7 @@ Der Patient wird stationär in das KH aufgenommen und ein Aufenthalt (Encounter)
 
 ### Ablauf 
 
-<div>{% include AF2.svg %}</div>
+<div>{% include_relative plantuml/AF2.svg %}</div>
 
 ### Relevante Profile
 - [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)

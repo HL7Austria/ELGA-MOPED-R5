@@ -13,10 +13,10 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 ### Ablauf - generisch
 #### VAE Anfrage (generisch)
-<div>{% include anfragen.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/anfragen.svg %}</div>
 
 #### VAE Antwort (generisch)
-<div>{% include antworten.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten.svg %}</div>
 
 ### Ablauf - Beispiele zur Anwendung
 
@@ -29,7 +29,7 @@ Aufgrund der eingelangten VAE (Versichertenanspruchserklärung) Anfrage erfolgt 
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-positiv.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-positiv.svg %}</div>
 
 #### Positive VAE mit Fristende
 
@@ -40,7 +40,7 @@ Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt e
 | Ambulant  |  ❌ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-positiv-zeitraum.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-positiv-zeitraum.svg %}</div>
 
 #### Negative VAE
 
@@ -57,7 +57,7 @@ Aufgrund der eingelangten Aufnahme-/Ereignisanzeige erfolgt seitens SV eine nega
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-negativ.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-negativ.svg %}</div>
 
 #### VAE in Arbeit
 
@@ -68,7 +68,7 @@ TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-in-arbeit.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-in-arbeit.svg %}</div>
 
 #### VAE in Arbeit wird später bewilligt
 
@@ -79,7 +79,7 @@ TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-in-arbeit-bewilligt.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-in-arbeit-bewilligt.svg %}</div>
 
 #### Anfrage für Verlängerung
 
@@ -90,7 +90,7 @@ Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum (Fri
 | Ambulant  |  ❌ |
 | Stationär |  ✅ |
 
-<div>{% include anfragen-verlaengerung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/anfragen-verlaengerung.svg %}</div>
 
 #### Antwort auf Verlängerung
 
@@ -101,7 +101,7 @@ Die Verlängerungs-Anfrage wird entweder genehmigt oder abgelehnt.
 | Ambulant  |  ❌ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-verlaengerung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-verlaengerung.svg %}</div>
 
 #### VAE doch positiv
 

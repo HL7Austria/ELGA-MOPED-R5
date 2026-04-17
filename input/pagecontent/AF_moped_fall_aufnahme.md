@@ -13,7 +13,7 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 ### Ablauf - generisch
 #### Aufnahme (generisch)
-<div>{% include aufnehmen.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-aufnahme/aufnehmen.svg %}</div>
 
 ### Ablauf - Beispiele zur Anwendung
 
@@ -26,7 +26,7 @@ Wenn das bPK bekannt ist, dann ist eine datenminimierte Version der Patienten-Re
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include aufnehmen-bpk.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-aufnahme/aufnehmen-bpk.svg %}</div>
 
 #### Aufnahme - bPK des Patienten nicht bekannt
 ##### Beschreibung
@@ -37,7 +37,7 @@ Wenn das bPK des Patienten nicht bekannt ist bzw. nicht exisiert, dann ist eine 
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include aufnehmen-kein-bpk.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-aufnahme/aufnehmen-kein-bpk.svg %}</div>
 
 #### Aufnahme - Versicherungsdetails bekannt
 ##### Beschreibung
@@ -48,7 +48,7 @@ Sind die Versicherungsdetails bereits bei der Aufnahme bekannt, können diese di
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include aufnehmen-versicherungsdetails.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-aufnahme/aufnehmen-versicherungsdetails.svg %}</div>
 
 #### Aufnahme - Selbstzahler
 ##### Beschreibung
@@ -59,7 +59,7 @@ Ist bereits bei der Aufnahme bekannt, dass der Patient ein Selbstzahler ist, kan
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include aufnehmen-selbstzahler.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-aufnahme/aufnehmen-selbstzahler.svg %}</div>
 
 #### Aufnahme - Versicherungsdetails noch nicht bekannt
 ##### Beschreibung
@@ -70,8 +70,8 @@ Die Versicherungsdetails sind bei der Aufnahme optional. Wenn sie erst nach Ausf
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include aufnehmen-keine-versicherungsdetails.svg %}</div>
-<div>{% include update-versicherungsdetails-nachmelden.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-aufnahme/aufnehmen-keine-versicherungsdetails.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-aufnahme/update-versicherungsdetails-nachmelden.svg %}</div>
 
 #### Aufnahme - Neugeborenes
 ##### Beschreibung
@@ -94,7 +94,7 @@ Kommt ein Patient durch eine Überweisung in das Krankenhaus, so muss der Überw
 
 TBD: wird die überweisende Organization auch für ambulante Fälle mitgegeben?
 
-<div>{% include aufnehmen-ueberweisung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-aufnahme/aufnehmen-ueberweisung.svg %}</div>
 
 
 #### Aufnahme - Durch Transfer
@@ -106,7 +106,7 @@ TBD: Es muss die richtige Aufnahmeart vergeben werden und die überweisende Orga
 | Ambulant  | ❌ |
 | Stationär |  ✅ |
 
-<div>{% include aufnehmen-transfer.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-aufnahme/aufnehmen-transfer.svg %}</div>
 
 
 ### Relevante Profile

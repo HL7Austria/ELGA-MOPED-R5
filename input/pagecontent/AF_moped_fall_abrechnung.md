@@ -13,7 +13,7 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 ### Ablauf - generisch
 #### Abrechnung - generisch
-<div>{% include abrechnen.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen.svg %}</div>
 
 Folgende Zustände existieren und dienen in weiterer Folge als Vor-/Nachbedingungen:
 - es gibt noch keine Abrechnung
@@ -25,7 +25,7 @@ Folgende Zustände existieren und dienen in weiterer Folge als Vor-/Nachbedingun
 - es gibt bereits eine abgelehnte endgültige Abrechnung
 
 zwischen den Zuständen sind folgende Übergänge möglich:
-<div>{% include abrechnen-zustaende.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-zustaende.svg %}</div>
 
 
 ### Ablauf - Beispiele zur Anwendung
@@ -39,7 +39,7 @@ Eine vorläufige Abrechnung wird entweder initial eingebracht oder ersetzt aufgr
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include abrechnen-vorlaeufig.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-vorlaeufig.svg %}</div>
 
 #### Abrechnung - endgültige Abrechnung
 ##### Beschreibung
@@ -50,7 +50,7 @@ Eine endgültige Abrechnung wird entweder initial eingebracht, folgt auf eine vo
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include abrechnen-endgueltig.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-endgueltig.svg %}</div>
 
 #### Abrechnung - Leistung ohne Abrechnungsrelevanz
 ##### Beschreibung
@@ -63,7 +63,7 @@ Vorsorgeuntersuchung Coloskopie, Vorsorgeuntersuchung Brust-Krebs-Früherkennung
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include abrechnen-leitsung-ohne-abrechnungsrelevanz.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-leitsung-ohne-abrechnungsrelevanz.svg %}</div>
 
 
 #### Abrechnung - Änderung von Leistungen oder Diagnosen für Abrechnung
@@ -77,8 +77,8 @@ Leistungen, Diagnosen oder andere abrechnungsrelevante Informationen müssen im 
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include update-aenderung-nach-abrechnung.svg %}</div>
-<div>{% include abrechnen-nach-aenderung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-abrechnen/update-aenderung-nach-abrechnung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-nach-aenderung.svg %}</div>
 
 ### Relevante Profile
 - [$abrechnen Bundle](StructureDefinition-MopedAbrechnenBundleKH.html)
