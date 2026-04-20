@@ -5,5 +5,5 @@ Description: "Moped Definition für XDok"
 * status = #active
 * name.value = "XDok"
 * category = $DeviceCategory#software
-* version 1..
+* deviceVersion.value 1..
 * type = MopedDeviceTypesCS#XDok

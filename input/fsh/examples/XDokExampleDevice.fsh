@@ -6,5 +6,5 @@ Usage: #example
 * name.value = "XDok"
 * name.type = http://hl7.org/fhir/device-nametype#registered-name
 * category = http://hl7.org/fhir/device-category#software
-* version.value = "1.0"
+* deviceVersion.value = "1.0"
 * type = MopedDeviceTypesCS#XDok
