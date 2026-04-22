@@ -148,7 +148,7 @@ Im vorliegenden Modell wird zwischen einem übergeordneten Encounter und unterge
 
 Die Modellierung einer weiteren Ebene (i.e. Leistungsstellenkontakte) ist im vorliegenden Kontext nicht erforderlich und wird daher nicht umgesetzt.
 
-![Encounter-Hierarchie](images/EncounterHierarchie.png)
+[![Encounter-Hierarchie](EncounterHierarchie.png)](EncounterHierarchie.png)
 
 #### Trennung von Fall- und Abteilungsebene
 
