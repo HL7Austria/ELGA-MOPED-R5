@@ -1,5 +1,3 @@
-Alias: HL7V2 = http://terminology.hl7.org/CodeSystem/v2-0203
-
 Profile: Hauptversicherter
 Parent: RelatedPerson
 Title: "MOPED Hauptversicherter"
@@ -17,7 +15,7 @@ Description: "MOPED Profil der Person Ressource für den Hauptversicherten"
 * birthDate ^short = "KaOrg: Geburtsdatum des Hauptversicherten"
 * insert legacyMapping(birthDate, KaOrg, [[Geburtsdatum des Hauptversicherten]])
 * insert ShallPopulateObligation(birthDate, MopedKHActor)
-* identifier.type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (extensible)
+* identifier.type from $HL7ATPatientIdentifier (extensible)
 //Slice for Identifier, order matters
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
@@ -27,11 +25,11 @@ Description: "MOPED Profil der Person Ressource für den Hauptversicherten"
 * identifier[socialSecurityNumber] ^short = "KaOrg: Versicherungsnummer des Hauptversicherten"
 * insert legacyMapping(identifier[socialSecurityNumber].value, KaOrg, [[Versicherungsnummer des Hauptversicherten]])
 * insert ShallPopulateObligation(identifier[socialSecurityNumber].value, MopedKHActor)
-* identifier[socialSecurityNumber].type from https://termgit.elga.gv.at/ValueSet/hl7-at-patientidentifier (required)
-* identifier[socialSecurityNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
-* identifier[socialSecurityNumber].type.coding.code = HL7V2#SS (exactly)
+* identifier[socialSecurityNumber].type from $HL7ATPatientIdentifier (required)
+* identifier[socialSecurityNumber].type.coding.system = $HL7V2 (exactly)
+* identifier[socialSecurityNumber].type.coding.code = $HL7V2#SS (exactly)
 * identifier[socialSecurityNumber].system 1..1
-* identifier[socialSecurityNumber].system = "urn:oid:1.2.40.0.10.1.4.3.1" (exactly)
+* identifier[socialSecurityNumber].system = $SVNROID (exactly)
 * identifier[socialSecurityNumber].system ^short = "OID for the Social Security Number in Austria"
 //* identifier[socialSecurityNumber].assigner.reference = "https://www.gesundheit.gv.at/OID_Frontend/oiddetail.htm?smallView=true&actualOid=1.2.40.0.10.1.4.3.1" (exactly)
 * identifier[socialSecurityNumber].assigner.display = "Dachverband der österreichischen Sozialversicherungsträger" (exactly)

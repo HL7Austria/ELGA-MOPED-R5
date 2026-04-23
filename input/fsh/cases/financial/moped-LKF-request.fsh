@@ -10,7 +10,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * patient only Reference(MopedPatient)
 * patient 1..1
 * insert MopedHandleObligation(patient)
-* use = http://hl7.org/fhir/claim-use#claim
+* use = $ClaimUse#claim
 * insert ShallPopulateObligation(use, MopedKHActor)
 * type from MopedClaimTypeVS
 * type.coding = MopedClaimTypeCS#LKFREQ (exactly)

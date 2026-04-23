@@ -5,9 +5,9 @@ Title: "MOPED KH Organisationseinheiten"
 
 * providedBy only Reference(KHOrganization)
 * providedBy ^short = "Krankenanstalt zu welcher die Abteilung gehört"
-* type = http://terminology.hl7.org/CodeSystem/service-type#361
+* type = $ServiceType#361
 //#361 Hospital Services
-* category = http://terminology.hl7.org/CodeSystem/service-category#35
+* category = $ServiceCategory#35
 //#35 Hospital
 * identifier ^slicing.rules = #open
 * identifier ^slicing.discriminator.type = #value
@@ -15,7 +15,7 @@ Title: "MOPED KH Organisationseinheiten"
 * identifier ^slicing.ordered = false
 * identifier contains Funktionscode 0..1
 * identifier[Funktionscode] ^short = "Funktionscode inkl. Subcode der Abteilung laut LKF"
-* identifier[Funktionscode].system = "http://example.org/lkf-system/funktionscode" (exactly)
+* identifier[Funktionscode].system = $Funktionscode (exactly)
 * location 1..
 * location ^short = "Angabe des spezifischen Standorts"
 
