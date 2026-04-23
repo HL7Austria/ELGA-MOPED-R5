@@ -2,7 +2,7 @@ Extension: Kostenstelle
 Id: moped-ext-Kostenstelle
 Title: "Kostenstelle"
 Description: "MOPED Extension für akzeptierte Errors und Warnings"
-Context: MopedKHOrganisationseinheit
+Context: MopedKAOrganisationseinheit
 * extension contains
     InterneKostenstellennummer 0..1 and
     InterneKostenstellenbezeichnung 0..1 and

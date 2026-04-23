@@ -1,6 +1,6 @@
-Profile: MopedInputBundleKH
+Profile: MopedInputBundleKA
 Parent: Bundle
-Title: "MOPED Input Bundle KH"
+Title: "MOPED Input Bundle KA"
 Description: """Bundle für die Input-Ressourcen beim Update von Informationen zu einem Fall"""
 
 

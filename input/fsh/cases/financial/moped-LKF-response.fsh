@@ -18,7 +18,7 @@ Description: "MOPED Profil der ClaimResponse Ressource für die Leistungsabrechn
 * request only Reference(MopedLKFRequest)
 * request 1..1
 * insert ShallPopulateObligation(request, MopedLGFActor) //oder moped?
-* requestor only Reference(KHOrganization)
+* requestor only Reference(KAOrganization)
 * requestor 1..1
 * insert MopedHandleObligation(requestor)
 * outcome 1..1

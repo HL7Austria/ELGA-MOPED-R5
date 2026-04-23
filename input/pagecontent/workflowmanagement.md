@@ -34,7 +34,7 @@ Diese Status-Änderungen folgen den Definitionen des <a href="https://build.fhir
     stateDiagram-v2
     [*] --> active : Ressource wird eingebracht
 
-    active --> cancelled : Stornierung durch KH
+    active --> cancelled : Stornierung durch KA
     active --> entered_in_error : Fehler erkannt
     active --> [*] : Verarbeitet
 </pre>

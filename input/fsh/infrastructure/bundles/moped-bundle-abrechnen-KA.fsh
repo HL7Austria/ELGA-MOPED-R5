@@ -1,7 +1,7 @@
-Profile: MopedAbrechnenBundleKH
+Profile: MopedAbrechnenBundleKA
 Parent: Bundle
-Title: "MOPED Abrechnen Bundle KH"
-Description: """Bundle für die Input-Ressourcen beim Abrechnen (KH)"""
+Title: "MOPED Abrechnen Bundle KA"
+Description: """Bundle für die Input-Ressourcen beim Abrechnen (KA)"""
 
 
 

@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n  KH (Herz Jesu Krankenhaus)  " #f5e599
-  actor KH as "KH"
+box "\n  KA (Herz Jesu Krankenhaus)  " #f5e599
+  actor KA as "KA"
 end box
 
 box "\n       Moped       " #c5f7ba
@@ -60,12 +60,12 @@ end box
 
 autonumber
 
-KH->>MP: $anfragen
-Note over KH: Initiale Anfrage:%n()VAERequestInitial 1%n() KLAS = A + Zeitintervall: ab 1.1.
+KA->>MP: $anfragen
+Note over KA: Initiale Anfrage:%n()VAERequestInitial 1%n() KLAS = A + Zeitintervall: ab 1.1.
 SV-->>MP: $antworten
 Note over SV: VAEResponse 1%n()VKBEFR = N + Zeitintervall: ab 1.1.
-KH->>MP: $anfragen
-Note over KH: Klassenwechsel: %n() VAERequestInitial 2%n() KLAS = A + Zeitintervall: von 1.1. bis 3.1.%n() KLAS = S + Zeitintervall: ab 3.1. 
+KA->>MP: $anfragen
+Note over KA: Klassenwechsel: %n() VAERequestInitial 2%n() KLAS = A + Zeitintervall: von 1.1. bis 3.1.%n() KLAS = S + Zeitintervall: ab 3.1. 
 MP->>MP: Moped Operation Logik von $anfragen
 Note over MP: Automatischen Stornierung von VAERequestInitial 1, da es sich%n() um eine Anfrage für den gleichen Zeitraum handelt.
 SV-->>MP: $antworten

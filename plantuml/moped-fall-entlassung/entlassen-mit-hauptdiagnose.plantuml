@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n                     KH (Herz-Jesu Krankenhaus)                     " #f5e599
-  actor KH as "KH (Herz-Jesu Krankenhaus)"
+box "\n                     KA (Herz-Jesu Krankenhaus)                     " #f5e599
+  actor KA as "KA (Herz-Jesu Krankenhaus)"
 end box
 
 box "\n                                   Moped                                   " #c5f7ba
@@ -54,9 +54,9 @@ Zustand:
 - Moped Fall angelegt
 end note
 
-KH ->> MP: POST $entlassen
+KA ->> MP: POST $entlassen
 
-note over KH
+note over KA
 Entlassungs-Bundle wird gesendet mit
 - Aufenthalt (Encounter mit Status 'completed')
 - Bewegung (TransferEncounter)

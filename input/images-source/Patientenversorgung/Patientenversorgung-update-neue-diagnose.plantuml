@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n                     KH (Herz-Jesu Krankenhaus)                     " #f5e599
-  actor KH as "KH (Herz-Jesu Krankenhaus)"
+box "\n                     KA (Herz-Jesu Krankenhaus)                     " #f5e599
+  actor KA as "KA (Herz-Jesu Krankenhaus)"
 end box
 
 box "\n                                   Moped                                   " #c5f7ba
@@ -53,9 +53,9 @@ Zustand:
 - Moped Fall angelegt
 end note
 
-KH ->> MP: $update (POST Condition)
+KA ->> MP: $update (POST Condition)
 
-note over KH
+note over KA
 Condition wird gesendet mit
 - Typ: Aufnahmediagnose
 end note

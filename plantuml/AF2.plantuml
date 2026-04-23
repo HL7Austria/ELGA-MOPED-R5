@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n  KH (Herz Jesu Krankenhaus)  " #f5e599
-  actor KH as "KH"
+box "\n  KA (Herz Jesu Krankenhaus)  " #f5e599
+  actor KA as "KA"
 end box
 
 box "\n       Moped       " #c5f7ba
@@ -60,7 +60,7 @@ end box
 
 autonumber
 
-KH ->> MP: $aufnehmen
-Note over KH: Patient wird aufgenommen
+KA ->> MP: $aufnehmen
+Note over KA: Patient wird aufgenommen
 
 @enduml

@@ -6,7 +6,7 @@ Description: "CodeSystem für die Moped Sections der Composition Ressource"
 * ^caseSensitive = true
 * #SV "Zuständige SV"
 * #LGF "Zuständiger LGF"
-* #KH "Zuständiges KH"
+* #KA "Zuständige KA"
 * #ABT "Besuchte Abteilungen"
 * #COV "Coverages"
 * #DIAG "Diagnosen (Conditions)"

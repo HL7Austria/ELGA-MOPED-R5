@@ -1,6 +1,6 @@
-Profile: MopedUpdateBundleKH
-Parent: MopedInputBundleKH
-Title: "MOPED Update Bundle KH"
+Profile: MopedUpdateBundleKA
+Parent: MopedInputBundleKA
+Title: "MOPED Update Bundle KA"
 Description: """Bundle für die Input-Ressourcen beim Update von Informationen zu einem Fall"""
 
 * entry[Aufenthalt].resource only MopedEncounter //TBD nach Entscheidung zu ambulantem Fall den generischen "MopedEncounter" ersetzen durch "MopedEncounterA or MopedEncounterS"  

@@ -83,7 +83,7 @@
     "reference": "Patient/Patient42"
   },
   "serviceProvider": {
-    "reference": "Organization/KHK999"
+    "reference": "Organization/KAK999"
   },
   "actualPeriod": {
     "start": "2025-01-01T12:00:00+02:00",

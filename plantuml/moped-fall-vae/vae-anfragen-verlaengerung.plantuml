@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n                     KH (Herz-Jesu Krankenhaus)                     " #f5e599
-  actor KH as "KH (Herz-Jesu Krankenhaus)"
+box "\n                     KA (Herz-Jesu Krankenhaus)                     " #f5e599
+  actor KA as "KA (Herz-Jesu Krankenhaus)"
 end box
 
 box "\n                                   Moped                                   " #c5f7ba
@@ -56,9 +56,9 @@ Zustand:
   Zeitraum: 01.09.2026-16.09.2026
 end note
 
-KH ->> MP: $anfragen (POST VAERequest)
+KA ->> MP: $anfragen (POST VAERequest)
 
-note over KH
+note over KA
 Zusätzliche VAE Anfrage wird gesendet mit
 - Typ "VAE Verlängerung"
 - Referenz auf den initialen VAERequest 

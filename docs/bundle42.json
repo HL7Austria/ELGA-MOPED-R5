@@ -51,24 +51,24 @@
         ],
         "author": [
           {
-            "reference": "Organization/KHK999"
+            "reference": "Organization/KAK999"
           }
         ],
         "title": "LKF Testdaten Fall",
         "section": [
           {
-            "title": "Zuständiges KH",
+            "title": "Zuständige KA",
             "code": {
               "coding": [
                 {
                   "system": "https://elga.moped.at/CodeSystem/CompositionSectionsCS",
-                  "code": "KH"
+                  "code": "KA"
                 }
               ]
             },
             "entry": [
               {
-                "reference": "Organization/KHK999"
+                "reference": "Organization/KAK999"
               }
             ]
           },
@@ -336,7 +336,7 @@
           "reference": "Patient/Patient42"
         },
         "serviceProvider": {
-          "reference": "Organization/KHK999"
+          "reference": "Organization/KAK999"
         },
         "actualPeriod": {
           "start": "2025-01-01T12:00:00+02:00",
@@ -412,7 +412,7 @@
           "reference": "Organization/SV11"
         },
         "provider": {
-          "reference": "Organization/KHK999"
+          "reference": "Organization/KAK999"
         },
         "encounter": [
           {
@@ -697,7 +697,7 @@
           "reference": "Encounter/Encounter42"
         },
         "serviceProvider": {
-          "reference": "Organization/KHK999ABT11111100"
+          "reference": "Organization/KAK999ABT11111100"
         },
         "actualPeriod": {
           "start": "2025-01-01"
@@ -760,7 +760,7 @@
           "reference": "Encounter/Encounter42"
         },
         "serviceProvider": {
-          "reference": "Organization/KHK999ABT12118102"
+          "reference": "Organization/KAK999ABT12118102"
         },
         "actualPeriod": {
           "start": "2025-01-02T00:00:00+02:00",
@@ -819,7 +819,7 @@
         },
         "authored": "2025-08-30",
         "author": {
-          "reference": "Organization/KHK999"
+          "reference": "Organization/KAK999"
         },
         "item": [
           {
@@ -1299,7 +1299,7 @@
         },
         "authored": "2025-08-30",
         "author": {
-          "reference": "Organization/KHK999"
+          "reference": "Organization/KAK999"
         },
         "item": [
           {
@@ -1628,7 +1628,7 @@
         },
         "authored": "2025-08-30",
         "author": {
-          "reference": "Organization/KHK999"
+          "reference": "Organization/KAK999"
         },
         "item": [
           {
@@ -1957,7 +1957,7 @@
         },
         "authored": "2025-08-30",
         "author": {
-          "reference": "Organization/KHK999"
+          "reference": "Organization/KAK999"
         },
         "item": [
           {

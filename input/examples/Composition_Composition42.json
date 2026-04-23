@@ -44,24 +44,24 @@
   ],
   "author": [
     {
-      "reference": "Organization/KHK999"
+      "reference": "Organization/KAK999"
     }
   ],
   "title": "LKF Testdaten Fall",
   "section": [
     {
-      "title": "Zuständiges KH",
+      "title": "Zuständige KA",
       "code": {
         "coding": [
           {
             "system": "https://elga.moped.at/CodeSystem/CompositionSectionsCS",
-            "code": "KH"
+            "code": "KA"
           }
         ]
       },
       "entry": [
         {
-          "reference": "Organization/KHK999"
+          "reference": "Organization/KAK999"
         }
       ]
     },

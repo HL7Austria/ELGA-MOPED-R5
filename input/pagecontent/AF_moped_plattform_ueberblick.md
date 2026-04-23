@@ -16,16 +16,16 @@ Die Moped Plattform umfasst unterschiedliche Datenströme und Akteure:
 - EMS
 
 #### Moped Fall
-- Relevante Akteure: KH, SV, LGF, Bund
+- Relevante Akteure: KA, SV, LGF, Bund
 - Use Cases: siehe  - [Moped Fall Überblick](AF_moped_fall_ueberblick.html)
 
 #### Jahres Statistikmeldung
-- Relevante Akteure: KH, LGF, Bund
+- Relevante Akteure: KA, LGF, Bund
 - Use Cases: siehe  - [Jahresstatistikmeldung](AF_lkf_jahresstatistikmeldung.html)
 
 #### Medizinische Register
 z.B. Stroke-Unit, Krebsregister
-- Relevante Akteure: KH, GÖG, Statistik Austria
+- Relevante Akteure: KA, GÖG, Statistik Austria
 - Use Cases: siehe - [Medizinische Register](AF_medizinische_register.html)
 
 

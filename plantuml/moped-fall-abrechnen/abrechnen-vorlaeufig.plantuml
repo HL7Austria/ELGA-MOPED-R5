@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n                     KH (Herz-Jesu Krankenhaus)                     " #f5e599
-  actor KH as "KH (Herz-Jesu Krankenhaus)"
+box "\n                     KA (Herz-Jesu Krankenhaus)                     " #f5e599
+  actor KA as "KA (Herz-Jesu Krankenhaus)"
 end box
 
 box "\n                                   Moped                                   " #c5f7ba
@@ -59,9 +59,9 @@ Zustand:
 - Keine endgültige Abrechnung
 end note
 
-KH ->> MP: $abrechnen (POST LKFRequest)
+KA ->> MP: $abrechnen (POST LKFRequest)
 
-note over KH
+note over KA
 Die Abrechnung ist als "vorläufig" markiert.
 end note
 

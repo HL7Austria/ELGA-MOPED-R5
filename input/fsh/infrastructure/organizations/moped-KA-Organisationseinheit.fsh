@@ -1,9 +1,9 @@
-Profile: MopedKHOrganisationseinheit
+Profile: MopedKAOrganisationseinheit
 Parent: HealthcareService
 Description: "MOPED Profil für Organisationseinheiten innerhalb einer Krankenanstalt."
-Title: "MOPED KH Organisationseinheiten"
+Title: "MOPED KA Organisationseinheiten"
 
-* providedBy only Reference(KHOrganization)
+* providedBy only Reference(KAOrganization)
 * providedBy ^short = "Krankenanstalt zu welcher die Abteilung gehört"
 * type = $ServiceType#361
 //#361 Hospital Services

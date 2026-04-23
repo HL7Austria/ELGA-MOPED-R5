@@ -1,7 +1,7 @@
-Profile: MopedAnfragenBundleKH
+Profile: MopedAnfragenBundleKA
 Parent: Bundle
-Title: "MOPED Anfragen Bundle KH"
-Description: """Bundle für die Input-Ressourcen beim Anfragen (KH)"""
+Title: "MOPED Anfragen Bundle KA"
+Description: """Bundle für die Input-Ressourcen beim Anfragen (KA)"""
 
 
 

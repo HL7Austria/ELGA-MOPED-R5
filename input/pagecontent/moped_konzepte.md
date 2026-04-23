@@ -39,10 +39,10 @@ Es können mehrere Composition-Ausprägungen gleichzeitig gültig sein, etwa wen
 
 
 #### Optimistische Versionskontrolle der Composition
-In MOPED gilt bei allen fallbezogenen Operationen, die eine `Composition` referenzieren, das Prinzip der Optimistische Versionskontrolle. Jede Operation, die neue Informationen zum Fall ergänzt (z. B. `$update`, `$anfragen`, `$abrechnen`), erfordert die explizite Angabe der zugehörigen versionierten Composition ID. Dabei muss immer die vollständige, versionsspezifische ID der Composition angegeben werden, z. B.: `Composition/12345/_history/4`. Dies dient der Sicherstellung, dass der aufrufende Client mit dem aktuellsten Stand der Composition arbeitet. So wird verhindert, dass Daten auf veralteter Basis eingefügt oder verändert werden, wie es in verteilten Prozessen (z. B. SV, KH, LGF, Bund) passieren kann. Ist die angegebene Version nicht mehr die aktuellste, wird die Operation mit einem entsprechenden Fehler abgewiesen (i.e. `409 Conflict`). Der Client muss sich in diesem Fall die aktuelle Version der `Composition` abrufen, den Kontext prüfen und die Operation ggf. erneut durchführen. Damit ist der Moped-Datensatz robust gegenüber parallelen Zugriffen und gewährleistet die Konsistenz fallbezogener Informationen. Dieses Prinzip entspricht der gängigen Praxis in REST-Systemen (z. B. `PUT` mit `If-Match` in HTTP), bei der ebenfalls geprüft wird, ob der Client die aktuelle Version kennt, bevor Änderungen übernommen werden. Beispielablauf:
+In MOPED gilt bei allen fallbezogenen Operationen, die eine `Composition` referenzieren, das Prinzip der Optimistische Versionskontrolle. Jede Operation, die neue Informationen zum Fall ergänzt (z. B. `$update`, `$anfragen`, `$abrechnen`), erfordert die explizite Angabe der zugehörigen versionierten Composition ID. Dabei muss immer die vollständige, versionsspezifische ID der Composition angegeben werden, z. B.: `Composition/12345/_history/4`. Dies dient der Sicherstellung, dass der aufrufende Client mit dem aktuellsten Stand der Composition arbeitet. So wird verhindert, dass Daten auf veralteter Basis eingefügt oder verändert werden, wie es in verteilten Prozessen (z. B. SV, KA, LGF, Bund) passieren kann. Ist die angegebene Version nicht mehr die aktuellste, wird die Operation mit einem entsprechenden Fehler abgewiesen (i.e. `409 Conflict`). Der Client muss sich in diesem Fall die aktuelle Version der `Composition` abrufen, den Kontext prüfen und die Operation ggf. erneut durchführen. Damit ist der Moped-Datensatz robust gegenüber parallelen Zugriffen und gewährleistet die Konsistenz fallbezogener Informationen. Dieses Prinzip entspricht der gängigen Praxis in REST-Systemen (z. B. `PUT` mit `If-Match` in HTTP), bei der ebenfalls geprüft wird, ob der Client die aktuelle Version kennt, bevor Änderungen übernommen werden. Beispielablauf:
 
 1. Client SV lädt `Composition/12345/_history/4`
-2. Währenddessen wird Version 5 durch ein anderes System (Client KH) erzeugt (Hinweis: Dies löst in der Regel eine Notification aus, die den folgenden Konflikt bereits clientseitig vermeiden soll.)
+2. Währenddessen wird Version 5 durch ein anderes System (Client KA) erzeugt (Hinweis: Dies löst in der Regel eine Notification aus, die den folgenden Konflikt bereits clientseitig vermeiden soll.)
 3. Der Client SV sendet eine VAE mit Bezug auf `Composition/12345/_history/4`
 4. ➜ Server lehnt ab: Version ist nicht mehr aktuell
 
@@ -86,7 +86,7 @@ Die Provenance enthält Informationen zu:
 | `Provenance.recorded`         | Zeitpunkt der Erstellung                         | `2025-07-26T10:43:00+02:00`        |
 | `Provenance.activity`         | Operation die die Änderung hervorgerufen hat                      | `$update`        |
 | `Provenance.agent.who`        | Auslösendes System oder Person                   | `Device/XDokV5`                |
-| `Provenance.agent.onBehalfOf` | Institution im Auftrag                           | `Organization/HJKH` (Krankenhaus)  |#
+| `Provenance.agent.onBehalfOf` | Institution im Auftrag                           | `Organization/HJKA` (Krankenhaus)  |#
 
 Ziel ist eine lückenlose und nachvollziehbare Fallhistorie im Zusammenspiel mit den Operationen (`$aufnehmen`, `$entlassen`, `$freigeben`, etc.).
 

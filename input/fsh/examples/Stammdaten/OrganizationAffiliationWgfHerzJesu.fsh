@@ -1,6 +1,6 @@
 Instance: OrganizationAffiliationWgfHerzJesu
 InstanceOf: OrganizationAffiliation
-Description: "Hackathon Stammdaten: Organization Affiliation zwischen LGF und KH Herz Jesu"
+Description: "Hackathon Stammdaten: Organization Affiliation zwischen LGF und KA Herz Jesu"
 Usage: #example
 * active = true
 * organization = Reference(OrganizationLGF)

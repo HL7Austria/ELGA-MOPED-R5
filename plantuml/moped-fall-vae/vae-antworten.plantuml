@@ -39,8 +39,8 @@ skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
 
-box "\n         KH           " #c0c0c0
-  actor KH as "KH"
+box "\n         KA           " #c0c0c0
+  actor KA as "KA"
 end box
 
 box "\n              Moped              " #c5f7ba
