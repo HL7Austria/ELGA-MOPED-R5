@@ -29,7 +29,7 @@ Ein Patient kommt mit einem gebrochenen Arm in das KH, wird dort behandelt (Rön
 Es existiert kein Fall mit der selben Schlüsselkombination.
 
 #### Ablauf 
-<div class="diagram">{% include standardablauf-ambulant.svg %}</div>
+<div class="diagram">{% include_relative plantuml/moped-fall-standardablauf/standardablauf-ambulant.svg %}</div>
 <div>{% include AF_standardablauf_ambulant_requests.md %}</div>
 
 #### Technische Hinweise

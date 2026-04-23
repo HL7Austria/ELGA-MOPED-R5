@@ -32,7 +32,7 @@ Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt m
 
 ### Ablauf 
 
-<div>{% include AF23.svg %}</div>
+<div>{% include_relative plantuml/AF23.svg %}</div>
 
 ### Relevante Profile
 - [$entlassen Bundle](StructureDefinition-MopedEntlassenBundle.html)
@@ -75,7 +75,7 @@ Abgerechnet kann erst werden, wenn die Hauptdiagnose vorhanden ist, und somit de
 
 ### Ablauf 
 
-<div>{% include AF24-25.svg %}</div>
+<div>{% include_relative plantuml/AF24-25.svg %}</div>
 
 ### Relevante Profile
 - Entlassung aviso: [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
