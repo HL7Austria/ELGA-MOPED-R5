@@ -38,49 +38,43 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n         KH           " #f5e599
-  actor KH as "KH"
+box "\n                     KH (Herz-Jesu Krankenhaus)                     " #f5e599
+  actor KH as "KH (Herz-Jesu Krankenhaus)"
 end box
 
-box "\n              Moped              " #c5f7ba
+box "\n                                   Moped                                   " #c5f7ba
   participant MP as "Moped"
 end box
 
-box "\n         SV           " #c0c0c0
-  actor SV as "SV"
-end box
-
-box "\n LGF (Landesgesundheitsfonds)  " #c0c0c0
-  actor LGF as "LGF (Landesgesundheitsfonds)"
-end box
-
-box "\n           Bund           " #c0c0c0
-  actor Bund as "Bund"
-end box
 
 autonumber
 
 note right of MP #c5f7ba
 Zustand:
-- Kein existierender Moped Fall mit
-  dieser Schlüsselkombination
+- Moped Fall angelegt
 end note
 
-KH ->> MP: POST $aufnehmen
+KH ->> MP: $update (PUT MopedEncounter)
 
 note over KH
-Aufnahme-Bundle wird gesendet
-- Patient
-- Aufenthalt (Encounter)
-- Aufnehmende Station (TransferEncounter)
-- Aufnahmediagnose
-- ggf. Versicherungsdaten inkl. Hauptversicherter
-- ggf. überweisende Organisation
+MopedEncounter wird gesendet mit
+- aktualisierten Details
 end note
+
+MP -> MP: ★✦★✦★✦★✦
+activate MP
+deactivate MP
+
+note right of MP
+manche geänderte Elemente bedingen 
+eine automatische Stornierung von
+Ressourcen (z.B. LKFRequest oder VAERequest)
+end note
+
 
 note right of MP #c5f7ba
 Zustand:
-- Moped Fall angelegt
+- unverändert
 end note
 
 @enduml

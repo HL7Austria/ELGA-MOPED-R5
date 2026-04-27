@@ -24,7 +24,7 @@ Title: "MOPED Composition"
 * insert ShallPopulateObligation(useContext, MopedDeviceActor)
 * useContext contains
   Workflow 1..1
-* useContext[Workflow].code = http://terminology.hl7.org/CodeSystem/usage-context-type#workflow
+* useContext[Workflow].code = $UsageContextType#workflow
 * useContext[Workflow].value[x] only CodeableConcept
 * useContext[Workflow].valueCodeableConcept from WorkflowStatusVS
 
