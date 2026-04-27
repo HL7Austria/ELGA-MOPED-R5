@@ -1,12 +1,12 @@
 @startuml
 
 state "Keine Abrechnung" as A
-state "Unbeantwortet vorläufig" as B
-state "Genehmigt vorläufig" as C
-state "Abgelehnt vorläufig" as D
-state "Unbeantwortet endgültig" as E
-state "Genehmigt endgültig" as F
-state "Abgelehnt endgültig" as G
+state "vorläufige Abrechnung unbeantwortet" as B
+state "voläufige Abrechnung genehmigt" as C
+state "voläufige Abrechnung abgelehnt" as D
+state "finale Abrechnung unbeantwortet" as E
+state "finale Abrechnung genehmigt" as F
+state "finale Abrechnung abgelehnt" as G
 
 [*] --> A
 A --> B : $abrechnen
@@ -15,8 +15,6 @@ B --> C : $genehmigen
 B --> D : $ablehnen
 D --> B : $abrechnen
 C --> B : $abrechnen
-B --> B : $abrechnen
-B --> E : $abrechnen
 C --> E : $abrechnen
 D --> E : $abrechnen
 E --> F : $genehmigen

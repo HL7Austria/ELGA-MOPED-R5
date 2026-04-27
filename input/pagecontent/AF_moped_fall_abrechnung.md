@@ -15,17 +15,22 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 #### Abrechnung - generisch
 <div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen.svg %}</div>
 
+#### Gültige Zustände
 Folgende Zustände existieren und dienen in weiterer Folge als Vor-/Nachbedingungen:
 - es gibt noch keine Abrechnung
 - es gibt bereits eine unbeantwortete vorläufige Abrechnung
 - es gibt bereits eine genehmigte vorläufige Abrechnung
 - es gibt bereits eine abgelehnte vorläufige Abrechnung
-- es gibt bereits eine unbeantwortete endgültige Abrechnung
-- es gibt bereits eine genehmigte endgültige Abrechnung
-- es gibt bereits eine abgelehnte endgültige Abrechnung
+- es gibt bereits eine unbeantwortete finale Abrechnung
+- es gibt bereits eine genehmigte finale Abrechnung
+- es gibt bereits eine abgelehnte finale Abrechnung
 
 zwischen den Zuständen sind folgende Übergänge möglich:
 <div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-zustaende.svg %}</div>
+
+### Relevante Operations
+- [$abrechnen](OperationDefinition-MOPED.Encounter.Abrechnen.html)
+- [$update](OperationDefinition-MOPED.Daten.Update.html)
 
 
 ### Ablauf - Beispiele zur Anwendung
@@ -41,9 +46,9 @@ Eine vorläufige Abrechnung wird entweder initial eingebracht oder ersetzt aufgr
 
 <div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-vorlaeufig.svg %}</div>
 
-#### Abrechnung - endgültige Abrechnung
+#### Abrechnung - finale Abrechnung
 ##### Beschreibung
-Eine endgültige Abrechnung wird entweder initial eingebracht, folgt auf eine vorläufige Abrechnung oder folgt auf eine Ablehnung einer vorherigen Abrechnung. Nach einer endgültigen Abrechnung kann der Moped-Fall nur mehr im Falle einer Ablehnung des LGF aktualisiert werden.
+Eine finale Abrechnung wird entweder initial eingebracht, folgt auf eine vorläufige Abrechnung oder folgt auf eine Ablehnung einer vorherigen Abrechnung. Nach einer finalen Abrechnung kann der Moped-Fall nur mehr im Falle einer Ablehnung des LGF aktualisiert werden, oder wenn der Fall auf Anfrage der KA neu geöffnet wird.
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -66,9 +71,10 @@ Vorsorgeuntersuchung Coloskopie, Vorsorgeuntersuchung Brust-Krebs-Früherkennung
 <div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-leitsung-ohne-abrechnungsrelevanz.svg %}</div>
 
 
-#### Abrechnung - Änderung von Leistungen oder Diagnosen für Abrechnung
+#### Abrechnung - Änderung von Leistungen oder Diagnosen nach Abrechnung
 ##### Beschreibung
-Leistungen, Diagnosen oder andere abrechnungsrelevante Informationen müssen im Moped-Fall geändert oder hinzugefügt werden. Dadurch wird die vorherige Abrechnung ungültig und muss neu eingebracht werden.
+Leistungen, Diagnosen oder andere abrechnungsrelevante Informationen müssen nach einer bereits erfolgten Abrechnung im Moped-Fall geändert oder hinzugefügt werden. Dadurch wird die vorherige Abrechnung ungültig und muss neu eingebracht werden. Updates können nur dann durchgeführt werden, wenn die letzte Abrechnung vom LGF bereits beantwortet wurde.
+
 ##### Beispiele
 
 
@@ -84,3 +90,4 @@ Leistungen, Diagnosen oder andere abrechnungsrelevante Informationen müssen im 
 - [$abrechnen Bundle](StructureDefinition-MopedAbrechnenBundleKH.html)
 
 ### Technische Hinweise
+Nach $abrechnen muss ein $genehmigen/$ablehnen folgen, bevor das nächste $update und $abrechnen durchgeführt werden kann
