@@ -10,11 +10,11 @@ Description: "MOPED Profil für die Verlängerung der Versichertenanspruchserkl�
 * related ^slicing.ordered = false
 * related contains InitialeVAE 1..1 and VerlaengerteVAE 0..
 * related[InitialeVAE] ^short = "Initiale Anfrage der VAE"
-* related[InitialeVAE].relationship =  http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior
+* related[InitialeVAE].relationship =  $RelatedClaimRelationshipType#prior
 * related[InitialeVAE].claim only Reference(MopedVAERequestInitial)
 * insert ShallPopulateObligation(related[InitialeVAE], MopedKHActor)
 * related[VerlaengerteVAE] ^short = "Vorherige Verlängerungsanfrage der VAE"
-* related[VerlaengerteVAE].relationship = http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior
+* related[VerlaengerteVAE].relationship = $RelatedClaimRelationshipType#prior
 * related[VerlaengerteVAE].claim only Reference(MopedVAERequestVerlaengerung)
 * insert ShallPopulateObligation(related[VerlaengerteVAE], MopedKHActor)
 * billablePeriod.start ^short = "KaOrg: Ereignis-/Unfalldatum (Verlängerungsdatum)"

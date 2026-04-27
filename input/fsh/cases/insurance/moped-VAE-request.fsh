@@ -20,7 +20,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * patient only Reference(MopedPatient)
 * patient 1..1
 * insert MopedHandleObligation(patient)
-* use = http://hl7.org/fhir/claim-use#preauthorization
+* use = $ClaimUse#preauthorization
 * insert ShallPopulateObligation(use, MopedKHActor)
 * type from MopedClaimTypeVS
 * type.coding = MopedClaimTypeCS#VAEREQ (exactly)
@@ -93,9 +93,9 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * insert ShallPopulateObligation(supportingInfo[Verlaengerungstage].valueQuantity.value, MopedKHActor)
 * supportingInfo[Verlaengerungstage].valueQuantity.unit = "day"
 * insert ShallPopulateObligation(supportingInfo[Verlaengerungstage].valueQuantity.unit, MopedKHActor)
-* supportingInfo[Verlaengerungstage].valueQuantity.code = #day
+* supportingInfo[Verlaengerungstage].valueQuantity.code = #d
 * insert ShallPopulateObligation(supportingInfo[Verlaengerungstage].valueQuantity.code, MopedKHActor)
-* supportingInfo[Verlaengerungstage].valueQuantity.system = "http://unitsofmeasure.org"
+* supportingInfo[Verlaengerungstage].valueQuantity.system = $UCUM
 * insert ShallPopulateObligation(supportingInfo[Verlaengerungstage].valueQuantity.system, MopedKHActor)
 * insert ShallPopulateObligation(supportingInfo[Verlaengerungstage], MopedKHActor)
 

@@ -9,7 +9,7 @@ Title: "MOPED TransferEncounter Ambulant"
 * identifier ^slicing.ordered = false
 * identifier contains AufnahmezahlFunktionscodebezogen 0..1
 * insert ShallPopulateObligation(identifier[AufnahmezahlFunktionscodebezogen], MopedKHActor)
-* identifier[AufnahmezahlFunktionscodebezogen].type from http://terminology.hl7.org/ValueSet/v2-0203 (required)
+* identifier[AufnahmezahlFunktionscodebezogen].type from $HL7V2 (required)
 * identifier[AufnahmezahlFunktionscodebezogen].type.coding.code = #VN (exactly)
 //* identifier[AufnahmezahlFunktionscodebezogen].assigner only Reference(MopedKHOrganisationseinheit)
 //TBD HealthcareService cannot be assigner anymore

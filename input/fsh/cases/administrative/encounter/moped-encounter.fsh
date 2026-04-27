@@ -76,7 +76,7 @@ Title: "MOPED Encounter"
 * reason ^slicing.discriminator.path = "use.coding.code"
 * reason ^slicing.ordered = false
 * reason contains Ursache 0..1
-* reason[Ursache].use from http://hl7.org/fhir/ValueSet/encounter-reason-use (required)
+* reason[Ursache].use from $EncounterReasonUse (required)
 * reason[Ursache].use.coding.code = #RV (exactly)
 * reason[Ursache].value from UrsacheVS (required)
 * insert ShallPopulateObligation(reason[Ursache].value, MopedKHActor)

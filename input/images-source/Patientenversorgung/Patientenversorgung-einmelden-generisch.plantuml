@@ -38,7 +38,7 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n         KH           " #f5e599
+box "\n.         KH           " #f5e599
   actor KH as "KH"
 end box
 
@@ -62,25 +62,23 @@ autonumber
 
 note right of MP #c5f7ba
 Zustand:
-- Kein existierender Moped Fall mit
-  dieser Schlüsselkombination
+- Moped Fall angelegt ✓
+- Aufnahmedaten vollständig ✓ · x
 end note
 
-KH ->> MP: POST $aufnehmen
+KH ->> MP: POST $einmelden
 
 note over KH
-Aufnahme-Bundle wird gesendet
-- Patient
-- Aufenthalt (Encounter)
-- Aufnehmende Station (TransferEncounter)
-- Aufnahmediagnose
-- ggf. Versicherungsdaten inkl. Hauptversicherter
-- ggf. überweisende Organisation
+Einmelden-Bundle sendet die Intensivdokumentation oder eine Registermeldung:
+- TISS-A
+- SAPS3
+- Stroke-Unit Registermeldung
 end note
 
 note right of MP #c5f7ba
 Zustand:
-- Moped Fall angelegt
+- Moped Fall angelegt ✓
+- Aufnahmedaten vollständig ✓ · x
 end note
 
 @enduml

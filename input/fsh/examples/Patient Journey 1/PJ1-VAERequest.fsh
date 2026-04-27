@@ -30,5 +30,5 @@ Usage: #example
 * supportingInfo[Verlaengerungstage].sequence = 3
 * supportingInfo[Verlaengerungstage].valueQuantity.value = 0
 * supportingInfo[Verlaengerungstage].valueQuantity.unit = "day"
-* supportingInfo[Verlaengerungstage].valueQuantity.code = #day
+* supportingInfo[Verlaengerungstage].valueQuantity.code = #d
 * supportingInfo[Verlaengerungstage].valueQuantity.system = "http://unitsofmeasure.org"
