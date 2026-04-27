@@ -52,6 +52,8 @@ autonumber
 note right of MP #c5f7ba
 Zustand:
 - Moped Fall angelegt
+- keine vorläufige/finale Abrechnung unbeantwortet
+- keine finale Abrechnung genehmigt
 end note
 
 KH ->> MP: $update (PUT TransferEncounter)

@@ -5,8 +5,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $update Operation
 ## Voraussetzungen für den Aufruf
 * Die Composition laut *compositionID* Parameter existiert
 * Es existiert **keine** Abrechnung mit folgenden Zuständen:
-    - vorläufige Abrechnung unbeantwortet
-    - finale Abrechnung unbeantwortet
+    - vorläufige/finale Abrechnung unbeantwortet
     - finale Abrechnung genehmigt
 
 ## Detaillierte Business-Logik

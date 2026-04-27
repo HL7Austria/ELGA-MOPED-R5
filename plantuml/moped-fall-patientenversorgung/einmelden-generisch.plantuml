@@ -64,6 +64,8 @@ note right of MP #c5f7ba
 Zustand:
 - Moped Fall angelegt ✓
 - Aufnahmedaten vollständig ✓ · x
+- keine vorläufige/finale Abrechnung unbeantwortet
+- keine finale Abrechnung genehmigt
 end note
 
 KH ->> MP: POST $einmelden

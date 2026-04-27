@@ -57,9 +57,9 @@ Zustand:
     (inklusive Entlassung bei stationären Fällen)
 - Hauptdiagnose vorhanden
 Gültige Abrechnungszustände:
-- Keine Abrechnung
-- vorläufige Abrechnung abgelehnt
-- vorläufige Abrechnung genehmigt
+- keine vorläufige/finale Abrechnung unbeantwortet
+- keine finale Abrechnung abgelehnt
+- keine finale Abrechnung genehmigt
 
 end note
 
