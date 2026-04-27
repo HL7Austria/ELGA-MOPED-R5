@@ -8,6 +8,15 @@ state "finale Abrechnung unbeantwortet" as E
 state "finale Abrechnung genehmigt" as F
 state "finale Abrechnung abgelehnt" as G
 
+A:  - kein LKFRequest
+B:  - aktiver LKFRequest\n- Claim.supportingInfo:FinaleAbrechnung = false\n- ohne LKFResponse
+C:  - aktiver LKFRequest\n- Claim.supportingInfo:FinaleAbrechnung = false\n- positive LKFResponse
+D:  - aktiver LKFRequest\n- Claim.supportingInfo:FinaleAbrechnung = false\n- negative LKFResponse
+E:  - aktiver LKFRequest\n- Claim.supportingInfo:FinaleAbrechnung = true\n- ohne LKFResponse
+F:  - aktiver LKFRequest\n- Claim.supportingInfo:FinaleAbrechnung = true\n- positive LKFResponse
+G:  - aktiver LKFRequest\n- Claim.supportingInfo:FinaleAbrechnung = true\n- negative LKFResponse
+
+
 [*] --> A
 A --> B : $abrechnen
 A --> E : $abrechnen

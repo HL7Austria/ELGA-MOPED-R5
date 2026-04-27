@@ -37,7 +37,7 @@ zwischen den Zuständen sind folgende Übergänge möglich:
 
 #### Abrechnung - vorläufige Abrechnung
 ##### Beschreibung
-Eine vorläufige Abrechnung wird entweder initial eingebracht oder ersetzt aufgrund von Änderungen in den Moped-Falldaten eine vorherige Abrechnung. Es kann so lange neu abgerechnet werden, bis eine endgueltige Abrechnung eingebracht wird.
+Eine vorläufige Abrechnung wird entweder initial eingebracht oder ersetzt aufgrund von Änderungen in den Moped-Falldaten eine vorherige Abrechnung. Es kann so lange neu abgerechnet werden, bis eine finale Abrechnung eingebracht wird.
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -55,7 +55,7 @@ Eine finale Abrechnung wird entweder initial eingebracht, folgt auf eine vorläu
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-endgueltig.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-final.svg %}</div>
 
 #### Abrechnung - Leistung ohne Abrechnungsrelevanz
 ##### Beschreibung

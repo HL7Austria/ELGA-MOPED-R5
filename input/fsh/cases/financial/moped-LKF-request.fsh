@@ -88,11 +88,11 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 //TBD: * supportingInfo[Plausibilitaetskennzeichen].value[x] //add regex pattern so it can only have numbers from 0-5
 * insert ShallPopulateObligation(supportingInfo[Plausibilitaetskennzeichen], MopedKHActor)
 
-* supportingInfo contains EndgueltigeMeldung 1..1 
-* supportingInfo[EndgueltigeMeldung] ^short = "Feld, welches angibt, ob es sich um die vorläufige oder finale Abrechnung handelt."
-* supportingInfo[EndgueltigeMeldung].category = ClaimSupportingInformationCategoryCS#ENDG
-* supportingInfo[EndgueltigeMeldung].value[x] only boolean
-* insert ShallPopulateObligation(supportingInfo[EndgueltigeMeldung], MopedKHActor)
+* supportingInfo contains FinaleAbrechnung 1..1 
+* supportingInfo[FinaleAbrechnung] ^short = "Feld, welches angibt, ob es sich um die vorläufige oder finale Abrechnung handelt."
+* supportingInfo[FinaleAbrechnung].category = ClaimSupportingInformationCategoryCS#ENDG
+* supportingInfo[FinaleAbrechnung].value[x] only boolean
+* insert ShallPopulateObligation(supportingInfo[FinaleAbrechnung], MopedKHActor)
 
 * supportingInfo contains XDokDevice 1..1 
 * supportingInfo[XDokDevice] ^short = "Feld, welches die XDok Version angibt die zum Scoring verwendet wurde."

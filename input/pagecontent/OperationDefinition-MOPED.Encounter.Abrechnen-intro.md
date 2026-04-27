@@ -23,7 +23,7 @@ Zulässige Abrechnungszustände ([siehe Statusmaschine](AF_moped_fall_abrechnung
   * *MopedLKFRequest.provider* mit *MopedComposition.section:zustaendigesKH* befüllen
   * *MopedLKFRequest.insurer* mit *MopedComposition.section:zustaendigeSV* befüllen
   * *MopedLKFRequest.encounter* mit *MopedComposition.encounter* und allen TransferEncounter aus *MopedComposition.section:TransferEncounter* befüllen
-3. Falls es in der Composition.section:LKFRequests bereits irgendeinen Claim mit dem Abrechnungsstatus Claim.supportingInfo:endgueltigeMeldung `true` gibt, so darf der Abrechnungsstatus in der eingebrachten ClaimResponse auch nur mehr `true` (also eine finale Abrechnung) sein sonst schlägt die Operation fehl
+3. Falls es in der Composition.section:LKFRequests bereits irgendeinen Claim mit dem Abrechnungsstatus Claim.supportingInfo:FinaleAbrechnung `true` gibt, so darf der Abrechnungsstatus in der eingebrachten ClaimResponse auch nur mehr `true` (also eine finale Abrechnung) sein sonst schlägt die Operation fehl
 4. Der vorherige aktive LKFRequest und die zugehörige LKFResponse werden auf `cancelled` gesetzt (siehe Hinweis 2).
 
 ## Weitere Hinweise

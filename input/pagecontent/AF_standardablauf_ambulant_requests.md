@@ -365,7 +365,7 @@
       <div class="request-panel request-panel--success">
         <div class="request-code">
           <span class="request-method-get">GET</span>
-          <code class="request-url">[base]/Claim?status=active&amp;use=claim&amp;endgueltig=true&amp;_has:ClaimResponse:request:status:not=active</code>
+          <code class="request-url">[base]/Claim?status=active&amp;use=claim&amp;final=true&amp;_has:ClaimResponse:request:status:not=active</code>
         </div>
         <div class="request-meta">
           <strong>Headers:</strong>
@@ -421,7 +421,7 @@
       <div class="request-panel request-panel--success">
         <div class="request-code">
           <span class="request-method-get">GET</span>
-          <code class="request-url">[base]/ClaimResponse?status=active&amp;use=claim&amp;endgueltig=true</code>
+          <code class="request-url">[base]/ClaimResponse?status=active&amp;use=claim&amp;final=true</code>
         </div>
         <div class="request-meta">
           <strong>Headers:</strong>
