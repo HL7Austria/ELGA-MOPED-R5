@@ -328,7 +328,7 @@
 
 
 <h4>9b: Endgültig abrechnen</h4>
-<p>Die endgültige Abrechnung wird eingebracht und dem LGF zur Verfügung gestellt.</p>
+<p>Die finale Abrechnung wird eingebracht und dem LGF zur Verfügung gestellt.</p>
 <div class="tabs">
   <div class="tab">
     <input type="radio" id="tab-request-9b-stationaer" name="tab-group-9b-stationaer" checked="true" />
@@ -356,7 +356,7 @@
 
 
 <h4>10a: Endgültige unbeantwortete Abrechnungen abrufen</h4>
-<p>Die offenen endgültige Abrechnungen abfragen, für welche noch keine Antwort (Genehmigung/Ablehnung) eingebracht wurde.</p>
+<p>Die offenen finale Abrechnungen abfragen, für welche noch keine Antwort (Genehmigung/Ablehnung) eingebracht wurde.</p>
 <div class="tabs">
   <div class="tab">
     <input type="radio" id="tab-request-10a-stationaer" name="tab-group-10a-stationaer" checked="true" />
@@ -384,7 +384,7 @@
 
 
 <h4>10b: Endgültig genehmigen</h4>
-<p>Die endgültige Genehmigung (inkl. Bestätigung der Punkte einbringen) einbringen.</p>
+<p>Die finale Genehmigung (inkl. Bestätigung der Punkte einbringen) einbringen.</p>
 <div class="tabs">
   <div class="tab">
     <input type="radio" id="tab-request-10b-stationaer" name="tab-group-10b-stationaer" checked="true" />

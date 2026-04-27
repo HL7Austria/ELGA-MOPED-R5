@@ -89,7 +89,7 @@ Description: "MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfr
 * insert ShallPopulateObligation(supportingInfo[Plausibilitaetskennzeichen], MopedKHActor)
 
 * supportingInfo contains EndgueltigeMeldung 1..1 
-* supportingInfo[EndgueltigeMeldung] ^short = "Feld, welches angibt, ob es sich um die vorläufige oder endgültige Meldung handelt."
+* supportingInfo[EndgueltigeMeldung] ^short = "Feld, welches angibt, ob es sich um die vorläufige oder finale Abrechnung handelt."
 * supportingInfo[EndgueltigeMeldung].category = ClaimSupportingInformationCategoryCS#ENDG
 * supportingInfo[EndgueltigeMeldung].value[x] only boolean
 * insert ShallPopulateObligation(supportingInfo[EndgueltigeMeldung], MopedKHActor)
