@@ -38,7 +38,7 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n.         KH           " #f5e599
+box "\n         KH           " #f5e599
   actor KH as "KH"
 end box
 

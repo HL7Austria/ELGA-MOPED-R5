@@ -38,7 +38,7 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n.         KH           " #f5e599
+box "\n         KH           " #f5e599
   actor KH as "KH"
 end box
 
@@ -69,7 +69,8 @@ end note
 KH ->> MP: POST $einmelden
 
 note over KH
-Einmelden-Bundle sendet die Intensivdokumentation oder eine Registermeldung:
+Einmelden-Bundle sendet die Intensivdokumentation
+oder eine Registermeldung:
 - TISS-A
 - SAPS3
 - Stroke-Unit Registermeldung
