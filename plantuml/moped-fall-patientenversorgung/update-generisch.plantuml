@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n         KH           " #f5e599
-  actor KH as "KH"
+box "\n         KA           " #f5e599
+  actor KA as "KA"
 end box
 
 box "\n              Moped              " #c5f7ba
@@ -66,9 +66,9 @@ Zustand:
 - Aufnahmedaten vollständig ✓ · x
 end note
 
-KH ->> MP: POST $update
+KA ->> MP: POST $update
 
-note over KH
+note over KA
 Update-Bundle wird gesendet wobei eine Vielzahl an Daten 
 hinzugefügt, aktualisiert oder gelöscht werden kann. Für 
 die Patientenversorgung relevant sind:

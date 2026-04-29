@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n  KH (Herz Jesu Krankenhaus)  " #f5e599
-  actor KH as "KH"
+box "\n  KA (Herz Jesu Krankenhaus)  " #f5e599
+  actor KA as "KA"
 end box
 
 box "\n       Moped       " #c5f7ba
@@ -60,16 +60,16 @@ end box
 
 autonumber
 
-KH->>MP: $aufnehmen
-Note over KH: Patient:in wird aufgenommen %n()(Encounter status: in-progress)
+KA->>MP: $aufnehmen
+Note over KA: Patient:in wird aufgenommen %n()(Encounter status: in-progress)
 
-KH->>MP: $update
-Note over KH: Encounter-Status auf "discharged" gesetzt %n()(noch ohne Hauptdiagnose aka "Entlassungs-Aviso")
+KA->>MP: $update
+Note over KA: Encounter-Status auf "discharged" gesetzt %n()(noch ohne Hauptdiagnose aka "Entlassungs-Aviso")
 
-KH->>MP: $update 
-Note over KH: Hauptdiagnose „Herzinsuffizienz“ ergänzt
+KA->>MP: $update 
+Note over KA: Hauptdiagnose „Herzinsuffizienz“ ergänzt
 
-KH->>MP: $entlassen
-Note over KH: Encounter-Status final auf "completed" gesetzt
+KA->>MP: $entlassen
+Note over KA: Encounter-Status final auf "completed" gesetzt
 
 @enduml

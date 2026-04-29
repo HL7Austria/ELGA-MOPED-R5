@@ -21,7 +21,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *Anfrage* Parameter beinhaltet ein Bundle mit den Informationen für die Versichertenanspruchserklärung"
   * type = #Bundle
-  * targetProfile = Canonical(MopedAnfragenBundleKH)
+  * targetProfile = Canonical(MopedAnfragenBundleKA)
 * parameter[+]
   * name = #return
   * use = #out

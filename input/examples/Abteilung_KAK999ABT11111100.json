@@ -1,9 +1,9 @@
 {
   "resourceType": "HealthcareService",
-  "id": "KHK999ABT16211100",
+  "id": "KAK999ABT11111100",
   "meta": {
     "profile": [
-      "https://elga.moped.at/StructureDefinition/MopedKHOrganisationseinheit"
+      "https://elga.moped.at/StructureDefinition/MopedKAOrganisationseinheit"
     ]
   },
   "extension": [
@@ -11,17 +11,17 @@
       "extension": [
         {
           "url": "InterneKostenstellennummer",
-          "valueUnsignedInt": 1300
+          "valueUnsignedInt": 1000
         },
         {
           "url": "InterneKostenstellenbezeichnung",
-          "valueString": "Chirurgieambulanz"
+          "valueString": "Innere Medizin � allgemein"
         },
         {
           "url": "SpezielleOrganisationsform",
           "valueCoding": {
             "system": "https://elga.moped.at/CodeSystem/SpezielleOrganisationsformenCS",
-            "code": "A"
+            "code": "F"
           }
         },
         {
@@ -35,7 +35,11 @@
   "identifier": [
     {
       "system": "http://example.org/lkf-system/funktionscode",
-      "value": "16211100"
+      "value": "111111"
+    },
+    {
+      "system": "http://example.org/lkf-system/funktionssubcode",
+      "value": "00"
     }
   ],
   "type": [
@@ -49,11 +53,11 @@
     }
   ],
   "providedBy": {
-    "reference": "Organization/KHK999"
+    "reference": "Organization/KAK999"
   },
   "location" : [
     {
-      "reference" : "Location/LocationKHK999"
+      "reference" : "Location/LocationKAK999"
     }
   ]
 }

@@ -1,6 +1,6 @@
-Profile: MopedAufnehmenBundleKH
-Parent: MopedInputBundleKH
-Title: "MOPED Aufnehmen Bundle KH"
+Profile: MopedAufnehmenBundleKA
+Parent: MopedInputBundleKA
+Title: "MOPED Aufnehmen Bundle KA"
 Description: """Bundle für die Input-Ressourcen beim Aufnehmen eines Patienten"""
 * entry[Aufenthalt] 1..1
 * entry[Aufenthalt].resource only MopedEncounterAufnahmeS //TBD nach Ausarbeitung des ambulanten Falls den generischen "MopedEncounter" ersetzen durch "MopedEncounterAufnahmeA or MopedEncounterAufnahmeS"  

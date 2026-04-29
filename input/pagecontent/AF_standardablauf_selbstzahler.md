@@ -6,7 +6,7 @@
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅ |
+| KA (Krankenhaus)  |      ✅ |
 | LGF (Landesgesundheitsfonds) |  ✅ |
 | SV (Sozialversicherung)      |  ❌  |
 | Bund            |  ✅  |

@@ -1,6 +1,6 @@
 ## Wer ruft diese Operation in welchem Zusammenhang auf?
 
-Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $einmelden Operation wird aufgerufen, wenn nicht fallspezifische Questionnaires eingemeldet werden sollen.
+Die Operation wird vom Akteur Krankenhaus (KA) aufgerufen. Die $einmelden Operation wird aufgerufen, wenn nicht fallspezifische Questionnaires eingemeldet werden sollen.
 
 ## Voraussetzungen für den Aufruf
 

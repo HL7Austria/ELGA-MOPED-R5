@@ -57,7 +57,7 @@
 			<text x="43.62" y="275.44" class="st2" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>Questionaire</text>		</g>
 		<g id="shape32-7" v:mID="32" v:groupContext="shape" transform="translate(120.706,-142.958)">
 			<title>Rechteck.1506</title>
-			<desc>KH</desc>
+			<desc>KA</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
@@ -68,7 +68,7 @@
 				<rect x="0" y="254.451" width="68.0315" height="51.0236" class="st4"/>
 			</g>
 			<rect x="0" y="254.451" width="68.0315" height="51.0236" class="st5"/>
-			<text x="20.3" y="287.16" class="st6" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KH</text>		</g>
+			<text x="20.3" y="287.16" class="st6" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KA</text>		</g>
 		<g id="shape33-13" v:mID="33" v:groupContext="shape" v:layerMember="0" transform="translate(246.847,-73.5089)">
 			<title>Dynamischer Verbinder.1509</title>
 			<path d="M0 298.39 L53.22 298.39" class="st7"/>

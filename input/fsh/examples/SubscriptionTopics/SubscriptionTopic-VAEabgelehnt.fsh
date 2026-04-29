@@ -1,7 +1,7 @@
 Instance: vaeAbgelehnt
 InstanceOf: SubscriptionTopic
 Title: "Subscription Topic VAE abgelehnt"
-Description: "SubscriptionTopic für das KH, um bei abgelehnten VAEs benachrichtigt zu werden."
+Description: "SubscriptionTopic für die KA, um bei abgelehnten VAEs benachrichtigt zu werden."
 Usage: #example
 * url = "https://elga.moped.at/SubscriptionTopic/vaeAbgelehnt"
 * name = "VAEabgelehnt"

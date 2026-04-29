@@ -3,7 +3,7 @@ Parent: Encounter
 Description: "MOPED Profil der Encounter Ressource für die Verlegung innerhalb oder zwischen Krankenanstalten"
 Title: "MOPED TransferEncounter"
 * insert MappingHeaderEinfuegen()
-* insert ShallPopulateObligation(status, MopedKHActor)
+* insert ShallPopulateObligation(status, MopedKAActor)
 * insert MopedHandleObligation(status)
 * subject only Reference(MopedPatient)
 * subject 1..1
@@ -16,53 +16,53 @@ Title: "MOPED TransferEncounter"
 * serviceType ^slicing.ordered = false
 * serviceType contains MopedServiceType 1..1
 * serviceType[MopedServiceType] ^short = "LKF: Hauptkostenstelle – Funktionscode/Fachgebiet; KaOrg: Funktionscode der Abteilung lt. LKF; KaOrg: Funktionssubcode der Abteilung lt. LKF; KaOrg: Abteilung - Funktionscode der Ambulanz; KaOrg: Abteilung - Funktionssubcode der Ambulanz"
-* serviceType[MopedServiceType] only CodeableReference(MopedKHOrganisationseinheit)
+* serviceType[MopedServiceType] only CodeableReference(MopedKAOrganisationseinheit)
 * insert legacyMapping(serviceType[MopedServiceType].reference, LKF, [[Hauptkostenstelle – Funktionscode/Fachgebiet]])
 * insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Funktionscode der Abteilung lt. LKF]])
 * insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Funktionssubcode der Abteilung lt. LKF]])
 * insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Abteilung - Funktionscode der Ambulanz]])
 * insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Abteilung - Subcode]])
 * insert legacyMapping(serviceType[MopedServiceType].reference, KaOrg, [[Abteilung - Funktionssubcode der Ambulanz]])
-* insert ShallPopulateObligation(serviceType[MopedServiceType].reference, MopedKHActor)
+* insert ShallPopulateObligation(serviceType[MopedServiceType].reference, MopedKAActor)
 * participant ^slicing.rules = #open
 * participant ^slicing.discriminator.type = #value
 * participant ^slicing.discriminator.path = "type"
 * participant ^slicing.ordered = false
 * participant contains FachlichZustaendigeOrganisationseinheit 0..1 and PflegerischZustaendigeOrganisationseinheit 0..1
 * participant[FachlichZustaendigeOrganisationseinheit] ^short = "LKF: Hauptkostenstelle – Fachlicher Funktionscode"
-* participant[FachlichZustaendigeOrganisationseinheit].actor only Reference(MopedKHOrganisationseinheit)
+* participant[FachlichZustaendigeOrganisationseinheit].actor only Reference(MopedKAOrganisationseinheit)
 * participant[FachlichZustaendigeOrganisationseinheit].type = MopedEncounterParticipantTypesCS#fachlich
 * insert legacyMapping(participant[FachlichZustaendigeOrganisationseinheit].actor, LKF, [[Hauptkostenstelle – Fachlicher Funktionscode]])
-* insert ShallPopulateObligation(participant[FachlichZustaendigeOrganisationseinheit].actor, MopedKHActor)
+* insert ShallPopulateObligation(participant[FachlichZustaendigeOrganisationseinheit].actor, MopedKAActor)
 * participant[PflegerischZustaendigeOrganisationseinheit] ^short = "LKF: Hauptkostenstelle – Pflegerischer Funktionscode"
-* participant[PflegerischZustaendigeOrganisationseinheit].actor only Reference(MopedKHOrganisationseinheit)
+* participant[PflegerischZustaendigeOrganisationseinheit].actor only Reference(MopedKAOrganisationseinheit)
 * participant[PflegerischZustaendigeOrganisationseinheit].type = MopedEncounterParticipantTypesCS#pflegerisch
 * insert legacyMapping(participant[PflegerischZustaendigeOrganisationseinheit].actor, LKF, [[Hauptkostenstelle – Pflegerischer Funktionscode]])
-* insert ShallPopulateObligation(participant[PflegerischZustaendigeOrganisationseinheit].actor, MopedKHActor)
+* insert ShallPopulateObligation(participant[PflegerischZustaendigeOrganisationseinheit].actor, MopedKAActor)
 
 * actualPeriod ^short = "LKF: Zugangs- und Abgangsdatum"
 * actualPeriod.start 1..1
 * actualPeriod.start ^short = "LKF: Hauptkostenstelle/Fachgebiet – Zugangsdatum/Kontaktdatum; LKF: Hauptkostenstelle/Fachgebiet – Zugangsuhrzeit/Kontaktuhrzeit"
 * insert legacyMapping(actualPeriod.start, LKF, [[Hauptkostenstelle/Fachgebiet – Zugangsdatum/Kontaktdatum]])
 * insert legacyMapping(actualPeriod.start, LKF, [[Hauptkostenstelle/Fachgebiet – Zugangsuhrzeit/Kontaktuhrzeit]])
-* insert ShallPopulateObligation(actualPeriod.start, MopedKHActor)
+* insert ShallPopulateObligation(actualPeriod.start, MopedKAActor)
 * actualPeriod.end ^short = "LKF: Hauptkostenstelle – Abgangsdatum; LKF: Hauptkostenstelle – Abgangsuhrzeit"
 * insert legacyMapping(actualPeriod.end, LKF, [[Hauptkostenstelle – Abgangsdatum]])
 * insert legacyMapping(actualPeriod.end, LKF, [[Hauptkostenstelle – Abgangsuhrzeit]])
-* insert ShallPopulateObligation(actualPeriod.end, MopedKHActor)
+* insert ShallPopulateObligation(actualPeriod.end, MopedKAActor)
 
 * type = MopedEncounterTypesCS#TENC
 * type 1..
-* insert ShallPopulateObligation(type, MopedKHActor)
+* insert ShallPopulateObligation(type, MopedKAActor)
 * admission.extension contains Altersgruppe named Altersgruppe 1..1 MS
 * admission.extension[Altersgruppe].extension[beiZugang].value[x] 1..1
 * admission.extension[Altersgruppe].extension[beiZugang] 1..1
 * admission.extension[Altersgruppe].extension[beiZugang].value[x] ^short = "LKF: Altersgruppe bei Zugang/Kontakt"
 * insert legacyMapping(admission.extension[Altersgruppe].extension[beiZugang].value[x], LKF, [[Altersgruppe bei Zugang/Kontakt]])
-* insert ShallPopulateObligation(admission.extension[Altersgruppe].extension[beiZugang].value[x], MopedKHActor)
+* insert ShallPopulateObligation(admission.extension[Altersgruppe].extension[beiZugang].value[x], MopedKAActor)
 * admission.dischargeDisposition ^short = "LKF: Hauptkostenstelle – Abgangsart"
 * insert legacyMapping(admission.dischargeDisposition, LKF, [[Hauptkostenstelle – Abgangsart]])
-* insert ShallPopulateObligation(admission.dischargeDisposition, MopedKHActor)
+* insert ShallPopulateObligation(admission.dischargeDisposition, MopedKAActor)
 
 * partOf only Reference (MopedEncounter)
 * partOf 1..1
@@ -70,4 +70,4 @@ Title: "MOPED TransferEncounter"
 
 * subjectStatus ^short = "LKF: Physische Anwesenheit"
 * insert legacyMapping(subjectStatus, LKF, [[Physische Anwesenheit]])
-* insert ShallPopulateObligation(subjectStatus, MopedKHActor)
+* insert ShallPopulateObligation(subjectStatus, MopedKAActor)

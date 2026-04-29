@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n         KH           " #f5e599
-  actor KH as "KH"
+box "\n         KA           " #f5e599
+  actor KA as "KA"
 end box
 
 box "\n              Moped              " #c5f7ba
@@ -66,10 +66,10 @@ Zustand:
 - Aufnahmedaten vollständig ✓ · x
 end note
 
-KH ->> MP: POST $einmelden
+KA ->> MP: POST $einmelden
 
-note over KH
-Einmelden-Bundle sendet die Intensivdokumentation
+note over KA
+Einmelden-Bundle sendet die Intensivdokumentation 
 oder eine Registermeldung:
 - TISS-A
 - SAPS3

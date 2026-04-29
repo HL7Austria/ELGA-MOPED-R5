@@ -1,12 +1,12 @@
 {
   "resourceType" : "Location",
-  "id" : "LocationKHK999",
+  "id" : "LocationKAK999",
   "meta" : {
     "profile" : [
       "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-location"
     ]
   },
   "managingOrganization" : {
-    "reference" : "Organization/KHK999"
+    "reference" : "Organization/KAK999"
   }
 }

@@ -26,7 +26,7 @@
   "serviceType" : [
     {
       "reference" : {
-        "reference" : "HealthcareService/KHK999ABT12118102"
+        "reference" : "HealthcareService/KAK999ABT12118102"
       }
     }
   ],

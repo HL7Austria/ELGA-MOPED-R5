@@ -1,9 +1,9 @@
 {
   "resourceType": "HealthcareService",
-  "id": "KHK999ABT16111112",
+  "id": "KAK999ABT12118102",
   "meta": {
     "profile": [
-      "https://elga.moped.at/StructureDefinition/MopedKHOrganisationseinheit"
+      "https://elga.moped.at/StructureDefinition/MopedKAOrganisationseinheit"
     ]
   },
   "extension": [
@@ -11,11 +11,18 @@
       "extension": [
         {
           "url": "InterneKostenstellennummer",
-          "valueUnsignedInt": 1291
+          "valueUnsignedInt": 1200
         },
         {
           "url": "InterneKostenstellenbezeichnung",
-          "valueString": "Innere Medizin � allgemein"
+          "valueString": "Intensivbetreuung (Interne)"
+        },
+        {
+          "url": "SpezielleOrganisationsform",
+          "valueCoding": {
+            "system": "https://elga.moped.at/CodeSystem/SpezielleOrganisationsformenCS",
+            "code": "A"
+          }
         },
         {
           "url": "KostenstellenJahr",
@@ -28,7 +35,7 @@
   "identifier": [
     {
       "system": "http://example.org/lkf-system/funktionscode",
-      "value": "16111112"
+      "value": "12118102"
     }
   ],
   "type": [
@@ -42,11 +49,11 @@
     }
   ],
   "providedBy": {
-    "reference": "Organization/KHK999"
+    "reference": "Organization/KAK999"
   },
   "location" : [
     {
-      "reference" : "Location/LocationKHK999"
+      "reference" : "Location/LocationKAK999"
     }
   ]
 }

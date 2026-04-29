@@ -22,7 +22,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *Update* Parameter beinhaltet ein Bundle mit den relevanten Ressourcen zum Fall die aktualisiert, eingebracht oder gelöscht werden sollen."
   * type = #Bundle
-  * targetProfile = Canonical(MopedUpdateBundleKH)
+  * targetProfile = Canonical(MopedUpdateBundleKA)
 * parameter[+]
   * name = #return
   * use = #out

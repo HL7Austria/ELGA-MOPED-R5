@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n  KH (Herz Jesu Krankenhaus)  " #f5e599
-  actor KH as "KH"
+box "\n  KA (Herz Jesu Krankenhaus)  " #f5e599
+  actor KA as "KA"
 end box
 
 box "\n       Moped       " #c5f7ba
@@ -58,31 +58,31 @@ box "\n        Bund        " #fcb3b3
   actor Bund as "Bund"
 end box
 
-KH->> MP:<b>1</b> [[OperationDefinition-MOPED.Patient.Aufnehmen.html $aufnehmen]]
-note over KH: Sven Selbstzahler wird stationär aufgenommen,%n() eine Selbstzahler-Coverage erfasst %n()und keine zuständige Versicherung gesetzt
+KA->> MP:<b>1</b> [[OperationDefinition-MOPED.Patient.Aufnehmen.html $aufnehmen]]
+note over KA: Sven Selbstzahler wird stationär aufgenommen,%n() eine Selbstzahler-Coverage erfasst %n()und keine zuständige Versicherung gesetzt
 
-KH->>MP:<b>2</b> [[OperationDefinition-MOPED.Daten.Update.html $update]]
-Note over KH: Verlegung auf Abteilung Innere Medizin
+KA->>MP:<b>2</b> [[OperationDefinition-MOPED.Daten.Update.html $update]]
+Note over KA: Verlegung auf Abteilung Innere Medizin
 
-KH->>MP:<b>3</b> [[OperationDefinition-MOPED.Daten.Update.html $update]]
-Note over KH: Diagnose "Herzinsuffizienz" und Leistung "EKG" erfasst
+KA->>MP:<b>3</b> [[OperationDefinition-MOPED.Daten.Update.html $update]]
+Note over KA: Diagnose "Herzinsuffizienz" und Leistung "EKG" erfasst
 
-KH->>MP:<b>4</b> [[OperationDefinition-MOPED.Patient.Entlassen.html $entlassen]]
-note over KH: Sven Selbstzahler wird entlassen
+KA->>MP:<b>4</b> [[OperationDefinition-MOPED.Patient.Entlassen.html $entlassen]]
+note over KA: Sven Selbstzahler wird entlassen
 
 
 loop [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] / [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]] (vorläufig)
-    KH->>MP:<b>5</b> [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] 
-    Note over KH: Abrechnung aller Leistungen eingereicht
+    KA->>MP:<b>5</b> [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] 
+    Note over KA: Abrechnung aller Leistungen eingereicht
     LGF->>MP:<b>6a</b> GET Claim?status=active&use=claim%n()&_has:ClaimResponse:request:status:not=active
     Note over LGF: unbeantwortete Abrechnungen abfragen%n()und intern bearbeiten
     LGF->>MP:<b>6b</b> [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]]
     Note over LGF: Alle Posten genehmigt%n()(keine Änderungen)
 end
-KH->>MP:<b>7a</b> GET Composition?id={id}
-Note over KH: aktuellen Stand des Falls abfragen%n()(inkl. bestätigte Abrechnung)
-KH->>MP:<b>7b</b>  final [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] 
-Note over KH: Finale Abrechnung seitens des KH
+KA->>MP:<b>7a</b> GET Composition?id={id}
+Note over KA: aktuellen Stand des Falls abfragen%n()(inkl. bestätigte Abrechnung)
+KA->>MP:<b>7b</b>  final [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] 
+Note over KA: Finale Abrechnung seitens der KA
 LGF->>MP:<b>8a</b> GET Claim?status=active&use=claim&endgueltig=true%n()&_has:ClaimResponse:request:status:not=active
 Note over LGF: unbeantwortete Abrechnungen abfragen%n()und intern bearbeiten
 LGF->>MP:<b>8b</b> final [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]]

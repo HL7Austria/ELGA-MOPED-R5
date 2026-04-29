@@ -39,8 +39,8 @@ skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
 
-box "\n         KH           " #f5e599
-  actor KH as "KH"
+box "\n         KA           " #f5e599
+  actor KA as "KA"
 end box
 
 box "\n              Moped              " #c5f7ba
@@ -68,8 +68,8 @@ Zustand:
   vollständig
 end note
 
-KH ->> MP: $anfragen (POST VAERequest)
-note over KH
+KA ->> MP: $anfragen (POST VAERequest)
+note over KA
 VAE-Anfrage wird gesendet
 end note
 

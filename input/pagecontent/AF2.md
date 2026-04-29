@@ -6,7 +6,7 @@
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅ |
+| KA (Krankenhaus)  |      ✅ |
 | LGF (Landesgesundheitsfonds) |  ✅ |
 | SV (Sozialversicherung)      |  ✅ |
 | Bund            |  ✅ |
@@ -25,14 +25,14 @@ Der Patient wird stationär aufgenommen und die Aufnahme wird so früh wie mögl
 ### Beispiel
 
 ### Technische Hinweise
-Der Patient wird stationär in das KH aufgenommen und ein Aufenthalt (Encounter) wird angelegt. In diesem Zuge wird auch gleich die Station auf die er aufgenommen wird (TransferEncounter) und die Aufnahmediagnose mit übermittelt. Die zuständige Versicherung kann in Form einer Coverage direkt zur Verfügung gestellt werden, sofern diese bereits bekannt ist. Dies ist aber bei der Aufnahme nicht verpflichtend und kann später durch $update eingebracht werden.
+Der Patient wird stationär in die KA aufgenommen und ein Aufenthalt (Encounter) wird angelegt. In diesem Zuge wird auch gleich die Station auf die er aufgenommen wird (TransferEncounter) und die Aufnahmediagnose mit übermittelt. Die zuständige Versicherung kann in Form einer Coverage direkt zur Verfügung gestellt werden, sofern diese bereits bekannt ist. Dies ist aber bei der Aufnahme nicht verpflichtend und kann später durch $update eingebracht werden.
 
 ### Ablauf 
 
 <div>{% include_relative plantuml/AF2.svg %}</div>
 
 ### Relevante Profile
-- [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKA.html)
 - [Patientenressource](TBD)
 - [Encounter Stationär](StructureDefinition-MopedEncounterS.html)
 - [TransferEncounter Stationär](StructureDefinition-MopedTransferEncounterS.html)

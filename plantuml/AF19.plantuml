@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n  KH (Herz Jesu Krankenhaus)  " #f5e599
-  actor KH as "KH"
+box "\n  KA (Herz Jesu Krankenhaus)  " #f5e599
+  actor KA as "KA"
 end box
 
 box "\n       Moped       " #c5f7ba
@@ -60,10 +60,10 @@ end box
 
 autonumber
 
-KH->>MP: $aufnehmen
-Note over KH: POST Patient, Encounter, ... %n()TransferEncounter mit Referenz auf Aufnahmeabteilung
+KA->>MP: $aufnehmen
+Note over KA: POST Patient, Encounter, ... %n()TransferEncounter mit Referenz auf Aufnahmeabteilung
 
-KH->>MP: $update – interne Verlegung
-Note over KH: PUT alter TransferEncounter (finished, Enddatum) %n()+ POST neuer TransferEncounter (neue Abteilung) 
+KA->>MP: $update – interne Verlegung
+Note over KA: PUT alter TransferEncounter (finished, Enddatum) %n()+ POST neuer TransferEncounter (neue Abteilung) 
 
 @enduml

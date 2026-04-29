@@ -73,7 +73,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
@@ -125,7 +125,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
@@ -138,7 +138,7 @@ verfügbar.
         <td>O</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
@@ -164,7 +164,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.identifier:socialSecurityNumber; RelatedPerson.identifier:socialSecurityNumber.value</td>
@@ -177,7 +177,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.name.family; RelatedPerson.name.family</td>
@@ -190,7 +190,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.name.given; RelatedPerson.name.given</td>
@@ -203,7 +203,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.gender; RelatedPerson.gender</td>
@@ -216,7 +216,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.birthDate; RelatedPerson.birthDate</td>
@@ -242,7 +242,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCoverage</td>
         <td>Coverage</td>
         <td>Coverage.class:Versichertenkategorien.value</td>
@@ -255,7 +255,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.identifier:socialSecurityNumber</td>
@@ -268,7 +268,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.name.family</td>
@@ -281,7 +281,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.name.given</td>
@@ -294,7 +294,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
@@ -307,7 +307,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
@@ -430,7 +430,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
@@ -482,7 +482,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
@@ -495,7 +495,7 @@ verfügbar.
         <td>O[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: Unterschied ambulant vs. stationär?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
@@ -521,7 +521,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.birthDate; RelatedPerson.birthDate</td>
@@ -547,7 +547,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>optional (Unterschied zu E.1); TBD: klären warum der Patient nicht verpflichtend ist, aber der Hauptversicherte schon (nicht immer der Patient)</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
@@ -657,7 +657,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:aufnahmeart</td>
@@ -670,7 +670,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
@@ -683,7 +683,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
@@ -696,7 +696,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:Sonderklasse.code</td>
@@ -709,7 +709,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.extension:citizenship</td>
@@ -722,7 +722,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.address.line.extension:street</td>
@@ -735,7 +735,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
@@ -748,7 +748,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
@@ -761,7 +761,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.address.city</td>
@@ -774,7 +774,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.accident.type</td>
@@ -787,7 +787,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -800,7 +800,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -813,7 +813,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -826,7 +826,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -839,7 +839,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -852,7 +852,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -865,7 +865,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -878,7 +878,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -891,7 +891,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -904,7 +904,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:VerdachtFremdverschulden.value[x]</td>
@@ -930,7 +930,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>wird bei Kur-/Rehabilitationsaufenthalten mit „99“ befüllt; Kur/Reha relevant?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.reason:Ursache.value</td>
@@ -956,7 +956,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
@@ -969,7 +969,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
@@ -982,7 +982,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
@@ -995,7 +995,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
@@ -1008,7 +1008,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
@@ -1021,7 +1021,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
@@ -1034,7 +1034,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.accident.date</td>
@@ -1047,7 +1047,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5</td>
-        <td>MopedKHActor, MopedKHActor, MopedKHActor</td>
+        <td>MopedKAActor, MopedKAActor, MopedKAActor</td>
         <td>MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.billablePeriod.start</td>
@@ -1060,7 +1060,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.billablePeriod.end; Claim.supportingInfo:Verlaengerungstage.value[x]:valueQuantity.value</td>
@@ -1073,7 +1073,7 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCoverage</td>
         <td>Coverage</td>
         <td>Coverage.identifier:VDASID</td>
@@ -1118,7 +1118,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:aufnahmeart</td>
@@ -1131,7 +1131,7 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:Sonderklasse.code</td>
@@ -1145,7 +1145,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: Wenn Rückmeldung „in Bearbeitung“ (VAEST = 18 oder 98)
 dann nicht zwingend</td>
-        <td>MopedKHActor, MopedKHActor, MopedKHActor; MopedSVActor</td>
+        <td>MopedKAActor, MopedKAActor, MopedKAActor; MopedSVActor</td>
         <td>MopedVAERequestInitial; MopedVAEResponse</td>
         <td>Claim; ClaimResponse</td>
         <td>Claim.billablePeriod.start; ClaimResponse.preAuthPeriod.start</td>
@@ -1258,7 +1258,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.dischargeDisposition</td>
@@ -1271,7 +1271,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X[TBD]*</td>
         <td>*in Zukunft immer codiert notwendig?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -1284,7 +1284,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X[TBD]*</td>
         <td>*in Zukunft immer codiert notwendig?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -1297,7 +1297,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X[TBD]*</td>
         <td>*in Zukunft immer codiert notwendig?</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -1310,7 +1310,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>O</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -1323,7 +1323,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>O</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -1336,7 +1336,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>O</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedCondition</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
@@ -1362,7 +1362,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X*</td>
         <td>in K01 bereits zwingend daher für K05 nicht mehr optional notwendig</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:VerdachtFremdverschulden.value[x]</td>
@@ -1375,7 +1375,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X*</td>
         <td>in K01 bereits zwingend daher für K05 nicht mehr optional notwendig</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.reason:Ursache.value</td>
@@ -1453,7 +1453,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>O</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:Sonderklasse.timing[x]:timingPeriod</td>
@@ -1466,7 +1466,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>O</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:Sonderklasse.code</td>
@@ -1479,7 +1479,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
-        <td>MopedKHActor, MopedDeviceActor</td>
+        <td>MopedKAActor, MopedDeviceActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.status</td>
@@ -1492,7 +1492,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>O</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounterAufnahmeS; MopedEncounterEntlassungS; MopedEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.extension:TageOhneKostenbeitrag</td>
@@ -1641,7 +1641,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
@@ -1654,7 +1654,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
@@ -1667,7 +1667,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
@@ -1680,7 +1680,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.extension:citizenship</td>
@@ -1693,7 +1693,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
@@ -1706,7 +1706,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
@@ -1719,7 +1719,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:aufnahmeart</td>
@@ -1732,7 +1732,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.dischargeDisposition</td>
@@ -1745,7 +1745,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
@@ -2134,7 +2134,7 @@ dann nicht zwingend</td>
         <td>X</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
@@ -2147,7 +2147,7 @@ dann nicht zwingend</td>
         <td>X</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
@@ -2160,7 +2160,7 @@ dann nicht zwingend</td>
         <td>X</td>
         <td>/</td>
         <td>/</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
@@ -2659,7 +2659,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.name.family</td>
@@ -2672,7 +2672,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.name.given</td>
@@ -2685,7 +2685,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
@@ -2698,7 +2698,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
-        <td>MopedKHActor</td>
+        <td>MopedKAActor</td>
         <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>

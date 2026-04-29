@@ -29,7 +29,7 @@ Description: "MOPED Profil der Claim Ressource für die Kostenmeldung für Ausl�
 * insurer only Reference(SVOrganization)
 * insurer 1..1
 * insert MopedHandleObligation(insurer) //? Fallsplitting?
-* provider only Reference(KHOrganization)
+* provider only Reference(KAOrganization)
 * provider 1..1
 * insert MopedHandleObligation(provider)
 * related.claim only Reference(MopedLKFRequest)

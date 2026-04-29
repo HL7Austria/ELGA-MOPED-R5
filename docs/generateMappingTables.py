@@ -100,7 +100,7 @@ COMPOSITION_PATHS_BY_PROFILE: Dict[str, str] = {
     "MopedEncounterS": "Composition.encounter.resolve()",
     "SVOrganization": "Composition.section:zustaendigeSV.entry.resolve()",
     "LGFOrganization": "Composition.section:zustaendigerLGF.entry.resolve()",
-    "KHOrganization": "Composition.section:zustaendigesKH.entry.resolve()",
+    "KAOrganization": "Composition.section:zustaendigeKA.entry.resolve()",
     "MopedOrganizationAbteilung": "Composition.section:besuchteAbteilungen.entry.resolve()",
     "MopedCondition": "Composition.section:Diagnosen.entry.resolve()",
     "MopedProcedure": "Composition.section:Leistungen.entry.resolve()",
@@ -456,7 +456,7 @@ def build_lkf_qr_mapping(qr_dir: str = "output") -> Dict[str, List[MappingEntry]
                         profile=profile,
                         fhir_resource=resource,
                         resource_path=answer_path,
-                        obligation_actor="MopedKHActor"
+                        obligation_actor="MopedKAActor"
                     ))
                 
                 if "item" in it:

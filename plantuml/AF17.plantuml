@@ -38,12 +38,12 @@ skinparam sequence {
 skinparam BoxPadding 10
 skinparam BoxBorderColor #555555
 
-box "\n             KH B             " #f5e599
-  actor KHB as "KH"
+box "\n             KA B             " #f5e599
+  actor KAB as "KA"
 end box
 
-box "\n             KH A             " #f5e599
-  actor KHA as "KH"
+box "\n             KA A             " #f5e599
+  actor KAA as "KA"
 end box
 
 box "\n       Moped       " #c5f7ba
@@ -64,13 +64,13 @@ end box
 
 autonumber
 
-KHA->>MP: $aufnehmen
-Note over KHA: Patient wird aufgenommen
-KHA-->>KHB: Patient wird ins KH B gebracht
-Note over KHA: Patient muss für Diagnostik in das KH B
-KHB-->>KHA: Patient wird zurück ins KH A gebracht
-Note over KHB: Diagnostik durchgeführt
-KHA->>MP: $update
-Note over KHA: KH A meldet die Leistung an Moped\n -> gibt im Procedure statt einer Referenz auf die\n eigene Abteilung eine Referenz auf KH B an
+KAA->>MP: $aufnehmen
+Note over KAA: Patient wird aufgenommen
+KAA-->>KAB: Patient wird in die KA B gebracht
+Note over KAA: Patient muss für Diagnostik in die KA B
+KAB-->>KAA: Patient wird zurück in die KA A gebracht
+Note over KAB: Diagnostik durchgeführt
+KAA->>MP: $update
+Note over KAA: KA A meldet die Leistung an Moped\n -> gibt im Procedure statt einer Referenz auf die\n eigene Abteilung eine Referenz auf KA B an
 
 @enduml
