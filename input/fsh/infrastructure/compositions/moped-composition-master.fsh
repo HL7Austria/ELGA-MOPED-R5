@@ -8,8 +8,8 @@ Title: "MOPED Master Composition"
 * obeys moped-master-patient-auf-genau-einer-station
 * obeys moped-master-VAEResponse-nur-wenn-VAERequest
 * obeys moped-master-lkfresponse-nur-wenn-lkfrequest
-* obeys moped-master-author-ist-gleich-haupt-KH
-* obeys moped-master-alle-KH-referenzen-gleich
+* obeys moped-master-author-ist-gleich-haupt-KA
+* obeys moped-master-alle-KA-referenzen-gleich
 * obeys moped-master-observations-innerhalb-aufenthaltszeitraum
 * obeys moped-master-transferencounter-innerhalb-aufenthaltszeitraum
 * obeys moped-master-procedures-innerhalb-aufenthaltszeitraum
@@ -46,12 +46,12 @@ Severity: #error
 Description: "Eine LKF-Response darf nur existieren, wenn auch ein dazugehöriger LKF-Request existiert"
 Expression: ""
 
-Invariant: moped-master-author-ist-gleich-haupt-KH
+Invariant: moped-master-author-ist-gleich-haupt-KA
 Severity: #error
-Description: "Der Author muss dieselbe Organisation sein wie das zustaendige KH"
+Description: "Der Author muss dieselbe Organisation sein wie die zustaendige KA"
 Expression: ""
 
-Invariant: moped-master-alle-KH-referenzen-gleich
+Invariant: moped-master-alle-KA-referenzen-gleich
 Severity: #error
 Description: "Alle referenzierten Krankenanstalten müssen identisch sein"
 Expression: ""

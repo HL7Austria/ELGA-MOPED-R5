@@ -6,17 +6,17 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅   |
+| KA (Krankenhaus)  |      ✅   |
 | LGF (Landesgesundheitsfonds) |  ❌  |
 | SV (Sozialversicherung)      |  ✅  |
 | Bund            |  ❌  |
 
 ### Ablauf - generisch
 #### VAE Anfrage (generisch)
-<div>{% include anfragen.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/anfragen.svg %}</div>
 
 #### VAE Antwort (generisch)
-<div>{% include antworten.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten.svg %}</div>
 
 ### Ablauf - Beispiele zur Anwendung
 
@@ -29,7 +29,7 @@ Aufgrund der eingelangten VAE (Versichertenanspruchserklärung) Anfrage erfolgt 
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-positiv.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-positiv.svg %}</div>
 
 #### Positive VAE mit Fristende
 
@@ -40,11 +40,11 @@ Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt e
 | Ambulant  |  ❌ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-positiv-zeitraum.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-positiv-zeitraum.svg %}</div>
 
 #### Negative VAE
 
-Aufgrund der eingelangten Aufnahme-/Ereignisanzeige erfolgt seitens SV eine negative Versichertenanspruchserklärung. Bei einer negativen Versichertenanspruchserklärung wird der jeweilige Ablehnungsgrund (Code) angeführt. Das KH prüft regelmäßig, ob es Ablehnungen der VAE seitens der SV gibt. Diese Fälle müssen bearbeitet werden. Im schlimmsten Fall muss der Patient die Rechnung als Selbstzahler selbst bezahlen. Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH behoben werden können, so dass eine positive VAE durch die SV nach erneuter Anfrage in Folge möglich ist.
+Aufgrund der eingelangten Aufnahme-/Ereignisanzeige erfolgt seitens SV eine negative Versichertenanspruchserklärung. Bei einer negativen Versichertenanspruchserklärung wird der jeweilige Ablehnungsgrund (Code) angeführt. Die KAprüft regelmäßig, ob es Ablehnungen der VAE seitens der SV gibt. Diese Fälle müssen bearbeitet werden. Im schlimmsten Fall muss der Patient die Rechnung als Selbstzahler selbst bezahlen. Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KA behoben werden können, so dass eine positive VAE durch die SV nach erneuter Anfrage in Folge möglich ist.
 
 ###### Beispiel
 - Patient wurde anstelle von selbstversichert als mitversichert gemeldet und umgekehrt (nach Richtigstellung dann positive VAE möglich) 
@@ -57,7 +57,7 @@ Aufgrund der eingelangten Aufnahme-/Ereignisanzeige erfolgt seitens SV eine nega
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-negativ.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-negativ.svg %}</div>
 
 #### VAE in Arbeit
 
@@ -68,7 +68,7 @@ TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-in-arbeit.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-in-arbeit.svg %}</div>
 
 #### VAE in Arbeit wird später bewilligt
 
@@ -79,18 +79,18 @@ TBD: Klärung ob diese Ausprägung noch nötig ist oder durch Moped obsolet wird
 | Ambulant  |  ✅ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-in-arbeit-bewilligt.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-in-arbeit-bewilligt.svg %}</div>
 
 #### Anfrage für Verlängerung
 
-Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum (Fristende) der bereits bewilligten VAE so muss das KH um eine Verlängerung ansuchen. Gibt es keine bewilligte VAE mit Fristende so kann die VAE auch nicht verlängert werden.
+Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum (Fristende) der bereits bewilligten VAE so muss die KA um eine Verlängerung ansuchen. Gibt es keine bewilligte VAE mit Fristende so kann die VAE auch nicht verlängert werden.
 
 | Behandlungsart|  |
 |-----------|----:|
 | Ambulant  |  ❌ |
 | Stationär |  ✅ |
 
-<div>{% include anfragen-verlaengerung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/anfragen-verlaengerung.svg %}</div>
 
 #### Antwort auf Verlängerung
 
@@ -101,7 +101,7 @@ Die Verlängerungs-Anfrage wird entweder genehmigt oder abgelehnt.
 | Ambulant  |  ❌ |
 | Stationär |  ✅ |
 
-<div>{% include antworten-verlaengerung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-vae/antworten-verlaengerung.svg %}</div>
 
 #### VAE doch positiv
 
@@ -126,8 +126,8 @@ TBD
 - [VAERequestInitial](StructureDefinition-MopedVAERequestInitial.html)
 - [VAERequestVerlaengerung](StructureDefinition-MopedVAERequestVerlaengerung.html)
 - [VAEResponse](StructureDefinition-MopedVAEResponse.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
-- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
+- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
+- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKA.html)
 - [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
 
 ### Technische Hinweise
@@ -145,4 +145,4 @@ TBD
 Die SV möchte benachrichtigt werden, wenn ein neuer VAERequest für sie bereitgestellt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-neueVAE.html) definiert.
 
 ##### SubscriptionTopic: VAE wurde abgelehnt
-Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-VAEabgelehnt.json.html) definiert.
+Die KAmöchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-VAEabgelehnt.json.html) definiert.

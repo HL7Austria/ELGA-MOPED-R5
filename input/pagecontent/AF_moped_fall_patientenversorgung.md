@@ -6,15 +6,15 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅   |
+| KA (Krankenhaus)  |      ✅   |
 | LGF (Landesgesundheitsfonds) |  ❌  |
 | SV (Sozialversicherung)      |  ❌  |
 | Bund            |  ❌  |
 
 ### Ablauf - generisch
 #### Patientenversorgung (generisch)
-<div>{% include Patientenversorgung-update-generisch.svg %}</div>
-<div>{% include Patientenversorgung-einmelden-generisch.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/update-generisch.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/einmelden-generisch.svg %}</div>
 
 ### Ablauf - Beispiele zur Anwendung
 
@@ -22,7 +22,7 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 ##### Beschreibung
 Ein Patient wird auf eine Organisationseinheit verlegt bzw. kommt in eine Ambulanz. Ein Patient kann nicht auf mehreren Organisationseinheiten / in mehreren Ambulanzen gleichzeitig behandelt werden.
 
-<div>{% include Patientenversorgung-update-neue-verlegung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/update-neue-verlegung.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -33,7 +33,7 @@ Ein Patient wird auf eine Organisationseinheit verlegt bzw. kommt in eine Ambula
 ##### Beschreibung
 Eine zuvor eingebrachte Verlegung / Kontakt wird aktualisiert.
 
-<div>{% include Patientenversorgung-update-aktualisierte-verlegung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/update-aktualisierte-verlegung.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -45,7 +45,7 @@ Eine zuvor eingebrachte Verlegung / Kontakt wird aktualisiert.
 ##### Beschreibung
 Die Aufnahmediagnose war zum Zeitpunkt der administrativen Aufnahme noch unbekannt und wird nachgereicht. 
 
-<div>{% include Patientenversorgung-update-neue-aufnahmediagnose.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/update-neue-aufnahmediagnose.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -59,7 +59,7 @@ TBD: ist eine Aufnahmediagnose für ambulant relevant?
 ##### Beschreibung
 Eine neue Leistung wird erfasst die im Zuge der Patientenversorgung erbracht wurde.
 
-<div>{% include Patientenversorgung-update-neue-leistung.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/update-neue-leistung.svg %}</div>
 
 
 | Behandlungsart|  |
@@ -72,7 +72,7 @@ Eine neue Leistung wird erfasst die im Zuge der Patientenversorgung erbracht wur
 ##### Beschreibung
 Während der Patientenbehandlung wird eine Diagnose gestellt. Diese kann entweder eine Zusatz- oder Hauptdiagnose sein. In manchen Fällen ist sie auch gleichzeitig die Aufnahmediagnose.
 
-<div>{% include Patientenversorgung-update-neue-diagnose.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/update-neue-diagnose.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -84,7 +84,7 @@ Während der Patientenbehandlung wird eine Diagnose gestellt. Diese kann entwede
 ##### Beschreibung
 Manche Details zum Aufenthalt können verwendert werden. Als unveränderbar gelten jedenfalls die Bestandteile der Schlüsselkombination eines Moped-Falls. 
 
-<div>{% include Patientenversorgung-update-aktualisierter-fall.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/update-aktualisierter-fall.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -95,7 +95,7 @@ Manche Details zum Aufenthalt können verwendert werden. Als unveränderbar gelt
 ##### Beschreibung
 Der Aufenthalt auf Intensivstationen (identifiziert durch bestimmte Funktionscodes) erfordert eine Einmeldung der Intensivdokumentation. 
 
-<div>{% include Patientenversorgung-einmelden-intensiv.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/einmelden-intensiv.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -108,7 +108,7 @@ Der Aufenthalt auf Intensivstationen (identifiziert durch bestimmte Funktionscod
 ##### Beschreibung
 TBD: gibt es einen Teil der Registermeldung die bei ambulanter Nachbehandlung eingebracht wird?
 
-<div>{% include Patientenversorgung-einmelden-strokeunit.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-patientenversorgung/einmelden-strokeunit.svg %}</div>
 
 | Behandlungsart|  |
 |-----------|----:|
@@ -117,7 +117,7 @@ TBD: gibt es einen Teil der Registermeldung die bei ambulanter Nachbehandlung ei
 
 
 ### Relevante Profile
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
 - [SAPS3 Questionnaire](Questionnaire-LKFSAPS3Questionnaire.html)
 - [TISS-A Questionnaire](Questionnaire-LKFTISSAQuestionnaire.html)
 

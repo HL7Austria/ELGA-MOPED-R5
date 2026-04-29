@@ -6,8 +6,8 @@ Title: "MOPED Condition"
 * verificationStatus 0..1
 * verificationStatus ^short = "LKF: Diagnose – Art"
 * insert legacyMapping(verificationStatus, LKF, Diagnose – Art)
-* insert ShallPopulateObligation(verificationStatus, MopedKHActor)
-* insert ShallPopulateObligation(clinicalStatus, MopedKHActor)
+* insert ShallPopulateObligation(verificationStatus, MopedKAActor)
+* insert ShallPopulateObligation(clinicalStatus, MopedKAActor)
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
 * insert MopedHandleObligation(encounter)
@@ -39,13 +39,13 @@ Title: "MOPED Condition"
 * insert legacyMapping(code.coding[ICD10], KaOrg, Zusatzdiagnose 1 - ICD 10 BMSGPK Schlüssel)
 * insert legacyMapping(code.coding[ICD10], KaOrg, Zusatzdiagnose 1 - Untergliederung 1)
 * insert legacyMapping(code.coding[ICD10], KaOrg, Zusatzdiagnose 1 - Untergliederung 2)
-* insert ShallPopulateObligation(code.coding[ICD10], MopedKHActor)
+* insert ShallPopulateObligation(code.coding[ICD10], MopedKAActor)
 * code.coding[HDG] from LKFHauptdiagnosegruppenVS (required)
 * code.coding[HDG].system = Canonical(LKFHauptdiagnosegruppenCS)
-* insert ShallPopulateObligation(code, MopedKHActor)
+* insert ShallPopulateObligation(code, MopedKAActor)
 * extension contains Diagnosetyp named Diagnosetyp 1..2
 * extension[Diagnosetyp] ^short = "LKF: Diagnose – Typ; KaOrg: Hauptdiagnose oder Zusatzdiagnose"
 * insert legacyMapping(extension[Diagnosetyp], LKF, Diagnose – Typ)
 * insert legacyMapping(extension[Diagnosetyp], KaOrg, Hauptdiagnose oder Zusatzdiagnose)
-* insert ShallPopulateObligation(extension[Diagnosetyp], MopedKHActor)
+* insert ShallPopulateObligation(extension[Diagnosetyp], MopedKAActor)
 //TBD Invariante, dass Haupt und Zusatzdiagnose gemeinsam bzw. 2x Haupt oder 2x Zusatz nicht möglich sind

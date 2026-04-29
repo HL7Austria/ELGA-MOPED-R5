@@ -79,7 +79,7 @@
 			<text x="52.03" y="1161.27" class="st2" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>Entlassung</text>		</g>
 		<g id="shape5-15" v:mID="5" v:groupContext="shape" transform="translate(103.698,-1052.03)">
 			<title>Rechteck</title>
-			<desc>KH</desc>
+			<desc>KA</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
@@ -90,7 +90,7 @@
 				<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st6"/>
 			</g>
 			<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st7"/>
-			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KH</text>		</g>
+			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KA</text>		</g>
 		<g id="shape6-21" v:mID="6" v:groupContext="shape" transform="translate(351.729,-774.233)">
 			<title>Rechteck.17</title>
 			<desc>SV</desc>
@@ -107,7 +107,7 @@
 			<text x="21.69" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>SV</text>		</g>
 		<g id="shape7-27" v:mID="7" v:groupContext="shape" transform="translate(611.099,-1052.03)">
 			<title>Rechteck.30</title>
-			<desc>KH</desc>
+			<desc>KA</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
@@ -118,10 +118,10 @@
 				<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st6"/>
 			</g>
 			<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st7"/>
-			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KH</text>		</g>
+			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KA</text>		</g>
 		<g id="shape8-33" v:mID="8" v:groupContext="shape" transform="translate(351.729,-1054.86)">
 			<title>Rechteck.8</title>
-			<desc>KH</desc>
+			<desc>KA</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
@@ -132,7 +132,7 @@
 				<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st6"/>
 			</g>
 			<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st7"/>
-			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KH</text>		</g>
+			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KA</text>		</g>
 		<g id="shape9-39" v:mID="9" v:groupContext="shape" v:layerMember="0" transform="translate(229.84,-998.17)">
 			<title>Dynamischer Verbinder.48</title>
 			<path d="M0 1184.21 L53.22 1184.21" class="st10"/>
@@ -153,7 +153,7 @@
 			<text x="51.33" y="1161.27" class="st2" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>Abrechnen</text>		</g>
 		<g id="shape12-51" v:mID="12" v:groupContext="shape" transform="translate(81.0207,-612.782)">
 			<title>Rechteck.12</title>
-			<desc>KH</desc>
+			<desc>KA</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
@@ -164,7 +164,7 @@
 				<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st6"/>
 			</g>
 			<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st7"/>
-			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KH</text>		</g>
+			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KA</text>		</g>
 		<g id="shape13-57" v:mID="13" v:groupContext="shape" transform="translate(385.745,-612.782)">
 			<title>Rechteck.95</title>
 			<desc>LGF</desc>
@@ -297,7 +297,7 @@
 			<text x="5.12" y="1161.27" class="st2" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>Jahresstatistikmeldungen</text>		</g>
 		<g id="shape48-130" v:mID="48" v:groupContext="shape" transform="translate(124.958,-142.107)">
 			<title>Rechteck.48</title>
-			<desc>KH</desc>
+			<desc>KA</desc>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
@@ -308,7 +308,7 @@
 				<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st6"/>
 			</g>
 			<rect x="0" y="1140.28" width="68.0315" height="51.0236" class="st7"/>
-			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KH</text>		</g>
+			<text x="20.3" y="1172.99" class="st8" v:langID="3079"><v:paragraph v:horizAlign="1"/><v:tabList/>KA</text>		</g>
 		<g id="shape50-136" v:mID="50" v:groupContext="shape" transform="translate(4.41175,-229.981)">
 			<title>Tabelle.50</title>
 			<desc>Jahres-Statistikmeldungen</desc>

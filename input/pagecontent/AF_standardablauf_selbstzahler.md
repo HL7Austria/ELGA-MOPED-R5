@@ -6,7 +6,7 @@
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅ |
+| KA (Krankenhaus)  |      ✅ |
 | LGF (Landesgesundheitsfonds) |  ✅ |
 | SV (Sozialversicherung)      |  ❌  |
 | Bund            |  ✅  |
@@ -31,7 +31,7 @@ Es existiert kein Fall mit der selben Schlüsselkombination.
 
 #### Ablauf
 
-<div class="diagram">{% include standardablauf-selbstzahler.svg %}</div>
+<div class="diagram">{% include_relative plantuml/moped-fall-standardablauf/standardablauf-selbstzahler.svg %}</div>
 <div>{% include AF_standardablauf_selbstzahler_requests.md %}</div>
 
 #### Technische Hinweise

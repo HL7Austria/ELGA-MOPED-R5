@@ -6,7 +6,7 @@
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅  |
+| KA (Krankenhaus)  |      ✅  |
 | LGF (Landesgesundheitsfonds) |  ✅  |
 | SV (Sozialversicherung)      |  ✅   |
 | Bund            |  ✅  |
@@ -24,7 +24,7 @@
 Der Patient wird entlassen und es ist bereits die codierte ICD-10 Hauptdiagnose bekannt. In diesem Fall wird wie bei Susi Sonnenschein in [Anwendungsfall 1](AF1.html) der Patient entlassen und die Diagnose direkt bei $entlassen mit eingefügt. 
 
 ### Beispiel
-- Der Patient war zur Entbindung im KH und die Hauptdiagnose ist somit bereits bei der Entlassung vorhanden.
+- Der Patient war zur Entbindung im KA und die Hauptdiagnose ist somit bereits bei der Entlassung vorhanden.
  
 ### Technische Hinweise
 Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt mit discharged).
@@ -32,7 +32,7 @@ Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt m
 
 ### Ablauf 
 
-<div>{% include AF23.svg %}</div>
+<div>{% include_relative plantuml/AF23.svg %}</div>
 
 ### Relevante Profile
 - [$entlassen Bundle](StructureDefinition-MopedEntlassenBundle.html)
@@ -49,7 +49,7 @@ Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt m
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅   |
+| KA (Krankenhaus)  |      ✅   |
 | LGF (Landesgesundheitsfonds) |  ✅  |
 | SV (Sozialversicherung)      |  ✅   |
 | Bund            |  ✅   |
@@ -75,10 +75,10 @@ Abgerechnet kann erst werden, wenn die Hauptdiagnose vorhanden ist, und somit de
 
 ### Ablauf 
 
-<div>{% include AF24-25.svg %}</div>
+<div>{% include_relative plantuml/AF24-25.svg %}</div>
 
 ### Relevante Profile
-- Entlassung aviso: [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- Entlassung aviso: [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
 - Entlassung vollständig: [$entlassen Bundle](StructureDefinition-MopedEntlassenBundle.html)
 
 ### Relevante Invarianten

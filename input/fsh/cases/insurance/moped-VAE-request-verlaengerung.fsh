@@ -3,24 +3,24 @@ Parent: MopedVAERequest
 Title : "MOPED VAERequest für die Verlängerung der VAE"
 Description: "MOPED Profil für die Verlängerung der Versichertenanspruchserklärung (VAE)"
 * subType = MopedClaimSubTypeCS#VAEREQV
-* insert ShallPopulateObligation(subType, MopedKHActor)
+* insert ShallPopulateObligation(subType, MopedKAActor)
 * related ^slicing.rules = #open
 * related ^slicing.discriminator.type = #value
 * related ^slicing.discriminator.path = "claim.resolve().subType"
 * related ^slicing.ordered = false
 * related contains InitialeVAE 1..1 and VerlaengerteVAE 0..
 * related[InitialeVAE] ^short = "Initiale Anfrage der VAE"
-* related[InitialeVAE].relationship =  http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior
+* related[InitialeVAE].relationship =  $RelatedClaimRelationshipType#prior
 * related[InitialeVAE].claim only Reference(MopedVAERequestInitial)
-* insert ShallPopulateObligation(related[InitialeVAE], MopedKHActor)
+* insert ShallPopulateObligation(related[InitialeVAE], MopedKAActor)
 * related[VerlaengerteVAE] ^short = "Vorherige Verlängerungsanfrage der VAE"
-* related[VerlaengerteVAE].relationship = http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship#prior
+* related[VerlaengerteVAE].relationship = $RelatedClaimRelationshipType#prior
 * related[VerlaengerteVAE].claim only Reference(MopedVAERequestVerlaengerung)
-* insert ShallPopulateObligation(related[VerlaengerteVAE], MopedKHActor)
+* insert ShallPopulateObligation(related[VerlaengerteVAE], MopedKAActor)
 * billablePeriod.start ^short = "KaOrg: Ereignis-/Unfalldatum (Verlängerungsdatum)"
 * insert legacyMapping(billablePeriod.start, KaOrg, [[Ereignis-/Unfalldatum (Verlängerungsdatum)]])
-* insert ShallPopulateObligation(billablePeriod.start, MopedKHActor)
+* insert ShallPopulateObligation(billablePeriod.start, MopedKAActor)
 * billablePeriod.end 1..1
 * billablePeriod.end ^short = "KaOrg: Anzahl der Verlängerungstage"
 * insert legacyMapping(billablePeriod.end, KaOrg, [[Anzahl der Verlängerungstage]])
-* insert ShallPopulateObligation(billablePeriod.end, MopedKHActor)
+* insert ShallPopulateObligation(billablePeriod.end, MopedKAActor)

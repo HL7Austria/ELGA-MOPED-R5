@@ -5,7 +5,7 @@
 
 | Akteur            | | 
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅   |
+| KA (Krankenhaus)  |      ✅   |
 | LGF (Landesgesundheitsfonds) |  ✅  |
 | SV (Sozialversicherung)      |  ✅  |
 | Bund         |  ✅  |
@@ -28,14 +28,14 @@ Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Au
 Es existiert kein Fall mit der selben Schlüsselkombination.
 
 #### Ablauf 
-<div class="diagram">{% include standardablauf-stationaer.svg %}</div>
+<div class="diagram">{% include_relative plantuml/moped-fall-standardablauf/standardablauf-stationaer.svg %}</div>
 <div>{% include AF_standardablauf_stationaer_requests.md %}</div>
 
 #### Technische Hinweise
 
 #### Relevante Profile
-- [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKH.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
+- [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKA.html)
+- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
 - TBD
 
 #### Relevante Invarianten
@@ -46,7 +46,7 @@ Es existiert kein Fall mit der selben Schlüsselkombination.
 Die SV möchte benachrichtigt werden, wenn ein neuer VAERequest für sie bereitgestellt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-neueVAE.html) definiert.
 
 ##### SubscriptionTopic: VAE wurde abgelehnt
-Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-VAEabgelehnt.json.html) definiert.
+Die KAmöchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-VAEabgelehnt.json.html) definiert.
 
 ##### Tabellarische Übersicht
 
@@ -67,7 +67,7 @@ Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das z
     <td>Die SV möchte benachrichtigt werden, wenn ein neuer VAERequest für sie bereitgestellt wurde.</td>
     <td>VAERequest</td>
     <td>create</td>
-    <td>KH</td>
+    <td>KA</td>
     <td>SV</td>
     <td>/</td>
     <td>/</td>
@@ -75,11 +75,11 @@ Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das z
   </tr>
    <tr>
     <td>VAE wurde abgelehnt</td>
-    <td>Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde.</td>
+    <td>Die KAmöchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde.</td>
     <td>VAEResponse</td>
     <td>create</td>
     <td>SV</td>
-    <td>KH</td>
+    <td>KA</td>
     <td>Negative VAE</td>
     <td>VAEResponse.decision</td>
     <td>!= #00 AND != #19</td>

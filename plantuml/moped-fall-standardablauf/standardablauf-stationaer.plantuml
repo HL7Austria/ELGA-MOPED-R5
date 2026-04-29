@@ -1,0 +1,109 @@
+@startuml
+skinparam borderColor #000000
+skinparam backgroundColor #f5f5f5
+skinparam shadowing false
+skinparam roundCorner 10
+skinparam defaultFontName "Arial"
+skinparam defaultFontSize 14
+skinparam defaultFontColor #000000
+
+skinparam note {
+  BackgroundColor #e0e5f0-#d1d9e6
+  BorderColor #8b95a5
+  BorderThickness 1
+  RoundCorner 8
+  Padding 6
+  FontColor #111827
+  Shadowing true
+}
+
+skinparam HyperlinkColor #0000EE
+skinparam HyperlinkUnderline false
+
+skinparam sequence {
+  ParticipantBorderColor #555555
+  ParticipantBackgroundColor #ffffff
+  ParticipantFontColor #000000
+  ParticipantFontSize 14
+  ParticipantPadding 20
+  ArrowColor #111827
+  ArrowThickness 2
+  ArrowFontColor #000000
+  ArrowFontSize 13
+  GroupBorderColor #111827
+  GroupBackgroundColor #f3f4f6
+  GroupBorderThickness 1
+}
+
+skinparam BoxPadding 20
+skinparam BoxBorderColor #555555
+
+box "\n  KA (Herz Jesu Krankenhaus)  " #f5e599
+  actor KA as "KA"
+end box
+
+box "\n       Moped       " #c5f7ba
+  participant MP as "Moped"
+end box
+
+box "\n    SV (ÖGK,...)    " #bac4f7
+  actor SV as "SV (ÖGK)"
+end box
+
+box "\n LGF (Landesgesundheitsfonds)  " #f7d0ba
+  actor LGF as "LGF (Landesgesundheitsfonds)"
+end box
+
+box "\n        Bund        " #fcb3b3
+  actor Bund as "Bund"
+end box
+
+KA->> MP:<b>1</b> [[OperationDefinition-MOPED.Patient.Aufnehmen.html $aufnehmen]]
+note over KA: Susi Sonnenschein wird stationär aufgenommen%n() und die ÖGK Wien wird als %n()zuständige Versicherung gesetzt
+
+KA->>MP:<b>2</b> [[OperationDefinition-MOPED.VAERequest.Anfragen.html $anfragen]]
+Note over KA: Anfrage auf Versicherungsanspruchserklärung
+
+SV->>MP:<b>3a</b> GET Claim?status=active&use=preauthorization%n()&_has:ClaimResponse:request:status:not=active
+Note over SV: alle offenen VAEs abfragen%n()und intern bearbeiten
+SV->>MP:<b>3b</b> [[OperationDefinition-MOPED.Auf.Request.Antworten.html $antworten]] (Status 00)
+Note over SV: Fallübernahme bestätigt%n()(Status 00) 
+
+KA->>MP:<b>4a</b> GET Composition?id={id}
+Note over KA: aktuellen Stand des Falls abfragen%n()(inkl. bestätigte VAE)
+KA->>MP:<b>4b</b> [[OperationDefinition-MOPED.Daten.Update.html $update]]
+Note over KA: Verlegung auf Abteilung Innere Medizin
+
+KA->>MP:<b>5</b> [[OperationDefinition-MOPED.Daten.Update.html $update]]
+Note over KA: Diagnose "Herzinsuffizienz" und Leistung "EKG" erfasst
+
+KA->>MP:<b>6</b> [[OperationDefinition-MOPED.Patient.Entlassen.html $entlassen]]
+note over KA: Susi Sonnenschein wird entlassen
+
+loop [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] / [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]] (vorläufig)
+    KA->>MP:<b>7</b> [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] 
+    Note over KA: Abrechnung aller Leistungen eingereicht
+    LGF->>MP:<b>8a</b> GET Claim?status=active&use=claim%n()&_has:ClaimResponse:request:status:not=active
+    Note over LGF: unbeantwortete Abrechnungen abfragen%n()und intern bearbeiten
+    LGF->>MP:<b>8b</b> [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]]
+    Note over LGF: Alle Posten genehmigt%n()(keine Änderungen)
+end
+KA->>MP:<b>9a</b> GET Composition?id={id}
+Note over KA: aktuellen Stand des Falls abfragen%n()(inkl. bestätigte Abrechnung)
+KA->>MP:<b>9b</b>  final [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] 
+Note over KA: Finale Abrechnung seitens der KA
+LGF->>MP:<b>10a</b> GET Claim?status=active&use=claim&endgueltig=true%n()&_has:ClaimResponse:request:status:not=active
+Note over LGF: unbeantwortete Abrechnungen abfragen%n()und intern bearbeiten
+LGF->>MP:<b>10b</b> final [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]]
+Note over LGF: Endgültige Entscheidung %n()zur Abrechnung 
+Note over LGF: Kosteninformationen werden %n()im Datensatz ergänzt 
+SV->>MP:<b>11</b> GET ClaimResponse?status=active&use=claim%n()&endgueltig=true
+Note over SV: Kosteninformation abrufen
+Bund->>MP:<b>12</b>  GET Composition?status=final
+Note over Bund: Zugriff auf finale Composition 
+
+
+Note over MP: Fall für Moped abgeschlossen
+
+
+@enduml

@@ -11,7 +11,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $meld
 1. Der Claim wird lt. Profil validiert und eingespielt
   * *MopedARKRequest.patient* mit Composition.subject befüllen
   * *MopedARKRequest.insurance.coverage* mit *MopedComposition.section:Coverages.entry* befüllen
-  * *MopedARKRequest.provider* mit *MopedComposition.section:zustaendigesKH* befüllen
+  * *MopedARKRequest.provider* mit *MopedComposition.section:zustaendigeKA* befüllen
   * *MopedARKRequest.insurer* mit *MopedComposition.section:zustaendigeSV* befüllen
   * *MopedARKRequest.encounter* mit *MopedComposition.encounter* befüllen
   * *MopedARKRequest.related.claim* mit dem aktiven Request aus *MopedComposition.section:LKFRequest* befüllen
@@ -19,7 +19,7 @@ Die Operation wird vom Akteur Landesgesundheitsfonds (LFG) aufgerufen. Die $meld
 
 
 ## Validierung / Fehlerbehandlung
-Die Punkte des ARKRequest und des referenzierten *MopedARKRequest.related.claim* (LKFRequest des KH mit den gemeldeten Punkten) müssen übereinstimmen
+Die Punkte des ARKRequest und des referenzierten *MopedARKRequest.related.claim* (LKFRequest der KA mit den gemeldeten Punkten) müssen übereinstimmen
 
 ## Weitere Hinweise
 
