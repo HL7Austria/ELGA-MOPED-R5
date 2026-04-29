@@ -308,6 +308,14 @@ groups:
     resources:
     - Questionnaire/LKFSAPS3Questionnaire
     - Questionnaire/LKFTISSAQuestionnaire
+
+  QuestionnairesRegistermeldungen:
+    name: Questionnaires - Registermeldungen
+    description: Questionnaires zur Definition von Registermeldungen in Moped.
+    resources:
+    - Questionnaire/StrokeUnitQuestionnaire2025
+    - Questionnaire/register-questionnaire
+  
   QuestionnairesJahresstatistikmeldung:
     name: Questionnaires - Jahresstatistikmeldung/Monatsstatistikmeldung
     description: Jahresstatistikmeldungen von der Krankenanstalt für den LGF und Bund.
@@ -328,6 +336,7 @@ groups:
     - Questionnaire/LKFK05Questionnaire
     - Questionnaire/LKFK06Questionnaire
     - Questionnaire/LKFK07Questionnaire
+    - Questionnaire/LKFK08Questionnaire
     - Questionnaire/LKFK09Questionnaire
     - Questionnaire/LKFK09Questionnaire
     - Questionnaire/LKFK10Questionnaire
@@ -342,12 +351,7 @@ groups:
     - Questionnaire/LKFL03Questionnaire
     - Questionnaire/LKFL04Questionnaire
 
-  QuestionnairesRegistermeldungen:
-    name: Questionnaires - Registermeldungen
-    description: Questionnaires zur Definition von Registermeldungen in Moped.
-    resources:
-    - Questionnaire/StrokeUnitQuestionnaire2025
-    - Questionnaire/register-questionnaire
+  
 
 
 #
