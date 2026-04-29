@@ -182,39 +182,6 @@ menu:
     LKF Jahresstatistikmeldung: AF_lkf_jahresstatistikmeldung.html
     Medizinische Register: AF_medizinische_register.html
     EMS: AF_ems.html
-  Questionnaires:
-    MBDS - TISS-A: Questionnaire-LKFTISSAQuestionnaire.html
-    MBDS - SAPS3: Questionnaire-LKFSAPS3Questionnaire.html
-    MBDS - Monatsmeldung - L01: Questionnaire-LKFL01Questionnaire.html
-    MBDS - Monatsmeldung - K01: Questionnaire-LKFK01Questionnaire.html
-    LKF Jahresmeldung - L02: Questionnaire-LKFL02Questionnaire.html
-    LKF Jahresmeldung - L03: Questionnaire-LKFL03Questionnaire.html
-    LKF Jahresmeldung - L04: Questionnaire-LKFL04Questionnaire.html
-    LKF Jahresmeldung - K02: Questionnaire-LKFK02Questionnaire.html
-    LKF Jahresmeldung - K03: Questionnaire-LKFK03Questionnaire.html
-    LKF Jahresmeldung - K04: Questionnaire-LKFK04Questionnaire.html
-    LKF Jahresmeldung - K05: Questionnaire-LKFK05Questionnaire.html
-    LKF Jahresmeldung - K06: Questionnaire-LKFK06Questionnaire.html
-    LKF Jahresmeldung - K07: Questionnaire-LKFK07Questionnaire.html
-    LKF Jahresmeldung - K08: Questionnaire-LKFK08Questionnaire.html
-    LKF Jahresmeldung - K09: Questionnaire-LKFK09Questionnaire.html
-    LKF Jahresmeldung - K10: Questionnaire-LKFK10Questionnaire.html
-    LKF Jahresmeldung - K11: Questionnaire-LKFK11Questionnaire.html
-    LKF Jahresmeldung - K12: Questionnaire-LKFK12Questionnaire.html
-    LKF Jahresmeldung - K13: Questionnaire-LKFK13Questionnaire.html
-    LKF Jahresmeldung - K14: Questionnaire-LKFK14Questionnaire.html
-    LKF Jahresmeldung - K15: Questionnaire-LKFK15Questionnaire.html
-    LKF Jahresmeldung - K16: Questionnaire-LKFK16Questionnaire.html
-    LKF Jahresmeldung - G01: Questionnaire-LKFG01Questionnaire.html
-    LKF Jahresmeldung - G02: Questionnaire-LKFG02Questionnaire.html
-    LKF Jahresmeldung - B01: Questionnaire-LKFB01Questionnaire.html
-    LKF Jahresmeldung - B02: Questionnaire-LKFB02Questionnaire.html
-    LKF Jahresmeldung - B03: Questionnaire-LKFB03Questionnaire.html
-    LKF Jahresmeldung - B04: Questionnaire-LKFB04Questionnaire.html
-    LKF Jahresmeldung - B05: Questionnaire-LKFB05Questionnaire.html
-    LKF Jahresmeldung - B06: Questionnaire-LKFB06Questionnaire.html
-    LKF Jahresmeldung - A01: Questionnaire-LKFA01Questionnaire.html
-    Register - Strokeunit: Questionnaire-StrokeUnitQuestionnaire2025.html
   Mappings:
     MBDS Mapping: lkf_mapping.html
     LKF Jahresmeldung: jahresmeldungen_mapping.html
