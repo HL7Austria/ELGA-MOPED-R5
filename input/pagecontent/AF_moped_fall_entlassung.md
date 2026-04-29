@@ -17,7 +17,7 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 ### Ablauf - Beispiele zur Anwendung
 
-#### Entlasussung - Hauptdiagnose bereits bekannt
+#### Entlassung - Hauptdiagnose bereits bekannt
 ##### Beschreibung
 Die Patientenversorgung ist abgeschlossen, der Patient wird entlassen und die Hauptdiagnose ist zu diesem Zeitpunkt bereits bekannt.
 
@@ -28,7 +28,7 @@ Die Patientenversorgung ist abgeschlossen, der Patient wird entlassen und die Ha
 
 <div>{% include entlassen-mit-hauptdiagnose.svg %}</div>
 
-#### Entlasussung - Patient verlässt Krankenhaus; Hauptdiagnose noch unbekannt
+#### Entlassung - Patient verlässt Krankenhaus; Hauptdiagnose noch unbekannt
 ##### Beschreibung
 Die Patientenversorgung ist abgeschlossen, der Patient wird entlassen. Es dauert jedoch noch etwas, bis die Hauptdiagnose bekannt ist. 
 
@@ -40,7 +40,7 @@ Die Patientenversorgung ist abgeschlossen, der Patient wird entlassen. Es dauert
 <div>{% include update-aufenthalt-beenden.svg %}</div>
 <div>{% include entlassen-hauptdiagnose-nachmelden.svg %}</div>
 
-#### Entlasussung - Durch Transfer in ein anderes Krankenhaus
+#### Entlassung - Durch Transfer in ein anderes Krankenhaus
 ##### Beschreibung
 TBD 
 
