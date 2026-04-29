@@ -38,7 +38,7 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n.         KH           " #f5e599
+box "\n         KH           " #f5e599
   actor KH as "KH"
 end box
 
@@ -66,16 +66,14 @@ Zustand:
 - Aufnahmedaten vollständig ✓ · x
 end note
 
-KH ->> MP: POST $update
+KH ->> MP: POST $einmelden
 
 note over KH
-Update-Bundle wird gesendet wobei eine Vielzahl an Daten 
-hinzugefügt, aktualisiert oder gelöscht werden kann. Für 
-die Patientenversorgung relevant sind:
-- Aufenthalt
-- Patient
-- Bewegungen (stationäre Verlegungen oder ambulante Kontakte)
-- Leistungen und Diagnosen
+Einmelden-Bundle sendet die Intensivdokumentation
+oder eine Registermeldung:
+- TISS-A
+- SAPS3
+- Stroke-Unit Registermeldung
 end note
 
 note right of MP #c5f7ba

@@ -13,7 +13,7 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 
 ### Ablauf - generisch
 #### Entlassung (generisch)
-<div>{% include entlassen-generisch.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-entlassung/entlassen-generisch.svg %}</div>
 
 ### Ablauf - Beispiele zur Anwendung
 
@@ -26,7 +26,8 @@ Die Patientenversorgung ist abgeschlossen, der Patient wird entlassen und die Ha
 | Ambulant  |  ❌ |
 | Stationär |  ✅ |
 
-<div>{% include entlassen-mit-hauptdiagnose.svg %}</div>
+
+<div>{% include_relative plantuml/moped-fall-entlassung/entlassen-mit-hauptdiagnose.svg %}</div>
 
 #### Entlassung - Patient verlässt Krankenhaus; Hauptdiagnose noch unbekannt
 ##### Beschreibung
@@ -37,8 +38,9 @@ Die Patientenversorgung ist abgeschlossen, der Patient wird entlassen. Es dauert
 | Ambulant  |  ❌ |
 | Stationär |  ✅ |
 
-<div>{% include update-aufenthalt-beenden.svg %}</div>
-<div>{% include entlassen-hauptdiagnose-nachmelden.svg %}</div>
+
+<div>{% include_relative plantuml/moped-fall-entlassung/update-aufenthalt-beenden.svg %}</div>
+<div>{% include_relative plantuml/moped-fall-entlassung/entlassen-hauptdiagnose-nachmelden.svg %}</div>
 
 #### Entlassung - Durch Transfer in ein anderes Krankenhaus
 ##### Beschreibung

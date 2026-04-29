@@ -28,7 +28,7 @@ Die Patientin Susi Sonnenschein wird stationär aufgenommen. Im Verlauf ihres Au
 Es existiert kein Fall mit der selben Schlüsselkombination.
 
 #### Ablauf 
-<div class="diagram">{% include standardablauf-stationaer.svg %}</div>
+<div class="diagram">{% include_relative plantuml/moped-fall-standardablauf/standardablauf-stationaer.svg %}</div>
 <div>{% include AF_standardablauf_stationaer_requests.md %}</div>
 
 #### Technische Hinweise
