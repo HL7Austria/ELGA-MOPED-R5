@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n.         KA           " #f5e599
-  actor KA as "KA"
+box "\n         KH           " #f5e599
+  actor KH as "KH"
 end box
 
 box "\n              Moped              " #c5f7ba
@@ -62,26 +62,21 @@ autonumber
 
 note right of MP #c5f7ba
 Zustand:
-- Moped Fall angelegt ✓
-- Aufnahmedaten vollständig ✓ · x
+- Moped Fall angelegt
 end note
 
-KA ->> MP: POST $update
+KH ->> MP: POST $entlassen
 
-note over KA
-Update-Bundle wird gesendet wobei eine Vielzahl an Daten 
-hinzugefügt, aktualisiert oder gelöscht werden kann. Für 
-die Patientenversorgung relevant sind:
-- Aufenthalt
-- Patient
-- Bewegungen (stationäre Verlegungen oder ambulante Kontakte)
-- Leistungen und Diagnosen
+note over KH
+Entlassungs-Bundle wird gesendet
+- Aufenthalt (Encounter)
+- Bewegung (TransferEncounter)
+- Hauptdiagnose (Condition)
 end note
 
 note right of MP #c5f7ba
 Zustand:
-- Moped Fall angelegt ✓
-- Aufnahmedaten vollständig ✓ · x
+- Patient entlassen
 end note
 
 @enduml
