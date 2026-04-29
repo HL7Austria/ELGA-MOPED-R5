@@ -12,7 +12,7 @@ Die folgenden Diagramme veranschaulichen die möglichen Interaktionen mit der Mo
 | Bund            |  ❌  |
 
 ### Ablauf - generisch
-#### Aufnahme (generisch)
+#### Entlassung (generisch)
 <div>{% include entlassen-generisch.svg %}</div>
 
 ### Ablauf - Beispiele zur Anwendung
