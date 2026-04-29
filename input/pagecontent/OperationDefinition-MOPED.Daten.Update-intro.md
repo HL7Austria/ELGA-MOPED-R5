@@ -12,9 +12,6 @@ Die Operation wird vom Akteur Krankenhaus (KA) aufgerufen. Die $update Operation
 4. Je nach HTTP-Methode muss unterschiedlich mit den Referenzen in der Composition umgegangen werden. Neu eingebrachte Ressourcen müssen in die dem Profil entsprechende Section der Composition eingefügt werden. Gelöschte Ressourcen müssen aus der jeweiligen Composition Section entfernt werden. Bei Ressourcen die nur aktualisiert werden, muss in der Composition nichts verändert werden. Zusätzlich müssen je nach Bundle entry folgende Dinge beachtet werden:
     * Aufenthalt, Patient: Encounter und Patient werden nicht in eine Section sondern in Composition.encounter und Composition.subject eingefügt
     * Leistungen, Observations, Fragebögen, Communication, CommunicationRequest: keine Besonderheiten
-    * Verlegungen: Bei einem insert/update/delete von Verlegungen müssen folgende Anzahlen neu berechnet werden:
-        - Anzahl Verlegungen: Composition.extension:AnzahlVerlegungen wird ermittelt durch die Gesamtanzahl der TransferEncounter
-        - AnzahlBeurlaubungen: Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`
     * Diagnosen: 
         - Existiert nach dem Ausführen des Transaction Bundles keine Hauptdiagnose mehr dann muss Composition.encounter auf den status = discharged gesetzt werden. Wird die Hauptdiagnose aktualisiert und existiert weiterhin so ist dies nicht notwendig.
         - Wird eine Haupt-, oder Nebendiagnose aktualisiert so muss falls ein aktiver LKFRequest existiert dessen Status auf cancelled gesetzt werden, da sich dadurch die LKF Punkte ändern und der alte Claim nicht mehr valide ist. Die KAmuss daraufhin erneut $abrechnen.

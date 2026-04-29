@@ -86,11 +86,11 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
-        <td>Composition</td>
-        <td>Composition.extension:AnzahlBeurlaubungen</td>
-        <td>Composition.extension:AnzahlBeurlaubungen</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td>/</td>
     </tr>
     <tr>
@@ -443,11 +443,11 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
-        <td>Composition</td>
-        <td>Composition.extension:AnzahlBeurlaubungen</td>
-        <td>Composition.extension:AnzahlBeurlaubungen</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td>/</td>
     </tr>
     <tr>
