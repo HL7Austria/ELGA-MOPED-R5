@@ -36,7 +36,7 @@ Es können mehrere Composition-Ausprägungen gleichzeitig gültig sein, etwa wen
 
 
 
-
+---
 
 #### Optimistische Versionskontrolle der Composition
 In MOPED gilt bei allen fallbezogenen Operationen, die eine `Composition` referenzieren, das Prinzip der Optimistische Versionskontrolle. Jede Operation, die neue Informationen zum Fall ergänzt (z. B. `$update`, `$anfragen`, `$abrechnen`), erfordert die explizite Angabe der zugehörigen versionierten Composition ID. Dabei muss immer die vollständige, versionsspezifische ID der Composition angegeben werden, z. B.: `Composition/12345/_history/4`. Dies dient der Sicherstellung, dass der aufrufende Client mit dem aktuellsten Stand der Composition arbeitet. So wird verhindert, dass Daten auf veralteter Basis eingefügt oder verändert werden, wie es in verteilten Prozessen (z. B. SV, KA, LGF, Bund) passieren kann. Ist die angegebene Version nicht mehr die aktuellste, wird die Operation mit einem entsprechenden Fehler abgewiesen (i.e. `409 Conflict`). Der Client muss sich in diesem Fall die aktuelle Version der `Composition` abrufen, den Kontext prüfen und die Operation ggf. erneut durchführen. Damit ist der Moped-Datensatz robust gegenüber parallelen Zugriffen und gewährleistet die Konsistenz fallbezogener Informationen. Dieses Prinzip entspricht der gängigen Praxis in REST-Systemen (z. B. `PUT` mit `If-Match` in HTTP), bei der ebenfalls geprüft wird, ob der Client die aktuelle Version kennt, bevor Änderungen übernommen werden. Beispielablauf:
@@ -53,6 +53,8 @@ In MOPED gilt bei allen fallbezogenen Operationen, die eine `Composition` refere
 Ohne Version (z. B. lediglich mit /Composition/123) wird die Operation abgelehnt. Alle benutzerdefinierten fallbezogenen Operationen in MOPED werden ausschließlich auf Composition-Instanzebene ausgeführt und erwarten als URL-Form stets `Composition/{id}/_history/{version}/$operationName`.
 
 Die Pflicht zur Angabe einer versionierten Composition-Referenz gilt in MOPED nur für schreibende bzw. fallverändernde Operationen, bei denen Konflikte durch parallele Änderungen vermieden werden müssen. Für einen normalen lesenden Zugriff muss der Client die aktuellste Versionsnummer hingegen nicht kennen: Ein FHIR-read mittels GET [base]/Composition/{id} liefert immer den aktuellen Stand der Ressource. Nur wenn ausdrücklich eine bestimmte historische Version benötigt wird, wird ein versionierter Zugriff (vread) über GET [base]/Composition/{id}/_history/{vid} verwendet.
+
+---
 
 ### Provenance in MOPED: Herkunft, Nachvollziehbarkeit, Transparenz
 Die Provenance-Ressource dient der dokumentierten Nachvollziehbarkeit von Änderungen an FHIR-Ressourcen. Sie beschreibt, wer eine Ressource wann, warum und in welchem Kontext erstellt oder verändert hat.
@@ -90,6 +92,8 @@ Die Provenance enthält Informationen zu:
 
 Ziel ist eine lückenlose und nachvollziehbare Fallhistorie im Zusammenspiel mit den Operationen (`$aufnehmen`, `$entlassen`, `$freigeben`, etc.).
 
+---
+
 ### Referenzmanagement durch MOPED: Konsistenz, Kontext, Kontrolle
 MOPED verfolgt ein klares Prinzip bei der Verarbeitung von FHIR-Referenzen:  
 - Was aus dem Fallkontext bekannt ist, wird serverseitig ergänzt. 
@@ -119,5 +123,101 @@ Einige Referenzen sind nicht aus dem Fallkontext ableitbar, da sie entweder eine
 
 MOPED prüft ggf. ihre Gültigkeit, übernimmt das befüllen aber nicht selbst.
 
+---
+
 ### Subscriptions & Notifications
 Ereignisbasierte Benachrichtigungen werden durch Moped anhand des Message Broker Patterns umgesetzt. Das Message Broker Pattern ist ein Entwurfsmuster, das in verteilten Softwaresystemen verwendet wird, um die Kommunikation zwischen verschiedenen Komponenten oder Diensten zu organisieren und zu optimieren. Es dient als Vermittler, der Nachrichten (Informationen oder Datenpakete) von einem Sender (Producer) entgegennimmt und an einen oder mehrere Empfänger (Consumer) weiterleitet. Ein zentraler Vorteil dieses Patterns liegt darin, dass die Sender und Empfänger nicht direkt miteinander kommunizieren müssen und somit entkoppelt werden. Dies fördert eine bessere Skalierbarkeit und Flexibilität im System, da Komponenten unabhängig voneinander aktualisiert, hinzugefügt oder entfernt werden können. Inhalt, Struktur und Format der Benachrichtigungen folgen hierbei dem FHIR Subscriptions Framework.
+
+---
+
+### Abgrenzung zu ISiK
+
+Dieser Implementierungsleitfaden orientiert sich an den Modellierungsprinzipien der Patient Administration Working Group sowie an der ISiK-Spezifikation. Ziel ist es, etablierte Strukturen zu übernehmen und gleichzeitig die spezifischen fachlichen Anforderungen des österreichischen Versicherungs- und Abrechnungskontexts abzubilden.
+
+#### Hierarchische Encounter-Struktur
+
+Die in HL7 und ISiK vorgesehene Möglichkeit zur hierarchischen Modellierung von Kontakten mittels `Encounter.partOf` wird übernommen. Die Patient Administration Working Group beschreibt eine mehrstufige Modellierung von Kontakten (i.e. Aufenthalt, Abteilungskontakte, Leistungsstellenkontakte).
+
+Im vorliegenden Modell wird zwischen einem übergeordneten Encounter und untergeordneten Teilkontakten unterschieden.
+
+- Übergeordneter Encounter
+  - repräsentiert den eingemeldeten Fall (z. B. Aufenthalt oder ambulanter Fall)
+- TransferEncounter (untergeordnete Encounters)
+  - repräsentieren Verlegungen bzw. Abteilungskontakte
+  - stehen über `partOf` in Beziehung zum übergeordneten Encounter
+
+Die Modellierung einer weiteren Ebene (i.e. Leistungsstellenkontakte) ist im vorliegenden Kontext nicht erforderlich und wird daher nicht umgesetzt.
+
+[![Encounter-Hierarchie](EncounterHierarchie.png)](EncounterHierarchie.png)
+
+#### Trennung von Fall- und Abteilungsebene
+
+Analog zur ISiK-Spezifikation werden fallbezogene und abteilungsbezogene Informationen getrennt modelliert.
+
+- **Fallbezogene Merkmale**
+  - z. B. Aufnahmezahl
+  - werden am übergeordneten Encounter geführt
+
+- **Abteilungsbezogene Merkmale**
+  - werden auf Ebene der transferEncounter geführt
+  - beschreiben die organisatorische Zuordnung der Leistungserbringung
+
+#### Einordnung der Composition zur Bündelung
+
+Zur Bündelung der Informationen eines Falls wird eine `Composition` verwendet.
+
+- Die Composition stellt den zentralen Zugriffspunkt für Clients dar.
+- Sie referenziert den übergeordneten Encounter sowie weitere fallbezogene Ressourcen.
+- Die Composition ist nicht Teil der Encounter-Hierarchie, sondern eine separate Bündelungsebene.
+
+
+#### Kein Einsatz von EpisodeOfCare
+
+Die Ressource `EpisodeOfCare` wird nicht verwendet.
+
+**Begründung:**
+
+ISiK verwendet `EpisodeOfCare` zur Abbildung eines medizinischen Gesamtfalls über mehrere Kontakte hinweg.
+
+Im vorliegenden Kontext wird ein solcher medizinischer Zusammenhang jedoch nicht systemübergreifend geführt oder bereitgestellt.   Der Fokus liegt ausschließlich auf dem eingemeldeten abrechnungsrelevanten Fall.
+
+#### Kein Einsatz von Account
+
+Die Ressource `Account` wird nicht verwendet. In ISiK dient `Account` der Gruppierung mehrerer Kontakte zu einem gemeinsamen Abrechnungsfall.
+
+Im vorliegenden Kontext wird der Abrechnungsfall bereits durch den übergeordneten Encounter vollständig repräsentiert. Eine zusätzliche Ebene würde keinen fachlichen Mehrwert bieten, da:
+
+- keine eigenständige Verwaltung von Abrechnungsfällen erfolgt  
+- keine Mehrfachzuordnung von Encountern zu unterschiedlichen Abrechnungsfällen erforderlich ist  
+- keine separate Fortschreibung abrechnungsbezogener Informationen im System erfolgt  
+
+#### Zusammenfassung
+
+Das vorliegende Modell stellt eine Kombination aus:
+
+- Übernahme zentraler HL7-/ISiK-Prinzipien (insbesondere die hierarchische Struktur von Encountern)  
+- und einer projektspezifischen Reduktion auf abrechnungsrelevante Informationen  
+
+dar.
+
+Der eingemeldete Fall entspricht einem abrechnungsrelevanten Kontext und wird nicht als medizinischer Gesamtfall im Sinne von ISiK interpretiert. Die gewählte Modellierung ist somit zielgerichtet auf die Anforderungen des österreichischen Abrechnungskontexts.
+
+---
+
+### Moped-Fall Identifikation
+
+Die eindeutige Identifikation eines eingemeldeten Moped-Falls erfolgt über einen fachlichen Fallidentifikator.
+
+Dieser wird aus der Kombination von:
+
+- Aufnahmezahl  
+- KA-Nummer  
+- Aufnahmedatum  
+
+gebildet.
+
+Der Fallidentifikator ist ein mehrteiliger, fachlicher Identifier und wird nicht als eigenständiges FHIR-Element modelliert.
+
+- Der übergeordnete Encounter enthält die Aufnahmezahl als zentralen fallbezogenen Identifier.
+- Die Composition dient als technischer Zugriffspunkt (`Composition.id`).
+- Eine Business-Regel stellt sicher, dass pro Fallidentifikator genau eine führende Composition existiert.
