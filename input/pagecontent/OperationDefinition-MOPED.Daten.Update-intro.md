@@ -1,6 +1,6 @@
 ## Wer ruft diese Operation in welchem Zusammenhang auf?
 
-Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $update Operation wird aufgerufen, wenn Informationen zum Fall aktualisiert,neu eingebracht oder gelöscht werden sollen.
+Die Operation wird vom Akteur Krankenhaus (KA) aufgerufen. Die $update Operation wird aufgerufen, wenn Informationen zum Fall aktualisiert,neu eingebracht oder gelöscht werden sollen.
 
 ## Voraussetzungen für den Aufruf
 * Die Composition laut *compositionID* Parameter existiert
@@ -20,7 +20,7 @@ Die Operation wird vom Akteur Krankenhaus (KH) aufgerufen. Die $update Operation
         - AnzahlBeurlaubungen: Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`
     * Diagnosen: 
         - Existiert nach dem Ausführen des Transaction Bundles keine Hauptdiagnose mehr dann muss Composition.encounter auf den status = discharged gesetzt werden. Wird die Hauptdiagnose aktualisiert und existiert weiterhin so ist dies nicht notwendig.
-        - Wird eine Haupt-, oder Nebendiagnose aktualisiert so muss falls ein aktiver LKFRequest existiert dessen Status auf cancelled gesetzt werden, da sich dadurch die LKF Punkte ändern und der alte Claim nicht mehr valide ist. Das KH muss daraufhin erneut $abrechnen.
+        - Wird eine Haupt-, oder Nebendiagnose aktualisiert so muss falls ein aktiver LKFRequest existiert dessen Status auf cancelled gesetzt werden, da sich dadurch die LKF Punkte ändern und der alte Claim nicht mehr valide ist. Die KAmuss daraufhin erneut $abrechnen.
     * Coverage + Hauptversicherter: Beim Einbringen einer neuen Coverage muss die alte Coverage gelöscht und aus der Composition entfernt werden. Zusätzlich muss der Hauptversicherte (falls vorhanden) gelöscht und aus der Composition entfernt und ggf. durch den neuen Hauptversicherten ersetzt werden. Die Referenz auf die zuständige SV muss ebenfalls entfernt werden und durch den Coverage.insurer der neuen Coverage ersetzt werden sofern es sich nicht um eine Selbstzahlercoverage handelt. Falls ein aktiver VAERequest existiert, muss dessen Status auf cancelled gesetzt werden.
     * Überweisende Organization: 
     Die Referenz auf die Überweisende Organisation wird als einzige nicht direkt auf oberster Ebene in die Composition eingefügt. Dies dient nur dem Anlegen von Überweisenden Organisationen aus dem Ausland, sodass diese im Encounter als Encounter.admission.origin referenziert werden können.

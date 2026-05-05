@@ -1,7 +1,7 @@
-Instance: KHK999
+Instance: KAK999
 InstanceOf: Organization
 Usage: #example
-* meta.profile[0] = "https://elga.moped.at/StructureDefinition/KHOrganization"
+* meta.profile[0] = "https://elga.moped.at/StructureDefinition/KAOrganization"
 * meta.profile[+] = "http://hl7.at/fhir/HL7ATCoreProfiles/5.0.0/StructureDefinition/at-core-organization"
 * type = https://termgit.elga.gv.at/CodeSystem/elga-gtelvogdarollen#300 "Allgemeine Krankenanstalt"
 * identifier[0].system = "urn:ietf:rfc:3986"

@@ -8,14 +8,14 @@ Title: "MOPED TransferEncounter Ambulant"
 * identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.ordered = false
 * identifier contains AufnahmezahlFunktionscodebezogen 0..1
-* insert ShallPopulateObligation(identifier[AufnahmezahlFunktionscodebezogen], MopedKHActor)
+* insert ShallPopulateObligation(identifier[AufnahmezahlFunktionscodebezogen], MopedKAActor)
 * identifier[AufnahmezahlFunktionscodebezogen].type from $HL7V2 (required)
 * identifier[AufnahmezahlFunktionscodebezogen].type.coding.code = #VN (exactly)
-//* identifier[AufnahmezahlFunktionscodebezogen].assigner only Reference(MopedKHOrganisationseinheit)
+//* identifier[AufnahmezahlFunktionscodebezogen].assigner only Reference(MopedKAOrganisationseinheit)
 //TBD HealthcareService cannot be assigner anymore
 * identifier[AufnahmezahlFunktionscodebezogen].system 1..1
 * insert legacyMapping(identifier[AufnahmezahlFunktionscodebezogen].value, LKF, [[Aufnahmezahl – funktionscodebezogen]])
-* insert ShallPopulateObligation(identifier[AufnahmezahlFunktionscodebezogen].value, MopedKHActor)
+* insert ShallPopulateObligation(identifier[AufnahmezahlFunktionscodebezogen].value, MopedKAActor)
 
 //TBD actualPeriod.start Uhrzeit verpflichtend machen
 * subjectStatus from AnwesenheitsartVS (required)

@@ -24,7 +24,7 @@ Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklä
 * insurer only Reference(SVOrganization)
 * insurer 1..1
 * insert ShallPopulateObligation(insurer, MopedSVActor) //wegen Fallsplitting?
-* requestor only Reference(KHOrganization)
+* requestor only Reference(KAOrganization)
 * requestor 1..1
 * insert MopedHandleObligation(requestor)
 * outcome 1..1

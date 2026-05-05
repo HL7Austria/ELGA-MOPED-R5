@@ -9,6 +9,6 @@ Title: "Moped QuestionnaireResponse fallbezogen"
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
 * authored 1..1
-* author only Reference(KHOrganization)
+* author only Reference(KAOrganization)
 * author 1..1
 * item 1..

@@ -1,5 +1,5 @@
 /*Instance: PJ1AufnahmeBundle
-InstanceOf: MopedAufnehmenBundleKH
+InstanceOf: MopedAufnehmenBundleKA
 Description: "Patient Journey 1 Beispiel: AufnahmeBundle"
 Usage: #example
 * type = #transaction

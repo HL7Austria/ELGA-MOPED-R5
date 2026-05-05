@@ -1,7 +1,7 @@
 Instance: MopedPatientAufnehmen
 InstanceOf: OperationDefinition
 Title: "MOPED Patient $aufnehmen"
-Description: "Die $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in in das Krankenhaus aufgenommen wird."
+Description: "Die $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in in die Krankenanstalt aufgenommen wird."
 Usage: #definition
 
 * id = "MOPED.Patient.Aufnehmen"
@@ -20,7 +20,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *falldaten* Parameter beinhaltet die nötigen Elemente um die Details zum Fall zu beschreiben die bei Patientenaufnahme bekannt sind, inklusive Patient, Encounter und Aufnahmediagnose."
   * type = #Bundle
-  * targetProfile[+] = Canonical(MopedAufnehmenBundleKH)
+  * targetProfile[+] = Canonical(MopedAufnehmenBundleKA)
 /* parameter[+]
   * name = #freigeben
   * use = #in

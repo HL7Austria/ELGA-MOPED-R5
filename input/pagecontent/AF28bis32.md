@@ -7,7 +7,7 @@
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅   |
+| KA (Krankenhaus)  |      ✅   |
 | LGF (Landesgesundheitsfonds) |  ✅  |
 | SV (Sozialversicherung)      |  ✅  |
 | Bund            |  ✅  |
@@ -36,7 +36,7 @@ Aufgrund der eingelangten VAE (Versichertenanspruchserklärung) Anfrage erfolgt 
 Zukünftig gibt es anstatt einer Quartalszusage pro [Moped Fall](TBD-LINK-BEGRIFFSDEFINITION) eine Anfrage und eine Rückmeldung.
 
 #### Stationär
-Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt es eine Befristung, so wird ein Enddatum angegeben. Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum so muss das KH um eine Verlängerung ansuchen. In der Verlängerung wird das Enddatum als Verlängerungsdatum angegeben und zusätzlich auf die initiale Anfrage verwiesen. Die positive VAE für den ursprünglichen Zeitraum bleibt weiterhin gültig (außer sie wird aus anderen Gründen nachträglich storniert -> siehe [Anwendungsfall 32:  VAE doch negativ](AF28bis32.html#anwendungsfall-32-vae-doch-negativ-nach-vorheriger-positiver-vae)). Die VAE kann nach Ablauf der Frist der letzten positiven VAE immer wieder verlängert werden solange sich der Patient immer noch in Behandlung befindet. Gibt es kein Fristende so kann die VAE auch nicht verlängert werden.
+Die SV hat die Möglichkeit die VAE unbefristet oder befristet abzugeben. Gibt es eine Befristung, so wird ein Enddatum angegeben. Falls der stationäre Aufenthalt länger dauert als das angegebene Enddatum so muss die KA um eine Verlängerung ansuchen. In der Verlängerung wird das Enddatum als Verlängerungsdatum angegeben und zusätzlich auf die initiale Anfrage verwiesen. Die positive VAE für den ursprünglichen Zeitraum bleibt weiterhin gültig (außer sie wird aus anderen Gründen nachträglich storniert -> siehe [Anwendungsfall 32:  VAE doch negativ](AF28bis32.html#anwendungsfall-32-vae-doch-negativ-nach-vorheriger-positiver-vae)). Die VAE kann nach Ablauf der Frist der letzten positiven VAE immer wieder verlängert werden solange sich der Patient immer noch in Behandlung befindet. Gibt es kein Fristende so kann die VAE auch nicht verlängert werden.
 
 ### Beispiel
 
@@ -65,7 +65,7 @@ Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Pro
     sequenceDiagram
     autonumber
     box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
+    actor KA as KA (Herz Jesu Krankenhaus)
     end
     box rgb(197, 247, 186)
     participant MP as Moped
@@ -80,13 +80,13 @@ Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Pro
     actor Bund as Bund 
     end
 
-    KH->>MP: POST VAERequest 1
-    Note over KH: Anfrage VAE <br/>(ab 1.09.2025)
+    KA->>MP: POST VAERequest 1
+    Note over KA: Anfrage VAE <br/>(ab 1.09.2025)
     SV->>MP: POST VAEResponse 1
     Note over SV: Bestätigung VAE <br/>(01.09.2025-16.09.2025)
 
-    KH->>MP: POST VAERequest 2
-    Note over KH: Anfrage Verlängerung<br/>mit Claim.related.claim zu VAERequest 1 und <br/> Claim.related.relationship = 'Verlängerung'<br/>(16.09.2025-21.09.2025 = Verlängerungstage)
+    KA->>MP: POST VAERequest 2
+    Note over KA: Anfrage Verlängerung<br/>mit Claim.related.claim zu VAERequest 1 und <br/> Claim.related.relationship = 'Verlängerung'<br/>(16.09.2025-21.09.2025 = Verlängerungstage)
     Note over MP: Moped behält die gültige Übernahme (VAEResponse 1)
 
     SV->>MP: POST VAEResponse 2
@@ -100,8 +100,8 @@ Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Pro
 - [VAERequestInitial](StructureDefinition-MopedVAERequestInitial.html)
 - [VAERequestVerlaengerung](StructureDefinition-MopedVAERequestVerlaengerung.html)
 - [VAEResponse](StructureDefinition-MopedVAEResponse.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
-- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
+- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
+- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKA.html)
 - [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
 
 ### Relevante Invarianten
@@ -142,7 +142,7 @@ Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Pro
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅  |
+| KA (Krankenhaus)  |      ✅  |
 | LGF (Landesgesundheitsfonds) | ❌  |
 | SV (Sozialversicherung)      |  ✅ |
 | Bund            |  ❌  |
@@ -157,8 +157,8 @@ Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Pro
 
 ### Beschreibung
 Aufgrund der eingelangten Aufnahme-/Ereignisanzeige erfolgt seitens SV eine negative Versichertenanspruchserklärung. Bei einer negativen Versichertenanspruchserklärung wird der jeweilige Ablehnungsgrund (Code) angeführt.
-Das KH prüft regelmäßig, ob es Ablehnungen der VAE seitens der SV gibt. Diese Fälle müssen bearbeitet werden. Im schlimmsten Fall muss der Patient die Rechnung als Selbstzahler selbst bezahlen. 
-Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH behoben werden können, so dass eine positive VAE durch die SV nach erneuter Anfrage in Folge möglich ist.
+Die KAprüft regelmäßig, ob es Ablehnungen der VAE seitens der SV gibt. Diese Fälle müssen bearbeitet werden. Im schlimmsten Fall muss der Patient die Rechnung als Selbstzahler selbst bezahlen. 
+Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KA behoben werden können, so dass eine positive VAE durch die SV nach erneuter Anfrage in Folge möglich ist.
 
 ### Beispiel
 - Patient wurde anstelle von selbstversichert als mitversichert gemeldet und umgekehrt (nach Richtigstellung dann positive VAE möglich) 
@@ -183,7 +183,7 @@ Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH
     sequenceDiagram
     autonumber
     box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
+    actor KA as KA (Herz Jesu Krankenhaus)
     end
     box rgb(197, 247, 186)
     participant MP as Moped
@@ -197,22 +197,22 @@ Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH
     box rgb(252, 179, 179) 
     actor Bund as Bund 
     end
-    KH->>MP: Anfrage VAE <br/>POST VAERequest 1
-    Note over KH: Anfrage auf Versicherungsanspruchserklärung 
+    KA->>MP: Anfrage VAE <br/>POST VAERequest 1
+    Note over KA: Anfrage auf Versicherungsanspruchserklärung 
     SV->>MP: VAEResponse 1<br/>(Status 03 'nicht leistungszuständig')
     Note over SV: Negative VAE
     Note over MP: durch negative Response wird der <br/>VAERequest 1 automatisch gecancelled
     alt Erneute Anfrage bei gleichem<br/> Träger mit anderen Daten
-      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
-      Note over KH: KH stellt modifizierte Anfrage an ÖGK
+      KA->>MP: Anfrage VAE <br/>POST VAERequest 2
+      Note over KA: KA stellt modifizierte Anfrage an ÖGK
     else Patient hat noch einen Anspruch bei <br/>einem anderen SV Träger (z.B. SVS)
-      KH->>MP: $update mit SVS referenziert in der neuen Coverage
-      Note over KH: KH setzt die SVS als zuständige Versicherung
-      KH->>MP: Anfrage VAE <br/>POST VAERequest 2
-      Note over KH: KH stellt neue Anfrage an SVS
+      KA->>MP: $update mit SVS referenziert in der neuen Coverage
+      Note over KA: KA setzt die SVS als zuständige Versicherung
+      KA->>MP: Anfrage VAE <br/>POST VAERequest 2
+      Note over KA: KA stellt neue Anfrage an SVS
     else  Patient wird zum Selbstzahler
-      KH->>MP: $update mit Selbstzahler Coverage
-      Note over KH: KH meldet Patienten als Selbstzahler 
+      KA->>MP: $update mit Selbstzahler Coverage
+      Note over KA: KA meldet Patienten als Selbstzahler 
     end
 </pre>
 
@@ -220,8 +220,8 @@ Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH
 - [Coverage](StructureDefinition-MopedCoverage.html) oder [Selbstzahler Coverage](StructureDefinition-MopedCoverageSelbstzahler.html)
 - [VAERequest](StructureDefinition-MopedVAERequest.html)
 - [VAEResponse](StructureDefinition-MopedVAEResponse.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKH.html)
-- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKH.html)
+- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
+- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKA.html)
 
 ### Relevante Invarianten
 
@@ -231,7 +231,7 @@ Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KH
 Die SV möchte benachrichtigt werden, wenn ein neuer VAERequest für sie bereitgestellt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-neueVAE.html) definiert.
 
 #### SubscriptionTopic: VAE wurde abgelehnt
-Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-VAEabgelehnt.json.html) definiert.
+Die KAmöchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das zugehörige SubscriptionTopic wurde in [diesem Beispiel](SubscriptionTopic-VAEabgelehnt.json.html) definiert.
 
 #### Tabellarische Übersicht
 
@@ -253,17 +253,17 @@ Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde. Das z
     <td>VAERequest</td>
     <td>create</td>
     <td>SV</td>
-    <td>KH</td>
+    <td>KA</td>
     <td>/</td>
     <td>/</td>
     <td>/</td>
   </tr>
    <tr>
     <td>VAE wurde abgelehnt</td>
-    <td>Das KH möchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde.</td>
+    <td>Die KAmöchte benachrichtigt werden, wenn ein VAERequest abgelehnt wurde.</td>
     <td>VAEResponse</td>
     <td>create</td>
-    <td>KH</td>
+    <td>KA</td>
     <td>SV</td>
     <td>Negative VAE</td>
     <td>VAEResponse.decision</td>
@@ -278,7 +278,7 @@ In Arbeit :)
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅   |
+| KA (Krankenhaus)  |      ✅   |
 | LGF (Landesgesundheitsfonds) |  ❌ |
 | SV (Sozialversicherung)      |  ✅ |
 | Bund            |  ❌  |
@@ -312,7 +312,7 @@ In Arbeit :)
     sequenceDiagram
     autonumber
     box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
+    actor KA as KA (Herz Jesu Krankenhaus)
     end
     box rgb(197, 247, 186)
     participant MP as Moped
@@ -372,7 +372,7 @@ In Arbeit :)
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅    |
+| KA (Krankenhaus)  |      ✅    |
 | LGF (Landesgesundheitsfonds) |  ✅  |
 | SV (Sozialversicherung)      |  ✅  |
 | Bund            |  ✅  |
@@ -406,7 +406,7 @@ In Arbeit :)
     sequenceDiagram
     autonumber
     box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
+    actor KA as KA (Herz Jesu Krankenhaus)
     end
     box rgb(197, 247, 186)
     participant MP as MP
@@ -466,7 +466,7 @@ In Arbeit :)
 
 | Akteur            |  |
 |-------------------|--------------:|
-| KH (Krankenhaus)  |      ✅ |
+| KA (Krankenhaus)  |      ✅ |
 | LGF (Landesgesundheitsfonds) |  ✅ |
 | SV (Sozialversicherung)      |  ✅ |
 | Bund            |  ✅   |
@@ -500,7 +500,7 @@ In Arbeit :)
     sequenceDiagram
     autonumber
     box rgb(245, 229, 153)
-    actor KH as KH (Herz Jesu Krankenhaus)
+    actor KA as KA (Herz Jesu Krankenhaus)
     end
     box rgb(197, 247, 186)
     participant MP as Moped

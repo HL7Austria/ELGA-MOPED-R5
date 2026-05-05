@@ -38,8 +38,8 @@ skinparam sequence {
 skinparam BoxPadding 20
 skinparam BoxBorderColor #555555
 
-box "\n                     KH (Herz-Jesu Krankenhaus)                     " #f5e599
-  actor KH as "KH (Herz-Jesu Krankenhaus)"
+box "\n                     KA (Herz-Jesu Krankenhaus)                     " #f5e599
+  actor KA as "KA (Herz-Jesu Krankenhaus)"
 end box
 
 box "\n                                   Moped                                   " #c5f7ba
@@ -56,9 +56,9 @@ Zustand:
 - keine finale Abrechnung genehmigt
 end note
 
-KH ->> MP: $update (PUT MopedEncounter)
+KA ->> MP: $update (PUT MopedEncounter)
 
-note over KH
+note over KA
 MopedEncounter wird gesendet mit
 - aktualisierten Details
 end note

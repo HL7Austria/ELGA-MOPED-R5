@@ -24,9 +24,9 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 * section[zustaendigerLGF].code.coding.code = #LGF
 * section[zustaendigerLGF].entry = Reference(OrganizationLGF)
 
-* section[zustaendigesKH].code.coding.system = Canonical(CompositionSectionsCS)
-* section[zustaendigesKH].code.coding.code = #KH
-* section[zustaendigesKH].entry = Reference(OrganizationHerzJesuKrankenhaus)
+* section[zustaendigeKA].code.coding.system = Canonical(CompositionSectionsCS)
+* section[zustaendigeKA].code.coding.code = #KA
+* section[zustaendigeKA].entry = Reference(OrganizationHerzJesuKrankenhaus)
 
 * section[Diagnosen].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Diagnosen].code.coding.code = #DIAG

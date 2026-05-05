@@ -21,7 +21,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *Abrechnung* Parameter beinhaltet ein Bundle mit sämtlichen Details zur Abrechnung lt. MopedLKFRequest Profil."
   * type = #Bundle
-  * targetProfile = Canonical(MopedAbrechnenBundleKH)
+  * targetProfile = Canonical(MopedAbrechnenBundleKA)
 * parameter[+]
   * name = #return
   * use = #out

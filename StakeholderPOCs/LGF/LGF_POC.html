@@ -217,12 +217,12 @@
                             const encounterData = await encounterResponse.json();
                             const filteredEncounters = [];
     
-                            // Encounter nach KH Bundesland filtern
+                            // Encounter nach KA Bundesland filtern
                             for (const entry of encounterData.entry || []) {
                                 const encounter = entry.resource;
                                 const serviceProviderUrl = encounter.serviceProvider.reference;
     
-                                // Organization Ressource des KH fetchen
+                                // Organization Ressource der KA fetchen
                                 const organizationResponse = await fetch(`${fhirServer}/${serviceProviderUrl}`, {
                                     method: 'GET',
                                     headers: {

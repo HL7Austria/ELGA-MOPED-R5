@@ -1,9 +1,9 @@
 {
   "resourceType": "HealthcareService",
-  "id": "KHK999ABT16518011",
+  "id": "KAK999ABT16518011",
   "meta": {
     "profile": [
-      "https://elga.moped.at/StructureDefinition/MopedKHOrganisationseinheit"
+      "https://elga.moped.at/StructureDefinition/MopedKAOrganisationseinheit"
     ]
   },
   "extension": [
@@ -49,11 +49,11 @@
     }
   ],
   "providedBy": {
-    "reference": "Organization/KHK999"
+    "reference": "Organization/KAK999"
   },
   "location" : [
     {
-      "reference" : "Location/LocationKHK999"
+      "reference" : "Location/LocationKAK999"
     }
   ]
 }

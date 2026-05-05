@@ -9,7 +9,7 @@ Usage: #example
 * subject = Reference(PJ2Patient)
 * encounter = Reference(PJ2Encounter)
 * occurrenceDateTime = "2024-08-08T08:21:00+02:00"
-* performer.actor = Reference(AbteilungKHRied1)
+* performer.actor = Reference(AbteilungKARied1)
 * performer.onBehalfOf = Reference(OrganizationKrankenhausRied)
 
 Instance: PJ2Procedure2
@@ -23,5 +23,5 @@ Usage: #example
 * subject = Reference(PJ2Patient)
 * encounter = Reference(PJ2Encounter)
 * occurrenceDateTime = "2024-08-08T08:21:00+02:00"
-* performer.actor = Reference(AbteilungKHRied1)
+* performer.actor = Reference(AbteilungKARied1)
 * performer.onBehalfOf = Reference(OrganizationKrankenhausRied)
