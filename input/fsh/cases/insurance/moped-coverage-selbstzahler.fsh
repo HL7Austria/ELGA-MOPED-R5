@@ -8,10 +8,10 @@ Title: "MOPED Coverage für Selbstzahler"
 * insert ShallPopulateObligation(kind, MopedKAActor)
 * type = http://terminology.hl7.org/CodeSystem/coverage-selfpay#pay
 * insert ShallPopulateObligation(type, MopedKAActor)
-* paymentBy.party only Reference(MopedPatient)
+* paymentBy.party only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * paymentBy.party 1..1
 * insert MopedHandleObligation(paymentBy.party)
-* beneficiary only Reference(MopedPatient)
+* beneficiary only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * beneficiary 1..1
 * insert MopedHandleObligation(beneficiary)
 * insurer 0..0

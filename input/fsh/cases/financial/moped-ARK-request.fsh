@@ -5,7 +5,7 @@ Title: "MOPED ARKRequest"
 Description: "MOPED Profil der Claim Ressource für die Kostenmeldung für Ausländerverrechnung und Regresse."
 * insert ShallPopulateObligation(status, MopedLGFActor)
 * insert MopedHandleObligation(status)
-* patient only Reference(MopedPatient)
+* patient only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * patient 1..1
 * insert MopedHandleObligation(patient)
 * use = $ClaimUse#claim

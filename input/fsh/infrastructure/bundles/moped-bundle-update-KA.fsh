@@ -6,6 +6,6 @@ Description: """Bundle für die Input-Ressourcen beim Update von Informationen z
 * entry[Aufenthalt].resource only MopedEncounter //TBD nach Entscheidung zu ambulantem Fall den generischen "MopedEncounter" ersetzen durch "MopedEncounterA or MopedEncounterS"  
 * entry[Aufenthalt].request.method = $HTTPVerb#PUT
 * entry[Aufenthalt].request.method ^short = "PUT"
-* entry[Patient].resource only MopedPatient
+* entry[Patient].resource only MopedBasisPatientvbPK or MopedBasisPatientKlarname
 * entry[Patient].request.method = $HTTPVerb#PUT
 * entry[Patient].request.method ^short = "PUT"
