@@ -86,12 +86,12 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
         <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`</td>
     </tr>
     <tr>
         <td>Kostenträger (leistungszuständig)</td>
@@ -443,12 +443,12 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
         <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`</td>
     </tr>
     <tr>
         <td>Kostenträger (leistungszuständig)</td>
