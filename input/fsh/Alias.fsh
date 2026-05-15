@@ -31,6 +31,7 @@ Alias: $VdasIdSystem = urn:oid:1.2.40.0.10.1.4.3.9.1
 Alias: $SVCVersichertenkategorien = http://svc.co.at/CodeSystem/ecard-versichertenkategorie-cs
 Alias: $UCUM = http://unitsofmeasure.org
 Alias: $SVTCode = http://svc.co.at/CodeSystem/ecard-svt-cs
+Alias: $SNOMED = http://snomed.info/sct
 
 
 

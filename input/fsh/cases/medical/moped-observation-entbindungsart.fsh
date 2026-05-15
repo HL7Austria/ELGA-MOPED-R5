@@ -1,19 +1,18 @@
-Profile: MopedObservationGeburtenanzahl
+Profile: MopedObservationEntbindungsart
 Parent: Observation
-Description: "MOPED Profil der Observation Ressource für die Anzahl der Geburten"
-Title: "MOPED Observation Geburtenanzahl"
+Description: "MOPED Profil der Observation Ressource für die Entbindungsart"
+Title: "MOPED Observation Entbindungsart"
 
 * status 1..1
 * insert ShallPopulateObligation(status, MopedKAActor)
-* code from GeburtenanzahlVS (required)
+* code = $SNOMED#364336006 "Art der Entbindung"
 * code 1..1
 * insert ShallPopulateObligation(code, MopedKAActor)
-* valueQuantity 1..1
-* valueQuantity.value ^short = "Anzahl der Lebendgeburten; Anzahl der Totgeburten"
-* valueQuantity.value 1..1
-* insert ShallPopulateObligation(valueQuantity.value, MopedKAActor)
-* insert legacyMapping(valueQuantity.value, KaOrg, Anzahl der Lebendgeburten)
-* insert legacyMapping(valueQuantity.value, KaOrg, Anzahl der Totgeburten)
+* valueCodeableConcept from MopedEntbindungsartVS
+* valueCodeableConcept 1..1
+* valueCodeableConcept ^short = "Art der Entbindung"
+* insert ShallPopulateObligation(valueCodeableConcept, MopedKAActor)
+* insert legacyMapping(valueCodeableConcept, KaOrg, Art der Entbindung)
 
 * effectiveDateTime 1..1
 * effectiveDateTime ^short = "Entbindungsdatum"
