@@ -28,7 +28,7 @@ Title: "MOPED Encounter"
 * insert legacyMapping(identifier[DatensatzID].value, LKF, Datensatz-ID)
 * insert ShallPopulateObligation(identifier[DatensatzID].value, MopedKAActor)
 
-* subject only Reference(MopedPatient)
+* subject only Reference(MopedBasisPatientKlarname or MopedBasisPatientvbPK)
 * subject 1..1
 * insert MopedHandleObligation(subject)
 

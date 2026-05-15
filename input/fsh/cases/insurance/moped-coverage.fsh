@@ -22,9 +22,9 @@ Title: "MOPED Coverage"
 * insurer 1..1
 * insurer ^short = "LKF: Leistungszuständiger Kostenträger – Code"
 * insert ShallPopulateObligation(insurer, MopedKAActor)
-* policyHolder only Reference(MopedPatient or Hauptversicherter)
+* policyHolder only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname or Hauptversicherter)
 * insert ShallPopulateObligation(policyHolder, MopedKAActor)
-* beneficiary only Reference(MopedPatient)
+* beneficiary only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * insert MopedHandleObligation(beneficiary)
 * class ^slicing.discriminator.type = #value
 * class ^slicing.discriminator.path = "type.coding"

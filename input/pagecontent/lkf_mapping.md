@@ -139,7 +139,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>
@@ -165,7 +165,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject.resolve()</td>
@@ -178,9 +178,9 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
-        <td>Patient.extension:citizenship</td>
+        <td>Patient.extension:citizenship.extension:code.value[x]</td>
         <td>Composition.subject.resolve()</td>
         <td>/</td>
     </tr>
@@ -191,7 +191,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
         <td>Composition.subject.resolve()</td>
@@ -204,7 +204,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>*nur für österreichische Patienten verpflichtend</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
         <td>Composition.subject.resolve()</td>
@@ -217,7 +217,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>*nur für österreichische Patienten verpflichtend</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.extension:municipalityCode</td>
         <td>Composition.subject.resolve()</td>

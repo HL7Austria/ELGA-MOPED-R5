@@ -11,7 +11,7 @@ Title: "MOPED Condition"
 * encounter only Reference(MopedEncounter)
 * encounter 1..1
 * insert MopedHandleObligation(encounter)
-* subject only Reference(MopedPatient)
+* subject only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * subject 1..1
 * insert MopedHandleObligation(subject)
 * code 1..1

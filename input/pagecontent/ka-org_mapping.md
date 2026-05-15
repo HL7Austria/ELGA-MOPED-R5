@@ -165,10 +165,10 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
-        <td>Patient; RelatedPerson</td>
-        <td>Patient.identifier:socialSecurityNumber; RelatedPerson.identifier:socialSecurityNumber.value</td>
-        <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
+        <td>Hauptversicherter</td>
+        <td>RelatedPerson</td>
+        <td>RelatedPerson.identifier:socialSecurityNumber.value</td>
+        <td>Composition.section:Hauptversicherter.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -178,7 +178,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.name.family; RelatedPerson.name.family</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -191,7 +191,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.name.given; RelatedPerson.name.given</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -204,7 +204,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.gender; RelatedPerson.gender</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -217,7 +217,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.birthDate; RelatedPerson.birthDate</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -255,11 +255,11 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
-        <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
-        <td>Patient</td>
-        <td>Patient.identifier:socialSecurityNumber</td>
-        <td>Composition.subject.resolve()</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td>/</td>
     </tr>
     <tr>
@@ -269,7 +269,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
         <td>Patient</td>
         <td>Patient.name.family</td>
         <td>Composition.subject.resolve()</td>
@@ -282,7 +282,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
         <td>Patient</td>
         <td>Patient.name.given</td>
         <td>Composition.subject.resolve()</td>
@@ -295,7 +295,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject.resolve()</td>
@@ -308,7 +308,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>
@@ -522,7 +522,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.birthDate; RelatedPerson.birthDate</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -548,7 +548,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>optional (Unterschied zu E.1); TBD: klären warum der Patient nicht verpflichtend ist, aber der Hauptversicherte schon (nicht immer der Patient)</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>
@@ -710,9 +710,9 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
-        <td>Patient.extension:citizenship</td>
+        <td>Patient.extension:citizenship.extension:code.value[x]</td>
         <td>Composition.subject.resolve()</td>
         <td>/</td>
     </tr>
@@ -723,7 +723,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedPatientKlarnameKA; MopedPatientKlarnameSV</td>
         <td>Patient</td>
         <td>Patient.address.line.extension:street</td>
         <td>Composition.subject.resolve()</td>
@@ -736,7 +736,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
         <td>Composition.subject.resolve()</td>
@@ -749,7 +749,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
         <td>Composition.subject.resolve()</td>
@@ -762,7 +762,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
         <td>Patient</td>
         <td>Patient.address.city</td>
         <td>Composition.subject.resolve()</td>
@@ -1642,7 +1642,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>
@@ -1655,7 +1655,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject.resolve()</td>
@@ -1668,9 +1668,9 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
-        <td>Patient.extension:citizenship</td>
+        <td>Patient.extension:citizenship.extension:code.value[x]</td>
         <td>Composition.subject.resolve()</td>
         <td>nicht mehr Teil der KaOrg Meldung (Stand 2026)</td>
     </tr>
@@ -1681,7 +1681,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
         <td>Composition.subject.resolve()</td>
@@ -1694,7 +1694,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
         <td>Composition.subject.resolve()</td>
@@ -2647,7 +2647,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
         <td>Patient</td>
         <td>Patient.name.family</td>
         <td>Composition.subject.resolve()</td>
@@ -2660,7 +2660,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
         <td>Patient</td>
         <td>Patient.name.given</td>
         <td>Composition.subject.resolve()</td>
@@ -2673,7 +2673,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject.resolve()</td>
@@ -2686,7 +2686,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKAActor</td>
-        <td>MopedPatient; MopedPatientBund; MopedPatientLGF; MopedPatientSV</td>
+        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>

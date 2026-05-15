@@ -17,7 +17,7 @@ Description: "MOPED Profil für die Anfrage der Versichertenanspruchserklärung 
 * accident.date ^short = "KaOrg: Ereignis-/Unfalldatum (echtes Unfalldatum)"
 * insert legacyMapping(accident.date, KaOrg, [[Ereignis-/Unfalldatum (echtes Unfalldatum)]])
 * insert ShallPopulateObligation(accident.date, MopedKAActor)
-* patient only Reference(MopedPatient)
+* patient only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * patient 1..1
 * insert MopedHandleObligation(patient)
 * use = $ClaimUse#preauthorization
