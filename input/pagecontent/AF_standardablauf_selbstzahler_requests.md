@@ -219,7 +219,7 @@
 
 
 <h4>7b: Endgültig abrechnen</h4>
-<p>Die endgültige Abrechnung wird eingebracht und dem LGF zur Verfügung gestellt.</p>
+<p>Die finale Abrechnung wird eingebracht und dem LGF zur Verfügung gestellt.</p>
 <div class="tabs">
   <div class="tab">
     <input type="radio" id="tab-request-7b-selbst" name="tab-group-7b-selbst" checked="true" />
@@ -247,7 +247,7 @@
 
 
 <h4>8a: Endgültige unbeantwortete Abrechnungen abrufen</h4>
-<p>Die endgültige Abrechnungen abfragen, für welche noch keine Antwort (Genehmigung/Ablehnung) eingebracht wurde.</p>
+<p>Die finale Abrechnungen abfragen, für welche noch keine Antwort (Genehmigung/Ablehnung) eingebracht wurde.</p>
 <div class="tabs">
   <div class="tab">
     <input type="radio" id="tab-request-8a-selbst" name="tab-group-8a-selbst" checked="true" />
@@ -256,7 +256,7 @@
       <div class="request-panel request-panel--success">
         <div class="request-code">
           <span class="request-method-get">GET</span>
-          <code class="request-url">[base]/Claim?status=active&amp;use=claim&amp;endgueltig=true&amp;_has:ClaimResponse:request:status:not=active</code>
+          <code class="request-url">[base]/Claim?status=active&amp;use=claim&amp;final=true&amp;_has:ClaimResponse:request:status:not=active</code>
         </div>
         <div class="request-meta">
           <strong>Headers:</strong>
@@ -275,7 +275,7 @@
 
 
 <h4>8b: Endgültig genehmigen</h4>
-<p>Die endgültige Genehmigung (inkl. Bestätigung der Punkte einbringen) einbringen.</p>
+<p>Die finale Genehmigung (inkl. Bestätigung der Punkte einbringen) einbringen.</p>
 <div class="tabs">
   <div class="tab">
     <input type="radio" id="tab-request-8b-selbst" name="tab-group-8b-selbst" checked="true" />

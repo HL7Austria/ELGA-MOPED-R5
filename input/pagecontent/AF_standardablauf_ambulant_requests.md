@@ -328,7 +328,7 @@
 
 
 <h4>9b: Endgültig abrechnen</h4>
-<p>Die endgültige Abrechnung wird eingebracht und dem LGF zur Verfügung gestellt.</p>
+<p>Die finale Abrechnung wird eingebracht und dem LGF zur Verfügung gestellt.</p>
 <div class="tabs">
   <div class="tab">
     <input type="radio" id="tab-request-9b-ambulant" name="tab-group-9b-ambulant" checked="true" />
@@ -356,7 +356,7 @@
 
 
 <h4>10a: Endgültige unbeantwortete Abrechnung abrufen</h4>
-<p>Die offenen endgültige Abrechnungen abfragen, für welche noch keine Antwort (Genehmigung/Ablehnung) eingebracht wurde.</p>
+<p>Die offenen finale Abrechnungen abfragen, für welche noch keine Antwort (Genehmigung/Ablehnung) eingebracht wurde.</p>
 <div class="tabs">
   <div class="tab">
     <input type="radio" id="tab-request-10a-ambulant" name="tab-group-10a-ambulant" checked="true" />
@@ -365,7 +365,7 @@
       <div class="request-panel request-panel--success">
         <div class="request-code">
           <span class="request-method-get">GET</span>
-          <code class="request-url">[base]/Claim?status=active&amp;use=claim&amp;endgueltig=true&amp;_has:ClaimResponse:request:status:not=active</code>
+          <code class="request-url">[base]/Claim?status=active&amp;use=claim&amp;final=true&amp;_has:ClaimResponse:request:status:not=active</code>
         </div>
         <div class="request-meta">
           <strong>Headers:</strong>
@@ -384,7 +384,7 @@
 
 
 <h4>10b: Endgültig genehmigen</h4>
-<p>Die endgültige Genehmigung (inkl. Bestätigung der Punkte einbringen) einbringen.</p>
+<p>Die finale Genehmigung (inkl. Bestätigung der Punkte einbringen) einbringen.</p>
 <div class="tabs">
   <div class="tab">
     <input type="radio" id="tab-request-10b-ambulant" name="tab-group-10b-ambulant" checked="true" />
@@ -421,7 +421,7 @@
       <div class="request-panel request-panel--success">
         <div class="request-code">
           <span class="request-method-get">GET</span>
-          <code class="request-url">[base]/ClaimResponse?status=active&amp;use=claim&amp;endgueltig=true</code>
+          <code class="request-url">[base]/ClaimResponse?status=active&amp;use=claim&amp;final=true</code>
         </div>
         <div class="request-meta">
           <strong>Headers:</strong>
