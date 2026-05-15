@@ -5,7 +5,7 @@ Title: "MOPED Observation Entbindungsart"
 
 * status 1..1
 * insert ShallPopulateObligation(status, MopedKAActor)
-* code = $SNOMED#364336006 "Art der Entbindung"
+//* code = $SNOMED#364336006 "Art der Entbindung" //TBD fachlich hinterfragen
 * code 1..1
 * insert ShallPopulateObligation(code, MopedKAActor)
 * valueCodeableConcept from MopedEntbindungsartVS
