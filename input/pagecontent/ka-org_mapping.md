@@ -246,7 +246,7 @@ verfügbar.
         <td>MopedCoverage</td>
         <td>Coverage</td>
         <td>Coverage.class:Versichertenkategorien.value</td>
-        <td>Composition.section:Coverages.entry.resolve()</td>
+        <td>Composition.section:Versichertenanspruch.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -674,7 +674,7 @@ verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -687,7 +687,7 @@ verfügbar.
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -1077,7 +1077,7 @@ verfügbar.
         <td>MopedCoverage</td>
         <td>Coverage</td>
         <td>Coverage.identifier:VDASID</td>
-        <td>Composition.section:Coverages.entry.resolve()</td>
+        <td>Composition.section:Versichertenanspruch.entry.resolve()</td>
         <td>/</td>
     </tr>
 </table>
@@ -1388,37 +1388,24 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MopedKAActor</td>
+        <td>MopedObservationEntbindungsart; MopedObservationGeburtenanzahl</td>
+        <td>Observation</td>
+        <td>Observation.effective[x]:effectiveDateTime</td>
+        <td>Composition.section:Entbindung.entry.resolve()</td>
         <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
-        <td>Anzahl der Lebendgeburten - männliche Kinder</td>
+        <td>Anzahl der Lebendgeburten</td>
         <td>ENTGM</td>
         <td>/</td>
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>Thema Geburt in Arbeit</td>
-    </tr>
-    <tr>
-        <td>Anzahl der Lebendgeburten - weibliche Kinder</td>
-        <td>ENTGW</td>
-        <td>/</td>
-        <td>X[TBD]*</td>
-        <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MopedKAActor</td>
+        <td>MopedObservationGeburtenanzahl</td>
+        <td>Observation</td>
+        <td>Observation.value[x]:valueQuantity.value</td>
+        <td>Composition.section:Entbindung.entry.resolve()</td>
         <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
@@ -1427,11 +1414,11 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MopedKAActor</td>
+        <td>MopedObservationGeburtenanzahl</td>
+        <td>Observation</td>
+        <td>Observation.value[x]:valueQuantity.value</td>
+        <td>Composition.section:Entbindung.entry.resolve()</td>
         <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
@@ -1440,10 +1427,10 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>MopedKAActor</td>
+        <td>MopedObservationEntbindungsart</td>
+        <td>Observation</td>
+        <td>Observation.value[x]:valueCodeableConcept</td>
         <td></td>
         <td>Thema Geburt in Arbeit</td>
     </tr>
@@ -2138,7 +2125,7 @@ dann nicht zwingend</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>
@@ -2151,7 +2138,7 @@ dann nicht zwingend</td>
         <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
-        <td>Composition.section:TransferEncounter.entry.resolve()</td>
+        <td>Composition.section:Bewegungen.entry.resolve()</td>
         <td>/</td>
     </tr>
     <tr>

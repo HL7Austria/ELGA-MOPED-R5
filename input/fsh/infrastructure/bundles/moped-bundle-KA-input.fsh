@@ -34,7 +34,7 @@ Description: """Bundle für die Input-Ressourcen beim Update von Informationen z
 * entry[Leistungen].request.method ^short = "POST | PUT | DELETE"
 * entry contains
   Entbindung 0..
-* entry[Entbindung].resource only Observation //TBD Moped Observation Profile
+* entry[Entbindung].resource only MopedObservationGeburtenanzahl or MopedObservationEntbindungsart
 * entry[Entbindung].request.method from HTTPVerbInsertUpdateDeleteVS
 * entry[Entbindung].request.method ^short = "POST | PUT | DELETE"
 * entry contains

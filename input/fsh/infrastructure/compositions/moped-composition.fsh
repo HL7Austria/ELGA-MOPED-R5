@@ -156,7 +156,7 @@ Title: "MOPED Composition"
 * section[Entbindung].code.coding.system = Canonical(CompositionSectionsCS)
 * section[Entbindung].code.coding.code = #OBS
 * section[Entbindung].entry 1..
-* section[Entbindung].entry only Reference(Observation)
+* section[Entbindung].entry only Reference(MopedObservationGeburtenanzahl or MopedObservationEntbindungsart)
 * section[Entbindung].author only Reference(KAOrganization)
 * insert ShallPopulateObligation(section[Entbindung], MopedDeviceActor)
 * section contains Hauptversicherter 0..1 

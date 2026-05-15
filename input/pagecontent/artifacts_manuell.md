@@ -326,6 +326,8 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [MOPED LKFResponse](StructureDefinition-MopedLKFResponse.html) | MOPED Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort. |
 | [MOPED Master Composition](StructureDefinition-MopedMasterComposition.html) | MOPED Profil der Composition Ressource für die Composition in der sich der gesamte Moped Datensatz aufbaut. Diese unterstütz durch ihre Invarianten eine konsistente Datenhaltung. |
 | [MOPED Melden Bundle LGF](StructureDefinition-MopedMeldenLGFBundle.html) | Bundle für die Input-Ressourcen beim Melden von Informationen |
+| [MOPED Observation Entbindungsart](StructureDefinition-MopedObservationEntbindungsart.html) | MOPED Profil der Observation Ressource für die Entbindungsart |
+| [MOPED Observation Geburtenanzahl](StructureDefinition-MopedObservationGeburtenanzahl.html) | MOPED Profil der Observation Ressource für die Anzahl der Geburten |
 | [MOPED Patient](StructureDefinition-MopedPatient.html) | MOPED Profil der Patient Ressource |
 | [MOPED Patient Bund](StructureDefinition-MopedPatientBund.html) | MOPED Profil der Patient Ressource aus der Sicht der Rolle: Bund |
 | [MOPED Patient LGF](StructureDefinition-MopedPatientLGF.html) | MOPED Profil der Patient Ressource aus der Sicht der Rolle: LGF |
@@ -428,6 +430,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [Moped Composition Sections ValueSet](ValueSet-CompositionSectionsVS.html) | ValueSet für die Moped Sections der Composition Ressource |
 | [Moped Device Types ValueSet](ValueSet-MopedDeviceTypesVS.html) | Types von Moped Devices |
 | [Moped Encounter Participant Type ValueSet](ValueSet-MopedEncounterParticipantTypesVS.html) | ValueSet für die Moped Encounter Participant Types |
+| [Moped ValueSet für die Art der Entbindung](ValueSet-MopedEntbindungsartVS.html) | Varianten der Art der Entbindung |
 | [Sonderklasse ValueSet](ValueSet-SonderklasseVS.html) | ValueSet für die Klasse (KaOrg) |
 | [Spezielle Organisationsform](ValueSet-SpezielleOrganisationsformVS.html) | Die spezielle Organisationsform der stationären Versorgung ist im Kostenstellenplan zusätzlich zum Funktionscode mit einer entsprechenden Kennzeichnung zu versehen. |
 | [Status der Versichertenanspruchserklärung](ValueSet-VAEStatusVS.html) | Status der Versichertenanspruchserklärung |
@@ -435,6 +438,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [Ursache für Behandlung](ValueSet-UrsacheVS.html) | ValueSet für die Ursache der Behandlung laut Ka-Org |
 | [VAE Claim Subtype ValueSet](ValueSet-MopedVAERequestSubTypeVS.html) | ValueSet für die Art der Claims |
 | [ValueSet Zahlungskennzeichen ARK](ValueSet-ZahlungskennzeichenVS.html) | ValueSet für das Zahlungskennzeichen ARK |
+| [Valueset für die Art der Geburtenanzahl](ValueSet-GeburtenanzahlVS.html) | Valueset für die Art der Geburtenanzahl in MOPED |
 | [Verdacht auf Arbeits- oder Schuelerunfall ValueSet](ValueSet-VerdachtArbeitsSchuelerunfallVS.html) | ValueSet für den Verdacht auf einen Arbeits- oder Schuelerunfall |
 | [Workflow Status eines Falls](ValueSet-WorkflowStatusVS.html) | ValueSet für die Statusoptionen in denen sich ein Fall befinden kann. |
 
