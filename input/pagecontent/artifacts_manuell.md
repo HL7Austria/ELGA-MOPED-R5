@@ -73,8 +73,24 @@ Diese Seite enthält eine Liste der FHIR-Artefakte, die im Rahmen dieses Impleme
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
-         <tr>
-         </tr>
+        <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-MopedPatientvbPKKA.html"
+                    title="StructureDefinition/MopedPatientvbPKKA">MOPED vbPK Patient KA</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit vbPKs - verordnungsrelevant: KA</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-MopedPatientKlarnameKA.html"
+                    title="StructureDefinition/MopedPatientKlarnameKA">MOPED Patient mit Klarname KA</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit Klarname - verordnungsrelevant: KA</p>
+            </td>
+        </tr>
       </tbody>
    </table>
    <a name="1"> </a>
@@ -89,12 +105,21 @@ Diese Seite enthält eine Liste der FHIR-Artefakte, die im Rahmen dieses Impleme
         <tbody>
             <tr>
                 <td style="column-width:30%">
-                <a href="StructureDefinition-MopedEncounterBund.html"
-                    title="StructureDefinition/MopedEncounterBund">MOPED Encounter Bund</a>
+                    <a href="StructureDefinition-MopedPatientvbPKBund.html"
+                        title="StructureDefinition/MopedPatientvbPKBund">MOPED vbPK Patient Bund</a>
                 </td>
                 <td>
-    <p>MOPED Profil der Encounter Ressource für die Rolle: Bund</p>
-    </td>
+                    <p>MOPED Profil der Patient Ressource mit vbPKs - verordnungsrelevant: Bund</p>
+                </td>
+            </tr>
+            <tr>
+              <td style="column-width:30%">
+                  <a href="StructureDefinition-MopedPatientKlarnameBund.html"
+                      title="StructureDefinition/MopedPatientKlarnameBund">MOPED Patient mit Klarname Bund</a>
+              </td>
+              <td>
+                  <p>MOPED Profil der Patient Ressource mit Klarname - verordnungsrelevant: Bund</p>
+              </td>
             </tr>
         </tbody>
     </table>
@@ -113,9 +138,27 @@ Diese Seite enthält eine Liste der FHIR-Artefakte, die im Rahmen dieses Impleme
                   title="StructureDefinition/MopedEncounterLGF">MOPED Encounter LGF</a>
             </td>
             <td>
-<p>MOPED Profil der Encounter Ressource für die Rolle: LGF</p>
-</td>
+                <p>MOPED Profil der Encounter Ressource für die Rolle: LGF</p>
+            </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-MopedPatientvbPKLGF.html"
+                    title="StructureDefinition/MopedPatientvbPKLGF">MOPED vbPK Patient LGF</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit vbPKs - verordnungsrelevant: LGF</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-MopedPatientKlarnameLGF.html"
+                    title="StructureDefinition/MopedPatientKlarnameLGF">MOPED Patient mit Klarname LGF</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit Klarname - verordnungsrelevant: LGF</p>
+            </td>
+        </tr>
       </tbody>
    </table>
    <a name="3"> </a>
@@ -136,6 +179,24 @@ Diese Seite enthält eine Liste der FHIR-Artefakte, die im Rahmen dieses Impleme
 <p>MOPED Profil der Encounter Ressource für die Rolle: SV</p>
 </td>
          </tr>
+         <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-MopedPatientvbPKSV.html"
+                    title="StructureDefinition/MopedPatientvbPKSV">MOPED vbPK Patient SV</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit vbPKs - verordnungsrelevant: SV</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-MopedPatientKlarnameSV.html"
+                    title="StructureDefinition/MopedPatientKlarnameSV">MOPED Patient mit Klarname SV</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit Klarname - verordnungsrelevant: SV</p>
+            </td>
+        </tr>
       </tbody>
    </table>
 </div>

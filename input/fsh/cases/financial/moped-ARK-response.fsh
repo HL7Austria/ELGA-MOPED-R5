@@ -5,7 +5,7 @@ Title: "MOPED ARKResponse"
 Description: "MOPED Profil der ClaimResponse Ressource für die Rückmeldung der SV für Ausländerverrechnung und Regresse."
 * insert ShallPopulateObligation(status, MopedSVActor)
 * insert MopedHandleObligation(status)
-* patient only Reference(MopedPatient)
+* patient only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * insert MopedHandleObligation(patient)
 * use = $ClaimUse#claim
 * insert ShallPopulateObligation(use, MopedSVActor)

@@ -5,7 +5,7 @@ Title: "MOPED TransferEncounter"
 * insert MappingHeaderEinfuegen()
 * insert ShallPopulateObligation(status, MopedKAActor)
 * insert MopedHandleObligation(status)
-* subject only Reference(MopedPatient)
+* subject only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * subject 1..1
 * insert MopedHandleObligation(subject)
 

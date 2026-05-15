@@ -14,7 +14,7 @@ Description: "MOPED Profil für die Beantwortung der Versichertenanspruchserklä
 * insert ShallPopulateObligation(type.coding, MopedSVActor)
 * use = #preauthorization
 * insert ShallPopulateObligation(use, MopedSVActor)
-* patient only Reference(MopedPatient)
+* patient only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * patient 1..1
 * insert MopedHandleObligation(patient) 
 * request only Reference(MopedVAERequestInitial or MopedVAERequestVerlaengerung)
