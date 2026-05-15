@@ -54,8 +54,9 @@ Zustand:
 - Aufenthalts-/Besuchsdaten vollständig
     (inklusive Entlassung bei stationären Fällen)
 - Hauptdiagnose vorhanden
-- Keine Abrechnung mit dem Zustand: Unbeantwortet endgültig
-- Keine Abrechnung mit dem Zustand: Genehmigt endgültig
+- keine vorläufige/finale Abrechnung unbeantwortet
+- keine finale Abrechnung genehmigt
+
 end note
 
 KA ->> MP: POST $update

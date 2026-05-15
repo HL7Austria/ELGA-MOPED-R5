@@ -41,12 +41,6 @@ Title: "MOPED Composition"
 * insert legacyMapping(author, KaOrg, [[Krankenanstaltennummer des Bundesministeriums]])
 * insert legacyMapping(author, KaOrg, [[Vertragspartnernummer der Krankenanstalt]])
 * insert ShallPopulateObligation(author, MopedDeviceActor)
-* extension contains AnzahlVerlegungen named AnzahlVerlegungen 0..1
-* insert ShallPopulateObligation(extension[AnzahlVerlegungen], MopedDeviceActor)
-* extension contains AnzahlBeurlaubungen named AnzahlBeurlaubungen 0..1
-* extension[AnzahlBeurlaubungen] ^short = "KaOrg: Fallnummer"
-* insert legacyMapping(extension[AnzahlBeurlaubungen], KaOrg, Fallnummer)
-* insert ShallPopulateObligation(extension[AnzahlBeurlaubungen], MopedDeviceActor)
 * section 1..*
 * section.code from CompositionSectionsVS
 * section ^slicing.discriminator[+].type = #value

@@ -40,9 +40,9 @@ Usage: #example
 * supportingInfo[Plausibilitaetskennzeichen].sequence = 1
 * supportingInfo[Plausibilitaetskennzeichen].category = ClaimSupportingInformationCategoryCS#PLAUS
 * supportingInfo[Plausibilitaetskennzeichen].valueString = "1234"
-* supportingInfo[EndgueltigeMeldung].sequence = 2
-* supportingInfo[EndgueltigeMeldung].category = ClaimSupportingInformationCategoryCS#ENDG
-* supportingInfo[EndgueltigeMeldung].valueBoolean = false
+* supportingInfo[FinaleAbrechnung].sequence = 2
+* supportingInfo[FinaleAbrechnung].category = ClaimSupportingInformationCategoryCS#ENDG
+* supportingInfo[FinaleAbrechnung].valueBoolean = false
 * supportingInfo[XDokDevice].sequence = 3
 * supportingInfo[XDokDevice].category = ClaimSupportingInformationCategoryCS#DEVX
 * supportingInfo[XDokDevice].valueReference = Reference(XDokExampleDevice)

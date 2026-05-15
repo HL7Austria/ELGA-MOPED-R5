@@ -128,7 +128,8 @@ UNUSED_FIELD_COMMENTS = [
     "in neuer Architektur nicht mehr notwendig",
     "laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt",
     "diese Meldung ist in Moped in dieser Form nicht mehr notwendig",
-    "erst in K05 relevant"
+    "erst in K05 relevant",
+    "Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`"
 ]
 
 E1_REFERENCE_COMMENTS = ["siehe E1", "siehe E1.1", "siehe E1/E1.1"]

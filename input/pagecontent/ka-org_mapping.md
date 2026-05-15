@@ -86,12 +86,12 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
-        <td>Composition</td>
-        <td>Composition.extension:AnzahlBeurlaubungen</td>
-        <td>Composition.extension:AnzahlBeurlaubungen</td>
         <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`</td>
     </tr>
     <tr>
         <td>Kostenträger (leistungszuständig)</td>
@@ -443,12 +443,12 @@ verfügbar.
         <td>O</td>
         <td>O</td>
         <td>optional</td>
-        <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
-        <td>Composition</td>
-        <td>Composition.extension:AnzahlBeurlaubungen</td>
-        <td>Composition.extension:AnzahlBeurlaubungen</td>
         <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>/</td>
+        <td>Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`</td>
     </tr>
     <tr>
         <td>Kostenträger (leistungszuständig)</td>

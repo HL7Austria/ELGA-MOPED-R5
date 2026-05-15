@@ -66,8 +66,9 @@ Zustand:
 - Aufenthalts-/Besuchsdaten vollständig
     (inklusive Entlassung bei stationären Fällen)
 - Hauptdiagnose vorhanden
-- Keine Abrechnung mit dem Zustand: Unbeantwortet endgültig
-- Keine Abrechnung mit dem Zustand: Genehmigt endgültig
+Gültige Abrechnungszustände:
+- keine vorläufige/finale Abrechnung unbeantwortet
+- keine finale Abrechnung genehmigt
 end note
 
 KA ->> MP: $abrechnen (POST LKFRequest)
@@ -77,7 +78,7 @@ end note
 
 note over MP #c5f7ba
 Zustand:
-- Abrechnung unbeantwortet vorläufig/endgültig
+- vorläufige/finale Abrechnung unbeantwortet
 end note
 
 @enduml

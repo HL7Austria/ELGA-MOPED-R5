@@ -299,8 +299,6 @@ These define constraints on FHIR data types for systems conforming to this imple
 | [Abrechnungsart Ausländerverrechnung](StructureDefinition-moped-ext-AbrechnungsartAuslaenderverrechnung.html) | Abrechnungsart Ausländerverrechnung |
 | [AddItemCategory](StructureDefinition-moped-ext-AddItemCategory.html) | Benefit classification |
 | [Altersgruppe](StructureDefinition-moped-ext-altersgruppe.html) | In Gruppen eingeteilt, wobei vollendete Lebensjahre ausschlaggebend sind. |
-| [AnzahlBeurlaubungen](StructureDefinition-moped-ext-AnzahlBeurlaubungen.html) | MOPED Extension für die Anzahl der Beurlaubungen |
-| [AnzahlVerlegungen](StructureDefinition-moped-ext-AnzahlVerlegungen.html) | MOPED Extension für die Anzahl der Verlegungen |
 | [Aufnahmeart](StructureDefinition-moped-ext-aufnahmeart.html) | MOPED Extension für die Aufnahmeart. |
 | [Beihilfenaequivalent](StructureDefinition-moped-ext-Beihilfenaequivalent.html) | MOPED Extension für das Beihilfenaequivalent |
 | [Betreuungsschein bei Ausländerverrechnung](StructureDefinition-moped-ext-Betreuungsschein.html) | MOPED Extension für den Betreuungsschein bei Ausländerverrechnung |
