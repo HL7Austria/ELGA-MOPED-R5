@@ -11,8 +11,6 @@ Title: "MOPED PJ1 Composition nach $aufnehmen"
 * date = "2025-03-31"
 * title = "PJ1CompositionNachAufnehmen"
 * author = Reference(OrganizationHerzJesuKrankenhaus)
-* extension[AnzahlVerlegungen].valueUnsignedInt = 1
-* extension[AnzahlBeurlaubungen].valueUnsignedInt = 0
 
 * encounter = Reference(PJ1EncounterAufnahme)
 
