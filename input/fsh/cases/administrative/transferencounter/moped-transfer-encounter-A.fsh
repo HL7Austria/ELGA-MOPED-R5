@@ -17,7 +17,9 @@ Title: "MOPED TransferEncounter Ambulant"
 * insert legacyMapping(identifier[AufnahmezahlFunktionscodebezogen].value, LKF, [[Aufnahmezahl – funktionscodebezogen]])
 * insert ShallPopulateObligation(identifier[AufnahmezahlFunktionscodebezogen].value, MopedKAActor)
 
-//TBD actualPeriod.start Uhrzeit verpflichtend machen
 * subjectStatus from AnwesenheitsartVS (required)
 * subjectStatus 1..1
+//TBD: ggf. Regex von datetime damit Uhrzeit auch vorhanden ist und nicht nur Datum
+* actualPeriod 1..1
+* actualPeriod.start 1..1
 * admission.extension[Altersgruppe].extension[neugeborenes] 0..0
