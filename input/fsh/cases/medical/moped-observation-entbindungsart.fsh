@@ -19,7 +19,7 @@ Title: "MOPED Observation Entbindungsart"
 * insert legacyMapping(effectiveDateTime, KaOrg, Entbindungsdatum)
 * insert ShallPopulateObligation(effectiveDateTime, MopedKAActor)
 
-* subject only Reference(MopedPatient)
+* subject only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
 * subject 1..1
 * insert MopedHandleObligation(subject)
 * encounter only Reference(MopedEncounter)
