@@ -6,7 +6,7 @@ Usage: #example
 * url = "https://elga.moped.at/SubscriptionTopic/neueVAE"
 * name = "neueVAE"
 * status = #active
-* resourceTrigger[+].resource = Canonical(AtMopedClaimVAERequest)
+* resourceTrigger[+].resource = Canonical(AtMopedClaimVAERequestBasis)
 * resourceTrigger[=].description = "Erstellen eines neuen VAERequest"
 * resourceTrigger[=].supportedInteraction = #create
 * canFilterBy[+].resource = Canonical(AtMopedClaimVAERequestGenerisch)

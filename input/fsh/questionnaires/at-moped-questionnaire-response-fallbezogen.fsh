@@ -7,7 +7,7 @@ Description: "MOPED Profil der QuestionnaireResponse Ressource für Questionnnai
 * questionnaire 1..1
 * subject only Reference(AtMopedPatientvbPKBasis or AtMopedPatientKlarnameBasis)
 * subject 1..1
-* encounter only only Reference(AtMopedEncounterAufenthaltStationaerBasis or AtMopedEncounterBesuchAmbulantBasis)
+* encounter only Reference(AtMopedEncounterAufenthaltStationaerBasis or AtMopedEncounterBesuchAmbulantBasis)
 * encounter 1..1
 * authored 1..1
 * author only Reference(AtMopedOrganizationKA)
