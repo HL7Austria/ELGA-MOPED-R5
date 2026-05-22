@@ -110,15 +110,15 @@ TBD: Es muss die richtige Aufnahmeart vergeben werden und die überweisende Orga
 
 
 ### Relevante Profile
-- [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKA.html)
+- [$aufnahme Bundle](StructureDefinition-AtMopedBundleUpdateKA.html)
 - [Patientenressource](TBD)
-- [Encounter Stationär](StructureDefinition-MopedEncounterS.html)
-- [Encounter Ambulant](TBD)
-- [TransferEncounter Stationär](StructureDefinition-MopedTransferEncounterS.html)
-- [TransferEncounter Ambulant](TBD)
-- [TransferEncounter Intensiv](TBD)
-- [Aufnahmediagnose](StructureDefinition-MopedCondition.html)
-- optional: [Coverage](StructureDefinition-MopedCoverage.html) oder [Selbstzahler Coverage](TBD)
+- [Encounter Stationär](StructureDefinition-at-moped-encounter-aufenthalt-stationaer-basis.html)
+- [Encounter Ambulant](StructureDefinition-at-moped-encounter-besuch-ambulant-basis.html)
+- [BewegungsEncounter Stationär](StructureDefinition-AtMopedEncounterBewegungStationaerBasis.html)
+- [BewegungsEncounter Ambulant](TBD)
+- [BewegungsEncounter Intensiv](TBD)
+- [Aufnahmediagnose](StructureDefinition-AtMopedConditionBasis.html)
+- optional: [Coverage](StructureDefinition-AtMopedCoverageVersicherterBasis.html) oder [Selbstzahler Coverage](TBD)
 - optional: [RelatedPerson Hauptversicherter](TBD)
 - optional: [Überweisende Organization](TBD)
 

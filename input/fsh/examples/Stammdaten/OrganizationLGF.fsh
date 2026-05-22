@@ -1,8 +1,8 @@
 Instance: OrganizationLGF
-InstanceOf: LGFOrganization
+InstanceOf: AtMopedOrganizationLGF
 Description: "Hackathon Stammdaten: LGF Wien"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/LGFOrganization"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedOrganizationLGF"
 * name = "Wiener Gesundheitsfonds (WGF)"
 * contact.telecom.system = #phone
 * contact.telecom.value = "+43 1 4000 84200"

@@ -117,7 +117,7 @@ TBD: gibt es einen Teil der Registermeldung die bei ambulanter Nachbehandlung ei
 
 
 ### Relevante Profile
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
+- [$update Bundle](StructureDefinition-AtMopedBundleUpdateKA.html)
 - [SAPS3 Questionnaire](Questionnaire-LKFSAPS3Questionnaire.html)
 - [TISS-A Questionnaire](Questionnaire-LKFTISSAQuestionnaire.html)
 

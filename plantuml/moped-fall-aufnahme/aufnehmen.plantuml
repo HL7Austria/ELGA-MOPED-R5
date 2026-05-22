@@ -72,7 +72,7 @@ note over KA
 Aufnahme-Bundle wird gesendet
 - Patient
 - Aufenthalt (Encounter)
-- Aufnehmende Station (TransferEncounter)
+- Aufnehmende Station (BewegungsEncounter)
 - Aufnahmediagnose
 - ggf. Versicherungsdaten inkl. Hauptversicherter
 - ggf. überweisende Organisation

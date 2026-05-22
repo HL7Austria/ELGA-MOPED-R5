@@ -21,7 +21,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *Entlassung* Parameter beinhaltet ein Bundle mit einem Update für den jeweiligen Aufenthalt der alle verpflichtenden Felder der Entlassung enthält."
   * type = #Bundle
-  * targetProfile = Canonical(MopedEntlassenBundle)
+  * targetProfile = Canonical(AtMopedBundleEntlassenKA)
 * parameter[+]
   * name = #return
   * use = #out

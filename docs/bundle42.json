@@ -10,7 +10,7 @@
         "id": "Composition42",
         "meta": {
           "profile": [
-            "https://elga.moped.at/StructureDefinition/MopedComposition"
+            "https://elga.moped.at/StructureDefinition/AtMopedCompositionGenerisch"
           ]
         },
         "status": "final",
@@ -137,7 +137,7 @@
             ]
           },
           {
-            "title": "TransferEncounter",
+            "title": "BewegungsEncounter",
             "code": {
               "coding": [
                 {
@@ -148,10 +148,10 @@
             },
             "entry": [
               {
-                "reference": "Encounter/TransferEncounter42.1"
+                "reference": "Encounter/BewegungsEncounter42.1"
               },
               {
-                "reference": "Encounter/TransferEncounter42.2"
+                "reference": "Encounter/BewegungsEncounter42.2"
               }
             ]
           },
@@ -374,7 +374,7 @@
         "id": "LKFRequest42",
         "meta": {
           "profile": [
-            "https://elga.moped.at/StructureDefinition/MopedLKFRequest"
+            "https://elga.moped.at/StructureDefinition/AtMopedClaimLKFRequestBasis"
           ]
         },
         "extension": [
@@ -419,10 +419,10 @@
             "reference": "Encounter/Encounter42"
           },
           {
-            "reference": "Encounter/TransferEncounter42.1"
+            "reference": "Encounter/BewegungsEncounter42.1"
           },
           {
-            "reference": "Encounter/TransferEncounter42.2"
+            "reference": "Encounter/BewegungsEncounter42.2"
           }
         ],
         "diagnosisRelatedGroup": {
@@ -625,7 +625,7 @@
         "id": "Condition42.1",
         "meta": {
           "profile": [
-            "https://elga.moped.at/StructureDefinition/MopedCondition"
+            "https://elga.moped.at/StructureDefinition/AtMopedConditionBasis"
           ]
         },
         "extension": [
@@ -670,13 +670,13 @@
       }
     },
     {
-      "fullUrl": "https://elga.moped.at/Encounter/TransferEncounter42.1",
+      "fullUrl": "https://elga.moped.at/Encounter/BewegungsEncounter42.1",
       "resource": {
         "resourceType": "Encounter",
-        "id": "TransferEncounter42.1",
+        "id": "BewegungsEncounter42.1",
         "meta": {
           "profile": [
-            "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
+            "https://elga.moped.at/StructureDefinition/MopedBewegungsEncounter"
           ]
         },
         "status": "completed",
@@ -729,17 +729,17 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Encounter/TransferEncounter42.1"
+        "url": "Encounter/BewegungsEncounter42.1"
       }
     },
     {
-      "fullUrl": "https://elga.moped.at/Encounter/TransferEncounter42.2",
+      "fullUrl": "https://elga.moped.at/Encounter/BewegungsEncounter42.2",
       "resource": {
         "resourceType": "Encounter",
-        "id": "TransferEncounter42.2",
+        "id": "BewegungsEncounter42.2",
         "meta": {
           "profile": [
-            "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
+            "https://elga.moped.at/StructureDefinition/MopedBewegungsEncounter"
           ]
         },
         "status": "completed",
@@ -801,7 +801,7 @@
       },
       "request": {
         "method": "PUT",
-        "url": "Encounter/TransferEncounter42.2"
+        "url": "Encounter/BewegungsEncounter42.2"
       }
     },
     {

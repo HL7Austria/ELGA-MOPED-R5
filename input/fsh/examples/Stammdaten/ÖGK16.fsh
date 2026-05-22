@@ -1,8 +1,8 @@
 Instance: SV16
-InstanceOf: SVOrganization
+InstanceOf: AtMopedOrganizationSV
 Description: "Hackathon Stammdaten: ÖGK Kärnten"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/SVOrganization"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedOrganizationSV"
 * type = https://termgit.elga.gv.at/CodeSystem/elga-gtelvogdarollen#406 "Sozialversicherung"
 * name = "Österreichische Gesundheitskasse Kärnten"
 * identifier[SVT].system = "http://svc.co.at/CodeSystem/ecard-svt-cs"

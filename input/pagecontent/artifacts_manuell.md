@@ -75,20 +75,38 @@ Diese Seite enthält eine Liste der FHIR-Artefakte, die im Rahmen dieses Impleme
       <tbody>
         <tr>
             <td style="column-width:30%">
-                <a href="StructureDefinition-MopedPatientvbPKKA.html"
-                    title="StructureDefinition/MopedPatientvbPKKA">MOPED vbPK Patient KA</a>
+               <a href="StructureDefinition-at-moped-encounter-besuch-ambulant-KA.html"
+                  title="StructureDefinition/AtMopedEncounterBesuchAmbulantKA">MOPED Encounter Ambulant KA</a>
             </td>
             <td>
-                <p>MOPED Profil der Patient Ressource mit vbPKs - verordnungsrelevant: KA</p>
+                <p>MOPED Profil der ambulanten Encounter Ressource für die Rolle: KA</p>
             </td>
         </tr>
         <tr>
             <td style="column-width:30%">
-                <a href="StructureDefinition-MopedPatientKlarnameKA.html"
-                    title="StructureDefinition/MopedPatientKlarnameKA">MOPED Patient mit Klarname KA</a>
+               <a href="StructureDefinition-at-moped-encounter-aufenthalt-stationaer-KA.html"
+                  title="StructureDefinition/AtMopedEncounterAufenthaltStationaerKA">MOPED Encounter Stationär KA</a>
             </td>
             <td>
-                <p>MOPED Profil der Patient Ressource mit Klarname - verordnungsrelevant: KA</p>
+                <p>MOPED Profil der stationären Encounter Ressource für die Rolle: KA</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-AtMopedPatientvbPKKA.html"
+                    title="StructureDefinition/AtMopedPatientvbPKKA">MOPED vbPK Patient KA</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit vbPKs für die Rolle KA</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-AtMopedPatientKlarnameKA.html"
+                    title="StructureDefinition/AtMopedPatientKlarnameKA">MOPED Patient mit Klarname KA</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit Klarname für die Rolle: KA</p>
             </td>
         </tr>
       </tbody>
@@ -105,20 +123,38 @@ Diese Seite enthält eine Liste der FHIR-Artefakte, die im Rahmen dieses Impleme
         <tbody>
             <tr>
                 <td style="column-width:30%">
-                    <a href="StructureDefinition-MopedPatientvbPKBund.html"
-                        title="StructureDefinition/MopedPatientvbPKBund">MOPED vbPK Patient Bund</a>
+                <a href="StructureDefinition-at-moped-encounter-besuch-ambulant-Bund.html"
+                    title="StructureDefinition/AtMopedEncounterBesuchAmbulantBund">MOPED Encounter Ambulant Bund</a>
                 </td>
                 <td>
-                    <p>MOPED Profil der Patient Ressource mit vbPKs - verordnungsrelevant: Bund</p>
+                    <p>MOPED Profil der ambulanten Encounter Ressource für die Rolle: Bund</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="column-width:30%">
+                <a href="StructureDefinition-at-moped-encounter-aufenthalt-stationaer-Bund.html"
+                    title="StructureDefinition/AtMopedEncounterAufenthaltStationaerBund">MOPED Encounter Stationär Bund</a>
+                </td>
+                <td>
+                    <p>MOPED Profil der stationären Encounter Ressource für die Rolle: Bund</p>
+                </td>
+            </tr>
+            <tr>
+                <td style="column-width:30%">
+                    <a href="StructureDefinition-AtMopedPatientvbPKBund.html"
+                        title="StructureDefinition/AtMopedPatientvbPKBund">MOPED vbPK Patient Bund</a>
+                </td>
+                <td>
+                    <p>MOPED Profil der Patient Ressource mit vbPKs für die Rolle: Bund</p>
                 </td>
             </tr>
             <tr>
               <td style="column-width:30%">
-                  <a href="StructureDefinition-MopedPatientKlarnameBund.html"
-                      title="StructureDefinition/MopedPatientKlarnameBund">MOPED Patient mit Klarname Bund</a>
+                  <a href="StructureDefinition-AtMopedPatientKlarnameBund.html"
+                      title="StructureDefinition/AtMopedPatientKlarnameBund">MOPED Patient mit Klarname Bund</a>
               </td>
               <td>
-                  <p>MOPED Profil der Patient Ressource mit Klarname - verordnungsrelevant: Bund</p>
+                  <p>MOPED Profil der Patient Ressource mit Klarname für die Rolle: Bund</p>
               </td>
             </tr>
         </tbody>
@@ -134,29 +170,38 @@ Diese Seite enthält eine Liste der FHIR-Artefakte, die im Rahmen dieses Impleme
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-MopedEncounterLGF.html"
-                  title="StructureDefinition/MopedEncounterLGF">MOPED Encounter LGF</a>
+               <a href="StructureDefinition-at-moped-encounter-besuch-ambulant-LGF.html"
+                  title="StructureDefinition/AtMopedEncounterBesuchAmbulantLGF">MOPED Encounter Ambulant LGF</a>
             </td>
             <td>
-                <p>MOPED Profil der Encounter Ressource für die Rolle: LGF</p>
+                <p>MOPED Profil der ambulanten Encounter Ressource für die Rolle: LGF</p>
             </td>
          </tr>
          <tr>
             <td style="column-width:30%">
-                <a href="StructureDefinition-MopedPatientvbPKLGF.html"
-                    title="StructureDefinition/MopedPatientvbPKLGF">MOPED vbPK Patient LGF</a>
+               <a href="StructureDefinition-at-moped-encounter-aufenthalt-stationaer-LGF.html"
+                  title="StructureDefinition/AtMopedEncounterAufenthaltStationaerLGF">MOPED Encounter Stationär LGF</a>
             </td>
             <td>
-                <p>MOPED Profil der Patient Ressource mit vbPKs - verordnungsrelevant: LGF</p>
+                <p>MOPED Profil der stationären Encounter Ressource für die Rolle: LGF</p>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-AtMopedPatientvbPKLGF.html"
+                    title="StructureDefinition/AtMopedPatientvbPKLGF">MOPED vbPK Patient LGF</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit vbPKs für die Rolle: LGF</p>
             </td>
         </tr>
         <tr>
             <td style="column-width:30%">
-                <a href="StructureDefinition-MopedPatientKlarnameLGF.html"
-                    title="StructureDefinition/MopedPatientKlarnameLGF">MOPED Patient mit Klarname LGF</a>
+                <a href="StructureDefinition-AtMopedPatientKlarnameLGF.html"
+                    title="StructureDefinition/AtMopedPatientKlarnameLGF">MOPED Patient mit Klarname LGF</a>
             </td>
             <td>
-                <p>MOPED Profil der Patient Ressource mit Klarname - verordnungsrelevant: LGF</p>
+                <p>MOPED Profil der Patient Ressource mit Klarname für die Rolle: LGF</p>
             </td>
         </tr>
       </tbody>
@@ -170,31 +215,40 @@ Diese Seite enthält eine Liste der FHIR-Artefakte, die im Rahmen dieses Impleme
 <table class="grid">
       <col style="width:20%"/>
       <tbody>
-         <tr>
+        <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-MopedEncounterSV.html"
-                  title="StructureDefinition/MopedEncounterSV">MOPED Encounter SV</a>
+            <a href="StructureDefinition-at-moped-encounter-besuch-ambulant-SV.html"
+                title="StructureDefinition/AtMopedEncounterBesuchAmbulantSV">MOPED Encounter Ambulant SV</a>
             </td>
             <td>
-<p>MOPED Profil der Encounter Ressource für die Rolle: SV</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-                <a href="StructureDefinition-MopedPatientvbPKSV.html"
-                    title="StructureDefinition/MopedPatientvbPKSV">MOPED vbPK Patient SV</a>
-            </td>
-            <td>
-                <p>MOPED Profil der Patient Ressource mit vbPKs - verordnungsrelevant: SV</p>
+                <p>MOPED Profil der ambulanten Encounter Ressource für die Rolle: SV</p>
             </td>
         </tr>
         <tr>
             <td style="column-width:30%">
-                <a href="StructureDefinition-MopedPatientKlarnameSV.html"
-                    title="StructureDefinition/MopedPatientKlarnameSV">MOPED Patient mit Klarname SV</a>
+            <a href="StructureDefinition-at-moped-encounter-aufenthalt-stationaer-SV.html"
+                title="StructureDefinition/AtMopedEncounterAufenthaltStationaerSV">MOPED Encounter Stationär SV</a>
             </td>
             <td>
-                <p>MOPED Profil der Patient Ressource mit Klarname - verordnungsrelevant: SV</p>
+                <p>MOPED Profil der stationären Encounter Ressource für die Rolle: SV</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-AtMopedPatientvbPKSV.html"
+                    title="StructureDefinition/AtMopedPatientvbPKSV">MOPED vbPK Patient SV</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit vbPKs für die Rolle: SV</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="column-width:30%">
+                <a href="StructureDefinition-AtMopedPatientKlarnameSV.html"
+                    title="StructureDefinition/AtMopedPatientKlarnameSV">MOPED Patient mit Klarname SV</a>
+            </td>
+            <td>
+                <p>MOPED Profil der Patient Ressource mit Klarname für die Rolle: SV</p>
             </td>
         </tr>
       </tbody>
@@ -283,7 +337,7 @@ These are custom operations that can be supported by and/or invoked by systems c
 | [MOPED Patient $aufnehmen](OperationDefinition-MOPED.Patient.Aufnehmen.html) | Die $aufnehmen Operation wird aufgerufen, wenn ein(e) Patient*in in die Krankenanstalt aufgenommen wird. |
 | [MOPED Patient $entlassen](OperationDefinition-MOPED.Patient.Entlassen.html) | Die $entlassen Operation wird aufgerufen, wenn ein(e) Patient*in aus dem Krankenhaus entlassen wurde. |
 | [MOPED QuestionnaireResponse $einmelden](OperationDefinition-MOPED.QuestionnaireResponse.Einmelden.html) | Die $einmelden Operation wird aufgerufen, wenn eine (nicht fallbezogene) QuestionnaireResponse eingemeldet werden soll. |
-| [MOPED Versichertenanspruchserklärung $anfragen](OperationDefinition-MOPED.VAERequest.Anfragen.html) | Die Versichertenanspruchserklärung $anfragen Operation wird aufgerufen, um die Versichertenanspruchserklärung-Anfrage an die SV anzustoßen. Diese Operation ist irrelevant für Selbstzahler (-> wenn es keine zuständige SV gibt darf die Operation $anfragen nicht ausgeführt werden). |
+| [MOPED Versichertenanspruchserklärung $anfragen](OperationDefinition-MOPED.VAERequest.Anfragen.html) | Die $anfragen Operation wird aufgerufen, um die Versichertenanspruchserklärung-Anfrage an die SV anzustoßen. Diese Operation ist irrelevant für Selbstzahler (-> wenn es keine zuständige SV gibt darf die Operation $anfragen nicht ausgeführt werden). |
 | [MOPED auf VAERequest oder ARKRequest $antworten](OperationDefinition-MOPED.Auf.Request.Antworten.html) | Die $antworten Operation wird aufgerufen, wenn eine Versichertenanspruchserklärung oder eine Kosteninformation beantwortet wird. |
 
 ### Structures: Resource Profiles 
@@ -292,63 +346,69 @@ These define constraints on FHIR resources for systems conforming to this implem
 
 | | |
 | :--- | :--- |
-| [Bund Organization](StructureDefinition-BundOrganization.html) | MOPED Profil für den Bund |
-| [Dachverband Organization](StructureDefinition-DachverbandOrganization.html) | MOPED Profil für die Dachverband Organization |
-| [KA Organization](StructureDefinition-KAOrganization.html) | MOPED Profil für KA Organizations |
-| [LGF Organization](StructureDefinition-LGFOrganization.html) | MOPED Profil für LGF Organizations |
+| [AT MOPED Bundle $abrechnen KA Profil](StructureDefinition-at-moped-bundle-abrechnen-KA.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Abrechnen (KA) |
+| [AT MOPED Bundle $anfragen KA Profil](StructureDefinition-at-moped-bundle-anfragen-KA.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim $anfragen (KA) |
+| [AT MOPED Bundle $antworten SV Profil](StructureDefinition-at-moped-bundle-antworten-SV.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Einbringen von Antworten der SV |
+| [AT MOPED Bundle $aufnehmen KA Profil](StructureDefinition-at-moped-bundle-aufnehmen-KA.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Aufnehmen eines Patienten |
+| [AT MOPED Bundle $entlassen KA Profil](StructureDefinition-at-moped-bundle-entlassen-KA.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Entlassen eines Patienten |
+| [AT MOPED Bundle $entscheiden LGF Profil](StructureDefinition-at-moped-bundle-entscheiden-LGF.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Entscheiden (Bestätigen/Ablehnen) von Punkten/Erorrs/Warnings |
+| [AT MOPED Bundle $melden LGF](StructureDefinition-at-moped-bundle-melden-LGF.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Melden von Informationen |
+| [AT MOPED Bundle $update KA](StructureDefinition-at-moped-bundle-update-KA.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Update von Informationen zu einem Fall |
+| [AT MOPED Bundle Input KA Profil](StructureDefinition-at-moped-bundle-input-KA.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Update von Informationen zu einem Fall |
+| [AT MOPED Bundle QuestionnaireResponse $einmelden Profil](StructureDefinition-at-moped-bundle-questionnaireresponse-einmelden-KA.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Einmelden von nicht fallspezifischen QuestionnaireResponses |
+| [AT MOPED Claim LKFRequest Basis Profil](StructureDefinition-at-moped-claim-lkfrequest-basis.html) | MOPED Basis Profil der Claim Ressource für die Leistungsabrechnungsanfrage. |
+| [AT MOPED Claim LKFRequest generisches Profil](StructureDefinition-at-moped-claim-lkfrequest-generisch.html) | MOPED generisches Profil der Claim Ressource die Leistungsabrechnungsanfrage. |
+| [AT MOPED Claim VAERequest Initiales Profil](StructureDefinition-at-moped-claim-VAE-request-initial.html) | MOPED Profile der Claim Ressource für die initiale Anfrage der Versichertenanspruchserklärung (VAE) |
+| [AT MOPED Claim VAERequest Verlängerungs Profil](StructureDefinition-at-moped-claim-vaerequest-verlaengerung.html) | MOPED Profil der Claim Ressource für die Verlängerung der Versichertenanspruchserklärung (VAE) |
+| [AT MOPED Claim VAERequest generisches Profil](StructureDefinition-at-moped-claim-vaerequest-generisch.html) | MOPED generisches Profil der Claim Ressource für die Anfrage der Versichertenanspruchserklärung VAE. |
+| [AT MOPED ClaimResponse LKFResponse Basis Profil](StructureDefinition-at-moped-claimresponse-lkfresponse-basis.html) | MOPED Basis Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort. |
+| [AT MOPED ClaimResponse LKFResponse generisches Profil](StructureDefinition-at-moped-claimresponse-lkfresponse-generisch.html) | MOPED generisches Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort. |
+| [AT MOPED ClaimResponse VAEResponse generisches Profil](StructureDefinition-at-moped-claimresponse-vaeresponse-generisch.html) | MOPED generisches Profil der ClaimResponse Ressource für die Beantwortung der Versichertenanspruchserklärung VAE. |
+| [AT MOPED Composition $anfragen Profil](StructureDefinition-at-moped-composition-anfragen.html) | MOPED Profil der Composition Ressource nach $anfragen |
+| [AT MOPED Composition $aufnehmen Profil](StructureDefinition-at-moped-composition-aufnehmen.html) | MOPED Profil der Composition Ressource nach $aufnehmen |
+| [AT MOPED Composition $beantworten Profil](StructureDefinition-at-moped-composition-beantworten.html) | MOPED Profil der Composition Ressource nach $beantworten |
+| [AT MOPED Composition $entlassen Aviso Profil](StructureDefinition-at-moped-composition-entlassen-aviso.html) | MOPED Profil der Composition Ressource nach $entlassen bei Entlassung Aviso |
+| [AT MOPED Composition $entlassen vollständig Profil](StructureDefinition-at-moped-composition-entlassen-vollstaendig.html) | MOPED Profil der Composition Ressource nach $entlassen bei Entlassung vollständig |
+| [AT MOPED Composition $update Profil](StructureDefinition-at-moped-composition-update.html) | MOPED Profil der Composition Ressource nach $update |
+| [AT MOPED Composition Basis Profil](StructureDefinition-at-moped-composition-basis.html) | MOPED Basis Profil der Composition Ressource in der sich der gesamte Moped Datensatz aufbaut. Diese unterstütz durch ihre Invarianten eine konsistente Datenhaltung. |
+| [AT MOPED Composition generisches Profil](StructureDefinition-at-moped-composition-generisch.html) | MOPED generisches Profil der Composition Ressource von der alle anderen Compositions ableiten |
+| [AT MOPED Condition Basis Profil](StructureDefinition-at-moped-condition-basis.html) | MOPED Basis Profil der Condition Ressource für Diagnosen |
+| [AT MOPED Condition generisches Profil](StructureDefinition-at-moped-condition-generisch.html) | MOPED generisches Profil der Condition Ressource für Diagnosen |
+| [AT MOPED Coverage Selbstzahler Basis Profil](StructureDefinition-at-moped-coverage-selbstzahler.html) | MOPED Basis Profil der Coverage Ressource für Personen, welche kein relevantes Versicherungsverhältnis haben und die Behandlung selbst bezahlen müssen. |
+| [AT MOPED Coverage Versicherter Basis Profil](StructureDefinition-at-moped-coverage-versicherter-basis.html) | MOPED Basis Profil der Coverage Ressource für Personen, welche ein Versicherungsverhältnis mit der Sozialversicherung haben. |
+| [AT MOPED Coverage generisches Profil](StructureDefinition-at-moped-coverage-generisch.html) | MOPED generisches Profil der Coverage Ressource |
+| [AT MOPED Device XDok Profil](StructureDefinition-at-moped-device-XDok.html) | MOPED Profil der Device Ressource für XDok |
+| [AT MOPED Device generisches Profil](StructureDefinition-at-moped-device-generisch.html) | MOPED generisches Profil der Device Ressource |
+| [AT MOPED Encounter Aufenthalt Stationär Aufnahme Profil](StructureDefinition-at-moped-encounter-aufenthalt-stationaer-Aufnahme.html) | MOPED Profil der Encounter Ressource für die Aufnahme im stationären Bereich |
+| [AT MOPED Encounter Aufenthalt Stationär Basis Profil](StructureDefinition-at-moped-encounter-aufenthalt-stationaer-basis.html) | MOPED Basis Profil der Encounter Ressource für den stationären Aufenthalt |
+| [AT MOPED Encounter Aufenthalt Stationär Entlassung Profil](StructureDefinition-at-moped-encounter-aufenthalt-stationaer-Entlassung.html) | MOPED Profil der Encounter Ressource für die Entlassung im stationären Bereich |
+| [AT MOPED Encounter Aufenthalt/Besuch generisches Profil](StructureDefinition-at-moped-encounter-aufenthaltbesuch-generisch.html) | MOPED generisches Profil der Encounter Ressource für ambulante Besuche und stationäre Aufenthaltes |
+| [AT MOPED Encounter Besuch Ambulantes Profil](StructureDefinition-at-moped-encounter-besuch-ambulant-basis.html) | MOPED Basis Profil der Encounter Ressource für den ambulanten Besuch |
+| [AT MOPED Encounter Bewegung Ambulant Basis Profil](StructureDefinition-at-moped-encounter-bewegung-ambulant-basis.html) | MOPED Profil der Encounter Ressource für ambulante Kontakte/Bewegungen |
+| [AT MOPED Encounter Bewegung Intensiv Basis Profil](StructureDefinition-at-moped-encounter-bewegung-intensiv-basis.html) | MOPED Profil der Encounter Ressource für die Verlegung auf Intensivstationen |
+| [AT MOPED Encounter Bewegung Stationär Basis Profil](StructureDefinition-at-moped-encounter-bewegung-stationaer-basis.html) | MOPED Profil der Encounter Ressource für eine stationäre Verlegung |
+| [AT MOPED Encounter Bewegung generisches Profil](StructureDefinition-at-moped-encounter-bewegung-generisch.html) | MOPED Profil der Encounter Ressource für die Verlegung innerhalb oder zwischen Krankenanstalten |
+| [AT MOPED Observation Entbindungsart Basis Profil](StructureDefinition-at-moped-observation-entbindungsart-basis.html) | MOPED Basis Profil der Observation Ressource für die Entbindungsart |
+| [AT MOPED Observation Geburtenanzahl Basis Profil](StructureDefinition-at-moped-observation-geburtenanzahl-basis.html) | MOPED Basis Profil der Observation Ressource für die Anzahl der Geburten |
+| [AT MOPED Observation generisches Profil](StructureDefinition-at-moped-observation-generisch.html) | MOPED generisches Profil der Observation Ressource |
+| [AT MOPED Organization Bund Profil](StructureDefinition-at-moped-organization-bund.html) | MOPED Profil der Organization Ressource für den Bund |
+| [AT MOPED Organization Dachverband Profil](StructureDefinition-at-moped-organization-dachverband.html) | MOPED Profil der Organization Ressource für den Dachverband |
+| [AT MOPED Organization KA Profil](StructureDefinition-at-moped-organization-KA.html) | MOPED Profil der Organization Ressource für KA Organizations |
+| [AT MOPED Organization LGF Profil](StructureDefinition-at-moped-organization-LGF.html) | MOPED Profil der Organization Ressource für den LGF |
+| [AT MOPED Organization Organisationseinheite KA Profil](StructureDefinition-at-moped-organization-organisationseinheit-KA.html) | MOPED Profil der Organization Ressource für Organisationseinheiten innerhalb einer Krankenanstalt. |
+| [AT MOPED Organization SV Profil](StructureDefinition-at-moped-organization-SV.html) | MOPED Profil der Organization Ressource für die SV |
+| [AT MOPED Patient Klarname Basis Profil](StructureDefinition-at-moped-patient-klarname-basis.html) | MOPED Basis Profil der Patienten Ressource mit Klarname |
+| [AT MOPED Patient generisches Profil](StructureDefinition-at-moped-patient-generisch.html) | MOPED generisches Profil der Patienten Ressource für Moped |
+| [AT MOPED Patient vbPK Basis Profil](StructureDefinition-at-moped-patient-vbPK-basis.html) | MOPED Profil der Patienten Ressource mit vbPKs |
+| [AT MOPED Procedure Basis Profil](StructureDefinition-at-moped-procedure-basis.html) | MOPED Basis Profil der Procedure Ressource für Leistungen |
+| [AT MOPED Procedure generisches Profil](StructureDefinition-at-moped-procedure-generisch.html) | MOPED generisches Profil der Procedure Ressource für Leistungen |
+| [AT MOPED QuestionnaireResponse fallbezogenes Profil](StructureDefinition-at-moped-questionnaireresponse-fallbezogen.html) | MOPED Profil der QuestionnaireResponse Ressource für QuestionnnaireResponses die im Kontext von Moped mit Fallbezug erhoben werden |
+| [AT MOPED QuestionnaireResponse nicht fallbezogenes Profil](StructureDefinition-at-moped-questionnaireresponse-nicht-fallbezogen.html) | MOPED Profil der QuestionnaireResponse Ressource für QuestionnaireResponses die im Kontext von Moped ohne Fallbezug erhoben werden |
+| [AT MOPED RelatedPerson Hauptversicherter Basis Profil](StructureDefinition-at-moped-relatedperson-hauptversicherter-basis.html) | MOPED generisches Profil der RelatedPerson Ressource für Daten zum Hauptversicherten |
+| [AT MOPED RelatedPerson generisches Profil](StructureDefinition-at-moped-relatedperson-hauptversicherter-generisch.html) | MOPED generisches Profil der RelatedPerson Ressource |
 | [MOPED ARK Status Update - PaymentReconciliation](StructureDefinition-MopedARKStatusUpdate.html) | MOPED Profil für Statusupdates zur Ausländerverrechnung oder zum Regress |
 | [MOPED ARKRequest](StructureDefinition-MopedARKRequest.html) | MOPED Profil der Claim Ressource für die Kostenmeldung für Ausländerverrechnung und Regresse. |
 | [MOPED ARKResponse](StructureDefinition-MopedARKResponse.html) | MOPED Profil der ClaimResponse Ressource für die Rückmeldung der SV für Ausländerverrechnung und Regresse. |
-| [MOPED Abrechnen Bundle KA](StructureDefinition-MopedAbrechnenBundleKA.html) | Bundle für die Input-Ressourcen beim Abrechnen (KA) |
-| [MOPED Anfragen Bundle KA](StructureDefinition-MopedAnfragenBundleKA.html) | Bundle für die Input-Ressourcen beim Anfragen (KA) |
-| [MOPED Anfragen Composition](StructureDefinition-MopedAnfragenComposition.html) | MOPED Profil der Composition Ressource nach $anfragen |
-| [MOPED Antworten Bundle SV](StructureDefinition-MopedAntwortenBundleSV.html) | Bundle für die Input-Ressourcen beim Einbringen von Antworten der SV |
-| [MOPED Aufnahme Composition](StructureDefinition-MopedAufnahmeComposition.html) | MOPED Profil der Composition Ressource nach $aufnehmen |
-| [MOPED Aufnehmen Bundle KA](StructureDefinition-MopedAufnehmenBundleKA.html) | Bundle für die Input-Ressourcen beim Aufnehmen eines Patienten |
-| [MOPED Beantworten Composition](StructureDefinition-MopedBeantwortenComposition.html) | MOPED Profil der Composition Ressource nach $beantworten |
-| [MOPED Composition](StructureDefinition-MopedComposition.html) | MOPED Profil der Composition Ressource von der alle anderen Compositions ableiten. |
-| [MOPED Condition](StructureDefinition-MopedCondition.html) | MOPED Profil der Condition Ressource für die LDF-Abrechnung |
-| [MOPED Coverage](StructureDefinition-MopedCoverage.html) | MOPED Profil der Coverage Ressource für Versicherungen. |
-| [MOPED Coverage für Selbstzahler](StructureDefinition-MopedCoverageSelbstzahler.html) | MOPED Profil der Coverage Ressource für Selbstzahler |
-| [MOPED Encounter](StructureDefinition-MopedEncounter.html) | MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung |
-| [MOPED Encounter Ambulant](StructureDefinition-MopedEncounterA.html) | MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung im ambulanten Bereich |
-| [MOPED Encounter Aufnahme Stationär](StructureDefinition-MopedEncounterAufnahmeS.html) | MOPED Profil der Encounter Ressource für die Aufnahme im stationären Bereich |
-| [MOPED Encounter Entlassung Stationär](StructureDefinition-MopedEncounterEntlassungS.html) | MOPED Profil der Encounter Ressource für die Entlassung im stationären Bereich |
-| [MOPED Encounter Stationär](StructureDefinition-MopedEncounterS.html) | MOPED Profil der Encounter Ressource für die Krankenanstaltenaufnahme und Entlassung im stationären Bereich |
-| [MOPED Entlassen Bundle KA](StructureDefinition-MopedEntlassenBundle.html) | Bundle für die Input-Ressourcen beim Entlassen eines Patienten |
-| [MOPED Entlassung Aviso Composition](StructureDefinition-MopedEntlassenAvisoComposition.html) | MOPED Profil der Composition Ressource nach $entlassen bei Entlassung Aviso |
-| [MOPED Entlassung vollständig Composition](StructureDefinition-MopedEntlassenVollstaendigComposition.html) | MOPED Profil der Composition Ressource nach $entlassen bei Entlassung vollständig |
-| [MOPED Entscheiden Bundle LGF](StructureDefinition-MopedEntscheidenLGFBundle.html) | Bundle für die Input-Ressourcen beim Entscheiden (Bestätigen/Ablehnen) von Punkten/Erorrs/Warnings |
-| [MOPED Hauptversicherter](StructureDefinition-Hauptversicherter.html) | MOPED Profil der Person Ressource für den Hauptversicherten |
-| [MOPED Input Bundle KA](StructureDefinition-MopedInputBundleKA.html) | Bundle für die Input-Ressourcen beim Update von Informationen zu einem Fall |
-| [MOPED KA Organisationseinheiten](StructureDefinition-MopedKAOrganisationseinheit.html) | MOPED Profil für Organisationseinheiten innerhalb einer Krankenanstalt. |
-| [MOPED LKFRequest](StructureDefinition-MopedLKFRequest.html) | MOPED Profil der Claim Ressource für die Leistungsabrechnungsanfrage. |
-| [MOPED LKFResponse](StructureDefinition-MopedLKFResponse.html) | MOPED Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort. |
-| [MOPED Master Composition](StructureDefinition-MopedMasterComposition.html) | MOPED Profil der Composition Ressource für die Composition in der sich der gesamte Moped Datensatz aufbaut. Diese unterstütz durch ihre Invarianten eine konsistente Datenhaltung. |
-| [MOPED Melden Bundle LGF](StructureDefinition-MopedMeldenLGFBundle.html) | Bundle für die Input-Ressourcen beim Melden von Informationen |
-| [MOPED Observation Entbindungsart](StructureDefinition-MopedObservationEntbindungsart.html) | MOPED Profil der Observation Ressource für die Entbindungsart |
-| [MOPED Observation Geburtenanzahl](StructureDefinition-MopedObservationGeburtenanzahl.html) | MOPED Profil der Observation Ressource für die Anzahl der Geburten |
-| [MOPED Patient](StructureDefinition-MopedPatient.html) | MOPED Profil der Patient Ressource |
-| [MOPED Patient Bund](StructureDefinition-MopedPatientBund.html) | MOPED Profil der Patient Ressource aus der Sicht der Rolle: Bund |
-| [MOPED Patient LGF](StructureDefinition-MopedPatientLGF.html) | MOPED Profil der Patient Ressource aus der Sicht der Rolle: LGF |
-| [MOPED Patient SV](StructureDefinition-MopedPatientSV.html) | MOPED Profil der Patient Ressource aus der Sicht der Rolle: SV |
-| [MOPED Procedure](StructureDefinition-MopedProcedure.html) | MOPED Profil der Procedure Ressource für die LDF-Abrechnung |
-| [MOPED QuestionnaireResponse einmelden Bundle](StructureDefinition-MopedQuestionnaireResponseEinmeldenBundle.html) | Bundle für die Input-Ressourcen beim Einmelden von nicht fallspezifischen QuestionnaireResponses |
-| [MOPED TransferEncounter](StructureDefinition-MopedTransferEncounter.html) | MOPED Profil der Encounter Ressource für die Verlegung innerhalb oder zwischen Krankenanstalten |
-| [MOPED TransferEncounter Ambulant](StructureDefinition-MopedTransferEncounterA.html) | MOPED Profil der Encounter Ressource für ambulante Kontakte/Bewegungen |
-| [MOPED TransferEncounter Intensiv](StructureDefinition-MopedTransferEncounterI.html) | MOPED Profil der Encounter Ressource für die Verlegung auf Intensivstationen |
-| [MOPED TransferEncounter Stationär](StructureDefinition-MopedTransferEncounterS.html) | MOPED Profil der Encounter Ressource für eine stationäre Verlegung |
-| [MOPED Update Bundle KA](StructureDefinition-MopedUpdateBundleKA.html) | Bundle für die Input-Ressourcen beim Update von Informationen zu einem Fall |
-| [MOPED Update Composition](StructureDefinition-MopedUpdateComposition.html) | MOPED Profil der Composition Ressource nach $update |
-| [MOPED VAERequest](StructureDefinition-MopedVAERequest.html) | MOPED Profil für die Anfrage der Versichertenanspruchserklärung VAE. |
-| [MOPED VAERequest für die Verlängerung der VAE](StructureDefinition-MopedVAERequestVerlaengerung.html) | MOPED Profil für die Verlängerung der Versichertenanspruchserklärung (VAE) |
-| [MOPED VAERequest für die initiale Anfrage der VAE](StructureDefinition-MopedVAERequestInitial.html) | MOPED Profil für die initiale Anfrage der Versichertenanspruchserklärung (VAE) |
-| [MOPED VAEResponse](StructureDefinition-MopedVAEResponse.html) | MOPED Profil für die Beantwortung der Versichertenanspruchserklärung VAE. |
-| [Moped Device](StructureDefinition-MopedDevice.html) | Generische Moped Definition für Devices |
-| [Moped Device XDok](StructureDefinition-MopedDeviceXDok.html) | Moped Definition für XDok |
-| [Moped QuestionnaireResponse fallbezogen](StructureDefinition-MopedQuestionnaireResponseFallbezogen.html) | MOPED Profil für QuestionnaireResponses die im Kontext von Moped mit Fallbezug erhoben werden |
-| [Moped QuestionnaireResponse nicht fallbezogen](StructureDefinition-MopedQuestionnaireResponseNichtFallbezogen.html) | MOPED Profil für QuestionnaireResponses die im Kontext von Moped ohne Fallbezug erhoben werden |
-| [SV Organization](StructureDefinition-SVOrganization.html) | MOPED Profil für SV Organizations |
 
 ### Structures: Extension Definitions 
 
@@ -441,6 +501,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [Valueset für die Art der Geburtenanzahl](ValueSet-GeburtenanzahlVS.html) | Valueset für die Art der Geburtenanzahl in MOPED |
 | [Verdacht auf Arbeits- oder Schuelerunfall ValueSet](ValueSet-VerdachtArbeitsSchuelerunfallVS.html) | ValueSet für den Verdacht auf einen Arbeits- oder Schuelerunfall |
 | [Workflow Status eines Falls](ValueSet-WorkflowStatusVS.html) | ValueSet für die Statusoptionen in denen sich ein Fall befinden kann. |
+| [vbPK ValueSet](ValueSet-VBPKValueSet.html) | ValueSet für die vbPKs |
 
 ### Terminology: Code Systems 
 
@@ -509,12 +570,12 @@ These are example instances that show what data produced and consumed by systems
 | [KAK999ABT16111112](HealthcareService-KAK999ABT16111112.html) |  |
 | [KAK999ABT16211100](HealthcareService-KAK999ABT16211100.html) |  |
 | [KAK999ABT16518011](HealthcareService-KAK999ABT16518011.html) |  |
-| [LKF K08 Questionnaire](Questionnaire-LKFK08Questionnaire.html) | LKF K08 Questionnaire - Kostenstellen-Statistik und Kostennachweis (Bettenführende Hauptkostenstelle) |
 | [LKF Testdaten Fall](Composition-Composition42.html) |  |
 | [LKFRequest42](Claim-LKFRequest42.html) |  |
 | [LocationKAHerzJesu](Location-LocationKAHerzJesu.html) | Stammdaten: Location der KA Herz Jesu |
 | [LocationKAK999](Location-LocationKAK999.html) |  |
 | [LocationKARied](Location-LocationKARied.html) | Stammdaten: Location der KA Ried |
+| [MOPED PJ1 Composition nach $aufnehmen](Composition-PJ1Composition.html) | PJ1 Beispiel der Composition Ressource nach $aufnehmen |
 | [MOPED PJ1 Composition nach $aufnehmen](Composition-PJ1CompositionAufnehmen.html) | PJ1 Beispiel der Composition Ressource nach $aufnehmen |
 | [OrganizationAffiliationWgfHerzJesu](OrganizationAffiliation-OrganizationAffiliationWgfHerzJesu.html) | Hackathon Stammdaten: Organization Affiliation zwischen LGF und KA Herz Jesu |
 | [OrganizationHerzJesuKrankenhaus](Organization-OrganizationHerzJesuKrankenhaus.html) | Hackathon Stammdaten: KA Herz Jesu |
@@ -534,8 +595,8 @@ These are example instances that show what data produced and consumed by systems
 | [PJ1LKFResponse1](ClaimResponse-PJ1LKFResponse1.html) | Hackathon Patient Journey 1 Beispiel: LKFResponse 1 |
 | [PJ1Patient](Patient-PJ1Patient.html) | Hackathon Patient Journey 1 Beispiel: Patient |
 | [PJ1Procedure1](Procedure-PJ1Procedure1.html) | Hackathon Patient Journey 1 Beispiel: Procedure 1 |
-| [PJ1TransferEncounter1](Encounter-PJ1TransferEncounter1.html) | Hackathon Patient Journey 1 Beispiel: TransferEncounter 1 |
-| [PJ1TransferEncounter1Aufnahme](Encounter-PJ1TransferEncounter1Aufnahme.html) | Hackathon Patient Journey 1 Beispiel: TransferEncounter 1 |
+| [PJ1BewegungsEncounter1](Encounter-PJ1BewegungsEncounter1.html) | Hackathon Patient Journey 1 Beispiel: BewegungsEncounter 1 |
+| [PJ1BewegungsEncounter1Aufnahme](Encounter-PJ1BewegungsEncounter1Aufnahme.html) | Hackathon Patient Journey 1 Beispiel: BewegungsEncounter 1 |
 | [PJ1VAERequest1](Claim-PJ1VAERequest1.html) | Hackathon Patient Journey 1 Beispiel: VAERequest 1 |
 | [PJ1VAEResponse1](ClaimResponse-PJ1VAEResponse1.html) | Hackathon Patient Journey 1 Beispiel: VAEResponse 1 |
 | [PJ2Condition1](Condition-PJ2Condition1.html) | Hackathon Patient Journey 2 Beispiel: Condition 1 |
@@ -547,11 +608,11 @@ These are example instances that show what data produced and consumed by systems
 | [PJ2Patient](Patient-PJ2Patient.html) | Hackathon Patient Journey 2 Beispiel: Patient |
 | [PJ2Procedure1](Procedure-PJ2Procedure1.html) | Hackathon Patient Journey 2 Beispiel: Procedure 1 |
 | [PJ2Procedure2](Procedure-PJ2Procedure2.html) | Hackathon Patient Journey 2 Beispiel: Procedure 2 |
-| [PJ2TransferEncounter1](Encounter-PJ2TransferEncounter1.html) | Hackathon Patient Journey 2 Beispiel: TransferEncounter 1 |
-| [PJ2TransferEncounter2](Encounter-PJ2TransferEncounter2.html) | Hackathon Patient Journey 2 Beispiel: TransferEncounter 2 |
-| [PJ2TransferEncounter3](Encounter-PJ2TransferEncounter3.html) | Hackathon Patient Journey 2 Beispiel: TransferEncounter 3 |
-| [PJ2TransferEncounter4](Encounter-PJ2TransferEncounter4.html) | Hackathon Patient Journey 2 Beispiel: TransferEncounter 4 |
-| [PJ2TransferEncounter5](Encounter-PJ2TransferEncounter5.html) | Hackathon Patient Journey 2 Beispiel: TransferEncounter 5 |
+| [PJ2BewegungsEncounter1](Encounter-PJ2BewegungsEncounter1.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 1 |
+| [PJ2BewegungsEncounter2](Encounter-PJ2BewegungsEncounter2.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 2 |
+| [PJ2BewegungsEncounter3](Encounter-PJ2BewegungsEncounter3.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 3 |
+| [PJ2BewegungsEncounter4](Encounter-PJ2BewegungsEncounter4.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 4 |
+| [PJ2BewegungsEncounter5](Encounter-PJ2BewegungsEncounter5.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 5 |
 | [PJ2VAERequest1](Claim-PJ2VAERequest1.html) | Hackathon Patient Journey 2 Beispiel: VAERequest 1 |
 | [PJ2VAEResponse1](ClaimResponse-PJ2VAEResponse1.html) | Hackathon Patient Journey 2 Beispiel: VAEResponse 1 |
 | [Patient42](Patient-Patient42.html) |  |
@@ -571,13 +632,13 @@ These are example instances that show what data produced and consumed by systems
 | [TISS42.1](QuestionnaireResponse-TISS42.1.html) |  |
 | [TISS42.2](QuestionnaireResponse-TISS42.2.html) |  |
 | [TISS42.3](QuestionnaireResponse-TISS42.3.html) |  |
-| [Test1PatientBund](Patient-Test1PatientBund.html) | Maskierung Beispiel PatientBund |
+| [Test1PatientBund](Patient-Test1PatientBund.html) | Maskierung Beispiel Patient Bund |
 | [Test1PatientLGF](Patient-Test1PatientLGF.html) | Maskierung Beispiel PatientLGF |
 | [Test1PatientOhneMaskierung](Patient-Test1PatientOhneMaskierung.html) | Maskierung Beispiel Patient |
 | [Test1PatientSV](Patient-Test1PatientSV.html) | Maskierung Beispiel PatientSV |
 | [Test2SAPS3QuestionnaireResponse1](QuestionnaireResponse-Test2SAPS3QuestionnaireResponse1.html) |  |
-| [TransferEncounter42.1](Encounter-TransferEncounter42.1.html) |  |
-| [TransferEncounter42.2](Encounter-TransferEncounter42.2.html) |  |
+| [BewegungsEncounter42.1](Encounter-BewegungsEncounter42.1.html) |  |
+| [BewegungsEncounter42.2](Encounter-BewegungsEncounter42.2.html) |  |
 | [XDokExampleDevice](Device-XDokExampleDevice.html) | Moped Example XDok Device |
 | [strokeunit-questionnaire-response-1](QuestionnaireResponse-strokeunit-questionnaire-response-1.html) |  |
 

@@ -6,4 +6,4 @@ Usage: #definition
 * status = #draft
 * type = #system
 * name = "BundActor"
-* reference = Canonical(BundOrganization)
+* reference = Canonical(AtMopedOrganizationBund)

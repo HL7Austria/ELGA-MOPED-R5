@@ -87,7 +87,7 @@ Leistungen, Diagnosen oder andere abrechnungsrelevante Informationen müssen nac
 <div>{% include_relative plantuml/moped-fall-abrechnen/abrechnen-nach-aenderung.svg %}</div>
 
 ### Relevante Profile
-- [$abrechnen Bundle](StructureDefinition-MopedAbrechnenBundleKA.html)
+- [$abrechnen Bundle](StructureDefinition-AtMopedBundleAbrechnenKA.html)
 
 ### Technische Hinweise
 Nach $abrechnen muss ein $genehmigen/$ablehnen folgen, bevor das nächste $update und $abrechnen durchgeführt werden kann

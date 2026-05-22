@@ -6,7 +6,7 @@ Description: "Arten von Moped Encounter"
 * ^experimental = true
 * ^caseSensitive = true
 * #ENC "Moped Encounter"
-* #TENC "Moped Transfer Encounter"
+* #BENC "Moped Bewegungsencounter"
 * #ENC-BUND "Moped Encounter Bund"
 * #ENC-LGF "Moped Encounter LGF"
 * #ENC-SV "Moped Encounter SV"

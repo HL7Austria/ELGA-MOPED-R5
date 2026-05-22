@@ -6,4 +6,4 @@ Usage: #definition
 * status = #draft
 * type = #system
 * name = "LGFActor"
-* reference = Canonical(LGFOrganization)
+* reference = Canonical(AtMopedOrganizationLGF)

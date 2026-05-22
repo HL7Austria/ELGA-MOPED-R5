@@ -1,8 +1,7 @@
 Instance: PJ2Encounter
-InstanceOf: MopedEncounter
+InstanceOf: AtMopedEncounterAufenthaltBesuchGenerisch
 Description: "Hackathon Patient Journey 2 Beispiel: Encounter"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedEncounter"
 * identifier[Aufnahmezahl].type = http://terminology.hl7.org/CodeSystem/v2-0203#VN
 * identifier[Aufnahmezahl].value = "324200063"
 * identifier[Aufnahmezahl].system = "urn:oid:1.3.6.1.4.1.36124.5.427"

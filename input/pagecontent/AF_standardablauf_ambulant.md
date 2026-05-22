@@ -44,18 +44,18 @@ Ob die Tagesklammer verwendet wird oder nicht liegt im Ermessen des jeweiligen K
     - Aufnahme-/Kontaktdatum
     - KA-Nummer
 
-##### Transferencounter Stationär vs. Ambulant
-Der Transferencounter entspricht nicht wie beim stationären Fall der Verlegung/Aufnahme auf eine andere Station sondern einem Kontakt oder einer Bewegung (entspricht einer Behandlungen auf unterschiedlichen Funktionscodes).
+##### BewegungsEncounter Stationär vs. Ambulant
+Der BewegungsEncounter entspricht nicht wie beim stationären Fall der Verlegung/Aufnahme auf eine andere Station sondern einem Kontakt oder einer Bewegung (entspricht einer Behandlungen auf unterschiedlichen Funktionscodes).
 
 #### Relevante Profile
-- [$aufnehmen Bundle](StructureDefinition-MopedAufnehmenBundleKA.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
-- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKA.html)
-- [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
-- [$abrechnen Bundle](StructureDefinition-MopedAbrechnenBundleKA.html)
-- [$entscheiden Bundle](StructureDefinition-MopedEntscheidenLGFBundle.html)
-- [Ambulanter Encounter](StructureDefinition-MopedEncounterA.html)
-- [Ambulanter Transferencounter](StructureDefinition-MopedTransferEncounterA.html)
+- [$aufnehmen Bundle](StructureDefinition-AtMopedBundleAufnehmenKA.html)
+- [$update Bundle](StructureDefinition-AtMopedBundleUpdateKA.html)
+- [$anfragen Bundle](StructureDefinition-AtMopedBundleAnfragenKA.html)
+- [$antworten Bundle](StructureDefinition-AtMopedBundleAntwortenSV.html)
+- [$abrechnen Bundle](StructureDefinition-AtMopedBundleAbrechnenKA.html)
+- [$entscheiden Bundle](StructureDefinition-AtMopedBundleEntscheidenLGF.html)
+- [Encounter Ambulant](StructureDefinition-at-moped-encounter-besuch-ambulant-basis.html)
+- [Ambulanter BewegungsEncounter](StructureDefinition-AtMopedEncounterBewegungAmbulantBasis.html)
 
 #### Relevante Invarianten
 

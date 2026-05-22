@@ -1,7 +1,7 @@
 // I12 QuestionnaireResponse for TISS-A-Daten
 
 Instance: TISSAQuestionnaireResponse
-InstanceOf: MopedQuestionnaireResponseFallbezogen
+InstanceOf: AtMopedQuestionnaireResponseFallbezogen
 Title: "I12 QuestionnaireResponse für TISS-A-Daten"
 * status = #completed
 * subject = Reference(PJ1Patient)

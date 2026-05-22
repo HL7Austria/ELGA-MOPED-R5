@@ -21,7 +21,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *Antwort* Parameter beinhaltet sämtliche Details zur Antwort auf den VAE/ARKRequest oder zusätzlich eingebrachte Kommunikation."
   * type = #Bundle
-  * targetProfile[+] = Canonical(MopedAntwortenBundleSV)
+  * targetProfile[+] = Canonical(AtMopedBundleAntwortenSV)
 * parameter[+]
   * name = #return
   * use = #out

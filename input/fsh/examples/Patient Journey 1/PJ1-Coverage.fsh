@@ -1,8 +1,8 @@
 Instance: PJ1Coverage
-InstanceOf: MopedCoverage
+InstanceOf: AtMopedCoverageVersicherterBasis
 Description: "Hackathon Patient Journey 1 Beispiel: Coverage"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedCoverage"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedCoverageVersicherterBasis"
 * identifier[+].value = "XB4G37PFN9FJ"
 * identifier[=].system = "urn:oid:1.2.40.0.10.1.4.3.9.1"
 * identifier[=].assigner = Reference(OrganizationHerzJesuKrankenhaus)

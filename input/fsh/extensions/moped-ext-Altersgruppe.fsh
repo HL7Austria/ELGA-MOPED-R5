@@ -3,7 +3,7 @@ Extension:    Altersgruppe
 Id:           moped-ext-altersgruppe
 Title:        "Altersgruppe" 
 Description:  "In Gruppen eingeteilt, wobei vollendete Lebensjahre ausschlaggebend sind."
-Context: MopedTransferEncounter.admission, MopedEncounter
+Context: AtMopedEncounterBewegungGenerisch.admission, AtMopedEncounterAufenthaltBesuchGenerisch
 * obeys moped-inv-Altersgruppe-1
 * extension contains
     beiZugang 0..1 MS and

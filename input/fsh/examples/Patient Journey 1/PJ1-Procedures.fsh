@@ -1,8 +1,8 @@
 Instance: PJ1Procedure1
-InstanceOf: MopedProcedure
+InstanceOf: AtMopedProcedureBasis
 Description: "Hackathon Patient Journey 1 Beispiel: Procedure 1"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedProcedure"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedProcedureBasis"
 * extension[Leistungsanzahl].valueUnsignedInt = 1
 * status = #completed
 * code.coding = $LKFLeistungskatalog#AN010 "Polysomnographie im Schlaflabor (LE=je Behandlungstag)"

@@ -96,13 +96,13 @@ Die initiale VAE und die VAE zur Verlängerung entsprechen unterschiedlichen Pro
 </pre>
 
 ### Relevante Profile
-- [Coverage](StructureDefinition-MopedCoverage.html)
-- [VAERequestInitial](StructureDefinition-MopedVAERequestInitial.html)
-- [VAERequestVerlaengerung](StructureDefinition-MopedVAERequestVerlaengerung.html)
-- [VAEResponse](StructureDefinition-MopedVAEResponse.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
-- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKA.html)
-- [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
+- [Coverage](StructureDefinition-AtMopedCoverageVersicherterBasis.html)
+- [VAERequestInitial](StructureDefinition-AtMopedClaimVAERequestInitial.html)
+- [VAERequestVerlaengerung](StructureDefinition-AtMopedClaimVAERequestVerlaengerung.html)
+- [VAEResponse](StructureDefinition-AtMopedClaimResponseVAEResponseGenerisch.html)
+- [$update Bundle](StructureDefinition-AtMopedBundleUpdateKA.html)
+- [$anfragen Bundle](StructureDefinition-AtMopedBundleAnfragenKA.html)
+- [$antworten Bundle](StructureDefinition-AtMopedBundleAntwortenSV.html)
 
 ### Relevante Invarianten
 - Es kann zu keinem Zeitpunkt zwei aktive initiale VAEs an den selben Träger geben.
@@ -217,11 +217,11 @@ Ablehnungsgründe gibt es jedoch einige, die durchaus durch die Verwaltung im KA
 </pre>
 
 ### Relevante Profile
-- [Coverage](StructureDefinition-MopedCoverage.html) oder [Selbstzahler Coverage](StructureDefinition-MopedCoverageSelbstzahler.html)
-- [VAERequest](StructureDefinition-MopedVAERequest.html)
-- [VAEResponse](StructureDefinition-MopedVAEResponse.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
-- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKA.html)
+- [Coverage](StructureDefinition-AtMopedCoverageVersicherterBasis.html) oder [Selbstzahler Coverage](StructureDefinition-AtMopedCoverageSelbstzahlerBasis.html)
+- [VAERequest](StructureDefinition-AtMopedClaimVAERequestGenerisch.html)
+- [VAEResponse](StructureDefinition-AtMopedClaimResponseVAEResponseGenerisch.html)
+- [$update Bundle](StructureDefinition-AtMopedBundleUpdateKA.html)
+- [$anfragen Bundle](StructureDefinition-AtMopedBundleAnfragenKA.html)
 
 ### Relevante Invarianten
 

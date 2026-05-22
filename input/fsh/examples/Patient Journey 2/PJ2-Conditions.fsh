@@ -1,8 +1,8 @@
 Instance: PJ2Condition1
-InstanceOf: MopedCondition
+InstanceOf: AtMopedConditionBasis
 Description: "Hackathon Patient Journey 2 Beispiel: Condition 1"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedCondition"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedConditionBasis"
 * clinicalStatus.extension[DataAbsentReason].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * clinicalStatus.extension[DataAbsentReason].valueCode = #not-asked
 * clinicalStatus.coding = http://terminology.hl7.org/CodeSystem/condition-clinical#unknown
@@ -14,10 +14,10 @@ Usage: #example
 * extension[Diagnosetyp].valueCodeableConcept = $LKFdiagnoseTyp#H 
 
 Instance: PJ2Condition2
-InstanceOf: MopedCondition
+InstanceOf: AtMopedConditionBasis
 Description: "Hackathon Patient Journey 2 Beispiel: Condition 2"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedCondition"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedConditionBasis"
 * clinicalStatus.extension[DataAbsentReason].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * clinicalStatus.extension[DataAbsentReason].valueCode = #not-asked
 * clinicalStatus.coding = http://terminology.hl7.org/CodeSystem/condition-clinical#unknown

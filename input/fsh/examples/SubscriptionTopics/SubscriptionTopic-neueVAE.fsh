@@ -6,15 +6,15 @@ Usage: #example
 * url = "https://elga.moped.at/SubscriptionTopic/neueVAE"
 * name = "neueVAE"
 * status = #active
-* resourceTrigger[+].resource = Canonical(MopedVAERequest)
+* resourceTrigger[+].resource = Canonical(AtMopedClaimVAERequest)
 * resourceTrigger[=].description = "Erstellen eines neuen VAERequest"
 * resourceTrigger[=].supportedInteraction = #create
-* canFilterBy[+].resource = Canonical(MopedVAERequest)
+* canFilterBy[+].resource = Canonical(AtMopedClaimVAERequestGenerisch)
 * canFilterBy[=].filterParameter = "insurer" //to be able to filter and only receive one's own notifications
 //* trigger[=].event =  http://terminology.hl7.org/CodeSystem/v2-0003#E20 //available in R6
-* notificationShape[+].resource = Canonical(MopedMasterComposition)
+* notificationShape[+].resource = Canonical(AtMopedCompositionBasis)
 * notificationShape[=].include[+] = "Composition:id"
-* notificationShape[+].resource = Canonical(MopedVAERequest)
+* notificationShape[+].resource = Canonical(AtMopedClaimVAERequestGenerisch)
 * notificationShape[=].include[+] = "Claim:insurer"
 
 

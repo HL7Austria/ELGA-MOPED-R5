@@ -1,7 +1,7 @@
 Alias: $iso-3166-1-alpha-3 = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3
 
 Instance: Test1PatientBund
-InstanceOf: MopedPatientKlarnameBund
+InstanceOf: AtMopedPatientKlarnameBund
 Description: "Maskierung Beispiel Patient Bund"
 Usage: #example
 * id = "Test1PatientBund"

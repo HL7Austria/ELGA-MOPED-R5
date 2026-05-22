@@ -1,8 +1,8 @@
 Instance: SV11
-InstanceOf: SVOrganization
+InstanceOf: AtMopedOrganizationSV
 Description: "Hackathon Stammdaten: ÖGK Wien"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/SVOrganization"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedOrganizationSV"
 * type = https://termgit.elga.gv.at/CodeSystem/elga-gtelvogdarollen#406 "Sozialversicherung"
 * name = "Österreichische Gesundheitskasse Wien"
 * identifier[SVT].system = "http://svc.co.at/CodeSystem/ecard-svt-cs"

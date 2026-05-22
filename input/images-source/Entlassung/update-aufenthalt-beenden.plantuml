@@ -58,7 +58,7 @@ KH ->> MP: POST $update
 note over KH
 Update-Bundle wird gesendet
 - Aufenthalt (Encounter mit Status 'discharged')
-- Bewegung (TransferEncounter)
+- Bewegung (EncounterBewegung)
 - OHNE Diagnose
 end note
 

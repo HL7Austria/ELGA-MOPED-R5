@@ -13,7 +13,7 @@ RuleSet: ShallPopulateObligation(path, actor)
 RuleSet: ObligationActor(path, actor)
 * {path} ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical =  Canonical({actor})
  
-RuleSet: MappingHeaderEinfuegen()
+RuleSet: MappingHeaderEinfuegen
 * ^mapping[+].identity = "LKF"
 * ^mapping[=].uri = "https://elga.moped.at/mapping/LKF"
 * ^mapping[=].name = "LKF"

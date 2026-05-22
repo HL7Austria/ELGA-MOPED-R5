@@ -1,8 +1,8 @@
 Instance: AbteilungHerzJesu1
-InstanceOf: MopedKAOrganisationseinheit
+InstanceOf: AtMopedOrganizationOrganisationseinheitKA
 Description: "Hackathon Stammdaten: Abteilung 1 der KA Herz Jesu"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedKAOrganisationseinheit"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedOrganizationOrganisationseinheitKA"
 * extension[+].url = "https://elga.moped.at/StructureDefinition/moped-ext-Kostenstelle"
 * extension[=].extension[+].url = "InterneKostenstellennummer"
 * extension[=].extension[=].valueUnsignedInt = 11160

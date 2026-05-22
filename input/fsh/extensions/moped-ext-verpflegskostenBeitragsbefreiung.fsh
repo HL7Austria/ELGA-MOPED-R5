@@ -3,7 +3,7 @@ Extension: VerpflegskostenBeitragsbefreiung
 Id: moped-ext-verpflegskostenBeitragsbefreiung
 Title: "VerpflegskostenBeitragsbefreiung"
 Description: "VKBEFR – Verpflegskosten-Beitragsbefreiung"
-Context: MopedVAEResponse
+Context: AtMopedClaimResponseVAEResponseGenerisch
 
 * extension contains
     Befreiung 1..1 MS and

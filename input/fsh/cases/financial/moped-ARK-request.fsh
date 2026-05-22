@@ -5,7 +5,7 @@ Title: "MOPED ARKRequest"
 Description: "MOPED Profil der Claim Ressource für die Kostenmeldung für Ausländerverrechnung und Regresse."
 * insert ShallPopulateObligation(status, MopedLGFActor)
 * insert MopedHandleObligation(status)
-* patient only Reference(MopedBasisPatientvbPK or MopedBasisPatientKlarname)
+* patient only Reference(AtMopedPatientvbPKBasis or AtMopedPatientKlarnameBasis)
 * patient 1..1
 * insert MopedHandleObligation(patient)
 * use = $ClaimUse#claim
@@ -26,13 +26,13 @@ Description: "MOPED Profil der Claim Ressource für die Kostenmeldung für Ausl�
 * extension contains Beihilfenaequivalent named Beihilfenaequivalent 0..1
 * extension[Beihilfenaequivalent] ^short = "KaOrg: Beihilfenäquivalent"
 * insert ShallPopulateObligation(extension[Beihilfenaequivalent], MopedLGFActor)
-* insurer only Reference(SVOrganization)
+* insurer only Reference(AtMopedOrganizationSV)
 * insurer 1..1
 * insert MopedHandleObligation(insurer) //? Fallsplitting?
-* provider only Reference(KAOrganization)
+* provider only Reference(AtMopedOrganizationKA)
 * provider 1..1
 * insert MopedHandleObligation(provider)
-* related.claim only Reference(MopedLKFRequest)
+* related.claim only Reference(AtMopedClaimLKFRequestBasis)
 * related.claim 1..
 * insert ShallPopulateObligation(related.claim, MopedLGFActor)
 * related.relationship = $RelatedClaimRelationshipType#associated
@@ -43,11 +43,11 @@ Description: "MOPED Profil der Claim Ressource für die Kostenmeldung für Ausl�
 * encounter ^slicing.ordered = false
 * encounter ^slicing.discriminator[+].type = #value
 * encounter ^slicing.discriminator[=].path = "resolve().type"
-* encounter contains MopedEncounter 1..1 /*and TransferEncounter 0..*/
+* encounter contains MopedEncounter 1..1 /*and BewegungsEncounter 0..*/
 * encounter[MopedEncounter] ^short = "Generelle Informationen zu Aufnahme und Entlassung des Patienten"
-* encounter[MopedEncounter] only Reference(MopedEncounter)
-/* encounter[TransferEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
-* encounter[TransferEncounter] only Reference(MopedTransferEncounter)*/
+* encounter[MopedEncounter] only Reference(AtMopedEncounterAufenthaltStationaerBasis or AtMopedEncounterBesuchAmbulantBasis)
+/* encounter[BewegungsEncounter] ^short = "Informationen zu Verlegungen innerhalb oder zwischen Krankenanstalten"
+* encounter[BewegungsEncounter] only Reference(AtMopedEncounterBewegungGenerisch)*/
 * insert MopedHandleObligation(encounter)
 
 * item ^slicing.rules = #open

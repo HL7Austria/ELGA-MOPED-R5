@@ -1,5 +1,5 @@
 Instance: Test2SAPS3QuestionnaireResponse1
-InstanceOf: MopedQuestionnaireResponseFallbezogen
+InstanceOf: AtMopedQuestionnaireResponseFallbezogen
 Usage: #example
 * questionnaire = Canonical(LKFSAPS3Questionnaire)
 * status = #completed

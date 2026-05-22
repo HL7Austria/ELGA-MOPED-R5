@@ -1,9 +1,9 @@
 {
   "resourceType": "Encounter",
-  "id": "TransferEncounter42.2",
+  "id": "BewegungsEncounter42.2",
   "meta": {
     "profile": [
-      "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
+      "https://elga.moped.at/StructureDefinition/MopedBewegungsEncounter"
     ]
   },
   "status": "completed",

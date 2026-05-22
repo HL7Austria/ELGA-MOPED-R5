@@ -20,7 +20,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *falldaten* Parameter beinhaltet die nötigen Elemente um die Details zum Fall zu beschreiben die bei Patientenaufnahme bekannt sind, inklusive Patient, Encounter und Aufnahmediagnose."
   * type = #Bundle
-  * targetProfile[+] = Canonical(MopedAufnehmenBundleKA)
+  * targetProfile[+] = Canonical(AtMopedBundleAufnehmenKA)
 /* parameter[+]
   * name = #freigeben
   * use = #in

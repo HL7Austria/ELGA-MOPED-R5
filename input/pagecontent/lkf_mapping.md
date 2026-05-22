@@ -61,7 +61,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -74,7 +74,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -87,7 +87,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:DatensatzID.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -100,7 +100,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -113,7 +113,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -126,7 +126,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.class:Behandlungsart</td>
         <td>Composition.encounter.resolve()</td>
@@ -139,7 +139,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>
@@ -152,7 +152,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.extension:Altersgruppe</td>
         <td>Composition.encounter.resolve()</td>
@@ -165,7 +165,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject.resolve()</td>
@@ -178,7 +178,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.extension:citizenship.extension:code.value[x]</td>
         <td>Composition.subject.resolve()</td>
@@ -191,7 +191,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
         <td>Composition.subject.resolve()</td>
@@ -204,7 +204,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>*nur für österreichische Patienten verpflichtend</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
         <td>Composition.subject.resolve()</td>
@@ -217,7 +217,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>*nur für österreichische Patienten verpflichtend</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.extension:municipalityCode</td>
         <td>Composition.subject.resolve()</td>
@@ -230,7 +230,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>*Zwingend sofern systematisch erfasst</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:aufnahmeart</td>
         <td>Composition.encounter.resolve()</td>
@@ -243,7 +243,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>*Zwingend sofern systematisch erfasst</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.class:Aufnahmeart2</td>
         <td>Composition.encounter.resolve()</td>
@@ -256,7 +256,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>*Zwingend sofern systematisch erfasst</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:Transportart</td>
         <td>Composition.encounter.resolve()</td>
@@ -269,7 +269,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>*sofern ein Transfer vorliegt</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
         <td>Composition.encounter.resolve()</td>
@@ -282,7 +282,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>*sofern ein Transfer vorliegt</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.destination.resolve()</td>
         <td>Composition.encounter.resolve()</td>
@@ -295,7 +295,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>Valueset in ambulant und stationär geteilt; *ambulant nur zwingend sofern systematisch erfasst</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.dischargeDisposition</td>
         <td>Composition.encounter.resolve()</td>
@@ -308,7 +308,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
         <td>Composition.encounter.resolve()</td>
@@ -321,7 +321,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
         <td>Composition.encounter.resolve()</td>
@@ -334,7 +334,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.section:zustaendigeSV.entry.resolve()</td>
         <td>Composition.section:zustaendigeSV.entry.resolve()</td>
@@ -347,7 +347,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.extension:Fondsrelevanz</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -360,7 +360,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:Plausibilitaetskennzeichen.value[x]</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -431,7 +431,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -444,7 +444,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -457,7 +457,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:DatensatzID.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -470,7 +470,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -487,7 +487,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td></td>
         <td></td>
-        <td>ggf. über FHIR ID des TransferEncounters lösbar; Details sind noch abzuklären</td>
+        <td>ggf. über FHIR ID des BewegungsEncounters lösbar; Details sind noch abzuklären</td>
     </tr>
     <tr>
         <td>Hauptkostenstelle – Funktionscode/Fachgebiet</td>
@@ -496,7 +496,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -509,7 +509,7 @@ diesem Link</a> verfügbar.
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -523,7 +523,7 @@ diesem Link</a> verfügbar.
         <td>nur für Intensiveinheiten auszufüllen, für die eine
 Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -536,7 +536,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.subjectStatus</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -550,7 +550,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>nur für Intensiveinheiten auszufüllen, für die eine
 Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -564,7 +564,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>nur für Intensiveinheiten auszufüllen, für die eine
 Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -578,7 +578,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>nur für Intensiveinheiten auszufüllen, für die eine
 Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.admission.dischargeDisposition</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -592,7 +592,7 @@ Intensivdokumentation (TISS-A/ SAPS3) übermittelt wird</td>
         <td>*zu befüllen, sofern dies auf Ebene der Landes-
 gesundheitsfonds festgelegt wird</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.participant:FachlichZustaendigeOrganisationseinheit.actor.resolve()</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -606,7 +606,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>*zu befüllen, sofern dies auf Ebene der Landes-
 gesundheitsfonds festgelegt wird</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.participant:PflegerischZustaendigeOrganisationseinheit.actor.resolve()</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -619,7 +619,7 @@ gesundheitsfonds festgelegt wird</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:Altersgruppe.extension:neugeborenes.value[x]</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -632,7 +632,7 @@ gesundheitsfonds festgelegt wird</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:Altersgruppe.extension:beiZugang.value[x]</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -645,7 +645,7 @@ gesundheitsfonds festgelegt wird</td>
         <td></td>
         <td>* Nur für Fondshäuser und TBD: nur bei Tagesklammer?</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounterA</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis</td>
         <td>Encounter</td>
         <td>Encounter.identifier:AufnahmezahlFunktionscodebezogen.value</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -690,7 +690,7 @@ gesundheitsfonds festgelegt wird</td>
         <td></td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -703,7 +703,7 @@ gesundheitsfonds festgelegt wird</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -716,7 +716,7 @@ gesundheitsfonds festgelegt wird</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:DatensatzID.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -729,7 +729,7 @@ gesundheitsfonds festgelegt wird</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -742,7 +742,7 @@ gesundheitsfonds festgelegt wird</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -755,7 +755,7 @@ gesundheitsfonds festgelegt wird</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.extension:Diagnosetyp</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -769,7 +769,7 @@ gesundheitsfonds festgelegt wird</td>
         <td>*zu befüllen, sofern dies im Rahmen der jährlich zu wartenden Abrechnungsmodelle oder von Modellprojekten der
 Bundesgesundheitsagentur vorgesehen ist</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.verificationStatus</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -783,7 +783,7 @@ Bundesgesundheitsagentur vorgesehen ist</td>
         <td>*ist für im Rahmen der jährlichen Wartung ausgewählte
 Diagnosen zu befüllen</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.diagnosis.onAdmission</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -796,7 +796,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>* Nur für Fondshäuser und TBD: nur bei Tagesklammer?</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounterA</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis</td>
         <td>Encounter</td>
         <td>Encounter.identifier:AufnahmezahlFunktionscodebezogen.value</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -841,7 +841,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -854,7 +854,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -867,7 +867,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:DatensatzID.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -880,7 +880,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -893,7 +893,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedProcedure</td>
+        <td>AtMopedProcedureBasis; AtMopedProcedureGenerisch</td>
         <td>Procedure</td>
         <td>Procedure.code</td>
         <td>Composition.section:Leistungen.entry.resolve()</td>
@@ -906,7 +906,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedProcedure</td>
+        <td>AtMopedProcedureBasis; AtMopedProcedureGenerisch</td>
         <td>Procedure</td>
         <td>Procedure.bodySite</td>
         <td>Composition.section:Leistungen.entry.resolve()</td>
@@ -919,7 +919,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.procedure.extension:AbrechnungsRelevanz</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -932,7 +932,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedProcedure</td>
+        <td>AtMopedProcedureBasis; AtMopedProcedureGenerisch</td>
         <td>Procedure</td>
         <td>Procedure.extension:Leistungsanzahl</td>
         <td>Composition.section:Leistungen.entry.resolve()</td>
@@ -945,7 +945,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedProcedure</td>
+        <td>AtMopedProcedureBasis; AtMopedProcedureGenerisch</td>
         <td>Procedure</td>
         <td>Procedure.occurrence[x]:occurrenceDateTime</td>
         <td>Composition.section:Leistungen.entry.resolve()</td>
@@ -958,7 +958,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>* Zwingend sofern systematisch erfasst</td>
         <td>MopedKAActor</td>
-        <td>MopedProcedure</td>
+        <td>AtMopedProcedureBasis; AtMopedProcedureGenerisch</td>
         <td>Procedure</td>
         <td>Procedure.occurrence[x]:occurrenceDateTime</td>
         <td>Composition.section:Leistungen.entry.resolve()</td>
@@ -971,7 +971,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>*Für alle Leistungen außer externe zu befüllen</td>
         <td>MopedKAActor</td>
-        <td>MopedProcedure</td>
+        <td>AtMopedProcedureBasis; AtMopedProcedureGenerisch</td>
         <td>Procedure</td>
         <td>Procedure.performer.actor.resolve()</td>
         <td>Composition.section:Leistungen.entry.resolve()</td>
@@ -984,7 +984,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>*Nur befüllt falls extern erbrachte Leistung</td>
         <td>MopedKAActor</td>
-        <td>MopedProcedure</td>
+        <td>AtMopedProcedureBasis; AtMopedProcedureGenerisch</td>
         <td>Procedure</td>
         <td>Procedure.performer.actor.resolve()</td>
         <td>Composition.section:Leistungen.entry.resolve()</td>
@@ -997,7 +997,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>* Nur für Fondshäuser und TBD: nur bei Tagesklammer?</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounterA</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis</td>
         <td>Encounter</td>
         <td>Encounter.identifier:AufnahmezahlFunktionscodebezogen.value</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -1042,7 +1042,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -1055,7 +1055,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -1068,7 +1068,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:DatensatzID.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -1081,7 +1081,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -1094,7 +1094,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.diagnosisRelatedGroup</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1107,7 +1107,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.extension:DiagnoseKnoten</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1120,7 +1120,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.item:Leistungskomponente.quantity.value</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1133,7 +1133,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.item:Tageskomponente.quantity.value</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1146,7 +1146,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.item:PunkteBelagsdauerausreisserUntenLeistungskomponente.quantity.value</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1159,7 +1159,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.item:PunkteBelagsdauerausreisserUntenTageskomponente.quantity.value</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1172,7 +1172,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.item:ZusatzpunkteBelagsdauerausreisserNachOben.quantity.value</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1185,7 +1185,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.item:ZusatzpunkteIntensiv.quantity.value</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1198,7 +1198,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.item:ZusatzpunkteMehrfachleistungen.quantity.value</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1211,7 +1211,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.item:PunkteSpeziellerBereicheTageweise.quantity.value</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1224,7 +1224,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedLKFRequest</td>
+        <td>AtMopedClaimLKFRequestBasis; AtMopedClaimLKFRequestGenerisch</td>
         <td>Claim</td>
         <td>Claim.item:Gesamtpunkte.quantity.value</td>
         <td>Composition.section:LKFRequests.entry.resolve()</td>
@@ -1269,7 +1269,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -1282,7 +1282,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -1295,7 +1295,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:DatensatzID.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -1308,7 +1308,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -1392,7 +1392,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -1405,7 +1405,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -1418,7 +1418,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:DatensatzID.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -1431,7 +1431,7 @@ Diagnosen zu befüllen</td>
         <td></td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>

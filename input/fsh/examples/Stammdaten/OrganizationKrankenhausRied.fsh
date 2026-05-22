@@ -1,9 +1,9 @@
 Instance: OrganizationKrankenhausRied
-InstanceOf: KAOrganization
+InstanceOf: AtMopedOrganizationKA
 Description: "Hackathon Stammdaten: KA Ried"
 Usage: #example
 * type = https://termgit.elga.gv.at/CodeSystem/elga-gtelvogdarollen#300 "Allgemeine Krankenanstalt"
-* meta.profile = "https://elga.moped.at/StructureDefinition/KAOrganization"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedOrganizationKA"
 * identifier[+].system = "urn:ietf:rfc:3986"
 * identifier[=].value = "urn:oid:1.3.6.1.4.1.36124.5.427"
 * identifier[+].system = "urn:oid:1.2.40.0.34.4.10"

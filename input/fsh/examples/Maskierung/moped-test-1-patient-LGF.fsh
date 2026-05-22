@@ -2,7 +2,7 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $iso-3166-1-alpha-3 = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3
 
 Instance: Test1PatientLGF
-InstanceOf: MopedPatientKlarnameLGF
+InstanceOf: AtMopedPatientKlarnameLGF
 Description: "Maskierung Beispiel PatientLGF"
 Usage: #example
 * id = "Test1PatientLGF"
