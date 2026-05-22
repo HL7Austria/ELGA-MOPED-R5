@@ -10,9 +10,9 @@ Description: "MOPED Profil der Composition Ressource nach $entlassen bei Entlass
 * section[besuchteAbteilungen].entry 1..
 
 //Invarianten:
-// alle TENC abgeschlossen
-// alle TENC zwischen Aufnahmedatum und Entlassungsdatum
-// TENC decken den gesamten Zeitraum ab
+// alle BENC abgeschlossen
+// alle BENC zwischen Aufnahmedatum und Entlassungsdatum
+// BENC decken den gesamten Zeitraum ab
 // es muss eine Hauptdiagnose existieren
 * obeys moped-entlassen-vollstaendig-TBD
 

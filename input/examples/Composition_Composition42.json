@@ -135,7 +135,7 @@
         "coding": [
           {
             "system": "https://elga.moped.at/CodeSystem/MopedEncounterTypesCS",
-            "code": "TENC"
+            "code": "BENC"
           }
         ]
       },

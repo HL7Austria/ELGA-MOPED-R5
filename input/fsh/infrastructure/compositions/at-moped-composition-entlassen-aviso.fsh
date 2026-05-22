@@ -10,7 +10,7 @@ Description: "MOPED Profil der Composition Ressource nach $entlassen bei Entlass
 * section[besuchteAbteilungen].entry 1..
 
 //Invarianten:
-//alle TENC nach Aufnahmedatum
+//alle BENC nach Aufnahmedatum
 //TBD: ob alle abgeschlossen sein müssen hängt von der Definiton von Aviso ab: je nachdem, ob danach noch Verlegungen aktualisiert werden dürfen
 * obeys moped-entlassen-aviso-TBD
 

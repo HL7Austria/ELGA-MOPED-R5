@@ -6,21 +6,21 @@ Description: "MOPED Profil der Encounter Ressource für die Verlegung auf Intens
 
 //TBD actualPeriod.start Uhrzeit verpflichtend machen
 
-* obeys moped-TENC-status-entweder-in-progress-oder-completed
+* obeys moped-BENC-status-entweder-in-progress-oder-completed
 * obeys moped-verlegen-intensiv-verpflichtendes-abgangsdatum
 * obeys moped-verlegen-intensiv-verpflichtende-abgangsart
 
-Invariant: moped-TENC-status-entweder-in-progress-oder-completed
+Invariant: moped-BENC-status-entweder-in-progress-oder-completed
 Severity: #error
-Description: "Der TENC status muss entweder in-progress oder completed sein"
+Description: "Der BENC status muss entweder in-progress oder completed sein"
 Expression: "" 
 
 Invariant: moped-verlegen-intensiv-verpflichtendes-abgangsdatum
 Severity: #error
-Description: "Wenn der TENC.status complete ist, muss es das Abgangsdatum befüllt sein"
+Description: "Wenn der BENC.status complete ist, muss es das Abgangsdatum befüllt sein"
 Expression: "" 
 
 Invariant: moped-verlegen-intensiv-verpflichtende-abgangsart
 Severity: #error
-Description: "Wenn der TENC.status complete ist, muss die Abgangsart (dischargeDisposition) befüllt sein"
+Description: "Wenn der BENC.status complete ist, muss die Abgangsart (dischargeDisposition) befüllt sein"
 Expression: ""
