@@ -6,7 +6,7 @@ Description: "MOPED Basis Profil der Observation Ressource für die Entbindungsa
 * insert MappingHeaderEinfuegen
 * status 1..1
 * insert ShallPopulateObligation(status, MopedKAActor)
-//* code = $SNOMED#364336006 "Art der Entbindung" //TBD fachlich hinterfragen
+* code = MopedObservationArtCS#ENTBART
 * code 1..1
 * insert ShallPopulateObligation(code, MopedKAActor)
 * valueCodeableConcept from MopedEntbindungsartVS
