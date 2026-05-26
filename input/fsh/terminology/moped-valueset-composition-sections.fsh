@@ -23,7 +23,7 @@ Description: "ValueSet für die Moped Sections der Composition Ressource"
 * ^experimental = true
 * include codes from system CompositionSectionsCS
 * MopedEncounterTypesCS#ENC 
-* MopedEncounterTypesCS#TENC
+* MopedEncounterTypesCS#BENC
 * MopedClaimTypeCS#ARKREQ
 * MopedClaimTypeCS#ARKRESP
 * MopedClaimTypeCS#VAEREQ

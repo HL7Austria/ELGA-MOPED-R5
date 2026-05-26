@@ -1,5 +1,5 @@
 /*Instance: PJ1AufnahmeBundle
-InstanceOf: MopedAufnehmenBundleKA
+InstanceOf: AtMopedBundleAufnehmenKA
 Description: "Patient Journey 1 Beispiel: AufnahmeBundle"
 Usage: #example
 * type = #transaction
@@ -20,6 +20,6 @@ Usage: #example
 * entry[Diagnosen].request.method = #POST
 * entry[Diagnosen].request.url = "Condition"
 * entry[Bewegungen].fullUrl = "urn:uuid:93fb2e37-24fe-401f-ba7c-3ef5f999b689"
-* entry[Bewegungen].resource = PJ1TransferEncounter1
+* entry[Bewegungen].resource = PJ1BewegungsEncounter1
 * entry[Bewegungen].request.method = #POST
 * entry[Bewegungen].request.url = "Encounter"*/

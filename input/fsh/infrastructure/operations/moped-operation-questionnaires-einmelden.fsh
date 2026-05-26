@@ -21,7 +21,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *QuestionnaireResponses* Parameter beinhaltet ein Bundle mit sämtlichen nicht fallspezifischen QuestionnaireResponses die eingebracht werden sollen."
   * type = #Bundle
-  * targetProfile = Canonical(MopedQuestionnaireResponseEinmeldenBundle)
+  * targetProfile = Canonical(AtMopedBundleQuestionnaireResponseEinmeldenKA)
 * parameter[+]
   * name = #return
   * use = #out

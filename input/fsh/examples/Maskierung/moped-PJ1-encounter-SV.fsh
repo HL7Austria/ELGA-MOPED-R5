@@ -1,8 +1,7 @@
 Instance: PJ1EncounterSV
-InstanceOf: MopedEncounterSV
+InstanceOf: AtMopedEncounterAufenthaltStationaerSV
 Description: "Maskierung Patient Journey 1 Beispiel: EncounterSV"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedEncounter"
 * identifier[Aufnahmezahl].type = http://terminology.hl7.org/CodeSystem/v2-0203#VN
 * identifier[Aufnahmezahl].value = "1024000028"
 * identifier[Aufnahmezahl].system = "urn:oid:1.3.6.1.4.1.36124.5.914"

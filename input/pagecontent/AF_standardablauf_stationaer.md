@@ -34,8 +34,8 @@ Es existiert kein Fall mit der selben Schlüsselkombination.
 #### Technische Hinweise
 
 #### Relevante Profile
-- [$aufnahme Bundle](StructureDefinition-MopedUpdateBundleKA.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
+- [$aufnahme Bundle](StructureDefinition-AtMopedBundleUpdateKA.html)
+- [$update Bundle](StructureDefinition-AtMopedBundleUpdateKA.html)
 - TBD
 
 #### Relevante Invarianten

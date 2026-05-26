@@ -1,8 +1,8 @@
 Instance: PJ2VAEResponse1
-InstanceOf: MopedVAEResponse
+InstanceOf: AtMopedClaimResponseVAEResponseGenerisch
 Description: "Hackathon Patient Journey 2 Beispiel: VAEResponse 1"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedVAEResponse"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedClaimResponseVAEResponseGenerisch"
 * status = #active
 * type.coding = MopedClaimTypeCS#VAERESP
 * use = #preauthorization

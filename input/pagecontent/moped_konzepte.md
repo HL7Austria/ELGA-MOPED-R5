@@ -115,7 +115,7 @@ Einige Referenzen sind nicht aus dem Fallkontext ableitbar, da sie entweder eine
 | Beispiel                          | Typ                                  | Erklärung                                |
 |-----------------------------------|---------------------------------------|------------------------------------------|
 | `Claim.procedure.procedureReference`       | gezielte Auswahl                     | Die Abrechnungsrelevanz wird den Leistungen zugeordnet |
-| `MopedTransferEncounter.serviceProvider` | Zielorganisation bei Verlegung     | Referenz via `Organization.identifier`   |
+| `MopedBewegungsEncounter.serviceProvider` | Zielorganisation bei Verlegung     | Referenz via `Organization.identifier`   |
 
 MOPED prüft ggf. ihre Gültigkeit, übernimmt das befüllen aber nicht selbst.
 

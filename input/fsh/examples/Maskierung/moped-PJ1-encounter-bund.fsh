@@ -1,8 +1,7 @@
 Instance: PJ1EncounterBund
-InstanceOf: MopedEncounterBund
+InstanceOf: AtMopedEncounterAufenthaltStationaerBund
 Description: "Maskierung Patient Journey 1 Beispiel: EncounterBund"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedEncounterBund"
 * identifier[DatensatzID].type.coding = http://terminology.hl7.org/CodeSystem/v2-0203#ANON
 * identifier[DatensatzID].value = "V8321382402233647600"
 * identifier[DatensatzID].system = "urn:oid:1.3.6.1.4.1.36124.5.914"

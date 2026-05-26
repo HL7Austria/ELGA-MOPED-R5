@@ -59,7 +59,7 @@ KH ->> MP: POST $entlassen
 note over KH
 Entlassungs-Bundle wird gesendet mit
 - Aufenthalt (Encounter mit Status 'completed')
-- Bewegung (TransferEncounter)
+- Bewegung (BewegungsEncounter)
 - Hauptdiagnose (Condition mit Diagnosetyp Hauptdiagnose)
 end note
 

@@ -3,7 +3,7 @@
   "id": "Condition42.1",
   "meta": {
     "profile": [
-      "https://elga.moped.at/StructureDefinition/MopedCondition"
+      "https://elga.moped.at/StructureDefinition/AtMopedConditionBasis"
     ]
   },
   "extension": [

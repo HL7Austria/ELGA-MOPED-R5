@@ -35,7 +35,7 @@ Der Encounter.status wird sofort auf "completed" gesetzt (ohne Zwischenschritt m
 <div>{% include_relative plantuml/AF23.svg %}</div>
 
 ### Relevante Profile
-- [$entlassen Bundle](StructureDefinition-MopedEntlassenBundle.html)
+- [$entlassen Bundle](StructureDefinition-AtMopedBundleEntlassenKA.html)
 
 ### Relevante Invarianten
 - $entlassen kann nur erfolgreich ausgeführt werden, wenn es eine Hauptdiagnose gibt
@@ -78,8 +78,8 @@ Abgerechnet kann erst werden, wenn die Hauptdiagnose vorhanden ist, und somit de
 <div>{% include_relative plantuml/AF24-25.svg %}</div>
 
 ### Relevante Profile
-- Entlassung aviso: [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
-- Entlassung vollständig: [$entlassen Bundle](StructureDefinition-MopedEntlassenBundle.html)
+- Entlassung aviso: [$update Bundle](StructureDefinition-AtMopedBundleUpdateKA.html)
+- Entlassung vollständig: [$entlassen Bundle](StructureDefinition-AtMopedBundleEntlassenKA.html)
 
 ### Relevante Invarianten
 

@@ -122,13 +122,13 @@ TBD
 | Stationär |  ✅ |
 
 ### Relevante Profile
-- [Coverage](StructureDefinition-MopedCoverage.html)
-- [VAERequestInitial](StructureDefinition-MopedVAERequestInitial.html)
-- [VAERequestVerlaengerung](StructureDefinition-MopedVAERequestVerlaengerung.html)
-- [VAEResponse](StructureDefinition-MopedVAEResponse.html)
-- [$update Bundle](StructureDefinition-MopedUpdateBundleKA.html)
-- [$anfragen Bundle](StructureDefinition-MopedAnfragenBundleKA.html)
-- [$antworten Bundle](StructureDefinition-MopedAntwortenBundleSV.html)
+- [Coverage](StructureDefinition-AtMopedCoverageVersicherterBasis.html)
+- [VAERequestInitial](StructureDefinition-AtMopedClaimVAERequestInitial.html)
+- [VAERequestVerlaengerung](StructureDefinition-AtMopedClaimVAERequestVerlaengerung.html)
+- [VAEResponse](StructureDefinition-AtMopedClaimResponseVAEResponseGenerisch.html)
+- [$update Bundle](StructureDefinition-AtMopedBundleUpdateKA.html)
+- [$anfragen Bundle](StructureDefinition-AtMopedBundleAnfragenKA.html)
+- [$antworten Bundle](StructureDefinition-AtMopedBundleAntwortenSV.html)
 
 ### Technische Hinweise
 - VAERequest und Response werden in FHIR durch Profile der Claim Ressource abgebildet.

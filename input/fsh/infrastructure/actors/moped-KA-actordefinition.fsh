@@ -6,4 +6,4 @@ Usage: #definition
 * status = #draft
 * type = #system
 * name = "KAActor"
-* reference = Canonical(KAOrganization)
+* reference = Canonical(AtMopedOrganizationKA)

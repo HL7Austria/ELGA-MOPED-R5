@@ -1,7 +1,7 @@
 Alias: $iso-3166-1-alpha-3 = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3
 
 Instance: Test1PatientOhneMaskierung
-InstanceOf: MopedBasisPatientKlarname
+InstanceOf: AtMopedPatientKlarnameBasis
 Description: "Maskierung Beispiel Patient"
 Usage: #example
 * extension[citizenship].extension[code].valueCodeableConcept = https://termgit.elga.gv.at/CodeSystem/iso-3166-1-alpha-3#AUT "Österreich"

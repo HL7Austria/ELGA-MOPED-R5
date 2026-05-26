@@ -1,5 +1,5 @@
 Instance: AbteilungKARied1
-InstanceOf: MopedKAOrganisationseinheit
+InstanceOf: AtMopedOrganizationOrganisationseinheitKA
 Description: "Hackathon Stammdaten: Abteilung 1 der KA Ried"
 Usage: #example
 * identifier[+].value = "11211100"

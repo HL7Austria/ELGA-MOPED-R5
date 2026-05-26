@@ -1,8 +1,8 @@
 Instance: PJ1LKFRequest1
-InstanceOf: MopedLKFRequest
+InstanceOf: AtMopedClaimLKFRequestBasis
 Description: "Hackathon Patient Journey 1 Beispiel: LKFRequest 1"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedLKFRequest"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedClaimLKFRequestBasis"
 * status = #active
 * use = http://hl7.org/fhir/claim-use#claim
 * type.coding = MopedClaimTypeCS#LKFREQ
@@ -12,7 +12,7 @@ Usage: #example
 * insurer = Reference(SV11)
 * provider = Reference(OrganizationHerzJesuKrankenhaus)
 * encounter[MopedEncounter] = Reference(PJ1Encounter)
-* encounter[TransferEncounter] = Reference(PJ1TransferEncounter1)
+* encounter[BewegungsEncounter] = Reference(PJ1BewegungsEncounter1)
 * diagnosisRelatedGroup.coding = LKFHauptdiagnosegruppenCS#HDG01.31
 
 * insurance.coverage = Reference(PJ1Coverage)

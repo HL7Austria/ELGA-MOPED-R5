@@ -1,8 +1,8 @@
 Instance: PJ1LKFResponse1
-InstanceOf: MopedLKFResponse
+InstanceOf: AtMopedClaimResponseLKFResponseBasis
 Description: "Hackathon Patient Journey 1 Beispiel: LKFResponse 1"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedLKFResponse"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedClaimResponseLKFResponseBasis"
 * status = #active
 * type.coding = MopedClaimTypeCS#LKFRESP
 * use = http://hl7.org/fhir/claim-use#claim

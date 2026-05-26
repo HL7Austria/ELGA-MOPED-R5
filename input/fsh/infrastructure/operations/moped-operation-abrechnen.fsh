@@ -19,9 +19,9 @@ Usage: #definition
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Der *Abrechnung* Parameter beinhaltet ein Bundle mit sämtlichen Details zur Abrechnung lt. MopedLKFRequest Profil."
+  * documentation = "Der *Abrechnung* Parameter beinhaltet ein Bundle mit sämtlichen Details zur Abrechnung lt. AtMopedClaimLKFRequestBasis Profil."
   * type = #Bundle
-  * targetProfile = Canonical(MopedAbrechnenBundleKA)
+  * targetProfile = Canonical(AtMopedBundleAbrechnenKA)
 * parameter[+]
   * name = #return
   * use = #out

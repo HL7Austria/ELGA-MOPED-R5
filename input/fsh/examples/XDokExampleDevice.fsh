@@ -1,5 +1,5 @@
 Instance: XDokExampleDevice
-InstanceOf: MopedDeviceXDok
+InstanceOf: AtMopedDeviceXDok
 Description: "Moped Example XDok Device"
 Usage: #example
 * status = #active

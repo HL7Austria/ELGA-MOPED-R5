@@ -17,12 +17,12 @@ Zulässige Abrechnungszustände ([siehe Statusmaschine](AF_moped_fall_abrechnung
 ## Detaillierte Business-Logik
 
 1. Suche der Composition: Die Composition mit der jeweiligen *compositionID* lt. Operation-Parameter wird gesucht
-2. Der MopedLKFRequest wird lt. Regeln validiert und erstellt
-  * *MopedLKFRequest.patient* mit Composition.subject befüllen
-  * *MopedLKFRequest.insurance.coverage* mit *MopedComposition.section:Coverages.entry* befüllen
-  * *MopedLKFRequest.provider* mit *MopedComposition.section:zustaendigeKA* befüllen
-  * *MopedLKFRequest.insurer* mit *MopedComposition.section:zustaendigeSV* befüllen
-  * *MopedLKFRequest.encounter* mit *MopedComposition.encounter* und allen TransferEncounter aus *MopedComposition.section:TransferEncounter* befüllen
+2. Der AtMopedClaimLKFRequestBasis wird lt. Regeln validiert und erstellt
+  * *AtMopedClaimLKFRequestBasis.patient* mit Composition.subject befüllen
+  * *AtMopedClaimLKFRequestBasis.insurance.coverage* mit *MopedComposition.section:Coverages.entry* befüllen
+  * *AtMopedClaimLKFRequestBasis.provider* mit *MopedComposition.section:zustaendigeKA* befüllen
+  * *AtMopedClaimLKFRequestBasis.insurer* mit *MopedComposition.section:zustaendigeSV* befüllen
+  * *AtMopedClaimLKFRequestBasis.encounter* mit *MopedComposition.encounter* und allen BewegungsEncounter aus *MopedComposition.section:BewegungsEncounter* befüllen
 
 3. Falls in Composition.section:LKFRequests bereits ein inaktiver Claim mit `Claim.subtype = #final` vorhanden ist, darf auch im eingebrachten Claim der Abrechnungsstatus ausschließlich `#final` sein (d. h. es muss sich ebenfalls um eine finale Abrechnung handeln). Andernfalls schlägt die Operation fehl.
 4. Falls es sich um die erste finale Abrechnung handelt und es derzeit noch einen aktiven vorläufigen Request gibt wird der vorherige aktive LKFRequest und die zugehörige LKFResponse auf `cancelled` gesetzt (siehe Hinweis 2). 

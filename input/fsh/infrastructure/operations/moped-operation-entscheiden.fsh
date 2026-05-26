@@ -21,7 +21,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *Entscheidung* Parameter beinhaltet ein Bundle mit sämtliche Details zur Antwort auf den Claim."
   * type = #Bundle
-  * targetProfile = Canonical(MopedEntscheidenLGFBundle)
+  * targetProfile = Canonical(AtMopedBundleEntscheidenLGF)
 * parameter[+]
   * name = #return
   * use = #out

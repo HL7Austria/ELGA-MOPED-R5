@@ -56,10 +56,10 @@ Zustand:
 - keine finale Abrechnung genehmigt
 end note
 
-KA ->> MP: $update (POST TransferEncounter)
+KA ->> MP: $update (POST BewegungsEncounter)
 
 note over KA
-TransferEncounter wird gesendet mit
+BewegungsEncounter wird gesendet mit
 - Verweis auf Funktionscode
 - Start-Datum
 - ggf. Abgangsart

@@ -56,10 +56,10 @@ Zustand:
 - keine finale Abrechnung genehmigt
 end note
 
-KA ->> MP: $update (PUT TransferEncounter)
+KA ->> MP: $update (PUT BewegungsEncounter)
 
 note over KA
-TransferEncounter wird gesendet mit
+BewegungsEncounter wird gesendet mit
 - aktualisierten Details
 end note
 

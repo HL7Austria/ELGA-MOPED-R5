@@ -3,7 +3,7 @@
   "id": "KAK999ABT16518011",
   "meta": {
     "profile": [
-      "https://elga.moped.at/StructureDefinition/MopedKAOrganisationseinheit"
+      "https://elga.moped.at/StructureDefinition/AtMopedOrganizationOrganisationseinheitKA"
     ]
   },
   "extension": [

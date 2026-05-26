@@ -54,10 +54,10 @@ TBD
 
 
 ### Relevante Profile
-- [$entlassen Bundle](StructureDefinition-MopedEntlassenBundle.html)
-- [Encounter Stationär](StructureDefinition-MopedEncounterS.html)
-- [TransferEncounter Stationär](StructureDefinition-MopedTransferEncounterS.html)
-- [Diagnose](StructureDefinition-MopedCondition.html)
+- [$entlassen Bundle](StructureDefinition-AtMopedBundleEntlassenKA.html)
+- [Encounter Stationär](StructureDefinition-at-moped-encounter-aufenthalt-stationaer-basis.html)
+- [BewegungsEncounter Stationär](StructureDefinition-AtMopedEncounterBewegungStationaerBasis.html)
+- [Diagnose](StructureDefinition-AtMopedConditionBasis.html)
 
 ### Technische Hinweise
 

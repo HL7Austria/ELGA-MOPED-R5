@@ -21,7 +21,7 @@ Usage: #definition
   * max = "1"
   * documentation = "Der *Kosteninformation* Parameter beinhaltet ein Bundle mit sämtlichen Details zur Kosteninformation lt. MopedARKRequest Profil."
   * type = #Bundle
-  * targetProfile = Canonical(MopedMeldenLGFBundle)
+  * targetProfile = Canonical(AtMopedBundleMeldenLGF)
 * parameter[+]
   * name = #return
   * use = #out

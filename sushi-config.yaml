@@ -287,21 +287,37 @@ groups:
   VerordnungKA:
     name: Verordnungsrelevant - Datenfelder für die KA
     description: Verordnungsrelevante Ressourcenprofile für den Akteuer KA
+    resources:
+      - StructureDefinition/at-moped-encounter-besuch-ambulant-KA
+      - StructureDefinition/at-moped-encounter-aufenthalt-stationaer-KA
+      - StructureDefinition/at-moped-patient-klarname-KA
+      - StructureDefinition/at-moped-patient-vbPK-KA
   VerordnungBund:
     name: Verordnungsrelevant - Datenfelder für den Bund
     description: Verordnungsrelevante Ressourcenprofile für den Akteuer Bund
     resources: 
-    - StructureDefinition/MopedEncounterBund
+      - StructureDefinition/at-moped-encounter-besuch-ambulant-Bund
+      - StructureDefinition/at-moped-encounter-aufenthalt-stationaer-Bund
+      - StructureDefinition/at-moped-patient-klarname-bund
+      - StructureDefinition/at-moped-patient-vbPK-bund
+#TBD Patient resources
   VerordnungLGF:
     name: Verordnungsrelevant - Datenfelder für den LGF
     description: Verordnungsrelevante Ressourcenprofile für den Akteuer LGF
     resources: 
-    - StructureDefinition/MopedEncounterLGF
+      - StructureDefinition/at-moped-encounter-besuch-ambulant-LGF
+      - StructureDefinition/at-moped-encounter-aufenthalt-stationaer-LGF
+      - StructureDefinition/at-moped-patient-klarname-LGF
+      - StructureDefinition/at-moped-patient-vbPK-LGF
   VerordnungSV:
     name: Verordnungsrelevant - Datenfelder für die SV
     description: Verordnungsrelevante Ressourcenprofile für den Akteuer SV
     resources:
-    - StructureDefinition/MopedEncounterSV
+      - StructureDefinition/at-moped-encounter-besuch-ambulant-SV
+      - StructureDefinition/at-moped-encounter-aufenthalt-stationaer-SV
+      - StructureDefinition/at-moped-patient-klarname-SV
+      - StructureDefinition/at-moped-patient-vbPK-SV
+
   QuestionnairesIntensiv:
     name: Fallbezogene Questionnaires für die Intensivdokumentation
     description: Questionnaires für die Modellierung von Intensivdokumentation
@@ -337,7 +353,6 @@ groups:
     - Questionnaire/LKFK06Questionnaire
     - Questionnaire/LKFK07Questionnaire
     - Questionnaire/LKFK08Questionnaire
-    - Questionnaire/LKFK09Questionnaire
     - Questionnaire/LKFK09Questionnaire
     - Questionnaire/LKFK10Questionnaire
     - Questionnaire/LKFK11Questionnaire

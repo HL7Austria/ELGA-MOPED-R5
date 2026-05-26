@@ -61,7 +61,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -74,7 +74,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -91,7 +91,7 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`</td>
+        <td>Wird ermittelt durch die Anzahl der BewegungsEncounter mit dem Funktionscode `10000000`</td>
     </tr>
     <tr>
         <td>Kostenträger (leistungszuständig)</td>
@@ -100,7 +100,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.section:zustaendigeSV.entry.resolve()</td>
         <td>Composition.section:zustaendigeSV.entry.resolve()</td>
@@ -126,7 +126,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -139,7 +139,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
         <td>Composition.encounter.resolve()</td>
@@ -165,7 +165,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter</td>
+        <td>AtMopedRelatedPersonHauptversicherterBasis</td>
         <td>RelatedPerson</td>
         <td>RelatedPerson.identifier:socialSecurityNumber.value</td>
         <td>Composition.section:Hauptversicherter.entry.resolve()</td>
@@ -177,8 +177,8 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
+        <td>MopedKAActor; MopedKAActor, MopedKAActor, MopedKAActor</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV; AtMopedRelatedPersonHauptversicherterBasis</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.name.family; RelatedPerson.name.family</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -190,8 +190,8 @@ verfügbar.
         <td>X</td>
         <td>X</td>
         <td>/</td>
-        <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
+        <td>MopedKAActor; MopedKAActor, MopedKAActor, MopedKAActor</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV; AtMopedRelatedPersonHauptversicherterBasis</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.name.given; RelatedPerson.name.given</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -204,7 +204,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV; AtMopedRelatedPersonHauptversicherterBasis</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.gender; RelatedPerson.gender</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -217,7 +217,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV; AtMopedRelatedPersonHauptversicherterBasis</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.birthDate; RelatedPerson.birthDate</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -230,7 +230,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.id</td>
         <td>Composition.id</td>
@@ -243,7 +243,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedCoverage</td>
+        <td>AtMopedCoverageVersicherterBasis</td>
         <td>Coverage</td>
         <td>Coverage.class:Versichertenkategorien.value</td>
         <td>Composition.section:Versichertenanspruch.entry.resolve()</td>
@@ -268,8 +268,8 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
-        <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
+        <td>MopedKAActor; MopedKAActor, MopedKAActor, MopedKAActor</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.name.family</td>
         <td>Composition.subject.resolve()</td>
@@ -281,8 +281,8 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
-        <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
+        <td>MopedKAActor; MopedKAActor, MopedKAActor, MopedKAActor</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.name.given</td>
         <td>Composition.subject.resolve()</td>
@@ -295,7 +295,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject.resolve()</td>
@@ -308,7 +308,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>*wenn Patient Mitversicherter, dann zwingend</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>
@@ -347,7 +347,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -418,7 +418,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -431,7 +431,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -448,7 +448,7 @@ verfügbar.
         <td>/</td>
         <td>/</td>
         <td>/</td>
-        <td>Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`</td>
+        <td>Wird ermittelt durch die Anzahl der BewegungsEncounter mit dem Funktionscode `10000000`</td>
     </tr>
     <tr>
         <td>Kostenträger (leistungszuständig)</td>
@@ -457,7 +457,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.section:zustaendigeSV.entry.resolve()</td>
         <td>Composition.section:zustaendigeSV.entry.resolve()</td>
@@ -483,7 +483,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -496,7 +496,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: Unterschied ambulant vs. stationär?</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
         <td>Composition.encounter.resolve()</td>
@@ -522,7 +522,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>Hauptversicherter; MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV; AtMopedRelatedPersonHauptversicherterBasis</td>
         <td>Patient; RelatedPerson</td>
         <td>Patient.birthDate; RelatedPerson.birthDate</td>
         <td>Composition.section:Hauptversicherter.entry.resolve(); Composition.subject.resolve()</td>
@@ -535,7 +535,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.id</td>
         <td>Composition.id</td>
@@ -548,7 +548,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>optional (Unterschied zu E.1); TBD: klären warum der Patient nicht verpflichtend ist, aber der Hauptversicherte schon (nicht immer der Patient)</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>
@@ -587,7 +587,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedDeviceActor</td>
-        <td>MopedAnfragenComposition; MopedAufnahmeComposition; MopedBeantwortenComposition; MopedComposition; MopedEntlassenAvisoComposition; MopedEntlassenVollstaendigComposition; MopedMasterComposition; MopedUpdateComposition</td>
+        <td>AtMopedCompositionAnfragen; AtMopedCompositionAufnehmen; AtMopedCompositionBasis; AtMopedCompositionBeantworten; AtMopedCompositionEntlassenAviso; AtMopedCompositionEntlassenVollstaendig; AtMopedCompositionGenerisch; AtMopedCompositionUpdate</td>
         <td>Composition</td>
         <td>Composition.author.resolve()</td>
         <td>Composition.author.resolve()</td>
@@ -658,7 +658,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:aufnahmeart</td>
         <td>Composition.encounter.resolve()</td>
@@ -671,7 +671,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -684,7 +684,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -697,7 +697,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKAActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestGenerisch; AtMopedClaimVAERequestInitial; AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:Sonderklasse.code</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -710,7 +710,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.extension:citizenship.extension:code.value[x]</td>
         <td>Composition.subject.resolve()</td>
@@ -723,7 +723,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedPatientKlarnameKA; MopedPatientKlarnameSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.line.extension:street</td>
         <td>Composition.subject.resolve()</td>
@@ -736,7 +736,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
         <td>Composition.subject.resolve()</td>
@@ -749,7 +749,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
         <td>Composition.subject.resolve()</td>
@@ -762,7 +762,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.city</td>
         <td>Composition.subject.resolve()</td>
@@ -775,7 +775,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestGenerisch; AtMopedClaimVAERequestInitial; AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.accident.type</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -788,7 +788,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -801,7 +801,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -814,7 +814,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>*zwingend, ausgenommen EREIG 8 (Kurheilverfahren stationär), 9 (Rehabilitationsaufenthalt ambulant) und R (Aufnahme in den Bereich der Rehabilitation); TBD: codes für Moped relevant?</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -827,7 +827,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -840,7 +840,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -853,7 +853,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -866,7 +866,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -879,7 +879,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -892,7 +892,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -905,7 +905,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestGenerisch; AtMopedClaimVAERequestInitial; AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:VerdachtFremdverschulden.value[x]</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -931,7 +931,7 @@ verfügbar.
         <td>X[TBD]*</td>
         <td>wird bei Kur-/Rehabilitationsaufenthalten mit „99“ befüllt; Kur/Reha relevant?</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.reason:Ursache.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -957,7 +957,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
         <td>Composition.encounter.resolve()</td>
@@ -970,7 +970,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
         <td>Composition.encounter.resolve()</td>
@@ -983,7 +983,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
         <td>Composition.encounter.resolve()</td>
@@ -996,7 +996,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
         <td>Composition.encounter.resolve()</td>
@@ -1009,7 +1009,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.origin.resolve()</td>
         <td>Composition.encounter.resolve()</td>
@@ -1022,7 +1022,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>*bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -1035,7 +1035,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>*bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5</td>
         <td>MopedKAActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestGenerisch; AtMopedClaimVAERequestInitial; AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.accident.date</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -1048,7 +1048,7 @@ verfügbar.
         <td>O[Inv.]*</td>
         <td>*bei Aufnahmeart 1, 7 oder wenn VERDAU 1 - 5</td>
         <td>MopedKAActor, MopedKAActor, MopedKAActor</td>
-        <td>MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.billablePeriod.start</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -1061,7 +1061,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestGenerisch; AtMopedClaimVAERequestInitial; AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.billablePeriod.end; Claim.supportingInfo:Verlaengerungstage.value[x]:valueQuantity.value</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -1074,7 +1074,7 @@ verfügbar.
         <td>O</td>
         <td>optional</td>
         <td>MopedKAActor</td>
-        <td>MopedCoverage</td>
+        <td>AtMopedCoverageVersicherterBasis</td>
         <td>Coverage</td>
         <td>Coverage.identifier:VDASID</td>
         <td>Composition.section:Versichertenanspruch.entry.resolve()</td>
@@ -1119,7 +1119,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:aufnahmeart</td>
         <td>Composition.encounter.resolve()</td>
@@ -1132,7 +1132,7 @@ verfügbar.
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestGenerisch; AtMopedClaimVAERequestInitial; AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:Sonderklasse.code</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -1146,7 +1146,7 @@ verfügbar.
         <td>*zwingend wenn zutreffend; TBD: Wenn Rückmeldung „in Bearbeitung“ (VAEST = 18 oder 98)
 dann nicht zwingend</td>
         <td>MopedKAActor, MopedKAActor, MopedKAActor; MopedSVActor</td>
-        <td>MopedVAERequestInitial; MopedVAEResponse</td>
+        <td>AtMopedClaimResponseVAEResponseGenerisch; AtMopedClaimVAERequestInitial</td>
         <td>Claim; ClaimResponse</td>
         <td>Claim.billablePeriod.start; ClaimResponse.preAuthPeriod.start</td>
         <td>Composition.section:VAERequests.entry.resolve(); Composition.section:VAEResponses.entry.resolve()</td>
@@ -1159,7 +1159,7 @@ dann nicht zwingend</td>
         <td>O</td>
         <td>/</td>
         <td>MopedSVActor</td>
-        <td>MopedVAEResponse</td>
+        <td>AtMopedClaimResponseVAEResponseGenerisch</td>
         <td>ClaimResponse</td>
         <td>ClaimResponse.preAuthPeriod.end</td>
         <td>Composition.section:VAEResponses.entry.resolve()</td>
@@ -1173,7 +1173,7 @@ dann nicht zwingend</td>
         <td>*zwingend wenn zutreffend; TBD: Wenn Rückmeldung „in Bearbeitung“ (VAEST = 18 oder 98)
 dann nicht zwingend</td>
         <td>MopedSVActor</td>
-        <td>MopedVAEResponse</td>
+        <td>AtMopedClaimResponseVAEResponseGenerisch</td>
         <td>ClaimResponse</td>
         <td>ClaimResponse.preAuthPeriod.end</td>
         <td>Composition.section:VAEResponses.entry.resolve()</td>
@@ -1186,7 +1186,7 @@ dann nicht zwingend</td>
         <td>X</td>
         <td>/</td>
         <td>MopedSVActor</td>
-        <td>MopedVAEResponse</td>
+        <td>AtMopedClaimResponseVAEResponseGenerisch</td>
         <td>ClaimResponse</td>
         <td>ClaimResponse.decision</td>
         <td>Composition.section:VAEResponses.entry.resolve()</td>
@@ -1200,7 +1200,7 @@ dann nicht zwingend</td>
         <td>*zwingend wenn zutreffend; TBD: Wenn Rückmeldung „in Bearbeitung“ (VAEST = 18 oder 98)
 dann nicht zwingend</td>
         <td>MopedSVActor</td>
-        <td>MopedVAEResponse</td>
+        <td>AtMopedClaimResponseVAEResponseGenerisch</td>
         <td>ClaimResponse</td>
         <td>ClaimResponse.extension:VerpflegskostenBeitragsbefreiung</td>
         <td>Composition.section:VAEResponses.entry.resolve()</td>
@@ -1214,7 +1214,7 @@ dann nicht zwingend</td>
         <td>*zwingend wenn zutreffend; TBD: Wenn Rückmeldung „in Bearbeitung“ (VAEST = 18 oder 98)
 dann nicht zwingend</td>
         <td>MopedSVActor</td>
-        <td>MopedVAEResponse</td>
+        <td>AtMopedClaimResponseVAEResponseGenerisch</td>
         <td>ClaimResponse</td>
         <td>ClaimResponse.extension:MopedSupportingInfoVortageanzahlAufKostenbeitrag</td>
         <td>Composition.section:VAEResponses.entry.resolve()</td>
@@ -1259,7 +1259,7 @@ dann nicht zwingend</td>
         <td>X</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.dischargeDisposition</td>
         <td>Composition.encounter.resolve()</td>
@@ -1272,7 +1272,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*in Zukunft immer codiert notwendig?</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -1285,7 +1285,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*in Zukunft immer codiert notwendig?</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -1298,7 +1298,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*in Zukunft immer codiert notwendig?</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -1311,7 +1311,7 @@ dann nicht zwingend</td>
         <td>O</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -1324,7 +1324,7 @@ dann nicht zwingend</td>
         <td>O</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -1337,7 +1337,7 @@ dann nicht zwingend</td>
         <td>O</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedCondition</td>
+        <td>AtMopedConditionBasis; AtMopedConditionGenerisch</td>
         <td>Condition</td>
         <td>Condition.code.coding:ICD10</td>
         <td>Composition.section:Diagnosen.entry.resolve()</td>
@@ -1363,7 +1363,7 @@ dann nicht zwingend</td>
         <td>X*</td>
         <td>in K01 bereits zwingend daher für K05 nicht mehr optional notwendig</td>
         <td>MopedKAActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestGenerisch; AtMopedClaimVAERequestInitial; AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:VerdachtFremdverschulden.value[x]</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -1376,7 +1376,7 @@ dann nicht zwingend</td>
         <td>X*</td>
         <td>in K01 bereits zwingend daher für K05 nicht mehr optional notwendig</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.reason:Ursache.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -1389,7 +1389,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKAActor</td>
-        <td>MopedObservationEntbindungsart; MopedObservationGeburtenanzahl</td>
+        <td>AtMopedObservationEntbindungsartBasis; MopedObservationGeburtenanzahl</td>
         <td>Observation</td>
         <td>Observation.effective[x]:effectiveDateTime</td>
         <td>Composition.section:Entbindung.entry.resolve()</td>
@@ -1405,7 +1405,7 @@ dann nicht zwingend</td>
         <td>MopedObservationGeburtenanzahl</td>
         <td>Observation</td>
         <td>Observation.value[x]:valueQuantity.value</td>
-        <td>Composition.section:Entbindung.entry.resolve()</td>
+        <td></td>
         <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
@@ -1418,7 +1418,7 @@ dann nicht zwingend</td>
         <td>MopedObservationGeburtenanzahl</td>
         <td>Observation</td>
         <td>Observation.value[x]:valueQuantity.value</td>
-        <td>Composition.section:Entbindung.entry.resolve()</td>
+        <td></td>
         <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
@@ -1428,10 +1428,10 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKAActor</td>
-        <td>MopedObservationEntbindungsart</td>
+        <td>AtMopedObservationEntbindungsartBasis</td>
         <td>Observation</td>
         <td>Observation.value[x]:valueCodeableConcept</td>
-        <td></td>
+        <td>Composition.section:Entbindung.entry.resolve()</td>
         <td>Thema Geburt in Arbeit</td>
     </tr>
     <tr>
@@ -1441,7 +1441,7 @@ dann nicht zwingend</td>
         <td>O</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestGenerisch; AtMopedClaimVAERequestInitial; AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:Sonderklasse.timing[x]:timingPeriod</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -1454,7 +1454,7 @@ dann nicht zwingend</td>
         <td>O</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedVAERequest; MopedVAERequestInitial; MopedVAERequestVerlaengerung</td>
+        <td>AtMopedClaimVAERequestGenerisch; AtMopedClaimVAERequestInitial; AtMopedClaimVAERequestVerlaengerung</td>
         <td>Claim</td>
         <td>Claim.supportingInfo:Sonderklasse.code</td>
         <td>Composition.section:VAERequests.entry.resolve()</td>
@@ -1467,7 +1467,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*zwingend wenn zutreffend; TBD: wann zutreffend?</td>
         <td>MopedKAActor, MopedDeviceActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.status</td>
         <td>Composition.encounter.resolve()</td>
@@ -1480,7 +1480,7 @@ dann nicht zwingend</td>
         <td>O</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounterAufnahmeS; MopedEncounterEntlassungS; MopedEncounterS</td>
+        <td>AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV</td>
         <td>Encounter</td>
         <td>Encounter.extension:TageOhneKostenbeitrag</td>
         <td>Composition.encounter.resolve()</td>
@@ -1629,7 +1629,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.identifier:Aufnahmezahl.value</td>
         <td>Composition.encounter.resolve()</td>
@@ -1642,7 +1642,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>
@@ -1655,7 +1655,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject.resolve()</td>
@@ -1668,7 +1668,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.extension:citizenship.extension:code.value[x]</td>
         <td>Composition.subject.resolve()</td>
@@ -1681,7 +1681,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.country</td>
         <td>Composition.subject.resolve()</td>
@@ -1694,7 +1694,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.address.postalCode</td>
         <td>Composition.subject.resolve()</td>
@@ -1707,7 +1707,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterBund; MopedEncounterLGF; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.extension:aufnahmeart</td>
         <td>Composition.encounter.resolve()</td>
@@ -1720,7 +1720,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.admission.dischargeDisposition</td>
         <td>Composition.encounter.resolve()</td>
@@ -1733,7 +1733,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.end</td>
         <td>Composition.encounter.resolve()</td>
@@ -2122,7 +2122,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -2135,7 +2135,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedTransferEncounter; MopedTransferEncounterA; MopedTransferEncounterI; MopedTransferEncounterS</td>
+        <td>AtMopedEncounterBewegungAmbulantBasis; AtMopedEncounterBewegungGenerisch; AtMopedEncounterBewegungIntensivBasis; AtMopedEncounterBewegungStationaerBasis</td>
         <td>Encounter</td>
         <td>Encounter.serviceType:MopedServiceType.reference.resolve()</td>
         <td>Composition.section:Bewegungen.entry.resolve()</td>
@@ -2148,7 +2148,7 @@ dann nicht zwingend</td>
         <td>/</td>
         <td>/</td>
         <td>MopedKAActor</td>
-        <td>MopedEncounter; MopedEncounterA; MopedEncounterAufnahmeS; MopedEncounterBund; MopedEncounterEntlassungS; MopedEncounterLGF; MopedEncounterS; MopedEncounterSV</td>
+        <td>AtMopedEncounterAufenthaltBesuchGenerisch; AtMopedEncounterAufenthaltStationaerAufnahme; AtMopedEncounterAufenthaltStationaerBasis; AtMopedEncounterAufenthaltStationaerBund; AtMopedEncounterAufenthaltStationaerEntlassung; AtMopedEncounterAufenthaltStationaerKA; AtMopedEncounterAufenthaltStationaerLGF; AtMopedEncounterAufenthaltStationaerSV; AtMopedEncounterBesuchAmbulantBasis; AtMopedEncounterBesuchAmbulantBund; AtMopedEncounterBesuchAmbulantKA; AtMopedEncounterBesuchAmbulantLGF; AtMopedEncounterBesuchAmbulantSV</td>
         <td>Encounter</td>
         <td>Encounter.actualPeriod.start</td>
         <td>Composition.encounter.resolve()</td>
@@ -2646,8 +2646,8 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
-        <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
+        <td>MopedKAActor; MopedKAActor, MopedKAActor, MopedKAActor</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.name.family</td>
         <td>Composition.subject.resolve()</td>
@@ -2659,8 +2659,8 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
-        <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV</td>
+        <td>MopedKAActor; MopedKAActor, MopedKAActor, MopedKAActor</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.name.given</td>
         <td>Composition.subject.resolve()</td>
@@ -2673,7 +2673,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.gender</td>
         <td>Composition.subject.resolve()</td>
@@ -2686,7 +2686,7 @@ dann nicht zwingend</td>
         <td>X[TBD]*</td>
         <td>*Nicht zu befüllen, wenn EFORM mit „ANFO“ belegt ist.</td>
         <td>MopedKAActor</td>
-        <td>MopedBasisPatientKlarname; MopedBasisPatientvbPK; MopedPatientKlarnameBund; MopedPatientKlarnameKA; MopedPatientKlarnameLGF; MopedPatientKlarnameSV; MopedPatientvbPKBund; MopedPatientvbPKKA; MopedPatientvbPKLGF; MopedPatientvbPKSV</td>
+        <td>AtMopedPatientGenerisch; AtMopedPatientKlarnameBasis; AtMopedPatientKlarnameBund; AtMopedPatientKlarnameKA; AtMopedPatientKlarnameLGF; AtMopedPatientKlarnameSV; AtMopedPatientvbPKBasis; AtMopedPatientvbPKBund; AtMopedPatientvbPKKA; AtMopedPatientvbPKLGF; AtMopedPatientvbPKSV</td>
         <td>Patient</td>
         <td>Patient.birthDate</td>
         <td>Composition.subject.resolve()</td>

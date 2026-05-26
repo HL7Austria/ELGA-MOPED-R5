@@ -1,8 +1,8 @@
-Instance: PJ1TransferEncounter1Aufnahme
-InstanceOf: MopedTransferEncounterS
-Description: "Hackathon Patient Journey 1 Beispiel: TransferEncounter 1"
+Instance: PJ1BewegungsEncounter1Aufnahme
+InstanceOf: AtMopedEncounterBewegungStationaerBasis
+Description: "Hackathon Patient Journey 1 Beispiel: BewegungsEncounter 1"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedTransferEncounter"
+* meta.profile = "https://elga.moped.at/StructureDefinition/MopedBewegungsEncounter"
 * status = #in-progress
 * subject = Reference(PJ1Patient)
 * serviceType = Reference(AbteilungHerzJesu1)
@@ -12,7 +12,7 @@ Usage: #example
 
 * subjectStatus.coding = AnwesenheitsartCS#ANW
 
-* type = MopedEncounterTypesCS#TENC
+* type = MopedEncounterTypesCS#BENC
 
 * admission.extension[Altersgruppe].extension[beiZugang].valueCodeableConcept.coding = AltersgruppeCS#55
 * admission.extension[Altersgruppe].extension[neugeborenes].valueBoolean = false

@@ -6,5 +6,5 @@ Usage: #definition
 * status = #draft
 * type = #system
 * name = "SVActor"
-* reference[+] = Canonical(SVOrganization)
-* reference[+] = Canonical(DachverbandOrganization)
+* reference[+] = Canonical(AtMopedOrganizationSV)
+* reference[+] = Canonical(AtMopedOrganizationDachverband)

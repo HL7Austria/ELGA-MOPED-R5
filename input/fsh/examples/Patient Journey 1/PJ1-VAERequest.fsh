@@ -1,8 +1,8 @@
 Instance: PJ1VAERequest1
-InstanceOf: MopedVAERequest
+InstanceOf: AtMopedClaimVAERequestGenerisch
 Description: "Hackathon Patient Journey 1 Beispiel: VAERequest 1"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedVAERequest"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedClaimVAERequestGenerisch"
 * use = http://hl7.org/fhir/claim-use#preauthorization
 * created = "2025-02-17"
 * status = http://hl7.org/fhir/fm-status#active
@@ -18,7 +18,7 @@ Usage: #example
 * accident.date = "0001"
 * accident.extension[DataAbsentReason].valueCode = http://terminology.hl7.org/CodeSystem/data-absent-reason#not-applicable 
 * encounter[MopedEncounter] = Reference(PJ1Encounter)
-* encounter[MopedTransferEncounter] = Reference(PJ1TransferEncounter1)
+* encounter[BewegungsEncounter] = Reference(PJ1BewegungsEncounter1)
 * supportingInfo[VerdachtFremdverschulden].category = ClaimSupportingInformationCategoryCS#FREVER
 * supportingInfo[VerdachtFremdverschulden].valueBoolean = false
 * supportingInfo[VerdachtFremdverschulden].sequence = 1

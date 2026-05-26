@@ -1,8 +1,8 @@
 Instance: PJ1Condition1
-InstanceOf: MopedCondition
+InstanceOf: AtMopedConditionBasis
 Description: "Hackathon Patient Journey 1 Beispiel: Condition 1"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedCondition"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedConditionBasis"
 * clinicalStatus.extension[DataAbsentReason].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * clinicalStatus.extension[DataAbsentReason].valueCode = #not-asked
 * clinicalStatus.coding = http://terminology.hl7.org/CodeSystem/condition-clinical#unknown

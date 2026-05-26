@@ -96,33 +96,34 @@ verfügbar.
 """
 
 COMPOSITION_PATHS_BY_PROFILE: Dict[str, str] = {
-    "MopedEncounterA": "Composition.encounter.resolve()",
-    "MopedEncounterS": "Composition.encounter.resolve()",
-    "SVOrganization": "Composition.section:zustaendigeSV.entry.resolve()",
-    "LGFOrganization": "Composition.section:zustaendigerLGF.entry.resolve()",
-    "KAOrganization": "Composition.section:zustaendigeKA.entry.resolve()",
-    "MopedOrganizationAbteilung": "Composition.section:besuchteAbteilungen.entry.resolve()",
-    "MopedCondition": "Composition.section:Diagnosen.entry.resolve()",
-    "MopedProcedure": "Composition.section:Leistungen.entry.resolve()",
-    "MopedCoverage": "Composition.section:Versichertenanspruch.entry.resolve()",
-    "MopedCoverageSelbstzahler": "Composition.section:Versichertenanspruch.entry.resolve()",
-    "MopedVAERequest": "Composition.section:VAERequests.entry.resolve()",
-    "MopedVAERequestVerlaengerung": "Composition.section:VAERequests.entry.resolve()",
-    "MopedVAERequestInitial": "Composition.section:VAERequests.entry.resolve()",
-    "MopedVAEResponse": "Composition.section:VAEResponses.entry.resolve()",
-    "MopedLKFRequest": "Composition.section:LKFRequests.entry.resolve()",
-    "MopedLKFResponse": "Composition.section:LKFResponses.entry.resolve()",
+    "AtMopedEncounterBesuchAmbulantBasis": "Composition.encounter.resolve()",
+    "AtMopedEncounterAufenthaltStationaerBasis": "Composition.encounter.resolve()",
+    "AtMopedOrganizationSV": "Composition.section:zustaendigeSV.entry.resolve()",
+    "AtMopedOrganizationLGF": "Composition.section:zustaendigerLGF.entry.resolve()",
+    "AtMopedOrganizationKA": "Composition.section:zustaendigeKA.entry.resolve()",
+    "AtMopedOrganizationOrganisationseinheitKA": "Composition.section:besuchteAbteilungen.entry.resolve()",
+    "AtMopedConditionBasis": "Composition.section:Diagnosen.entry.resolve()",
+    "AtMopedProcedureBasis": "Composition.section:Leistungen.entry.resolve()",
+    "AtMopedCoverageVersicherterBasis": "Composition.section:Versichertenanspruch.entry.resolve()",
+    "AtMopedCoverageSelbstzahlerBasis": "Composition.section:Versichertenanspruch.entry.resolve()",
+    "AtMopedClaimVAERequestGenerisch": "Composition.section:VAERequests.entry.resolve()",
+    "AtMopedClaimVAERequestVerlaengerung": "Composition.section:VAERequests.entry.resolve()",
+    "AtMopedClaimVAERequestInitial": "Composition.section:VAERequests.entry.resolve()",
+    "AtMopedClaimResponseVAEResponseGenerisch": "Composition.section:VAEResponses.entry.resolve()",
+    "AtMopedClaimLKFRequestBasis": "Composition.section:LKFRequests.entry.resolve()",
+    "AtMopedClaimResponseLKFResponseBasis": "Composition.section:LKFResponses.entry.resolve()",
     "MopedARKRequest": "Composition.section:ARKKostenInformation.entry.resolve()",
     "MopedARKResponse": "Composition.section:ARKRueckmeldung.entry.resolve()",
     "MopedARKStatusUpdate": "Composition.section:ARKStatusUpdate.entry.resolve()",
-    "Hauptversicherter": "Composition.section:Hauptversicherter.entry.resolve()",
-    "MopedQuestionnaireResponse": "Composition.section:Frageboegen.entry.resolve()",
-    "MopedTransferEncounterI": "Composition.section:Bewegungen.entry.resolve()",
-    "MopedTransferEncounterA": "Composition.section:Bewegungen.entry.resolve()",
-    "MopedTransferEncounterS": "Composition.section:Bewegungen.entry.resolve()",
-    "MopedBasisPatientKlarname": "Composition.subject.resolve()",
-    "MopedBasisPatientvbPK": "Composition.subject.resolve()"
-    "MopedObservationGeburtenanzahl": "Composition.section:Entbindung.entry.resolve()"
+    "AtMopedRelatedPersonHauptversicherterBasis": "Composition.section:Hauptversicherter.entry.resolve()",
+    "AtMopedQuestionnaireResponseFallbezogen": "Composition.section:Frageboegen.entry.resolve()",
+    "AtMopedEncounterBewegungIntensivBasis": "Composition.section:Bewegungen.entry.resolve()",
+    "AtMopedEncounterBewegungAmbulantBasis": "Composition.section:Bewegungen.entry.resolve()",
+    "AtMopedEncounterBewegungStationaerBasis": "Composition.section:Bewegungen.entry.resolve()",
+    "AtMopedPatientKlarnameBasis": "Composition.subject.resolve()",
+    "AtMopedPatientvbPKBasis": "Composition.subject.resolve()",
+    "AtMopedObservationGeburtenanzahlBasis": "Composition.section:Entbindung.entry.resolve()",
+    "AtMopedObservationEntbindungsartBasis": "Composition.section:Entbindung.entry.resolve()"
 
 }
 
@@ -131,7 +132,7 @@ UNUSED_FIELD_COMMENTS = [
     "laut Abstimmung: vorläufige Überarbeitung KaOrg - Feld wird voraussichtlich entfernt",
     "diese Meldung ist in Moped in dieser Form nicht mehr notwendig",
     "erst in K05 relevant",
-    "Wird ermittelt durch die Anzahl der TransferEncounter mit dem Funktionscode `10000000`"
+    "Wird ermittelt durch die Anzahl der BewegungsEncounter mit dem Funktionscode `10000000`"
 ]
 
 E1_REFERENCE_COMMENTS = ["siehe E1", "siehe E1.1", "siehe E1/E1.1"]
@@ -361,7 +362,7 @@ class ElementInfo:
 def extract_structure_definition_info(sd: Dict[str, Any]) -> Dict[str, str]:
     """Extract basic StructureDefinition metadata."""
     return {
-        "profile": sd.get("id", ""),
+        "profile": sd.get("name", ""),
         "resource": sd.get("type", "")
     }
 

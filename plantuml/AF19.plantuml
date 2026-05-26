@@ -61,9 +61,9 @@ end box
 autonumber
 
 KA->>MP: $aufnehmen
-Note over KA: POST Patient, Encounter, ... %n()TransferEncounter mit Referenz auf Aufnahmeabteilung
+Note over KA: POST Patient, Encounter, ... %n()BewegungsEncounter mit Referenz auf Aufnahmeabteilung
 
 KA->>MP: $update – interne Verlegung
-Note over KA: PUT alter TransferEncounter (finished, Enddatum) %n()+ POST neuer TransferEncounter (neue Abteilung) 
+Note over KA: PUT alter BewegungsEncounter (finished, Enddatum) %n()+ POST neuer BewegungsEncounter (neue Abteilung) 
 
 @enduml

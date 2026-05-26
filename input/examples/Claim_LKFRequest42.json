@@ -3,7 +3,7 @@
   "id": "LKFRequest42",
   "meta": {
     "profile": [
-      "https://elga.moped.at/StructureDefinition/MopedLKFRequest"
+      "https://elga.moped.at/StructureDefinition/AtMopedClaimLKFRequestBasis"
     ]
   },
   "extension": [
@@ -55,10 +55,10 @@
       "reference": "Encounter/Encounter42"
     },
     {
-      "reference": "Encounter/TransferEncounter42.1"
+      "reference": "Encounter/BewegungsEncounter42.1"
     },
     {
-      "reference": "Encounter/TransferEncounter42.2"
+      "reference": "Encounter/BewegungsEncounter42.2"
     }
   ],
   "diagnosisRelatedGroup": {

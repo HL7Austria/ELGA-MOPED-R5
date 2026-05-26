@@ -70,7 +70,7 @@ KA ->> MP: POST $entlassen
 note over KA
 Entlassungs-Bundle wird gesendet
 - Aufenthalt (Encounter)
-- Bewegung (TransferEncounter)
+- Bewegung (BewegungsEncounter)
 - Hauptdiagnose (Condition)
 end note
 

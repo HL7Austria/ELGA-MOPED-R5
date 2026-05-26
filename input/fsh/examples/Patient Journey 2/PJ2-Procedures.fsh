@@ -1,8 +1,8 @@
 Instance: PJ2Procedure1
-InstanceOf: MopedProcedure
+InstanceOf: AtMopedProcedureBasis
 Description: "Hackathon Patient Journey 2 Beispiel: Procedure 1"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedProcedure"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedProcedureBasis"
 * extension[Leistungsanzahl].valueUnsignedInt = 1
 * status = #completed
 * code.coding = $LKFLeistungskatalog#PE010 "Physiotherapie im Rahmen eines stationären Aufenthaltes (LE=je Aufenthalt)"
@@ -13,10 +13,10 @@ Usage: #example
 * performer.onBehalfOf = Reference(OrganizationKrankenhausRied)
 
 Instance: PJ2Procedure2
-InstanceOf: MopedProcedure
+InstanceOf: AtMopedProcedureBasis
 Description: "Hackathon Patient Journey 2 Beispiel: Procedure 2"
 Usage: #example
-* meta.profile = "https://elga.moped.at/StructureDefinition/MopedProcedure"
+* meta.profile = "https://elga.moped.at/StructureDefinition/AtMopedProcedureBasis"
 * extension[Leistungsanzahl].valueUnsignedInt = 1
 * status = #completed
 * code.coding = $LKFLeistungskatalog#AN010 "Polysomnographie im Schlaflabor (LE=je Behandlungstag)"
