@@ -1,11 +1,21 @@
+CodeSystem: MopedObservationArtCS
+Title: "Moped ValueSet für die Art der Observation"
+Description: "Varianten der Art der Observation"
+* #ENTBART "KaOrg Entbindungsart" 
+
+
 ValueSet: MopedEntbindungsartVS
 Title: "Moped ValueSet für die Art der Entbindung"
-Description: "Varianten der Art der Entbindung"
+Description: "KaOrg Varianten der Art der Entbindung"
+* include codes from system MopedEntbindungsartCS
 
-* $SNOMED#21243004 //TBD einfügen sobald die Übersetzung verfügbar ist
-* $SNOMED#367494004 "Frühgeburt"
-* $SNOMED#237364002 "Totgeburt"
-* $SNOMED#200144004 "Kaiserschnitt"
-* $SNOMED#17369002 "Fehlgeburt"
-//* $SNOMED TBD Frühgeborene Totgeburt
-//TBD einfügen sobald der Code verfügbar ist
+CodeSystem: MopedEntbindungsartCS
+Title: "Moped CodeSystem für die KaOrg Arten der Entbindung"
+Description: "KaOrg Varianten der Art der Entbindung"
+* #0 "normale Geburt"
+* #1 "Frühgeburt"
+* #2 "frühgeborene Totgeburt"
+* #3 "Kaiserschnitt"
+* #4 "Fehlgeburt"
+* #5 "Totgeburt"
+
