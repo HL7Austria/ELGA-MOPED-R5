@@ -104,9 +104,6 @@ Usage: #example
 * item[=].item[+].type = #coding
 * item[=].item[=].linkId = "B02-vks-index-vermoegen"
 * item[=].item[=].text = "VKSIndex – Vermögensposten"
-* item[=].item[=].enableWhen.question = "B02-vks-kategorie"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = $LKFSystem#V "Vermögen"
 * item[=].item[=].answerOption[0].valueCoding = $LKFSystem#V01 "Aufwendungen für das Ingangsetzen und Erweitern eines Betriebes"
 * item[=].item[=].answerOption[+].valueCoding = $LKFSystem#V02 "Immaterielle Vermögensgegenstände"
 * item[=].item[=].answerOption[+].valueCoding = $LKFSystem#V03 "Grundstücke, grundstücksgleiche Rechte"
@@ -132,9 +129,6 @@ Usage: #example
 * item[=].item[+].type = #coding
 * item[=].item[=].linkId = "B02-vks-index-kapital"
 * item[=].item[=].text = "VKSIndex – Kapitalposten"
-* item[=].item[=].enableWhen.question = "B02-vks-kategorie"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding = #K "Kapital"
 * item[=].item[=].answerOption[0].valueCoding = $LKFSystem#K01 "Rückstellungen kurzfristige"
 * item[=].item[=].answerOption[+].valueCoding = $LKFSystem#K02 "Verbindlichkeiten gegenüber Kreditinstituten kurzfristige"
 * item[=].item[=].answerOption[+].valueCoding = $LKFSystem#K03 "Verbindlichkeiten aus Lieferungen und Leistungen und sonstige kurzfristige Verbindlichkeiten und passive Rechnungsabgrenzungsposten"
@@ -225,9 +219,6 @@ Usage: #example
 * item[=].item[+].type = #coding
 * item[=].item[=].linkId = "B04-qva-index-einnahmen"
 * item[=].item[=].text = "QVAIndex – Einnahmen"
-* item[=].item[=].enableWhen.question = "B04-qva-kategorie"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.code = #E
 * item[=].item[=].answerOption[0].valueCoding = $LKFSystem#E01 "Umsatzerlöse (Gesamt)"
 * item[=].item[=].answerOption[+].valueCoding = $LKFSystem#E02 "Umsatzerlöse (stationär)"
 * item[=].item[=].answerOption[+].valueCoding = $LKFSystem#E03 "Umsatzerlöse (ambulant)"
@@ -262,9 +253,6 @@ Usage: #example
 * item[=].item[+].type = #coding
 * item[=].item[=].linkId = "B04-qva-index-ausgaben"
 * item[=].item[=].text = "QVAIndex – Ausgaben"
-* item[=].item[=].enableWhen.question = "B04-qva-kategorie"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.code = #A
 * item[=].item[=].answerOption[0].valueCoding = $LKFSystem#A01 "Materialaufwand und Aufwendungen für bezogene Leistungen"
 * item[=].item[=].answerOption[+].valueCoding = $LKFSystem#A02 "Personalaufwand"
 * item[=].item[=].answerOption[+].valueCoding = $LKFSystem#A03 "FLAF-Zuschüsse"
@@ -294,9 +282,6 @@ Usage: #example
 * item[=].item[+].type = #coding
 * item[=].item[=].linkId = "B04-qva-index-saldo"
 * item[=].item[=].text = "QVAIndex – Saldo"
-* item[=].item[=].enableWhen.question = "B04-qva-kategorie"
-* item[=].item[=].enableWhen.operator = #=
-* item[=].item[=].enableWhen.answerCoding.code = #S
 * item[=].item[=].answerOption.valueCoding = $LKFSystem#S01 "Saldo Einnahmen/Ausgaben"
 * item[=].item[+].type = #integer
 * item[=].item[=].maxLength = 10
@@ -813,7 +798,6 @@ Usage: #example
 * item[=].linkId = "K06"
 * item[=].text = "LKF K06 - KA-Statistik (Konsiliarärztlicher Dienst)"
 * item[=].repeats = true
-* item[=].item[=].repeats = false
 * item[=].item[+].type = #string
 * item[=].item[=].maxLength = 6
 * item[=].item[=].linkId = "K6-krankenanstaltennummer"
