@@ -58,19 +58,22 @@ box "\n        Bund        " #fcb3b3
   actor Bund as "Bund"
 end box
 
+==Aufnahme==
 KA->> MP:<b>1</b> [[OperationDefinition-MOPED.Patient.Aufnehmen.html $aufnehmen]]
 note over KA: Sven Selbstzahler wird stationär aufgenommen,%n() eine Selbstzahler-Coverage erfasst %n()und keine zuständige Versicherung gesetzt
 
+==Patientenversorgung==
 KA->>MP:<b>2</b> [[OperationDefinition-MOPED.Daten.Update.html $update]]
 Note over KA: Verlegung auf Abteilung Innere Medizin
 
 KA->>MP:<b>3</b> [[OperationDefinition-MOPED.Daten.Update.html $update]]
 Note over KA: Diagnose "Herzinsuffizienz" und Leistung "EKG" erfasst
 
+==Entlassung==
 KA->>MP:<b>4</b> [[OperationDefinition-MOPED.Patient.Entlassen.html $entlassen]]
 note over KA: Sven Selbstzahler wird entlassen
 
-
+==Abrechnung und Datenmeldung (LGF)==
 loop [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] / [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]] (vorläufig)
     KA->>MP:<b>5</b> [[OperationDefinition-MOPED.Encounter.Abrechnen.html $abrechnen]] 
     Note over KA: Abrechnung aller Leistungen eingereicht
@@ -87,6 +90,8 @@ LGF->>MP:<b>8a</b> GET Claim?status=active&use=claim&final=true%n()&_has:ClaimRe
 Note over LGF: unbeantwortete Abrechnungen abfragen%n()und intern bearbeiten
 LGF->>MP:<b>8b</b> final [[OperationDefinition-MOPED.Abrechnung.Genehmigen.html $genehmigen]]
 Note over LGF: Endgültige Entscheidung %n()zur Abrechnung 
+
+==Datenmeldung (Bund)==
 Bund->>MP:<b>9</b>  GET Composition?status=final
 Note over Bund: Zugriff auf finale Composition
 
