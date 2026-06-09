@@ -336,36 +336,8 @@ groups:
     name: Questionnaires - Jahresstatistikmeldung/Monatsstatistikmeldung
     description: Jahresstatistikmeldungen von der Krankenanstalt für den LGF und Bund.
     resources:
-    - Questionnaire/LKFA01Questionnaire
-    - Questionnaire/LKFB01Questionnaire
-    - Questionnaire/LKFB02Questionnaire
-    - Questionnaire/LKFB03Questionnaire
-    - Questionnaire/LKFB04Questionnaire
-    - Questionnaire/LKFB05Questionnaire
-    - Questionnaire/LKFB06Questionnaire
-    - Questionnaire/LKFG01Questionnaire
-    - Questionnaire/LKFG02Questionnaire
-    - Questionnaire/LKFK01Questionnaire
-    - Questionnaire/LKFK02Questionnaire
-    - Questionnaire/LKFK03Questionnaire
-    - Questionnaire/LKFK04Questionnaire
-    - Questionnaire/LKFK05Questionnaire
-    - Questionnaire/LKFK06Questionnaire
-    - Questionnaire/LKFK07Questionnaire
-    - Questionnaire/LKFK08Questionnaire
-    - Questionnaire/LKFK09Questionnaire
-    - Questionnaire/LKFK10Questionnaire
-    - Questionnaire/LKFK11Questionnaire
-    - Questionnaire/LKFK12Questionnaire
-    - Questionnaire/LKFK13Questionnaire
-    - Questionnaire/LKFK14Questionnaire
-    - Questionnaire/LKFK15Questionnaire
-    - Questionnaire/LKFK16Questionnaire
-    - Questionnaire/LKFL01Questionnaire
-    - Questionnaire/LKFL02Questionnaire
-    - Questionnaire/LKFL03Questionnaire
-    - Questionnaire/LKFL04Questionnaire
-
+    - Questionnaire/LKFJahresstatistikmeldung
+    - Questionnaire/LKFMonatsstatistikmeldung
   
 
 
