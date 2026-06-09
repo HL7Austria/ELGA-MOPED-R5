@@ -282,35 +282,8 @@ Jahresstatistikmeldungen von der Krankenanstalt für den LGF und Bund.
 
 | | |
 | :--- | :--- |
-| [LKF A01 Questionnaire](Questionnaire-LKFA01Questionnaire.html) | LKF A01 Questionnaire - Antiinfectiva-Abrufe |
-| [LKF B01 Questionnaire](Questionnaire-LKFB01Questionnaire.html) | B01 Questionnaire - Basisinformation |
-| [LKF B02 Questionnaire](Questionnaire-LKFB02Questionnaire.html) | B02 Questionnaire - Vermögens- und Kapitalstruktur (VKS) |
-| [LKF B03 Questionnaire](Questionnaire-LKFB03Questionnaire.html) | B03 Questionnaire - Eigenmittelverteilungsrechnung (EVR) |
-| [LKF B04 Questionnaire](Questionnaire-LKFB04Questionnaire.html) | B04 Questionnaire - Quellen- und Verwendungsanalyse (QVA) |
-| [LKF B05 Questionnaire](Questionnaire-LKFB05Questionnaire.html) | B05 Questionnaire - Erlösstruktur (ES) |
-| [LKF B06 Questionnaire](Questionnaire-LKFB06Questionnaire.html) | B06 Questionnaire - Zuschussstruktur (ZS) |
-| [LKF G01 Questionnaire](Questionnaire-LKFG01Questionnaire.html) | G01 Questionnaire - Großgerätebasisdaten |
-| [LKF G02 Questionnaire](Questionnaire-LKFG02Questionnaire.html) | G02 Questionnaire - Großgeräteleistungsdaten |
-| [LKF K01 Questionnaire](Questionnaire-LKFK01Questionnaire.html) | K01 Questionnaire - den Kostenstellenplan |
-| [LKF K02 Questionnaire](Questionnaire-LKFK02Questionnaire.html) | K02 Questionnaire - KA-Stammdaten |
-| [LKF K03 Questionnaire](Questionnaire-LKFK03Questionnaire.html) | K03 Questionnaire - KA-Statistik (Ressourcen und Inanspruchnahme) |
-| [LKF K04 Questionnaire](Questionnaire-LKFK04Questionnaire.html) | K04 Questionnaire - KA-Statistik (Personal-Vollzeitäquivalente nach Funktionsgruppen und Dienstverhältnis) |
-| [LKF K05 Questionnaire](Questionnaire-LKFK05Questionnaire.html) | K05 Questionnaire - KA-Statistik (Personal des ärztlichen Dienstes) |
-| [LKF K06 Questionnaire](Questionnaire-LKFK06Questionnaire.html) | LKF K06 Questionnaire - KA-Statistik (Konsiliarärztlicher Dienst) |
-| [LKF K07 Questionnaire](Questionnaire-LKFK07Questionnaire.html) | LKF K07 Questionnaire - KA-Statistik (Personal der nicht-ärztlichen Gesundheitsberufe) |
-| [LKF K08 Questionnaire](Questionnaire-LKFK08Questionnaire.html) | LKF K08 Questionnaire - Kostenstellen-Statistik und Kostennachweis (Bettenführende Hauptkostenstelle) |
-| [LKF K09 Questionnaire](Questionnaire-LKFK09Questionnaire.html) | LKF K09 Questionnaire - Kostenstellen-Statistik und Kostennachweis (nicht-bettenführende Hauptkostenstelle) |
-| [LKF K10 Questionnaire](Questionnaire-LKFK10Questionnaire.html) | LKF K10 Questionnaire - Kostenstellen-Statistik und Kostennachweis (Neben- und Hilfskostenstellen) |
-| [LKF K11 Questionnaire](Questionnaire-LKFK11Questionnaire.html) | LKF K11 Questionnaire - Sammel-Kostennachweis Summenblatt |
-| [LKF K12 Questionnaire](Questionnaire-LKFK12Questionnaire.html) | LKF K12 Questionnaire - Sammel-Kostennachweis Detailblätter |
-| [LKF K13 Questionnaire](Questionnaire-LKFK13Questionnaire.html) | LKF K13 Questionnaire - Kalkulatorischer Anhang – Kostenminderungen |
-| [LKF K14 Questionnaire](Questionnaire-LKFK14Questionnaire.html) | LKF K14 Questionnaire - Kalkulatorischer Anhang – Kalkulatorischer Anlagenspiegel |
-| [LKF K15 Questionnaire](Questionnaire-LKFK15Questionnaire.html) | LKF K15 Questionnaire - Kalkulatorischer Anhang – Allgemeine Kostenbereiche |
-| [LKF K16 Questionnaire](Questionnaire-LKFK16Questionnaire.html) | LKF K16 Questionnaire - Kalkulatorischer Anhang – Ausgewählte Kosten |
-| [LKF L01 Questionnaire](Questionnaire-LKFL01Questionnaire.html) | LKF L01 Questionnaire - Spezielle Leistungsbereiche |
-| [LKF L02 Questionnaire](Questionnaire-LKFL02Questionnaire.html) | LKF L02 Questionnaire - Abrechnungsrelevante Kostenträger |
-| [LKF L03 Questionnaire](Questionnaire-LKFL03Questionnaire.html) | LKF L03 Questionnaire - Exklusionen medizinischer Leistungen |
-| [LKF L04 Questionnaire](Questionnaire-LKFL04Questionnaire.html) | LKF L04 Questionnaire - Exklusionen tagesklinischer medizinischer Leistungen |
+| [LKF Jahresstatistikmeldung](Questionnaire-LKFJahresstatistikmeldung.html) | LKF Jahresstatistikmeldung |
+| [LKF Monatsstatistikmeldung](Questionnaire-LKFMonatsstatistikmeldung.html) | LKF Monatsstatistikmeldung |
 
 ### Requirements: Actor Definitions 
 
@@ -358,11 +331,13 @@ These define constraints on FHIR resources for systems conforming to this implem
 | [AT MOPED Bundle QuestionnaireResponse $einmelden Profil](StructureDefinition-at-moped-bundle-questionnaireresponse-einmelden-KA.html) | MOPED Profil der Bundle Ressource für die Input-Ressourcen beim Einmelden von nicht fallspezifischen QuestionnaireResponses |
 | [AT MOPED Claim LKFRequest Basis Profil](StructureDefinition-at-moped-claim-lkfrequest-basis.html) | MOPED Basis Profil der Claim Ressource für die Leistungsabrechnungsanfrage. |
 | [AT MOPED Claim LKFRequest generisches Profil](StructureDefinition-at-moped-claim-lkfrequest-generisch.html) | MOPED generisches Profil der Claim Ressource die Leistungsabrechnungsanfrage. |
+| [AT MOPED Claim VAERequest Basis Profil](StructureDefinition-at-moped-claim-vaerequest-basis.html) | MOPED Basis Profil der Claim Ressource für die Anfrage der Versichertenanspruchserklärung VAE. |
 | [AT MOPED Claim VAERequest Initiales Profil](StructureDefinition-at-moped-claim-VAE-request-initial.html) | MOPED Profile der Claim Ressource für die initiale Anfrage der Versichertenanspruchserklärung (VAE) |
 | [AT MOPED Claim VAERequest Verlängerungs Profil](StructureDefinition-at-moped-claim-vaerequest-verlaengerung.html) | MOPED Profil der Claim Ressource für die Verlängerung der Versichertenanspruchserklärung (VAE) |
 | [AT MOPED Claim VAERequest generisches Profil](StructureDefinition-at-moped-claim-vaerequest-generisch.html) | MOPED generisches Profil der Claim Ressource für die Anfrage der Versichertenanspruchserklärung VAE. |
 | [AT MOPED ClaimResponse LKFResponse Basis Profil](StructureDefinition-at-moped-claimresponse-lkfresponse-basis.html) | MOPED Basis Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort. |
 | [AT MOPED ClaimResponse LKFResponse generisches Profil](StructureDefinition-at-moped-claimresponse-lkfresponse-generisch.html) | MOPED generisches Profil der ClaimResponse Ressource für die Leistungsabrechnungsantwort. |
+| [AT MOPED ClaimResponse VAEResponse Basis Profil](StructureDefinition-at-moped-claimresponse-vaeresponse-basis.html) | MOPED Basis Profil der ClaimResponse Ressource für die Beantwortung der Versichertenanspruchserklärung VAE. |
 | [AT MOPED ClaimResponse VAEResponse generisches Profil](StructureDefinition-at-moped-claimresponse-vaeresponse-generisch.html) | MOPED generisches Profil der ClaimResponse Ressource für die Beantwortung der Versichertenanspruchserklärung VAE. |
 | [AT MOPED Composition $anfragen Profil](StructureDefinition-at-moped-composition-anfragen.html) | MOPED Profil der Composition Ressource nach $anfragen |
 | [AT MOPED Composition $aufnehmen Profil](StructureDefinition-at-moped-composition-aufnehmen.html) | MOPED Profil der Composition Ressource nach $aufnehmen |
@@ -490,7 +465,7 @@ These define sets of codes used by systems conforming to this implementation gui
 | [Moped Composition Sections ValueSet](ValueSet-CompositionSectionsVS.html) | ValueSet für die Moped Sections der Composition Ressource |
 | [Moped Device Types ValueSet](ValueSet-MopedDeviceTypesVS.html) | Types von Moped Devices |
 | [Moped Encounter Participant Type ValueSet](ValueSet-MopedEncounterParticipantTypesVS.html) | ValueSet für die Moped Encounter Participant Types |
-| [Moped ValueSet für die Art der Entbindung](ValueSet-MopedEntbindungsartVS.html) | Varianten der Art der Entbindung |
+| [Moped ValueSet für die Art der Entbindung](ValueSet-MopedEntbindungsartVS.html) | KaOrg Varianten der Art der Entbindung |
 | [Sonderklasse ValueSet](ValueSet-SonderklasseVS.html) | ValueSet für die Klasse (KaOrg) |
 | [Spezielle Organisationsform](ValueSet-SpezielleOrganisationsformVS.html) | Die spezielle Organisationsform der stationären Versorgung ist im Kostenstellenplan zusätzlich zum Funktionscode mit einer entsprechenden Kennzeichnung zu versehen. |
 | [Status der Versichertenanspruchserklärung](ValueSet-VAEStatusVS.html) | Status der Versichertenanspruchserklärung |
@@ -535,9 +510,11 @@ These define new code systems used by systems conforming to this implementation 
 | [Moped Aufnahmeart des Patienten](CodeSystem-AbgangsartCS.html) | Zulässige Ausprägungen Aufnahmeart (LKF & KaOrg) |
 | [Moped Aufnahmeart des Patienten](CodeSystem-AufnahmeartCS.html) | Zulässige Ausprägungen Aufnahmeart (LKF & KaOrg) |
 | [Moped Claim Item Category CodeSystem](CodeSystem-MopedClaimItemCategoryCS.html) | CodeSystem für die Arten von Claim Item Kategorien |
+| [Moped CodeSystem für die KaOrg Arten der Entbindung](CodeSystem-MopedEntbindungsartCS.html) | KaOrg Varianten der Art der Entbindung |
 | [Moped Composition Sections](CodeSystem-CompositionSectionsCS.html) | CodeSystem für die Moped Sections der Composition Ressource |
 | [Moped Device Types CodeSystem](CodeSystem-MopedDeviceTypesCS.html) | CodeSystem für die Moped Device Types |
 | [Moped Encounter Participant Type CodeSystem](CodeSystem-MopedEncounterParticipantTypesCS.html) | CodeSystem für die Moped Encounter Participant Types |
+| [Moped ValueSet für die Art der Observation](CodeSystem-MopedObservationArtCS.html) | Varianten der Art der Observation |
 | [Sonderklasse CodeSystem](CodeSystem-SonderklasseCS.html) | CodeSystem für die Klasse (KaOrg) |
 | [Spezielle Betriebsform](CodeSystem-SpezielleBetriebsformenCS.html) | Spezielle Betriebsformen (gemäß ÖSG bzw. KAKuG) |
 | [Spezielle Organisationsformen](CodeSystem-SpezielleOrganisationsformenCS.html) | Spezielle Organisationsformen (gemäß ÖSG bzw. KAKuG) |
@@ -558,6 +535,8 @@ These are example instances that show what data produced and consumed by systems
 | [AbteilungKARied2](HealthcareService-AbteilungKARied2.html) | Hackathon Stammdaten: Abteilung 2 der KA Ried |
 | [AbteilungKARied3](HealthcareService-AbteilungKARied3.html) | Hackathon Stammdaten: Abteilung 3 der KA Ried |
 | [AbteilungKARied4](HealthcareService-AbteilungKARied4.html) | Hackathon Stammdaten: Abteilung 4 der KA Ried |
+| [BewegungsEncounter42.1](Encounter-BewegungsEncounter42.1.html) |  |
+| [BewegungsEncounter42.2](Encounter-BewegungsEncounter42.2.html) |  |
 | [Condition42.1](Condition-Condition42.1.html) |  |
 | [Encounter42](Encounter-Encounter42.html) |  |
 | [I12 QuestionnaireResponse für TISS-A-Daten](QuestionnaireResponse-TISSAQuestionnaireResponse.html) |  |
@@ -583,6 +562,8 @@ These are example instances that show what data produced and consumed by systems
 | [OrganizationLGF](Organization-OrganizationLGF.html) | Hackathon Stammdaten: LGF Wien |
 | [OrganizationUeberweisendeOrganization1](Organization-OrganizationUeberweisendeOrganization1.html) | Hackathon Stammdaten: Überweisende Organisation 1 |
 | [OrganizationUeberweisendeOrganization2](Organization-OrganizationUeberweisendeOrganization2.html) | Hackathon Stammdaten: Überweisende Organisation 2 |
+| [PJ1BewegungsEncounter1](Encounter-PJ1BewegungsEncounter1.html) | Hackathon Patient Journey 1 Beispiel: BewegungsEncounter 1 |
+| [PJ1BewegungsEncounter1Aufnahme](Encounter-PJ1BewegungsEncounter1Aufnahme.html) | Hackathon Patient Journey 1 Beispiel: BewegungsEncounter 1 |
 | [PJ1Condition1](Condition-PJ1Condition1.html) | Hackathon Patient Journey 1 Beispiel: Condition 1 |
 | [PJ1Coverage](Coverage-PJ1Coverage.html) | Hackathon Patient Journey 1 Beispiel: Coverage |
 | [PJ1Encounter](Encounter-PJ1Encounter.html) | Hackathon Patient Journey 1 Beispiel: Encounter |
@@ -595,10 +576,13 @@ These are example instances that show what data produced and consumed by systems
 | [PJ1LKFResponse1](ClaimResponse-PJ1LKFResponse1.html) | Hackathon Patient Journey 1 Beispiel: LKFResponse 1 |
 | [PJ1Patient](Patient-PJ1Patient.html) | Hackathon Patient Journey 1 Beispiel: Patient |
 | [PJ1Procedure1](Procedure-PJ1Procedure1.html) | Hackathon Patient Journey 1 Beispiel: Procedure 1 |
-| [PJ1BewegungsEncounter1](Encounter-PJ1BewegungsEncounter1.html) | Hackathon Patient Journey 1 Beispiel: BewegungsEncounter 1 |
-| [PJ1BewegungsEncounter1Aufnahme](Encounter-PJ1BewegungsEncounter1Aufnahme.html) | Hackathon Patient Journey 1 Beispiel: BewegungsEncounter 1 |
 | [PJ1VAERequest1](Claim-PJ1VAERequest1.html) | Hackathon Patient Journey 1 Beispiel: VAERequest 1 |
 | [PJ1VAEResponse1](ClaimResponse-PJ1VAEResponse1.html) | Hackathon Patient Journey 1 Beispiel: VAEResponse 1 |
+| [PJ2BewegungsEncounter1](Encounter-PJ2BewegungsEncounter1.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 1 |
+| [PJ2BewegungsEncounter2](Encounter-PJ2BewegungsEncounter2.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 2 |
+| [PJ2BewegungsEncounter3](Encounter-PJ2BewegungsEncounter3.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 3 |
+| [PJ2BewegungsEncounter4](Encounter-PJ2BewegungsEncounter4.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 4 |
+| [PJ2BewegungsEncounter5](Encounter-PJ2BewegungsEncounter5.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 5 |
 | [PJ2Condition1](Condition-PJ2Condition1.html) | Hackathon Patient Journey 2 Beispiel: Condition 1 |
 | [PJ2Condition2](Condition-PJ2Condition2.html) | Hackathon Patient Journey 2 Beispiel: Condition 2 |
 | [PJ2Coverage](Coverage-PJ2Coverage.html) | Hackathon Patient Journey 2 Beispiel: Coverage |
@@ -608,11 +592,6 @@ These are example instances that show what data produced and consumed by systems
 | [PJ2Patient](Patient-PJ2Patient.html) | Hackathon Patient Journey 2 Beispiel: Patient |
 | [PJ2Procedure1](Procedure-PJ2Procedure1.html) | Hackathon Patient Journey 2 Beispiel: Procedure 1 |
 | [PJ2Procedure2](Procedure-PJ2Procedure2.html) | Hackathon Patient Journey 2 Beispiel: Procedure 2 |
-| [PJ2BewegungsEncounter1](Encounter-PJ2BewegungsEncounter1.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 1 |
-| [PJ2BewegungsEncounter2](Encounter-PJ2BewegungsEncounter2.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 2 |
-| [PJ2BewegungsEncounter3](Encounter-PJ2BewegungsEncounter3.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 3 |
-| [PJ2BewegungsEncounter4](Encounter-PJ2BewegungsEncounter4.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 4 |
-| [PJ2BewegungsEncounter5](Encounter-PJ2BewegungsEncounter5.html) | Hackathon Patient Journey 2 Beispiel: BewegungsEncounter 5 |
 | [PJ2VAERequest1](Claim-PJ2VAERequest1.html) | Hackathon Patient Journey 2 Beispiel: VAERequest 1 |
 | [PJ2VAEResponse1](ClaimResponse-PJ2VAEResponse1.html) | Hackathon Patient Journey 2 Beispiel: VAEResponse 1 |
 | [Patient42](Patient-Patient42.html) |  |
@@ -637,8 +616,6 @@ These are example instances that show what data produced and consumed by systems
 | [Test1PatientOhneMaskierung](Patient-Test1PatientOhneMaskierung.html) | Maskierung Beispiel Patient |
 | [Test1PatientSV](Patient-Test1PatientSV.html) | Maskierung Beispiel PatientSV |
 | [Test2SAPS3QuestionnaireResponse1](QuestionnaireResponse-Test2SAPS3QuestionnaireResponse1.html) |  |
-| [BewegungsEncounter42.1](Encounter-BewegungsEncounter42.1.html) |  |
-| [BewegungsEncounter42.2](Encounter-BewegungsEncounter42.2.html) |  |
 | [XDokExampleDevice](Device-XDokExampleDevice.html) | Moped Example XDok Device |
 | [strokeunit-questionnaire-response-1](QuestionnaireResponse-strokeunit-questionnaire-response-1.html) |  |
 
